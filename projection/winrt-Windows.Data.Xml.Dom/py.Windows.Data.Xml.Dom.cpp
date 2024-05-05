@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"AppendChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"AppendChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.AppendChild(param0));
@@ -59,14 +59,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"CloneNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"CloneNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(self->obj.CloneNode(param0));
@@ -90,14 +90,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"GetXml", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"GetXml", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetXml());
             }
             catch (...)
@@ -119,14 +119,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"HasChildNodes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"HasChildNodes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.HasChildNodes());
             }
             catch (...)
@@ -148,14 +148,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"InsertBefore", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"InsertBefore", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -180,14 +180,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"Normalize", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"Normalize", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Normalize();
                 Py_RETURN_NONE;
             }
@@ -210,14 +210,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"RemoveChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"RemoveChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.RemoveChild(param0));
@@ -241,14 +241,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"ReplaceChild", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"ReplaceChild", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -273,14 +273,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"SelectNodes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"SelectNodes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectNodes(param0));
@@ -304,14 +304,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"SelectNodesNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"SelectNodesNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -336,14 +336,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"SelectSingleNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"SelectSingleNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectSingleNode(param0));
@@ -367,14 +367,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"SelectSingleNodeNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"SelectSingleNodeNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -395,14 +395,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_get_NotationName(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"NotationName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"NotationName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NotationName());
         }
         catch (...)
@@ -414,14 +414,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_get_PublicId(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"PublicId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"PublicId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PublicId());
         }
         catch (...)
@@ -433,14 +433,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_get_SystemId(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"SystemId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"SystemId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SystemId());
         }
         catch (...)
@@ -452,14 +452,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_get_Prefix(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Prefix());
         }
         catch (...)
@@ -471,12 +471,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int DtdEntity_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -485,6 +479,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.Prefix(param0);
@@ -499,14 +499,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_get_NodeValue(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -518,12 +518,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int DtdEntity_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -532,6 +526,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.NodeValue(param0);
@@ -546,14 +546,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_get_FirstChild(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"FirstChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"FirstChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstChild());
         }
         catch (...)
@@ -565,14 +565,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_get_LastChild(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"LastChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"LastChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastChild());
         }
         catch (...)
@@ -584,14 +584,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_get_LocalName(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"LocalName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"LocalName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalName());
         }
         catch (...)
@@ -603,14 +603,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_get_NamespaceUri(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"NamespaceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"NamespaceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NamespaceUri());
         }
         catch (...)
@@ -622,14 +622,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_get_NextSibling(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"NextSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"NextSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NextSibling());
         }
         catch (...)
@@ -641,14 +641,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_get_NodeName(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -660,14 +660,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_get_NodeType(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"NodeType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"NodeType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeType());
         }
         catch (...)
@@ -679,14 +679,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_get_Attributes(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"Attributes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"Attributes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Attributes());
         }
         catch (...)
@@ -698,14 +698,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_get_OwnerDocument(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"OwnerDocument"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"OwnerDocument"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OwnerDocument());
         }
         catch (...)
@@ -717,14 +717,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_get_ChildNodes(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"ChildNodes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"ChildNodes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChildNodes());
         }
         catch (...)
@@ -736,14 +736,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_get_ParentNode(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"ParentNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"ParentNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentNode());
         }
         catch (...)
@@ -755,14 +755,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_get_PreviousSibling(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"PreviousSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"PreviousSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousSibling());
         }
         catch (...)
@@ -774,14 +774,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_get_InnerText(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InnerText());
         }
         catch (...)
@@ -793,12 +793,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int DtdEntity_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -807,6 +801,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdEntity", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.InnerText(param0);
@@ -924,14 +924,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"AppendChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"AppendChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.AppendChild(param0));
@@ -955,14 +955,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"CloneNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"CloneNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(self->obj.CloneNode(param0));
@@ -986,14 +986,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"GetXml", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"GetXml", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetXml());
             }
             catch (...)
@@ -1015,14 +1015,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"HasChildNodes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"HasChildNodes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.HasChildNodes());
             }
             catch (...)
@@ -1044,14 +1044,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"InsertBefore", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"InsertBefore", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -1076,14 +1076,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"Normalize", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"Normalize", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Normalize();
                 Py_RETURN_NONE;
             }
@@ -1106,14 +1106,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"RemoveChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"RemoveChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.RemoveChild(param0));
@@ -1137,14 +1137,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"ReplaceChild", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"ReplaceChild", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -1169,14 +1169,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"SelectNodes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"SelectNodes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectNodes(param0));
@@ -1200,14 +1200,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"SelectNodesNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"SelectNodesNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -1232,14 +1232,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"SelectSingleNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"SelectSingleNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectSingleNode(param0));
@@ -1263,14 +1263,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"SelectSingleNodeNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"SelectSingleNodeNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -1291,14 +1291,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_get_PublicId(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"PublicId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"PublicId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PublicId());
         }
         catch (...)
@@ -1310,14 +1310,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_get_SystemId(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"SystemId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"SystemId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SystemId());
         }
         catch (...)
@@ -1329,14 +1329,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_get_Prefix(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Prefix());
         }
         catch (...)
@@ -1348,12 +1348,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int DtdNotation_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1362,6 +1356,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.Prefix(param0);
@@ -1376,14 +1376,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_get_NodeValue(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -1395,12 +1395,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int DtdNotation_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1409,6 +1403,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.NodeValue(param0);
@@ -1423,14 +1423,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_get_FirstChild(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"FirstChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"FirstChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstChild());
         }
         catch (...)
@@ -1442,14 +1442,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_get_LastChild(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"LastChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"LastChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastChild());
         }
         catch (...)
@@ -1461,14 +1461,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_get_LocalName(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"LocalName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"LocalName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalName());
         }
         catch (...)
@@ -1480,14 +1480,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_get_NamespaceUri(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"NamespaceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"NamespaceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NamespaceUri());
         }
         catch (...)
@@ -1499,14 +1499,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_get_NextSibling(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"NextSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"NextSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NextSibling());
         }
         catch (...)
@@ -1518,14 +1518,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_get_NodeName(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -1537,14 +1537,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_get_NodeType(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"NodeType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"NodeType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeType());
         }
         catch (...)
@@ -1556,14 +1556,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_get_Attributes(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"Attributes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"Attributes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Attributes());
         }
         catch (...)
@@ -1575,14 +1575,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_get_OwnerDocument(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"OwnerDocument"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"OwnerDocument"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OwnerDocument());
         }
         catch (...)
@@ -1594,14 +1594,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_get_ChildNodes(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"ChildNodes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"ChildNodes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChildNodes());
         }
         catch (...)
@@ -1613,14 +1613,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_get_ParentNode(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"ParentNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"ParentNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentNode());
         }
         catch (...)
@@ -1632,14 +1632,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_get_PreviousSibling(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"PreviousSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"PreviousSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousSibling());
         }
         catch (...)
@@ -1651,14 +1651,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_get_InnerText(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InnerText());
         }
         catch (...)
@@ -1670,12 +1670,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int DtdNotation_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1684,6 +1678,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.DtdNotation", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.InnerText(param0);
@@ -1800,14 +1800,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"AppendChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"AppendChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.AppendChild(param0));
@@ -1831,14 +1831,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"CloneNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"CloneNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(self->obj.CloneNode(param0));
@@ -1862,14 +1862,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"GetXml", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"GetXml", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetXml());
             }
             catch (...)
@@ -1891,14 +1891,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"HasChildNodes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"HasChildNodes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.HasChildNodes());
             }
             catch (...)
@@ -1920,14 +1920,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"InsertBefore", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"InsertBefore", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -1952,14 +1952,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"Normalize", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"Normalize", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Normalize();
                 Py_RETURN_NONE;
             }
@@ -1982,14 +1982,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"RemoveChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"RemoveChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.RemoveChild(param0));
@@ -2013,14 +2013,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"ReplaceChild", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"ReplaceChild", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -2045,14 +2045,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"SelectNodes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"SelectNodes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectNodes(param0));
@@ -2076,14 +2076,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"SelectNodesNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"SelectNodesNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -2108,14 +2108,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"SelectSingleNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"SelectSingleNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectSingleNode(param0));
@@ -2139,14 +2139,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"SelectSingleNodeNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"SelectSingleNodeNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -2167,14 +2167,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_get_Value(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -2186,12 +2186,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlAttribute_put_Value(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2200,6 +2194,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Value(param0);
@@ -2214,14 +2214,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_get_Specified(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"Specified"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"Specified"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Specified());
         }
         catch (...)
@@ -2233,14 +2233,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_get_Name(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -2252,14 +2252,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_get_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Prefix());
         }
         catch (...)
@@ -2271,12 +2271,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlAttribute_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2285,6 +2279,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.Prefix(param0);
@@ -2299,14 +2299,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_get_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -2318,12 +2318,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlAttribute_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2332,6 +2326,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.NodeValue(param0);
@@ -2346,14 +2346,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_get_FirstChild(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"FirstChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"FirstChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstChild());
         }
         catch (...)
@@ -2365,14 +2365,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_get_LastChild(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"LastChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"LastChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastChild());
         }
         catch (...)
@@ -2384,14 +2384,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_get_LocalName(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"LocalName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"LocalName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalName());
         }
         catch (...)
@@ -2403,14 +2403,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_get_NamespaceUri(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"NamespaceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"NamespaceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NamespaceUri());
         }
         catch (...)
@@ -2422,14 +2422,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_get_NextSibling(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"NextSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"NextSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NextSibling());
         }
         catch (...)
@@ -2441,14 +2441,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_get_NodeName(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -2460,14 +2460,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_get_NodeType(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"NodeType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"NodeType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeType());
         }
         catch (...)
@@ -2479,14 +2479,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_get_Attributes(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"Attributes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"Attributes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Attributes());
         }
         catch (...)
@@ -2498,14 +2498,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_get_OwnerDocument(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"OwnerDocument"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"OwnerDocument"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OwnerDocument());
         }
         catch (...)
@@ -2517,14 +2517,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_get_ChildNodes(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"ChildNodes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"ChildNodes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChildNodes());
         }
         catch (...)
@@ -2536,14 +2536,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_get_ParentNode(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"ParentNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"ParentNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentNode());
         }
         catch (...)
@@ -2555,14 +2555,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_get_PreviousSibling(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"PreviousSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"PreviousSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousSibling());
         }
         catch (...)
@@ -2574,14 +2574,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_get_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InnerText());
         }
         catch (...)
@@ -2593,12 +2593,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlAttribute_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2607,6 +2601,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlAttribute", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.InnerText(param0);
@@ -2724,14 +2724,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"AppendChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"AppendChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.AppendChild(param0));
@@ -2755,14 +2755,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"AppendData", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"AppendData", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.AppendData(param0);
@@ -2787,14 +2787,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"CloneNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"CloneNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(self->obj.CloneNode(param0));
@@ -2818,14 +2818,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"DeleteData", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"DeleteData", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -2851,14 +2851,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"GetXml", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"GetXml", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetXml());
             }
             catch (...)
@@ -2880,14 +2880,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"HasChildNodes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"HasChildNodes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.HasChildNodes());
             }
             catch (...)
@@ -2909,14 +2909,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"InsertBefore", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"InsertBefore", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -2941,14 +2941,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"InsertData", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"InsertData", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -2974,14 +2974,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"Normalize", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"Normalize", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Normalize();
                 Py_RETURN_NONE;
             }
@@ -3004,14 +3004,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"RemoveChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"RemoveChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.RemoveChild(param0));
@@ -3035,14 +3035,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"ReplaceChild", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"ReplaceChild", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -3067,14 +3067,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"ReplaceData", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"ReplaceData", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -3101,14 +3101,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"SelectNodes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"SelectNodes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectNodes(param0));
@@ -3132,14 +3132,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"SelectNodesNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"SelectNodesNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -3164,14 +3164,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"SelectSingleNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"SelectSingleNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectSingleNode(param0));
@@ -3195,14 +3195,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"SelectSingleNodeNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"SelectSingleNodeNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -3227,14 +3227,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"SplitText", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"SplitText", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.SplitText(param0));
@@ -3258,14 +3258,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"SubstringData", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"SubstringData", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -3286,14 +3286,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_get_Data(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -3305,12 +3305,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlCDataSection_put_Data(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3319,6 +3313,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Data(param0);
@@ -3333,14 +3333,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_get_Length(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"Length"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"Length"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Length());
         }
         catch (...)
@@ -3352,14 +3352,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_get_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Prefix());
         }
         catch (...)
@@ -3371,12 +3371,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlCDataSection_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3385,6 +3379,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.Prefix(param0);
@@ -3399,14 +3399,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_get_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -3418,12 +3418,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlCDataSection_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3432,6 +3426,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.NodeValue(param0);
@@ -3446,14 +3446,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_get_FirstChild(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"FirstChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"FirstChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstChild());
         }
         catch (...)
@@ -3465,14 +3465,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_get_LastChild(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"LastChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"LastChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastChild());
         }
         catch (...)
@@ -3484,14 +3484,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_get_LocalName(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"LocalName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"LocalName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalName());
         }
         catch (...)
@@ -3503,14 +3503,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_get_NamespaceUri(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"NamespaceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"NamespaceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NamespaceUri());
         }
         catch (...)
@@ -3522,14 +3522,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_get_NextSibling(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"NextSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"NextSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NextSibling());
         }
         catch (...)
@@ -3541,14 +3541,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_get_NodeName(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -3560,14 +3560,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_get_NodeType(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"NodeType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"NodeType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeType());
         }
         catch (...)
@@ -3579,14 +3579,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_get_Attributes(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"Attributes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"Attributes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Attributes());
         }
         catch (...)
@@ -3598,14 +3598,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_get_OwnerDocument(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"OwnerDocument"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"OwnerDocument"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OwnerDocument());
         }
         catch (...)
@@ -3617,14 +3617,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_get_ChildNodes(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"ChildNodes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"ChildNodes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChildNodes());
         }
         catch (...)
@@ -3636,14 +3636,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_get_ParentNode(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"ParentNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"ParentNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentNode());
         }
         catch (...)
@@ -3655,14 +3655,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_get_PreviousSibling(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"PreviousSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"PreviousSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousSibling());
         }
         catch (...)
@@ -3674,14 +3674,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_get_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InnerText());
         }
         catch (...)
@@ -3693,12 +3693,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlCDataSection_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3707,6 +3701,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlCDataSection", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.InnerText(param0);
@@ -3829,14 +3829,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"AppendChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"AppendChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.AppendChild(param0));
@@ -3860,14 +3860,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"AppendData", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"AppendData", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.AppendData(param0);
@@ -3892,14 +3892,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"CloneNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"CloneNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(self->obj.CloneNode(param0));
@@ -3923,14 +3923,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"DeleteData", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"DeleteData", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -3956,14 +3956,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"GetXml", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"GetXml", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetXml());
             }
             catch (...)
@@ -3985,14 +3985,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"HasChildNodes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"HasChildNodes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.HasChildNodes());
             }
             catch (...)
@@ -4014,14 +4014,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"InsertBefore", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"InsertBefore", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -4046,14 +4046,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"InsertData", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"InsertData", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -4079,14 +4079,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"Normalize", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"Normalize", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Normalize();
                 Py_RETURN_NONE;
             }
@@ -4109,14 +4109,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"RemoveChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"RemoveChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.RemoveChild(param0));
@@ -4140,14 +4140,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"ReplaceChild", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"ReplaceChild", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -4172,14 +4172,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"ReplaceData", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"ReplaceData", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -4206,14 +4206,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"SelectNodes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"SelectNodes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectNodes(param0));
@@ -4237,14 +4237,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"SelectNodesNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"SelectNodesNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -4269,14 +4269,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"SelectSingleNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"SelectSingleNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectSingleNode(param0));
@@ -4300,14 +4300,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"SelectSingleNodeNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"SelectSingleNodeNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -4332,14 +4332,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"SubstringData", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlComment", L"SubstringData", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -4360,14 +4360,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_get_Data(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -4379,12 +4379,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlComment_put_Data(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4393,6 +4387,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Data(param0);
@@ -4407,14 +4407,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_get_Length(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"Length"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"Length"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Length());
         }
         catch (...)
@@ -4426,14 +4426,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_get_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Prefix());
         }
         catch (...)
@@ -4445,12 +4445,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlComment_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4459,6 +4453,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.Prefix(param0);
@@ -4473,14 +4473,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_get_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -4492,12 +4492,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlComment_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4506,6 +4500,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.NodeValue(param0);
@@ -4520,14 +4520,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_get_FirstChild(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"FirstChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"FirstChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstChild());
         }
         catch (...)
@@ -4539,14 +4539,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_get_LastChild(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"LastChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"LastChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastChild());
         }
         catch (...)
@@ -4558,14 +4558,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_get_LocalName(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"LocalName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"LocalName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalName());
         }
         catch (...)
@@ -4577,14 +4577,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_get_NamespaceUri(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"NamespaceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"NamespaceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NamespaceUri());
         }
         catch (...)
@@ -4596,14 +4596,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_get_NextSibling(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"NextSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"NextSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NextSibling());
         }
         catch (...)
@@ -4615,14 +4615,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_get_NodeName(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -4634,14 +4634,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_get_NodeType(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"NodeType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"NodeType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeType());
         }
         catch (...)
@@ -4653,14 +4653,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_get_Attributes(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"Attributes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"Attributes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Attributes());
         }
         catch (...)
@@ -4672,14 +4672,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_get_OwnerDocument(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"OwnerDocument"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"OwnerDocument"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OwnerDocument());
         }
         catch (...)
@@ -4691,14 +4691,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_get_ChildNodes(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"ChildNodes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"ChildNodes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChildNodes());
         }
         catch (...)
@@ -4710,14 +4710,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_get_ParentNode(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"ParentNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"ParentNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentNode());
         }
         catch (...)
@@ -4729,14 +4729,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_get_PreviousSibling(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"PreviousSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"PreviousSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousSibling());
         }
         catch (...)
@@ -4748,14 +4748,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_get_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InnerText());
         }
         catch (...)
@@ -4767,12 +4767,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlComment_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4781,6 +4775,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlComment", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.InnerText(param0);
@@ -4924,14 +4924,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"AppendChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"AppendChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.AppendChild(param0));
@@ -4955,14 +4955,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"CloneNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"CloneNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(self->obj.CloneNode(param0));
@@ -4986,14 +4986,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"CreateAttribute", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"CreateAttribute", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CreateAttribute(param0));
@@ -5017,14 +5017,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"CreateAttributeNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"CreateAttributeNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -5049,14 +5049,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"CreateCDataSection", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"CreateCDataSection", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CreateCDataSection(param0));
@@ -5080,14 +5080,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"CreateComment", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"CreateComment", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CreateComment(param0));
@@ -5111,14 +5111,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"CreateDocumentFragment", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"CreateDocumentFragment", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateDocumentFragment());
             }
             catch (...)
@@ -5140,14 +5140,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"CreateElement", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"CreateElement", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CreateElement(param0));
@@ -5171,14 +5171,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"CreateElementNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"CreateElementNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -5203,14 +5203,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"CreateEntityReference", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"CreateEntityReference", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CreateEntityReference(param0));
@@ -5234,14 +5234,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"CreateProcessingInstruction", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"CreateProcessingInstruction", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -5266,14 +5266,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"CreateTextNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"CreateTextNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CreateTextNode(param0));
@@ -5297,14 +5297,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"GetElementById", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"GetElementById", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetElementById(param0));
@@ -5328,14 +5328,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"GetElementsByTagName", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"GetElementsByTagName", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetElementsByTagName(param0));
@@ -5359,14 +5359,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"GetXml", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"GetXml", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetXml());
             }
             catch (...)
@@ -5388,14 +5388,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"HasChildNodes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"HasChildNodes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.HasChildNodes());
             }
             catch (...)
@@ -5417,14 +5417,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"ImportNode", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"ImportNode", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -5449,14 +5449,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"InsertBefore", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"InsertBefore", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -5481,14 +5481,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"LoadFromFileAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"LoadFromFileAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert(winrt::Windows::Data::Xml::Dom::XmlDocument::LoadFromFileAsync(param0));
@@ -5501,14 +5501,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"LoadFromFileAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"LoadFromFileAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlLoadSettings>(args, 1);
 
@@ -5533,14 +5533,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"LoadFromUriAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"LoadFromUriAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(winrt::Windows::Data::Xml::Dom::XmlDocument::LoadFromUriAsync(param0));
@@ -5553,14 +5553,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"LoadFromUriAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"LoadFromUriAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlLoadSettings>(args, 1);
 
@@ -5585,14 +5585,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"LoadXml", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"LoadXml", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.LoadXml(param0);
@@ -5606,14 +5606,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"LoadXml", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"LoadXml", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlLoadSettings>(args, 1);
 
@@ -5639,14 +5639,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"LoadXmlFromBuffer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"LoadXmlFromBuffer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 self->obj.LoadXmlFromBuffer(param0);
@@ -5660,14 +5660,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"LoadXmlFromBuffer", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"LoadXmlFromBuffer", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlLoadSettings>(args, 1);
 
@@ -5693,14 +5693,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"Normalize", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"Normalize", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Normalize();
                 Py_RETURN_NONE;
             }
@@ -5723,14 +5723,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"RemoveChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"RemoveChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.RemoveChild(param0));
@@ -5754,14 +5754,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"ReplaceChild", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"ReplaceChild", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -5786,14 +5786,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"SaveToFileAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"SaveToFileAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert(self->obj.SaveToFileAsync(param0));
@@ -5817,14 +5817,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"SelectNodes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"SelectNodes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectNodes(param0));
@@ -5848,14 +5848,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"SelectNodesNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"SelectNodesNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -5880,14 +5880,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"SelectSingleNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"SelectSingleNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectSingleNode(param0));
@@ -5911,14 +5911,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"SelectSingleNodeNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"SelectSingleNodeNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -5939,14 +5939,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_get_Doctype(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"Doctype"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"Doctype"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Doctype());
         }
         catch (...)
@@ -5958,14 +5958,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_get_DocumentElement(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"DocumentElement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"DocumentElement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentElement());
         }
         catch (...)
@@ -5977,14 +5977,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_get_DocumentUri(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"DocumentUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"DocumentUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentUri());
         }
         catch (...)
@@ -5996,14 +5996,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_get_Implementation(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"Implementation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"Implementation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Implementation());
         }
         catch (...)
@@ -6015,14 +6015,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_get_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Prefix());
         }
         catch (...)
@@ -6034,12 +6034,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlDocument_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6048,6 +6042,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.Prefix(param0);
@@ -6062,14 +6062,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_get_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -6081,12 +6081,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlDocument_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6095,6 +6089,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.NodeValue(param0);
@@ -6109,14 +6109,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_get_FirstChild(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"FirstChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"FirstChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstChild());
         }
         catch (...)
@@ -6128,14 +6128,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_get_LastChild(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"LastChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"LastChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastChild());
         }
         catch (...)
@@ -6147,14 +6147,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_get_LocalName(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"LocalName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"LocalName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalName());
         }
         catch (...)
@@ -6166,14 +6166,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_get_NamespaceUri(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"NamespaceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"NamespaceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NamespaceUri());
         }
         catch (...)
@@ -6185,14 +6185,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_get_NextSibling(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"NextSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"NextSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NextSibling());
         }
         catch (...)
@@ -6204,14 +6204,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_get_NodeName(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -6223,14 +6223,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_get_NodeType(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"NodeType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"NodeType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeType());
         }
         catch (...)
@@ -6242,14 +6242,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_get_Attributes(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"Attributes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"Attributes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Attributes());
         }
         catch (...)
@@ -6261,14 +6261,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_get_ChildNodes(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"ChildNodes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"ChildNodes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChildNodes());
         }
         catch (...)
@@ -6280,14 +6280,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_get_ParentNode(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"ParentNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"ParentNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentNode());
         }
         catch (...)
@@ -6299,14 +6299,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_get_OwnerDocument(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"OwnerDocument"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"OwnerDocument"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OwnerDocument());
         }
         catch (...)
@@ -6318,14 +6318,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_get_PreviousSibling(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"PreviousSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"PreviousSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousSibling());
         }
         catch (...)
@@ -6337,14 +6337,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_get_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InnerText());
         }
         catch (...)
@@ -6356,12 +6356,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlDocument_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6370,6 +6364,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.InnerText(param0);
@@ -6531,14 +6531,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"AppendChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"AppendChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.AppendChild(param0));
@@ -6562,14 +6562,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"CloneNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"CloneNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(self->obj.CloneNode(param0));
@@ -6593,14 +6593,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"GetXml", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"GetXml", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetXml());
             }
             catch (...)
@@ -6622,14 +6622,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"HasChildNodes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"HasChildNodes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.HasChildNodes());
             }
             catch (...)
@@ -6651,14 +6651,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"InsertBefore", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"InsertBefore", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -6683,14 +6683,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"Normalize", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"Normalize", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Normalize();
                 Py_RETURN_NONE;
             }
@@ -6713,14 +6713,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"RemoveChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"RemoveChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.RemoveChild(param0));
@@ -6744,14 +6744,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"ReplaceChild", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"ReplaceChild", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -6776,14 +6776,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"SelectNodes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"SelectNodes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectNodes(param0));
@@ -6807,14 +6807,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"SelectNodesNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"SelectNodesNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -6839,14 +6839,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"SelectSingleNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"SelectSingleNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectSingleNode(param0));
@@ -6870,14 +6870,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"SelectSingleNodeNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"SelectSingleNodeNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -6898,14 +6898,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_get_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Prefix());
         }
         catch (...)
@@ -6917,12 +6917,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlDocumentFragment_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6931,6 +6925,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.Prefix(param0);
@@ -6945,14 +6945,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_get_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -6964,12 +6964,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlDocumentFragment_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6978,6 +6972,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.NodeValue(param0);
@@ -6992,14 +6992,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_get_FirstChild(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"FirstChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"FirstChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstChild());
         }
         catch (...)
@@ -7011,14 +7011,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_get_LastChild(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"LastChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"LastChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastChild());
         }
         catch (...)
@@ -7030,14 +7030,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_get_LocalName(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"LocalName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"LocalName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalName());
         }
         catch (...)
@@ -7049,14 +7049,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_get_NamespaceUri(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"NamespaceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"NamespaceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NamespaceUri());
         }
         catch (...)
@@ -7068,14 +7068,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_get_NextSibling(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"NextSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"NextSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NextSibling());
         }
         catch (...)
@@ -7087,14 +7087,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_get_NodeName(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -7106,14 +7106,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_get_NodeType(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"NodeType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"NodeType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeType());
         }
         catch (...)
@@ -7125,14 +7125,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_get_Attributes(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"Attributes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"Attributes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Attributes());
         }
         catch (...)
@@ -7144,14 +7144,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_get_OwnerDocument(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"OwnerDocument"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"OwnerDocument"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OwnerDocument());
         }
         catch (...)
@@ -7163,14 +7163,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_get_ParentNode(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"ParentNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"ParentNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentNode());
         }
         catch (...)
@@ -7182,14 +7182,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_get_ChildNodes(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"ChildNodes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"ChildNodes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChildNodes());
         }
         catch (...)
@@ -7201,14 +7201,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_get_PreviousSibling(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"PreviousSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"PreviousSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousSibling());
         }
         catch (...)
@@ -7220,14 +7220,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_get_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InnerText());
         }
         catch (...)
@@ -7239,12 +7239,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlDocumentFragment_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7253,6 +7247,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentFragment", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.InnerText(param0);
@@ -7367,14 +7367,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"AppendChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"AppendChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.AppendChild(param0));
@@ -7398,14 +7398,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"CloneNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"CloneNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(self->obj.CloneNode(param0));
@@ -7429,14 +7429,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"GetXml", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"GetXml", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetXml());
             }
             catch (...)
@@ -7458,14 +7458,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"HasChildNodes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"HasChildNodes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.HasChildNodes());
             }
             catch (...)
@@ -7487,14 +7487,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"InsertBefore", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"InsertBefore", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -7519,14 +7519,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"Normalize", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"Normalize", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Normalize();
                 Py_RETURN_NONE;
             }
@@ -7549,14 +7549,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"RemoveChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"RemoveChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.RemoveChild(param0));
@@ -7580,14 +7580,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"ReplaceChild", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"ReplaceChild", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -7612,14 +7612,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"SelectNodes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"SelectNodes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectNodes(param0));
@@ -7643,14 +7643,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"SelectNodesNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"SelectNodesNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -7675,14 +7675,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"SelectSingleNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"SelectSingleNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectSingleNode(param0));
@@ -7706,14 +7706,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"SelectSingleNodeNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"SelectSingleNodeNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -7734,14 +7734,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_get_Entities(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"Entities"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"Entities"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Entities());
         }
         catch (...)
@@ -7753,14 +7753,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_get_Name(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -7772,14 +7772,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_get_Notations(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"Notations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"Notations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Notations());
         }
         catch (...)
@@ -7791,14 +7791,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_get_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Prefix());
         }
         catch (...)
@@ -7810,12 +7810,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlDocumentType_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7824,6 +7818,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.Prefix(param0);
@@ -7838,14 +7838,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_get_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -7857,12 +7857,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlDocumentType_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7871,6 +7865,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.NodeValue(param0);
@@ -7885,14 +7885,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_get_FirstChild(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"FirstChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"FirstChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstChild());
         }
         catch (...)
@@ -7904,14 +7904,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_get_LastChild(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"LastChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"LastChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastChild());
         }
         catch (...)
@@ -7923,14 +7923,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_get_LocalName(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"LocalName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"LocalName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalName());
         }
         catch (...)
@@ -7942,14 +7942,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_get_NamespaceUri(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"NamespaceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"NamespaceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NamespaceUri());
         }
         catch (...)
@@ -7961,14 +7961,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_get_NextSibling(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"NextSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"NextSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NextSibling());
         }
         catch (...)
@@ -7980,14 +7980,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_get_NodeName(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -7999,14 +7999,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_get_NodeType(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"NodeType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"NodeType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeType());
         }
         catch (...)
@@ -8018,14 +8018,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_get_Attributes(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"Attributes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"Attributes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Attributes());
         }
         catch (...)
@@ -8037,14 +8037,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_get_OwnerDocument(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"OwnerDocument"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"OwnerDocument"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OwnerDocument());
         }
         catch (...)
@@ -8056,14 +8056,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_get_ChildNodes(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"ChildNodes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"ChildNodes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChildNodes());
         }
         catch (...)
@@ -8075,14 +8075,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_get_ParentNode(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"ParentNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"ParentNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentNode());
         }
         catch (...)
@@ -8094,14 +8094,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_get_PreviousSibling(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"PreviousSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"PreviousSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousSibling());
         }
         catch (...)
@@ -8113,14 +8113,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_get_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InnerText());
         }
         catch (...)
@@ -8132,12 +8132,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlDocumentType_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8146,6 +8140,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlDocumentType", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.InnerText(param0);
@@ -8263,14 +8263,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDomImplementation", L"HasFeature", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDomImplementation", L"HasFeature", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -8365,14 +8365,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"AppendChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"AppendChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.AppendChild(param0));
@@ -8396,14 +8396,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"CloneNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"CloneNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(self->obj.CloneNode(param0));
@@ -8427,14 +8427,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"GetAttribute", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"GetAttribute", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetAttribute(param0));
@@ -8458,14 +8458,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"GetAttributeNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"GetAttributeNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -8490,14 +8490,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"GetAttributeNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"GetAttributeNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetAttributeNode(param0));
@@ -8521,14 +8521,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"GetAttributeNodeNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"GetAttributeNodeNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -8553,14 +8553,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"GetElementsByTagName", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"GetElementsByTagName", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetElementsByTagName(param0));
@@ -8584,14 +8584,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"GetXml", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"GetXml", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetXml());
             }
             catch (...)
@@ -8613,14 +8613,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"HasChildNodes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"HasChildNodes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.HasChildNodes());
             }
             catch (...)
@@ -8642,14 +8642,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"InsertBefore", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"InsertBefore", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -8674,14 +8674,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"Normalize", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"Normalize", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Normalize();
                 Py_RETURN_NONE;
             }
@@ -8704,14 +8704,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"RemoveAttribute", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"RemoveAttribute", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.RemoveAttribute(param0);
@@ -8736,14 +8736,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"RemoveAttributeNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"RemoveAttributeNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -8769,14 +8769,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"RemoveAttributeNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"RemoveAttributeNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlAttribute>(args, 0);
 
                 return py::convert(self->obj.RemoveAttributeNode(param0));
@@ -8800,14 +8800,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"RemoveChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"RemoveChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.RemoveChild(param0));
@@ -8831,14 +8831,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"ReplaceChild", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"ReplaceChild", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -8863,14 +8863,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"SelectNodes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"SelectNodes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectNodes(param0));
@@ -8894,14 +8894,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"SelectNodesNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"SelectNodesNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -8926,14 +8926,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"SelectSingleNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"SelectSingleNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectSingleNode(param0));
@@ -8957,14 +8957,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"SelectSingleNodeNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"SelectSingleNodeNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -8989,14 +8989,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"SetAttribute", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"SetAttribute", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -9022,14 +9022,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"SetAttributeNS", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"SetAttributeNS", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -9056,14 +9056,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"SetAttributeNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"SetAttributeNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlAttribute>(args, 0);
 
                 return py::convert(self->obj.SetAttributeNode(param0));
@@ -9087,14 +9087,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"SetAttributeNodeNS", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlElement", L"SetAttributeNodeNS", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlAttribute>(args, 0);
 
                 return py::convert(self->obj.SetAttributeNodeNS(param0));
@@ -9114,14 +9114,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_get_TagName(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"TagName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"TagName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TagName());
         }
         catch (...)
@@ -9133,14 +9133,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_get_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Prefix());
         }
         catch (...)
@@ -9152,12 +9152,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlElement_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9166,6 +9160,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.Prefix(param0);
@@ -9180,14 +9180,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_get_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -9199,12 +9199,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlElement_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9213,6 +9207,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.NodeValue(param0);
@@ -9227,14 +9227,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_get_FirstChild(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"FirstChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"FirstChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstChild());
         }
         catch (...)
@@ -9246,14 +9246,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_get_LastChild(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"LastChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"LastChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastChild());
         }
         catch (...)
@@ -9265,14 +9265,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_get_LocalName(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"LocalName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"LocalName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalName());
         }
         catch (...)
@@ -9284,14 +9284,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_get_NextSibling(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"NextSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"NextSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NextSibling());
         }
         catch (...)
@@ -9303,14 +9303,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_get_NamespaceUri(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"NamespaceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"NamespaceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NamespaceUri());
         }
         catch (...)
@@ -9322,14 +9322,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_get_NodeType(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"NodeType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"NodeType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeType());
         }
         catch (...)
@@ -9341,14 +9341,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_get_NodeName(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -9360,14 +9360,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_get_Attributes(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"Attributes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"Attributes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Attributes());
         }
         catch (...)
@@ -9379,14 +9379,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_get_OwnerDocument(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"OwnerDocument"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"OwnerDocument"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OwnerDocument());
         }
         catch (...)
@@ -9398,14 +9398,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_get_ParentNode(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"ParentNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"ParentNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentNode());
         }
         catch (...)
@@ -9417,14 +9417,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_get_ChildNodes(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"ChildNodes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"ChildNodes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChildNodes());
         }
         catch (...)
@@ -9436,14 +9436,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_get_PreviousSibling(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"PreviousSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"PreviousSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousSibling());
         }
         catch (...)
@@ -9455,14 +9455,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_get_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InnerText());
         }
         catch (...)
@@ -9474,12 +9474,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlElement_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9488,6 +9482,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlElement", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.InnerText(param0);
@@ -9615,14 +9615,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"AppendChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"AppendChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.AppendChild(param0));
@@ -9646,14 +9646,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"CloneNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"CloneNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(self->obj.CloneNode(param0));
@@ -9677,14 +9677,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"GetXml", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"GetXml", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetXml());
             }
             catch (...)
@@ -9706,14 +9706,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"HasChildNodes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"HasChildNodes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.HasChildNodes());
             }
             catch (...)
@@ -9735,14 +9735,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"InsertBefore", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"InsertBefore", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -9767,14 +9767,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"Normalize", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"Normalize", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Normalize();
                 Py_RETURN_NONE;
             }
@@ -9797,14 +9797,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"RemoveChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"RemoveChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.RemoveChild(param0));
@@ -9828,14 +9828,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"ReplaceChild", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"ReplaceChild", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -9860,14 +9860,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"SelectNodes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"SelectNodes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectNodes(param0));
@@ -9891,14 +9891,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"SelectNodesNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"SelectNodesNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -9923,14 +9923,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"SelectSingleNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"SelectSingleNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectSingleNode(param0));
@@ -9954,14 +9954,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"SelectSingleNodeNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"SelectSingleNodeNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -9982,14 +9982,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_get_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Prefix());
         }
         catch (...)
@@ -10001,12 +10001,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlEntityReference_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10015,6 +10009,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.Prefix(param0);
@@ -10029,14 +10029,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_get_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -10048,12 +10048,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlEntityReference_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10062,6 +10056,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.NodeValue(param0);
@@ -10076,14 +10076,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_get_FirstChild(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"FirstChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"FirstChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstChild());
         }
         catch (...)
@@ -10095,14 +10095,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_get_LastChild(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"LastChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"LastChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastChild());
         }
         catch (...)
@@ -10114,14 +10114,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_get_LocalName(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"LocalName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"LocalName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalName());
         }
         catch (...)
@@ -10133,14 +10133,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_get_NamespaceUri(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"NamespaceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"NamespaceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NamespaceUri());
         }
         catch (...)
@@ -10152,14 +10152,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_get_NextSibling(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"NextSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"NextSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NextSibling());
         }
         catch (...)
@@ -10171,14 +10171,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_get_NodeName(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -10190,14 +10190,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_get_NodeType(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"NodeType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"NodeType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeType());
         }
         catch (...)
@@ -10209,14 +10209,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_get_Attributes(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"Attributes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"Attributes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Attributes());
         }
         catch (...)
@@ -10228,14 +10228,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_get_OwnerDocument(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"OwnerDocument"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"OwnerDocument"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OwnerDocument());
         }
         catch (...)
@@ -10247,14 +10247,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_get_ParentNode(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"ParentNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"ParentNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentNode());
         }
         catch (...)
@@ -10266,14 +10266,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_get_ChildNodes(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"ChildNodes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"ChildNodes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChildNodes());
         }
         catch (...)
@@ -10285,14 +10285,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_get_PreviousSibling(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"PreviousSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"PreviousSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousSibling());
         }
         catch (...)
@@ -10304,14 +10304,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_get_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InnerText());
         }
         catch (...)
@@ -10323,12 +10323,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlEntityReference_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10337,6 +10331,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlEntityReference", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.InnerText(param0);
@@ -10469,14 +10469,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlLoadSettings_get_ValidateOnParse(py::wrapper::Windows::Data::Xml::Dom::XmlLoadSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlLoadSettings", L"ValidateOnParse"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlLoadSettings", L"ValidateOnParse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ValidateOnParse());
         }
         catch (...)
@@ -10488,12 +10488,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlLoadSettings_put_ValidateOnParse(py::wrapper::Windows::Data::Xml::Dom::XmlLoadSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlLoadSettings", L"ValidateOnParse"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10502,6 +10496,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlLoadSettings", L"ValidateOnParse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ValidateOnParse(param0);
@@ -10516,14 +10516,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlLoadSettings_get_ResolveExternals(py::wrapper::Windows::Data::Xml::Dom::XmlLoadSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlLoadSettings", L"ResolveExternals"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlLoadSettings", L"ResolveExternals"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolveExternals());
         }
         catch (...)
@@ -10535,12 +10535,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlLoadSettings_put_ResolveExternals(py::wrapper::Windows::Data::Xml::Dom::XmlLoadSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlLoadSettings", L"ResolveExternals"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10549,6 +10543,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlLoadSettings", L"ResolveExternals"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ResolveExternals(param0);
@@ -10563,14 +10563,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlLoadSettings_get_ProhibitDtd(py::wrapper::Windows::Data::Xml::Dom::XmlLoadSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlLoadSettings", L"ProhibitDtd"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlLoadSettings", L"ProhibitDtd"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProhibitDtd());
         }
         catch (...)
@@ -10582,12 +10582,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlLoadSettings_put_ProhibitDtd(py::wrapper::Windows::Data::Xml::Dom::XmlLoadSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlLoadSettings", L"ProhibitDtd"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10596,6 +10590,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlLoadSettings", L"ProhibitDtd"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ProhibitDtd(param0);
@@ -10610,14 +10610,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlLoadSettings_get_MaxElementDepth(py::wrapper::Windows::Data::Xml::Dom::XmlLoadSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlLoadSettings", L"MaxElementDepth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlLoadSettings", L"MaxElementDepth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxElementDepth());
         }
         catch (...)
@@ -10629,12 +10629,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlLoadSettings_put_MaxElementDepth(py::wrapper::Windows::Data::Xml::Dom::XmlLoadSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlLoadSettings", L"MaxElementDepth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10643,6 +10637,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlLoadSettings", L"MaxElementDepth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.MaxElementDepth(param0);
@@ -10657,14 +10657,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlLoadSettings_get_ElementContentWhiteSpace(py::wrapper::Windows::Data::Xml::Dom::XmlLoadSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlLoadSettings", L"ElementContentWhiteSpace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlLoadSettings", L"ElementContentWhiteSpace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ElementContentWhiteSpace());
         }
         catch (...)
@@ -10676,12 +10676,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlLoadSettings_put_ElementContentWhiteSpace(py::wrapper::Windows::Data::Xml::Dom::XmlLoadSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlLoadSettings", L"ElementContentWhiteSpace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10690,6 +10684,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlLoadSettings", L"ElementContentWhiteSpace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ElementContentWhiteSpace(param0);
@@ -10782,14 +10782,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -10811,14 +10811,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -10842,14 +10842,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Data::Xml::Dom::IXmlNode, true>>(args, 1);
 
@@ -10874,14 +10874,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"GetNamedItem", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"GetNamedItem", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetNamedItem(param0));
@@ -10905,14 +10905,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"GetNamedItemNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"GetNamedItemNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -10937,14 +10937,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 uint32_t param1 {  };
 
@@ -10981,14 +10981,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"Item", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"Item", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.Item(param0));
@@ -11012,14 +11012,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"RemoveNamedItem", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"RemoveNamedItem", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.RemoveNamedItem(param0));
@@ -11043,14 +11043,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"RemoveNamedItemNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"RemoveNamedItemNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -11075,14 +11075,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"SetNamedItem", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"SetNamedItem", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.SetNamedItem(param0));
@@ -11106,14 +11106,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"SetNamedItemNS", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"SetNamedItemNS", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.SetNamedItemNS(param0));
@@ -11133,14 +11133,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlNamedNodeMap_get_Length(py::wrapper::Windows::Data::Xml::Dom::XmlNamedNodeMap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"Length"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"Length"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Length());
         }
         catch (...)
@@ -11152,14 +11152,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlNamedNodeMap_get_Size(py::wrapper::Windows::Data::Xml::Dom::XmlNamedNodeMap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlNamedNodeMap", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -11370,14 +11370,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNodeList", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNodeList", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -11399,14 +11399,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNodeList", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNodeList", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -11430,14 +11430,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNodeList", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNodeList", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Data::Xml::Dom::IXmlNode, true>>(args, 1);
 
@@ -11462,14 +11462,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNodeList", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNodeList", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 uint32_t param1 {  };
 
@@ -11506,14 +11506,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNodeList", L"Item", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlNodeList", L"Item", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.Item(param0));
@@ -11533,14 +11533,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlNodeList_get_Length(py::wrapper::Windows::Data::Xml::Dom::XmlNodeList* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlNodeList", L"Length"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlNodeList", L"Length"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Length());
         }
         catch (...)
@@ -11552,14 +11552,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlNodeList_get_Size(py::wrapper::Windows::Data::Xml::Dom::XmlNodeList* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlNodeList", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlNodeList", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -11764,14 +11764,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"AppendChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"AppendChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.AppendChild(param0));
@@ -11795,14 +11795,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"CloneNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"CloneNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(self->obj.CloneNode(param0));
@@ -11826,14 +11826,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"GetXml", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"GetXml", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetXml());
             }
             catch (...)
@@ -11855,14 +11855,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"HasChildNodes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"HasChildNodes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.HasChildNodes());
             }
             catch (...)
@@ -11884,14 +11884,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"InsertBefore", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"InsertBefore", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -11916,14 +11916,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"Normalize", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"Normalize", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Normalize();
                 Py_RETURN_NONE;
             }
@@ -11946,14 +11946,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"RemoveChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"RemoveChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.RemoveChild(param0));
@@ -11977,14 +11977,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"ReplaceChild", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"ReplaceChild", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -12009,14 +12009,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"SelectNodes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"SelectNodes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectNodes(param0));
@@ -12040,14 +12040,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"SelectNodesNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"SelectNodesNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -12072,14 +12072,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"SelectSingleNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"SelectSingleNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectSingleNode(param0));
@@ -12103,14 +12103,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"SelectSingleNodeNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"SelectSingleNodeNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -12131,14 +12131,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_get_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Prefix());
         }
         catch (...)
@@ -12150,12 +12150,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlProcessingInstruction_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12164,6 +12158,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.Prefix(param0);
@@ -12178,14 +12178,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_get_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -12197,12 +12197,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlProcessingInstruction_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12211,6 +12205,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.NodeValue(param0);
@@ -12225,14 +12225,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_get_Attributes(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"Attributes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"Attributes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Attributes());
         }
         catch (...)
@@ -12244,14 +12244,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_get_FirstChild(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"FirstChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"FirstChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstChild());
         }
         catch (...)
@@ -12263,14 +12263,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_get_ChildNodes(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"ChildNodes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"ChildNodes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChildNodes());
         }
         catch (...)
@@ -12282,14 +12282,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_get_LastChild(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"LastChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"LastChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastChild());
         }
         catch (...)
@@ -12301,14 +12301,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_get_LocalName(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"LocalName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"LocalName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalName());
         }
         catch (...)
@@ -12320,14 +12320,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_get_NamespaceUri(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"NamespaceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"NamespaceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NamespaceUri());
         }
         catch (...)
@@ -12339,14 +12339,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_get_NextSibling(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"NextSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"NextSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NextSibling());
         }
         catch (...)
@@ -12358,14 +12358,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_get_NodeName(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -12377,14 +12377,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_get_NodeType(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"NodeType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"NodeType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeType());
         }
         catch (...)
@@ -12396,14 +12396,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_get_OwnerDocument(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"OwnerDocument"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"OwnerDocument"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OwnerDocument());
         }
         catch (...)
@@ -12415,14 +12415,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_get_ParentNode(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"ParentNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"ParentNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentNode());
         }
         catch (...)
@@ -12434,14 +12434,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_get_PreviousSibling(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"PreviousSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"PreviousSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousSibling());
         }
         catch (...)
@@ -12453,14 +12453,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_get_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InnerText());
         }
         catch (...)
@@ -12472,12 +12472,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlProcessingInstruction_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12486,6 +12480,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.InnerText(param0);
@@ -12500,14 +12500,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_get_Data(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -12519,12 +12519,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlProcessingInstruction_put_Data(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12533,6 +12527,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Data(param0);
@@ -12547,14 +12547,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_get_Target(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"Target"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlProcessingInstruction", L"Target"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Target());
         }
         catch (...)
@@ -12668,14 +12668,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"AppendChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"AppendChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.AppendChild(param0));
@@ -12699,14 +12699,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"AppendData", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"AppendData", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.AppendData(param0);
@@ -12731,14 +12731,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"CloneNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"CloneNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(self->obj.CloneNode(param0));
@@ -12762,14 +12762,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"DeleteData", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"DeleteData", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -12795,14 +12795,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"GetXml", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"GetXml", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetXml());
             }
             catch (...)
@@ -12824,14 +12824,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"HasChildNodes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"HasChildNodes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.HasChildNodes());
             }
             catch (...)
@@ -12853,14 +12853,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"InsertBefore", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"InsertBefore", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -12885,14 +12885,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"InsertData", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"InsertData", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -12918,14 +12918,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"Normalize", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"Normalize", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Normalize();
                 Py_RETURN_NONE;
             }
@@ -12948,14 +12948,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"RemoveChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"RemoveChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.RemoveChild(param0));
@@ -12979,14 +12979,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"ReplaceChild", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"ReplaceChild", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -13011,14 +13011,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"ReplaceData", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"ReplaceData", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -13045,14 +13045,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"SelectNodes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"SelectNodes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectNodes(param0));
@@ -13076,14 +13076,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"SelectNodesNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"SelectNodesNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -13108,14 +13108,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"SelectSingleNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"SelectSingleNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectSingleNode(param0));
@@ -13139,14 +13139,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"SelectSingleNodeNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"SelectSingleNodeNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -13171,14 +13171,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"SplitText", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"SplitText", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.SplitText(param0));
@@ -13202,14 +13202,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"SubstringData", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlText", L"SubstringData", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -13230,14 +13230,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_get_Data(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -13249,12 +13249,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlText_put_Data(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13263,6 +13257,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Data(param0);
@@ -13277,14 +13277,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_get_Length(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"Length"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"Length"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Length());
         }
         catch (...)
@@ -13296,14 +13296,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_get_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Prefix());
         }
         catch (...)
@@ -13315,12 +13315,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlText_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13329,6 +13323,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.Prefix(param0);
@@ -13343,14 +13343,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_get_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -13362,12 +13362,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlText_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13376,6 +13370,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.NodeValue(param0);
@@ -13390,14 +13390,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_get_FirstChild(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"FirstChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"FirstChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstChild());
         }
         catch (...)
@@ -13409,14 +13409,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_get_LastChild(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"LastChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"LastChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastChild());
         }
         catch (...)
@@ -13428,14 +13428,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_get_LocalName(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"LocalName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"LocalName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalName());
         }
         catch (...)
@@ -13447,14 +13447,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_get_NamespaceUri(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"NamespaceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"NamespaceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NamespaceUri());
         }
         catch (...)
@@ -13466,14 +13466,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_get_NextSibling(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"NextSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"NextSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NextSibling());
         }
         catch (...)
@@ -13485,14 +13485,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_get_NodeName(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -13504,14 +13504,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_get_NodeType(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"NodeType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"NodeType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeType());
         }
         catch (...)
@@ -13523,14 +13523,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_get_Attributes(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"Attributes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"Attributes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Attributes());
         }
         catch (...)
@@ -13542,14 +13542,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_get_OwnerDocument(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"OwnerDocument"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"OwnerDocument"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OwnerDocument());
         }
         catch (...)
@@ -13561,14 +13561,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_get_ChildNodes(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"ChildNodes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"ChildNodes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChildNodes());
         }
         catch (...)
@@ -13580,14 +13580,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_get_ParentNode(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"ParentNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"ParentNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentNode());
         }
         catch (...)
@@ -13599,14 +13599,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_get_PreviousSibling(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"PreviousSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"PreviousSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousSibling());
         }
         catch (...)
@@ -13618,14 +13618,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_get_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InnerText());
         }
         catch (...)
@@ -13637,12 +13637,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlText_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13651,6 +13645,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.XmlText", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.InnerText(param0);
@@ -13773,14 +13773,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"AppendChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"AppendChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.AppendChild(param0));
@@ -13804,14 +13804,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"AppendData", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"AppendData", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.AppendData(param0);
@@ -13836,14 +13836,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"CloneNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"CloneNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(self->obj.CloneNode(param0));
@@ -13867,14 +13867,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"DeleteData", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"DeleteData", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -13900,14 +13900,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"GetXml", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"GetXml", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetXml());
             }
             catch (...)
@@ -13929,14 +13929,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"HasChildNodes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"HasChildNodes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.HasChildNodes());
             }
             catch (...)
@@ -13958,14 +13958,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"InsertBefore", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"InsertBefore", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -13990,14 +13990,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"InsertData", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"InsertData", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -14023,14 +14023,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Normalize", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Normalize", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Normalize();
                 Py_RETURN_NONE;
             }
@@ -14053,14 +14053,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"RemoveChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"RemoveChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.RemoveChild(param0));
@@ -14084,14 +14084,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"ReplaceChild", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"ReplaceChild", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -14116,14 +14116,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"ReplaceData", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"ReplaceData", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -14150,14 +14150,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectNodes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectNodes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectNodes(param0));
@@ -14181,14 +14181,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectNodesNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectNodesNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -14213,14 +14213,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectSingleNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectSingleNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectSingleNode(param0));
@@ -14244,14 +14244,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectSingleNodeNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectSingleNodeNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -14276,14 +14276,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"SubstringData", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"SubstringData", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -14304,14 +14304,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_get_Data(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -14323,12 +14323,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlCharacterData_put_Data(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14337,6 +14331,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Data(param0);
@@ -14351,14 +14351,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_get_Length(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"Length"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"Length"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Length());
         }
         catch (...)
@@ -14370,14 +14370,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_get_Attributes(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Attributes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Attributes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Attributes());
         }
         catch (...)
@@ -14389,14 +14389,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_get_ChildNodes(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"ChildNodes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"ChildNodes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChildNodes());
         }
         catch (...)
@@ -14408,14 +14408,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_get_FirstChild(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"FirstChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"FirstChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstChild());
         }
         catch (...)
@@ -14427,14 +14427,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_get_LastChild(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"LastChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"LastChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastChild());
         }
         catch (...)
@@ -14446,14 +14446,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_get_LocalName(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"LocalName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"LocalName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalName());
         }
         catch (...)
@@ -14465,14 +14465,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_get_NamespaceUri(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NamespaceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NamespaceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NamespaceUri());
         }
         catch (...)
@@ -14484,14 +14484,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_get_NextSibling(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NextSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NextSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NextSibling());
         }
         catch (...)
@@ -14503,14 +14503,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_get_NodeName(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -14522,14 +14522,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_get_NodeType(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeType());
         }
         catch (...)
@@ -14541,14 +14541,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_get_NodeValue(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -14560,12 +14560,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlCharacterData_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14574,6 +14568,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.NodeValue(param0);
@@ -14588,14 +14588,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_get_OwnerDocument(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"OwnerDocument"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"OwnerDocument"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OwnerDocument());
         }
         catch (...)
@@ -14607,14 +14607,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_get_ParentNode(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"ParentNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"ParentNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentNode());
         }
         catch (...)
@@ -14626,14 +14626,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_get_Prefix(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Prefix());
         }
         catch (...)
@@ -14645,12 +14645,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlCharacterData_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14659,6 +14653,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.Prefix(param0);
@@ -14673,14 +14673,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_get_PreviousSibling(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"PreviousSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"PreviousSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousSibling());
         }
         catch (...)
@@ -14692,14 +14692,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_get_InnerText(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InnerText());
         }
         catch (...)
@@ -14711,12 +14711,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlCharacterData_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14725,6 +14719,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.InnerText(param0);
@@ -14846,14 +14846,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"AppendChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"AppendChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.AppendChild(param0));
@@ -14877,14 +14877,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"CloneNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"CloneNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(self->obj.CloneNode(param0));
@@ -14908,14 +14908,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"GetXml", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"GetXml", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetXml());
             }
             catch (...)
@@ -14937,14 +14937,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"HasChildNodes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"HasChildNodes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.HasChildNodes());
             }
             catch (...)
@@ -14966,14 +14966,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"InsertBefore", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"InsertBefore", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -14998,14 +14998,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Normalize", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Normalize", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Normalize();
                 Py_RETURN_NONE;
             }
@@ -15028,14 +15028,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"RemoveChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"RemoveChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.RemoveChild(param0));
@@ -15059,14 +15059,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"ReplaceChild", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"ReplaceChild", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -15091,14 +15091,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectNodes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectNodes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectNodes(param0));
@@ -15122,14 +15122,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectNodesNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectNodesNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -15154,14 +15154,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectSingleNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectSingleNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectSingleNode(param0));
@@ -15185,14 +15185,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectSingleNodeNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectSingleNodeNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -15213,14 +15213,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_get_Attributes(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Attributes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Attributes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Attributes());
         }
         catch (...)
@@ -15232,14 +15232,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_get_ChildNodes(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"ChildNodes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"ChildNodes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChildNodes());
         }
         catch (...)
@@ -15251,14 +15251,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_get_FirstChild(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"FirstChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"FirstChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstChild());
         }
         catch (...)
@@ -15270,14 +15270,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_get_LastChild(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"LastChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"LastChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastChild());
         }
         catch (...)
@@ -15289,14 +15289,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_get_LocalName(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"LocalName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"LocalName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalName());
         }
         catch (...)
@@ -15308,14 +15308,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_get_NamespaceUri(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NamespaceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NamespaceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NamespaceUri());
         }
         catch (...)
@@ -15327,14 +15327,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_get_NextSibling(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NextSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NextSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NextSibling());
         }
         catch (...)
@@ -15346,14 +15346,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_get_NodeName(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -15365,14 +15365,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_get_NodeType(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeType());
         }
         catch (...)
@@ -15384,14 +15384,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_get_NodeValue(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -15403,12 +15403,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlNode_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15417,6 +15411,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.NodeValue(param0);
@@ -15431,14 +15431,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_get_OwnerDocument(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"OwnerDocument"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"OwnerDocument"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OwnerDocument());
         }
         catch (...)
@@ -15450,14 +15450,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_get_ParentNode(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"ParentNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"ParentNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentNode());
         }
         catch (...)
@@ -15469,14 +15469,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_get_Prefix(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Prefix());
         }
         catch (...)
@@ -15488,12 +15488,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlNode_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15502,6 +15496,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.Prefix(param0);
@@ -15516,14 +15516,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_get_PreviousSibling(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"PreviousSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"PreviousSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousSibling());
         }
         catch (...)
@@ -15535,14 +15535,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_get_InnerText(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InnerText());
         }
         catch (...)
@@ -15554,12 +15554,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlNode_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15568,6 +15562,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.InnerText(param0);
@@ -15682,14 +15682,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectNodes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectNodes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectNodes(param0));
@@ -15713,14 +15713,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectNodesNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectNodesNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -15745,14 +15745,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectSingleNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectSingleNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectSingleNode(param0));
@@ -15776,14 +15776,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectSingleNodeNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectSingleNodeNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -15881,14 +15881,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"GetXml", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"GetXml", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetXml());
             }
             catch (...)
@@ -15906,14 +15906,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNodeSerializer_get_InnerText(py::wrapper::Windows::Data::Xml::Dom::IXmlNodeSerializer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InnerText());
         }
         catch (...)
@@ -15925,12 +15925,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlNodeSerializer_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::IXmlNodeSerializer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15939,6 +15933,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.InnerText(param0);
@@ -16028,14 +16028,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"AppendChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"AppendChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.AppendChild(param0));
@@ -16059,14 +16059,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"AppendData", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"AppendData", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.AppendData(param0);
@@ -16091,14 +16091,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"CloneNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"CloneNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(self->obj.CloneNode(param0));
@@ -16122,14 +16122,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"DeleteData", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"DeleteData", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -16155,14 +16155,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"GetXml", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"GetXml", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetXml());
             }
             catch (...)
@@ -16184,14 +16184,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"HasChildNodes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"HasChildNodes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.HasChildNodes());
             }
             catch (...)
@@ -16213,14 +16213,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"InsertBefore", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"InsertBefore", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -16245,14 +16245,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"InsertData", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"InsertData", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -16278,14 +16278,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Normalize", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Normalize", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Normalize();
                 Py_RETURN_NONE;
             }
@@ -16308,14 +16308,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"RemoveChild", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"RemoveChild", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
                 return py::convert(self->obj.RemoveChild(param0));
@@ -16339,14 +16339,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"ReplaceChild", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"ReplaceChild", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 1);
 
@@ -16371,14 +16371,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"ReplaceData", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"ReplaceData", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -16405,14 +16405,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectNodes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectNodes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectNodes(param0));
@@ -16436,14 +16436,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectNodesNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectNodesNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -16468,14 +16468,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectSingleNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectSingleNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectSingleNode(param0));
@@ -16499,14 +16499,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectSingleNodeNS", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlNodeSelector", L"SelectSingleNodeNS", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -16531,14 +16531,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlText", L"SplitText", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlText", L"SplitText", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.SplitText(param0));
@@ -16562,14 +16562,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"SubstringData", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"SubstringData", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -16590,14 +16590,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_get_Data(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -16609,12 +16609,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlText_put_Data(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16623,6 +16617,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Data(param0);
@@ -16637,14 +16637,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_get_Length(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"Length"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlCharacterData", L"Length"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Length());
         }
         catch (...)
@@ -16656,14 +16656,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_get_Attributes(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Attributes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Attributes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Attributes());
         }
         catch (...)
@@ -16675,14 +16675,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_get_ChildNodes(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"ChildNodes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"ChildNodes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChildNodes());
         }
         catch (...)
@@ -16694,14 +16694,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_get_FirstChild(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"FirstChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"FirstChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstChild());
         }
         catch (...)
@@ -16713,14 +16713,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_get_LastChild(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"LastChild"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"LastChild"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastChild());
         }
         catch (...)
@@ -16732,14 +16732,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_get_LocalName(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"LocalName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"LocalName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalName());
         }
         catch (...)
@@ -16751,14 +16751,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_get_NamespaceUri(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NamespaceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NamespaceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NamespaceUri());
         }
         catch (...)
@@ -16770,14 +16770,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_get_NextSibling(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NextSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NextSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NextSibling());
         }
         catch (...)
@@ -16789,14 +16789,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_get_NodeName(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -16808,14 +16808,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_get_NodeType(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeType());
         }
         catch (...)
@@ -16827,14 +16827,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_get_NodeValue(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -16846,12 +16846,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlText_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16860,6 +16854,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.NodeValue(param0);
@@ -16874,14 +16874,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_get_OwnerDocument(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"OwnerDocument"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"OwnerDocument"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OwnerDocument());
         }
         catch (...)
@@ -16893,14 +16893,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_get_ParentNode(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"ParentNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"ParentNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentNode());
         }
         catch (...)
@@ -16912,14 +16912,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_get_Prefix(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Prefix());
         }
         catch (...)
@@ -16931,12 +16931,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlText_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Prefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16945,6 +16939,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"Prefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.Prefix(param0);
@@ -16959,14 +16959,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_get_PreviousSibling(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"PreviousSibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNode", L"PreviousSibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousSibling());
         }
         catch (...)
@@ -16978,14 +16978,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_get_InnerText(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InnerText());
         }
         catch (...)
@@ -16997,12 +16997,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlText_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"InnerText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17011,6 +17005,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Xml.Dom.IXmlNodeSerializer", L"InnerText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.InnerText(param0);

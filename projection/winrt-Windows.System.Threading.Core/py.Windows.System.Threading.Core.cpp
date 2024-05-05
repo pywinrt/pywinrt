@@ -85,14 +85,14 @@ namespace py::cpp::Windows::System::Threading::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Threading.Core.PreallocatedWorkItem", L"RunAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Threading.Core.PreallocatedWorkItem", L"RunAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.RunAsync());
             }
             catch (...)
@@ -184,14 +184,14 @@ namespace py::cpp::Windows::System::Threading::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Threading.Core.SignalNotifier", L"AttachToEvent", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Threading.Core.SignalNotifier", L"AttachToEvent", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::System::Threading::Core::SignalHandler>(args, 1);
 
@@ -205,14 +205,14 @@ namespace py::cpp::Windows::System::Threading::Core
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Threading.Core.SignalNotifier", L"AttachToEvent", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Threading.Core.SignalNotifier", L"AttachToEvent", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::System::Threading::Core::SignalHandler>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 2);
@@ -238,14 +238,14 @@ namespace py::cpp::Windows::System::Threading::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Threading.Core.SignalNotifier", L"AttachToSemaphore", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Threading.Core.SignalNotifier", L"AttachToSemaphore", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::System::Threading::Core::SignalHandler>(args, 1);
 
@@ -259,14 +259,14 @@ namespace py::cpp::Windows::System::Threading::Core
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Threading.Core.SignalNotifier", L"AttachToSemaphore", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Threading.Core.SignalNotifier", L"AttachToSemaphore", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::System::Threading::Core::SignalHandler>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 2);
@@ -292,14 +292,14 @@ namespace py::cpp::Windows::System::Threading::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Threading.Core.SignalNotifier", L"Enable", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Threading.Core.SignalNotifier", L"Enable", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Enable();
                 Py_RETURN_NONE;
             }
@@ -322,14 +322,14 @@ namespace py::cpp::Windows::System::Threading::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Threading.Core.SignalNotifier", L"Terminate", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Threading.Core.SignalNotifier", L"Terminate", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Terminate();
                 Py_RETURN_NONE;
             }

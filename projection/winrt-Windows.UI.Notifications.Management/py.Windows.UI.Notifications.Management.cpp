@@ -28,14 +28,14 @@ namespace py::cpp::Windows::UI::Notifications::Management
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.Management.UserNotificationListener", L"ClearNotifications", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.Management.UserNotificationListener", L"ClearNotifications", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ClearNotifications();
                 Py_RETURN_NONE;
             }
@@ -58,14 +58,14 @@ namespace py::cpp::Windows::UI::Notifications::Management
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.Management.UserNotificationListener", L"GetAccessStatus", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.Management.UserNotificationListener", L"GetAccessStatus", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAccessStatus());
             }
             catch (...)
@@ -87,14 +87,14 @@ namespace py::cpp::Windows::UI::Notifications::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.Management.UserNotificationListener", L"GetNotification", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.Management.UserNotificationListener", L"GetNotification", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetNotification(param0));
@@ -118,14 +118,14 @@ namespace py::cpp::Windows::UI::Notifications::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.Management.UserNotificationListener", L"GetNotificationsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.Management.UserNotificationListener", L"GetNotificationsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Notifications::NotificationKinds>(args, 0);
 
                 return py::convert(self->obj.GetNotificationsAsync(param0));
@@ -149,14 +149,14 @@ namespace py::cpp::Windows::UI::Notifications::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.Management.UserNotificationListener", L"RemoveNotification", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.Management.UserNotificationListener", L"RemoveNotification", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveNotification(param0);
@@ -181,14 +181,14 @@ namespace py::cpp::Windows::UI::Notifications::Management
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.Management.UserNotificationListener", L"RequestAccessAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.Management.UserNotificationListener", L"RequestAccessAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.RequestAccessAsync());
             }
             catch (...)
@@ -206,14 +206,14 @@ namespace py::cpp::Windows::UI::Notifications::Management
 
     static PyObject* UserNotificationListener_get_Current(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.Management.UserNotificationListener", L"Current"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.Management.UserNotificationListener", L"Current"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Notifications::Management::UserNotificationListener::Current());
         }
         catch (...)
@@ -225,14 +225,14 @@ namespace py::cpp::Windows::UI::Notifications::Management
 
     static PyObject* UserNotificationListener_add_NotificationChanged(py::wrapper::Windows::UI::Notifications::Management::UserNotificationListener* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Notifications.Management.UserNotificationListener", L"NotificationChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Notifications.Management.UserNotificationListener", L"NotificationChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::Management::UserNotificationListener, winrt::Windows::UI::Notifications::UserNotificationChangedEventArgs>>(arg);
 
             return py::convert(self->obj.NotificationChanged(param0));
@@ -246,14 +246,14 @@ namespace py::cpp::Windows::UI::Notifications::Management
 
     static PyObject* UserNotificationListener_remove_NotificationChanged(py::wrapper::Windows::UI::Notifications::Management::UserNotificationListener* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Notifications.Management.UserNotificationListener", L"NotificationChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Notifications.Management.UserNotificationListener", L"NotificationChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.NotificationChanged(param0);

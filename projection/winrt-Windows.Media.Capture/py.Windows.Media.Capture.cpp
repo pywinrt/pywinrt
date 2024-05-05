@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AdvancedCapturedPhoto_get_Context(py::wrapper::Windows::Media::Capture::AdvancedCapturedPhoto* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AdvancedCapturedPhoto", L"Context"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AdvancedCapturedPhoto", L"Context"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Context());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AdvancedCapturedPhoto_get_Frame(py::wrapper::Windows::Media::Capture::AdvancedCapturedPhoto* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AdvancedCapturedPhoto", L"Frame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AdvancedCapturedPhoto", L"Frame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Frame());
         }
         catch (...)
@@ -62,14 +62,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AdvancedCapturedPhoto_get_Mode(py::wrapper::Windows::Media::Capture::AdvancedCapturedPhoto* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AdvancedCapturedPhoto", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AdvancedCapturedPhoto", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mode());
         }
         catch (...)
@@ -81,14 +81,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AdvancedCapturedPhoto_get_FrameBoundsRelativeToReferencePhoto(py::wrapper::Windows::Media::Capture::AdvancedCapturedPhoto* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AdvancedCapturedPhoto", L"FrameBoundsRelativeToReferencePhoto"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AdvancedCapturedPhoto", L"FrameBoundsRelativeToReferencePhoto"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameBoundsRelativeToReferencePhoto());
         }
         catch (...)
@@ -177,14 +177,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AdvancedPhotoCapture", L"CaptureAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AdvancedPhotoCapture", L"CaptureAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CaptureAsync());
             }
             catch (...)
@@ -195,14 +195,14 @@ namespace py::cpp::Windows::Media::Capture
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AdvancedPhotoCapture", L"CaptureAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AdvancedPhotoCapture", L"CaptureAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 return py::convert(self->obj.CaptureAsync(param0));
@@ -226,14 +226,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AdvancedPhotoCapture", L"FinishAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AdvancedPhotoCapture", L"FinishAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.FinishAsync());
             }
             catch (...)
@@ -251,14 +251,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AdvancedPhotoCapture_add_AllPhotosCaptured(py::wrapper::Windows::Media::Capture::AdvancedPhotoCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AdvancedPhotoCapture", L"AllPhotosCaptured"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AdvancedPhotoCapture", L"AllPhotosCaptured"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AdvancedPhotoCapture, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.AllPhotosCaptured(param0));
@@ -272,14 +272,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AdvancedPhotoCapture_remove_AllPhotosCaptured(py::wrapper::Windows::Media::Capture::AdvancedPhotoCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AdvancedPhotoCapture", L"AllPhotosCaptured"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AdvancedPhotoCapture", L"AllPhotosCaptured"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AllPhotosCaptured(param0);
@@ -294,14 +294,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AdvancedPhotoCapture_add_OptionalReferencePhotoCaptured(py::wrapper::Windows::Media::Capture::AdvancedPhotoCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AdvancedPhotoCapture", L"OptionalReferencePhotoCaptured"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AdvancedPhotoCapture", L"OptionalReferencePhotoCaptured"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AdvancedPhotoCapture, winrt::Windows::Media::Capture::OptionalReferencePhotoCapturedEventArgs>>(arg);
 
             return py::convert(self->obj.OptionalReferencePhotoCaptured(param0));
@@ -315,14 +315,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AdvancedPhotoCapture_remove_OptionalReferencePhotoCaptured(py::wrapper::Windows::Media::Capture::AdvancedPhotoCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AdvancedPhotoCapture", L"OptionalReferencePhotoCaptured"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AdvancedPhotoCapture", L"OptionalReferencePhotoCaptured"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.OptionalReferencePhotoCaptured(param0);
@@ -416,14 +416,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"TerminateBroadcast", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"TerminateBroadcast", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::AppBroadcastTerminationReason>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -445,14 +445,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundService_get_ViewerCount(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"ViewerCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"ViewerCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ViewerCount());
         }
         catch (...)
@@ -464,12 +464,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundService_put_ViewerCount(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"ViewerCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -478,6 +472,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"ViewerCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ViewerCount(param0);
@@ -492,14 +492,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundService_get_StreamInfo(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"StreamInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"StreamInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StreamInfo());
         }
         catch (...)
@@ -511,12 +511,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundService_put_StreamInfo(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"StreamInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -525,6 +519,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"StreamInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo>(arg);
 
             self->obj.StreamInfo(param0);
@@ -539,14 +539,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundService_get_SignInInfo(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"SignInInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"SignInInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SignInInfo());
         }
         catch (...)
@@ -558,12 +558,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundService_put_SignInInfo(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"SignInInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -572,6 +566,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"SignInInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo>(arg);
 
             self->obj.SignInInfo(param0);
@@ -586,14 +586,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundService_get_PlugInState(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"PlugInState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"PlugInState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PlugInState());
         }
         catch (...)
@@ -605,12 +605,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundService_put_PlugInState(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"PlugInState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -619,6 +613,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"PlugInState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::AppBroadcastPlugInState>(arg);
 
             self->obj.PlugInState(param0);
@@ -633,14 +633,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundService_get_BroadcastTitle(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastTitle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastTitle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BroadcastTitle());
         }
         catch (...)
@@ -652,12 +652,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundService_put_BroadcastTitle(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastTitle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -666,6 +660,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastTitle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.BroadcastTitle(param0);
@@ -680,14 +680,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundService_get_AppId(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"AppId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"AppId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppId());
         }
         catch (...)
@@ -699,14 +699,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundService_get_TitleId(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"TitleId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"TitleId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TitleId());
         }
         catch (...)
@@ -718,14 +718,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundService_get_BroadcastLanguage(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BroadcastLanguage());
         }
         catch (...)
@@ -737,12 +737,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundService_put_BroadcastLanguage(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -751,6 +745,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.BroadcastLanguage(param0);
@@ -765,14 +765,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundService_get_BroadcastChannel(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastChannel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastChannel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BroadcastChannel());
         }
         catch (...)
@@ -784,12 +784,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundService_put_BroadcastChannel(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastChannel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -798,6 +792,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastChannel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.BroadcastChannel(param0);
@@ -812,14 +812,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundService_add_HeartbeatRequested(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"HeartbeatRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"HeartbeatRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastBackgroundService, winrt::Windows::Media::Capture::AppBroadcastHeartbeatRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.HeartbeatRequested(param0));
@@ -833,14 +833,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundService_remove_HeartbeatRequested(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"HeartbeatRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"HeartbeatRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.HeartbeatRequested(param0);
@@ -855,14 +855,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundService_add_BroadcastChannelChanged(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastChannelChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastChannelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastBackgroundService, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.BroadcastChannelChanged(param0));
@@ -876,14 +876,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundService_remove_BroadcastChannelChanged(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastChannelChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastChannelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.BroadcastChannelChanged(param0);
@@ -898,14 +898,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundService_add_BroadcastLanguageChanged(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastLanguageChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastLanguageChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastBackgroundService, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.BroadcastLanguageChanged(param0));
@@ -919,14 +919,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundService_remove_BroadcastLanguageChanged(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastLanguageChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastLanguageChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.BroadcastLanguageChanged(param0);
@@ -941,14 +941,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundService_add_BroadcastTitleChanged(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastTitleChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastTitleChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastBackgroundService, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.BroadcastTitleChanged(param0));
@@ -962,14 +962,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundService_remove_BroadcastTitleChanged(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastTitleChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundService", L"BroadcastTitleChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.BroadcastTitleChanged(param0);
@@ -1071,14 +1071,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundServiceSignInInfo_get_UserName(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"UserName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"UserName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserName());
         }
         catch (...)
@@ -1090,12 +1090,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundServiceSignInInfo_put_UserName(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"UserName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1104,6 +1098,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"UserName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.UserName(param0);
@@ -1118,14 +1118,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundServiceSignInInfo_get_OAuthRequestUri(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"OAuthRequestUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"OAuthRequestUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OAuthRequestUri());
         }
         catch (...)
@@ -1137,12 +1137,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundServiceSignInInfo_put_OAuthRequestUri(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"OAuthRequestUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1151,6 +1145,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"OAuthRequestUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.OAuthRequestUri(param0);
@@ -1165,14 +1165,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundServiceSignInInfo_get_OAuthCallbackUri(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"OAuthCallbackUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"OAuthCallbackUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OAuthCallbackUri());
         }
         catch (...)
@@ -1184,12 +1184,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundServiceSignInInfo_put_OAuthCallbackUri(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"OAuthCallbackUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1198,6 +1192,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"OAuthCallbackUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.OAuthCallbackUri(param0);
@@ -1212,14 +1212,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundServiceSignInInfo_get_AuthenticationResult(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"AuthenticationResult"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"AuthenticationResult"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AuthenticationResult());
         }
         catch (...)
@@ -1231,14 +1231,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundServiceSignInInfo_get_SignInState(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"SignInState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"SignInState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SignInState());
         }
         catch (...)
@@ -1250,14 +1250,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundServiceSignInInfo_add_SignInStateChanged(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"SignInStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"SignInStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo, winrt::Windows::Media::Capture::AppBroadcastSignInStateChangedEventArgs>>(arg);
 
             return py::convert(self->obj.SignInStateChanged(param0));
@@ -1271,14 +1271,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundServiceSignInInfo_remove_SignInStateChanged(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"SignInStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"SignInStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SignInStateChanged(param0);
@@ -1293,14 +1293,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundServiceSignInInfo_add_UserNameChanged(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"UserNameChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"UserNameChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.UserNameChanged(param0));
@@ -1314,14 +1314,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundServiceSignInInfo_remove_UserNameChanged(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"UserNameChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo", L"UserNameChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.UserNameChanged(param0);
@@ -1418,14 +1418,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"ReportProblemWithStream", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"ReportProblemWithStream", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportProblemWithStream();
                 Py_RETURN_NONE;
             }
@@ -1444,14 +1444,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundServiceStreamInfo_get_DesiredVideoEncodingBitrate(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"DesiredVideoEncodingBitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"DesiredVideoEncodingBitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DesiredVideoEncodingBitrate());
         }
         catch (...)
@@ -1463,12 +1463,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundServiceStreamInfo_put_DesiredVideoEncodingBitrate(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"DesiredVideoEncodingBitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1477,6 +1471,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"DesiredVideoEncodingBitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint64_t>(arg);
 
             self->obj.DesiredVideoEncodingBitrate(param0);
@@ -1491,14 +1491,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundServiceStreamInfo_get_BandwidthTestBitrate(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"BandwidthTestBitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"BandwidthTestBitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BandwidthTestBitrate());
         }
         catch (...)
@@ -1510,12 +1510,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundServiceStreamInfo_put_BandwidthTestBitrate(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"BandwidthTestBitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1524,6 +1518,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"BandwidthTestBitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint64_t>(arg);
 
             self->obj.BandwidthTestBitrate(param0);
@@ -1538,14 +1538,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundServiceStreamInfo_get_AudioCodec(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"AudioCodec"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"AudioCodec"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioCodec());
         }
         catch (...)
@@ -1557,12 +1557,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundServiceStreamInfo_put_AudioCodec(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"AudioCodec"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1571,6 +1565,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"AudioCodec"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.AudioCodec(param0);
@@ -1585,14 +1585,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundServiceStreamInfo_get_BroadcastStreamReader(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"BroadcastStreamReader"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"BroadcastStreamReader"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BroadcastStreamReader());
         }
         catch (...)
@@ -1604,14 +1604,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundServiceStreamInfo_get_StreamState(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"StreamState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"StreamState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StreamState());
         }
         catch (...)
@@ -1623,14 +1623,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundServiceStreamInfo_add_StreamStateChanged(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"StreamStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"StreamStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo, winrt::Windows::Media::Capture::AppBroadcastStreamStateChangedEventArgs>>(arg);
 
             return py::convert(self->obj.StreamStateChanged(param0));
@@ -1644,14 +1644,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundServiceStreamInfo_remove_StreamStateChanged(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"StreamStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"StreamStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StreamStateChanged(param0);
@@ -1666,14 +1666,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundServiceStreamInfo_add_VideoEncodingBitrateChanged(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"VideoEncodingBitrateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"VideoEncodingBitrateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.VideoEncodingBitrateChanged(param0));
@@ -1687,14 +1687,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundServiceStreamInfo_remove_VideoEncodingBitrateChanged(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"VideoEncodingBitrateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"VideoEncodingBitrateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.VideoEncodingBitrateChanged(param0);
@@ -1709,14 +1709,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundServiceStreamInfo_add_VideoEncodingResolutionChanged(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"VideoEncodingResolutionChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"VideoEncodingResolutionChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.VideoEncodingResolutionChanged(param0));
@@ -1730,14 +1730,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundServiceStreamInfo_remove_VideoEncodingResolutionChanged(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"VideoEncodingResolutionChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo", L"VideoEncodingResolutionChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.VideoEncodingResolutionChanged(param0);
@@ -1833,14 +1833,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastCameraCaptureStateChangedEventArgs_get_ErrorCode(py::wrapper::Windows::Media::Capture::AppBroadcastCameraCaptureStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastCameraCaptureStateChangedEventArgs", L"ErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastCameraCaptureStateChangedEventArgs", L"ErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorCode());
         }
         catch (...)
@@ -1852,14 +1852,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastCameraCaptureStateChangedEventArgs_get_State(py::wrapper::Windows::Media::Capture::AppBroadcastCameraCaptureStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastCameraCaptureStateChangedEventArgs", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastCameraCaptureStateChangedEventArgs", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -1942,14 +1942,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastGlobalSettings_get_SystemAudioGain(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"SystemAudioGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"SystemAudioGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SystemAudioGain());
         }
         catch (...)
@@ -1961,12 +1961,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastGlobalSettings_put_SystemAudioGain(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"SystemAudioGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1975,6 +1969,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"SystemAudioGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.SystemAudioGain(param0);
@@ -1989,14 +1989,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastGlobalSettings_get_SelectedCameraId(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"SelectedCameraId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"SelectedCameraId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedCameraId());
         }
         catch (...)
@@ -2008,12 +2008,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastGlobalSettings_put_SelectedCameraId(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"SelectedCameraId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2022,6 +2016,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"SelectedCameraId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.SelectedCameraId(param0);
@@ -2036,14 +2036,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastGlobalSettings_get_MicrophoneGain(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"MicrophoneGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"MicrophoneGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MicrophoneGain());
         }
         catch (...)
@@ -2055,12 +2055,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastGlobalSettings_put_MicrophoneGain(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"MicrophoneGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2069,6 +2063,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"MicrophoneGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.MicrophoneGain(param0);
@@ -2083,14 +2083,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastGlobalSettings_get_IsMicrophoneCaptureEnabledByDefault(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsMicrophoneCaptureEnabledByDefault"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsMicrophoneCaptureEnabledByDefault"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsMicrophoneCaptureEnabledByDefault());
         }
         catch (...)
@@ -2102,12 +2102,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastGlobalSettings_put_IsMicrophoneCaptureEnabledByDefault(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsMicrophoneCaptureEnabledByDefault"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2116,6 +2110,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsMicrophoneCaptureEnabledByDefault"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsMicrophoneCaptureEnabledByDefault(param0);
@@ -2130,14 +2130,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastGlobalSettings_get_IsEchoCancellationEnabled(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsEchoCancellationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsEchoCancellationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsEchoCancellationEnabled());
         }
         catch (...)
@@ -2149,12 +2149,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastGlobalSettings_put_IsEchoCancellationEnabled(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsEchoCancellationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2163,6 +2157,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsEchoCancellationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsEchoCancellationEnabled(param0);
@@ -2177,14 +2177,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastGlobalSettings_get_IsCursorImageCaptureEnabled(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsCursorImageCaptureEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsCursorImageCaptureEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCursorImageCaptureEnabled());
         }
         catch (...)
@@ -2196,12 +2196,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastGlobalSettings_put_IsCursorImageCaptureEnabled(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsCursorImageCaptureEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2210,6 +2204,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsCursorImageCaptureEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsCursorImageCaptureEnabled(param0);
@@ -2224,14 +2224,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastGlobalSettings_get_IsCameraCaptureEnabledByDefault(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsCameraCaptureEnabledByDefault"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsCameraCaptureEnabledByDefault"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCameraCaptureEnabledByDefault());
         }
         catch (...)
@@ -2243,12 +2243,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastGlobalSettings_put_IsCameraCaptureEnabledByDefault(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsCameraCaptureEnabledByDefault"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2257,6 +2251,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsCameraCaptureEnabledByDefault"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsCameraCaptureEnabledByDefault(param0);
@@ -2271,14 +2271,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastGlobalSettings_get_IsAudioCaptureEnabled(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsAudioCaptureEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsAudioCaptureEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAudioCaptureEnabled());
         }
         catch (...)
@@ -2290,12 +2290,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastGlobalSettings_put_IsAudioCaptureEnabled(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsAudioCaptureEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2304,6 +2298,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsAudioCaptureEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsAudioCaptureEnabled(param0);
@@ -2318,14 +2318,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastGlobalSettings_get_CameraOverlaySize(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"CameraOverlaySize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"CameraOverlaySize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CameraOverlaySize());
         }
         catch (...)
@@ -2337,12 +2337,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastGlobalSettings_put_CameraOverlaySize(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"CameraOverlaySize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2351,6 +2345,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"CameraOverlaySize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::AppBroadcastCameraOverlaySize>(arg);
 
             self->obj.CameraOverlaySize(param0);
@@ -2365,14 +2365,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastGlobalSettings_get_CameraOverlayLocation(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"CameraOverlayLocation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"CameraOverlayLocation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CameraOverlayLocation());
         }
         catch (...)
@@ -2384,12 +2384,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastGlobalSettings_put_CameraOverlayLocation(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"CameraOverlayLocation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2398,6 +2392,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"CameraOverlayLocation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::AppBroadcastCameraOverlayLocation>(arg);
 
             self->obj.CameraOverlayLocation(param0);
@@ -2412,14 +2412,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastGlobalSettings_get_HasHardwareEncoder(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"HasHardwareEncoder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"HasHardwareEncoder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasHardwareEncoder());
         }
         catch (...)
@@ -2431,14 +2431,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastGlobalSettings_get_IsBroadcastEnabled(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsBroadcastEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsBroadcastEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsBroadcastEnabled());
         }
         catch (...)
@@ -2450,14 +2450,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastGlobalSettings_get_IsDisabledByPolicy(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsDisabledByPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsDisabledByPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDisabledByPolicy());
         }
         catch (...)
@@ -2469,14 +2469,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastGlobalSettings_get_IsGpuConstrained(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsGpuConstrained"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastGlobalSettings", L"IsGpuConstrained"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsGpuConstrained());
         }
         catch (...)
@@ -2571,14 +2571,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastHeartbeatRequestedEventArgs_get_Handled(py::wrapper::Windows::Media::Capture::AppBroadcastHeartbeatRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastHeartbeatRequestedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastHeartbeatRequestedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -2590,12 +2590,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastHeartbeatRequestedEventArgs_put_Handled(py::wrapper::Windows::Media::Capture::AppBroadcastHeartbeatRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastHeartbeatRequestedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2604,6 +2598,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastHeartbeatRequestedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -2684,14 +2684,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastManager", L"ApplyGlobalSettings", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastManager", L"ApplyGlobalSettings", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::AppBroadcastGlobalSettings>(args, 0);
 
                 winrt::Windows::Media::Capture::AppBroadcastManager::ApplyGlobalSettings(param0);
@@ -2716,14 +2716,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastManager", L"ApplyProviderSettings", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastManager", L"ApplyProviderSettings", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::AppBroadcastProviderSettings>(args, 0);
 
                 winrt::Windows::Media::Capture::AppBroadcastManager::ApplyProviderSettings(param0);
@@ -2748,14 +2748,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastManager", L"GetGlobalSettings", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastManager", L"GetGlobalSettings", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::Capture::AppBroadcastManager::GetGlobalSettings());
             }
             catch (...)
@@ -2777,14 +2777,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastManager", L"GetProviderSettings", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastManager", L"GetProviderSettings", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::Capture::AppBroadcastManager::GetProviderSettings());
             }
             catch (...)
@@ -2873,14 +2873,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastMicrophoneCaptureStateChangedEventArgs_get_ErrorCode(py::wrapper::Windows::Media::Capture::AppBroadcastMicrophoneCaptureStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastMicrophoneCaptureStateChangedEventArgs", L"ErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastMicrophoneCaptureStateChangedEventArgs", L"ErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorCode());
         }
         catch (...)
@@ -2892,14 +2892,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastMicrophoneCaptureStateChangedEventArgs_get_State(py::wrapper::Windows::Media::Capture::AppBroadcastMicrophoneCaptureStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastMicrophoneCaptureStateChangedEventArgs", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastMicrophoneCaptureStateChangedEventArgs", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -2982,14 +2982,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPlugIn_get_AppId(py::wrapper::Windows::Media::Capture::AppBroadcastPlugIn* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPlugIn", L"AppId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPlugIn", L"AppId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppId());
         }
         catch (...)
@@ -3001,14 +3001,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPlugIn_get_DisplayName(py::wrapper::Windows::Media::Capture::AppBroadcastPlugIn* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPlugIn", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPlugIn", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -3020,14 +3020,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPlugIn_get_Logo(py::wrapper::Windows::Media::Capture::AppBroadcastPlugIn* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPlugIn", L"Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPlugIn", L"Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Logo());
         }
         catch (...)
@@ -3039,14 +3039,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPlugIn_get_ProviderSettings(py::wrapper::Windows::Media::Capture::AppBroadcastPlugIn* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPlugIn", L"ProviderSettings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPlugIn", L"ProviderSettings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderSettings());
         }
         catch (...)
@@ -3135,14 +3135,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastPlugInManager", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastPlugInManager", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::Capture::AppBroadcastPlugInManager::GetDefault());
             }
             catch (...)
@@ -3164,14 +3164,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastPlugInManager", L"GetForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastPlugInManager", L"GetForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Capture::AppBroadcastPlugInManager::GetForUser(param0));
@@ -3191,14 +3191,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPlugInManager_get_DefaultPlugIn(py::wrapper::Windows::Media::Capture::AppBroadcastPlugInManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPlugInManager", L"DefaultPlugIn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPlugInManager", L"DefaultPlugIn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultPlugIn());
         }
         catch (...)
@@ -3210,12 +3210,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastPlugInManager_put_DefaultPlugIn(py::wrapper::Windows::Media::Capture::AppBroadcastPlugInManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPlugInManager", L"DefaultPlugIn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3224,6 +3218,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPlugInManager", L"DefaultPlugIn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::AppBroadcastPlugIn>(arg);
 
             self->obj.DefaultPlugIn(param0);
@@ -3238,14 +3238,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPlugInManager_get_IsBroadcastProviderAvailable(py::wrapper::Windows::Media::Capture::AppBroadcastPlugInManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPlugInManager", L"IsBroadcastProviderAvailable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPlugInManager", L"IsBroadcastProviderAvailable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsBroadcastProviderAvailable());
         }
         catch (...)
@@ -3257,14 +3257,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPlugInManager_get_PlugInList(py::wrapper::Windows::Media::Capture::AppBroadcastPlugInManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPlugInManager", L"PlugInList"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPlugInManager", L"PlugInList"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PlugInList());
         }
         catch (...)
@@ -3375,14 +3375,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPlugInStateChangedEventArgs_get_PlugInState(py::wrapper::Windows::Media::Capture::AppBroadcastPlugInStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPlugInStateChangedEventArgs", L"PlugInState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPlugInStateChangedEventArgs", L"PlugInState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PlugInState());
         }
         catch (...)
@@ -3468,14 +3468,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastPreview", L"StopPreview", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastPreview", L"StopPreview", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.StopPreview();
                 Py_RETURN_NONE;
             }
@@ -3494,14 +3494,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPreview_get_ErrorCode(py::wrapper::Windows::Media::Capture::AppBroadcastPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreview", L"ErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreview", L"ErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorCode());
         }
         catch (...)
@@ -3513,14 +3513,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPreview_get_PreviewState(py::wrapper::Windows::Media::Capture::AppBroadcastPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreview", L"PreviewState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreview", L"PreviewState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviewState());
         }
         catch (...)
@@ -3532,14 +3532,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPreview_get_PreviewStreamReader(py::wrapper::Windows::Media::Capture::AppBroadcastPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreview", L"PreviewStreamReader"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreview", L"PreviewStreamReader"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviewStreamReader());
         }
         catch (...)
@@ -3551,14 +3551,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPreview_add_PreviewStateChanged(py::wrapper::Windows::Media::Capture::AppBroadcastPreview* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastPreview", L"PreviewStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastPreview", L"PreviewStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastPreview, winrt::Windows::Media::Capture::AppBroadcastPreviewStateChangedEventArgs>>(arg);
 
             return py::convert(self->obj.PreviewStateChanged(param0));
@@ -3572,14 +3572,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPreview_remove_PreviewStateChanged(py::wrapper::Windows::Media::Capture::AppBroadcastPreview* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastPreview", L"PreviewStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastPreview", L"PreviewStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PreviewStateChanged(param0);
@@ -3669,14 +3669,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPreviewStateChangedEventArgs_get_ErrorCode(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStateChangedEventArgs", L"ErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStateChangedEventArgs", L"ErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorCode());
         }
         catch (...)
@@ -3688,14 +3688,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPreviewStateChangedEventArgs_get_PreviewState(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStateChangedEventArgs", L"PreviewState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStateChangedEventArgs", L"PreviewState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviewState());
         }
         catch (...)
@@ -3782,14 +3782,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamReader", L"TryGetNextVideoFrame", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamReader", L"TryGetNextVideoFrame", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryGetNextVideoFrame());
             }
             catch (...)
@@ -3807,14 +3807,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPreviewStreamReader_get_VideoBitmapAlphaMode(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStreamReader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamReader", L"VideoBitmapAlphaMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamReader", L"VideoBitmapAlphaMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoBitmapAlphaMode());
         }
         catch (...)
@@ -3826,14 +3826,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPreviewStreamReader_get_VideoBitmapPixelFormat(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStreamReader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamReader", L"VideoBitmapPixelFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamReader", L"VideoBitmapPixelFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoBitmapPixelFormat());
         }
         catch (...)
@@ -3845,14 +3845,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPreviewStreamReader_get_VideoHeight(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStreamReader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamReader", L"VideoHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamReader", L"VideoHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoHeight());
         }
         catch (...)
@@ -3864,14 +3864,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPreviewStreamReader_get_VideoStride(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStreamReader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamReader", L"VideoStride"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamReader", L"VideoStride"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoStride());
         }
         catch (...)
@@ -3883,14 +3883,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPreviewStreamReader_get_VideoWidth(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStreamReader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamReader", L"VideoWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamReader", L"VideoWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoWidth());
         }
         catch (...)
@@ -3902,14 +3902,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPreviewStreamReader_add_VideoFrameArrived(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStreamReader* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamReader", L"VideoFrameArrived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamReader", L"VideoFrameArrived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamReader, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.VideoFrameArrived(param0));
@@ -3923,14 +3923,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPreviewStreamReader_remove_VideoFrameArrived(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStreamReader* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamReader", L"VideoFrameArrived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamReader", L"VideoFrameArrived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.VideoFrameArrived(param0);
@@ -4022,14 +4022,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPreviewStreamVideoFrame_get_VideoBuffer(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStreamVideoFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamVideoFrame", L"VideoBuffer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamVideoFrame", L"VideoBuffer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoBuffer());
         }
         catch (...)
@@ -4041,14 +4041,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPreviewStreamVideoFrame_get_VideoHeader(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStreamVideoFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamVideoFrame", L"VideoHeader"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamVideoFrame", L"VideoHeader"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoHeader());
         }
         catch (...)
@@ -4131,14 +4131,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPreviewStreamVideoHeader_get_AbsoluteTimestamp(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStreamVideoHeader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamVideoHeader", L"AbsoluteTimestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamVideoHeader", L"AbsoluteTimestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AbsoluteTimestamp());
         }
         catch (...)
@@ -4150,14 +4150,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPreviewStreamVideoHeader_get_Duration(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStreamVideoHeader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamVideoHeader", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamVideoHeader", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -4169,14 +4169,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPreviewStreamVideoHeader_get_FrameId(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStreamVideoHeader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamVideoHeader", L"FrameId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamVideoHeader", L"FrameId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameId());
         }
         catch (...)
@@ -4188,14 +4188,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPreviewStreamVideoHeader_get_RelativeTimestamp(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStreamVideoHeader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamVideoHeader", L"RelativeTimestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastPreviewStreamVideoHeader", L"RelativeTimestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RelativeTimestamp());
         }
         catch (...)
@@ -4280,14 +4280,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastProviderSettings_get_VideoEncodingResolutionMode(py::wrapper::Windows::Media::Capture::AppBroadcastProviderSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"VideoEncodingResolutionMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"VideoEncodingResolutionMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoEncodingResolutionMode());
         }
         catch (...)
@@ -4299,12 +4299,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastProviderSettings_put_VideoEncodingResolutionMode(py::wrapper::Windows::Media::Capture::AppBroadcastProviderSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"VideoEncodingResolutionMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4313,6 +4307,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"VideoEncodingResolutionMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::AppBroadcastVideoEncodingResolutionMode>(arg);
 
             self->obj.VideoEncodingResolutionMode(param0);
@@ -4327,14 +4327,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastProviderSettings_get_VideoEncodingBitrateMode(py::wrapper::Windows::Media::Capture::AppBroadcastProviderSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"VideoEncodingBitrateMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"VideoEncodingBitrateMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoEncodingBitrateMode());
         }
         catch (...)
@@ -4346,12 +4346,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastProviderSettings_put_VideoEncodingBitrateMode(py::wrapper::Windows::Media::Capture::AppBroadcastProviderSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"VideoEncodingBitrateMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4360,6 +4354,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"VideoEncodingBitrateMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::AppBroadcastVideoEncodingBitrateMode>(arg);
 
             self->obj.VideoEncodingBitrateMode(param0);
@@ -4374,14 +4374,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastProviderSettings_get_DefaultBroadcastTitle(py::wrapper::Windows::Media::Capture::AppBroadcastProviderSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"DefaultBroadcastTitle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"DefaultBroadcastTitle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultBroadcastTitle());
         }
         catch (...)
@@ -4393,12 +4393,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastProviderSettings_put_DefaultBroadcastTitle(py::wrapper::Windows::Media::Capture::AppBroadcastProviderSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"DefaultBroadcastTitle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4407,6 +4401,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"DefaultBroadcastTitle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DefaultBroadcastTitle(param0);
@@ -4421,14 +4421,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastProviderSettings_get_CustomVideoEncodingWidth(py::wrapper::Windows::Media::Capture::AppBroadcastProviderSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"CustomVideoEncodingWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"CustomVideoEncodingWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CustomVideoEncodingWidth());
         }
         catch (...)
@@ -4440,12 +4440,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastProviderSettings_put_CustomVideoEncodingWidth(py::wrapper::Windows::Media::Capture::AppBroadcastProviderSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"CustomVideoEncodingWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4454,6 +4448,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"CustomVideoEncodingWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.CustomVideoEncodingWidth(param0);
@@ -4468,14 +4468,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastProviderSettings_get_CustomVideoEncodingHeight(py::wrapper::Windows::Media::Capture::AppBroadcastProviderSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"CustomVideoEncodingHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"CustomVideoEncodingHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CustomVideoEncodingHeight());
         }
         catch (...)
@@ -4487,12 +4487,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastProviderSettings_put_CustomVideoEncodingHeight(py::wrapper::Windows::Media::Capture::AppBroadcastProviderSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"CustomVideoEncodingHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4501,6 +4495,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"CustomVideoEncodingHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.CustomVideoEncodingHeight(param0);
@@ -4515,14 +4515,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastProviderSettings_get_CustomVideoEncodingBitrate(py::wrapper::Windows::Media::Capture::AppBroadcastProviderSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"CustomVideoEncodingBitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"CustomVideoEncodingBitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CustomVideoEncodingBitrate());
         }
         catch (...)
@@ -4534,12 +4534,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastProviderSettings_put_CustomVideoEncodingBitrate(py::wrapper::Windows::Media::Capture::AppBroadcastProviderSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"CustomVideoEncodingBitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4548,6 +4542,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"CustomVideoEncodingBitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.CustomVideoEncodingBitrate(param0);
@@ -4562,14 +4562,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastProviderSettings_get_AudioEncodingBitrate(py::wrapper::Windows::Media::Capture::AppBroadcastProviderSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"AudioEncodingBitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"AudioEncodingBitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioEncodingBitrate());
         }
         catch (...)
@@ -4581,12 +4581,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastProviderSettings_put_AudioEncodingBitrate(py::wrapper::Windows::Media::Capture::AppBroadcastProviderSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"AudioEncodingBitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4595,6 +4589,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastProviderSettings", L"AudioEncodingBitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.AudioEncodingBitrate(param0);
@@ -4689,14 +4689,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastServices", L"EnterBroadcastModeAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastServices", L"EnterBroadcastModeAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::AppBroadcastPlugIn>(args, 0);
 
                 return py::convert(self->obj.EnterBroadcastModeAsync(param0));
@@ -4720,14 +4720,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastServices", L"ExitBroadcastMode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastServices", L"ExitBroadcastMode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::AppBroadcastExitBroadcastModeReason>(args, 0);
 
                 self->obj.ExitBroadcastMode(param0);
@@ -4752,14 +4752,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastServices", L"PauseBroadcast", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastServices", L"PauseBroadcast", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.PauseBroadcast();
                 Py_RETURN_NONE;
             }
@@ -4782,14 +4782,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastServices", L"ResumeBroadcast", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastServices", L"ResumeBroadcast", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ResumeBroadcast();
                 Py_RETURN_NONE;
             }
@@ -4812,14 +4812,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastServices", L"StartBroadcast", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastServices", L"StartBroadcast", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.StartBroadcast();
                 Py_RETURN_NONE;
             }
@@ -4842,14 +4842,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastServices", L"StartPreview", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastServices", L"StartPreview", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
 
                 return py::convert(self->obj.StartPreview(param0));
@@ -4869,14 +4869,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastServices_get_CaptureTargetType(py::wrapper::Windows::Media::Capture::AppBroadcastServices* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastServices", L"CaptureTargetType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastServices", L"CaptureTargetType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CaptureTargetType());
         }
         catch (...)
@@ -4888,12 +4888,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastServices_put_CaptureTargetType(py::wrapper::Windows::Media::Capture::AppBroadcastServices* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastServices", L"CaptureTargetType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4902,6 +4896,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastServices", L"CaptureTargetType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::AppBroadcastCaptureTargetType>(arg);
 
             self->obj.CaptureTargetType(param0);
@@ -4916,14 +4916,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastServices_get_BroadcastTitle(py::wrapper::Windows::Media::Capture::AppBroadcastServices* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastServices", L"BroadcastTitle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastServices", L"BroadcastTitle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BroadcastTitle());
         }
         catch (...)
@@ -4935,12 +4935,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastServices_put_BroadcastTitle(py::wrapper::Windows::Media::Capture::AppBroadcastServices* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastServices", L"BroadcastTitle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4949,6 +4943,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastServices", L"BroadcastTitle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.BroadcastTitle(param0);
@@ -4963,14 +4963,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastServices_get_BroadcastLanguage(py::wrapper::Windows::Media::Capture::AppBroadcastServices* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastServices", L"BroadcastLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastServices", L"BroadcastLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BroadcastLanguage());
         }
         catch (...)
@@ -4982,12 +4982,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastServices_put_BroadcastLanguage(py::wrapper::Windows::Media::Capture::AppBroadcastServices* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastServices", L"BroadcastLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4996,6 +4990,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastServices", L"BroadcastLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.BroadcastLanguage(param0);
@@ -5010,14 +5010,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastServices_get_CanCapture(py::wrapper::Windows::Media::Capture::AppBroadcastServices* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastServices", L"CanCapture"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastServices", L"CanCapture"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanCapture());
         }
         catch (...)
@@ -5029,14 +5029,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastServices_get_State(py::wrapper::Windows::Media::Capture::AppBroadcastServices* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastServices", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastServices", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -5048,14 +5048,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastServices_get_UserName(py::wrapper::Windows::Media::Capture::AppBroadcastServices* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastServices", L"UserName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastServices", L"UserName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserName());
         }
         catch (...)
@@ -5148,14 +5148,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastSignInStateChangedEventArgs_get_Result(py::wrapper::Windows::Media::Capture::AppBroadcastSignInStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastSignInStateChangedEventArgs", L"Result"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastSignInStateChangedEventArgs", L"Result"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Result());
         }
         catch (...)
@@ -5167,14 +5167,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastSignInStateChangedEventArgs_get_SignInState(py::wrapper::Windows::Media::Capture::AppBroadcastSignInStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastSignInStateChangedEventArgs", L"SignInState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastSignInStateChangedEventArgs", L"SignInState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SignInState());
         }
         catch (...)
@@ -5261,14 +5261,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastState", L"RestartCameraCapture", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastState", L"RestartCameraCapture", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RestartCameraCapture();
                 Py_RETURN_NONE;
             }
@@ -5291,14 +5291,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastState", L"RestartMicrophoneCapture", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastState", L"RestartMicrophoneCapture", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RestartMicrophoneCapture();
                 Py_RETURN_NONE;
             }
@@ -5317,14 +5317,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_get_SignInState(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"SignInState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"SignInState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SignInState());
         }
         catch (...)
@@ -5336,12 +5336,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastState_put_SignInState(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"SignInState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5350,6 +5344,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"SignInState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::AppBroadcastSignInState>(arg);
 
             self->obj.SignInState(param0);
@@ -5364,14 +5364,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_get_ShouldCaptureMicrophone(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"ShouldCaptureMicrophone"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"ShouldCaptureMicrophone"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShouldCaptureMicrophone());
         }
         catch (...)
@@ -5383,12 +5383,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastState_put_ShouldCaptureMicrophone(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"ShouldCaptureMicrophone"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5397,6 +5391,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"ShouldCaptureMicrophone"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ShouldCaptureMicrophone(param0);
@@ -5411,14 +5411,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_get_ShouldCaptureCamera(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"ShouldCaptureCamera"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"ShouldCaptureCamera"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShouldCaptureCamera());
         }
         catch (...)
@@ -5430,12 +5430,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastState_put_ShouldCaptureCamera(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"ShouldCaptureCamera"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5444,6 +5438,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"ShouldCaptureCamera"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ShouldCaptureCamera(param0);
@@ -5458,14 +5458,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_get_AuthenticationResult(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"AuthenticationResult"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"AuthenticationResult"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AuthenticationResult());
         }
         catch (...)
@@ -5477,12 +5477,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastState_put_AuthenticationResult(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"AuthenticationResult"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5491,6 +5485,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"AuthenticationResult"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::WebAuthenticationResult>(arg);
 
             self->obj.AuthenticationResult(param0);
@@ -5505,14 +5505,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_get_IsCaptureTargetRunning(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"IsCaptureTargetRunning"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"IsCaptureTargetRunning"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCaptureTargetRunning());
         }
         catch (...)
@@ -5524,14 +5524,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_get_MicrophoneCaptureError(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"MicrophoneCaptureError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"MicrophoneCaptureError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MicrophoneCaptureError());
         }
         catch (...)
@@ -5543,14 +5543,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_get_MicrophoneCaptureState(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"MicrophoneCaptureState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"MicrophoneCaptureState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MicrophoneCaptureState());
         }
         catch (...)
@@ -5562,14 +5562,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_get_OAuthCallbackUri(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"OAuthCallbackUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"OAuthCallbackUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OAuthCallbackUri());
         }
         catch (...)
@@ -5581,14 +5581,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_get_OAuthRequestUri(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"OAuthRequestUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"OAuthRequestUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OAuthRequestUri());
         }
         catch (...)
@@ -5600,14 +5600,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_get_PlugInState(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"PlugInState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"PlugInState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PlugInState());
         }
         catch (...)
@@ -5619,14 +5619,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_get_CameraCaptureError(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"CameraCaptureError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"CameraCaptureError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CameraCaptureError());
         }
         catch (...)
@@ -5638,14 +5638,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_get_CameraCaptureState(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"CameraCaptureState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"CameraCaptureState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CameraCaptureState());
         }
         catch (...)
@@ -5657,14 +5657,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_get_EncodedVideoSize(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"EncodedVideoSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"EncodedVideoSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EncodedVideoSize());
         }
         catch (...)
@@ -5676,14 +5676,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_get_StreamState(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"StreamState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"StreamState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StreamState());
         }
         catch (...)
@@ -5695,14 +5695,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_get_TerminationReason(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"TerminationReason"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"TerminationReason"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TerminationReason());
         }
         catch (...)
@@ -5714,14 +5714,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_get_TerminationReasonPlugInSpecific(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"TerminationReasonPlugInSpecific"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"TerminationReasonPlugInSpecific"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TerminationReasonPlugInSpecific());
         }
         catch (...)
@@ -5733,14 +5733,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_get_ViewerCount(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"ViewerCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastState", L"ViewerCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ViewerCount());
         }
         catch (...)
@@ -5752,14 +5752,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_add_CameraCaptureStateChanged(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"CameraCaptureStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"CameraCaptureStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastState, winrt::Windows::Media::Capture::AppBroadcastCameraCaptureStateChangedEventArgs>>(arg);
 
             return py::convert(self->obj.CameraCaptureStateChanged(param0));
@@ -5773,14 +5773,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_remove_CameraCaptureStateChanged(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"CameraCaptureStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"CameraCaptureStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CameraCaptureStateChanged(param0);
@@ -5795,14 +5795,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_add_CaptureTargetClosed(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"CaptureTargetClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"CaptureTargetClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastState, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.CaptureTargetClosed(param0));
@@ -5816,14 +5816,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_remove_CaptureTargetClosed(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"CaptureTargetClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"CaptureTargetClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CaptureTargetClosed(param0);
@@ -5838,14 +5838,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_add_MicrophoneCaptureStateChanged(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"MicrophoneCaptureStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"MicrophoneCaptureStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastState, winrt::Windows::Media::Capture::AppBroadcastMicrophoneCaptureStateChangedEventArgs>>(arg);
 
             return py::convert(self->obj.MicrophoneCaptureStateChanged(param0));
@@ -5859,14 +5859,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_remove_MicrophoneCaptureStateChanged(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"MicrophoneCaptureStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"MicrophoneCaptureStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.MicrophoneCaptureStateChanged(param0);
@@ -5881,14 +5881,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_add_PlugInStateChanged(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"PlugInStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"PlugInStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastState, winrt::Windows::Media::Capture::AppBroadcastPlugInStateChangedEventArgs>>(arg);
 
             return py::convert(self->obj.PlugInStateChanged(param0));
@@ -5902,14 +5902,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_remove_PlugInStateChanged(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"PlugInStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"PlugInStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PlugInStateChanged(param0);
@@ -5924,14 +5924,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_add_StreamStateChanged(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"StreamStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"StreamStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastState, winrt::Windows::Media::Capture::AppBroadcastStreamStateChangedEventArgs>>(arg);
 
             return py::convert(self->obj.StreamStateChanged(param0));
@@ -5945,14 +5945,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_remove_StreamStateChanged(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"StreamStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"StreamStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StreamStateChanged(param0);
@@ -5967,14 +5967,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_add_ViewerCountChanged(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"ViewerCountChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"ViewerCountChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastState, winrt::Windows::Media::Capture::AppBroadcastViewerCountChangedEventArgs>>(arg);
 
             return py::convert(self->obj.ViewerCountChanged(param0));
@@ -5988,14 +5988,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_remove_ViewerCountChanged(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"ViewerCountChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastState", L"ViewerCountChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ViewerCountChanged(param0);
@@ -6110,14 +6110,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamAudioFrame_get_AudioBuffer(py::wrapper::Windows::Media::Capture::AppBroadcastStreamAudioFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamAudioFrame", L"AudioBuffer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamAudioFrame", L"AudioBuffer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioBuffer());
         }
         catch (...)
@@ -6129,14 +6129,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamAudioFrame_get_AudioHeader(py::wrapper::Windows::Media::Capture::AppBroadcastStreamAudioFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamAudioFrame", L"AudioHeader"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamAudioFrame", L"AudioHeader"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioHeader());
         }
         catch (...)
@@ -6219,14 +6219,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamAudioHeader_get_AbsoluteTimestamp(py::wrapper::Windows::Media::Capture::AppBroadcastStreamAudioHeader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamAudioHeader", L"AbsoluteTimestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamAudioHeader", L"AbsoluteTimestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AbsoluteTimestamp());
         }
         catch (...)
@@ -6238,14 +6238,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamAudioHeader_get_Duration(py::wrapper::Windows::Media::Capture::AppBroadcastStreamAudioHeader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamAudioHeader", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamAudioHeader", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -6257,14 +6257,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamAudioHeader_get_FrameId(py::wrapper::Windows::Media::Capture::AppBroadcastStreamAudioHeader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamAudioHeader", L"FrameId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamAudioHeader", L"FrameId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameId());
         }
         catch (...)
@@ -6276,14 +6276,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamAudioHeader_get_HasDiscontinuity(py::wrapper::Windows::Media::Capture::AppBroadcastStreamAudioHeader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamAudioHeader", L"HasDiscontinuity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamAudioHeader", L"HasDiscontinuity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasDiscontinuity());
         }
         catch (...)
@@ -6295,14 +6295,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamAudioHeader_get_RelativeTimestamp(py::wrapper::Windows::Media::Capture::AppBroadcastStreamAudioHeader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamAudioHeader", L"RelativeTimestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamAudioHeader", L"RelativeTimestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RelativeTimestamp());
         }
         catch (...)
@@ -6392,14 +6392,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"TryGetNextAudioFrame", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"TryGetNextAudioFrame", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryGetNextAudioFrame());
             }
             catch (...)
@@ -6421,14 +6421,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"TryGetNextVideoFrame", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"TryGetNextVideoFrame", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryGetNextVideoFrame());
             }
             catch (...)
@@ -6446,14 +6446,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamReader_get_AudioAacSequence(py::wrapper::Windows::Media::Capture::AppBroadcastStreamReader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"AudioAacSequence"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"AudioAacSequence"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioAacSequence());
         }
         catch (...)
@@ -6465,14 +6465,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamReader_get_AudioBitrate(py::wrapper::Windows::Media::Capture::AppBroadcastStreamReader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"AudioBitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"AudioBitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioBitrate());
         }
         catch (...)
@@ -6484,14 +6484,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamReader_get_AudioChannels(py::wrapper::Windows::Media::Capture::AppBroadcastStreamReader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"AudioChannels"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"AudioChannels"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioChannels());
         }
         catch (...)
@@ -6503,14 +6503,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamReader_get_AudioSampleRate(py::wrapper::Windows::Media::Capture::AppBroadcastStreamReader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"AudioSampleRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"AudioSampleRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioSampleRate());
         }
         catch (...)
@@ -6522,14 +6522,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamReader_get_VideoBitrate(py::wrapper::Windows::Media::Capture::AppBroadcastStreamReader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"VideoBitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"VideoBitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoBitrate());
         }
         catch (...)
@@ -6541,14 +6541,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamReader_get_VideoHeight(py::wrapper::Windows::Media::Capture::AppBroadcastStreamReader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"VideoHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"VideoHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoHeight());
         }
         catch (...)
@@ -6560,14 +6560,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamReader_get_VideoWidth(py::wrapper::Windows::Media::Capture::AppBroadcastStreamReader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"VideoWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"VideoWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoWidth());
         }
         catch (...)
@@ -6579,14 +6579,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamReader_add_AudioFrameArrived(py::wrapper::Windows::Media::Capture::AppBroadcastStreamReader* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"AudioFrameArrived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"AudioFrameArrived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastStreamReader, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.AudioFrameArrived(param0));
@@ -6600,14 +6600,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamReader_remove_AudioFrameArrived(py::wrapper::Windows::Media::Capture::AppBroadcastStreamReader* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"AudioFrameArrived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"AudioFrameArrived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AudioFrameArrived(param0);
@@ -6622,14 +6622,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamReader_add_VideoFrameArrived(py::wrapper::Windows::Media::Capture::AppBroadcastStreamReader* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"VideoFrameArrived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"VideoFrameArrived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastStreamReader, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.VideoFrameArrived(param0));
@@ -6643,14 +6643,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamReader_remove_VideoFrameArrived(py::wrapper::Windows::Media::Capture::AppBroadcastStreamReader* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"VideoFrameArrived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppBroadcastStreamReader", L"VideoFrameArrived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.VideoFrameArrived(param0);
@@ -6747,14 +6747,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamStateChangedEventArgs_get_StreamState(py::wrapper::Windows::Media::Capture::AppBroadcastStreamStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamStateChangedEventArgs", L"StreamState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamStateChangedEventArgs", L"StreamState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StreamState());
         }
         catch (...)
@@ -6836,14 +6836,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamVideoFrame_get_VideoBuffer(py::wrapper::Windows::Media::Capture::AppBroadcastStreamVideoFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamVideoFrame", L"VideoBuffer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamVideoFrame", L"VideoBuffer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoBuffer());
         }
         catch (...)
@@ -6855,14 +6855,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamVideoFrame_get_VideoHeader(py::wrapper::Windows::Media::Capture::AppBroadcastStreamVideoFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamVideoFrame", L"VideoHeader"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamVideoFrame", L"VideoHeader"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoHeader());
         }
         catch (...)
@@ -6945,14 +6945,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamVideoHeader_get_AbsoluteTimestamp(py::wrapper::Windows::Media::Capture::AppBroadcastStreamVideoHeader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamVideoHeader", L"AbsoluteTimestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamVideoHeader", L"AbsoluteTimestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AbsoluteTimestamp());
         }
         catch (...)
@@ -6964,14 +6964,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamVideoHeader_get_Duration(py::wrapper::Windows::Media::Capture::AppBroadcastStreamVideoHeader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamVideoHeader", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamVideoHeader", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -6983,14 +6983,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamVideoHeader_get_FrameId(py::wrapper::Windows::Media::Capture::AppBroadcastStreamVideoHeader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamVideoHeader", L"FrameId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamVideoHeader", L"FrameId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameId());
         }
         catch (...)
@@ -7002,14 +7002,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamVideoHeader_get_HasDiscontinuity(py::wrapper::Windows::Media::Capture::AppBroadcastStreamVideoHeader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamVideoHeader", L"HasDiscontinuity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamVideoHeader", L"HasDiscontinuity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasDiscontinuity());
         }
         catch (...)
@@ -7021,14 +7021,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamVideoHeader_get_IsKeyFrame(py::wrapper::Windows::Media::Capture::AppBroadcastStreamVideoHeader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamVideoHeader", L"IsKeyFrame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamVideoHeader", L"IsKeyFrame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsKeyFrame());
         }
         catch (...)
@@ -7040,14 +7040,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamVideoHeader_get_RelativeTimestamp(py::wrapper::Windows::Media::Capture::AppBroadcastStreamVideoHeader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamVideoHeader", L"RelativeTimestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastStreamVideoHeader", L"RelativeTimestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RelativeTimestamp());
         }
         catch (...)
@@ -7134,14 +7134,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastTriggerDetails_get_BackgroundService(py::wrapper::Windows::Media::Capture::AppBroadcastTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastTriggerDetails", L"BackgroundService"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastTriggerDetails", L"BackgroundService"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BackgroundService());
         }
         catch (...)
@@ -7223,14 +7223,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastViewerCountChangedEventArgs_get_ViewerCount(py::wrapper::Windows::Media::Capture::AppBroadcastViewerCountChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastViewerCountChangedEventArgs", L"ViewerCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppBroadcastViewerCountChangedEventArgs", L"ViewerCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ViewerCount());
         }
         catch (...)
@@ -7316,14 +7316,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCapture", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCapture", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::Capture::AppCapture::GetForCurrentView());
             }
             catch (...)
@@ -7345,14 +7345,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCapture", L"SetAllowedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCapture", L"SetAllowedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Capture::AppCapture::SetAllowedAsync(param0));
@@ -7372,14 +7372,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCapture_get_IsCapturingAudio(py::wrapper::Windows::Media::Capture::AppCapture* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCapture", L"IsCapturingAudio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCapture", L"IsCapturingAudio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCapturingAudio());
         }
         catch (...)
@@ -7391,14 +7391,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCapture_get_IsCapturingVideo(py::wrapper::Windows::Media::Capture::AppCapture* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCapture", L"IsCapturingVideo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCapture", L"IsCapturingVideo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCapturingVideo());
         }
         catch (...)
@@ -7410,14 +7410,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCapture_add_CapturingChanged(py::wrapper::Windows::Media::Capture::AppCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCapture", L"CapturingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCapture", L"CapturingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppCapture, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.CapturingChanged(param0));
@@ -7431,14 +7431,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCapture_remove_CapturingChanged(py::wrapper::Windows::Media::Capture::AppCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCapture", L"CapturingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCapture", L"CapturingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CapturingChanged(param0);
@@ -7553,14 +7553,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureAlternateShortcutKeys_get_ToggleRecordingKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleRecordingKeyModifiers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleRecordingKeyModifiers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ToggleRecordingKeyModifiers());
         }
         catch (...)
@@ -7572,12 +7572,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleRecordingKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleRecordingKeyModifiers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7586,6 +7580,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleRecordingKeyModifiers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::System::VirtualKeyModifiers>(arg);
 
             self->obj.ToggleRecordingKeyModifiers(param0);
@@ -7600,14 +7600,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureAlternateShortcutKeys_get_ToggleRecordingKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleRecordingKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleRecordingKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ToggleRecordingKey());
         }
         catch (...)
@@ -7619,12 +7619,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleRecordingKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleRecordingKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7633,6 +7627,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleRecordingKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::System::VirtualKey>(arg);
 
             self->obj.ToggleRecordingKey(param0);
@@ -7647,14 +7647,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureAlternateShortcutKeys_get_ToggleRecordingIndicatorKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleRecordingIndicatorKeyModifiers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleRecordingIndicatorKeyModifiers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ToggleRecordingIndicatorKeyModifiers());
         }
         catch (...)
@@ -7666,12 +7666,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleRecordingIndicatorKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleRecordingIndicatorKeyModifiers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7680,6 +7674,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleRecordingIndicatorKeyModifiers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::System::VirtualKeyModifiers>(arg);
 
             self->obj.ToggleRecordingIndicatorKeyModifiers(param0);
@@ -7694,14 +7694,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureAlternateShortcutKeys_get_ToggleRecordingIndicatorKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleRecordingIndicatorKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleRecordingIndicatorKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ToggleRecordingIndicatorKey());
         }
         catch (...)
@@ -7713,12 +7713,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleRecordingIndicatorKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleRecordingIndicatorKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7727,6 +7721,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleRecordingIndicatorKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::System::VirtualKey>(arg);
 
             self->obj.ToggleRecordingIndicatorKey(param0);
@@ -7741,14 +7741,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureAlternateShortcutKeys_get_ToggleGameBarKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleGameBarKeyModifiers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleGameBarKeyModifiers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ToggleGameBarKeyModifiers());
         }
         catch (...)
@@ -7760,12 +7760,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleGameBarKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleGameBarKeyModifiers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7774,6 +7768,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleGameBarKeyModifiers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::System::VirtualKeyModifiers>(arg);
 
             self->obj.ToggleGameBarKeyModifiers(param0);
@@ -7788,14 +7788,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureAlternateShortcutKeys_get_ToggleGameBarKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleGameBarKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleGameBarKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ToggleGameBarKey());
         }
         catch (...)
@@ -7807,12 +7807,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleGameBarKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleGameBarKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7821,6 +7815,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleGameBarKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::System::VirtualKey>(arg);
 
             self->obj.ToggleGameBarKey(param0);
@@ -7835,14 +7835,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureAlternateShortcutKeys_get_TakeScreenshotKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"TakeScreenshotKeyModifiers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"TakeScreenshotKeyModifiers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TakeScreenshotKeyModifiers());
         }
         catch (...)
@@ -7854,12 +7854,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_TakeScreenshotKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"TakeScreenshotKeyModifiers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7868,6 +7862,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"TakeScreenshotKeyModifiers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::System::VirtualKeyModifiers>(arg);
 
             self->obj.TakeScreenshotKeyModifiers(param0);
@@ -7882,14 +7882,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureAlternateShortcutKeys_get_TakeScreenshotKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"TakeScreenshotKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"TakeScreenshotKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TakeScreenshotKey());
         }
         catch (...)
@@ -7901,12 +7901,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_TakeScreenshotKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"TakeScreenshotKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7915,6 +7909,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"TakeScreenshotKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::System::VirtualKey>(arg);
 
             self->obj.TakeScreenshotKey(param0);
@@ -7929,14 +7929,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureAlternateShortcutKeys_get_SaveHistoricalVideoKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"SaveHistoricalVideoKeyModifiers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"SaveHistoricalVideoKeyModifiers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SaveHistoricalVideoKeyModifiers());
         }
         catch (...)
@@ -7948,12 +7948,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_SaveHistoricalVideoKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"SaveHistoricalVideoKeyModifiers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7962,6 +7956,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"SaveHistoricalVideoKeyModifiers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::System::VirtualKeyModifiers>(arg);
 
             self->obj.SaveHistoricalVideoKeyModifiers(param0);
@@ -7976,14 +7976,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureAlternateShortcutKeys_get_SaveHistoricalVideoKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"SaveHistoricalVideoKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"SaveHistoricalVideoKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SaveHistoricalVideoKey());
         }
         catch (...)
@@ -7995,12 +7995,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_SaveHistoricalVideoKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"SaveHistoricalVideoKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8009,6 +8003,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"SaveHistoricalVideoKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::System::VirtualKey>(arg);
 
             self->obj.SaveHistoricalVideoKey(param0);
@@ -8023,14 +8023,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureAlternateShortcutKeys_get_ToggleMicrophoneCaptureKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleMicrophoneCaptureKeyModifiers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleMicrophoneCaptureKeyModifiers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ToggleMicrophoneCaptureKeyModifiers());
         }
         catch (...)
@@ -8042,12 +8042,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleMicrophoneCaptureKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleMicrophoneCaptureKeyModifiers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8056,6 +8050,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleMicrophoneCaptureKeyModifiers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::System::VirtualKeyModifiers>(arg);
 
             self->obj.ToggleMicrophoneCaptureKeyModifiers(param0);
@@ -8070,14 +8070,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureAlternateShortcutKeys_get_ToggleMicrophoneCaptureKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleMicrophoneCaptureKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleMicrophoneCaptureKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ToggleMicrophoneCaptureKey());
         }
         catch (...)
@@ -8089,12 +8089,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleMicrophoneCaptureKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleMicrophoneCaptureKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8103,6 +8097,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleMicrophoneCaptureKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::System::VirtualKey>(arg);
 
             self->obj.ToggleMicrophoneCaptureKey(param0);
@@ -8117,14 +8117,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureAlternateShortcutKeys_get_ToggleCameraCaptureKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleCameraCaptureKeyModifiers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleCameraCaptureKeyModifiers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ToggleCameraCaptureKeyModifiers());
         }
         catch (...)
@@ -8136,12 +8136,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleCameraCaptureKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleCameraCaptureKeyModifiers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8150,6 +8144,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleCameraCaptureKeyModifiers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::System::VirtualKeyModifiers>(arg);
 
             self->obj.ToggleCameraCaptureKeyModifiers(param0);
@@ -8164,14 +8164,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureAlternateShortcutKeys_get_ToggleCameraCaptureKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleCameraCaptureKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleCameraCaptureKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ToggleCameraCaptureKey());
         }
         catch (...)
@@ -8183,12 +8183,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleCameraCaptureKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleCameraCaptureKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8197,6 +8191,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleCameraCaptureKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::System::VirtualKey>(arg);
 
             self->obj.ToggleCameraCaptureKey(param0);
@@ -8211,14 +8211,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureAlternateShortcutKeys_get_ToggleBroadcastKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleBroadcastKeyModifiers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleBroadcastKeyModifiers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ToggleBroadcastKeyModifiers());
         }
         catch (...)
@@ -8230,12 +8230,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleBroadcastKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleBroadcastKeyModifiers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8244,6 +8238,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleBroadcastKeyModifiers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::System::VirtualKeyModifiers>(arg);
 
             self->obj.ToggleBroadcastKeyModifiers(param0);
@@ -8258,14 +8258,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureAlternateShortcutKeys_get_ToggleBroadcastKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleBroadcastKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleBroadcastKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ToggleBroadcastKey());
         }
         catch (...)
@@ -8277,12 +8277,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleBroadcastKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleBroadcastKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8291,6 +8285,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureAlternateShortcutKeys", L"ToggleBroadcastKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::System::VirtualKey>(arg);
 
             self->obj.ToggleBroadcastKey(param0);
@@ -8390,14 +8390,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureDurationGeneratedEventArgs_get_Duration(py::wrapper::Windows::Media::Capture::AppCaptureDurationGeneratedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureDurationGeneratedEventArgs", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureDurationGeneratedEventArgs", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -8479,14 +8479,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureFileGeneratedEventArgs_get_File(py::wrapper::Windows::Media::Capture::AppCaptureFileGeneratedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureFileGeneratedEventArgs", L"File"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureFileGeneratedEventArgs", L"File"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.File());
         }
         catch (...)
@@ -8564,14 +8564,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureManager", L"ApplySettings", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureManager", L"ApplySettings", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::AppCaptureSettings>(args, 0);
 
                 winrt::Windows::Media::Capture::AppCaptureManager::ApplySettings(param0);
@@ -8596,14 +8596,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureManager", L"GetCurrentSettings", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureManager", L"GetCurrentSettings", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::Capture::AppCaptureManager::GetCurrentSettings());
             }
             catch (...)
@@ -8716,14 +8716,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"AddDoubleEvent", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"AddDoubleEvent", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::Capture::AppCaptureMetadataPriority>(args, 2);
@@ -8750,14 +8750,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"AddInt32Event", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"AddInt32Event", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::Capture::AppCaptureMetadataPriority>(args, 2);
@@ -8784,14 +8784,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"AddStringEvent", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"AddStringEvent", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::Capture::AppCaptureMetadataPriority>(args, 2);
@@ -8818,14 +8818,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -8848,14 +8848,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"StartDoubleState", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"StartDoubleState", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::Capture::AppCaptureMetadataPriority>(args, 2);
@@ -8882,14 +8882,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"StartInt32State", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"StartInt32State", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::Capture::AppCaptureMetadataPriority>(args, 2);
@@ -8916,14 +8916,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"StartStringState", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"StartStringState", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::Capture::AppCaptureMetadataPriority>(args, 2);
@@ -8950,14 +8950,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"StopAllStates", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"StopAllStates", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.StopAllStates();
                 Py_RETURN_NONE;
             }
@@ -8980,14 +8980,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"StopState", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"StopState", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.StopState(param0);
@@ -9008,14 +9008,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureMetadataWriter_get_RemainingStorageBytesAvailable(py::wrapper::Windows::Media::Capture::AppCaptureMetadataWriter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"RemainingStorageBytesAvailable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"RemainingStorageBytesAvailable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemainingStorageBytesAvailable());
         }
         catch (...)
@@ -9027,14 +9027,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureMetadataWriter_add_MetadataPurged(py::wrapper::Windows::Media::Capture::AppCaptureMetadataWriter* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"MetadataPurged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"MetadataPurged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppCaptureMetadataWriter, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.MetadataPurged(param0));
@@ -9048,14 +9048,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureMetadataWriter_remove_MetadataPurged(py::wrapper::Windows::Media::Capture::AppCaptureMetadataWriter* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"MetadataPurged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureMetadataWriter", L"MetadataPurged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.MetadataPurged(param0);
@@ -9172,14 +9172,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureMicrophoneCaptureStateChangedEventArgs_get_ErrorCode(py::wrapper::Windows::Media::Capture::AppCaptureMicrophoneCaptureStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureMicrophoneCaptureStateChangedEventArgs", L"ErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureMicrophoneCaptureStateChangedEventArgs", L"ErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorCode());
         }
         catch (...)
@@ -9191,14 +9191,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureMicrophoneCaptureStateChangedEventArgs_get_State(py::wrapper::Windows::Media::Capture::AppCaptureMicrophoneCaptureStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureMicrophoneCaptureStateChangedEventArgs", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureMicrophoneCaptureStateChangedEventArgs", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -9285,14 +9285,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"StopRecording", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"StopRecording", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.StopRecording();
                 Py_RETURN_NONE;
             }
@@ -9311,14 +9311,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureRecordOperation_get_Duration(py::wrapper::Windows::Media::Capture::AppCaptureRecordOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -9330,14 +9330,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureRecordOperation_get_ErrorCode(py::wrapper::Windows::Media::Capture::AppCaptureRecordOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"ErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"ErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorCode());
         }
         catch (...)
@@ -9349,14 +9349,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureRecordOperation_get_File(py::wrapper::Windows::Media::Capture::AppCaptureRecordOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"File"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"File"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.File());
         }
         catch (...)
@@ -9368,14 +9368,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureRecordOperation_get_IsFileTruncated(py::wrapper::Windows::Media::Capture::AppCaptureRecordOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"IsFileTruncated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"IsFileTruncated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsFileTruncated());
         }
         catch (...)
@@ -9387,14 +9387,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureRecordOperation_get_State(py::wrapper::Windows::Media::Capture::AppCaptureRecordOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -9406,14 +9406,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureRecordOperation_add_DurationGenerated(py::wrapper::Windows::Media::Capture::AppCaptureRecordOperation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"DurationGenerated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"DurationGenerated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppCaptureRecordOperation, winrt::Windows::Media::Capture::AppCaptureDurationGeneratedEventArgs>>(arg);
 
             return py::convert(self->obj.DurationGenerated(param0));
@@ -9427,14 +9427,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureRecordOperation_remove_DurationGenerated(py::wrapper::Windows::Media::Capture::AppCaptureRecordOperation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"DurationGenerated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"DurationGenerated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DurationGenerated(param0);
@@ -9449,14 +9449,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureRecordOperation_add_FileGenerated(py::wrapper::Windows::Media::Capture::AppCaptureRecordOperation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"FileGenerated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"FileGenerated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppCaptureRecordOperation, winrt::Windows::Media::Capture::AppCaptureFileGeneratedEventArgs>>(arg);
 
             return py::convert(self->obj.FileGenerated(param0));
@@ -9470,14 +9470,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureRecordOperation_remove_FileGenerated(py::wrapper::Windows::Media::Capture::AppCaptureRecordOperation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"FileGenerated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"FileGenerated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FileGenerated(param0);
@@ -9492,14 +9492,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureRecordOperation_add_StateChanged(py::wrapper::Windows::Media::Capture::AppCaptureRecordOperation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppCaptureRecordOperation, winrt::Windows::Media::Capture::AppCaptureRecordingStateChangedEventArgs>>(arg);
 
             return py::convert(self->obj.StateChanged(param0));
@@ -9513,14 +9513,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureRecordOperation_remove_StateChanged(py::wrapper::Windows::Media::Capture::AppCaptureRecordOperation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureRecordOperation", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StateChanged(param0);
@@ -9616,14 +9616,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureRecordingStateChangedEventArgs_get_ErrorCode(py::wrapper::Windows::Media::Capture::AppCaptureRecordingStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureRecordingStateChangedEventArgs", L"ErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureRecordingStateChangedEventArgs", L"ErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorCode());
         }
         catch (...)
@@ -9635,14 +9635,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureRecordingStateChangedEventArgs_get_State(py::wrapper::Windows::Media::Capture::AppCaptureRecordingStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureRecordingStateChangedEventArgs", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureRecordingStateChangedEventArgs", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -9729,14 +9729,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureServices", L"Record", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureServices", L"Record", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.Record());
             }
             catch (...)
@@ -9758,14 +9758,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureServices", L"RecordTimeSpan", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureServices", L"RecordTimeSpan", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
@@ -9786,14 +9786,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureServices_get_CanCapture(py::wrapper::Windows::Media::Capture::AppCaptureServices* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureServices", L"CanCapture"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureServices", L"CanCapture"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanCapture());
         }
         catch (...)
@@ -9805,14 +9805,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureServices_get_State(py::wrapper::Windows::Media::Capture::AppCaptureServices* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureServices", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureServices", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -9897,14 +9897,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_IsHistoricalCaptureOnWirelessDisplayAllowed(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsHistoricalCaptureOnWirelessDisplayAllowed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsHistoricalCaptureOnWirelessDisplayAllowed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsHistoricalCaptureOnWirelessDisplayAllowed());
         }
         catch (...)
@@ -9916,12 +9916,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_IsHistoricalCaptureOnWirelessDisplayAllowed(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsHistoricalCaptureOnWirelessDisplayAllowed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9930,6 +9924,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsHistoricalCaptureOnWirelessDisplayAllowed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsHistoricalCaptureOnWirelessDisplayAllowed(param0);
@@ -9944,14 +9944,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_VideoEncodingBitrateMode(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"VideoEncodingBitrateMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"VideoEncodingBitrateMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoEncodingBitrateMode());
         }
         catch (...)
@@ -9963,12 +9963,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_VideoEncodingBitrateMode(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"VideoEncodingBitrateMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9977,6 +9971,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"VideoEncodingBitrateMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::AppCaptureVideoEncodingBitrateMode>(arg);
 
             self->obj.VideoEncodingBitrateMode(param0);
@@ -9991,14 +9991,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_IsHistoricalCaptureOnBatteryAllowed(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsHistoricalCaptureOnBatteryAllowed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsHistoricalCaptureOnBatteryAllowed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsHistoricalCaptureOnBatteryAllowed());
         }
         catch (...)
@@ -10010,12 +10010,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_IsHistoricalCaptureOnBatteryAllowed(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsHistoricalCaptureOnBatteryAllowed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10024,6 +10018,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsHistoricalCaptureOnBatteryAllowed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsHistoricalCaptureOnBatteryAllowed(param0);
@@ -10038,14 +10038,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_IsAudioCaptureEnabled(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsAudioCaptureEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsAudioCaptureEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAudioCaptureEnabled());
         }
         catch (...)
@@ -10057,12 +10057,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_IsAudioCaptureEnabled(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsAudioCaptureEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10071,6 +10065,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsAudioCaptureEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsAudioCaptureEnabled(param0);
@@ -10085,14 +10085,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_IsAppCaptureEnabled(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsAppCaptureEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsAppCaptureEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAppCaptureEnabled());
         }
         catch (...)
@@ -10104,12 +10104,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_IsAppCaptureEnabled(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsAppCaptureEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10118,6 +10112,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsAppCaptureEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsAppCaptureEnabled(param0);
@@ -10132,14 +10132,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_AppCaptureDestinationFolder(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"AppCaptureDestinationFolder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"AppCaptureDestinationFolder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppCaptureDestinationFolder());
         }
         catch (...)
@@ -10151,12 +10151,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_AppCaptureDestinationFolder(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"AppCaptureDestinationFolder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10165,6 +10159,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"AppCaptureDestinationFolder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::StorageFolder>(arg);
 
             self->obj.AppCaptureDestinationFolder(param0);
@@ -10179,14 +10179,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_HistoricalBufferLength(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"HistoricalBufferLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"HistoricalBufferLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HistoricalBufferLength());
         }
         catch (...)
@@ -10198,12 +10198,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_HistoricalBufferLength(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"HistoricalBufferLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10212,6 +10206,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"HistoricalBufferLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.HistoricalBufferLength(param0);
@@ -10226,14 +10226,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_IsHistoricalCaptureEnabled(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsHistoricalCaptureEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsHistoricalCaptureEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsHistoricalCaptureEnabled());
         }
         catch (...)
@@ -10245,12 +10245,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_IsHistoricalCaptureEnabled(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsHistoricalCaptureEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10259,6 +10253,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsHistoricalCaptureEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsHistoricalCaptureEnabled(param0);
@@ -10273,14 +10273,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_CustomVideoEncodingWidth(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"CustomVideoEncodingWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"CustomVideoEncodingWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CustomVideoEncodingWidth());
         }
         catch (...)
@@ -10292,12 +10292,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_CustomVideoEncodingWidth(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"CustomVideoEncodingWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10306,6 +10300,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"CustomVideoEncodingWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.CustomVideoEncodingWidth(param0);
@@ -10320,14 +10320,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_CustomVideoEncodingHeight(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"CustomVideoEncodingHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"CustomVideoEncodingHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CustomVideoEncodingHeight());
         }
         catch (...)
@@ -10339,12 +10339,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_CustomVideoEncodingHeight(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"CustomVideoEncodingHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10353,6 +10347,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"CustomVideoEncodingHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.CustomVideoEncodingHeight(param0);
@@ -10367,14 +10367,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_CustomVideoEncodingBitrate(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"CustomVideoEncodingBitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"CustomVideoEncodingBitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CustomVideoEncodingBitrate());
         }
         catch (...)
@@ -10386,12 +10386,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_CustomVideoEncodingBitrate(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"CustomVideoEncodingBitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10400,6 +10394,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"CustomVideoEncodingBitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.CustomVideoEncodingBitrate(param0);
@@ -10414,14 +10414,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_AudioEncodingBitrate(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"AudioEncodingBitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"AudioEncodingBitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioEncodingBitrate());
         }
         catch (...)
@@ -10433,12 +10433,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_AudioEncodingBitrate(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"AudioEncodingBitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10447,6 +10441,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"AudioEncodingBitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.AudioEncodingBitrate(param0);
@@ -10461,14 +10461,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_HistoricalBufferLengthUnit(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"HistoricalBufferLengthUnit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"HistoricalBufferLengthUnit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HistoricalBufferLengthUnit());
         }
         catch (...)
@@ -10480,12 +10480,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_HistoricalBufferLengthUnit(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"HistoricalBufferLengthUnit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10494,6 +10488,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"HistoricalBufferLengthUnit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::AppCaptureHistoricalBufferLengthUnit>(arg);
 
             self->obj.HistoricalBufferLengthUnit(param0);
@@ -10508,14 +10508,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_VideoEncodingResolutionMode(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"VideoEncodingResolutionMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"VideoEncodingResolutionMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoEncodingResolutionMode());
         }
         catch (...)
@@ -10527,12 +10527,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_VideoEncodingResolutionMode(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"VideoEncodingResolutionMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10541,6 +10535,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"VideoEncodingResolutionMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::AppCaptureVideoEncodingResolutionMode>(arg);
 
             self->obj.VideoEncodingResolutionMode(param0);
@@ -10555,14 +10555,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_ScreenshotDestinationFolder(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"ScreenshotDestinationFolder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"ScreenshotDestinationFolder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ScreenshotDestinationFolder());
         }
         catch (...)
@@ -10574,12 +10574,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_ScreenshotDestinationFolder(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"ScreenshotDestinationFolder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10588,6 +10582,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"ScreenshotDestinationFolder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::StorageFolder>(arg);
 
             self->obj.ScreenshotDestinationFolder(param0);
@@ -10602,14 +10602,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_MaximumRecordLength(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"MaximumRecordLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"MaximumRecordLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaximumRecordLength());
         }
         catch (...)
@@ -10621,12 +10621,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_MaximumRecordLength(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"MaximumRecordLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10635,6 +10629,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"MaximumRecordLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.MaximumRecordLength(param0);
@@ -10649,14 +10649,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_HasHardwareEncoder(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"HasHardwareEncoder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"HasHardwareEncoder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasHardwareEncoder());
         }
         catch (...)
@@ -10668,14 +10668,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_IsCpuConstrained(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsCpuConstrained"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsCpuConstrained"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCpuConstrained());
         }
         catch (...)
@@ -10687,14 +10687,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_IsMemoryConstrained(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsMemoryConstrained"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsMemoryConstrained"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsMemoryConstrained());
         }
         catch (...)
@@ -10706,14 +10706,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_IsDisabledByPolicy(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsDisabledByPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsDisabledByPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDisabledByPolicy());
         }
         catch (...)
@@ -10725,14 +10725,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_AlternateShortcutKeys(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"AlternateShortcutKeys"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"AlternateShortcutKeys"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlternateShortcutKeys());
         }
         catch (...)
@@ -10744,14 +10744,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_IsGpuConstrained(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsGpuConstrained"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsGpuConstrained"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsGpuConstrained());
         }
         catch (...)
@@ -10763,14 +10763,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_IsMicrophoneCaptureEnabled(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsMicrophoneCaptureEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsMicrophoneCaptureEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsMicrophoneCaptureEnabled());
         }
         catch (...)
@@ -10782,12 +10782,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_IsMicrophoneCaptureEnabled(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsMicrophoneCaptureEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10796,6 +10790,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsMicrophoneCaptureEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsMicrophoneCaptureEnabled(param0);
@@ -10810,14 +10810,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_VideoEncodingFrameRateMode(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"VideoEncodingFrameRateMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"VideoEncodingFrameRateMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoEncodingFrameRateMode());
         }
         catch (...)
@@ -10829,12 +10829,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_VideoEncodingFrameRateMode(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"VideoEncodingFrameRateMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10843,6 +10837,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"VideoEncodingFrameRateMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::AppCaptureVideoEncodingFrameRateMode>(arg);
 
             self->obj.VideoEncodingFrameRateMode(param0);
@@ -10857,14 +10857,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_SystemAudioGain(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"SystemAudioGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"SystemAudioGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SystemAudioGain());
         }
         catch (...)
@@ -10876,12 +10876,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_SystemAudioGain(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"SystemAudioGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10890,6 +10884,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"SystemAudioGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.SystemAudioGain(param0);
@@ -10904,14 +10904,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_MicrophoneGain(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"MicrophoneGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"MicrophoneGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MicrophoneGain());
         }
         catch (...)
@@ -10923,12 +10923,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_MicrophoneGain(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"MicrophoneGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10937,6 +10931,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"MicrophoneGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.MicrophoneGain(param0);
@@ -10951,14 +10951,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_IsMicrophoneCaptureEnabledByDefault(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsMicrophoneCaptureEnabledByDefault"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsMicrophoneCaptureEnabledByDefault"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsMicrophoneCaptureEnabledByDefault());
         }
         catch (...)
@@ -10970,12 +10970,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_IsMicrophoneCaptureEnabledByDefault(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsMicrophoneCaptureEnabledByDefault"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10984,6 +10978,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsMicrophoneCaptureEnabledByDefault"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsMicrophoneCaptureEnabledByDefault(param0);
@@ -10998,14 +10998,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_IsEchoCancellationEnabled(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsEchoCancellationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsEchoCancellationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsEchoCancellationEnabled());
         }
         catch (...)
@@ -11017,12 +11017,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_IsEchoCancellationEnabled(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsEchoCancellationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11031,6 +11025,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsEchoCancellationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsEchoCancellationEnabled(param0);
@@ -11045,14 +11045,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureSettings_get_IsCursorImageCaptureEnabled(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsCursorImageCaptureEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsCursorImageCaptureEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCursorImageCaptureEnabled());
         }
         catch (...)
@@ -11064,12 +11064,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_IsCursorImageCaptureEnabled(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsCursorImageCaptureEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11078,6 +11072,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureSettings", L"IsCursorImageCaptureEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsCursorImageCaptureEnabled(param0);
@@ -11194,14 +11194,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureState", L"RestartMicrophoneCapture", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.AppCaptureState", L"RestartMicrophoneCapture", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RestartMicrophoneCapture();
                 Py_RETURN_NONE;
             }
@@ -11220,14 +11220,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureState_get_ShouldCaptureMicrophone(py::wrapper::Windows::Media::Capture::AppCaptureState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureState", L"ShouldCaptureMicrophone"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureState", L"ShouldCaptureMicrophone"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShouldCaptureMicrophone());
         }
         catch (...)
@@ -11239,12 +11239,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureState_put_ShouldCaptureMicrophone(py::wrapper::Windows::Media::Capture::AppCaptureState* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureState", L"ShouldCaptureMicrophone"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11253,6 +11247,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureState", L"ShouldCaptureMicrophone"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ShouldCaptureMicrophone(param0);
@@ -11267,14 +11267,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureState_get_IsHistoricalCaptureEnabled(py::wrapper::Windows::Media::Capture::AppCaptureState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureState", L"IsHistoricalCaptureEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureState", L"IsHistoricalCaptureEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsHistoricalCaptureEnabled());
         }
         catch (...)
@@ -11286,14 +11286,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureState_get_IsTargetRunning(py::wrapper::Windows::Media::Capture::AppCaptureState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureState", L"IsTargetRunning"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureState", L"IsTargetRunning"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsTargetRunning());
         }
         catch (...)
@@ -11305,14 +11305,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureState_get_MicrophoneCaptureError(py::wrapper::Windows::Media::Capture::AppCaptureState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureState", L"MicrophoneCaptureError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureState", L"MicrophoneCaptureError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MicrophoneCaptureError());
         }
         catch (...)
@@ -11324,14 +11324,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureState_get_MicrophoneCaptureState(py::wrapper::Windows::Media::Capture::AppCaptureState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureState", L"MicrophoneCaptureState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.AppCaptureState", L"MicrophoneCaptureState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MicrophoneCaptureState());
         }
         catch (...)
@@ -11343,14 +11343,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureState_add_CaptureTargetClosed(py::wrapper::Windows::Media::Capture::AppCaptureState* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureState", L"CaptureTargetClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureState", L"CaptureTargetClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppCaptureState, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.CaptureTargetClosed(param0));
@@ -11364,14 +11364,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureState_remove_CaptureTargetClosed(py::wrapper::Windows::Media::Capture::AppCaptureState* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureState", L"CaptureTargetClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureState", L"CaptureTargetClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CaptureTargetClosed(param0);
@@ -11386,14 +11386,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureState_add_MicrophoneCaptureStateChanged(py::wrapper::Windows::Media::Capture::AppCaptureState* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureState", L"MicrophoneCaptureStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureState", L"MicrophoneCaptureStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppCaptureState, winrt::Windows::Media::Capture::AppCaptureMicrophoneCaptureStateChangedEventArgs>>(arg);
 
             return py::convert(self->obj.MicrophoneCaptureStateChanged(param0));
@@ -11407,14 +11407,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureState_remove_MicrophoneCaptureStateChanged(py::wrapper::Windows::Media::Capture::AppCaptureState* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureState", L"MicrophoneCaptureStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.AppCaptureState", L"MicrophoneCaptureStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.MicrophoneCaptureStateChanged(param0);
@@ -11534,14 +11534,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.CameraCaptureUI", L"CaptureFileAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.CameraCaptureUI", L"CaptureFileAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::CameraCaptureUIMode>(args, 0);
 
                 return py::convert(self->obj.CaptureFileAsync(param0));
@@ -11561,14 +11561,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CameraCaptureUI_get_PhotoSettings(py::wrapper::Windows::Media::Capture::CameraCaptureUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUI", L"PhotoSettings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUI", L"PhotoSettings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhotoSettings());
         }
         catch (...)
@@ -11580,14 +11580,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CameraCaptureUI_get_VideoSettings(py::wrapper::Windows::Media::Capture::CameraCaptureUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUI", L"VideoSettings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUI", L"VideoSettings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoSettings());
         }
         catch (...)
@@ -11671,14 +11671,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CameraCaptureUIPhotoCaptureSettings_get_MaxResolution(py::wrapper::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"MaxResolution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"MaxResolution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxResolution());
         }
         catch (...)
@@ -11690,12 +11690,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int CameraCaptureUIPhotoCaptureSettings_put_MaxResolution(py::wrapper::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"MaxResolution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11704,6 +11698,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"MaxResolution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::CameraCaptureUIMaxPhotoResolution>(arg);
 
             self->obj.MaxResolution(param0);
@@ -11718,14 +11718,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CameraCaptureUIPhotoCaptureSettings_get_Format(py::wrapper::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"Format"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"Format"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Format());
         }
         catch (...)
@@ -11737,12 +11737,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int CameraCaptureUIPhotoCaptureSettings_put_Format(py::wrapper::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"Format"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11751,6 +11745,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"Format"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::CameraCaptureUIPhotoFormat>(arg);
 
             self->obj.Format(param0);
@@ -11765,14 +11765,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CameraCaptureUIPhotoCaptureSettings_get_CroppedSizeInPixels(py::wrapper::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"CroppedSizeInPixels"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"CroppedSizeInPixels"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CroppedSizeInPixels());
         }
         catch (...)
@@ -11784,12 +11784,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int CameraCaptureUIPhotoCaptureSettings_put_CroppedSizeInPixels(py::wrapper::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"CroppedSizeInPixels"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11798,6 +11792,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"CroppedSizeInPixels"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(arg);
 
             self->obj.CroppedSizeInPixels(param0);
@@ -11812,14 +11812,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CameraCaptureUIPhotoCaptureSettings_get_CroppedAspectRatio(py::wrapper::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"CroppedAspectRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"CroppedAspectRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CroppedAspectRatio());
         }
         catch (...)
@@ -11831,12 +11831,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int CameraCaptureUIPhotoCaptureSettings_put_CroppedAspectRatio(py::wrapper::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"CroppedAspectRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11845,6 +11839,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"CroppedAspectRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(arg);
 
             self->obj.CroppedAspectRatio(param0);
@@ -11859,14 +11859,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CameraCaptureUIPhotoCaptureSettings_get_AllowCropping(py::wrapper::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"AllowCropping"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"AllowCropping"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowCropping());
         }
         catch (...)
@@ -11878,12 +11878,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int CameraCaptureUIPhotoCaptureSettings_put_AllowCropping(py::wrapper::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"AllowCropping"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11892,6 +11886,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"AllowCropping"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowCropping(param0);
@@ -11980,14 +11980,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CameraCaptureUIVideoCaptureSettings_get_MaxResolution(py::wrapper::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"MaxResolution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"MaxResolution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxResolution());
         }
         catch (...)
@@ -11999,12 +11999,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int CameraCaptureUIVideoCaptureSettings_put_MaxResolution(py::wrapper::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"MaxResolution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12013,6 +12007,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"MaxResolution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::CameraCaptureUIMaxVideoResolution>(arg);
 
             self->obj.MaxResolution(param0);
@@ -12027,14 +12027,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CameraCaptureUIVideoCaptureSettings_get_MaxDurationInSeconds(py::wrapper::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"MaxDurationInSeconds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"MaxDurationInSeconds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxDurationInSeconds());
         }
         catch (...)
@@ -12046,12 +12046,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int CameraCaptureUIVideoCaptureSettings_put_MaxDurationInSeconds(py::wrapper::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"MaxDurationInSeconds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12060,6 +12054,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"MaxDurationInSeconds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.MaxDurationInSeconds(param0);
@@ -12074,14 +12074,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CameraCaptureUIVideoCaptureSettings_get_Format(py::wrapper::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"Format"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"Format"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Format());
         }
         catch (...)
@@ -12093,12 +12093,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int CameraCaptureUIVideoCaptureSettings_put_Format(py::wrapper::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"Format"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12107,6 +12101,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"Format"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::CameraCaptureUIVideoFormat>(arg);
 
             self->obj.Format(param0);
@@ -12121,14 +12121,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CameraCaptureUIVideoCaptureSettings_get_AllowTrimming(py::wrapper::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"AllowTrimming"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"AllowTrimming"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowTrimming());
         }
         catch (...)
@@ -12140,12 +12140,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int CameraCaptureUIVideoCaptureSettings_put_AllowTrimming(py::wrapper::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"AllowTrimming"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12154,6 +12148,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"AllowTrimming"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowTrimming(param0);
@@ -12237,14 +12237,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.CameraOptionsUI", L"Show", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.CameraOptionsUI", L"Show", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCapture>(args, 0);
 
                 winrt::Windows::Media::Capture::CameraOptionsUI::Show(param0);
@@ -12337,14 +12337,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.CapturedFrame", L"CloneStream", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.CapturedFrame", L"CloneStream", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CloneStream());
             }
             catch (...)
@@ -12366,14 +12366,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.CapturedFrame", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.CapturedFrame", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -12396,14 +12396,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.CapturedFrame", L"FlushAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.CapturedFrame", L"FlushAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.FlushAsync());
             }
             catch (...)
@@ -12425,14 +12425,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.CapturedFrame", L"GetInputStreamAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.CapturedFrame", L"GetInputStreamAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(self->obj.GetInputStreamAt(param0));
@@ -12456,14 +12456,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.CapturedFrame", L"GetOutputStreamAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.CapturedFrame", L"GetOutputStreamAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(self->obj.GetOutputStreamAt(param0));
@@ -12487,14 +12487,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.CapturedFrame", L"ReadAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.CapturedFrame", L"ReadAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::InputStreamOptions>(args, 2);
@@ -12520,14 +12520,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.CapturedFrame", L"Seek", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.CapturedFrame", L"Seek", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 self->obj.Seek(param0);
@@ -12552,14 +12552,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.CapturedFrame", L"WriteAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.CapturedFrame", L"WriteAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert(self->obj.WriteAsync(param0));
@@ -12579,14 +12579,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrame_get_Height(py::wrapper::Windows::Media::Capture::CapturedFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrame", L"Height"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrame", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Height());
         }
         catch (...)
@@ -12598,14 +12598,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrame_get_Width(py::wrapper::Windows::Media::Capture::CapturedFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrame", L"Width"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrame", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Width());
         }
         catch (...)
@@ -12617,14 +12617,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrame_get_BitmapProperties(py::wrapper::Windows::Media::Capture::CapturedFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrame", L"BitmapProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrame", L"BitmapProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapProperties());
         }
         catch (...)
@@ -12636,14 +12636,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrame_get_ControlValues(py::wrapper::Windows::Media::Capture::CapturedFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrame", L"ControlValues"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrame", L"ControlValues"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ControlValues());
         }
         catch (...)
@@ -12655,14 +12655,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrame_get_SoftwareBitmap(py::wrapper::Windows::Media::Capture::CapturedFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrame", L"SoftwareBitmap"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrame", L"SoftwareBitmap"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SoftwareBitmap());
         }
         catch (...)
@@ -12674,14 +12674,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrame_get_ContentType(py::wrapper::Windows::Media::Capture::CapturedFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrame", L"ContentType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrame", L"ContentType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentType());
         }
         catch (...)
@@ -12693,14 +12693,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrame_get_Size(py::wrapper::Windows::Media::Capture::CapturedFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrame", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrame", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -12712,12 +12712,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int CapturedFrame_put_Size(py::wrapper::Windows::Media::Capture::CapturedFrame* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrame", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12726,6 +12720,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrame", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint64_t>(arg);
 
             self->obj.Size(param0);
@@ -12740,14 +12740,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrame_get_CanRead(py::wrapper::Windows::Media::Capture::CapturedFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrame", L"CanRead"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrame", L"CanRead"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanRead());
         }
         catch (...)
@@ -12759,14 +12759,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrame_get_CanWrite(py::wrapper::Windows::Media::Capture::CapturedFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrame", L"CanWrite"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrame", L"CanWrite"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanWrite());
         }
         catch (...)
@@ -12778,14 +12778,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrame_get_Position(py::wrapper::Windows::Media::Capture::CapturedFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrame", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrame", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -12905,14 +12905,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrameControlValues_get_Exposure(py::wrapper::Windows::Media::Capture::CapturedFrameControlValues* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"Exposure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"Exposure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Exposure());
         }
         catch (...)
@@ -12924,14 +12924,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrameControlValues_get_ExposureCompensation(py::wrapper::Windows::Media::Capture::CapturedFrameControlValues* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"ExposureCompensation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"ExposureCompensation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExposureCompensation());
         }
         catch (...)
@@ -12943,14 +12943,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrameControlValues_get_FlashPowerPercent(py::wrapper::Windows::Media::Capture::CapturedFrameControlValues* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"FlashPowerPercent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"FlashPowerPercent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FlashPowerPercent());
         }
         catch (...)
@@ -12962,14 +12962,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrameControlValues_get_Flashed(py::wrapper::Windows::Media::Capture::CapturedFrameControlValues* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"Flashed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"Flashed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Flashed());
         }
         catch (...)
@@ -12981,14 +12981,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrameControlValues_get_Focus(py::wrapper::Windows::Media::Capture::CapturedFrameControlValues* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"Focus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"Focus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Focus());
         }
         catch (...)
@@ -13000,14 +13000,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrameControlValues_get_IsoSpeed(py::wrapper::Windows::Media::Capture::CapturedFrameControlValues* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"IsoSpeed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"IsoSpeed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsoSpeed());
         }
         catch (...)
@@ -13019,14 +13019,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrameControlValues_get_SceneMode(py::wrapper::Windows::Media::Capture::CapturedFrameControlValues* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"SceneMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"SceneMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SceneMode());
         }
         catch (...)
@@ -13038,14 +13038,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrameControlValues_get_WhiteBalance(py::wrapper::Windows::Media::Capture::CapturedFrameControlValues* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"WhiteBalance"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"WhiteBalance"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WhiteBalance());
         }
         catch (...)
@@ -13057,14 +13057,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrameControlValues_get_ZoomFactor(py::wrapper::Windows::Media::Capture::CapturedFrameControlValues* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"ZoomFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"ZoomFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ZoomFactor());
         }
         catch (...)
@@ -13076,14 +13076,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrameControlValues_get_FocusState(py::wrapper::Windows::Media::Capture::CapturedFrameControlValues* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"FocusState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"FocusState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FocusState());
         }
         catch (...)
@@ -13095,14 +13095,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrameControlValues_get_IsoAnalogGain(py::wrapper::Windows::Media::Capture::CapturedFrameControlValues* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"IsoAnalogGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"IsoAnalogGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsoAnalogGain());
         }
         catch (...)
@@ -13114,14 +13114,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrameControlValues_get_IsoDigitalGain(py::wrapper::Windows::Media::Capture::CapturedFrameControlValues* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"IsoDigitalGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"IsoDigitalGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsoDigitalGain());
         }
         catch (...)
@@ -13133,14 +13133,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrameControlValues_get_SensorFrameRate(py::wrapper::Windows::Media::Capture::CapturedFrameControlValues* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"SensorFrameRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"SensorFrameRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SensorFrameRate());
         }
         catch (...)
@@ -13152,14 +13152,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrameControlValues_get_WhiteBalanceGain(py::wrapper::Windows::Media::Capture::CapturedFrameControlValues* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"WhiteBalanceGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedFrameControlValues", L"WhiteBalanceGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WhiteBalanceGain());
         }
         catch (...)
@@ -13254,14 +13254,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedPhoto_get_Frame(py::wrapper::Windows::Media::Capture::CapturedPhoto* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedPhoto", L"Frame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedPhoto", L"Frame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Frame());
         }
         catch (...)
@@ -13273,14 +13273,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedPhoto_get_Thumbnail(py::wrapper::Windows::Media::Capture::CapturedPhoto* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedPhoto", L"Thumbnail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.CapturedPhoto", L"Thumbnail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Thumbnail());
         }
         catch (...)
@@ -13367,14 +13367,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.GameBarServices", L"DisableCapture", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.GameBarServices", L"DisableCapture", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.DisableCapture();
                 Py_RETURN_NONE;
             }
@@ -13397,14 +13397,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.GameBarServices", L"EnableCapture", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.GameBarServices", L"EnableCapture", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.EnableCapture();
                 Py_RETURN_NONE;
             }
@@ -13423,14 +13423,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* GameBarServices_get_AppBroadcastServices(py::wrapper::Windows::Media::Capture::GameBarServices* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServices", L"AppBroadcastServices"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServices", L"AppBroadcastServices"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppBroadcastServices());
         }
         catch (...)
@@ -13442,14 +13442,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* GameBarServices_get_AppCaptureServices(py::wrapper::Windows::Media::Capture::GameBarServices* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServices", L"AppCaptureServices"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServices", L"AppCaptureServices"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppCaptureServices());
         }
         catch (...)
@@ -13461,14 +13461,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* GameBarServices_get_SessionId(py::wrapper::Windows::Media::Capture::GameBarServices* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServices", L"SessionId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServices", L"SessionId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SessionId());
         }
         catch (...)
@@ -13480,14 +13480,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* GameBarServices_get_TargetCapturePolicy(py::wrapper::Windows::Media::Capture::GameBarServices* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServices", L"TargetCapturePolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServices", L"TargetCapturePolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetCapturePolicy());
         }
         catch (...)
@@ -13499,14 +13499,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* GameBarServices_get_TargetInfo(py::wrapper::Windows::Media::Capture::GameBarServices* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServices", L"TargetInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServices", L"TargetInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetInfo());
         }
         catch (...)
@@ -13518,14 +13518,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* GameBarServices_add_CommandReceived(py::wrapper::Windows::Media::Capture::GameBarServices* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.GameBarServices", L"CommandReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.GameBarServices", L"CommandReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::GameBarServices, winrt::Windows::Media::Capture::GameBarServicesCommandEventArgs>>(arg);
 
             return py::convert(self->obj.CommandReceived(param0));
@@ -13539,14 +13539,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* GameBarServices_remove_CommandReceived(py::wrapper::Windows::Media::Capture::GameBarServices* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.GameBarServices", L"CommandReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.GameBarServices", L"CommandReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CommandReceived(param0);
@@ -13639,14 +13639,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* GameBarServicesCommandEventArgs_get_Command(py::wrapper::Windows::Media::Capture::GameBarServicesCommandEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServicesCommandEventArgs", L"Command"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServicesCommandEventArgs", L"Command"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Command());
         }
         catch (...)
@@ -13658,14 +13658,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* GameBarServicesCommandEventArgs_get_Origin(py::wrapper::Windows::Media::Capture::GameBarServicesCommandEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServicesCommandEventArgs", L"Origin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServicesCommandEventArgs", L"Origin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Origin());
         }
         catch (...)
@@ -13752,14 +13752,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.GameBarServicesManager", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.GameBarServicesManager", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::Capture::GameBarServicesManager::GetDefault());
             }
             catch (...)
@@ -13777,14 +13777,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* GameBarServicesManager_add_GameBarServicesCreated(py::wrapper::Windows::Media::Capture::GameBarServicesManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.GameBarServicesManager", L"GameBarServicesCreated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.GameBarServicesManager", L"GameBarServicesCreated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::GameBarServicesManager, winrt::Windows::Media::Capture::GameBarServicesManagerGameBarServicesCreatedEventArgs>>(arg);
 
             return py::convert(self->obj.GameBarServicesCreated(param0));
@@ -13798,14 +13798,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* GameBarServicesManager_remove_GameBarServicesCreated(py::wrapper::Windows::Media::Capture::GameBarServicesManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.GameBarServicesManager", L"GameBarServicesCreated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.GameBarServicesManager", L"GameBarServicesCreated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.GameBarServicesCreated(param0);
@@ -13917,14 +13917,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* GameBarServicesManagerGameBarServicesCreatedEventArgs_get_GameBarServices(py::wrapper::Windows::Media::Capture::GameBarServicesManagerGameBarServicesCreatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServicesManagerGameBarServicesCreatedEventArgs", L"GameBarServices"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServicesManagerGameBarServicesCreatedEventArgs", L"GameBarServices"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GameBarServices());
         }
         catch (...)
@@ -14006,14 +14006,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* GameBarServicesTargetInfo_get_AppId(py::wrapper::Windows::Media::Capture::GameBarServicesTargetInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServicesTargetInfo", L"AppId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServicesTargetInfo", L"AppId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppId());
         }
         catch (...)
@@ -14025,14 +14025,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* GameBarServicesTargetInfo_get_DisplayMode(py::wrapper::Windows::Media::Capture::GameBarServicesTargetInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServicesTargetInfo", L"DisplayMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServicesTargetInfo", L"DisplayMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayMode());
         }
         catch (...)
@@ -14044,14 +14044,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* GameBarServicesTargetInfo_get_DisplayName(py::wrapper::Windows::Media::Capture::GameBarServicesTargetInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServicesTargetInfo", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServicesTargetInfo", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -14063,14 +14063,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* GameBarServicesTargetInfo_get_TitleId(py::wrapper::Windows::Media::Capture::GameBarServicesTargetInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServicesTargetInfo", L"TitleId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.GameBarServicesTargetInfo", L"TitleId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TitleId());
         }
         catch (...)
@@ -14159,14 +14159,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagMediaRecording", L"FinishAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagMediaRecording", L"FinishAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.FinishAsync());
             }
             catch (...)
@@ -14188,14 +14188,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagMediaRecording", L"PauseAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagMediaRecording", L"PauseAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Devices::MediaCapturePauseBehavior>(args, 0);
 
                 return py::convert(self->obj.PauseAsync(param0));
@@ -14219,14 +14219,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagMediaRecording", L"PauseWithResultAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagMediaRecording", L"PauseWithResultAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Devices::MediaCapturePauseBehavior>(args, 0);
 
                 return py::convert(self->obj.PauseWithResultAsync(param0));
@@ -14250,14 +14250,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagMediaRecording", L"ResumeAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagMediaRecording", L"ResumeAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ResumeAsync());
             }
             catch (...)
@@ -14279,14 +14279,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagMediaRecording", L"StartAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagMediaRecording", L"StartAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.StartAsync());
             }
             catch (...)
@@ -14308,14 +14308,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagMediaRecording", L"StopAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagMediaRecording", L"StopAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.StopAsync());
             }
             catch (...)
@@ -14337,14 +14337,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagMediaRecording", L"StopWithResultAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagMediaRecording", L"StopWithResultAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.StopWithResultAsync());
             }
             catch (...)
@@ -14442,14 +14442,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagPhotoCapture", L"CaptureAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagPhotoCapture", L"CaptureAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CaptureAsync());
             }
             catch (...)
@@ -14471,14 +14471,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagPhotoCapture", L"FinishAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagPhotoCapture", L"FinishAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.FinishAsync());
             }
             catch (...)
@@ -14571,14 +14571,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagPhotoSequenceCapture", L"FinishAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagPhotoSequenceCapture", L"FinishAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.FinishAsync());
             }
             catch (...)
@@ -14600,14 +14600,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagPhotoSequenceCapture", L"StartAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagPhotoSequenceCapture", L"StartAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.StartAsync());
             }
             catch (...)
@@ -14629,14 +14629,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagPhotoSequenceCapture", L"StopAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.LowLagPhotoSequenceCapture", L"StopAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.StopAsync());
             }
             catch (...)
@@ -14654,14 +14654,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* LowLagPhotoSequenceCapture_add_PhotoCaptured(py::wrapper::Windows::Media::Capture::LowLagPhotoSequenceCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.LowLagPhotoSequenceCapture", L"PhotoCaptured"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.LowLagPhotoSequenceCapture", L"PhotoCaptured"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::LowLagPhotoSequenceCapture, winrt::Windows::Media::Capture::PhotoCapturedEventArgs>>(arg);
 
             return py::convert(self->obj.PhotoCaptured(param0));
@@ -14675,14 +14675,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* LowLagPhotoSequenceCapture_remove_PhotoCaptured(py::wrapper::Windows::Media::Capture::LowLagPhotoSequenceCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.LowLagPhotoSequenceCapture", L"PhotoCaptured"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.LowLagPhotoSequenceCapture", L"PhotoCaptured"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PhotoCaptured(param0);
@@ -14797,14 +14797,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"AddAudioEffectAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"AddAudioEffectAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 return py::convert(self->obj.AddAudioEffectAsync(param0));
@@ -14828,14 +14828,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"AddEffectAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"AddEffectAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaStreamType>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 2);
@@ -14861,14 +14861,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"AddVideoEffectAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"AddVideoEffectAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IVideoEffectDefinition>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Capture::MediaStreamType>(args, 1);
 
@@ -14893,14 +14893,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"CapturePhotoToStorageFileAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"CapturePhotoToStorageFileAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::ImageEncodingProperties>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 1);
 
@@ -14925,14 +14925,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"CapturePhotoToStreamAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"CapturePhotoToStreamAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::ImageEncodingProperties>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
@@ -14957,14 +14957,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"ClearEffectsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"ClearEffectsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaStreamType>(args, 0);
 
                 return py::convert(self->obj.ClearEffectsAsync(param0));
@@ -14988,14 +14988,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -15018,14 +15018,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"CreateFrameReaderAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"CreateFrameReaderAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::Frames::MediaFrameSource>(args, 0);
 
                 return py::convert(self->obj.CreateFrameReaderAsync(param0));
@@ -15038,14 +15038,14 @@ namespace py::cpp::Windows::Media::Capture
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"CreateFrameReaderAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"CreateFrameReaderAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::Frames::MediaFrameSource>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -15059,14 +15059,14 @@ namespace py::cpp::Windows::Media::Capture
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"CreateFrameReaderAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"CreateFrameReaderAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::Frames::MediaFrameSource>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapSize>(args, 2);
@@ -15092,14 +15092,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"CreateMultiSourceFrameReaderAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"CreateMultiSourceFrameReaderAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Media::Capture::Frames::MediaFrameSource>>(args, 0);
 
                 return py::convert(self->obj.CreateMultiSourceFrameReaderAsync(param0));
@@ -15123,14 +15123,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"CreateRelativePanelWatcher", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"CreateRelativePanelWatcher", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::StreamingCaptureMode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::WindowManagement::DisplayRegion>(args, 1);
 
@@ -15155,14 +15155,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"FindAllVideoProfiles", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"FindAllVideoProfiles", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Capture::MediaCapture::FindAllVideoProfiles(param0));
@@ -15186,14 +15186,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"FindConcurrentProfiles", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"FindConcurrentProfiles", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Capture::MediaCapture::FindConcurrentProfiles(param0));
@@ -15217,14 +15217,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"FindKnownVideoProfiles", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"FindKnownVideoProfiles", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Capture::KnownVideoProfile>(args, 1);
 
@@ -15249,14 +15249,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"GetEncoderProperty", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"GetEncoderProperty", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaStreamType>(args, 0);
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
 
@@ -15281,14 +15281,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"GetPreviewFrameAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"GetPreviewFrameAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetPreviewFrameAsync());
             }
             catch (...)
@@ -15299,14 +15299,14 @@ namespace py::cpp::Windows::Media::Capture
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"GetPreviewFrameAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"GetPreviewFrameAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::VideoFrame>(args, 0);
 
                 return py::convert(self->obj.GetPreviewFrameAsync(param0));
@@ -15330,14 +15330,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"GetPreviewMirroring", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"GetPreviewMirroring", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetPreviewMirroring());
             }
             catch (...)
@@ -15359,14 +15359,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"GetPreviewRotation", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"GetPreviewRotation", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetPreviewRotation());
             }
             catch (...)
@@ -15388,14 +15388,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"GetRecordRotation", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"GetRecordRotation", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetRecordRotation());
             }
             catch (...)
@@ -15417,14 +15417,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"InitializeAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"InitializeAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.InitializeAsync());
             }
             catch (...)
@@ -15435,14 +15435,14 @@ namespace py::cpp::Windows::Media::Capture
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"InitializeAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"InitializeAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCaptureInitializationSettings>(args, 0);
 
                 return py::convert(self->obj.InitializeAsync(param0));
@@ -15466,14 +15466,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"IsVideoProfileSupported", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"IsVideoProfileSupported", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Capture::MediaCapture::IsVideoProfileSupported(param0));
@@ -15497,14 +15497,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"PauseRecordAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"PauseRecordAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Devices::MediaCapturePauseBehavior>(args, 0);
 
                 return py::convert(self->obj.PauseRecordAsync(param0));
@@ -15528,14 +15528,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"PauseRecordWithResultAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"PauseRecordWithResultAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Devices::MediaCapturePauseBehavior>(args, 0);
 
                 return py::convert(self->obj.PauseRecordWithResultAsync(param0));
@@ -15559,14 +15559,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"PrepareAdvancedPhotoCaptureAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"PrepareAdvancedPhotoCaptureAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::ImageEncodingProperties>(args, 0);
 
                 return py::convert(self->obj.PrepareAdvancedPhotoCaptureAsync(param0));
@@ -15590,14 +15590,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"PrepareLowLagPhotoCaptureAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"PrepareLowLagPhotoCaptureAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::ImageEncodingProperties>(args, 0);
 
                 return py::convert(self->obj.PrepareLowLagPhotoCaptureAsync(param0));
@@ -15621,14 +15621,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"PrepareLowLagPhotoSequenceCaptureAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"PrepareLowLagPhotoSequenceCaptureAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::ImageEncodingProperties>(args, 0);
 
                 return py::convert(self->obj.PrepareLowLagPhotoSequenceCaptureAsync(param0));
@@ -15652,14 +15652,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"PrepareLowLagRecordToCustomSinkAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"PrepareLowLagRecordToCustomSinkAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::IMediaExtension>(args, 1);
 
@@ -15673,14 +15673,14 @@ namespace py::cpp::Windows::Media::Capture
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"PrepareLowLagRecordToCustomSinkAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"PrepareLowLagRecordToCustomSinkAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 2);
@@ -15706,14 +15706,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"PrepareLowLagRecordToStorageFileAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"PrepareLowLagRecordToStorageFileAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 1);
 
@@ -15738,14 +15738,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"PrepareLowLagRecordToStreamAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"PrepareLowLagRecordToStreamAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
@@ -15770,14 +15770,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"PrepareVariablePhotoSequenceCaptureAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"PrepareVariablePhotoSequenceCaptureAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::ImageEncodingProperties>(args, 0);
 
                 return py::convert(self->obj.PrepareVariablePhotoSequenceCaptureAsync(param0));
@@ -15801,14 +15801,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"RemoveEffectAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"RemoveEffectAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::IMediaExtension>(args, 0);
 
                 return py::convert(self->obj.RemoveEffectAsync(param0));
@@ -15832,14 +15832,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"ResumeRecordAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"ResumeRecordAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ResumeRecordAsync());
             }
             catch (...)
@@ -15861,14 +15861,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"SetEncoderProperty", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"SetEncoderProperty", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaStreamType>(args, 0);
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -15895,14 +15895,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"SetEncodingPropertiesAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"SetEncodingPropertiesAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaStreamType>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::MediaProperties::IMediaEncodingProperties>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaPropertySet>(args, 2);
@@ -15928,14 +15928,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"SetPreviewMirroring", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"SetPreviewMirroring", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 self->obj.SetPreviewMirroring(param0);
@@ -15960,14 +15960,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"SetPreviewRotation", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"SetPreviewRotation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::VideoRotation>(args, 0);
 
                 self->obj.SetPreviewRotation(param0);
@@ -15992,14 +15992,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"SetRecordRotation", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"SetRecordRotation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::VideoRotation>(args, 0);
 
                 self->obj.SetRecordRotation(param0);
@@ -16024,14 +16024,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"StartPreviewAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"StartPreviewAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.StartPreviewAsync());
             }
             catch (...)
@@ -16053,14 +16053,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"StartPreviewToCustomSinkAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"StartPreviewToCustomSinkAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::IMediaExtension>(args, 1);
 
@@ -16074,14 +16074,14 @@ namespace py::cpp::Windows::Media::Capture
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"StartPreviewToCustomSinkAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"StartPreviewToCustomSinkAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 2);
@@ -16107,14 +16107,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"StartRecordToCustomSinkAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"StartRecordToCustomSinkAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::IMediaExtension>(args, 1);
 
@@ -16128,14 +16128,14 @@ namespace py::cpp::Windows::Media::Capture
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"StartRecordToCustomSinkAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"StartRecordToCustomSinkAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 2);
@@ -16161,14 +16161,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"StartRecordToStorageFileAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"StartRecordToStorageFileAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 1);
 
@@ -16193,14 +16193,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"StartRecordToStreamAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"StartRecordToStreamAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
@@ -16225,14 +16225,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"StopPreviewAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"StopPreviewAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.StopPreviewAsync());
             }
             catch (...)
@@ -16254,14 +16254,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"StopRecordAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"StopRecordAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.StopRecordAsync());
             }
             catch (...)
@@ -16283,14 +16283,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"StopRecordWithResultAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"StopRecordWithResultAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.StopRecordWithResultAsync());
             }
             catch (...)
@@ -16308,14 +16308,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_get_AudioDeviceController(py::wrapper::Windows::Media::Capture::MediaCapture* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCapture", L"AudioDeviceController"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCapture", L"AudioDeviceController"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioDeviceController());
         }
         catch (...)
@@ -16327,14 +16327,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_get_MediaCaptureSettings(py::wrapper::Windows::Media::Capture::MediaCapture* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCapture", L"MediaCaptureSettings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCapture", L"MediaCaptureSettings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MediaCaptureSettings());
         }
         catch (...)
@@ -16346,14 +16346,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_get_VideoDeviceController(py::wrapper::Windows::Media::Capture::MediaCapture* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCapture", L"VideoDeviceController"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCapture", L"VideoDeviceController"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoDeviceController());
         }
         catch (...)
@@ -16365,14 +16365,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_get_CameraStreamState(py::wrapper::Windows::Media::Capture::MediaCapture* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCapture", L"CameraStreamState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCapture", L"CameraStreamState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CameraStreamState());
         }
         catch (...)
@@ -16384,14 +16384,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_get_ThermalStatus(py::wrapper::Windows::Media::Capture::MediaCapture* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCapture", L"ThermalStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCapture", L"ThermalStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ThermalStatus());
         }
         catch (...)
@@ -16403,14 +16403,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_get_FrameSources(py::wrapper::Windows::Media::Capture::MediaCapture* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCapture", L"FrameSources"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCapture", L"FrameSources"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameSources());
         }
         catch (...)
@@ -16422,14 +16422,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_add_Failed(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"Failed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"Failed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCaptureFailedEventHandler>(arg);
 
             return py::convert(self->obj.Failed(param0));
@@ -16443,14 +16443,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_remove_Failed(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"Failed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"Failed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Failed(param0);
@@ -16465,14 +16465,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_add_RecordLimitationExceeded(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"RecordLimitationExceeded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"RecordLimitationExceeded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::RecordLimitationExceededEventHandler>(arg);
 
             return py::convert(self->obj.RecordLimitationExceeded(param0));
@@ -16486,14 +16486,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_remove_RecordLimitationExceeded(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"RecordLimitationExceeded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"RecordLimitationExceeded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.RecordLimitationExceeded(param0);
@@ -16508,14 +16508,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_add_FocusChanged(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"FocusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"FocusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::MediaCapture, winrt::Windows::Media::Capture::MediaCaptureFocusChangedEventArgs>>(arg);
 
             return py::convert(self->obj.FocusChanged(param0));
@@ -16529,14 +16529,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_remove_FocusChanged(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"FocusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"FocusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FocusChanged(param0);
@@ -16551,14 +16551,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_add_PhotoConfirmationCaptured(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"PhotoConfirmationCaptured"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"PhotoConfirmationCaptured"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::MediaCapture, winrt::Windows::Media::Capture::PhotoConfirmationCapturedEventArgs>>(arg);
 
             return py::convert(self->obj.PhotoConfirmationCaptured(param0));
@@ -16572,14 +16572,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_remove_PhotoConfirmationCaptured(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"PhotoConfirmationCaptured"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"PhotoConfirmationCaptured"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PhotoConfirmationCaptured(param0);
@@ -16594,14 +16594,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_add_CameraStreamStateChanged(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"CameraStreamStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"CameraStreamStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::MediaCapture, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.CameraStreamStateChanged(param0));
@@ -16615,14 +16615,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_remove_CameraStreamStateChanged(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"CameraStreamStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"CameraStreamStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CameraStreamStateChanged(param0);
@@ -16637,14 +16637,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_add_ThermalStatusChanged(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"ThermalStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"ThermalStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::MediaCapture, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ThermalStatusChanged(param0));
@@ -16658,14 +16658,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_remove_ThermalStatusChanged(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"ThermalStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"ThermalStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ThermalStatusChanged(param0);
@@ -16680,14 +16680,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_add_CaptureDeviceExclusiveControlStatusChanged(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"CaptureDeviceExclusiveControlStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"CaptureDeviceExclusiveControlStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::MediaCapture, winrt::Windows::Media::Capture::MediaCaptureDeviceExclusiveControlStatusChangedEventArgs>>(arg);
 
             return py::convert(self->obj.CaptureDeviceExclusiveControlStatusChanged(param0));
@@ -16701,14 +16701,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_remove_CaptureDeviceExclusiveControlStatusChanged(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"CaptureDeviceExclusiveControlStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCapture", L"CaptureDeviceExclusiveControlStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CaptureDeviceExclusiveControlStatusChanged(param0);
@@ -16902,14 +16902,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureDeviceExclusiveControlStatusChangedEventArgs_get_DeviceId(py::wrapper::Windows::Media::Capture::MediaCaptureDeviceExclusiveControlStatusChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureDeviceExclusiveControlStatusChangedEventArgs", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureDeviceExclusiveControlStatusChangedEventArgs", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -16921,14 +16921,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureDeviceExclusiveControlStatusChangedEventArgs_get_Status(py::wrapper::Windows::Media::Capture::MediaCaptureDeviceExclusiveControlStatusChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureDeviceExclusiveControlStatusChangedEventArgs", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureDeviceExclusiveControlStatusChangedEventArgs", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -17011,14 +17011,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureFailedEventArgs_get_Code(py::wrapper::Windows::Media::Capture::MediaCaptureFailedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureFailedEventArgs", L"Code"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureFailedEventArgs", L"Code"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Code());
         }
         catch (...)
@@ -17030,14 +17030,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureFailedEventArgs_get_Message(py::wrapper::Windows::Media::Capture::MediaCaptureFailedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureFailedEventArgs", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureFailedEventArgs", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Message());
         }
         catch (...)
@@ -17120,14 +17120,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureFocusChangedEventArgs_get_FocusState(py::wrapper::Windows::Media::Capture::MediaCaptureFocusChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureFocusChangedEventArgs", L"FocusState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureFocusChangedEventArgs", L"FocusState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FocusState());
         }
         catch (...)
@@ -17231,14 +17231,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureInitializationSettings_get_VideoDeviceId(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"VideoDeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"VideoDeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoDeviceId());
         }
         catch (...)
@@ -17250,12 +17250,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_VideoDeviceId(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"VideoDeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17264,6 +17258,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"VideoDeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.VideoDeviceId(param0);
@@ -17278,14 +17278,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureInitializationSettings_get_StreamingCaptureMode(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"StreamingCaptureMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"StreamingCaptureMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StreamingCaptureMode());
         }
         catch (...)
@@ -17297,12 +17297,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_StreamingCaptureMode(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"StreamingCaptureMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17311,6 +17305,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"StreamingCaptureMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::StreamingCaptureMode>(arg);
 
             self->obj.StreamingCaptureMode(param0);
@@ -17325,14 +17325,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureInitializationSettings_get_PhotoCaptureSource(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"PhotoCaptureSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"PhotoCaptureSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhotoCaptureSource());
         }
         catch (...)
@@ -17344,12 +17344,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_PhotoCaptureSource(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"PhotoCaptureSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17358,6 +17352,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"PhotoCaptureSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::PhotoCaptureSource>(arg);
 
             self->obj.PhotoCaptureSource(param0);
@@ -17372,14 +17372,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureInitializationSettings_get_AudioDeviceId(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"AudioDeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"AudioDeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioDeviceId());
         }
         catch (...)
@@ -17391,12 +17391,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_AudioDeviceId(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"AudioDeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17405,6 +17399,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"AudioDeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.AudioDeviceId(param0);
@@ -17419,14 +17419,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureInitializationSettings_get_MediaCategory(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"MediaCategory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"MediaCategory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MediaCategory());
         }
         catch (...)
@@ -17438,12 +17438,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_MediaCategory(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"MediaCategory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17452,6 +17446,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"MediaCategory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(arg);
 
             self->obj.MediaCategory(param0);
@@ -17466,14 +17466,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureInitializationSettings_get_AudioProcessing(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"AudioProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"AudioProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioProcessing());
         }
         catch (...)
@@ -17485,12 +17485,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_AudioProcessing(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"AudioProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17499,6 +17493,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"AudioProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::AudioProcessing>(arg);
 
             self->obj.AudioProcessing(param0);
@@ -17513,14 +17513,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureInitializationSettings_get_VideoSource(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"VideoSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"VideoSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoSource());
         }
         catch (...)
@@ -17532,12 +17532,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_VideoSource(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"VideoSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17546,6 +17540,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"VideoSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Core::IMediaSource>(arg);
 
             self->obj.VideoSource(param0);
@@ -17560,14 +17560,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureInitializationSettings_get_AudioSource(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"AudioSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"AudioSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioSource());
         }
         catch (...)
@@ -17579,12 +17579,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_AudioSource(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"AudioSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17593,6 +17587,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"AudioSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Core::IMediaSource>(arg);
 
             self->obj.AudioSource(param0);
@@ -17607,14 +17607,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureInitializationSettings_get_VideoProfile(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"VideoProfile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"VideoProfile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoProfile());
         }
         catch (...)
@@ -17626,12 +17626,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_VideoProfile(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"VideoProfile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17640,6 +17634,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"VideoProfile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCaptureVideoProfile>(arg);
 
             self->obj.VideoProfile(param0);
@@ -17654,14 +17654,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureInitializationSettings_get_RecordMediaDescription(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"RecordMediaDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"RecordMediaDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RecordMediaDescription());
         }
         catch (...)
@@ -17673,12 +17673,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_RecordMediaDescription(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"RecordMediaDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17687,6 +17681,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"RecordMediaDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription>(arg);
 
             self->obj.RecordMediaDescription(param0);
@@ -17701,14 +17701,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureInitializationSettings_get_PreviewMediaDescription(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"PreviewMediaDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"PreviewMediaDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviewMediaDescription());
         }
         catch (...)
@@ -17720,12 +17720,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_PreviewMediaDescription(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"PreviewMediaDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17734,6 +17728,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"PreviewMediaDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription>(arg);
 
             self->obj.PreviewMediaDescription(param0);
@@ -17748,14 +17748,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureInitializationSettings_get_PhotoMediaDescription(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"PhotoMediaDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"PhotoMediaDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhotoMediaDescription());
         }
         catch (...)
@@ -17767,12 +17767,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_PhotoMediaDescription(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"PhotoMediaDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17781,6 +17775,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"PhotoMediaDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription>(arg);
 
             self->obj.PhotoMediaDescription(param0);
@@ -17795,14 +17795,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureInitializationSettings_get_SourceGroup(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"SourceGroup"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"SourceGroup"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceGroup());
         }
         catch (...)
@@ -17814,12 +17814,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_SourceGroup(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"SourceGroup"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17828,6 +17822,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"SourceGroup"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGroup>(arg);
 
             self->obj.SourceGroup(param0);
@@ -17842,14 +17842,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureInitializationSettings_get_SharingMode(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"SharingMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"SharingMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SharingMode());
         }
         catch (...)
@@ -17861,12 +17861,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_SharingMode(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"SharingMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17875,6 +17869,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"SharingMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCaptureSharingMode>(arg);
 
             self->obj.SharingMode(param0);
@@ -17889,14 +17889,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureInitializationSettings_get_MemoryPreference(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"MemoryPreference"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"MemoryPreference"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MemoryPreference());
         }
         catch (...)
@@ -17908,12 +17908,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_MemoryPreference(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"MemoryPreference"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17922,6 +17916,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"MemoryPreference"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCaptureMemoryPreference>(arg);
 
             self->obj.MemoryPreference(param0);
@@ -17936,14 +17936,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureInitializationSettings_get_AlwaysPlaySystemShutterSound(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"AlwaysPlaySystemShutterSound"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"AlwaysPlaySystemShutterSound"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlwaysPlaySystemShutterSound());
         }
         catch (...)
@@ -17955,12 +17955,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_AlwaysPlaySystemShutterSound(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"AlwaysPlaySystemShutterSound"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17969,6 +17963,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"AlwaysPlaySystemShutterSound"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AlwaysPlaySystemShutterSound(param0);
@@ -17983,14 +17983,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureInitializationSettings_get_DeviceUriPasswordCredential(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"DeviceUriPasswordCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"DeviceUriPasswordCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceUriPasswordCredential());
         }
         catch (...)
@@ -18002,12 +18002,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_DeviceUriPasswordCredential(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"DeviceUriPasswordCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18016,6 +18010,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"DeviceUriPasswordCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             self->obj.DeviceUriPasswordCredential(param0);
@@ -18030,14 +18030,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureInitializationSettings_get_DeviceUri(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"DeviceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"DeviceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceUri());
         }
         catch (...)
@@ -18049,12 +18049,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_DeviceUri(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"DeviceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18063,6 +18057,12 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureInitializationSettings", L"DeviceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.DeviceUri(param0);
@@ -18168,14 +18168,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapturePauseResult", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapturePauseResult", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -18194,14 +18194,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapturePauseResult_get_LastFrame(py::wrapper::Windows::Media::Capture::MediaCapturePauseResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCapturePauseResult", L"LastFrame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCapturePauseResult", L"LastFrame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastFrame());
         }
         catch (...)
@@ -18213,14 +18213,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapturePauseResult_get_RecordDuration(py::wrapper::Windows::Media::Capture::MediaCapturePauseResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCapturePauseResult", L"RecordDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCapturePauseResult", L"RecordDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RecordDuration());
         }
         catch (...)
@@ -18329,14 +18329,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCaptureRelativePanelWatcher", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCaptureRelativePanelWatcher", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -18359,14 +18359,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCaptureRelativePanelWatcher", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCaptureRelativePanelWatcher", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -18389,14 +18389,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCaptureRelativePanelWatcher", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCaptureRelativePanelWatcher", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -18415,14 +18415,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureRelativePanelWatcher_get_RelativePanel(py::wrapper::Windows::Media::Capture::MediaCaptureRelativePanelWatcher* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureRelativePanelWatcher", L"RelativePanel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureRelativePanelWatcher", L"RelativePanel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RelativePanel());
         }
         catch (...)
@@ -18434,14 +18434,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureRelativePanelWatcher_add_Changed(py::wrapper::Windows::Media::Capture::MediaCaptureRelativePanelWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCaptureRelativePanelWatcher", L"Changed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCaptureRelativePanelWatcher", L"Changed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::MediaCaptureRelativePanelWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Changed(param0));
@@ -18455,14 +18455,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureRelativePanelWatcher_remove_Changed(py::wrapper::Windows::Media::Capture::MediaCaptureRelativePanelWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCaptureRelativePanelWatcher", L"Changed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.MediaCaptureRelativePanelWatcher", L"Changed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Changed(param0);
@@ -18573,14 +18573,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureSettings_get_AudioDeviceId(py::wrapper::Windows::Media::Capture::MediaCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"AudioDeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"AudioDeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioDeviceId());
         }
         catch (...)
@@ -18592,14 +18592,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureSettings_get_PhotoCaptureSource(py::wrapper::Windows::Media::Capture::MediaCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"PhotoCaptureSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"PhotoCaptureSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhotoCaptureSource());
         }
         catch (...)
@@ -18611,14 +18611,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureSettings_get_StreamingCaptureMode(py::wrapper::Windows::Media::Capture::MediaCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"StreamingCaptureMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"StreamingCaptureMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StreamingCaptureMode());
         }
         catch (...)
@@ -18630,14 +18630,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureSettings_get_VideoDeviceCharacteristic(py::wrapper::Windows::Media::Capture::MediaCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"VideoDeviceCharacteristic"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"VideoDeviceCharacteristic"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoDeviceCharacteristic());
         }
         catch (...)
@@ -18649,14 +18649,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureSettings_get_VideoDeviceId(py::wrapper::Windows::Media::Capture::MediaCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"VideoDeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"VideoDeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoDeviceId());
         }
         catch (...)
@@ -18668,14 +18668,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureSettings_get_AudioProcessing(py::wrapper::Windows::Media::Capture::MediaCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"AudioProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"AudioProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioProcessing());
         }
         catch (...)
@@ -18687,14 +18687,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureSettings_get_CameraSoundRequiredForRegion(py::wrapper::Windows::Media::Capture::MediaCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"CameraSoundRequiredForRegion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"CameraSoundRequiredForRegion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CameraSoundRequiredForRegion());
         }
         catch (...)
@@ -18706,14 +18706,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureSettings_get_ConcurrentRecordAndPhotoSequenceSupported(py::wrapper::Windows::Media::Capture::MediaCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"ConcurrentRecordAndPhotoSequenceSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"ConcurrentRecordAndPhotoSequenceSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConcurrentRecordAndPhotoSequenceSupported());
         }
         catch (...)
@@ -18725,14 +18725,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureSettings_get_ConcurrentRecordAndPhotoSupported(py::wrapper::Windows::Media::Capture::MediaCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"ConcurrentRecordAndPhotoSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"ConcurrentRecordAndPhotoSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConcurrentRecordAndPhotoSupported());
         }
         catch (...)
@@ -18744,14 +18744,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureSettings_get_Horizontal35mmEquivalentFocalLength(py::wrapper::Windows::Media::Capture::MediaCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"Horizontal35mmEquivalentFocalLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"Horizontal35mmEquivalentFocalLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Horizontal35mmEquivalentFocalLength());
         }
         catch (...)
@@ -18763,14 +18763,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureSettings_get_MediaCategory(py::wrapper::Windows::Media::Capture::MediaCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"MediaCategory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"MediaCategory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MediaCategory());
         }
         catch (...)
@@ -18782,14 +18782,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureSettings_get_PitchOffsetDegrees(py::wrapper::Windows::Media::Capture::MediaCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"PitchOffsetDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"PitchOffsetDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PitchOffsetDegrees());
         }
         catch (...)
@@ -18801,14 +18801,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureSettings_get_Vertical35mmEquivalentFocalLength(py::wrapper::Windows::Media::Capture::MediaCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"Vertical35mmEquivalentFocalLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"Vertical35mmEquivalentFocalLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Vertical35mmEquivalentFocalLength());
         }
         catch (...)
@@ -18820,14 +18820,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureSettings_get_Direct3D11Device(py::wrapper::Windows::Media::Capture::MediaCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"Direct3D11Device"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureSettings", L"Direct3D11Device"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Direct3D11Device());
         }
         catch (...)
@@ -18926,14 +18926,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCaptureStopResult", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCaptureStopResult", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -18952,14 +18952,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureStopResult_get_LastFrame(py::wrapper::Windows::Media::Capture::MediaCaptureStopResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureStopResult", L"LastFrame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureStopResult", L"LastFrame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastFrame());
         }
         catch (...)
@@ -18971,14 +18971,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureStopResult_get_RecordDuration(py::wrapper::Windows::Media::Capture::MediaCaptureStopResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureStopResult", L"RecordDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureStopResult", L"RecordDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RecordDuration());
         }
         catch (...)
@@ -19087,14 +19087,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCaptureVideoProfile", L"GetConcurrency", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCaptureVideoProfile", L"GetConcurrency", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetConcurrency());
             }
             catch (...)
@@ -19112,14 +19112,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureVideoProfile_get_Id(py::wrapper::Windows::Media::Capture::MediaCaptureVideoProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfile", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfile", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -19131,14 +19131,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureVideoProfile_get_SupportedPhotoMediaDescription(py::wrapper::Windows::Media::Capture::MediaCaptureVideoProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfile", L"SupportedPhotoMediaDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfile", L"SupportedPhotoMediaDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedPhotoMediaDescription());
         }
         catch (...)
@@ -19150,14 +19150,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureVideoProfile_get_SupportedPreviewMediaDescription(py::wrapper::Windows::Media::Capture::MediaCaptureVideoProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfile", L"SupportedPreviewMediaDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfile", L"SupportedPreviewMediaDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedPreviewMediaDescription());
         }
         catch (...)
@@ -19169,14 +19169,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureVideoProfile_get_SupportedRecordMediaDescription(py::wrapper::Windows::Media::Capture::MediaCaptureVideoProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfile", L"SupportedRecordMediaDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfile", L"SupportedRecordMediaDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedRecordMediaDescription());
         }
         catch (...)
@@ -19188,14 +19188,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureVideoProfile_get_VideoDeviceId(py::wrapper::Windows::Media::Capture::MediaCaptureVideoProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfile", L"VideoDeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfile", L"VideoDeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoDeviceId());
         }
         catch (...)
@@ -19207,14 +19207,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureVideoProfile_get_FrameSourceInfos(py::wrapper::Windows::Media::Capture::MediaCaptureVideoProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfile", L"FrameSourceInfos"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfile", L"FrameSourceInfos"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameSourceInfos());
         }
         catch (...)
@@ -19226,14 +19226,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureVideoProfile_get_Properties(py::wrapper::Windows::Media::Capture::MediaCaptureVideoProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfile", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfile", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -19322,14 +19322,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureVideoProfileMediaDescription_get_FrameRate(py::wrapper::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription", L"FrameRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription", L"FrameRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameRate());
         }
         catch (...)
@@ -19341,14 +19341,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureVideoProfileMediaDescription_get_Height(py::wrapper::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription", L"Height"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Height());
         }
         catch (...)
@@ -19360,14 +19360,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureVideoProfileMediaDescription_get_IsHdrVideoSupported(py::wrapper::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription", L"IsHdrVideoSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription", L"IsHdrVideoSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsHdrVideoSupported());
         }
         catch (...)
@@ -19379,14 +19379,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureVideoProfileMediaDescription_get_IsVariablePhotoSequenceSupported(py::wrapper::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription", L"IsVariablePhotoSequenceSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription", L"IsVariablePhotoSequenceSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsVariablePhotoSequenceSupported());
         }
         catch (...)
@@ -19398,14 +19398,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureVideoProfileMediaDescription_get_Width(py::wrapper::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription", L"Width"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Width());
         }
         catch (...)
@@ -19417,14 +19417,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureVideoProfileMediaDescription_get_Properties(py::wrapper::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -19436,14 +19436,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureVideoProfileMediaDescription_get_Subtype(py::wrapper::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription", L"Subtype"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription", L"Subtype"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Subtype());
         }
         catch (...)
@@ -19531,14 +19531,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* OptionalReferencePhotoCapturedEventArgs_get_Context(py::wrapper::Windows::Media::Capture::OptionalReferencePhotoCapturedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.OptionalReferencePhotoCapturedEventArgs", L"Context"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.OptionalReferencePhotoCapturedEventArgs", L"Context"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Context());
         }
         catch (...)
@@ -19550,14 +19550,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* OptionalReferencePhotoCapturedEventArgs_get_Frame(py::wrapper::Windows::Media::Capture::OptionalReferencePhotoCapturedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.OptionalReferencePhotoCapturedEventArgs", L"Frame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.OptionalReferencePhotoCapturedEventArgs", L"Frame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Frame());
         }
         catch (...)
@@ -19640,14 +19640,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* PhotoCapturedEventArgs_get_CaptureTimeOffset(py::wrapper::Windows::Media::Capture::PhotoCapturedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.PhotoCapturedEventArgs", L"CaptureTimeOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.PhotoCapturedEventArgs", L"CaptureTimeOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CaptureTimeOffset());
         }
         catch (...)
@@ -19659,14 +19659,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* PhotoCapturedEventArgs_get_Frame(py::wrapper::Windows::Media::Capture::PhotoCapturedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.PhotoCapturedEventArgs", L"Frame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.PhotoCapturedEventArgs", L"Frame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Frame());
         }
         catch (...)
@@ -19678,14 +19678,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* PhotoCapturedEventArgs_get_Thumbnail(py::wrapper::Windows::Media::Capture::PhotoCapturedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.PhotoCapturedEventArgs", L"Thumbnail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.PhotoCapturedEventArgs", L"Thumbnail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Thumbnail());
         }
         catch (...)
@@ -19769,14 +19769,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* PhotoConfirmationCapturedEventArgs_get_CaptureTimeOffset(py::wrapper::Windows::Media::Capture::PhotoConfirmationCapturedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.PhotoConfirmationCapturedEventArgs", L"CaptureTimeOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.PhotoConfirmationCapturedEventArgs", L"CaptureTimeOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CaptureTimeOffset());
         }
         catch (...)
@@ -19788,14 +19788,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* PhotoConfirmationCapturedEventArgs_get_Frame(py::wrapper::Windows::Media::Capture::PhotoConfirmationCapturedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.PhotoConfirmationCapturedEventArgs", L"Frame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.PhotoConfirmationCapturedEventArgs", L"Frame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Frame());
         }
         catch (...)
@@ -19882,14 +19882,14 @@ namespace py::cpp::Windows::Media::Capture
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.ScreenCapture", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.ScreenCapture", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::Capture::ScreenCapture::GetForCurrentView());
             }
             catch (...)
@@ -19907,14 +19907,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* ScreenCapture_get_AudioSource(py::wrapper::Windows::Media::Capture::ScreenCapture* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.ScreenCapture", L"AudioSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.ScreenCapture", L"AudioSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioSource());
         }
         catch (...)
@@ -19926,14 +19926,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* ScreenCapture_get_IsAudioSuspended(py::wrapper::Windows::Media::Capture::ScreenCapture* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.ScreenCapture", L"IsAudioSuspended"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.ScreenCapture", L"IsAudioSuspended"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAudioSuspended());
         }
         catch (...)
@@ -19945,14 +19945,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* ScreenCapture_get_IsVideoSuspended(py::wrapper::Windows::Media::Capture::ScreenCapture* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.ScreenCapture", L"IsVideoSuspended"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.ScreenCapture", L"IsVideoSuspended"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsVideoSuspended());
         }
         catch (...)
@@ -19964,14 +19964,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* ScreenCapture_get_VideoSource(py::wrapper::Windows::Media::Capture::ScreenCapture* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.ScreenCapture", L"VideoSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.ScreenCapture", L"VideoSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoSource());
         }
         catch (...)
@@ -19983,14 +19983,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* ScreenCapture_add_SourceSuspensionChanged(py::wrapper::Windows::Media::Capture::ScreenCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.ScreenCapture", L"SourceSuspensionChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.ScreenCapture", L"SourceSuspensionChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::ScreenCapture, winrt::Windows::Media::Capture::SourceSuspensionChangedEventArgs>>(arg);
 
             return py::convert(self->obj.SourceSuspensionChanged(param0));
@@ -20004,14 +20004,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* ScreenCapture_remove_SourceSuspensionChanged(py::wrapper::Windows::Media::Capture::ScreenCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.ScreenCapture", L"SourceSuspensionChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.ScreenCapture", L"SourceSuspensionChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SourceSuspensionChanged(param0);
@@ -20127,14 +20127,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* SourceSuspensionChangedEventArgs_get_IsAudioSuspended(py::wrapper::Windows::Media::Capture::SourceSuspensionChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.SourceSuspensionChangedEventArgs", L"IsAudioSuspended"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.SourceSuspensionChangedEventArgs", L"IsAudioSuspended"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAudioSuspended());
         }
         catch (...)
@@ -20146,14 +20146,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* SourceSuspensionChangedEventArgs_get_IsVideoSuspended(py::wrapper::Windows::Media::Capture::SourceSuspensionChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.SourceSuspensionChangedEventArgs", L"IsVideoSuspended"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.SourceSuspensionChangedEventArgs", L"IsVideoSuspended"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsVideoSuspended());
         }
         catch (...)
@@ -20236,14 +20236,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* VideoStreamConfiguration_get_InputProperties(py::wrapper::Windows::Media::Capture::VideoStreamConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.VideoStreamConfiguration", L"InputProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.VideoStreamConfiguration", L"InputProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InputProperties());
         }
         catch (...)
@@ -20255,14 +20255,14 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* VideoStreamConfiguration_get_OutputProperties(py::wrapper::Windows::Media::Capture::VideoStreamConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.VideoStreamConfiguration", L"OutputProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.VideoStreamConfiguration", L"OutputProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutputProperties());
         }
         catch (...)

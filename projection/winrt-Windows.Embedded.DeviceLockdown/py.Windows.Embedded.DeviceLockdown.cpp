@@ -20,14 +20,14 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Embedded.DeviceLockdown.DeviceLockdownProfile", L"ApplyLockdownProfileAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Embedded.DeviceLockdown.DeviceLockdownProfile", L"ApplyLockdownProfileAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert(winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfile::ApplyLockdownProfileAsync(param0));
@@ -51,14 +51,14 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Embedded.DeviceLockdown.DeviceLockdownProfile", L"GetCurrentLockdownProfile", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Embedded.DeviceLockdown.DeviceLockdownProfile", L"GetCurrentLockdownProfile", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfile::GetCurrentLockdownProfile());
             }
             catch (...)
@@ -80,14 +80,14 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Embedded.DeviceLockdown.DeviceLockdownProfile", L"GetLockdownProfileInformation", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Embedded.DeviceLockdown.DeviceLockdownProfile", L"GetLockdownProfileInformation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert(winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfile::GetLockdownProfileInformation(param0));
@@ -111,14 +111,14 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Embedded.DeviceLockdown.DeviceLockdownProfile", L"GetSupportedLockdownProfiles", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Embedded.DeviceLockdown.DeviceLockdownProfile", L"GetSupportedLockdownProfiles", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfile::GetSupportedLockdownProfiles());
             }
             catch (...)
@@ -207,14 +207,14 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
 
     static PyObject* DeviceLockdownProfileInformation_get_Name(py::wrapper::Windows::Embedded::DeviceLockdown::DeviceLockdownProfileInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Embedded.DeviceLockdown.DeviceLockdownProfileInformation", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Embedded.DeviceLockdown.DeviceLockdownProfileInformation", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)

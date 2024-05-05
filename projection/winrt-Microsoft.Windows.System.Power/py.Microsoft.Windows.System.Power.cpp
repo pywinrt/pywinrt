@@ -16,14 +16,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_get_BatteryStatus(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.System.Power.PowerManager", L"BatteryStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.System.Power.PowerManager", L"BatteryStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::BatteryStatus());
         }
         catch (...)
@@ -35,14 +35,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_get_DisplayStatus(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.System.Power.PowerManager", L"DisplayStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.System.Power.PowerManager", L"DisplayStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::DisplayStatus());
         }
         catch (...)
@@ -54,14 +54,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_get_EffectivePowerMode(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.System.Power.PowerManager", L"EffectivePowerMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.System.Power.PowerManager", L"EffectivePowerMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::EffectivePowerMode());
         }
         catch (...)
@@ -73,14 +73,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_get_EnergySaverStatus(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.System.Power.PowerManager", L"EnergySaverStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.System.Power.PowerManager", L"EnergySaverStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::EnergySaverStatus());
         }
         catch (...)
@@ -92,14 +92,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_get_PowerSourceKind(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.System.Power.PowerManager", L"PowerSourceKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.System.Power.PowerManager", L"PowerSourceKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::PowerSourceKind());
         }
         catch (...)
@@ -111,14 +111,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_get_PowerSupplyStatus(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.System.Power.PowerManager", L"PowerSupplyStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.System.Power.PowerManager", L"PowerSupplyStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::PowerSupplyStatus());
         }
         catch (...)
@@ -130,14 +130,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_get_RemainingChargePercent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.System.Power.PowerManager", L"RemainingChargePercent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.System.Power.PowerManager", L"RemainingChargePercent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::RemainingChargePercent());
         }
         catch (...)
@@ -149,14 +149,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_get_RemainingDischargeTime(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.System.Power.PowerManager", L"RemainingDischargeTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.System.Power.PowerManager", L"RemainingDischargeTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::RemainingDischargeTime());
         }
         catch (...)
@@ -168,14 +168,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_get_SystemSuspendStatus(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.System.Power.PowerManager", L"SystemSuspendStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.System.Power.PowerManager", L"SystemSuspendStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::SystemSuspendStatus());
         }
         catch (...)
@@ -187,14 +187,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_get_UserPresenceStatus(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.System.Power.PowerManager", L"UserPresenceStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.System.Power.PowerManager", L"UserPresenceStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::UserPresenceStatus());
         }
         catch (...)
@@ -206,14 +206,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_get_EffectivePowerMode2(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.System.Power.PowerManager", L"EffectivePowerMode2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.System.Power.PowerManager", L"EffectivePowerMode2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::EffectivePowerMode2());
         }
         catch (...)
@@ -225,14 +225,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_add_BatteryStatusChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"BatteryStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"BatteryStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::BatteryStatusChanged(param0));
@@ -246,14 +246,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_remove_BatteryStatusChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"BatteryStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"BatteryStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Microsoft::Windows::System::Power::PowerManager::BatteryStatusChanged(param0);
@@ -268,14 +268,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_add_DisplayStatusChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"DisplayStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"DisplayStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::DisplayStatusChanged(param0));
@@ -289,14 +289,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_remove_DisplayStatusChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"DisplayStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"DisplayStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Microsoft::Windows::System::Power::PowerManager::DisplayStatusChanged(param0);
@@ -311,14 +311,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_add_EffectivePowerModeChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"EffectivePowerModeChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"EffectivePowerModeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::EffectivePowerModeChanged(param0));
@@ -332,14 +332,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_remove_EffectivePowerModeChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"EffectivePowerModeChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"EffectivePowerModeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Microsoft::Windows::System::Power::PowerManager::EffectivePowerModeChanged(param0);
@@ -354,14 +354,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_add_EnergySaverStatusChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"EnergySaverStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"EnergySaverStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::EnergySaverStatusChanged(param0));
@@ -375,14 +375,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_remove_EnergySaverStatusChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"EnergySaverStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"EnergySaverStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Microsoft::Windows::System::Power::PowerManager::EnergySaverStatusChanged(param0);
@@ -397,14 +397,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_add_PowerSourceKindChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"PowerSourceKindChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"PowerSourceKindChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::PowerSourceKindChanged(param0));
@@ -418,14 +418,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_remove_PowerSourceKindChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"PowerSourceKindChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"PowerSourceKindChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Microsoft::Windows::System::Power::PowerManager::PowerSourceKindChanged(param0);
@@ -440,14 +440,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_add_PowerSupplyStatusChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"PowerSupplyStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"PowerSupplyStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::PowerSupplyStatusChanged(param0));
@@ -461,14 +461,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_remove_PowerSupplyStatusChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"PowerSupplyStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"PowerSupplyStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Microsoft::Windows::System::Power::PowerManager::PowerSupplyStatusChanged(param0);
@@ -483,14 +483,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_add_RemainingChargePercentChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"RemainingChargePercentChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"RemainingChargePercentChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::RemainingChargePercentChanged(param0));
@@ -504,14 +504,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_remove_RemainingChargePercentChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"RemainingChargePercentChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"RemainingChargePercentChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Microsoft::Windows::System::Power::PowerManager::RemainingChargePercentChanged(param0);
@@ -526,14 +526,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_add_RemainingDischargeTimeChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"RemainingDischargeTimeChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"RemainingDischargeTimeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::RemainingDischargeTimeChanged(param0));
@@ -547,14 +547,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_remove_RemainingDischargeTimeChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"RemainingDischargeTimeChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"RemainingDischargeTimeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Microsoft::Windows::System::Power::PowerManager::RemainingDischargeTimeChanged(param0);
@@ -569,14 +569,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_add_SystemIdleStatusChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"SystemIdleStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"SystemIdleStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::SystemIdleStatusChanged(param0));
@@ -590,14 +590,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_remove_SystemIdleStatusChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"SystemIdleStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"SystemIdleStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Microsoft::Windows::System::Power::PowerManager::SystemIdleStatusChanged(param0);
@@ -612,14 +612,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_add_SystemSuspendStatusChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"SystemSuspendStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"SystemSuspendStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::SystemSuspendStatusChanged(param0));
@@ -633,14 +633,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_remove_SystemSuspendStatusChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"SystemSuspendStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"SystemSuspendStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Microsoft::Windows::System::Power::PowerManager::SystemSuspendStatusChanged(param0);
@@ -655,14 +655,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_add_UserPresenceStatusChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"UserPresenceStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"UserPresenceStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::UserPresenceStatusChanged(param0));
@@ -676,14 +676,14 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
     static PyObject* PowerManager_remove_UserPresenceStatusChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"UserPresenceStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.System.Power.PowerManager", L"UserPresenceStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Microsoft::Windows::System::Power::PowerManager::UserPresenceStatusChanged(param0);

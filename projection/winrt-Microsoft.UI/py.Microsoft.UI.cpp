@@ -28,14 +28,14 @@ namespace py::cpp::Microsoft::UI
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.ColorHelper", L"FromArgb", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.ColorHelper", L"FromArgb", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint8_t>(args, 0);
                 auto param1 = py::convert_to<uint8_t>(args, 1);
                 auto param2 = py::convert_to<uint8_t>(args, 2);
@@ -153,14 +153,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_AliceBlue(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"AliceBlue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"AliceBlue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::AliceBlue());
         }
         catch (...)
@@ -172,14 +172,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_AntiqueWhite(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"AntiqueWhite"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"AntiqueWhite"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::AntiqueWhite());
         }
         catch (...)
@@ -191,14 +191,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Aqua(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Aqua"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Aqua"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Aqua());
         }
         catch (...)
@@ -210,14 +210,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Aquamarine(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Aquamarine"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Aquamarine"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Aquamarine());
         }
         catch (...)
@@ -229,14 +229,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Azure(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Azure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Azure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Azure());
         }
         catch (...)
@@ -248,14 +248,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Beige(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Beige"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Beige"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Beige());
         }
         catch (...)
@@ -267,14 +267,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Bisque(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Bisque"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Bisque"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Bisque());
         }
         catch (...)
@@ -286,14 +286,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Black(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Black"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Black"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Black());
         }
         catch (...)
@@ -305,14 +305,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_BlanchedAlmond(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"BlanchedAlmond"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"BlanchedAlmond"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::BlanchedAlmond());
         }
         catch (...)
@@ -324,14 +324,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Blue(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Blue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Blue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Blue());
         }
         catch (...)
@@ -343,14 +343,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_BlueViolet(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"BlueViolet"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"BlueViolet"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::BlueViolet());
         }
         catch (...)
@@ -362,14 +362,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Brown(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Brown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Brown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Brown());
         }
         catch (...)
@@ -381,14 +381,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_BurlyWood(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"BurlyWood"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"BurlyWood"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::BurlyWood());
         }
         catch (...)
@@ -400,14 +400,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_CadetBlue(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"CadetBlue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"CadetBlue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::CadetBlue());
         }
         catch (...)
@@ -419,14 +419,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Chartreuse(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Chartreuse"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Chartreuse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Chartreuse());
         }
         catch (...)
@@ -438,14 +438,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Chocolate(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Chocolate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Chocolate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Chocolate());
         }
         catch (...)
@@ -457,14 +457,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Coral(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Coral"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Coral"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Coral());
         }
         catch (...)
@@ -476,14 +476,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_CornflowerBlue(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"CornflowerBlue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"CornflowerBlue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::CornflowerBlue());
         }
         catch (...)
@@ -495,14 +495,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Cornsilk(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Cornsilk"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Cornsilk"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Cornsilk());
         }
         catch (...)
@@ -514,14 +514,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Crimson(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Crimson"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Crimson"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Crimson());
         }
         catch (...)
@@ -533,14 +533,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Cyan(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Cyan"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Cyan"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Cyan());
         }
         catch (...)
@@ -552,14 +552,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_DarkBlue(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkBlue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkBlue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::DarkBlue());
         }
         catch (...)
@@ -571,14 +571,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_DarkCyan(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkCyan"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkCyan"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::DarkCyan());
         }
         catch (...)
@@ -590,14 +590,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_DarkGoldenrod(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkGoldenrod"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkGoldenrod"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::DarkGoldenrod());
         }
         catch (...)
@@ -609,14 +609,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_DarkGray(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkGray"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkGray"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::DarkGray());
         }
         catch (...)
@@ -628,14 +628,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_DarkGreen(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkGreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkGreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::DarkGreen());
         }
         catch (...)
@@ -647,14 +647,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_DarkKhaki(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkKhaki"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkKhaki"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::DarkKhaki());
         }
         catch (...)
@@ -666,14 +666,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_DarkMagenta(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkMagenta"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkMagenta"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::DarkMagenta());
         }
         catch (...)
@@ -685,14 +685,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_DarkOliveGreen(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkOliveGreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkOliveGreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::DarkOliveGreen());
         }
         catch (...)
@@ -704,14 +704,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_DarkOrange(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkOrange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkOrange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::DarkOrange());
         }
         catch (...)
@@ -723,14 +723,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_DarkOrchid(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkOrchid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkOrchid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::DarkOrchid());
         }
         catch (...)
@@ -742,14 +742,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_DarkRed(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkRed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkRed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::DarkRed());
         }
         catch (...)
@@ -761,14 +761,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_DarkSalmon(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkSalmon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkSalmon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::DarkSalmon());
         }
         catch (...)
@@ -780,14 +780,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_DarkSeaGreen(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkSeaGreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkSeaGreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::DarkSeaGreen());
         }
         catch (...)
@@ -799,14 +799,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_DarkSlateBlue(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkSlateBlue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkSlateBlue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::DarkSlateBlue());
         }
         catch (...)
@@ -818,14 +818,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_DarkSlateGray(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkSlateGray"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkSlateGray"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::DarkSlateGray());
         }
         catch (...)
@@ -837,14 +837,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_DarkTurquoise(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkTurquoise"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkTurquoise"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::DarkTurquoise());
         }
         catch (...)
@@ -856,14 +856,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_DarkViolet(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkViolet"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DarkViolet"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::DarkViolet());
         }
         catch (...)
@@ -875,14 +875,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_DeepPink(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DeepPink"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DeepPink"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::DeepPink());
         }
         catch (...)
@@ -894,14 +894,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_DeepSkyBlue(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DeepSkyBlue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DeepSkyBlue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::DeepSkyBlue());
         }
         catch (...)
@@ -913,14 +913,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_DimGray(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DimGray"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DimGray"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::DimGray());
         }
         catch (...)
@@ -932,14 +932,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_DodgerBlue(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DodgerBlue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"DodgerBlue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::DodgerBlue());
         }
         catch (...)
@@ -951,14 +951,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Firebrick(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Firebrick"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Firebrick"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Firebrick());
         }
         catch (...)
@@ -970,14 +970,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_FloralWhite(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"FloralWhite"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"FloralWhite"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::FloralWhite());
         }
         catch (...)
@@ -989,14 +989,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_ForestGreen(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"ForestGreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"ForestGreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::ForestGreen());
         }
         catch (...)
@@ -1008,14 +1008,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Fuchsia(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Fuchsia"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Fuchsia"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Fuchsia());
         }
         catch (...)
@@ -1027,14 +1027,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Gainsboro(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Gainsboro"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Gainsboro"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Gainsboro());
         }
         catch (...)
@@ -1046,14 +1046,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_GhostWhite(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"GhostWhite"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"GhostWhite"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::GhostWhite());
         }
         catch (...)
@@ -1065,14 +1065,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Gold(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Gold"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Gold"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Gold());
         }
         catch (...)
@@ -1084,14 +1084,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Goldenrod(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Goldenrod"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Goldenrod"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Goldenrod());
         }
         catch (...)
@@ -1103,14 +1103,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Gray(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Gray"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Gray"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Gray());
         }
         catch (...)
@@ -1122,14 +1122,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Green(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Green"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Green"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Green());
         }
         catch (...)
@@ -1141,14 +1141,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_GreenYellow(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"GreenYellow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"GreenYellow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::GreenYellow());
         }
         catch (...)
@@ -1160,14 +1160,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Honeydew(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Honeydew"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Honeydew"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Honeydew());
         }
         catch (...)
@@ -1179,14 +1179,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_HotPink(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"HotPink"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"HotPink"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::HotPink());
         }
         catch (...)
@@ -1198,14 +1198,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_IndianRed(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"IndianRed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"IndianRed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::IndianRed());
         }
         catch (...)
@@ -1217,14 +1217,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Indigo(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Indigo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Indigo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Indigo());
         }
         catch (...)
@@ -1236,14 +1236,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Ivory(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Ivory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Ivory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Ivory());
         }
         catch (...)
@@ -1255,14 +1255,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Khaki(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Khaki"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Khaki"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Khaki());
         }
         catch (...)
@@ -1274,14 +1274,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Lavender(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Lavender"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Lavender"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Lavender());
         }
         catch (...)
@@ -1293,14 +1293,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_LavenderBlush(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LavenderBlush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LavenderBlush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::LavenderBlush());
         }
         catch (...)
@@ -1312,14 +1312,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_LawnGreen(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LawnGreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LawnGreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::LawnGreen());
         }
         catch (...)
@@ -1331,14 +1331,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_LemonChiffon(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LemonChiffon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LemonChiffon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::LemonChiffon());
         }
         catch (...)
@@ -1350,14 +1350,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_LightBlue(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightBlue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightBlue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::LightBlue());
         }
         catch (...)
@@ -1369,14 +1369,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_LightCoral(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightCoral"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightCoral"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::LightCoral());
         }
         catch (...)
@@ -1388,14 +1388,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_LightCyan(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightCyan"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightCyan"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::LightCyan());
         }
         catch (...)
@@ -1407,14 +1407,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_LightGoldenrodYellow(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightGoldenrodYellow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightGoldenrodYellow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::LightGoldenrodYellow());
         }
         catch (...)
@@ -1426,14 +1426,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_LightGray(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightGray"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightGray"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::LightGray());
         }
         catch (...)
@@ -1445,14 +1445,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_LightGreen(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightGreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightGreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::LightGreen());
         }
         catch (...)
@@ -1464,14 +1464,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_LightPink(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightPink"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightPink"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::LightPink());
         }
         catch (...)
@@ -1483,14 +1483,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_LightSalmon(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightSalmon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightSalmon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::LightSalmon());
         }
         catch (...)
@@ -1502,14 +1502,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_LightSeaGreen(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightSeaGreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightSeaGreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::LightSeaGreen());
         }
         catch (...)
@@ -1521,14 +1521,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_LightSkyBlue(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightSkyBlue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightSkyBlue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::LightSkyBlue());
         }
         catch (...)
@@ -1540,14 +1540,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_LightSlateGray(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightSlateGray"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightSlateGray"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::LightSlateGray());
         }
         catch (...)
@@ -1559,14 +1559,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_LightSteelBlue(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightSteelBlue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightSteelBlue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::LightSteelBlue());
         }
         catch (...)
@@ -1578,14 +1578,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_LightYellow(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightYellow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LightYellow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::LightYellow());
         }
         catch (...)
@@ -1597,14 +1597,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Lime(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Lime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Lime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Lime());
         }
         catch (...)
@@ -1616,14 +1616,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_LimeGreen(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LimeGreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"LimeGreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::LimeGreen());
         }
         catch (...)
@@ -1635,14 +1635,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Linen(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Linen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Linen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Linen());
         }
         catch (...)
@@ -1654,14 +1654,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Magenta(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Magenta"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Magenta"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Magenta());
         }
         catch (...)
@@ -1673,14 +1673,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Maroon(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Maroon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Maroon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Maroon());
         }
         catch (...)
@@ -1692,14 +1692,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_MediumAquamarine(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MediumAquamarine"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MediumAquamarine"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::MediumAquamarine());
         }
         catch (...)
@@ -1711,14 +1711,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_MediumBlue(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MediumBlue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MediumBlue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::MediumBlue());
         }
         catch (...)
@@ -1730,14 +1730,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_MediumOrchid(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MediumOrchid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MediumOrchid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::MediumOrchid());
         }
         catch (...)
@@ -1749,14 +1749,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_MediumPurple(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MediumPurple"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MediumPurple"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::MediumPurple());
         }
         catch (...)
@@ -1768,14 +1768,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_MediumSeaGreen(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MediumSeaGreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MediumSeaGreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::MediumSeaGreen());
         }
         catch (...)
@@ -1787,14 +1787,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_MediumSlateBlue(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MediumSlateBlue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MediumSlateBlue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::MediumSlateBlue());
         }
         catch (...)
@@ -1806,14 +1806,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_MediumSpringGreen(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MediumSpringGreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MediumSpringGreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::MediumSpringGreen());
         }
         catch (...)
@@ -1825,14 +1825,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_MediumTurquoise(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MediumTurquoise"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MediumTurquoise"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::MediumTurquoise());
         }
         catch (...)
@@ -1844,14 +1844,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_MediumVioletRed(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MediumVioletRed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MediumVioletRed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::MediumVioletRed());
         }
         catch (...)
@@ -1863,14 +1863,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_MidnightBlue(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MidnightBlue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MidnightBlue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::MidnightBlue());
         }
         catch (...)
@@ -1882,14 +1882,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_MintCream(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MintCream"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MintCream"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::MintCream());
         }
         catch (...)
@@ -1901,14 +1901,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_MistyRose(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MistyRose"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"MistyRose"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::MistyRose());
         }
         catch (...)
@@ -1920,14 +1920,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Moccasin(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Moccasin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Moccasin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Moccasin());
         }
         catch (...)
@@ -1939,14 +1939,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_NavajoWhite(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"NavajoWhite"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"NavajoWhite"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::NavajoWhite());
         }
         catch (...)
@@ -1958,14 +1958,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Navy(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Navy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Navy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Navy());
         }
         catch (...)
@@ -1977,14 +1977,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_OldLace(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"OldLace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"OldLace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::OldLace());
         }
         catch (...)
@@ -1996,14 +1996,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Olive(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Olive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Olive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Olive());
         }
         catch (...)
@@ -2015,14 +2015,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_OliveDrab(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"OliveDrab"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"OliveDrab"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::OliveDrab());
         }
         catch (...)
@@ -2034,14 +2034,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Orange(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Orange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Orange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Orange());
         }
         catch (...)
@@ -2053,14 +2053,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_OrangeRed(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"OrangeRed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"OrangeRed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::OrangeRed());
         }
         catch (...)
@@ -2072,14 +2072,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Orchid(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Orchid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Orchid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Orchid());
         }
         catch (...)
@@ -2091,14 +2091,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_PaleGoldenrod(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"PaleGoldenrod"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"PaleGoldenrod"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::PaleGoldenrod());
         }
         catch (...)
@@ -2110,14 +2110,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_PaleGreen(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"PaleGreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"PaleGreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::PaleGreen());
         }
         catch (...)
@@ -2129,14 +2129,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_PaleTurquoise(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"PaleTurquoise"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"PaleTurquoise"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::PaleTurquoise());
         }
         catch (...)
@@ -2148,14 +2148,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_PaleVioletRed(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"PaleVioletRed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"PaleVioletRed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::PaleVioletRed());
         }
         catch (...)
@@ -2167,14 +2167,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_PapayaWhip(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"PapayaWhip"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"PapayaWhip"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::PapayaWhip());
         }
         catch (...)
@@ -2186,14 +2186,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_PeachPuff(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"PeachPuff"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"PeachPuff"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::PeachPuff());
         }
         catch (...)
@@ -2205,14 +2205,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Peru(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Peru"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Peru"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Peru());
         }
         catch (...)
@@ -2224,14 +2224,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Pink(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Pink"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Pink"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Pink());
         }
         catch (...)
@@ -2243,14 +2243,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Plum(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Plum"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Plum"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Plum());
         }
         catch (...)
@@ -2262,14 +2262,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_PowderBlue(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"PowderBlue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"PowderBlue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::PowderBlue());
         }
         catch (...)
@@ -2281,14 +2281,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Purple(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Purple"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Purple"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Purple());
         }
         catch (...)
@@ -2300,14 +2300,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Red(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Red"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Red"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Red());
         }
         catch (...)
@@ -2319,14 +2319,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_RosyBrown(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"RosyBrown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"RosyBrown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::RosyBrown());
         }
         catch (...)
@@ -2338,14 +2338,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_RoyalBlue(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"RoyalBlue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"RoyalBlue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::RoyalBlue());
         }
         catch (...)
@@ -2357,14 +2357,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_SaddleBrown(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"SaddleBrown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"SaddleBrown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::SaddleBrown());
         }
         catch (...)
@@ -2376,14 +2376,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Salmon(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Salmon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Salmon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Salmon());
         }
         catch (...)
@@ -2395,14 +2395,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_SandyBrown(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"SandyBrown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"SandyBrown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::SandyBrown());
         }
         catch (...)
@@ -2414,14 +2414,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_SeaGreen(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"SeaGreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"SeaGreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::SeaGreen());
         }
         catch (...)
@@ -2433,14 +2433,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_SeaShell(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"SeaShell"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"SeaShell"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::SeaShell());
         }
         catch (...)
@@ -2452,14 +2452,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Sienna(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Sienna"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Sienna"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Sienna());
         }
         catch (...)
@@ -2471,14 +2471,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Silver(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Silver"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Silver"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Silver());
         }
         catch (...)
@@ -2490,14 +2490,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_SkyBlue(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"SkyBlue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"SkyBlue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::SkyBlue());
         }
         catch (...)
@@ -2509,14 +2509,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_SlateBlue(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"SlateBlue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"SlateBlue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::SlateBlue());
         }
         catch (...)
@@ -2528,14 +2528,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_SlateGray(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"SlateGray"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"SlateGray"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::SlateGray());
         }
         catch (...)
@@ -2547,14 +2547,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Snow(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Snow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Snow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Snow());
         }
         catch (...)
@@ -2566,14 +2566,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_SpringGreen(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"SpringGreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"SpringGreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::SpringGreen());
         }
         catch (...)
@@ -2585,14 +2585,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_SteelBlue(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"SteelBlue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"SteelBlue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::SteelBlue());
         }
         catch (...)
@@ -2604,14 +2604,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Tan(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Tan"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Tan"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Tan());
         }
         catch (...)
@@ -2623,14 +2623,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Teal(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Teal"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Teal"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Teal());
         }
         catch (...)
@@ -2642,14 +2642,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Thistle(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Thistle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Thistle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Thistle());
         }
         catch (...)
@@ -2661,14 +2661,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Tomato(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Tomato"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Tomato"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Tomato());
         }
         catch (...)
@@ -2680,14 +2680,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Transparent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Transparent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Transparent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Transparent());
         }
         catch (...)
@@ -2699,14 +2699,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Turquoise(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Turquoise"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Turquoise"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Turquoise());
         }
         catch (...)
@@ -2718,14 +2718,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Violet(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Violet"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Violet"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Violet());
         }
         catch (...)
@@ -2737,14 +2737,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Wheat(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Wheat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Wheat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Wheat());
         }
         catch (...)
@@ -2756,14 +2756,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_White(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"White"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"White"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::White());
         }
         catch (...)
@@ -2775,14 +2775,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_WhiteSmoke(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"WhiteSmoke"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"WhiteSmoke"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::WhiteSmoke());
         }
         catch (...)
@@ -2794,14 +2794,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_Yellow(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Yellow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"Yellow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::Yellow());
         }
         catch (...)
@@ -2813,14 +2813,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* Colors_get_YellowGreen(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"YellowGreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Colors", L"YellowGreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Colors::YellowGreen());
         }
         catch (...)
@@ -3067,14 +3067,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* IClosableNotifier_get_IsClosed(py::wrapper::Microsoft::UI::IClosableNotifier* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.IClosableNotifier", L"IsClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.IClosableNotifier", L"IsClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsClosed());
         }
         catch (...)
@@ -3086,14 +3086,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* IClosableNotifier_add_Closed(py::wrapper::Microsoft::UI::IClosableNotifier* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.IClosableNotifier", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.IClosableNotifier", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
 
             return py::convert(self->obj.Closed(param0));
@@ -3107,14 +3107,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* IClosableNotifier_remove_Closed(py::wrapper::Microsoft::UI::IClosableNotifier* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.IClosableNotifier", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.IClosableNotifier", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Closed(param0);
@@ -3129,14 +3129,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* IClosableNotifier_add_FrameworkClosed(py::wrapper::Microsoft::UI::IClosableNotifier* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.IClosableNotifier", L"FrameworkClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.IClosableNotifier", L"FrameworkClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
 
             return py::convert(self->obj.FrameworkClosed(param0));
@@ -3150,14 +3150,14 @@ namespace py::cpp::Microsoft::UI
 
     static PyObject* IClosableNotifier_remove_FrameworkClosed(py::wrapper::Microsoft::UI::IClosableNotifier* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.IClosableNotifier", L"FrameworkClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.IClosableNotifier", L"FrameworkClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FrameworkClosed(param0);

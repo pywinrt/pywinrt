@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Phone::Devices::Power
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Devices.Power.Battery", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Devices.Power.Battery", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Phone::Devices::Power::Battery::GetDefault());
             }
             catch (...)
@@ -53,14 +53,14 @@ namespace py::cpp::Windows::Phone::Devices::Power
 
     static PyObject* Battery_get_RemainingChargePercent(py::wrapper::Windows::Phone::Devices::Power::Battery* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Devices.Power.Battery", L"RemainingChargePercent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Devices.Power.Battery", L"RemainingChargePercent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemainingChargePercent());
         }
         catch (...)
@@ -72,14 +72,14 @@ namespace py::cpp::Windows::Phone::Devices::Power
 
     static PyObject* Battery_get_RemainingDischargeTime(py::wrapper::Windows::Phone::Devices::Power::Battery* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Devices.Power.Battery", L"RemainingDischargeTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Devices.Power.Battery", L"RemainingDischargeTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemainingDischargeTime());
         }
         catch (...)
@@ -91,14 +91,14 @@ namespace py::cpp::Windows::Phone::Devices::Power
 
     static PyObject* Battery_add_RemainingChargePercentChanged(py::wrapper::Windows::Phone::Devices::Power::Battery* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.Devices.Power.Battery", L"RemainingChargePercentChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.Devices.Power.Battery", L"RemainingChargePercentChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.RemainingChargePercentChanged(param0));
@@ -112,14 +112,14 @@ namespace py::cpp::Windows::Phone::Devices::Power
 
     static PyObject* Battery_remove_RemainingChargePercentChanged(py::wrapper::Windows::Phone::Devices::Power::Battery* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.Devices.Power.Battery", L"RemainingChargePercentChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.Devices.Power.Battery", L"RemainingChargePercentChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.RemainingChargePercentChanged(param0);

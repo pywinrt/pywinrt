@@ -65,14 +65,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"Play", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"Play", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Play();
                 Py_RETURN_NONE;
             }
@@ -95,14 +95,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -121,14 +121,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_get_UriSource(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"UriSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"UriSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UriSource());
         }
         catch (...)
@@ -140,12 +140,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static int BitmapImage_put_UriSource(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"UriSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -154,6 +148,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"UriSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.UriSource(param0);
@@ -168,14 +168,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_get_DecodePixelWidth(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"DecodePixelWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"DecodePixelWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DecodePixelWidth());
         }
         catch (...)
@@ -187,12 +187,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static int BitmapImage_put_DecodePixelWidth(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"DecodePixelWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -201,6 +195,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"DecodePixelWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.DecodePixelWidth(param0);
@@ -215,14 +215,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_get_DecodePixelHeight(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"DecodePixelHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"DecodePixelHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DecodePixelHeight());
         }
         catch (...)
@@ -234,12 +234,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static int BitmapImage_put_DecodePixelHeight(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"DecodePixelHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -248,6 +242,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"DecodePixelHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.DecodePixelHeight(param0);
@@ -262,14 +262,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_get_CreateOptions(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"CreateOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"CreateOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CreateOptions());
         }
         catch (...)
@@ -281,12 +281,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static int BitmapImage_put_CreateOptions(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"CreateOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -295,6 +289,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"CreateOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Imaging::BitmapCreateOptions>(arg);
 
             self->obj.CreateOptions(param0);
@@ -309,14 +309,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_get_DecodePixelType(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"DecodePixelType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"DecodePixelType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DecodePixelType());
         }
         catch (...)
@@ -328,12 +328,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static int BitmapImage_put_DecodePixelType(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"DecodePixelType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -342,6 +336,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"DecodePixelType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Imaging::DecodePixelType>(arg);
 
             self->obj.DecodePixelType(param0);
@@ -356,14 +356,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_get_AutoPlay(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"AutoPlay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"AutoPlay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AutoPlay());
         }
         catch (...)
@@ -375,12 +375,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static int BitmapImage_put_AutoPlay(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"AutoPlay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -389,6 +383,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"AutoPlay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AutoPlay(param0);
@@ -403,14 +403,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_get_IsAnimatedBitmap(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"IsAnimatedBitmap"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"IsAnimatedBitmap"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAnimatedBitmap());
         }
         catch (...)
@@ -422,14 +422,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_get_IsPlaying(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"IsPlaying"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"IsPlaying"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPlaying());
         }
         catch (...)
@@ -441,14 +441,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_get_CreateOptionsProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"CreateOptionsProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"CreateOptionsProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::CreateOptionsProperty());
         }
         catch (...)
@@ -460,14 +460,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_get_DecodePixelHeightProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"DecodePixelHeightProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"DecodePixelHeightProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::DecodePixelHeightProperty());
         }
         catch (...)
@@ -479,14 +479,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_get_DecodePixelWidthProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"DecodePixelWidthProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"DecodePixelWidthProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::DecodePixelWidthProperty());
         }
         catch (...)
@@ -498,14 +498,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_get_UriSourceProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"UriSourceProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"UriSourceProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::UriSourceProperty());
         }
         catch (...)
@@ -517,14 +517,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_get_DecodePixelTypeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"DecodePixelTypeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"DecodePixelTypeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::DecodePixelTypeProperty());
         }
         catch (...)
@@ -536,14 +536,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_get_AutoPlayProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"AutoPlayProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"AutoPlayProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::AutoPlayProperty());
         }
         catch (...)
@@ -555,14 +555,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_get_IsAnimatedBitmapProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"IsAnimatedBitmapProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"IsAnimatedBitmapProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::IsAnimatedBitmapProperty());
         }
         catch (...)
@@ -574,14 +574,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_get_IsPlayingProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"IsPlayingProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"IsPlayingProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage::IsPlayingProperty());
         }
         catch (...)
@@ -593,14 +593,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_add_DownloadProgress(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"DownloadProgress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"DownloadProgress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Imaging::DownloadProgressEventHandler>(arg);
 
             return py::convert(self->obj.DownloadProgress(param0));
@@ -614,14 +614,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_remove_DownloadProgress(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"DownloadProgress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"DownloadProgress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DownloadProgress(param0);
@@ -636,14 +636,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_add_ImageFailed(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"ImageFailed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"ImageFailed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::ExceptionRoutedEventHandler>(arg);
 
             return py::convert(self->obj.ImageFailed(param0));
@@ -657,14 +657,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_remove_ImageFailed(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"ImageFailed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"ImageFailed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ImageFailed(param0);
@@ -679,14 +679,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_add_ImageOpened(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"ImageOpened"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"ImageOpened"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::RoutedEventHandler>(arg);
 
             return py::convert(self->obj.ImageOpened(param0));
@@ -700,14 +700,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_remove_ImageOpened(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"ImageOpened"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapImage", L"ImageOpened"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ImageOpened(param0);
@@ -844,14 +844,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapSource", L"SetSource", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapSource", L"SetSource", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
                 self->obj.SetSource(param0);
@@ -876,14 +876,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapSource", L"SetSourceAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapSource", L"SetSourceAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
                 return py::convert(self->obj.SetSourceAsync(param0));
@@ -903,14 +903,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapSource_get_PixelHeight(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapSource", L"PixelHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapSource", L"PixelHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelHeight());
         }
         catch (...)
@@ -922,14 +922,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapSource_get_PixelWidth(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapSource", L"PixelWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapSource", L"PixelWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelWidth());
         }
         catch (...)
@@ -941,14 +941,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapSource_get_PixelHeightProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapSource", L"PixelHeightProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapSource", L"PixelHeightProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource::PixelHeightProperty());
         }
         catch (...)
@@ -960,14 +960,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapSource_get_PixelWidthProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapSource", L"PixelWidthProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapSource", L"PixelWidthProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource::PixelWidthProperty());
         }
         catch (...)
@@ -1079,14 +1079,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* DownloadProgressEventArgs_get_Progress(py::wrapper::Windows::UI::Xaml::Media::Imaging::DownloadProgressEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.DownloadProgressEventArgs", L"Progress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.DownloadProgressEventArgs", L"Progress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Progress());
         }
         catch (...)
@@ -1098,12 +1098,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static int DownloadProgressEventArgs_put_Progress(py::wrapper::Windows::UI::Xaml::Media::Imaging::DownloadProgressEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.DownloadProgressEventArgs", L"Progress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1112,6 +1106,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.DownloadProgressEventArgs", L"Progress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Progress(param0);
@@ -1222,14 +1222,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap", L"GetPixelsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap", L"GetPixelsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetPixelsAsync());
             }
             catch (...)
@@ -1251,14 +1251,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap", L"RenderAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap", L"RenderAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
 
                 return py::convert(self->obj.RenderAsync(param0));
@@ -1271,14 +1271,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap", L"RenderAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap", L"RenderAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -1300,14 +1300,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* RenderTargetBitmap_get_PixelHeight(py::wrapper::Windows::UI::Xaml::Media::Imaging::RenderTargetBitmap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap", L"PixelHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap", L"PixelHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelHeight());
         }
         catch (...)
@@ -1319,14 +1319,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* RenderTargetBitmap_get_PixelWidth(py::wrapper::Windows::UI::Xaml::Media::Imaging::RenderTargetBitmap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap", L"PixelWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap", L"PixelWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelWidth());
         }
         catch (...)
@@ -1338,14 +1338,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* RenderTargetBitmap_get_PixelHeightProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap", L"PixelHeightProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap", L"PixelHeightProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::RenderTargetBitmap::PixelHeightProperty());
         }
         catch (...)
@@ -1357,14 +1357,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* RenderTargetBitmap_get_PixelWidthProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap", L"PixelWidthProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap", L"PixelWidthProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::RenderTargetBitmap::PixelWidthProperty());
         }
         catch (...)
@@ -1502,14 +1502,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -1532,14 +1532,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource", L"SetBitmapAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource", L"SetBitmapAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
                 return py::convert(self->obj.SetBitmapAsync(param0));
@@ -1803,14 +1803,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"SetSourceAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"SetSourceAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
                 return py::convert(self->obj.SetSourceAsync(param0));
@@ -1830,14 +1830,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* SvgImageSource_get_UriSource(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"UriSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"UriSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UriSource());
         }
         catch (...)
@@ -1849,12 +1849,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static int SvgImageSource_put_UriSource(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"UriSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1863,6 +1857,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"UriSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.UriSource(param0);
@@ -1877,14 +1877,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* SvgImageSource_get_RasterizePixelWidth(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"RasterizePixelWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"RasterizePixelWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RasterizePixelWidth());
         }
         catch (...)
@@ -1896,12 +1896,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static int SvgImageSource_put_RasterizePixelWidth(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"RasterizePixelWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1910,6 +1904,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"RasterizePixelWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.RasterizePixelWidth(param0);
@@ -1924,14 +1924,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* SvgImageSource_get_RasterizePixelHeight(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"RasterizePixelHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"RasterizePixelHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RasterizePixelHeight());
         }
         catch (...)
@@ -1943,12 +1943,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static int SvgImageSource_put_RasterizePixelHeight(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"RasterizePixelHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1957,6 +1951,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"RasterizePixelHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.RasterizePixelHeight(param0);
@@ -1971,14 +1971,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* SvgImageSource_get_RasterizePixelHeightProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"RasterizePixelHeightProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"RasterizePixelHeightProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource::RasterizePixelHeightProperty());
         }
         catch (...)
@@ -1990,14 +1990,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* SvgImageSource_get_RasterizePixelWidthProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"RasterizePixelWidthProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"RasterizePixelWidthProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource::RasterizePixelWidthProperty());
         }
         catch (...)
@@ -2009,14 +2009,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* SvgImageSource_get_UriSourceProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"UriSourceProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"UriSourceProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource::UriSourceProperty());
         }
         catch (...)
@@ -2028,14 +2028,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* SvgImageSource_add_OpenFailed(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"OpenFailed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"OpenFailed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource, winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceFailedEventArgs>>(arg);
 
             return py::convert(self->obj.OpenFailed(param0));
@@ -2049,14 +2049,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* SvgImageSource_remove_OpenFailed(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"OpenFailed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"OpenFailed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.OpenFailed(param0);
@@ -2071,14 +2071,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* SvgImageSource_add_Opened(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"Opened"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"Opened"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource, winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceOpenedEventArgs>>(arg);
 
             return py::convert(self->obj.Opened(param0));
@@ -2092,14 +2092,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* SvgImageSource_remove_Opened(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"Opened"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSource", L"Opened"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Opened(param0);
@@ -2219,14 +2219,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* SvgImageSourceFailedEventArgs_get_Status(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSourceFailedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSourceFailedEventArgs", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.SvgImageSourceFailedEventArgs", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -2517,14 +2517,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Imaging.WriteableBitmap", L"Invalidate", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Imaging.WriteableBitmap", L"Invalidate", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Invalidate();
                 Py_RETURN_NONE;
             }
@@ -2543,14 +2543,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* WriteableBitmap_get_PixelBuffer(py::wrapper::Windows::UI::Xaml::Media::Imaging::WriteableBitmap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.WriteableBitmap", L"PixelBuffer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.WriteableBitmap", L"PixelBuffer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelBuffer());
         }
         catch (...)

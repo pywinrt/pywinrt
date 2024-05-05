@@ -46,14 +46,14 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyObject* AddPagesEventArgs_get_PrintTaskOptions(py::wrapper::Windows::UI::Xaml::Printing::AddPagesEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Printing.AddPagesEventArgs", L"PrintTaskOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Printing.AddPagesEventArgs", L"PrintTaskOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrintTaskOptions());
         }
         catch (...)
@@ -157,14 +157,14 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyObject* GetPreviewPageEventArgs_get_PageNumber(py::wrapper::Windows::UI::Xaml::Printing::GetPreviewPageEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Printing.GetPreviewPageEventArgs", L"PageNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Printing.GetPreviewPageEventArgs", L"PageNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageNumber());
         }
         catch (...)
@@ -268,14 +268,14 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyObject* PaginateEventArgs_get_CurrentPreviewPageNumber(py::wrapper::Windows::UI::Xaml::Printing::PaginateEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Printing.PaginateEventArgs", L"CurrentPreviewPageNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Printing.PaginateEventArgs", L"CurrentPreviewPageNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentPreviewPageNumber());
         }
         catch (...)
@@ -287,14 +287,14 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyObject* PaginateEventArgs_get_PrintTaskOptions(py::wrapper::Windows::UI::Xaml::Printing::PaginateEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Printing.PaginateEventArgs", L"PrintTaskOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Printing.PaginateEventArgs", L"PrintTaskOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrintTaskOptions());
         }
         catch (...)
@@ -403,14 +403,14 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"AddPage", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"AddPage", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
 
                 self->obj.AddPage(param0);
@@ -435,14 +435,14 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"AddPagesComplete", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"AddPagesComplete", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.AddPagesComplete();
                 Py_RETURN_NONE;
             }
@@ -465,14 +465,14 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"InvalidatePreview", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"InvalidatePreview", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.InvalidatePreview();
                 Py_RETURN_NONE;
             }
@@ -495,14 +495,14 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"SetPreviewPage", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"SetPreviewPage", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 1);
 
@@ -528,14 +528,14 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"SetPreviewPageCount", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"SetPreviewPageCount", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Printing::PreviewPageCountType>(args, 1);
 
@@ -557,14 +557,14 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyObject* PrintDocument_get_DocumentSource(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"DocumentSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"DocumentSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentSource());
         }
         catch (...)
@@ -576,14 +576,14 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyObject* PrintDocument_get_DocumentSourceProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"DocumentSourceProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"DocumentSourceProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Printing::PrintDocument::DocumentSourceProperty());
         }
         catch (...)
@@ -595,14 +595,14 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyObject* PrintDocument_add_AddPages(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"AddPages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"AddPages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Printing::AddPagesEventHandler>(arg);
 
             return py::convert(self->obj.AddPages(param0));
@@ -616,14 +616,14 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyObject* PrintDocument_remove_AddPages(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"AddPages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"AddPages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AddPages(param0);
@@ -638,14 +638,14 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyObject* PrintDocument_add_GetPreviewPage(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"GetPreviewPage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"GetPreviewPage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Printing::GetPreviewPageEventHandler>(arg);
 
             return py::convert(self->obj.GetPreviewPage(param0));
@@ -659,14 +659,14 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyObject* PrintDocument_remove_GetPreviewPage(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"GetPreviewPage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"GetPreviewPage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.GetPreviewPage(param0);
@@ -681,14 +681,14 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyObject* PrintDocument_add_Paginate(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"Paginate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"Paginate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Printing::PaginateEventHandler>(arg);
 
             return py::convert(self->obj.Paginate(param0));
@@ -702,14 +702,14 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyObject* PrintDocument_remove_Paginate(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"Paginate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Printing.PrintDocument", L"Paginate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Paginate(param0);

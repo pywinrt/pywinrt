@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflow", L"GetPrintModelPackage", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflow", L"GetPrintModelPackage", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetPrintModelPackage());
             }
             catch (...)
@@ -53,14 +53,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* Print3DWorkflow_get_IsPrintReady(py::wrapper::Windows::Devices::Printers::Extensions::Print3DWorkflow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflow", L"IsPrintReady"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflow", L"IsPrintReady"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPrintReady());
         }
         catch (...)
@@ -72,12 +72,6 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static int Print3DWorkflow_put_IsPrintReady(py::wrapper::Windows::Devices::Printers::Extensions::Print3DWorkflow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflow", L"IsPrintReady"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -86,6 +80,12 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflow", L"IsPrintReady"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsPrintReady(param0);
@@ -100,14 +100,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* Print3DWorkflow_get_DeviceID(py::wrapper::Windows::Devices::Printers::Extensions::Print3DWorkflow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflow", L"DeviceID"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflow", L"DeviceID"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceID());
         }
         catch (...)
@@ -119,14 +119,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* Print3DWorkflow_add_PrintRequested(py::wrapper::Windows::Devices::Printers::Extensions::Print3DWorkflow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflow", L"PrintRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflow", L"PrintRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflow, winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.PrintRequested(param0));
@@ -140,14 +140,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* Print3DWorkflow_remove_PrintRequested(py::wrapper::Windows::Devices::Printers::Extensions::Print3DWorkflow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflow", L"PrintRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflow", L"PrintRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PrintRequested(param0);
@@ -162,14 +162,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* Print3DWorkflow_add_PrinterChanged(py::wrapper::Windows::Devices::Printers::Extensions::Print3DWorkflow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflow", L"PrinterChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflow", L"PrinterChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflow, winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrinterChangedEventArgs>>(arg);
 
             return py::convert(self->obj.PrinterChanged(param0));
@@ -183,14 +183,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* Print3DWorkflow_remove_PrinterChanged(py::wrapper::Windows::Devices::Printers::Extensions::Print3DWorkflow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflow", L"PrinterChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflow", L"PrinterChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PrinterChanged(param0);
@@ -285,14 +285,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs", L"SetExtendedStatus", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs", L"SetExtendedStatus", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowDetail>(args, 0);
 
                 self->obj.SetExtendedStatus(param0);
@@ -317,14 +317,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs", L"SetSource", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs", L"SetSource", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 self->obj.SetSource(param0);
@@ -349,14 +349,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs", L"SetSourceChanged", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs", L"SetSourceChanged", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 self->obj.SetSourceChanged(param0);
@@ -377,14 +377,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* Print3DWorkflowPrintRequestedEventArgs_get_Status(py::wrapper::Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -469,14 +469,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* Print3DWorkflowPrinterChangedEventArgs_get_NewDeviceId(py::wrapper::Windows::Devices::Printers::Extensions::Print3DWorkflowPrinterChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflowPrinterChangedEventArgs", L"NewDeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.Extensions.Print3DWorkflowPrinterChangedEventArgs", L"NewDeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NewDeviceId());
         }
         catch (...)
@@ -554,14 +554,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.Extensions.PrintExtensionContext", L"FromDeviceId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.Extensions.PrintExtensionContext", L"FromDeviceId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Printers::Extensions::PrintExtensionContext::FromDeviceId(param0));
@@ -649,14 +649,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* PrintNotificationEventDetails_get_EventData(py::wrapper::Windows::Devices::Printers::Extensions::PrintNotificationEventDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.Extensions.PrintNotificationEventDetails", L"EventData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.Extensions.PrintNotificationEventDetails", L"EventData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EventData());
         }
         catch (...)
@@ -668,12 +668,6 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static int PrintNotificationEventDetails_put_EventData(py::wrapper::Windows::Devices::Printers::Extensions::PrintNotificationEventDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.Extensions.PrintNotificationEventDetails", L"EventData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -682,6 +676,12 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.Extensions.PrintNotificationEventDetails", L"EventData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.EventData(param0);
@@ -696,14 +696,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* PrintNotificationEventDetails_get_PrinterName(py::wrapper::Windows::Devices::Printers::Extensions::PrintNotificationEventDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.Extensions.PrintNotificationEventDetails", L"PrinterName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.Extensions.PrintNotificationEventDetails", L"PrinterName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrinterName());
         }
         catch (...)
@@ -786,14 +786,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* PrintTaskConfiguration_get_PrinterExtensionContext(py::wrapper::Windows::Devices::Printers::Extensions::PrintTaskConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.Extensions.PrintTaskConfiguration", L"PrinterExtensionContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.Extensions.PrintTaskConfiguration", L"PrinterExtensionContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrinterExtensionContext());
         }
         catch (...)
@@ -805,14 +805,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* PrintTaskConfiguration_add_SaveRequested(py::wrapper::Windows::Devices::Printers::Extensions::PrintTaskConfiguration* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Printers.Extensions.PrintTaskConfiguration", L"SaveRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Printers.Extensions.PrintTaskConfiguration", L"SaveRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfiguration, winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.SaveRequested(param0));
@@ -826,14 +826,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* PrintTaskConfiguration_remove_SaveRequested(py::wrapper::Windows::Devices::Printers::Extensions::PrintTaskConfiguration* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Printers.Extensions.PrintTaskConfiguration", L"SaveRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Printers.Extensions.PrintTaskConfiguration", L"SaveRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SaveRequested(param0);
@@ -924,14 +924,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest", L"Cancel", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest", L"Cancel", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Cancel();
                 Py_RETURN_NONE;
             }
@@ -954,14 +954,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -983,14 +983,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest", L"Save", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest", L"Save", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 self->obj.Save(param0);
@@ -1011,14 +1011,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* PrintTaskConfigurationSaveRequest_get_Deadline(py::wrapper::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest", L"Deadline"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest", L"Deadline"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Deadline());
         }
         catch (...)
@@ -1107,14 +1107,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral", L"Complete", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral", L"Complete", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Complete();
                 Py_RETURN_NONE;
             }
@@ -1203,14 +1203,14 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* PrintTaskConfigurationSaveRequestedEventArgs_get_Request(py::wrapper::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)

@@ -20,14 +20,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.AdvertisingManager", L"GetForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.AdvertisingManager", L"GetForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::System::UserProfile::AdvertisingManager::GetForUser(param0));
@@ -47,14 +47,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* AdvertisingManager_get_AdvertisingId(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.AdvertisingManager", L"AdvertisingId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.AdvertisingManager", L"AdvertisingId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::UserProfile::AdvertisingManager::AdvertisingId());
         }
         catch (...)
@@ -135,14 +135,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* AdvertisingManagerForUser_get_AdvertisingId(py::wrapper::Windows::System::UserProfile::AdvertisingManagerForUser* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.AdvertisingManagerForUser", L"AdvertisingId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.AdvertisingManagerForUser", L"AdvertisingId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AdvertisingId());
         }
         catch (...)
@@ -154,14 +154,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* AdvertisingManagerForUser_get_User(py::wrapper::Windows::System::UserProfile::AdvertisingManagerForUser* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.AdvertisingManagerForUser", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.AdvertisingManagerForUser", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -248,14 +248,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.AssignedAccessSettings", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.AssignedAccessSettings", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::System::UserProfile::AssignedAccessSettings::GetDefault());
             }
             catch (...)
@@ -277,14 +277,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.AssignedAccessSettings", L"GetForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.AssignedAccessSettings", L"GetForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::System::UserProfile::AssignedAccessSettings::GetForUser(param0));
@@ -304,14 +304,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* AssignedAccessSettings_get_IsEnabled(py::wrapper::Windows::System::UserProfile::AssignedAccessSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.AssignedAccessSettings", L"IsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.AssignedAccessSettings", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsEnabled());
         }
         catch (...)
@@ -323,14 +323,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* AssignedAccessSettings_get_IsSingleAppKioskMode(py::wrapper::Windows::System::UserProfile::AssignedAccessSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.AssignedAccessSettings", L"IsSingleAppKioskMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.AssignedAccessSettings", L"IsSingleAppKioskMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSingleAppKioskMode());
         }
         catch (...)
@@ -342,14 +342,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* AssignedAccessSettings_get_User(py::wrapper::Windows::System::UserProfile::AssignedAccessSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.AssignedAccessSettings", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.AssignedAccessSettings", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -464,14 +464,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.DiagnosticsSettings", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.DiagnosticsSettings", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::System::UserProfile::DiagnosticsSettings::GetDefault());
             }
             catch (...)
@@ -493,14 +493,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.DiagnosticsSettings", L"GetForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.DiagnosticsSettings", L"GetForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::System::UserProfile::DiagnosticsSettings::GetForUser(param0));
@@ -520,14 +520,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* DiagnosticsSettings_get_CanUseDiagnosticsToTailorExperiences(py::wrapper::Windows::System::UserProfile::DiagnosticsSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.DiagnosticsSettings", L"CanUseDiagnosticsToTailorExperiences"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.DiagnosticsSettings", L"CanUseDiagnosticsToTailorExperiences"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanUseDiagnosticsToTailorExperiences());
         }
         catch (...)
@@ -539,14 +539,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* DiagnosticsSettings_get_User(py::wrapper::Windows::System::UserProfile::DiagnosticsSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.DiagnosticsSettings", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.DiagnosticsSettings", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -660,14 +660,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.FirstSignInSettings", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.FirstSignInSettings", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -689,14 +689,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.FirstSignInSettings", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.FirstSignInSettings", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::System::UserProfile::FirstSignInSettings::GetDefault());
             }
             catch (...)
@@ -718,14 +718,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.FirstSignInSettings", L"HasKey", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.FirstSignInSettings", L"HasKey", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.HasKey(param0));
@@ -749,14 +749,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.FirstSignInSettings", L"Lookup", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.FirstSignInSettings", L"Lookup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.Lookup(param0));
@@ -780,14 +780,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.FirstSignInSettings", L"Split", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.FirstSignInSettings", L"Split", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable> param0 { nullptr };
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable> param1 { nullptr };
 
@@ -820,14 +820,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* FirstSignInSettings_get_Size(py::wrapper::Windows::System::UserProfile::FirstSignInSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.FirstSignInSettings", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.FirstSignInSettings", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -1014,14 +1014,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.GlobalizationPreferences", L"GetForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.GlobalizationPreferences", L"GetForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::System::UserProfile::GlobalizationPreferences::GetForUser(param0));
@@ -1045,14 +1045,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.GlobalizationPreferences", L"TrySetHomeGeographicRegion", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.GlobalizationPreferences", L"TrySetHomeGeographicRegion", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::System::UserProfile::GlobalizationPreferences::TrySetHomeGeographicRegion(param0));
@@ -1076,14 +1076,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.GlobalizationPreferences", L"TrySetLanguages", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.GlobalizationPreferences", L"TrySetLanguages", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(winrt::Windows::System::UserProfile::GlobalizationPreferences::TrySetLanguages(param0));
@@ -1103,14 +1103,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* GlobalizationPreferences_get_Calendars(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferences", L"Calendars"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferences", L"Calendars"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::UserProfile::GlobalizationPreferences::Calendars());
         }
         catch (...)
@@ -1122,14 +1122,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* GlobalizationPreferences_get_Clocks(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferences", L"Clocks"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferences", L"Clocks"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::UserProfile::GlobalizationPreferences::Clocks());
         }
         catch (...)
@@ -1141,14 +1141,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* GlobalizationPreferences_get_Currencies(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferences", L"Currencies"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferences", L"Currencies"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::UserProfile::GlobalizationPreferences::Currencies());
         }
         catch (...)
@@ -1160,14 +1160,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* GlobalizationPreferences_get_HomeGeographicRegion(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferences", L"HomeGeographicRegion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferences", L"HomeGeographicRegion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::UserProfile::GlobalizationPreferences::HomeGeographicRegion());
         }
         catch (...)
@@ -1179,14 +1179,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* GlobalizationPreferences_get_Languages(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferences", L"Languages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferences", L"Languages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::UserProfile::GlobalizationPreferences::Languages());
         }
         catch (...)
@@ -1198,14 +1198,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* GlobalizationPreferences_get_WeekStartsOn(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferences", L"WeekStartsOn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferences", L"WeekStartsOn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::UserProfile::GlobalizationPreferences::WeekStartsOn());
         }
         catch (...)
@@ -1293,14 +1293,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* GlobalizationPreferencesForUser_get_Calendars(py::wrapper::Windows::System::UserProfile::GlobalizationPreferencesForUser* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferencesForUser", L"Calendars"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferencesForUser", L"Calendars"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Calendars());
         }
         catch (...)
@@ -1312,14 +1312,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* GlobalizationPreferencesForUser_get_Clocks(py::wrapper::Windows::System::UserProfile::GlobalizationPreferencesForUser* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferencesForUser", L"Clocks"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferencesForUser", L"Clocks"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Clocks());
         }
         catch (...)
@@ -1331,14 +1331,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* GlobalizationPreferencesForUser_get_Currencies(py::wrapper::Windows::System::UserProfile::GlobalizationPreferencesForUser* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferencesForUser", L"Currencies"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferencesForUser", L"Currencies"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Currencies());
         }
         catch (...)
@@ -1350,14 +1350,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* GlobalizationPreferencesForUser_get_HomeGeographicRegion(py::wrapper::Windows::System::UserProfile::GlobalizationPreferencesForUser* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferencesForUser", L"HomeGeographicRegion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferencesForUser", L"HomeGeographicRegion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HomeGeographicRegion());
         }
         catch (...)
@@ -1369,14 +1369,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* GlobalizationPreferencesForUser_get_Languages(py::wrapper::Windows::System::UserProfile::GlobalizationPreferencesForUser* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferencesForUser", L"Languages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferencesForUser", L"Languages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Languages());
         }
         catch (...)
@@ -1388,14 +1388,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* GlobalizationPreferencesForUser_get_User(py::wrapper::Windows::System::UserProfile::GlobalizationPreferencesForUser* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferencesForUser", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferencesForUser", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -1407,14 +1407,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* GlobalizationPreferencesForUser_get_WeekStartsOn(py::wrapper::Windows::System::UserProfile::GlobalizationPreferencesForUser* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferencesForUser", L"WeekStartsOn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferencesForUser", L"WeekStartsOn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WeekStartsOn());
         }
         catch (...)
@@ -1498,14 +1498,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.LockScreen", L"GetImageStream", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.LockScreen", L"GetImageStream", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::System::UserProfile::LockScreen::GetImageStream());
             }
             catch (...)
@@ -1527,14 +1527,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.LockScreen", L"RequestSetImageFeedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.LockScreen", L"RequestSetImageFeedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(winrt::Windows::System::UserProfile::LockScreen::RequestSetImageFeedAsync(param0));
@@ -1558,14 +1558,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.LockScreen", L"SetImageFileAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.LockScreen", L"SetImageFileAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert(winrt::Windows::System::UserProfile::LockScreen::SetImageFileAsync(param0));
@@ -1589,14 +1589,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.LockScreen", L"SetImageStreamAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.LockScreen", L"SetImageStreamAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
                 return py::convert(winrt::Windows::System::UserProfile::LockScreen::SetImageStreamAsync(param0));
@@ -1620,14 +1620,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.LockScreen", L"TryRemoveImageFeed", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.LockScreen", L"TryRemoveImageFeed", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::System::UserProfile::LockScreen::TryRemoveImageFeed());
             }
             catch (...)
@@ -1645,14 +1645,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* LockScreen_get_OriginalImageFile(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.LockScreen", L"OriginalImageFile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.LockScreen", L"OriginalImageFile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::UserProfile::LockScreen::OriginalImageFile());
         }
         catch (...)
@@ -1733,14 +1733,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserInformation", L"GetAccountPicture", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserInformation", L"GetAccountPicture", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::UserProfile::AccountPictureKind>(args, 0);
 
                 return py::convert(winrt::Windows::System::UserProfile::UserInformation::GetAccountPicture(param0));
@@ -1764,14 +1764,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserInformation", L"GetDisplayNameAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserInformation", L"GetDisplayNameAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::System::UserProfile::UserInformation::GetDisplayNameAsync());
             }
             catch (...)
@@ -1793,14 +1793,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserInformation", L"GetDomainNameAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserInformation", L"GetDomainNameAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::System::UserProfile::UserInformation::GetDomainNameAsync());
             }
             catch (...)
@@ -1822,14 +1822,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserInformation", L"GetFirstNameAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserInformation", L"GetFirstNameAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::System::UserProfile::UserInformation::GetFirstNameAsync());
             }
             catch (...)
@@ -1851,14 +1851,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserInformation", L"GetLastNameAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserInformation", L"GetLastNameAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::System::UserProfile::UserInformation::GetLastNameAsync());
             }
             catch (...)
@@ -1880,14 +1880,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserInformation", L"GetPrincipalNameAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserInformation", L"GetPrincipalNameAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::System::UserProfile::UserInformation::GetPrincipalNameAsync());
             }
             catch (...)
@@ -1909,14 +1909,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserInformation", L"GetSessionInitiationProtocolUriAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserInformation", L"GetSessionInitiationProtocolUriAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::System::UserProfile::UserInformation::GetSessionInitiationProtocolUriAsync());
             }
             catch (...)
@@ -1938,14 +1938,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserInformation", L"SetAccountPictureAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserInformation", L"SetAccountPictureAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert(winrt::Windows::System::UserProfile::UserInformation::SetAccountPictureAsync(param0));
@@ -1969,14 +1969,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserInformation", L"SetAccountPictureFromStreamAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserInformation", L"SetAccountPictureFromStreamAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
                 return py::convert(winrt::Windows::System::UserProfile::UserInformation::SetAccountPictureFromStreamAsync(param0));
@@ -2000,14 +2000,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserInformation", L"SetAccountPicturesAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserInformation", L"SetAccountPicturesAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 2);
@@ -2033,14 +2033,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserInformation", L"SetAccountPicturesFromStreamsAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserInformation", L"SetAccountPicturesFromStreamsAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 2);
@@ -2062,14 +2062,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* UserInformation_get_AccountPictureChangeEnabled(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.UserInformation", L"AccountPictureChangeEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.UserInformation", L"AccountPictureChangeEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::UserProfile::UserInformation::AccountPictureChangeEnabled());
         }
         catch (...)
@@ -2081,14 +2081,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* UserInformation_get_NameAccessAllowed(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.UserInformation", L"NameAccessAllowed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.UserInformation", L"NameAccessAllowed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::UserProfile::UserInformation::NameAccessAllowed());
         }
         catch (...)
@@ -2100,14 +2100,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* UserInformation_add_AccountPictureChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.UserProfile.UserInformation", L"AccountPictureChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.UserProfile.UserInformation", L"AccountPictureChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Windows::System::UserProfile::UserInformation::AccountPictureChanged(param0));
@@ -2121,14 +2121,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* UserInformation_remove_AccountPictureChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.UserProfile.UserInformation", L"AccountPictureChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.UserProfile.UserInformation", L"AccountPictureChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::System::UserProfile::UserInformation::AccountPictureChanged(param0);
@@ -2229,14 +2229,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserProfilePersonalizationSettings", L"IsSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserProfilePersonalizationSettings", L"IsSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::System::UserProfile::UserProfilePersonalizationSettings::IsSupported());
             }
             catch (...)
@@ -2258,14 +2258,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserProfilePersonalizationSettings", L"TrySetLockScreenImageAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserProfilePersonalizationSettings", L"TrySetLockScreenImageAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
 
                 return py::convert(self->obj.TrySetLockScreenImageAsync(param0));
@@ -2289,14 +2289,14 @@ namespace py::cpp::Windows::System::UserProfile
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserProfilePersonalizationSettings", L"TrySetWallpaperImageAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserProfilePersonalizationSettings", L"TrySetWallpaperImageAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
 
                 return py::convert(self->obj.TrySetWallpaperImageAsync(param0));
@@ -2316,14 +2316,14 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* UserProfilePersonalizationSettings_get_Current(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.UserProfilePersonalizationSettings", L"Current"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.UserProfilePersonalizationSettings", L"Current"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::UserProfile::UserProfilePersonalizationSettings::Current());
         }
         catch (...)

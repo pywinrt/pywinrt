@@ -28,14 +28,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet", L"GetStrokeIds", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet", L"GetStrokeIds", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetStrokeIds());
             }
             catch (...)
@@ -53,14 +53,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkBullet_get_RecognizedText(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkBullet* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet", L"RecognizedText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet", L"RecognizedText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RecognizedText());
         }
         catch (...)
@@ -72,14 +72,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkBullet_get_BoundingRect(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkBullet* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet", L"BoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet", L"BoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BoundingRect());
         }
         catch (...)
@@ -91,14 +91,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkBullet_get_Children(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkBullet* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet", L"Children"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet", L"Children"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Children());
         }
         catch (...)
@@ -110,14 +110,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkBullet_get_Id(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkBullet* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -129,14 +129,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkBullet_get_Kind(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkBullet* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -148,14 +148,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkBullet_get_Parent(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkBullet* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet", L"Parent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet", L"Parent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parent());
         }
         catch (...)
@@ -167,14 +167,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkBullet_get_RotatedBoundingRect(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkBullet* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet", L"RotatedBoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet", L"RotatedBoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotatedBoundingRect());
         }
         catch (...)
@@ -267,14 +267,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing", L"GetStrokeIds", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing", L"GetStrokeIds", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetStrokeIds());
             }
             catch (...)
@@ -292,14 +292,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkDrawing_get_Center(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkDrawing* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing", L"Center"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing", L"Center"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Center());
         }
         catch (...)
@@ -311,14 +311,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkDrawing_get_DrawingKind(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkDrawing* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing", L"DrawingKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing", L"DrawingKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DrawingKind());
         }
         catch (...)
@@ -330,14 +330,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkDrawing_get_Points(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkDrawing* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing", L"Points"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing", L"Points"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Points());
         }
         catch (...)
@@ -349,14 +349,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkDrawing_get_BoundingRect(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkDrawing* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing", L"BoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing", L"BoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BoundingRect());
         }
         catch (...)
@@ -368,14 +368,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkDrawing_get_Children(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkDrawing* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing", L"Children"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing", L"Children"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Children());
         }
         catch (...)
@@ -387,14 +387,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkDrawing_get_Id(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkDrawing* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -406,14 +406,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkDrawing_get_Kind(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkDrawing* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -425,14 +425,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkDrawing_get_Parent(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkDrawing* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing", L"Parent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing", L"Parent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parent());
         }
         catch (...)
@@ -444,14 +444,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkDrawing_get_RotatedBoundingRect(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkDrawing* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing", L"RotatedBoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing", L"RotatedBoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotatedBoundingRect());
         }
         catch (...)
@@ -546,14 +546,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord", L"GetStrokeIds", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord", L"GetStrokeIds", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetStrokeIds());
             }
             catch (...)
@@ -571,14 +571,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkWord_get_RecognizedText(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkWord* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord", L"RecognizedText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord", L"RecognizedText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RecognizedText());
         }
         catch (...)
@@ -590,14 +590,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkWord_get_TextAlternates(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkWord* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord", L"TextAlternates"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord", L"TextAlternates"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TextAlternates());
         }
         catch (...)
@@ -609,14 +609,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkWord_get_BoundingRect(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkWord* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord", L"BoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord", L"BoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BoundingRect());
         }
         catch (...)
@@ -628,14 +628,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkWord_get_Children(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkWord* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord", L"Children"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord", L"Children"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Children());
         }
         catch (...)
@@ -647,14 +647,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkWord_get_Id(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkWord* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -666,14 +666,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkWord_get_Kind(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkWord* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -685,14 +685,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkWord_get_Parent(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkWord* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord", L"Parent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord", L"Parent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parent());
         }
         catch (...)
@@ -704,14 +704,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkWord_get_RotatedBoundingRect(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkWord* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord", L"RotatedBoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord", L"RotatedBoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotatedBoundingRect());
         }
         catch (...)
@@ -805,14 +805,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisLine", L"GetStrokeIds", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisLine", L"GetStrokeIds", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetStrokeIds());
             }
             catch (...)
@@ -830,14 +830,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisLine_get_IndentLevel(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisLine* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisLine", L"IndentLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisLine", L"IndentLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IndentLevel());
         }
         catch (...)
@@ -849,14 +849,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisLine_get_RecognizedText(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisLine* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisLine", L"RecognizedText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisLine", L"RecognizedText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RecognizedText());
         }
         catch (...)
@@ -868,14 +868,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisLine_get_BoundingRect(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisLine* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisLine", L"BoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisLine", L"BoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BoundingRect());
         }
         catch (...)
@@ -887,14 +887,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisLine_get_Children(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisLine* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisLine", L"Children"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisLine", L"Children"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Children());
         }
         catch (...)
@@ -906,14 +906,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisLine_get_Id(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisLine* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisLine", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisLine", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -925,14 +925,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisLine_get_Kind(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisLine* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisLine", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisLine", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -944,14 +944,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisLine_get_Parent(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisLine* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisLine", L"Parent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisLine", L"Parent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parent());
         }
         catch (...)
@@ -963,14 +963,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisLine_get_RotatedBoundingRect(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisLine* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisLine", L"RotatedBoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisLine", L"RotatedBoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotatedBoundingRect());
         }
         catch (...)
@@ -1064,14 +1064,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisListItem", L"GetStrokeIds", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisListItem", L"GetStrokeIds", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetStrokeIds());
             }
             catch (...)
@@ -1089,14 +1089,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisListItem_get_RecognizedText(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisListItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisListItem", L"RecognizedText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisListItem", L"RecognizedText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RecognizedText());
         }
         catch (...)
@@ -1108,14 +1108,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisListItem_get_BoundingRect(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisListItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisListItem", L"BoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisListItem", L"BoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BoundingRect());
         }
         catch (...)
@@ -1127,14 +1127,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisListItem_get_Children(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisListItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisListItem", L"Children"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisListItem", L"Children"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Children());
         }
         catch (...)
@@ -1146,14 +1146,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisListItem_get_Id(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisListItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisListItem", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisListItem", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1165,14 +1165,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisListItem_get_Kind(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisListItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisListItem", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisListItem", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -1184,14 +1184,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisListItem_get_Parent(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisListItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisListItem", L"Parent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisListItem", L"Parent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parent());
         }
         catch (...)
@@ -1203,14 +1203,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisListItem_get_RotatedBoundingRect(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisListItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisListItem", L"RotatedBoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisListItem", L"RotatedBoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotatedBoundingRect());
         }
         catch (...)
@@ -1303,14 +1303,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisNode", L"GetStrokeIds", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisNode", L"GetStrokeIds", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetStrokeIds());
             }
             catch (...)
@@ -1328,14 +1328,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisNode_get_BoundingRect(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisNode", L"BoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisNode", L"BoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BoundingRect());
         }
         catch (...)
@@ -1347,14 +1347,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisNode_get_Children(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisNode", L"Children"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisNode", L"Children"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Children());
         }
         catch (...)
@@ -1366,14 +1366,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisNode_get_Id(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisNode", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisNode", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1385,14 +1385,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisNode_get_Kind(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisNode", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisNode", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -1404,14 +1404,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisNode_get_Parent(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisNode", L"Parent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisNode", L"Parent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parent());
         }
         catch (...)
@@ -1423,14 +1423,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisNode_get_RotatedBoundingRect(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisNode", L"RotatedBoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisNode", L"RotatedBoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotatedBoundingRect());
         }
         catch (...)
@@ -1522,14 +1522,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph", L"GetStrokeIds", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph", L"GetStrokeIds", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetStrokeIds());
             }
             catch (...)
@@ -1547,14 +1547,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisParagraph_get_BoundingRect(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisParagraph* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph", L"BoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph", L"BoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BoundingRect());
         }
         catch (...)
@@ -1566,14 +1566,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisParagraph_get_Children(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisParagraph* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph", L"Children"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph", L"Children"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Children());
         }
         catch (...)
@@ -1585,14 +1585,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisParagraph_get_Id(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisParagraph* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1604,14 +1604,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisParagraph_get_Kind(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisParagraph* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -1623,14 +1623,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisParagraph_get_Parent(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisParagraph* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph", L"Parent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph", L"Parent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parent());
         }
         catch (...)
@@ -1642,14 +1642,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisParagraph_get_RotatedBoundingRect(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisParagraph* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph", L"RotatedBoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph", L"RotatedBoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotatedBoundingRect());
         }
         catch (...)
@@ -1661,14 +1661,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisParagraph_get_RecognizedText(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisParagraph* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph", L"RecognizedText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph", L"RecognizedText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RecognizedText());
         }
         catch (...)
@@ -1757,14 +1757,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisResult_get_Status(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1850,14 +1850,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisRoot", L"FindNodes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisRoot", L"FindNodes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisNodeKind>(args, 0);
 
                 return py::convert(self->obj.FindNodes(param0));
@@ -1881,14 +1881,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisRoot", L"GetStrokeIds", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisRoot", L"GetStrokeIds", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetStrokeIds());
             }
             catch (...)
@@ -1906,14 +1906,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisRoot_get_BoundingRect(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisRoot* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisRoot", L"BoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisRoot", L"BoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BoundingRect());
         }
         catch (...)
@@ -1925,14 +1925,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisRoot_get_Children(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisRoot* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisRoot", L"Children"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisRoot", L"Children"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Children());
         }
         catch (...)
@@ -1944,14 +1944,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisRoot_get_Id(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisRoot* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisRoot", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisRoot", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1963,14 +1963,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisRoot_get_Kind(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisRoot* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisRoot", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisRoot", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -1982,14 +1982,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisRoot_get_Parent(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisRoot* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisRoot", L"Parent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisRoot", L"Parent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parent());
         }
         catch (...)
@@ -2001,14 +2001,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisRoot_get_RotatedBoundingRect(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisRoot* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisRoot", L"RotatedBoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisRoot", L"RotatedBoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotatedBoundingRect());
         }
         catch (...)
@@ -2020,14 +2020,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisRoot_get_RecognizedText(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisRoot* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisRoot", L"RecognizedText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisRoot", L"RecognizedText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RecognizedText());
         }
         catch (...)
@@ -2121,14 +2121,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion", L"GetStrokeIds", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion", L"GetStrokeIds", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetStrokeIds());
             }
             catch (...)
@@ -2146,14 +2146,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisWritingRegion_get_BoundingRect(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisWritingRegion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion", L"BoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion", L"BoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BoundingRect());
         }
         catch (...)
@@ -2165,14 +2165,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisWritingRegion_get_Children(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisWritingRegion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion", L"Children"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion", L"Children"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Children());
         }
         catch (...)
@@ -2184,14 +2184,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisWritingRegion_get_Id(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisWritingRegion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -2203,14 +2203,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisWritingRegion_get_Kind(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisWritingRegion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -2222,14 +2222,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisWritingRegion_get_Parent(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisWritingRegion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion", L"Parent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion", L"Parent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parent());
         }
         catch (...)
@@ -2241,14 +2241,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisWritingRegion_get_RotatedBoundingRect(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisWritingRegion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion", L"RotatedBoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion", L"RotatedBoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotatedBoundingRect());
         }
         catch (...)
@@ -2260,14 +2260,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisWritingRegion_get_RecognizedText(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisWritingRegion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion", L"RecognizedText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion", L"RecognizedText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RecognizedText());
         }
         catch (...)
@@ -2382,14 +2382,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalyzer", L"AddDataForStroke", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalyzer", L"AddDataForStroke", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkStroke>(args, 0);
 
                 self->obj.AddDataForStroke(param0);
@@ -2414,14 +2414,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalyzer", L"AddDataForStrokes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalyzer", L"AddDataForStrokes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Input::Inking::InkStroke>>(args, 0);
 
                 self->obj.AddDataForStrokes(param0);
@@ -2446,14 +2446,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalyzer", L"AnalyzeAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalyzer", L"AnalyzeAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.AnalyzeAsync());
             }
             catch (...)
@@ -2475,14 +2475,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalyzer", L"ClearDataForAllStrokes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalyzer", L"ClearDataForAllStrokes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ClearDataForAllStrokes();
                 Py_RETURN_NONE;
             }
@@ -2505,14 +2505,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalyzer", L"RemoveDataForStroke", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalyzer", L"RemoveDataForStroke", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveDataForStroke(param0);
@@ -2537,14 +2537,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalyzer", L"RemoveDataForStrokes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalyzer", L"RemoveDataForStrokes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<uint32_t>>(args, 0);
 
                 self->obj.RemoveDataForStrokes(param0);
@@ -2569,14 +2569,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalyzer", L"ReplaceDataForStroke", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalyzer", L"ReplaceDataForStroke", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkStroke>(args, 0);
 
                 self->obj.ReplaceDataForStroke(param0);
@@ -2601,14 +2601,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalyzer", L"SetStrokeDataKind", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalyzer", L"SetStrokeDataKind", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisStrokeKind>(args, 1);
 
@@ -2630,14 +2630,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalyzer_get_AnalysisRoot(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalyzer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalyzer", L"AnalysisRoot"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalyzer", L"AnalysisRoot"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AnalysisRoot());
         }
         catch (...)
@@ -2649,14 +2649,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalyzer_get_IsAnalyzing(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalyzer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalyzer", L"IsAnalyzing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.InkAnalyzer", L"IsAnalyzing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAnalyzing());
         }
         catch (...)
@@ -2751,14 +2751,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.IInkAnalysisNode", L"GetStrokeIds", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.IInkAnalysisNode", L"GetStrokeIds", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetStrokeIds());
             }
             catch (...)
@@ -2776,14 +2776,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* IInkAnalysisNode_get_BoundingRect(py::wrapper::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.IInkAnalysisNode", L"BoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.IInkAnalysisNode", L"BoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BoundingRect());
         }
         catch (...)
@@ -2795,14 +2795,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* IInkAnalysisNode_get_Children(py::wrapper::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.IInkAnalysisNode", L"Children"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.IInkAnalysisNode", L"Children"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Children());
         }
         catch (...)
@@ -2814,14 +2814,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* IInkAnalysisNode_get_Id(py::wrapper::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.IInkAnalysisNode", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.IInkAnalysisNode", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -2833,14 +2833,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* IInkAnalysisNode_get_Kind(py::wrapper::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.IInkAnalysisNode", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.IInkAnalysisNode", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -2852,14 +2852,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* IInkAnalysisNode_get_Parent(py::wrapper::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.IInkAnalysisNode", L"Parent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.IInkAnalysisNode", L"Parent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parent());
         }
         catch (...)
@@ -2871,14 +2871,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* IInkAnalysisNode_get_RotatedBoundingRect(py::wrapper::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.IInkAnalysisNode", L"RotatedBoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.Analysis.IInkAnalysisNode", L"RotatedBoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotatedBoundingRect());
         }
         catch (...)
@@ -2970,14 +2970,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.IInkAnalyzerFactory", L"CreateAnalyzer", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Analysis.IInkAnalyzerFactory", L"CreateAnalyzer", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateAnalyzer());
             }
             catch (...)

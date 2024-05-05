@@ -28,14 +28,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater", L"CommitAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater", L"CommitAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CommitAsync());
             }
             catch (...)
@@ -53,14 +53,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static PyObject* SocialDashboardItemUpdater_get_Timestamp(py::wrapper::Windows::ApplicationModel::SocialInfo::Provider::SocialDashboardItemUpdater* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -72,12 +72,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static int SocialDashboardItemUpdater_put_Timestamp(py::wrapper::Windows::ApplicationModel::SocialInfo::Provider::SocialDashboardItemUpdater* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -86,6 +80,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             self->obj.Timestamp(param0);
@@ -100,14 +100,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static PyObject* SocialDashboardItemUpdater_get_Thumbnail(py::wrapper::Windows::ApplicationModel::SocialInfo::Provider::SocialDashboardItemUpdater* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater", L"Thumbnail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater", L"Thumbnail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Thumbnail());
         }
         catch (...)
@@ -119,12 +119,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static int SocialDashboardItemUpdater_put_Thumbnail(py::wrapper::Windows::ApplicationModel::SocialInfo::Provider::SocialDashboardItemUpdater* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater", L"Thumbnail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -133,6 +127,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater", L"Thumbnail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail>(arg);
 
             self->obj.Thumbnail(param0);
@@ -147,14 +147,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static PyObject* SocialDashboardItemUpdater_get_TargetUri(py::wrapper::Windows::ApplicationModel::SocialInfo::Provider::SocialDashboardItemUpdater* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater", L"TargetUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater", L"TargetUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetUri());
         }
         catch (...)
@@ -166,12 +166,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static int SocialDashboardItemUpdater_put_TargetUri(py::wrapper::Windows::ApplicationModel::SocialInfo::Provider::SocialDashboardItemUpdater* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater", L"TargetUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -180,6 +174,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater", L"TargetUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.TargetUri(param0);
@@ -194,14 +194,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static PyObject* SocialDashboardItemUpdater_get_Content(py::wrapper::Windows::ApplicationModel::SocialInfo::Provider::SocialDashboardItemUpdater* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater", L"Content"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater", L"Content"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Content());
         }
         catch (...)
@@ -213,14 +213,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static PyObject* SocialDashboardItemUpdater_get_OwnerRemoteId(py::wrapper::Windows::ApplicationModel::SocialInfo::Provider::SocialDashboardItemUpdater* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater", L"OwnerRemoteId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater", L"OwnerRemoteId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OwnerRemoteId());
         }
         catch (...)
@@ -311,14 +311,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater", L"CommitAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater", L"CommitAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CommitAsync());
             }
             catch (...)
@@ -336,14 +336,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static PyObject* SocialFeedUpdater_get_Items(py::wrapper::Windows::ApplicationModel::SocialInfo::Provider::SocialFeedUpdater* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater", L"Items"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater", L"Items"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Items());
         }
         catch (...)
@@ -355,14 +355,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static PyObject* SocialFeedUpdater_get_Kind(py::wrapper::Windows::ApplicationModel::SocialInfo::Provider::SocialFeedUpdater* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -374,14 +374,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static PyObject* SocialFeedUpdater_get_OwnerRemoteId(py::wrapper::Windows::ApplicationModel::SocialInfo::Provider::SocialFeedUpdater* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater", L"OwnerRemoteId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater", L"OwnerRemoteId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OwnerRemoteId());
         }
         catch (...)
@@ -462,14 +462,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", L"CreateDashboardItemUpdaterAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", L"CreateDashboardItemUpdaterAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialInfoProviderManager::CreateDashboardItemUpdaterAsync(param0));
@@ -493,14 +493,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", L"CreateSocialFeedUpdaterAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", L"CreateSocialFeedUpdaterAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedKind>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedUpdateMode>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -526,14 +526,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", L"DeprovisionAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", L"DeprovisionAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialInfoProviderManager::DeprovisionAsync());
             }
             catch (...)
@@ -555,14 +555,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", L"ProvisionAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", L"ProvisionAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialInfoProviderManager::ProvisionAsync());
             }
             catch (...)
@@ -584,14 +584,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", L"ReportNewContentAvailable", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", L"ReportNewContentAvailable", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedKind>(args, 1);
 
@@ -617,14 +617,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", L"UpdateBadgeCountValue", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", L"UpdateBadgeCountValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 

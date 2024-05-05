@@ -46,14 +46,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedChildItem_get_Timestamp(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedChildItem", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedChildItem", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -65,12 +65,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedChildItem_put_Timestamp(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedChildItem", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -79,6 +73,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedChildItem", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             self->obj.Timestamp(param0);
@@ -93,14 +93,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedChildItem_get_TargetUri(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedChildItem", L"TargetUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedChildItem", L"TargetUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetUri());
         }
         catch (...)
@@ -112,12 +112,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedChildItem_put_TargetUri(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedChildItem", L"TargetUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -126,6 +120,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedChildItem", L"TargetUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.TargetUri(param0);
@@ -140,14 +140,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedChildItem_get_SharedItem(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedChildItem", L"SharedItem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedChildItem", L"SharedItem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SharedItem());
         }
         catch (...)
@@ -159,12 +159,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedChildItem_put_SharedItem(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedChildItem", L"SharedItem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -173,6 +167,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedChildItem", L"SharedItem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem>(arg);
 
             self->obj.SharedItem(param0);
@@ -187,14 +187,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedChildItem_get_Author(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedChildItem", L"Author"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedChildItem", L"Author"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Author());
         }
         catch (...)
@@ -206,14 +206,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedChildItem_get_PrimaryContent(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedChildItem", L"PrimaryContent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedChildItem", L"PrimaryContent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrimaryContent());
         }
         catch (...)
@@ -225,14 +225,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedChildItem_get_SecondaryContent(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedChildItem", L"SecondaryContent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedChildItem", L"SecondaryContent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SecondaryContent());
         }
         catch (...)
@@ -244,14 +244,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedChildItem_get_Thumbnails(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedChildItem", L"Thumbnails"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedChildItem", L"Thumbnails"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Thumbnails());
         }
         catch (...)
@@ -339,14 +339,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedContent_get_Title(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedContent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedContent", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedContent", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -358,12 +358,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedContent_put_Title(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedContent", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -372,6 +366,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedContent", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Title(param0);
@@ -386,14 +386,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedContent_get_TargetUri(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedContent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedContent", L"TargetUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedContent", L"TargetUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetUri());
         }
         catch (...)
@@ -405,12 +405,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedContent_put_TargetUri(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedContent", L"TargetUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -419,6 +413,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedContent", L"TargetUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.TargetUri(param0);
@@ -433,14 +433,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedContent_get_Message(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedContent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedContent", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedContent", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Message());
         }
         catch (...)
@@ -452,12 +452,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedContent_put_Message(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedContent", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -466,6 +460,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedContent", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Message(param0);
@@ -574,14 +574,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedItem_get_Timestamp(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -593,12 +593,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedItem_put_Timestamp(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -607,6 +601,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             self->obj.Timestamp(param0);
@@ -621,14 +621,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedItem_get_TargetUri(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"TargetUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"TargetUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetUri());
         }
         catch (...)
@@ -640,12 +640,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedItem_put_TargetUri(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"TargetUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -654,6 +648,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"TargetUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.TargetUri(param0);
@@ -668,14 +668,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedItem_get_Style(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"Style"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"Style"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Style());
         }
         catch (...)
@@ -687,12 +687,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedItem_put_Style(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"Style"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -701,6 +695,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"Style"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedItemStyle>(arg);
 
             self->obj.Style(param0);
@@ -715,14 +715,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedItem_get_SharedItem(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"SharedItem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"SharedItem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SharedItem());
         }
         catch (...)
@@ -734,12 +734,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedItem_put_SharedItem(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"SharedItem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -748,6 +742,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"SharedItem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem>(arg);
 
             self->obj.SharedItem(param0);
@@ -762,14 +762,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedItem_get_RemoteId(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"RemoteId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"RemoteId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoteId());
         }
         catch (...)
@@ -781,12 +781,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedItem_put_RemoteId(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"RemoteId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -795,6 +789,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"RemoteId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.RemoteId(param0);
@@ -809,14 +809,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedItem_get_ChildItem(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"ChildItem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"ChildItem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChildItem());
         }
         catch (...)
@@ -828,12 +828,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedItem_put_ChildItem(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"ChildItem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -842,6 +836,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"ChildItem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem>(arg);
 
             self->obj.ChildItem(param0);
@@ -856,14 +856,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedItem_get_BadgeStyle(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"BadgeStyle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"BadgeStyle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BadgeStyle());
         }
         catch (...)
@@ -875,12 +875,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedItem_put_BadgeStyle(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"BadgeStyle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -889,6 +883,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"BadgeStyle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::SocialInfo::SocialItemBadgeStyle>(arg);
 
             self->obj.BadgeStyle(param0);
@@ -903,14 +903,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedItem_get_BadgeCountValue(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"BadgeCountValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"BadgeCountValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BadgeCountValue());
         }
         catch (...)
@@ -922,12 +922,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedItem_put_BadgeCountValue(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"BadgeCountValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -936,6 +930,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"BadgeCountValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.BadgeCountValue(param0);
@@ -950,14 +950,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedItem_get_Author(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"Author"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"Author"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Author());
         }
         catch (...)
@@ -969,14 +969,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedItem_get_Thumbnails(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"Thumbnails"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"Thumbnails"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Thumbnails());
         }
         catch (...)
@@ -988,14 +988,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedItem_get_PrimaryContent(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"PrimaryContent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"PrimaryContent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrimaryContent());
         }
         catch (...)
@@ -1007,14 +1007,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedItem_get_SecondaryContent(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"SecondaryContent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedItem", L"SecondaryContent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SecondaryContent());
         }
         catch (...)
@@ -1129,14 +1129,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedSharedItem_get_Timestamp(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -1148,12 +1148,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedSharedItem_put_Timestamp(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1162,6 +1156,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             self->obj.Timestamp(param0);
@@ -1176,14 +1176,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedSharedItem_get_Thumbnail(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem", L"Thumbnail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem", L"Thumbnail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Thumbnail());
         }
         catch (...)
@@ -1195,12 +1195,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedSharedItem_put_Thumbnail(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem", L"Thumbnail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1209,6 +1203,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem", L"Thumbnail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail>(arg);
 
             self->obj.Thumbnail(param0);
@@ -1223,14 +1223,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedSharedItem_get_TargetUri(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem", L"TargetUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem", L"TargetUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetUri());
         }
         catch (...)
@@ -1242,12 +1242,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedSharedItem_put_TargetUri(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem", L"TargetUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1256,6 +1250,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem", L"TargetUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.TargetUri(param0);
@@ -1270,14 +1270,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedSharedItem_get_OriginalSource(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem", L"OriginalSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem", L"OriginalSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OriginalSource());
         }
         catch (...)
@@ -1289,12 +1289,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedSharedItem_put_OriginalSource(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem", L"OriginalSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1303,6 +1297,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem", L"OriginalSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.OriginalSource(param0);
@@ -1317,14 +1317,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialFeedSharedItem_get_Content(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem", L"Content"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem", L"Content"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Content());
         }
         catch (...)
@@ -1436,14 +1436,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.SocialItemThumbnail", L"SetImageAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.SocialItemThumbnail", L"SetImageAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
                 return py::convert(self->obj.SetImageAsync(param0));
@@ -1463,14 +1463,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialItemThumbnail_get_TargetUri(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialItemThumbnail", L"TargetUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialItemThumbnail", L"TargetUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetUri());
         }
         catch (...)
@@ -1482,12 +1482,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialItemThumbnail_put_TargetUri(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialItemThumbnail", L"TargetUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1496,6 +1490,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialItemThumbnail", L"TargetUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.TargetUri(param0);
@@ -1510,14 +1510,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialItemThumbnail_get_ImageUri(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialItemThumbnail", L"ImageUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialItemThumbnail", L"ImageUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ImageUri());
         }
         catch (...)
@@ -1529,12 +1529,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialItemThumbnail_put_ImageUri(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialItemThumbnail", L"ImageUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1543,6 +1537,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialItemThumbnail", L"ImageUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.ImageUri(param0);
@@ -1557,14 +1557,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialItemThumbnail_get_BitmapSize(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialItemThumbnail", L"BitmapSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialItemThumbnail", L"BitmapSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapSize());
         }
         catch (...)
@@ -1576,12 +1576,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialItemThumbnail_put_BitmapSize(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialItemThumbnail", L"BitmapSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1590,6 +1584,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialItemThumbnail", L"BitmapSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapSize>(arg);
 
             self->obj.BitmapSize(param0);
@@ -1677,14 +1677,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialUserInfo_get_UserName(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialUserInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialUserInfo", L"UserName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialUserInfo", L"UserName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserName());
         }
         catch (...)
@@ -1696,12 +1696,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialUserInfo_put_UserName(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialUserInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialUserInfo", L"UserName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1710,6 +1704,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialUserInfo", L"UserName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.UserName(param0);
@@ -1724,14 +1724,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialUserInfo_get_TargetUri(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialUserInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialUserInfo", L"TargetUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialUserInfo", L"TargetUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetUri());
         }
         catch (...)
@@ -1743,12 +1743,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialUserInfo_put_TargetUri(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialUserInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialUserInfo", L"TargetUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1757,6 +1751,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialUserInfo", L"TargetUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.TargetUri(param0);
@@ -1771,14 +1771,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialUserInfo_get_RemoteId(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialUserInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialUserInfo", L"RemoteId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialUserInfo", L"RemoteId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoteId());
         }
         catch (...)
@@ -1790,12 +1790,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialUserInfo_put_RemoteId(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialUserInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialUserInfo", L"RemoteId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1804,6 +1798,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialUserInfo", L"RemoteId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.RemoteId(param0);
@@ -1818,14 +1818,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialUserInfo_get_DisplayName(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialUserInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialUserInfo", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialUserInfo", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -1837,12 +1837,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialUserInfo_put_DisplayName(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialUserInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialUserInfo", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1851,6 +1845,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.SocialInfo.SocialUserInfo", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayName(param0);

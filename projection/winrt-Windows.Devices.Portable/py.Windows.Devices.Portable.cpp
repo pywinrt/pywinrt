@@ -20,14 +20,14 @@ namespace py::cpp::Windows::Devices::Portable
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Portable.ServiceDevice", L"GetDeviceSelector", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Portable.ServiceDevice", L"GetDeviceSelector", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Portable::ServiceDeviceType>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Portable::ServiceDevice::GetDeviceSelector(param0));
@@ -51,14 +51,14 @@ namespace py::cpp::Windows::Devices::Portable
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Portable.ServiceDevice", L"GetDeviceSelectorFromServiceId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Portable.ServiceDevice", L"GetDeviceSelectorFromServiceId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Portable::ServiceDevice::GetDeviceSelectorFromServiceId(param0));
@@ -143,14 +143,14 @@ namespace py::cpp::Windows::Devices::Portable
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Portable.StorageDevice", L"FromId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Portable.StorageDevice", L"FromId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Portable::StorageDevice::FromId(param0));
@@ -174,14 +174,14 @@ namespace py::cpp::Windows::Devices::Portable
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Portable.StorageDevice", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Portable.StorageDevice", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Portable::StorageDevice::GetDeviceSelector());
             }
             catch (...)

@@ -46,14 +46,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactAddress_get_StreetAddress(py::wrapper::Windows::Phone::PersonalInformation::ContactAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactAddress", L"StreetAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactAddress", L"StreetAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StreetAddress());
         }
         catch (...)
@@ -65,12 +65,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int ContactAddress_put_StreetAddress(py::wrapper::Windows::Phone::PersonalInformation::ContactAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactAddress", L"StreetAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -79,6 +73,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactAddress", L"StreetAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.StreetAddress(param0);
@@ -93,14 +93,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactAddress_get_Region(py::wrapper::Windows::Phone::PersonalInformation::ContactAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactAddress", L"Region"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactAddress", L"Region"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Region());
         }
         catch (...)
@@ -112,12 +112,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int ContactAddress_put_Region(py::wrapper::Windows::Phone::PersonalInformation::ContactAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactAddress", L"Region"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -126,6 +120,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactAddress", L"Region"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Region(param0);
@@ -140,14 +140,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactAddress_get_PostalCode(py::wrapper::Windows::Phone::PersonalInformation::ContactAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactAddress", L"PostalCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactAddress", L"PostalCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PostalCode());
         }
         catch (...)
@@ -159,12 +159,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int ContactAddress_put_PostalCode(py::wrapper::Windows::Phone::PersonalInformation::ContactAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactAddress", L"PostalCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -173,6 +167,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactAddress", L"PostalCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.PostalCode(param0);
@@ -187,14 +187,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactAddress_get_Locality(py::wrapper::Windows::Phone::PersonalInformation::ContactAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactAddress", L"Locality"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactAddress", L"Locality"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Locality());
         }
         catch (...)
@@ -206,12 +206,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int ContactAddress_put_Locality(py::wrapper::Windows::Phone::PersonalInformation::ContactAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactAddress", L"Locality"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -220,6 +214,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactAddress", L"Locality"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Locality(param0);
@@ -234,14 +234,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactAddress_get_Country(py::wrapper::Windows::Phone::PersonalInformation::ContactAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactAddress", L"Country"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactAddress", L"Country"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Country());
         }
         catch (...)
@@ -253,12 +253,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int ContactAddress_put_Country(py::wrapper::Windows::Phone::PersonalInformation::ContactAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactAddress", L"Country"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -267,6 +261,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactAddress", L"Country"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Country(param0);
@@ -355,14 +355,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactChangeRecord_get_ChangeType(py::wrapper::Windows::Phone::PersonalInformation::ContactChangeRecord* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactChangeRecord", L"ChangeType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactChangeRecord", L"ChangeType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChangeType());
         }
         catch (...)
@@ -374,14 +374,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactChangeRecord_get_Id(py::wrapper::Windows::Phone::PersonalInformation::ContactChangeRecord* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactChangeRecord", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactChangeRecord", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -393,14 +393,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactChangeRecord_get_RemoteId(py::wrapper::Windows::Phone::PersonalInformation::ContactChangeRecord* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactChangeRecord", L"RemoteId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactChangeRecord", L"RemoteId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoteId());
         }
         catch (...)
@@ -412,14 +412,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactChangeRecord_get_RevisionNumber(py::wrapper::Windows::Phone::PersonalInformation::ContactChangeRecord* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactChangeRecord", L"RevisionNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactChangeRecord", L"RevisionNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RevisionNumber());
         }
         catch (...)
@@ -530,14 +530,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"GetDisplayPictureAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"GetDisplayPictureAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDisplayPictureAsync());
             }
             catch (...)
@@ -559,14 +559,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"GetPropertiesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"GetPropertiesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetPropertiesAsync());
             }
             catch (...)
@@ -588,14 +588,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"ParseVcardAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"ParseVcardAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
                 return py::convert(winrt::Windows::Phone::PersonalInformation::ContactInformation::ParseVcardAsync(param0));
@@ -619,14 +619,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"SetDisplayPictureAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"SetDisplayPictureAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
                 return py::convert(self->obj.SetDisplayPictureAsync(param0));
@@ -650,14 +650,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"ToVcardAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"ToVcardAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToVcardAsync());
             }
             catch (...)
@@ -668,14 +668,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"ToVcardAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"ToVcardAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Phone::PersonalInformation::VCardFormat>(args, 0);
 
                 return py::convert(self->obj.ToVcardAsync(param0));
@@ -695,14 +695,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactInformation_get_HonorificSuffix(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"HonorificSuffix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"HonorificSuffix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HonorificSuffix());
         }
         catch (...)
@@ -714,12 +714,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int ContactInformation_put_HonorificSuffix(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"HonorificSuffix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -728,6 +722,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"HonorificSuffix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.HonorificSuffix(param0);
@@ -742,14 +742,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactInformation_get_HonorificPrefix(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"HonorificPrefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"HonorificPrefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HonorificPrefix());
         }
         catch (...)
@@ -761,12 +761,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int ContactInformation_put_HonorificPrefix(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"HonorificPrefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -775,6 +769,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"HonorificPrefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.HonorificPrefix(param0);
@@ -789,14 +789,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactInformation_get_GivenName(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"GivenName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"GivenName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GivenName());
         }
         catch (...)
@@ -808,12 +808,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int ContactInformation_put_GivenName(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"GivenName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -822,6 +816,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"GivenName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.GivenName(param0);
@@ -836,14 +836,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactInformation_get_FamilyName(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"FamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"FamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FamilyName());
         }
         catch (...)
@@ -855,12 +855,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int ContactInformation_put_FamilyName(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"FamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -869,6 +863,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"FamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.FamilyName(param0);
@@ -883,14 +883,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactInformation_get_DisplayName(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -902,12 +902,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int ContactInformation_put_DisplayName(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -916,6 +910,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayName(param0);
@@ -930,14 +930,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactInformation_get_DisplayPicture(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"DisplayPicture"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactInformation", L"DisplayPicture"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayPicture());
         }
         catch (...)
@@ -1076,14 +1076,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactQueryOptions_get_OrderBy(py::wrapper::Windows::Phone::PersonalInformation::ContactQueryOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactQueryOptions", L"OrderBy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactQueryOptions", L"OrderBy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OrderBy());
         }
         catch (...)
@@ -1095,12 +1095,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int ContactQueryOptions_put_OrderBy(py::wrapper::Windows::Phone::PersonalInformation::ContactQueryOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactQueryOptions", L"OrderBy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1109,6 +1103,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactQueryOptions", L"OrderBy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Phone::PersonalInformation::ContactQueryResultOrdering>(arg);
 
             self->obj.OrderBy(param0);
@@ -1123,14 +1123,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactQueryOptions_get_DesiredFields(py::wrapper::Windows::Phone::PersonalInformation::ContactQueryOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactQueryOptions", L"DesiredFields"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactQueryOptions", L"DesiredFields"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DesiredFields());
         }
         catch (...)
@@ -1217,14 +1217,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactQueryResult", L"GetContactCountAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactQueryResult", L"GetContactCountAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetContactCountAsync());
             }
             catch (...)
@@ -1246,14 +1246,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactQueryResult", L"GetContactsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactQueryResult", L"GetContactsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetContactsAsync());
             }
             catch (...)
@@ -1264,14 +1264,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactQueryResult", L"GetContactsAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactQueryResult", L"GetContactsAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -1296,14 +1296,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactQueryResult", L"GetCurrentQueryOptions", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactQueryResult", L"GetCurrentQueryOptions", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentQueryOptions());
             }
             catch (...)
@@ -1397,14 +1397,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"CreateContactQuery", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"CreateContactQuery", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateContactQuery());
             }
             catch (...)
@@ -1415,14 +1415,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"CreateContactQuery", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"CreateContactQuery", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Phone::PersonalInformation::ContactQueryOptions>(args, 0);
 
                 return py::convert(self->obj.CreateContactQuery(param0));
@@ -1446,14 +1446,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"CreateMeContactAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"CreateMeContactAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CreateMeContactAsync(param0));
@@ -1477,14 +1477,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"CreateOrOpenAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"CreateOrOpenAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Phone::PersonalInformation::ContactStore::CreateOrOpenAsync());
             }
             catch (...)
@@ -1495,14 +1495,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"CreateOrOpenAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"CreateOrOpenAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Phone::PersonalInformation::ContactStoreSystemAccessMode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Phone::PersonalInformation::ContactStoreApplicationAccessMode>(args, 1);
 
@@ -1527,14 +1527,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"DeleteAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"DeleteAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.DeleteAsync());
             }
             catch (...)
@@ -1556,14 +1556,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"DeleteContactAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"DeleteContactAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.DeleteContactAsync(param0));
@@ -1587,14 +1587,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"FindContactByIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"FindContactByIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.FindContactByIdAsync(param0));
@@ -1618,14 +1618,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"FindContactByRemoteIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"FindContactByRemoteIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.FindContactByRemoteIdAsync(param0));
@@ -1649,14 +1649,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"GetChangesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"GetChangesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(self->obj.GetChangesAsync(param0));
@@ -1680,14 +1680,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"LoadExtendedPropertiesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"LoadExtendedPropertiesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.LoadExtendedPropertiesAsync());
             }
             catch (...)
@@ -1709,14 +1709,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"SaveExtendedPropertiesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"SaveExtendedPropertiesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(args, 0);
 
                 return py::convert(self->obj.SaveExtendedPropertiesAsync(param0));
@@ -1736,14 +1736,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactStore_get_RevisionNumber(py::wrapper::Windows::Phone::PersonalInformation::ContactStore* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"RevisionNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.ContactStore", L"RevisionNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RevisionNumber());
         }
         catch (...)
@@ -1852,14 +1852,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_AdditionalName(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"AdditionalName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"AdditionalName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::AdditionalName());
         }
         catch (...)
@@ -1871,14 +1871,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_Address(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"Address"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"Address"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Address());
         }
         catch (...)
@@ -1890,14 +1890,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_AlternateMobileTelephone(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"AlternateMobileTelephone"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"AlternateMobileTelephone"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::AlternateMobileTelephone());
         }
         catch (...)
@@ -1909,14 +1909,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_AlternateTelephone(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"AlternateTelephone"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"AlternateTelephone"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::AlternateTelephone());
         }
         catch (...)
@@ -1928,14 +1928,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_AlternateWorkTelephone(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"AlternateWorkTelephone"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"AlternateWorkTelephone"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::AlternateWorkTelephone());
         }
         catch (...)
@@ -1947,14 +1947,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_Anniversary(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"Anniversary"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"Anniversary"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Anniversary());
         }
         catch (...)
@@ -1966,14 +1966,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_Birthdate(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"Birthdate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"Birthdate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Birthdate());
         }
         catch (...)
@@ -1985,14 +1985,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_Children(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"Children"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"Children"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Children());
         }
         catch (...)
@@ -2004,14 +2004,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_CompanyName(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"CompanyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"CompanyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::CompanyName());
         }
         catch (...)
@@ -2023,14 +2023,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_CompanyTelephone(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"CompanyTelephone"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"CompanyTelephone"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::CompanyTelephone());
         }
         catch (...)
@@ -2042,14 +2042,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_DisplayName(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::DisplayName());
         }
         catch (...)
@@ -2061,14 +2061,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_Email(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"Email"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"Email"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Email());
         }
         catch (...)
@@ -2080,14 +2080,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_FamilyName(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"FamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"FamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::FamilyName());
         }
         catch (...)
@@ -2099,14 +2099,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_GivenName(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"GivenName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"GivenName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::GivenName());
         }
         catch (...)
@@ -2118,14 +2118,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_HomeFax(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"HomeFax"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"HomeFax"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::HomeFax());
         }
         catch (...)
@@ -2137,14 +2137,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_HonorificPrefix(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"HonorificPrefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"HonorificPrefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::HonorificPrefix());
         }
         catch (...)
@@ -2156,14 +2156,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_HonorificSuffix(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"HonorificSuffix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"HonorificSuffix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::HonorificSuffix());
         }
         catch (...)
@@ -2175,14 +2175,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_JobTitle(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"JobTitle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"JobTitle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::JobTitle());
         }
         catch (...)
@@ -2194,14 +2194,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_Manager(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"Manager"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"Manager"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Manager());
         }
         catch (...)
@@ -2213,14 +2213,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_MobileTelephone(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"MobileTelephone"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"MobileTelephone"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::MobileTelephone());
         }
         catch (...)
@@ -2232,14 +2232,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_Nickname(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"Nickname"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"Nickname"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Nickname());
         }
         catch (...)
@@ -2251,14 +2251,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_Notes(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"Notes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"Notes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Notes());
         }
         catch (...)
@@ -2270,14 +2270,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_OfficeLocation(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"OfficeLocation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"OfficeLocation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::OfficeLocation());
         }
         catch (...)
@@ -2289,14 +2289,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_OtherAddress(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"OtherAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"OtherAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::OtherAddress());
         }
         catch (...)
@@ -2308,14 +2308,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_OtherEmail(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"OtherEmail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"OtherEmail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::OtherEmail());
         }
         catch (...)
@@ -2327,14 +2327,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_SignificantOther(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"SignificantOther"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"SignificantOther"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::SignificantOther());
         }
         catch (...)
@@ -2346,14 +2346,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_Telephone(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"Telephone"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"Telephone"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Telephone());
         }
         catch (...)
@@ -2365,14 +2365,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_Url(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"Url"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"Url"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Url());
         }
         catch (...)
@@ -2384,14 +2384,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_WorkAddress(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"WorkAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"WorkAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::WorkAddress());
         }
         catch (...)
@@ -2403,14 +2403,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_WorkEmail(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"WorkEmail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"WorkEmail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::WorkEmail());
         }
         catch (...)
@@ -2422,14 +2422,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_WorkFax(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"WorkFax"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"WorkFax"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::WorkFax());
         }
         catch (...)
@@ -2441,14 +2441,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_WorkTelephone(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"WorkTelephone"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"WorkTelephone"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::WorkTelephone());
         }
         catch (...)
@@ -2460,14 +2460,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_YomiCompanyName(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"YomiCompanyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"YomiCompanyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::YomiCompanyName());
         }
         catch (...)
@@ -2479,14 +2479,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_YomiFamilyName(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"YomiFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"YomiFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::YomiFamilyName());
         }
         catch (...)
@@ -2498,14 +2498,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* KnownContactProperties_get_YomiGivenName(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"YomiGivenName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.KnownContactProperties", L"YomiGivenName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::YomiGivenName());
         }
         catch (...)
@@ -2663,14 +2663,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"GetDisplayPictureAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"GetDisplayPictureAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDisplayPictureAsync());
             }
             catch (...)
@@ -2692,14 +2692,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"GetExtendedPropertiesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"GetExtendedPropertiesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetExtendedPropertiesAsync());
             }
             catch (...)
@@ -2721,14 +2721,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"GetPropertiesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"GetPropertiesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetPropertiesAsync());
             }
             catch (...)
@@ -2750,14 +2750,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"ReplaceExistingContactAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"ReplaceExistingContactAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ReplaceExistingContactAsync(param0));
@@ -2781,14 +2781,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"SaveAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"SaveAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SaveAsync());
             }
             catch (...)
@@ -2810,14 +2810,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"SetDisplayPictureAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"SetDisplayPictureAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
                 return py::convert(self->obj.SetDisplayPictureAsync(param0));
@@ -2841,14 +2841,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"ToVcardAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"ToVcardAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToVcardAsync());
             }
             catch (...)
@@ -2859,14 +2859,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"ToVcardAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"ToVcardAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Phone::PersonalInformation::VCardFormat>(args, 0);
 
                 return py::convert(self->obj.ToVcardAsync(param0));
@@ -2886,14 +2886,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* StoredContact_get_HonorificSuffix(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"HonorificSuffix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"HonorificSuffix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HonorificSuffix());
         }
         catch (...)
@@ -2905,12 +2905,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int StoredContact_put_HonorificSuffix(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"HonorificSuffix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2919,6 +2913,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"HonorificSuffix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.HonorificSuffix(param0);
@@ -2933,14 +2933,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* StoredContact_get_HonorificPrefix(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"HonorificPrefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"HonorificPrefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HonorificPrefix());
         }
         catch (...)
@@ -2952,12 +2952,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int StoredContact_put_HonorificPrefix(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"HonorificPrefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2966,6 +2960,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"HonorificPrefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.HonorificPrefix(param0);
@@ -2980,14 +2980,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* StoredContact_get_GivenName(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"GivenName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"GivenName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GivenName());
         }
         catch (...)
@@ -2999,12 +2999,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int StoredContact_put_GivenName(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"GivenName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3013,6 +3007,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"GivenName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.GivenName(param0);
@@ -3027,14 +3027,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* StoredContact_get_FamilyName(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"FamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"FamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FamilyName());
         }
         catch (...)
@@ -3046,12 +3046,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int StoredContact_put_FamilyName(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"FamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3060,6 +3054,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"FamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.FamilyName(param0);
@@ -3074,14 +3074,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* StoredContact_get_DisplayName(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -3093,12 +3093,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int StoredContact_put_DisplayName(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3107,6 +3101,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayName(param0);
@@ -3121,14 +3121,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* StoredContact_get_DisplayPicture(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"DisplayPicture"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"DisplayPicture"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayPicture());
         }
         catch (...)
@@ -3140,14 +3140,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* StoredContact_get_DisplayPictureDate(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"DisplayPictureDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"DisplayPictureDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayPictureDate());
         }
         catch (...)
@@ -3159,12 +3159,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int StoredContact_put_DisplayPictureDate(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"DisplayPictureDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3173,6 +3167,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"DisplayPictureDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             self->obj.DisplayPictureDate(param0);
@@ -3187,14 +3187,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* StoredContact_get_RemoteId(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"RemoteId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"RemoteId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoteId());
         }
         catch (...)
@@ -3206,12 +3206,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int StoredContact_put_RemoteId(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"RemoteId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3220,6 +3214,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"RemoteId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.RemoteId(param0);
@@ -3234,14 +3234,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* StoredContact_get_Id(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -3253,14 +3253,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* StoredContact_get_Store(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"Store"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.StoredContact", L"Store"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Store());
         }
         catch (...)
@@ -3362,14 +3362,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"GetDisplayPictureAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"GetDisplayPictureAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDisplayPictureAsync());
             }
             catch (...)
@@ -3391,14 +3391,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"GetPropertiesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"GetPropertiesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetPropertiesAsync());
             }
             catch (...)
@@ -3420,14 +3420,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"SetDisplayPictureAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"SetDisplayPictureAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
                 return py::convert(self->obj.SetDisplayPictureAsync(param0));
@@ -3451,14 +3451,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"ToVcardAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"ToVcardAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToVcardAsync());
             }
             catch (...)
@@ -3469,14 +3469,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"ToVcardAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"ToVcardAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Phone::PersonalInformation::VCardFormat>(args, 0);
 
                 return py::convert(self->obj.ToVcardAsync(param0));
@@ -3496,14 +3496,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* IContactInformation_get_DisplayName(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -3515,12 +3515,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int IContactInformation_put_DisplayName(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3529,6 +3523,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayName(param0);
@@ -3543,14 +3543,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* IContactInformation_get_DisplayPicture(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"DisplayPicture"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"DisplayPicture"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayPicture());
         }
         catch (...)
@@ -3562,14 +3562,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* IContactInformation_get_FamilyName(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"FamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"FamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FamilyName());
         }
         catch (...)
@@ -3581,12 +3581,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int IContactInformation_put_FamilyName(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"FamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3595,6 +3589,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"FamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.FamilyName(param0);
@@ -3609,14 +3609,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* IContactInformation_get_GivenName(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"GivenName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"GivenName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GivenName());
         }
         catch (...)
@@ -3628,12 +3628,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int IContactInformation_put_GivenName(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"GivenName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3642,6 +3636,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"GivenName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.GivenName(param0);
@@ -3656,14 +3656,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* IContactInformation_get_HonorificPrefix(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"HonorificPrefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"HonorificPrefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HonorificPrefix());
         }
         catch (...)
@@ -3675,12 +3675,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int IContactInformation_put_HonorificPrefix(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"HonorificPrefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3689,6 +3683,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"HonorificPrefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.HonorificPrefix(param0);
@@ -3703,14 +3703,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* IContactInformation_get_HonorificSuffix(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"HonorificSuffix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"HonorificSuffix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HonorificSuffix());
         }
         catch (...)
@@ -3722,12 +3722,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int IContactInformation_put_HonorificSuffix(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"HonorificSuffix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3736,6 +3730,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation", L"HonorificSuffix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.HonorificSuffix(param0);
@@ -3829,14 +3829,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* IContactInformation2_get_DisplayPictureDate(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation2", L"DisplayPictureDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation2", L"DisplayPictureDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayPictureDate());
         }
         catch (...)
@@ -3848,12 +3848,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int IContactInformation2_put_DisplayPictureDate(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation2", L"DisplayPictureDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3862,6 +3856,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.PersonalInformation.IContactInformation2", L"DisplayPictureDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             self->obj.DisplayPictureDate(param0);

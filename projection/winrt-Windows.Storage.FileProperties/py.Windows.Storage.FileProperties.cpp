@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.BasicProperties", L"RetrievePropertiesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.BasicProperties", L"RetrievePropertiesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(self->obj.RetrievePropertiesAsync(param0));
@@ -59,14 +59,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.BasicProperties", L"SavePropertiesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.BasicProperties", L"SavePropertiesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SavePropertiesAsync());
             }
             catch (...)
@@ -77,14 +77,14 @@ namespace py::cpp::Windows::Storage::FileProperties
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.BasicProperties", L"SavePropertiesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.BasicProperties", L"SavePropertiesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Foundation::IInspectable>>>(args, 0);
 
                 return py::convert(self->obj.SavePropertiesAsync(param0));
@@ -104,14 +104,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* BasicProperties_get_DateModified(py::wrapper::Windows::Storage::FileProperties::BasicProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.BasicProperties", L"DateModified"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.BasicProperties", L"DateModified"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DateModified());
         }
         catch (...)
@@ -123,14 +123,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* BasicProperties_get_ItemDate(py::wrapper::Windows::Storage::FileProperties::BasicProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.BasicProperties", L"ItemDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.BasicProperties", L"ItemDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ItemDate());
         }
         catch (...)
@@ -142,14 +142,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* BasicProperties_get_Size(py::wrapper::Windows::Storage::FileProperties::BasicProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.BasicProperties", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.BasicProperties", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -239,14 +239,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.DocumentProperties", L"RetrievePropertiesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.DocumentProperties", L"RetrievePropertiesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(self->obj.RetrievePropertiesAsync(param0));
@@ -270,14 +270,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.DocumentProperties", L"SavePropertiesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.DocumentProperties", L"SavePropertiesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SavePropertiesAsync());
             }
             catch (...)
@@ -288,14 +288,14 @@ namespace py::cpp::Windows::Storage::FileProperties
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.DocumentProperties", L"SavePropertiesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.DocumentProperties", L"SavePropertiesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Foundation::IInspectable>>>(args, 0);
 
                 return py::convert(self->obj.SavePropertiesAsync(param0));
@@ -315,14 +315,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* DocumentProperties_get_Title(py::wrapper::Windows::Storage::FileProperties::DocumentProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.DocumentProperties", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.DocumentProperties", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -334,12 +334,6 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int DocumentProperties_put_Title(py::wrapper::Windows::Storage::FileProperties::DocumentProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.DocumentProperties", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -348,6 +342,12 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.DocumentProperties", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Title(param0);
@@ -362,14 +362,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* DocumentProperties_get_Comment(py::wrapper::Windows::Storage::FileProperties::DocumentProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.DocumentProperties", L"Comment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.DocumentProperties", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Comment());
         }
         catch (...)
@@ -381,12 +381,6 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int DocumentProperties_put_Comment(py::wrapper::Windows::Storage::FileProperties::DocumentProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.DocumentProperties", L"Comment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -395,6 +389,12 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.DocumentProperties", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Comment(param0);
@@ -409,14 +409,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* DocumentProperties_get_Author(py::wrapper::Windows::Storage::FileProperties::DocumentProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.DocumentProperties", L"Author"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.DocumentProperties", L"Author"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Author());
         }
         catch (...)
@@ -428,14 +428,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* DocumentProperties_get_Keywords(py::wrapper::Windows::Storage::FileProperties::DocumentProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.DocumentProperties", L"Keywords"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.DocumentProperties", L"Keywords"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Keywords());
         }
         catch (...)
@@ -518,14 +518,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.GeotagHelper", L"GetGeotagAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.GeotagHelper", L"GetGeotagAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert(winrt::Windows::Storage::FileProperties::GeotagHelper::GetGeotagAsync(param0));
@@ -549,14 +549,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.GeotagHelper", L"SetGeotagAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.GeotagHelper", L"SetGeotagAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 1);
 
@@ -581,14 +581,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.GeotagHelper", L"SetGeotagFromGeolocatorAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.GeotagHelper", L"SetGeotagFromGeolocatorAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::Geolocator>(args, 1);
 
@@ -683,14 +683,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.ImageProperties", L"RetrievePropertiesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.ImageProperties", L"RetrievePropertiesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(self->obj.RetrievePropertiesAsync(param0));
@@ -714,14 +714,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.ImageProperties", L"SavePropertiesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.ImageProperties", L"SavePropertiesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SavePropertiesAsync());
             }
             catch (...)
@@ -732,14 +732,14 @@ namespace py::cpp::Windows::Storage::FileProperties
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.ImageProperties", L"SavePropertiesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.ImageProperties", L"SavePropertiesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Foundation::IInspectable>>>(args, 0);
 
                 return py::convert(self->obj.SavePropertiesAsync(param0));
@@ -759,14 +759,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* ImageProperties_get_Title(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -778,12 +778,6 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int ImageProperties_put_Title(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -792,6 +786,12 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Title(param0);
@@ -806,14 +806,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* ImageProperties_get_Rating(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"Rating"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"Rating"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Rating());
         }
         catch (...)
@@ -825,12 +825,6 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int ImageProperties_put_Rating(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"Rating"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -839,6 +833,12 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"Rating"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Rating(param0);
@@ -853,14 +853,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* ImageProperties_get_DateTaken(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"DateTaken"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"DateTaken"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DateTaken());
         }
         catch (...)
@@ -872,12 +872,6 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int ImageProperties_put_DateTaken(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"DateTaken"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -886,6 +880,12 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"DateTaken"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             self->obj.DateTaken(param0);
@@ -900,14 +900,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* ImageProperties_get_CameraModel(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"CameraModel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"CameraModel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CameraModel());
         }
         catch (...)
@@ -919,12 +919,6 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int ImageProperties_put_CameraModel(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"CameraModel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -933,6 +927,12 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"CameraModel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.CameraModel(param0);
@@ -947,14 +947,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* ImageProperties_get_CameraManufacturer(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"CameraManufacturer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"CameraManufacturer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CameraManufacturer());
         }
         catch (...)
@@ -966,12 +966,6 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int ImageProperties_put_CameraManufacturer(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"CameraManufacturer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -980,6 +974,12 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"CameraManufacturer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.CameraManufacturer(param0);
@@ -994,14 +994,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* ImageProperties_get_Height(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"Height"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Height());
         }
         catch (...)
@@ -1013,14 +1013,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* ImageProperties_get_Keywords(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"Keywords"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"Keywords"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Keywords());
         }
         catch (...)
@@ -1032,14 +1032,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* ImageProperties_get_Latitude(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"Latitude"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"Latitude"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Latitude());
         }
         catch (...)
@@ -1051,14 +1051,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* ImageProperties_get_Longitude(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"Longitude"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"Longitude"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Longitude());
         }
         catch (...)
@@ -1070,14 +1070,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* ImageProperties_get_Orientation(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Orientation());
         }
         catch (...)
@@ -1089,14 +1089,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* ImageProperties_get_PeopleNames(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"PeopleNames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"PeopleNames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PeopleNames());
         }
         catch (...)
@@ -1108,14 +1108,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* ImageProperties_get_Width(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"Width"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.ImageProperties", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Width());
         }
         catch (...)
@@ -1214,14 +1214,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.MusicProperties", L"RetrievePropertiesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.MusicProperties", L"RetrievePropertiesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(self->obj.RetrievePropertiesAsync(param0));
@@ -1245,14 +1245,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.MusicProperties", L"SavePropertiesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.MusicProperties", L"SavePropertiesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SavePropertiesAsync());
             }
             catch (...)
@@ -1263,14 +1263,14 @@ namespace py::cpp::Windows::Storage::FileProperties
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.MusicProperties", L"SavePropertiesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.MusicProperties", L"SavePropertiesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Foundation::IInspectable>>>(args, 0);
 
                 return py::convert(self->obj.SavePropertiesAsync(param0));
@@ -1290,14 +1290,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* MusicProperties_get_Year(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Year"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Year"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Year());
         }
         catch (...)
@@ -1309,12 +1309,6 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int MusicProperties_put_Year(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Year"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1323,6 +1317,12 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Year"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Year(param0);
@@ -1337,14 +1337,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* MusicProperties_get_TrackNumber(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"TrackNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"TrackNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrackNumber());
         }
         catch (...)
@@ -1356,12 +1356,6 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int MusicProperties_put_TrackNumber(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"TrackNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1370,6 +1364,12 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"TrackNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.TrackNumber(param0);
@@ -1384,14 +1384,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* MusicProperties_get_Title(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -1403,12 +1403,6 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int MusicProperties_put_Title(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1417,6 +1411,12 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Title(param0);
@@ -1431,14 +1431,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* MusicProperties_get_Subtitle(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Subtitle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Subtitle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Subtitle());
         }
         catch (...)
@@ -1450,12 +1450,6 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int MusicProperties_put_Subtitle(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Subtitle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1464,6 +1458,12 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Subtitle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Subtitle(param0);
@@ -1478,14 +1478,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* MusicProperties_get_Rating(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Rating"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Rating"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Rating());
         }
         catch (...)
@@ -1497,12 +1497,6 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int MusicProperties_put_Rating(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Rating"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1511,6 +1505,12 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Rating"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Rating(param0);
@@ -1525,14 +1525,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* MusicProperties_get_Publisher(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Publisher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Publisher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Publisher());
         }
         catch (...)
@@ -1544,12 +1544,6 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int MusicProperties_put_Publisher(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Publisher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1558,6 +1552,12 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Publisher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Publisher(param0);
@@ -1572,14 +1572,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* MusicProperties_get_Artist(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Artist"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Artist"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Artist());
         }
         catch (...)
@@ -1591,12 +1591,6 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int MusicProperties_put_Artist(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Artist"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1605,6 +1599,12 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Artist"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Artist(param0);
@@ -1619,14 +1619,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* MusicProperties_get_AlbumArtist(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"AlbumArtist"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"AlbumArtist"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlbumArtist());
         }
         catch (...)
@@ -1638,12 +1638,6 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int MusicProperties_put_AlbumArtist(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"AlbumArtist"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1652,6 +1646,12 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"AlbumArtist"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.AlbumArtist(param0);
@@ -1666,14 +1666,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* MusicProperties_get_Album(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Album"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Album"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Album());
         }
         catch (...)
@@ -1685,12 +1685,6 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int MusicProperties_put_Album(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Album"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1699,6 +1693,12 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Album"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Album(param0);
@@ -1713,14 +1713,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* MusicProperties_get_Bitrate(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Bitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Bitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bitrate());
         }
         catch (...)
@@ -1732,14 +1732,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* MusicProperties_get_Composers(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Composers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Composers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Composers());
         }
         catch (...)
@@ -1751,14 +1751,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* MusicProperties_get_Conductors(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Conductors"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Conductors"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Conductors());
         }
         catch (...)
@@ -1770,14 +1770,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* MusicProperties_get_Duration(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -1789,14 +1789,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* MusicProperties_get_Genre(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Genre"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Genre"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Genre());
         }
         catch (...)
@@ -1808,14 +1808,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* MusicProperties_get_Producers(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Producers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Producers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Producers());
         }
         catch (...)
@@ -1827,14 +1827,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* MusicProperties_get_Writers(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Writers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.MusicProperties", L"Writers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Writers());
         }
         catch (...)
@@ -1937,14 +1937,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemContentProperties", L"GetDocumentPropertiesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemContentProperties", L"GetDocumentPropertiesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDocumentPropertiesAsync());
             }
             catch (...)
@@ -1966,14 +1966,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemContentProperties", L"GetImagePropertiesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemContentProperties", L"GetImagePropertiesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetImagePropertiesAsync());
             }
             catch (...)
@@ -1995,14 +1995,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemContentProperties", L"GetMusicPropertiesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemContentProperties", L"GetMusicPropertiesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetMusicPropertiesAsync());
             }
             catch (...)
@@ -2024,14 +2024,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemContentProperties", L"GetVideoPropertiesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemContentProperties", L"GetVideoPropertiesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetVideoPropertiesAsync());
             }
             catch (...)
@@ -2053,14 +2053,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemContentProperties", L"RetrievePropertiesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemContentProperties", L"RetrievePropertiesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(self->obj.RetrievePropertiesAsync(param0));
@@ -2084,14 +2084,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemContentProperties", L"SavePropertiesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemContentProperties", L"SavePropertiesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SavePropertiesAsync());
             }
             catch (...)
@@ -2102,14 +2102,14 @@ namespace py::cpp::Windows::Storage::FileProperties
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemContentProperties", L"SavePropertiesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemContentProperties", L"SavePropertiesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Foundation::IInspectable>>>(args, 0);
 
                 return py::convert(self->obj.SavePropertiesAsync(param0));
@@ -2208,14 +2208,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"CloneStream", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"CloneStream", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CloneStream());
             }
             catch (...)
@@ -2237,14 +2237,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -2267,14 +2267,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"FlushAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"FlushAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.FlushAsync());
             }
             catch (...)
@@ -2296,14 +2296,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"GetInputStreamAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"GetInputStreamAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(self->obj.GetInputStreamAt(param0));
@@ -2327,14 +2327,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"GetOutputStreamAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"GetOutputStreamAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(self->obj.GetOutputStreamAt(param0));
@@ -2358,14 +2358,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"ReadAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"ReadAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::InputStreamOptions>(args, 2);
@@ -2391,14 +2391,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"Seek", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"Seek", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 self->obj.Seek(param0);
@@ -2423,14 +2423,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"WriteAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"WriteAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert(self->obj.WriteAsync(param0));
@@ -2450,14 +2450,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemThumbnail_get_OriginalHeight(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"OriginalHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"OriginalHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OriginalHeight());
         }
         catch (...)
@@ -2469,14 +2469,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemThumbnail_get_OriginalWidth(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"OriginalWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"OriginalWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OriginalWidth());
         }
         catch (...)
@@ -2488,14 +2488,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemThumbnail_get_ReturnedSmallerCachedSize(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"ReturnedSmallerCachedSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"ReturnedSmallerCachedSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReturnedSmallerCachedSize());
         }
         catch (...)
@@ -2507,14 +2507,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemThumbnail_get_Type(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -2526,14 +2526,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemThumbnail_get_ContentType(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"ContentType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"ContentType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentType());
         }
         catch (...)
@@ -2545,14 +2545,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemThumbnail_get_Size(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -2564,12 +2564,6 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int StorageItemThumbnail_put_Size(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2578,6 +2572,12 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint64_t>(arg);
 
             self->obj.Size(param0);
@@ -2592,14 +2592,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemThumbnail_get_CanRead(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"CanRead"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"CanRead"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanRead());
         }
         catch (...)
@@ -2611,14 +2611,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemThumbnail_get_CanWrite(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"CanWrite"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"CanWrite"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanWrite());
         }
         catch (...)
@@ -2630,14 +2630,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemThumbnail_get_Position(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.StorageItemThumbnail", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -2760,14 +2760,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.VideoProperties", L"RetrievePropertiesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.VideoProperties", L"RetrievePropertiesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(self->obj.RetrievePropertiesAsync(param0));
@@ -2791,14 +2791,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.VideoProperties", L"SavePropertiesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.VideoProperties", L"SavePropertiesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SavePropertiesAsync());
             }
             catch (...)
@@ -2809,14 +2809,14 @@ namespace py::cpp::Windows::Storage::FileProperties
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.VideoProperties", L"SavePropertiesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.VideoProperties", L"SavePropertiesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Foundation::IInspectable>>>(args, 0);
 
                 return py::convert(self->obj.SavePropertiesAsync(param0));
@@ -2836,14 +2836,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* VideoProperties_get_Year(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Year"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Year"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Year());
         }
         catch (...)
@@ -2855,12 +2855,6 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int VideoProperties_put_Year(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Year"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2869,6 +2863,12 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Year"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Year(param0);
@@ -2883,14 +2883,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* VideoProperties_get_Title(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -2902,12 +2902,6 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int VideoProperties_put_Title(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2916,6 +2910,12 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Title(param0);
@@ -2930,14 +2930,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* VideoProperties_get_Subtitle(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Subtitle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Subtitle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Subtitle());
         }
         catch (...)
@@ -2949,12 +2949,6 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int VideoProperties_put_Subtitle(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Subtitle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2963,6 +2957,12 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Subtitle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Subtitle(param0);
@@ -2977,14 +2977,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* VideoProperties_get_Rating(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Rating"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Rating"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Rating());
         }
         catch (...)
@@ -2996,12 +2996,6 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int VideoProperties_put_Rating(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Rating"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3010,6 +3004,12 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Rating"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Rating(param0);
@@ -3024,14 +3024,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* VideoProperties_get_Publisher(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Publisher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Publisher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Publisher());
         }
         catch (...)
@@ -3043,12 +3043,6 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int VideoProperties_put_Publisher(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Publisher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3057,6 +3051,12 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Publisher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Publisher(param0);
@@ -3071,14 +3071,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* VideoProperties_get_Bitrate(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Bitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Bitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bitrate());
         }
         catch (...)
@@ -3090,14 +3090,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* VideoProperties_get_Directors(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Directors"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Directors"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Directors());
         }
         catch (...)
@@ -3109,14 +3109,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* VideoProperties_get_Duration(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -3128,14 +3128,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* VideoProperties_get_Height(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Height"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Height());
         }
         catch (...)
@@ -3147,14 +3147,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* VideoProperties_get_Keywords(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Keywords"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Keywords"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Keywords());
         }
         catch (...)
@@ -3166,14 +3166,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* VideoProperties_get_Latitude(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Latitude"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Latitude"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Latitude());
         }
         catch (...)
@@ -3185,14 +3185,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* VideoProperties_get_Longitude(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Longitude"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Longitude"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Longitude());
         }
         catch (...)
@@ -3204,14 +3204,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* VideoProperties_get_Orientation(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Orientation());
         }
         catch (...)
@@ -3223,14 +3223,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* VideoProperties_get_Producers(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Producers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Producers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Producers());
         }
         catch (...)
@@ -3242,14 +3242,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* VideoProperties_get_Width(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Width"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Width());
         }
         catch (...)
@@ -3261,14 +3261,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* VideoProperties_get_Writers(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Writers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.FileProperties.VideoProperties", L"Writers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Writers());
         }
         catch (...)
@@ -3371,14 +3371,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.IStorageItemExtraProperties", L"RetrievePropertiesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.IStorageItemExtraProperties", L"RetrievePropertiesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(self->obj.RetrievePropertiesAsync(param0));
@@ -3402,14 +3402,14 @@ namespace py::cpp::Windows::Storage::FileProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.IStorageItemExtraProperties", L"SavePropertiesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.IStorageItemExtraProperties", L"SavePropertiesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SavePropertiesAsync());
             }
             catch (...)
@@ -3420,14 +3420,14 @@ namespace py::cpp::Windows::Storage::FileProperties
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.IStorageItemExtraProperties", L"SavePropertiesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.IStorageItemExtraProperties", L"SavePropertiesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Foundation::IInspectable>>>(args, 0);
 
                 return py::convert(self->obj.SavePropertiesAsync(param0));

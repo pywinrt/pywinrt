@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"CheckAccess", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"CheckAccess", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CheckAccess());
             }
             catch (...)
@@ -57,14 +57,14 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability::Create(param0));
@@ -88,14 +88,14 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"CreateWithProcessIdForUser", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"CreateWithProcessIdForUser", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -121,14 +121,14 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"RequestAccessAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"RequestAccessAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.RequestAccessAsync());
             }
             catch (...)
@@ -150,14 +150,14 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"RequestAccessForCapabilitiesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"RequestAccessForCapabilitiesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability::RequestAccessForCapabilitiesAsync(param0));
@@ -181,14 +181,14 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"RequestAccessForCapabilitiesForUserAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"RequestAccessForCapabilitiesForUserAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
@@ -209,14 +209,14 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
     static PyObject* AppCapability_get_CapabilityName(py::wrapper::Windows::Security::Authorization::AppCapabilityAccess::AppCapability* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"CapabilityName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"CapabilityName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CapabilityName());
         }
         catch (...)
@@ -228,14 +228,14 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
     static PyObject* AppCapability_get_User(py::wrapper::Windows::Security::Authorization::AppCapabilityAccess::AppCapability* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -247,14 +247,14 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
     static PyObject* AppCapability_get_DisplayMessage(py::wrapper::Windows::Security::Authorization::AppCapabilityAccess::AppCapability* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"DisplayMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"DisplayMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayMessage());
         }
         catch (...)
@@ -266,12 +266,6 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
     static int AppCapability_put_DisplayMessage(py::wrapper::Windows::Security::Authorization::AppCapabilityAccess::AppCapability* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"DisplayMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -280,6 +274,12 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"DisplayMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayMessage(param0);
@@ -294,14 +294,14 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
     static PyObject* AppCapability_add_AccessChanged(py::wrapper::Windows::Security::Authorization::AppCapabilityAccess::AppCapability* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"AccessChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"AccessChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability, winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs>>(arg);
 
             return py::convert(self->obj.AccessChanged(param0));
@@ -315,14 +315,14 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
     static PyObject* AppCapability_remove_AccessChanged(py::wrapper::Windows::Security::Authorization::AppCapabilityAccess::AppCapability* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"AccessChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.Authorization.AppCapabilityAccess.AppCapability", L"AccessChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AccessChanged(param0);

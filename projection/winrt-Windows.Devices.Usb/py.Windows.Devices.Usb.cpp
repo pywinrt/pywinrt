@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbBulkInEndpointDescriptor_get_EndpointNumber(py::wrapper::Windows::Devices::Usb::UsbBulkInEndpointDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkInEndpointDescriptor", L"EndpointNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkInEndpointDescriptor", L"EndpointNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndpointNumber());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbBulkInEndpointDescriptor_get_MaxPacketSize(py::wrapper::Windows::Devices::Usb::UsbBulkInEndpointDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkInEndpointDescriptor", L"MaxPacketSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkInEndpointDescriptor", L"MaxPacketSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxPacketSize());
         }
         catch (...)
@@ -62,14 +62,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbBulkInEndpointDescriptor_get_Pipe(py::wrapper::Windows::Devices::Usb::UsbBulkInEndpointDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkInEndpointDescriptor", L"Pipe"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkInEndpointDescriptor", L"Pipe"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Pipe());
         }
         catch (...)
@@ -157,14 +157,14 @@ namespace py::cpp::Windows::Devices::Usb
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbBulkInPipe", L"ClearStallAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbBulkInPipe", L"ClearStallAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ClearStallAsync());
             }
             catch (...)
@@ -186,14 +186,14 @@ namespace py::cpp::Windows::Devices::Usb
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbBulkInPipe", L"FlushBuffer", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbBulkInPipe", L"FlushBuffer", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.FlushBuffer();
                 Py_RETURN_NONE;
             }
@@ -212,14 +212,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbBulkInPipe_get_ReadOptions(py::wrapper::Windows::Devices::Usb::UsbBulkInPipe* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkInPipe", L"ReadOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkInPipe", L"ReadOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReadOptions());
         }
         catch (...)
@@ -231,12 +231,6 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbBulkInPipe_put_ReadOptions(py::wrapper::Windows::Devices::Usb::UsbBulkInPipe* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkInPipe", L"ReadOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -245,6 +239,12 @@ namespace py::cpp::Windows::Devices::Usb
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkInPipe", L"ReadOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbReadOptions>(arg);
 
             self->obj.ReadOptions(param0);
@@ -259,14 +259,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbBulkInPipe_get_EndpointDescriptor(py::wrapper::Windows::Devices::Usb::UsbBulkInPipe* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkInPipe", L"EndpointDescriptor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkInPipe", L"EndpointDescriptor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndpointDescriptor());
         }
         catch (...)
@@ -278,14 +278,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbBulkInPipe_get_InputStream(py::wrapper::Windows::Devices::Usb::UsbBulkInPipe* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkInPipe", L"InputStream"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkInPipe", L"InputStream"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InputStream());
         }
         catch (...)
@@ -297,14 +297,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbBulkInPipe_get_MaxTransferSizeBytes(py::wrapper::Windows::Devices::Usb::UsbBulkInPipe* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkInPipe", L"MaxTransferSizeBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkInPipe", L"MaxTransferSizeBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxTransferSizeBytes());
         }
         catch (...)
@@ -391,14 +391,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbBulkOutEndpointDescriptor_get_EndpointNumber(py::wrapper::Windows::Devices::Usb::UsbBulkOutEndpointDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkOutEndpointDescriptor", L"EndpointNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkOutEndpointDescriptor", L"EndpointNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndpointNumber());
         }
         catch (...)
@@ -410,14 +410,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbBulkOutEndpointDescriptor_get_MaxPacketSize(py::wrapper::Windows::Devices::Usb::UsbBulkOutEndpointDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkOutEndpointDescriptor", L"MaxPacketSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkOutEndpointDescriptor", L"MaxPacketSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxPacketSize());
         }
         catch (...)
@@ -429,14 +429,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbBulkOutEndpointDescriptor_get_Pipe(py::wrapper::Windows::Devices::Usb::UsbBulkOutEndpointDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkOutEndpointDescriptor", L"Pipe"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkOutEndpointDescriptor", L"Pipe"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Pipe());
         }
         catch (...)
@@ -524,14 +524,14 @@ namespace py::cpp::Windows::Devices::Usb
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbBulkOutPipe", L"ClearStallAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbBulkOutPipe", L"ClearStallAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ClearStallAsync());
             }
             catch (...)
@@ -549,14 +549,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbBulkOutPipe_get_WriteOptions(py::wrapper::Windows::Devices::Usb::UsbBulkOutPipe* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkOutPipe", L"WriteOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkOutPipe", L"WriteOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WriteOptions());
         }
         catch (...)
@@ -568,12 +568,6 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbBulkOutPipe_put_WriteOptions(py::wrapper::Windows::Devices::Usb::UsbBulkOutPipe* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkOutPipe", L"WriteOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -582,6 +576,12 @@ namespace py::cpp::Windows::Devices::Usb
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkOutPipe", L"WriteOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbWriteOptions>(arg);
 
             self->obj.WriteOptions(param0);
@@ -596,14 +596,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbBulkOutPipe_get_EndpointDescriptor(py::wrapper::Windows::Devices::Usb::UsbBulkOutPipe* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkOutPipe", L"EndpointDescriptor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkOutPipe", L"EndpointDescriptor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndpointDescriptor());
         }
         catch (...)
@@ -615,14 +615,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbBulkOutPipe_get_OutputStream(py::wrapper::Windows::Devices::Usb::UsbBulkOutPipe* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkOutPipe", L"OutputStream"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbBulkOutPipe", L"OutputStream"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutputStream());
         }
         catch (...)
@@ -707,14 +707,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbConfiguration_get_ConfigurationDescriptor(py::wrapper::Windows::Devices::Usb::UsbConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbConfiguration", L"ConfigurationDescriptor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbConfiguration", L"ConfigurationDescriptor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConfigurationDescriptor());
         }
         catch (...)
@@ -726,14 +726,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbConfiguration_get_Descriptors(py::wrapper::Windows::Devices::Usb::UsbConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbConfiguration", L"Descriptors"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbConfiguration", L"Descriptors"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Descriptors());
         }
         catch (...)
@@ -745,14 +745,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbConfiguration_get_UsbInterfaces(py::wrapper::Windows::Devices::Usb::UsbConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbConfiguration", L"UsbInterfaces"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbConfiguration", L"UsbInterfaces"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UsbInterfaces());
         }
         catch (...)
@@ -840,14 +840,14 @@ namespace py::cpp::Windows::Devices::Usb
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbConfigurationDescriptor", L"Parse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbConfigurationDescriptor", L"Parse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbDescriptor>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Usb::UsbConfigurationDescriptor::Parse(param0));
@@ -871,14 +871,14 @@ namespace py::cpp::Windows::Devices::Usb
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbConfigurationDescriptor", L"TryParse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbConfigurationDescriptor", L"TryParse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbDescriptor>(args, 0);
                 winrt::Windows::Devices::Usb::UsbConfigurationDescriptor param1 { nullptr };
 
@@ -911,14 +911,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbConfigurationDescriptor_get_ConfigurationValue(py::wrapper::Windows::Devices::Usb::UsbConfigurationDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbConfigurationDescriptor", L"ConfigurationValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbConfigurationDescriptor", L"ConfigurationValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConfigurationValue());
         }
         catch (...)
@@ -930,14 +930,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbConfigurationDescriptor_get_MaxPowerMilliamps(py::wrapper::Windows::Devices::Usb::UsbConfigurationDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbConfigurationDescriptor", L"MaxPowerMilliamps"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbConfigurationDescriptor", L"MaxPowerMilliamps"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxPowerMilliamps());
         }
         catch (...)
@@ -949,14 +949,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbConfigurationDescriptor_get_RemoteWakeup(py::wrapper::Windows::Devices::Usb::UsbConfigurationDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbConfigurationDescriptor", L"RemoteWakeup"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbConfigurationDescriptor", L"RemoteWakeup"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoteWakeup());
         }
         catch (...)
@@ -968,14 +968,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbConfigurationDescriptor_get_SelfPowered(py::wrapper::Windows::Devices::Usb::UsbConfigurationDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbConfigurationDescriptor", L"SelfPowered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbConfigurationDescriptor", L"SelfPowered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelfPowered());
         }
         catch (...)
@@ -1109,14 +1109,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbControlRequestType_get_Recipient(py::wrapper::Windows::Devices::Usb::UsbControlRequestType* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbControlRequestType", L"Recipient"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbControlRequestType", L"Recipient"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Recipient());
         }
         catch (...)
@@ -1128,12 +1128,6 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbControlRequestType_put_Recipient(py::wrapper::Windows::Devices::Usb::UsbControlRequestType* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbControlRequestType", L"Recipient"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1142,6 +1136,12 @@ namespace py::cpp::Windows::Devices::Usb
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbControlRequestType", L"Recipient"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbControlRecipient>(arg);
 
             self->obj.Recipient(param0);
@@ -1156,14 +1156,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbControlRequestType_get_Direction(py::wrapper::Windows::Devices::Usb::UsbControlRequestType* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbControlRequestType", L"Direction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbControlRequestType", L"Direction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Direction());
         }
         catch (...)
@@ -1175,12 +1175,6 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbControlRequestType_put_Direction(py::wrapper::Windows::Devices::Usb::UsbControlRequestType* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbControlRequestType", L"Direction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1189,6 +1183,12 @@ namespace py::cpp::Windows::Devices::Usb
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbControlRequestType", L"Direction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbTransferDirection>(arg);
 
             self->obj.Direction(param0);
@@ -1203,14 +1203,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbControlRequestType_get_ControlTransferType(py::wrapper::Windows::Devices::Usb::UsbControlRequestType* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbControlRequestType", L"ControlTransferType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbControlRequestType", L"ControlTransferType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ControlTransferType());
         }
         catch (...)
@@ -1222,12 +1222,6 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbControlRequestType_put_ControlTransferType(py::wrapper::Windows::Devices::Usb::UsbControlRequestType* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbControlRequestType", L"ControlTransferType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1236,6 +1230,12 @@ namespace py::cpp::Windows::Devices::Usb
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbControlRequestType", L"ControlTransferType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbControlTransferType>(arg);
 
             self->obj.ControlTransferType(param0);
@@ -1250,14 +1250,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbControlRequestType_get_AsByte(py::wrapper::Windows::Devices::Usb::UsbControlRequestType* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbControlRequestType", L"AsByte"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbControlRequestType", L"AsByte"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AsByte());
         }
         catch (...)
@@ -1269,12 +1269,6 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbControlRequestType_put_AsByte(py::wrapper::Windows::Devices::Usb::UsbControlRequestType* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbControlRequestType", L"AsByte"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1283,6 +1277,12 @@ namespace py::cpp::Windows::Devices::Usb
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbControlRequestType", L"AsByte"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint8_t>(arg);
 
             self->obj.AsByte(param0);
@@ -1374,14 +1374,14 @@ namespace py::cpp::Windows::Devices::Usb
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDescriptor", L"ReadDescriptorBuffer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDescriptor", L"ReadDescriptorBuffer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 self->obj.ReadDescriptorBuffer(param0);
@@ -1402,14 +1402,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDescriptor_get_DescriptorType(py::wrapper::Windows::Devices::Usb::UsbDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDescriptor", L"DescriptorType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDescriptor", L"DescriptorType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DescriptorType());
         }
         catch (...)
@@ -1421,14 +1421,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDescriptor_get_Length(py::wrapper::Windows::Devices::Usb::UsbDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDescriptor", L"Length"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDescriptor", L"Length"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Length());
         }
         catch (...)
@@ -1516,14 +1516,14 @@ namespace py::cpp::Windows::Devices::Usb
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -1546,14 +1546,14 @@ namespace py::cpp::Windows::Devices::Usb
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Usb::UsbDevice::FromIdAsync(param0));
@@ -1577,14 +1577,14 @@ namespace py::cpp::Windows::Devices::Usb
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"GetDeviceClassSelector", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"GetDeviceClassSelector", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbDeviceClass>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Usb::UsbDevice::GetDeviceClassSelector(param0));
@@ -1608,14 +1608,14 @@ namespace py::cpp::Windows::Devices::Usb
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"GetDeviceSelector", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"GetDeviceSelector", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Usb::UsbDevice::GetDeviceSelector(param0));
@@ -1628,14 +1628,14 @@ namespace py::cpp::Windows::Devices::Usb
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"GetDeviceSelector", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"GetDeviceSelector", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -1649,14 +1649,14 @@ namespace py::cpp::Windows::Devices::Usb
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"GetDeviceSelector", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"GetDeviceSelector", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::guid>(args, 2);
@@ -1682,14 +1682,14 @@ namespace py::cpp::Windows::Devices::Usb
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"SendControlInTransferAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"SendControlInTransferAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbSetupPacket>(args, 0);
 
                 return py::convert(self->obj.SendControlInTransferAsync(param0));
@@ -1702,14 +1702,14 @@ namespace py::cpp::Windows::Devices::Usb
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"SendControlInTransferAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"SendControlInTransferAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbSetupPacket>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -1734,14 +1734,14 @@ namespace py::cpp::Windows::Devices::Usb
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"SendControlOutTransferAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"SendControlOutTransferAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbSetupPacket>(args, 0);
 
                 return py::convert(self->obj.SendControlOutTransferAsync(param0));
@@ -1754,14 +1754,14 @@ namespace py::cpp::Windows::Devices::Usb
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"SendControlOutTransferAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"SendControlOutTransferAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbSetupPacket>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -1782,14 +1782,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDevice_get_Configuration(py::wrapper::Windows::Devices::Usb::UsbDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDevice", L"Configuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDevice", L"Configuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Configuration());
         }
         catch (...)
@@ -1801,14 +1801,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDevice_get_DefaultInterface(py::wrapper::Windows::Devices::Usb::UsbDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDevice", L"DefaultInterface"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDevice", L"DefaultInterface"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultInterface());
         }
         catch (...)
@@ -1820,14 +1820,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDevice_get_DeviceDescriptor(py::wrapper::Windows::Devices::Usb::UsbDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDevice", L"DeviceDescriptor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDevice", L"DeviceDescriptor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceDescriptor());
         }
         catch (...)
@@ -1985,14 +1985,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDeviceClass_get_SubclassCode(py::wrapper::Windows::Devices::Usb::UsbDeviceClass* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClass", L"SubclassCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClass", L"SubclassCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SubclassCode());
         }
         catch (...)
@@ -2004,12 +2004,6 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbDeviceClass_put_SubclassCode(py::wrapper::Windows::Devices::Usb::UsbDeviceClass* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClass", L"SubclassCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2018,6 +2012,12 @@ namespace py::cpp::Windows::Devices::Usb
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClass", L"SubclassCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint8_t>>(arg);
 
             self->obj.SubclassCode(param0);
@@ -2032,14 +2032,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDeviceClass_get_ProtocolCode(py::wrapper::Windows::Devices::Usb::UsbDeviceClass* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClass", L"ProtocolCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClass", L"ProtocolCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProtocolCode());
         }
         catch (...)
@@ -2051,12 +2051,6 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbDeviceClass_put_ProtocolCode(py::wrapper::Windows::Devices::Usb::UsbDeviceClass* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClass", L"ProtocolCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2065,6 +2059,12 @@ namespace py::cpp::Windows::Devices::Usb
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClass", L"ProtocolCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint8_t>>(arg);
 
             self->obj.ProtocolCode(param0);
@@ -2079,14 +2079,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDeviceClass_get_ClassCode(py::wrapper::Windows::Devices::Usb::UsbDeviceClass* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClass", L"ClassCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClass", L"ClassCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClassCode());
         }
         catch (...)
@@ -2098,12 +2098,6 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbDeviceClass_put_ClassCode(py::wrapper::Windows::Devices::Usb::UsbDeviceClass* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClass", L"ClassCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2112,6 +2106,12 @@ namespace py::cpp::Windows::Devices::Usb
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClass", L"ClassCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint8_t>(arg);
 
             self->obj.ClassCode(param0);
@@ -2198,14 +2198,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDeviceClasses_get_ActiveSync(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClasses", L"ActiveSync"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClasses", L"ActiveSync"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Usb::UsbDeviceClasses::ActiveSync());
         }
         catch (...)
@@ -2217,14 +2217,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDeviceClasses_get_CdcControl(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClasses", L"CdcControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClasses", L"CdcControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Usb::UsbDeviceClasses::CdcControl());
         }
         catch (...)
@@ -2236,14 +2236,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDeviceClasses_get_DeviceFirmwareUpdate(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClasses", L"DeviceFirmwareUpdate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClasses", L"DeviceFirmwareUpdate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Usb::UsbDeviceClasses::DeviceFirmwareUpdate());
         }
         catch (...)
@@ -2255,14 +2255,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDeviceClasses_get_Irda(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClasses", L"Irda"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClasses", L"Irda"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Usb::UsbDeviceClasses::Irda());
         }
         catch (...)
@@ -2274,14 +2274,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDeviceClasses_get_Measurement(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClasses", L"Measurement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClasses", L"Measurement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Usb::UsbDeviceClasses::Measurement());
         }
         catch (...)
@@ -2293,14 +2293,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDeviceClasses_get_PalmSync(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClasses", L"PalmSync"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClasses", L"PalmSync"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Usb::UsbDeviceClasses::PalmSync());
         }
         catch (...)
@@ -2312,14 +2312,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDeviceClasses_get_PersonalHealthcare(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClasses", L"PersonalHealthcare"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClasses", L"PersonalHealthcare"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Usb::UsbDeviceClasses::PersonalHealthcare());
         }
         catch (...)
@@ -2331,14 +2331,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDeviceClasses_get_Physical(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClasses", L"Physical"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClasses", L"Physical"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Usb::UsbDeviceClasses::Physical());
         }
         catch (...)
@@ -2350,14 +2350,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDeviceClasses_get_VendorSpecific(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClasses", L"VendorSpecific"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceClasses", L"VendorSpecific"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Usb::UsbDeviceClasses::VendorSpecific());
         }
         catch (...)
@@ -2472,14 +2472,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDeviceDescriptor_get_BcdDeviceRevision(py::wrapper::Windows::Devices::Usb::UsbDeviceDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceDescriptor", L"BcdDeviceRevision"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceDescriptor", L"BcdDeviceRevision"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BcdDeviceRevision());
         }
         catch (...)
@@ -2491,14 +2491,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDeviceDescriptor_get_BcdUsb(py::wrapper::Windows::Devices::Usb::UsbDeviceDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceDescriptor", L"BcdUsb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceDescriptor", L"BcdUsb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BcdUsb());
         }
         catch (...)
@@ -2510,14 +2510,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDeviceDescriptor_get_MaxPacketSize0(py::wrapper::Windows::Devices::Usb::UsbDeviceDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceDescriptor", L"MaxPacketSize0"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceDescriptor", L"MaxPacketSize0"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxPacketSize0());
         }
         catch (...)
@@ -2529,14 +2529,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDeviceDescriptor_get_NumberOfConfigurations(py::wrapper::Windows::Devices::Usb::UsbDeviceDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceDescriptor", L"NumberOfConfigurations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceDescriptor", L"NumberOfConfigurations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumberOfConfigurations());
         }
         catch (...)
@@ -2548,14 +2548,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDeviceDescriptor_get_ProductId(py::wrapper::Windows::Devices::Usb::UsbDeviceDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceDescriptor", L"ProductId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceDescriptor", L"ProductId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProductId());
         }
         catch (...)
@@ -2567,14 +2567,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDeviceDescriptor_get_VendorId(py::wrapper::Windows::Devices::Usb::UsbDeviceDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceDescriptor", L"VendorId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbDeviceDescriptor", L"VendorId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VendorId());
         }
         catch (...)
@@ -2665,14 +2665,14 @@ namespace py::cpp::Windows::Devices::Usb
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbEndpointDescriptor", L"Parse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbEndpointDescriptor", L"Parse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbDescriptor>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Usb::UsbEndpointDescriptor::Parse(param0));
@@ -2696,14 +2696,14 @@ namespace py::cpp::Windows::Devices::Usb
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbEndpointDescriptor", L"TryParse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbEndpointDescriptor", L"TryParse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbDescriptor>(args, 0);
                 winrt::Windows::Devices::Usb::UsbEndpointDescriptor param1 { nullptr };
 
@@ -2736,14 +2736,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbEndpointDescriptor_get_AsBulkInEndpointDescriptor(py::wrapper::Windows::Devices::Usb::UsbEndpointDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbEndpointDescriptor", L"AsBulkInEndpointDescriptor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbEndpointDescriptor", L"AsBulkInEndpointDescriptor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AsBulkInEndpointDescriptor());
         }
         catch (...)
@@ -2755,14 +2755,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbEndpointDescriptor_get_AsBulkOutEndpointDescriptor(py::wrapper::Windows::Devices::Usb::UsbEndpointDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbEndpointDescriptor", L"AsBulkOutEndpointDescriptor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbEndpointDescriptor", L"AsBulkOutEndpointDescriptor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AsBulkOutEndpointDescriptor());
         }
         catch (...)
@@ -2774,14 +2774,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbEndpointDescriptor_get_AsInterruptInEndpointDescriptor(py::wrapper::Windows::Devices::Usb::UsbEndpointDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbEndpointDescriptor", L"AsInterruptInEndpointDescriptor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbEndpointDescriptor", L"AsInterruptInEndpointDescriptor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AsInterruptInEndpointDescriptor());
         }
         catch (...)
@@ -2793,14 +2793,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbEndpointDescriptor_get_AsInterruptOutEndpointDescriptor(py::wrapper::Windows::Devices::Usb::UsbEndpointDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbEndpointDescriptor", L"AsInterruptOutEndpointDescriptor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbEndpointDescriptor", L"AsInterruptOutEndpointDescriptor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AsInterruptOutEndpointDescriptor());
         }
         catch (...)
@@ -2812,14 +2812,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbEndpointDescriptor_get_Direction(py::wrapper::Windows::Devices::Usb::UsbEndpointDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbEndpointDescriptor", L"Direction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbEndpointDescriptor", L"Direction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Direction());
         }
         catch (...)
@@ -2831,14 +2831,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbEndpointDescriptor_get_EndpointNumber(py::wrapper::Windows::Devices::Usb::UsbEndpointDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbEndpointDescriptor", L"EndpointNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbEndpointDescriptor", L"EndpointNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndpointNumber());
         }
         catch (...)
@@ -2850,14 +2850,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbEndpointDescriptor_get_EndpointType(py::wrapper::Windows::Devices::Usb::UsbEndpointDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbEndpointDescriptor", L"EndpointType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbEndpointDescriptor", L"EndpointType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndpointType());
         }
         catch (...)
@@ -2972,14 +2972,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterface_get_BulkInPipes(py::wrapper::Windows::Devices::Usb::UsbInterface* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterface", L"BulkInPipes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterface", L"BulkInPipes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BulkInPipes());
         }
         catch (...)
@@ -2991,14 +2991,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterface_get_BulkOutPipes(py::wrapper::Windows::Devices::Usb::UsbInterface* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterface", L"BulkOutPipes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterface", L"BulkOutPipes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BulkOutPipes());
         }
         catch (...)
@@ -3010,14 +3010,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterface_get_Descriptors(py::wrapper::Windows::Devices::Usb::UsbInterface* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterface", L"Descriptors"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterface", L"Descriptors"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Descriptors());
         }
         catch (...)
@@ -3029,14 +3029,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterface_get_InterfaceNumber(py::wrapper::Windows::Devices::Usb::UsbInterface* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterface", L"InterfaceNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterface", L"InterfaceNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InterfaceNumber());
         }
         catch (...)
@@ -3048,14 +3048,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterface_get_InterfaceSettings(py::wrapper::Windows::Devices::Usb::UsbInterface* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterface", L"InterfaceSettings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterface", L"InterfaceSettings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InterfaceSettings());
         }
         catch (...)
@@ -3067,14 +3067,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterface_get_InterruptInPipes(py::wrapper::Windows::Devices::Usb::UsbInterface* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterface", L"InterruptInPipes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterface", L"InterruptInPipes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InterruptInPipes());
         }
         catch (...)
@@ -3086,14 +3086,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterface_get_InterruptOutPipes(py::wrapper::Windows::Devices::Usb::UsbInterface* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterface", L"InterruptOutPipes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterface", L"InterruptOutPipes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InterruptOutPipes());
         }
         catch (...)
@@ -3185,14 +3185,14 @@ namespace py::cpp::Windows::Devices::Usb
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbInterfaceDescriptor", L"Parse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbInterfaceDescriptor", L"Parse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbDescriptor>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Usb::UsbInterfaceDescriptor::Parse(param0));
@@ -3216,14 +3216,14 @@ namespace py::cpp::Windows::Devices::Usb
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbInterfaceDescriptor", L"TryParse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbInterfaceDescriptor", L"TryParse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbDescriptor>(args, 0);
                 winrt::Windows::Devices::Usb::UsbInterfaceDescriptor param1 { nullptr };
 
@@ -3256,14 +3256,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterfaceDescriptor_get_AlternateSettingNumber(py::wrapper::Windows::Devices::Usb::UsbInterfaceDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceDescriptor", L"AlternateSettingNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceDescriptor", L"AlternateSettingNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlternateSettingNumber());
         }
         catch (...)
@@ -3275,14 +3275,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterfaceDescriptor_get_ClassCode(py::wrapper::Windows::Devices::Usb::UsbInterfaceDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceDescriptor", L"ClassCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceDescriptor", L"ClassCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClassCode());
         }
         catch (...)
@@ -3294,14 +3294,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterfaceDescriptor_get_InterfaceNumber(py::wrapper::Windows::Devices::Usb::UsbInterfaceDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceDescriptor", L"InterfaceNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceDescriptor", L"InterfaceNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InterfaceNumber());
         }
         catch (...)
@@ -3313,14 +3313,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterfaceDescriptor_get_ProtocolCode(py::wrapper::Windows::Devices::Usb::UsbInterfaceDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceDescriptor", L"ProtocolCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceDescriptor", L"ProtocolCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProtocolCode());
         }
         catch (...)
@@ -3332,14 +3332,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterfaceDescriptor_get_SubclassCode(py::wrapper::Windows::Devices::Usb::UsbInterfaceDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceDescriptor", L"SubclassCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceDescriptor", L"SubclassCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SubclassCode());
         }
         catch (...)
@@ -3456,14 +3456,14 @@ namespace py::cpp::Windows::Devices::Usb
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbInterfaceSetting", L"SelectSettingAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbInterfaceSetting", L"SelectSettingAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SelectSettingAsync());
             }
             catch (...)
@@ -3481,14 +3481,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterfaceSetting_get_BulkInEndpoints(py::wrapper::Windows::Devices::Usb::UsbInterfaceSetting* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceSetting", L"BulkInEndpoints"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceSetting", L"BulkInEndpoints"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BulkInEndpoints());
         }
         catch (...)
@@ -3500,14 +3500,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterfaceSetting_get_BulkOutEndpoints(py::wrapper::Windows::Devices::Usb::UsbInterfaceSetting* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceSetting", L"BulkOutEndpoints"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceSetting", L"BulkOutEndpoints"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BulkOutEndpoints());
         }
         catch (...)
@@ -3519,14 +3519,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterfaceSetting_get_Descriptors(py::wrapper::Windows::Devices::Usb::UsbInterfaceSetting* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceSetting", L"Descriptors"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceSetting", L"Descriptors"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Descriptors());
         }
         catch (...)
@@ -3538,14 +3538,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterfaceSetting_get_InterfaceDescriptor(py::wrapper::Windows::Devices::Usb::UsbInterfaceSetting* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceSetting", L"InterfaceDescriptor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceSetting", L"InterfaceDescriptor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InterfaceDescriptor());
         }
         catch (...)
@@ -3557,14 +3557,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterfaceSetting_get_InterruptInEndpoints(py::wrapper::Windows::Devices::Usb::UsbInterfaceSetting* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceSetting", L"InterruptInEndpoints"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceSetting", L"InterruptInEndpoints"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InterruptInEndpoints());
         }
         catch (...)
@@ -3576,14 +3576,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterfaceSetting_get_InterruptOutEndpoints(py::wrapper::Windows::Devices::Usb::UsbInterfaceSetting* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceSetting", L"InterruptOutEndpoints"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceSetting", L"InterruptOutEndpoints"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InterruptOutEndpoints());
         }
         catch (...)
@@ -3595,14 +3595,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterfaceSetting_get_Selected(py::wrapper::Windows::Devices::Usb::UsbInterfaceSetting* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceSetting", L"Selected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterfaceSetting", L"Selected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Selected());
         }
         catch (...)
@@ -3691,14 +3691,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterruptInEndpointDescriptor_get_EndpointNumber(py::wrapper::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptInEndpointDescriptor", L"EndpointNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptInEndpointDescriptor", L"EndpointNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndpointNumber());
         }
         catch (...)
@@ -3710,14 +3710,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterruptInEndpointDescriptor_get_Interval(py::wrapper::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptInEndpointDescriptor", L"Interval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptInEndpointDescriptor", L"Interval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Interval());
         }
         catch (...)
@@ -3729,14 +3729,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterruptInEndpointDescriptor_get_MaxPacketSize(py::wrapper::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptInEndpointDescriptor", L"MaxPacketSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptInEndpointDescriptor", L"MaxPacketSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxPacketSize());
         }
         catch (...)
@@ -3748,14 +3748,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterruptInEndpointDescriptor_get_Pipe(py::wrapper::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptInEndpointDescriptor", L"Pipe"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptInEndpointDescriptor", L"Pipe"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Pipe());
         }
         catch (...)
@@ -3840,14 +3840,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterruptInEventArgs_get_InterruptData(py::wrapper::Windows::Devices::Usb::UsbInterruptInEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptInEventArgs", L"InterruptData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptInEventArgs", L"InterruptData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InterruptData());
         }
         catch (...)
@@ -3933,14 +3933,14 @@ namespace py::cpp::Windows::Devices::Usb
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbInterruptInPipe", L"ClearStallAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbInterruptInPipe", L"ClearStallAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ClearStallAsync());
             }
             catch (...)
@@ -3958,14 +3958,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterruptInPipe_get_EndpointDescriptor(py::wrapper::Windows::Devices::Usb::UsbInterruptInPipe* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptInPipe", L"EndpointDescriptor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptInPipe", L"EndpointDescriptor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndpointDescriptor());
         }
         catch (...)
@@ -3977,14 +3977,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterruptInPipe_add_DataReceived(py::wrapper::Windows::Devices::Usb::UsbInterruptInPipe* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Usb.UsbInterruptInPipe", L"DataReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Usb.UsbInterruptInPipe", L"DataReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Usb::UsbInterruptInPipe, winrt::Windows::Devices::Usb::UsbInterruptInEventArgs>>(arg);
 
             return py::convert(self->obj.DataReceived(param0));
@@ -3998,14 +3998,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterruptInPipe_remove_DataReceived(py::wrapper::Windows::Devices::Usb::UsbInterruptInPipe* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Usb.UsbInterruptInPipe", L"DataReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Usb.UsbInterruptInPipe", L"DataReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DataReceived(param0);
@@ -4093,14 +4093,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterruptOutEndpointDescriptor_get_EndpointNumber(py::wrapper::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor", L"EndpointNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor", L"EndpointNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndpointNumber());
         }
         catch (...)
@@ -4112,14 +4112,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterruptOutEndpointDescriptor_get_Interval(py::wrapper::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor", L"Interval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor", L"Interval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Interval());
         }
         catch (...)
@@ -4131,14 +4131,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterruptOutEndpointDescriptor_get_MaxPacketSize(py::wrapper::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor", L"MaxPacketSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor", L"MaxPacketSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxPacketSize());
         }
         catch (...)
@@ -4150,14 +4150,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterruptOutEndpointDescriptor_get_Pipe(py::wrapper::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor", L"Pipe"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor", L"Pipe"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Pipe());
         }
         catch (...)
@@ -4246,14 +4246,14 @@ namespace py::cpp::Windows::Devices::Usb
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbInterruptOutPipe", L"ClearStallAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbInterruptOutPipe", L"ClearStallAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ClearStallAsync());
             }
             catch (...)
@@ -4271,14 +4271,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterruptOutPipe_get_WriteOptions(py::wrapper::Windows::Devices::Usb::UsbInterruptOutPipe* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptOutPipe", L"WriteOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptOutPipe", L"WriteOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WriteOptions());
         }
         catch (...)
@@ -4290,12 +4290,6 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbInterruptOutPipe_put_WriteOptions(py::wrapper::Windows::Devices::Usb::UsbInterruptOutPipe* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptOutPipe", L"WriteOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4304,6 +4298,12 @@ namespace py::cpp::Windows::Devices::Usb
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptOutPipe", L"WriteOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbWriteOptions>(arg);
 
             self->obj.WriteOptions(param0);
@@ -4318,14 +4318,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterruptOutPipe_get_EndpointDescriptor(py::wrapper::Windows::Devices::Usb::UsbInterruptOutPipe* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptOutPipe", L"EndpointDescriptor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptOutPipe", L"EndpointDescriptor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndpointDescriptor());
         }
         catch (...)
@@ -4337,14 +4337,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterruptOutPipe_get_OutputStream(py::wrapper::Windows::Devices::Usb::UsbInterruptOutPipe* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptOutPipe", L"OutputStream"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbInterruptOutPipe", L"OutputStream"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutputStream());
         }
         catch (...)
@@ -4466,14 +4466,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbSetupPacket_get_Value(py::wrapper::Windows::Devices::Usb::UsbSetupPacket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbSetupPacket", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbSetupPacket", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -4485,12 +4485,6 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbSetupPacket_put_Value(py::wrapper::Windows::Devices::Usb::UsbSetupPacket* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbSetupPacket", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4499,6 +4493,12 @@ namespace py::cpp::Windows::Devices::Usb
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbSetupPacket", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Value(param0);
@@ -4513,14 +4513,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbSetupPacket_get_RequestType(py::wrapper::Windows::Devices::Usb::UsbSetupPacket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbSetupPacket", L"RequestType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbSetupPacket", L"RequestType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestType());
         }
         catch (...)
@@ -4532,12 +4532,6 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbSetupPacket_put_RequestType(py::wrapper::Windows::Devices::Usb::UsbSetupPacket* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbSetupPacket", L"RequestType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4546,6 +4540,12 @@ namespace py::cpp::Windows::Devices::Usb
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbSetupPacket", L"RequestType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbControlRequestType>(arg);
 
             self->obj.RequestType(param0);
@@ -4560,14 +4560,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbSetupPacket_get_Request(py::wrapper::Windows::Devices::Usb::UsbSetupPacket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbSetupPacket", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbSetupPacket", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -4579,12 +4579,6 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbSetupPacket_put_Request(py::wrapper::Windows::Devices::Usb::UsbSetupPacket* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbSetupPacket", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4593,6 +4587,12 @@ namespace py::cpp::Windows::Devices::Usb
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbSetupPacket", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint8_t>(arg);
 
             self->obj.Request(param0);
@@ -4607,14 +4607,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbSetupPacket_get_Length(py::wrapper::Windows::Devices::Usb::UsbSetupPacket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbSetupPacket", L"Length"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbSetupPacket", L"Length"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Length());
         }
         catch (...)
@@ -4626,12 +4626,6 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbSetupPacket_put_Length(py::wrapper::Windows::Devices::Usb::UsbSetupPacket* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbSetupPacket", L"Length"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4640,6 +4634,12 @@ namespace py::cpp::Windows::Devices::Usb
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbSetupPacket", L"Length"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Length(param0);
@@ -4654,14 +4654,14 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbSetupPacket_get_Index(py::wrapper::Windows::Devices::Usb::UsbSetupPacket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbSetupPacket", L"Index"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbSetupPacket", L"Index"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Index());
         }
         catch (...)
@@ -4673,12 +4673,6 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbSetupPacket_put_Index(py::wrapper::Windows::Devices::Usb::UsbSetupPacket* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbSetupPacket", L"Index"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4687,6 +4681,12 @@ namespace py::cpp::Windows::Devices::Usb
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Usb.UsbSetupPacket", L"Index"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Index(param0);

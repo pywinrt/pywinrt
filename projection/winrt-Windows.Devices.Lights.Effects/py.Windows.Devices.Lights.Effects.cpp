@@ -49,14 +49,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayBitmapEffect_get_UpdateInterval(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBitmapEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapEffect", L"UpdateInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapEffect", L"UpdateInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UpdateInterval());
         }
         catch (...)
@@ -68,12 +68,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBitmapEffect_put_UpdateInterval(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBitmapEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapEffect", L"UpdateInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -82,6 +76,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapEffect", L"UpdateInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.UpdateInterval(param0);
@@ -96,14 +96,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayBitmapEffect_get_StartDelay(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBitmapEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapEffect", L"StartDelay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapEffect", L"StartDelay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartDelay());
         }
         catch (...)
@@ -115,12 +115,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBitmapEffect_put_StartDelay(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBitmapEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapEffect", L"StartDelay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -129,6 +123,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapEffect", L"StartDelay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.StartDelay(param0);
@@ -143,14 +143,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayBitmapEffect_get_Duration(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBitmapEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapEffect", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapEffect", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -162,12 +162,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBitmapEffect_put_Duration(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBitmapEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapEffect", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -176,6 +170,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapEffect", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.Duration(param0);
@@ -190,14 +190,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayBitmapEffect_get_SuggestedBitmapSize(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBitmapEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapEffect", L"SuggestedBitmapSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapEffect", L"SuggestedBitmapSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SuggestedBitmapSize());
         }
         catch (...)
@@ -209,14 +209,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayBitmapEffect_get_ZIndex(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBitmapEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapEffect", L"ZIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapEffect", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ZIndex());
         }
         catch (...)
@@ -228,12 +228,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBitmapEffect_put_ZIndex(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBitmapEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapEffect", L"ZIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -242,6 +236,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapEffect", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.ZIndex(param0);
@@ -256,14 +256,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayBitmapEffect_add_BitmapRequested(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBitmapEffect* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapEffect", L"BitmapRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapEffect", L"BitmapRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Lights::Effects::LampArrayBitmapEffect, winrt::Windows::Devices::Lights::Effects::LampArrayBitmapRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.BitmapRequested(param0));
@@ -277,14 +277,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayBitmapEffect_remove_BitmapRequested(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBitmapEffect* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapEffect", L"BitmapRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapEffect", L"BitmapRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.BitmapRequested(param0);
@@ -379,14 +379,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapRequestedEventArgs", L"UpdateBitmap", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapRequestedEventArgs", L"UpdateBitmap", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
                 self->obj.UpdateBitmap(param0);
@@ -407,14 +407,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayBitmapRequestedEventArgs_get_SinceStarted(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBitmapRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapRequestedEventArgs", L"SinceStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBitmapRequestedEventArgs", L"SinceStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SinceStarted());
         }
         catch (...)
@@ -522,14 +522,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayBlinkEffect_get_SustainDuration(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"SustainDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"SustainDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SustainDuration());
         }
         catch (...)
@@ -541,12 +541,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBlinkEffect_put_SustainDuration(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"SustainDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -555,6 +549,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"SustainDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.SustainDuration(param0);
@@ -569,14 +569,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayBlinkEffect_get_StartDelay(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"StartDelay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"StartDelay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartDelay());
         }
         catch (...)
@@ -588,12 +588,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBlinkEffect_put_StartDelay(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"StartDelay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -602,6 +596,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"StartDelay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.StartDelay(param0);
@@ -616,14 +616,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayBlinkEffect_get_RepetitionMode(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"RepetitionMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"RepetitionMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RepetitionMode());
         }
         catch (...)
@@ -635,12 +635,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBlinkEffect_put_RepetitionMode(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"RepetitionMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -649,6 +643,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"RepetitionMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Lights::Effects::LampArrayRepetitionMode>(arg);
 
             self->obj.RepetitionMode(param0);
@@ -663,14 +663,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayBlinkEffect_get_RepetitionDelay(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"RepetitionDelay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"RepetitionDelay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RepetitionDelay());
         }
         catch (...)
@@ -682,12 +682,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBlinkEffect_put_RepetitionDelay(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"RepetitionDelay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -696,6 +690,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"RepetitionDelay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.RepetitionDelay(param0);
@@ -710,14 +710,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayBlinkEffect_get_Occurrences(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"Occurrences"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"Occurrences"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Occurrences());
         }
         catch (...)
@@ -729,12 +729,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBlinkEffect_put_Occurrences(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"Occurrences"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -743,6 +737,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"Occurrences"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Occurrences(param0);
@@ -757,14 +757,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayBlinkEffect_get_DecayDuration(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"DecayDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"DecayDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DecayDuration());
         }
         catch (...)
@@ -776,12 +776,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBlinkEffect_put_DecayDuration(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"DecayDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -790,6 +784,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"DecayDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.DecayDuration(param0);
@@ -804,14 +804,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayBlinkEffect_get_Color(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Color());
         }
         catch (...)
@@ -823,12 +823,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBlinkEffect_put_Color(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -837,6 +831,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.Color(param0);
@@ -851,14 +851,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayBlinkEffect_get_AttackDuration(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"AttackDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"AttackDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttackDuration());
         }
         catch (...)
@@ -870,12 +870,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBlinkEffect_put_AttackDuration(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"AttackDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -884,6 +878,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"AttackDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.AttackDuration(param0);
@@ -898,14 +898,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayBlinkEffect_get_ZIndex(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"ZIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ZIndex());
         }
         catch (...)
@@ -917,12 +917,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBlinkEffect_put_ZIndex(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"ZIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -931,6 +925,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayBlinkEffect", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.ZIndex(param0);
@@ -1048,14 +1048,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayColorRampEffect_get_StartDelay(py::wrapper::Windows::Devices::Lights::Effects::LampArrayColorRampEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayColorRampEffect", L"StartDelay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayColorRampEffect", L"StartDelay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartDelay());
         }
         catch (...)
@@ -1067,12 +1067,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayColorRampEffect_put_StartDelay(py::wrapper::Windows::Devices::Lights::Effects::LampArrayColorRampEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayColorRampEffect", L"StartDelay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1081,6 +1075,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayColorRampEffect", L"StartDelay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.StartDelay(param0);
@@ -1095,14 +1095,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayColorRampEffect_get_RampDuration(py::wrapper::Windows::Devices::Lights::Effects::LampArrayColorRampEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayColorRampEffect", L"RampDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayColorRampEffect", L"RampDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RampDuration());
         }
         catch (...)
@@ -1114,12 +1114,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayColorRampEffect_put_RampDuration(py::wrapper::Windows::Devices::Lights::Effects::LampArrayColorRampEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayColorRampEffect", L"RampDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1128,6 +1122,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayColorRampEffect", L"RampDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.RampDuration(param0);
@@ -1142,14 +1142,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayColorRampEffect_get_CompletionBehavior(py::wrapper::Windows::Devices::Lights::Effects::LampArrayColorRampEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayColorRampEffect", L"CompletionBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayColorRampEffect", L"CompletionBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CompletionBehavior());
         }
         catch (...)
@@ -1161,12 +1161,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayColorRampEffect_put_CompletionBehavior(py::wrapper::Windows::Devices::Lights::Effects::LampArrayColorRampEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayColorRampEffect", L"CompletionBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1175,6 +1169,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayColorRampEffect", L"CompletionBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Lights::Effects::LampArrayEffectCompletionBehavior>(arg);
 
             self->obj.CompletionBehavior(param0);
@@ -1189,14 +1189,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayColorRampEffect_get_Color(py::wrapper::Windows::Devices::Lights::Effects::LampArrayColorRampEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayColorRampEffect", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayColorRampEffect", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Color());
         }
         catch (...)
@@ -1208,12 +1208,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayColorRampEffect_put_Color(py::wrapper::Windows::Devices::Lights::Effects::LampArrayColorRampEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayColorRampEffect", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1222,6 +1216,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayColorRampEffect", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.Color(param0);
@@ -1236,14 +1236,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayColorRampEffect_get_ZIndex(py::wrapper::Windows::Devices::Lights::Effects::LampArrayColorRampEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayColorRampEffect", L"ZIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayColorRampEffect", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ZIndex());
         }
         catch (...)
@@ -1255,12 +1255,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayColorRampEffect_put_ZIndex(py::wrapper::Windows::Devices::Lights::Effects::LampArrayColorRampEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayColorRampEffect", L"ZIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1269,6 +1263,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayColorRampEffect", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.ZIndex(param0);
@@ -1382,14 +1382,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayCustomEffect_get_UpdateInterval(py::wrapper::Windows::Devices::Lights::Effects::LampArrayCustomEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayCustomEffect", L"UpdateInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayCustomEffect", L"UpdateInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UpdateInterval());
         }
         catch (...)
@@ -1401,12 +1401,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayCustomEffect_put_UpdateInterval(py::wrapper::Windows::Devices::Lights::Effects::LampArrayCustomEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayCustomEffect", L"UpdateInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1415,6 +1409,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayCustomEffect", L"UpdateInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.UpdateInterval(param0);
@@ -1429,14 +1429,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayCustomEffect_get_Duration(py::wrapper::Windows::Devices::Lights::Effects::LampArrayCustomEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayCustomEffect", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayCustomEffect", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -1448,12 +1448,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayCustomEffect_put_Duration(py::wrapper::Windows::Devices::Lights::Effects::LampArrayCustomEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayCustomEffect", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1462,6 +1456,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayCustomEffect", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.Duration(param0);
@@ -1476,14 +1476,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayCustomEffect_get_ZIndex(py::wrapper::Windows::Devices::Lights::Effects::LampArrayCustomEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayCustomEffect", L"ZIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayCustomEffect", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ZIndex());
         }
         catch (...)
@@ -1495,12 +1495,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayCustomEffect_put_ZIndex(py::wrapper::Windows::Devices::Lights::Effects::LampArrayCustomEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayCustomEffect", L"ZIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1509,6 +1503,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayCustomEffect", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.ZIndex(param0);
@@ -1523,14 +1523,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayCustomEffect_add_UpdateRequested(py::wrapper::Windows::Devices::Lights::Effects::LampArrayCustomEffect* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Lights.Effects.LampArrayCustomEffect", L"UpdateRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Lights.Effects.LampArrayCustomEffect", L"UpdateRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Lights::Effects::LampArrayCustomEffect, winrt::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.UpdateRequested(param0));
@@ -1544,14 +1544,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayCustomEffect_remove_UpdateRequested(py::wrapper::Windows::Devices::Lights::Effects::LampArrayCustomEffect* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Lights.Effects.LampArrayCustomEffect", L"UpdateRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Lights.Effects.LampArrayCustomEffect", L"UpdateRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.UpdateRequested(param0);
@@ -1666,14 +1666,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect>(args, 0);
 
                 self->obj.Append(param0);
@@ -1698,14 +1698,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -1727,14 +1727,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -1758,14 +1758,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect, true>>(args, 1);
 
@@ -1790,14 +1790,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect>(args, 0);
                 uint32_t param1 {  };
 
@@ -1834,14 +1834,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"OverrideZIndex", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"OverrideZIndex", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 self->obj.OverrideZIndex(param0);
@@ -1866,14 +1866,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"Pause", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"Pause", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Pause();
                 Py_RETURN_NONE;
             }
@@ -1896,14 +1896,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"PauseAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"PauseAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist>>(args, 0);
 
                 winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist::PauseAll(param0);
@@ -1928,14 +1928,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -1958,14 +1958,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"StartAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"StartAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist>>(args, 0);
 
                 winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist::StartAll(param0);
@@ -1990,14 +1990,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -2020,14 +2020,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"StopAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"StopAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist>>(args, 0);
 
                 winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist::StopAll(param0);
@@ -2048,14 +2048,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayEffectPlaylist_get_RepetitionMode(py::wrapper::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"RepetitionMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"RepetitionMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RepetitionMode());
         }
         catch (...)
@@ -2067,12 +2067,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayEffectPlaylist_put_RepetitionMode(py::wrapper::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"RepetitionMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2081,6 +2075,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"RepetitionMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Lights::Effects::LampArrayRepetitionMode>(arg);
 
             self->obj.RepetitionMode(param0);
@@ -2095,14 +2095,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayEffectPlaylist_get_Occurrences(py::wrapper::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"Occurrences"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"Occurrences"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Occurrences());
         }
         catch (...)
@@ -2114,12 +2114,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayEffectPlaylist_put_Occurrences(py::wrapper::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"Occurrences"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2128,6 +2122,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"Occurrences"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Occurrences(param0);
@@ -2142,14 +2142,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayEffectPlaylist_get_EffectStartMode(py::wrapper::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"EffectStartMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"EffectStartMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EffectStartMode());
         }
         catch (...)
@@ -2161,12 +2161,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayEffectPlaylist_put_EffectStartMode(py::wrapper::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"EffectStartMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2175,6 +2169,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"EffectStartMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Lights::Effects::LampArrayEffectStartMode>(arg);
 
             self->obj.EffectStartMode(param0);
@@ -2189,14 +2189,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayEffectPlaylist_get_Size(py::wrapper::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayEffectPlaylist", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -2456,14 +2456,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArraySolidEffect_get_ZIndex(py::wrapper::Windows::Devices::Lights::Effects::LampArraySolidEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArraySolidEffect", L"ZIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArraySolidEffect", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ZIndex());
         }
         catch (...)
@@ -2475,12 +2475,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArraySolidEffect_put_ZIndex(py::wrapper::Windows::Devices::Lights::Effects::LampArraySolidEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArraySolidEffect", L"ZIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2489,6 +2483,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArraySolidEffect", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.ZIndex(param0);
@@ -2503,14 +2503,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArraySolidEffect_get_StartDelay(py::wrapper::Windows::Devices::Lights::Effects::LampArraySolidEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArraySolidEffect", L"StartDelay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArraySolidEffect", L"StartDelay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartDelay());
         }
         catch (...)
@@ -2522,12 +2522,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArraySolidEffect_put_StartDelay(py::wrapper::Windows::Devices::Lights::Effects::LampArraySolidEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArraySolidEffect", L"StartDelay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2536,6 +2530,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArraySolidEffect", L"StartDelay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.StartDelay(param0);
@@ -2550,14 +2550,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArraySolidEffect_get_Duration(py::wrapper::Windows::Devices::Lights::Effects::LampArraySolidEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArraySolidEffect", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArraySolidEffect", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -2569,12 +2569,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArraySolidEffect_put_Duration(py::wrapper::Windows::Devices::Lights::Effects::LampArraySolidEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArraySolidEffect", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2583,6 +2577,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArraySolidEffect", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.Duration(param0);
@@ -2597,14 +2597,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArraySolidEffect_get_CompletionBehavior(py::wrapper::Windows::Devices::Lights::Effects::LampArraySolidEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArraySolidEffect", L"CompletionBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArraySolidEffect", L"CompletionBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CompletionBehavior());
         }
         catch (...)
@@ -2616,12 +2616,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArraySolidEffect_put_CompletionBehavior(py::wrapper::Windows::Devices::Lights::Effects::LampArraySolidEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArraySolidEffect", L"CompletionBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2630,6 +2624,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArraySolidEffect", L"CompletionBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Lights::Effects::LampArrayEffectCompletionBehavior>(arg);
 
             self->obj.CompletionBehavior(param0);
@@ -2644,14 +2644,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArraySolidEffect_get_Color(py::wrapper::Windows::Devices::Lights::Effects::LampArraySolidEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArraySolidEffect", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArraySolidEffect", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Color());
         }
         catch (...)
@@ -2663,12 +2663,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArraySolidEffect_put_Color(py::wrapper::Windows::Devices::Lights::Effects::LampArraySolidEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArraySolidEffect", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2677,6 +2671,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArraySolidEffect", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.Color(param0);
@@ -2769,14 +2769,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs", L"SetColor", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs", L"SetColor", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Color>(args, 0);
 
                 self->obj.SetColor(param0);
@@ -2801,14 +2801,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs", L"SetColorForIndex", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs", L"SetColorForIndex", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
@@ -2834,14 +2834,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs", L"SetColorsForIndices", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs", L"SetColorsForIndices", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Color, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
 
@@ -2867,14 +2867,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs", L"SetSingleColorForIndices", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs", L"SetSingleColorForIndices", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Color>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
 
@@ -2896,14 +2896,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayUpdateRequestedEventArgs_get_SinceStarted(py::wrapper::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs", L"SinceStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs", L"SinceStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SinceStarted());
         }
         catch (...)
@@ -2989,14 +2989,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* ILampArrayEffect_get_ZIndex(py::wrapper::Windows::Devices::Lights::Effects::ILampArrayEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.ILampArrayEffect", L"ZIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.ILampArrayEffect", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ZIndex());
         }
         catch (...)
@@ -3008,12 +3008,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int ILampArrayEffect_put_ZIndex(py::wrapper::Windows::Devices::Lights::Effects::ILampArrayEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.ILampArrayEffect", L"ZIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3022,6 +3016,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.Effects.ILampArrayEffect", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.ZIndex(param0);

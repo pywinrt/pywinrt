@@ -16,14 +16,14 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyObject* GameBar_get_IsInputRedirected(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameBar", L"IsInputRedirected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameBar", L"IsInputRedirected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Gaming::UI::GameBar::IsInputRedirected());
         }
         catch (...)
@@ -35,14 +35,14 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyObject* GameBar_get_Visible(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameBar", L"Visible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameBar", L"Visible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Gaming::UI::GameBar::Visible());
         }
         catch (...)
@@ -54,14 +54,14 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyObject* GameBar_add_IsInputRedirectedChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.UI.GameBar", L"IsInputRedirectedChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.UI.GameBar", L"IsInputRedirectedChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Windows::Gaming::UI::GameBar::IsInputRedirectedChanged(param0));
@@ -75,14 +75,14 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyObject* GameBar_remove_IsInputRedirectedChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.UI.GameBar", L"IsInputRedirectedChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.UI.GameBar", L"IsInputRedirectedChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Gaming::UI::GameBar::IsInputRedirectedChanged(param0);
@@ -97,14 +97,14 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyObject* GameBar_add_VisibilityChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.UI.GameBar", L"VisibilityChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.UI.GameBar", L"VisibilityChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Windows::Gaming::UI::GameBar::VisibilityChanged(param0));
@@ -118,14 +118,14 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyObject* GameBar_remove_VisibilityChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.UI.GameBar", L"VisibilityChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.UI.GameBar", L"VisibilityChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Gaming::UI::GameBar::VisibilityChanged(param0);
@@ -213,14 +213,14 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyObject* GameChatMessageReceivedEventArgs_get_AppDisplayName(py::wrapper::Windows::Gaming::UI::GameChatMessageReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameChatMessageReceivedEventArgs", L"AppDisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameChatMessageReceivedEventArgs", L"AppDisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppDisplayName());
         }
         catch (...)
@@ -232,14 +232,14 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyObject* GameChatMessageReceivedEventArgs_get_AppId(py::wrapper::Windows::Gaming::UI::GameChatMessageReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameChatMessageReceivedEventArgs", L"AppId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameChatMessageReceivedEventArgs", L"AppId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppId());
         }
         catch (...)
@@ -251,14 +251,14 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyObject* GameChatMessageReceivedEventArgs_get_Message(py::wrapper::Windows::Gaming::UI::GameChatMessageReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameChatMessageReceivedEventArgs", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameChatMessageReceivedEventArgs", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Message());
         }
         catch (...)
@@ -270,14 +270,14 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyObject* GameChatMessageReceivedEventArgs_get_Origin(py::wrapper::Windows::Gaming::UI::GameChatMessageReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameChatMessageReceivedEventArgs", L"Origin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameChatMessageReceivedEventArgs", L"Origin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Origin());
         }
         catch (...)
@@ -289,14 +289,14 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyObject* GameChatMessageReceivedEventArgs_get_SenderName(py::wrapper::Windows::Gaming::UI::GameChatMessageReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameChatMessageReceivedEventArgs", L"SenderName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameChatMessageReceivedEventArgs", L"SenderName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SenderName());
         }
         catch (...)
@@ -386,14 +386,14 @@ namespace py::cpp::Windows::Gaming::UI
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.UI.GameChatOverlay", L"AddMessage", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.UI.GameChatOverlay", L"AddMessage", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Gaming::UI::GameChatMessageOrigin>(args, 2);
@@ -420,14 +420,14 @@ namespace py::cpp::Windows::Gaming::UI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.UI.GameChatOverlay", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.UI.GameChatOverlay", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Gaming::UI::GameChatOverlay::GetDefault());
             }
             catch (...)
@@ -445,14 +445,14 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyObject* GameChatOverlay_get_DesiredPosition(py::wrapper::Windows::Gaming::UI::GameChatOverlay* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameChatOverlay", L"DesiredPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameChatOverlay", L"DesiredPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DesiredPosition());
         }
         catch (...)
@@ -464,12 +464,6 @@ namespace py::cpp::Windows::Gaming::UI
 
     static int GameChatOverlay_put_DesiredPosition(py::wrapper::Windows::Gaming::UI::GameChatOverlay* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameChatOverlay", L"DesiredPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -478,6 +472,12 @@ namespace py::cpp::Windows::Gaming::UI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameChatOverlay", L"DesiredPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Gaming::UI::GameChatOverlayPosition>(arg);
 
             self->obj.DesiredPosition(param0);
@@ -615,14 +615,14 @@ namespace py::cpp::Windows::Gaming::UI
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.UI.GameChatOverlayMessageSource", L"SetDelayBeforeClosingAfterMessageReceived", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.UI.GameChatOverlayMessageSource", L"SetDelayBeforeClosingAfterMessageReceived", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
                 self->obj.SetDelayBeforeClosingAfterMessageReceived(param0);
@@ -643,14 +643,14 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyObject* GameChatOverlayMessageSource_add_MessageReceived(py::wrapper::Windows::Gaming::UI::GameChatOverlayMessageSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.UI.GameChatOverlayMessageSource", L"MessageReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.UI.GameChatOverlayMessageSource", L"MessageReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::UI::GameChatOverlayMessageSource, winrt::Windows::Gaming::UI::GameChatMessageReceivedEventArgs>>(arg);
 
             return py::convert(self->obj.MessageReceived(param0));
@@ -664,14 +664,14 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyObject* GameChatOverlayMessageSource_remove_MessageReceived(py::wrapper::Windows::Gaming::UI::GameChatOverlayMessageSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.UI.GameChatOverlayMessageSource", L"MessageReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.UI.GameChatOverlayMessageSource", L"MessageReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.MessageReceived(param0);
@@ -762,14 +762,14 @@ namespace py::cpp::Windows::Gaming::UI
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.UI.GameUIProviderActivatedEventArgs", L"ReportCompleted", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.UI.GameUIProviderActivatedEventArgs", L"ReportCompleted", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 0);
 
                 self->obj.ReportCompleted(param0);
@@ -790,14 +790,14 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyObject* GameUIProviderActivatedEventArgs_get_Kind(py::wrapper::Windows::Gaming::UI::GameUIProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameUIProviderActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameUIProviderActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -809,14 +809,14 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyObject* GameUIProviderActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::Gaming::UI::GameUIProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameUIProviderActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameUIProviderActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -828,14 +828,14 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyObject* GameUIProviderActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::Gaming::UI::GameUIProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameUIProviderActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameUIProviderActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -847,14 +847,14 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyObject* GameUIProviderActivatedEventArgs_get_GameUIArgs(py::wrapper::Windows::Gaming::UI::GameUIProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameUIProviderActivatedEventArgs", L"GameUIArgs"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.UI.GameUIProviderActivatedEventArgs", L"GameUIArgs"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GameUIArgs());
         }
         catch (...)

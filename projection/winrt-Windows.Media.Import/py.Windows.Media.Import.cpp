@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportDeleteImportedItemsFromSourceResult_get_DeletedItems(py::wrapper::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"DeletedItems"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"DeletedItems"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeletedItems());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportDeleteImportedItemsFromSourceResult_get_HasSucceeded(py::wrapper::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"HasSucceeded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"HasSucceeded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasSucceeded());
         }
         catch (...)
@@ -62,14 +62,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportDeleteImportedItemsFromSourceResult_get_PhotosCount(py::wrapper::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"PhotosCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"PhotosCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhotosCount());
         }
         catch (...)
@@ -81,14 +81,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportDeleteImportedItemsFromSourceResult_get_PhotosSizeInBytes(py::wrapper::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"PhotosSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"PhotosSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhotosSizeInBytes());
         }
         catch (...)
@@ -100,14 +100,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportDeleteImportedItemsFromSourceResult_get_Session(py::wrapper::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"Session"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"Session"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Session());
         }
         catch (...)
@@ -119,14 +119,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportDeleteImportedItemsFromSourceResult_get_SiblingsCount(py::wrapper::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"SiblingsCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"SiblingsCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SiblingsCount());
         }
         catch (...)
@@ -138,14 +138,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportDeleteImportedItemsFromSourceResult_get_SiblingsSizeInBytes(py::wrapper::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"SiblingsSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"SiblingsSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SiblingsSizeInBytes());
         }
         catch (...)
@@ -157,14 +157,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportDeleteImportedItemsFromSourceResult_get_SidecarsCount(py::wrapper::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"SidecarsCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"SidecarsCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SidecarsCount());
         }
         catch (...)
@@ -176,14 +176,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportDeleteImportedItemsFromSourceResult_get_SidecarsSizeInBytes(py::wrapper::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"SidecarsSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"SidecarsSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SidecarsSizeInBytes());
         }
         catch (...)
@@ -195,14 +195,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportDeleteImportedItemsFromSourceResult_get_TotalCount(py::wrapper::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"TotalCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"TotalCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TotalCount());
         }
         catch (...)
@@ -214,14 +214,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportDeleteImportedItemsFromSourceResult_get_TotalSizeInBytes(py::wrapper::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"TotalSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"TotalSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TotalSizeInBytes());
         }
         catch (...)
@@ -233,14 +233,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportDeleteImportedItemsFromSourceResult_get_VideosCount(py::wrapper::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"VideosCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"VideosCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideosCount());
         }
         catch (...)
@@ -252,14 +252,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportDeleteImportedItemsFromSourceResult_get_VideosSizeInBytes(py::wrapper::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"VideosSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult", L"VideosSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideosSizeInBytes());
         }
         catch (...)
@@ -357,14 +357,14 @@ namespace py::cpp::Windows::Media::Import
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"AddItemsInDateRangeToSelection", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"AddItemsInDateRangeToSelection", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
@@ -390,14 +390,14 @@ namespace py::cpp::Windows::Media::Import
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"ImportItemsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"ImportItemsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ImportItemsAsync());
             }
             catch (...)
@@ -419,14 +419,14 @@ namespace py::cpp::Windows::Media::Import
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectAll", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectAll", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.SelectAll();
                 Py_RETURN_NONE;
             }
@@ -449,14 +449,14 @@ namespace py::cpp::Windows::Media::Import
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectNewAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectNewAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SelectNewAsync());
             }
             catch (...)
@@ -478,14 +478,14 @@ namespace py::cpp::Windows::Media::Import
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectNone", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectNone", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.SelectNone();
                 Py_RETURN_NONE;
             }
@@ -508,14 +508,14 @@ namespace py::cpp::Windows::Media::Import
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SetImportMode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SetImportMode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Import::PhotoImportImportMode>(args, 0);
 
                 self->obj.SetImportMode(param0);
@@ -536,14 +536,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_FoundItems(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"FoundItems"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"FoundItems"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FoundItems());
         }
         catch (...)
@@ -555,14 +555,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_HasSucceeded(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"HasSucceeded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"HasSucceeded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasSucceeded());
         }
         catch (...)
@@ -574,14 +574,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_ImportMode(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"ImportMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"ImportMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ImportMode());
         }
         catch (...)
@@ -593,14 +593,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_PhotosCount(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"PhotosCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"PhotosCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhotosCount());
         }
         catch (...)
@@ -612,14 +612,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_PhotosSizeInBytes(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"PhotosSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"PhotosSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhotosSizeInBytes());
         }
         catch (...)
@@ -631,14 +631,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_SelectedPhotosCount(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectedPhotosCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectedPhotosCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedPhotosCount());
         }
         catch (...)
@@ -650,14 +650,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_SelectedPhotosSizeInBytes(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectedPhotosSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectedPhotosSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedPhotosSizeInBytes());
         }
         catch (...)
@@ -669,14 +669,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_SelectedSiblingsCount(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectedSiblingsCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectedSiblingsCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedSiblingsCount());
         }
         catch (...)
@@ -688,14 +688,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_SelectedSiblingsSizeInBytes(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectedSiblingsSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectedSiblingsSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedSiblingsSizeInBytes());
         }
         catch (...)
@@ -707,14 +707,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_SelectedSidecarsCount(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectedSidecarsCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectedSidecarsCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedSidecarsCount());
         }
         catch (...)
@@ -726,14 +726,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_SelectedSidecarsSizeInBytes(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectedSidecarsSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectedSidecarsSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedSidecarsSizeInBytes());
         }
         catch (...)
@@ -745,14 +745,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_SelectedTotalCount(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectedTotalCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectedTotalCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedTotalCount());
         }
         catch (...)
@@ -764,14 +764,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_SelectedTotalSizeInBytes(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectedTotalSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectedTotalSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedTotalSizeInBytes());
         }
         catch (...)
@@ -783,14 +783,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_SelectedVideosCount(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectedVideosCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectedVideosCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedVideosCount());
         }
         catch (...)
@@ -802,14 +802,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_SelectedVideosSizeInBytes(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectedVideosSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectedVideosSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedVideosSizeInBytes());
         }
         catch (...)
@@ -821,14 +821,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_Session(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"Session"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"Session"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Session());
         }
         catch (...)
@@ -840,14 +840,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_SiblingsCount(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SiblingsCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SiblingsCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SiblingsCount());
         }
         catch (...)
@@ -859,14 +859,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_SiblingsSizeInBytes(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SiblingsSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SiblingsSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SiblingsSizeInBytes());
         }
         catch (...)
@@ -878,14 +878,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_SidecarsCount(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SidecarsCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SidecarsCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SidecarsCount());
         }
         catch (...)
@@ -897,14 +897,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_SidecarsSizeInBytes(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SidecarsSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SidecarsSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SidecarsSizeInBytes());
         }
         catch (...)
@@ -916,14 +916,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_TotalCount(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"TotalCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"TotalCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TotalCount());
         }
         catch (...)
@@ -935,14 +935,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_TotalSizeInBytes(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"TotalSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"TotalSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TotalSizeInBytes());
         }
         catch (...)
@@ -954,14 +954,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_VideosCount(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"VideosCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"VideosCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideosCount());
         }
         catch (...)
@@ -973,14 +973,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_get_VideosSizeInBytes(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"VideosSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"VideosSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideosSizeInBytes());
         }
         catch (...)
@@ -992,14 +992,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_add_ItemImported(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"ItemImported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"ItemImported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Import::PhotoImportFindItemsResult, winrt::Windows::Media::Import::PhotoImportItemImportedEventArgs>>(arg);
 
             return py::convert(self->obj.ItemImported(param0));
@@ -1013,14 +1013,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_remove_ItemImported(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"ItemImported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"ItemImported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ItemImported(param0);
@@ -1035,14 +1035,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_add_SelectionChanged(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectionChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectionChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Import::PhotoImportFindItemsResult, winrt::Windows::Media::Import::PhotoImportSelectionChangedEventArgs>>(arg);
 
             return py::convert(self->obj.SelectionChanged(param0));
@@ -1056,14 +1056,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_remove_SelectionChanged(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectionChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Import.PhotoImportFindItemsResult", L"SelectionChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SelectionChanged(param0);
@@ -1185,14 +1185,14 @@ namespace py::cpp::Windows::Media::Import
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"DeleteImportedItemsFromSourceAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"DeleteImportedItemsFromSourceAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.DeleteImportedItemsFromSourceAsync());
             }
             catch (...)
@@ -1210,14 +1210,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportImportItemsResult_get_HasSucceeded(py::wrapper::Windows::Media::Import::PhotoImportImportItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"HasSucceeded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"HasSucceeded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasSucceeded());
         }
         catch (...)
@@ -1229,14 +1229,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportImportItemsResult_get_ImportedItems(py::wrapper::Windows::Media::Import::PhotoImportImportItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"ImportedItems"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"ImportedItems"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ImportedItems());
         }
         catch (...)
@@ -1248,14 +1248,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportImportItemsResult_get_PhotosCount(py::wrapper::Windows::Media::Import::PhotoImportImportItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"PhotosCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"PhotosCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhotosCount());
         }
         catch (...)
@@ -1267,14 +1267,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportImportItemsResult_get_PhotosSizeInBytes(py::wrapper::Windows::Media::Import::PhotoImportImportItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"PhotosSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"PhotosSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhotosSizeInBytes());
         }
         catch (...)
@@ -1286,14 +1286,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportImportItemsResult_get_Session(py::wrapper::Windows::Media::Import::PhotoImportImportItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"Session"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"Session"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Session());
         }
         catch (...)
@@ -1305,14 +1305,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportImportItemsResult_get_SiblingsCount(py::wrapper::Windows::Media::Import::PhotoImportImportItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"SiblingsCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"SiblingsCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SiblingsCount());
         }
         catch (...)
@@ -1324,14 +1324,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportImportItemsResult_get_SiblingsSizeInBytes(py::wrapper::Windows::Media::Import::PhotoImportImportItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"SiblingsSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"SiblingsSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SiblingsSizeInBytes());
         }
         catch (...)
@@ -1343,14 +1343,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportImportItemsResult_get_SidecarsCount(py::wrapper::Windows::Media::Import::PhotoImportImportItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"SidecarsCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"SidecarsCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SidecarsCount());
         }
         catch (...)
@@ -1362,14 +1362,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportImportItemsResult_get_SidecarsSizeInBytes(py::wrapper::Windows::Media::Import::PhotoImportImportItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"SidecarsSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"SidecarsSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SidecarsSizeInBytes());
         }
         catch (...)
@@ -1381,14 +1381,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportImportItemsResult_get_TotalCount(py::wrapper::Windows::Media::Import::PhotoImportImportItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"TotalCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"TotalCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TotalCount());
         }
         catch (...)
@@ -1400,14 +1400,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportImportItemsResult_get_TotalSizeInBytes(py::wrapper::Windows::Media::Import::PhotoImportImportItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"TotalSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"TotalSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TotalSizeInBytes());
         }
         catch (...)
@@ -1419,14 +1419,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportImportItemsResult_get_VideosCount(py::wrapper::Windows::Media::Import::PhotoImportImportItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"VideosCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"VideosCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideosCount());
         }
         catch (...)
@@ -1438,14 +1438,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportImportItemsResult_get_VideosSizeInBytes(py::wrapper::Windows::Media::Import::PhotoImportImportItemsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"VideosSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportImportItemsResult", L"VideosSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideosSizeInBytes());
         }
         catch (...)
@@ -1540,14 +1540,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportItem_get_IsSelected(py::wrapper::Windows::Media::Import::PhotoImportItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"IsSelected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"IsSelected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSelected());
         }
         catch (...)
@@ -1559,12 +1559,6 @@ namespace py::cpp::Windows::Media::Import
 
     static int PhotoImportItem_put_IsSelected(py::wrapper::Windows::Media::Import::PhotoImportItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"IsSelected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1573,6 +1567,12 @@ namespace py::cpp::Windows::Media::Import
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"IsSelected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsSelected(param0);
@@ -1587,14 +1587,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportItem_get_ContentType(py::wrapper::Windows::Media::Import::PhotoImportItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"ContentType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"ContentType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentType());
         }
         catch (...)
@@ -1606,14 +1606,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportItem_get_Date(py::wrapper::Windows::Media::Import::PhotoImportItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"Date"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"Date"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Date());
         }
         catch (...)
@@ -1625,14 +1625,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportItem_get_DeletedFileNames(py::wrapper::Windows::Media::Import::PhotoImportItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"DeletedFileNames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"DeletedFileNames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeletedFileNames());
         }
         catch (...)
@@ -1644,14 +1644,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportItem_get_ImportedFileNames(py::wrapper::Windows::Media::Import::PhotoImportItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"ImportedFileNames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"ImportedFileNames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ImportedFileNames());
         }
         catch (...)
@@ -1663,14 +1663,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportItem_get_ItemKey(py::wrapper::Windows::Media::Import::PhotoImportItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"ItemKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"ItemKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ItemKey());
         }
         catch (...)
@@ -1682,14 +1682,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportItem_get_Name(py::wrapper::Windows::Media::Import::PhotoImportItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -1701,14 +1701,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportItem_get_Sibling(py::wrapper::Windows::Media::Import::PhotoImportItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"Sibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"Sibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Sibling());
         }
         catch (...)
@@ -1720,14 +1720,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportItem_get_Sidecars(py::wrapper::Windows::Media::Import::PhotoImportItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"Sidecars"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"Sidecars"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Sidecars());
         }
         catch (...)
@@ -1739,14 +1739,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportItem_get_SizeInBytes(py::wrapper::Windows::Media::Import::PhotoImportItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"SizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"SizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SizeInBytes());
         }
         catch (...)
@@ -1758,14 +1758,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportItem_get_Thumbnail(py::wrapper::Windows::Media::Import::PhotoImportItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"Thumbnail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"Thumbnail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Thumbnail());
         }
         catch (...)
@@ -1777,14 +1777,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportItem_get_VideoSegments(py::wrapper::Windows::Media::Import::PhotoImportItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"VideoSegments"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"VideoSegments"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoSegments());
         }
         catch (...)
@@ -1796,14 +1796,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportItem_get_Path(py::wrapper::Windows::Media::Import::PhotoImportItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"Path"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItem", L"Path"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Path());
         }
         catch (...)
@@ -1897,14 +1897,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportItemImportedEventArgs_get_ImportedItem(py::wrapper::Windows::Media::Import::PhotoImportItemImportedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItemImportedEventArgs", L"ImportedItem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportItemImportedEventArgs", L"ImportedItem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ImportedItem());
         }
         catch (...)
@@ -1982,14 +1982,14 @@ namespace py::cpp::Windows::Media::Import
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportManager", L"FindAllSourcesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportManager", L"FindAllSourcesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::Import::PhotoImportManager::FindAllSourcesAsync());
             }
             catch (...)
@@ -2011,14 +2011,14 @@ namespace py::cpp::Windows::Media::Import
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportManager", L"GetPendingOperations", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportManager", L"GetPendingOperations", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::Import::PhotoImportManager::GetPendingOperations());
             }
             catch (...)
@@ -2040,14 +2040,14 @@ namespace py::cpp::Windows::Media::Import
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportManager", L"IsSupportedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportManager", L"IsSupportedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::Import::PhotoImportManager::IsSupportedAsync());
             }
             catch (...)
@@ -2135,14 +2135,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportOperation_get_ContinueDeletingImportedItemsFromSourceAsync(py::wrapper::Windows::Media::Import::PhotoImportOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportOperation", L"ContinueDeletingImportedItemsFromSourceAsync"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportOperation", L"ContinueDeletingImportedItemsFromSourceAsync"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContinueDeletingImportedItemsFromSourceAsync());
         }
         catch (...)
@@ -2154,14 +2154,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportOperation_get_ContinueFindingItemsAsync(py::wrapper::Windows::Media::Import::PhotoImportOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportOperation", L"ContinueFindingItemsAsync"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportOperation", L"ContinueFindingItemsAsync"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContinueFindingItemsAsync());
         }
         catch (...)
@@ -2173,14 +2173,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportOperation_get_ContinueImportingItemsAsync(py::wrapper::Windows::Media::Import::PhotoImportOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportOperation", L"ContinueImportingItemsAsync"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportOperation", L"ContinueImportingItemsAsync"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContinueImportingItemsAsync());
         }
         catch (...)
@@ -2192,14 +2192,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportOperation_get_Session(py::wrapper::Windows::Media::Import::PhotoImportOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportOperation", L"Session"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportOperation", L"Session"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Session());
         }
         catch (...)
@@ -2211,14 +2211,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportOperation_get_Stage(py::wrapper::Windows::Media::Import::PhotoImportOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportOperation", L"Stage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportOperation", L"Stage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Stage());
         }
         catch (...)
@@ -2304,14 +2304,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSelectionChangedEventArgs_get_IsSelectionEmpty(py::wrapper::Windows::Media::Import::PhotoImportSelectionChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSelectionChangedEventArgs", L"IsSelectionEmpty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSelectionChangedEventArgs", L"IsSelectionEmpty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSelectionEmpty());
         }
         catch (...)
@@ -2397,14 +2397,14 @@ namespace py::cpp::Windows::Media::Import
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportSession", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportSession", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -2427,14 +2427,14 @@ namespace py::cpp::Windows::Media::Import
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportSession", L"FindItemsAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportSession", L"FindItemsAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Import::PhotoImportContentTypeFilter>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Import::PhotoImportItemSelectionMode>(args, 1);
 
@@ -2455,14 +2455,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSession_get_SubfolderCreationMode(py::wrapper::Windows::Media::Import::PhotoImportSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"SubfolderCreationMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"SubfolderCreationMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SubfolderCreationMode());
         }
         catch (...)
@@ -2474,12 +2474,6 @@ namespace py::cpp::Windows::Media::Import
 
     static int PhotoImportSession_put_SubfolderCreationMode(py::wrapper::Windows::Media::Import::PhotoImportSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"SubfolderCreationMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2488,6 +2482,12 @@ namespace py::cpp::Windows::Media::Import
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"SubfolderCreationMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Import::PhotoImportSubfolderCreationMode>(arg);
 
             self->obj.SubfolderCreationMode(param0);
@@ -2502,14 +2502,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSession_get_DestinationFolder(py::wrapper::Windows::Media::Import::PhotoImportSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"DestinationFolder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"DestinationFolder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DestinationFolder());
         }
         catch (...)
@@ -2521,12 +2521,6 @@ namespace py::cpp::Windows::Media::Import
 
     static int PhotoImportSession_put_DestinationFolder(py::wrapper::Windows::Media::Import::PhotoImportSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"DestinationFolder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2535,6 +2529,12 @@ namespace py::cpp::Windows::Media::Import
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"DestinationFolder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(arg);
 
             self->obj.DestinationFolder(param0);
@@ -2549,14 +2549,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSession_get_DestinationFileNamePrefix(py::wrapper::Windows::Media::Import::PhotoImportSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"DestinationFileNamePrefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"DestinationFileNamePrefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DestinationFileNamePrefix());
         }
         catch (...)
@@ -2568,12 +2568,6 @@ namespace py::cpp::Windows::Media::Import
 
     static int PhotoImportSession_put_DestinationFileNamePrefix(py::wrapper::Windows::Media::Import::PhotoImportSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"DestinationFileNamePrefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2582,6 +2576,12 @@ namespace py::cpp::Windows::Media::Import
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"DestinationFileNamePrefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DestinationFileNamePrefix(param0);
@@ -2596,14 +2596,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSession_get_AppendSessionDateToDestinationFolder(py::wrapper::Windows::Media::Import::PhotoImportSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"AppendSessionDateToDestinationFolder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"AppendSessionDateToDestinationFolder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppendSessionDateToDestinationFolder());
         }
         catch (...)
@@ -2615,12 +2615,6 @@ namespace py::cpp::Windows::Media::Import
 
     static int PhotoImportSession_put_AppendSessionDateToDestinationFolder(py::wrapper::Windows::Media::Import::PhotoImportSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"AppendSessionDateToDestinationFolder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2629,6 +2623,12 @@ namespace py::cpp::Windows::Media::Import
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"AppendSessionDateToDestinationFolder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AppendSessionDateToDestinationFolder(param0);
@@ -2643,14 +2643,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSession_get_SessionId(py::wrapper::Windows::Media::Import::PhotoImportSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"SessionId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"SessionId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SessionId());
         }
         catch (...)
@@ -2662,14 +2662,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSession_get_Source(py::wrapper::Windows::Media::Import::PhotoImportSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -2681,14 +2681,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSession_get_SubfolderDateFormat(py::wrapper::Windows::Media::Import::PhotoImportSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"SubfolderDateFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"SubfolderDateFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SubfolderDateFormat());
         }
         catch (...)
@@ -2700,12 +2700,6 @@ namespace py::cpp::Windows::Media::Import
 
     static int PhotoImportSession_put_SubfolderDateFormat(py::wrapper::Windows::Media::Import::PhotoImportSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"SubfolderDateFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2714,6 +2708,12 @@ namespace py::cpp::Windows::Media::Import
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"SubfolderDateFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Import::PhotoImportSubfolderDateFormat>(arg);
 
             self->obj.SubfolderDateFormat(param0);
@@ -2728,14 +2728,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSession_get_RememberDeselectedItems(py::wrapper::Windows::Media::Import::PhotoImportSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"RememberDeselectedItems"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"RememberDeselectedItems"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RememberDeselectedItems());
         }
         catch (...)
@@ -2747,12 +2747,6 @@ namespace py::cpp::Windows::Media::Import
 
     static int PhotoImportSession_put_RememberDeselectedItems(py::wrapper::Windows::Media::Import::PhotoImportSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"RememberDeselectedItems"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2761,6 +2755,12 @@ namespace py::cpp::Windows::Media::Import
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSession", L"RememberDeselectedItems"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.RememberDeselectedItems(param0);
@@ -2875,14 +2875,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSidecar_get_Date(py::wrapper::Windows::Media::Import::PhotoImportSidecar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSidecar", L"Date"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSidecar", L"Date"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Date());
         }
         catch (...)
@@ -2894,14 +2894,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSidecar_get_Name(py::wrapper::Windows::Media::Import::PhotoImportSidecar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSidecar", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSidecar", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -2913,14 +2913,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSidecar_get_SizeInBytes(py::wrapper::Windows::Media::Import::PhotoImportSidecar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSidecar", L"SizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSidecar", L"SizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SizeInBytes());
         }
         catch (...)
@@ -3008,14 +3008,14 @@ namespace py::cpp::Windows::Media::Import
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportSource", L"CreateImportSession", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportSource", L"CreateImportSession", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateImportSession());
             }
             catch (...)
@@ -3037,14 +3037,14 @@ namespace py::cpp::Windows::Media::Import
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportSource", L"FromFolderAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportSource", L"FromFolderAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Import::PhotoImportSource::FromFolderAsync(param0));
@@ -3068,14 +3068,14 @@ namespace py::cpp::Windows::Media::Import
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportSource", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportSource", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Import::PhotoImportSource::FromIdAsync(param0));
@@ -3095,14 +3095,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSource_get_BatteryLevelPercent(py::wrapper::Windows::Media::Import::PhotoImportSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"BatteryLevelPercent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"BatteryLevelPercent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BatteryLevelPercent());
         }
         catch (...)
@@ -3114,14 +3114,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSource_get_ConnectionProtocol(py::wrapper::Windows::Media::Import::PhotoImportSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"ConnectionProtocol"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"ConnectionProtocol"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionProtocol());
         }
         catch (...)
@@ -3133,14 +3133,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSource_get_ConnectionTransport(py::wrapper::Windows::Media::Import::PhotoImportSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"ConnectionTransport"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"ConnectionTransport"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionTransport());
         }
         catch (...)
@@ -3152,14 +3152,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSource_get_DateTime(py::wrapper::Windows::Media::Import::PhotoImportSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"DateTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"DateTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DateTime());
         }
         catch (...)
@@ -3171,14 +3171,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSource_get_Description(py::wrapper::Windows::Media::Import::PhotoImportSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -3190,14 +3190,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSource_get_DisplayName(py::wrapper::Windows::Media::Import::PhotoImportSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -3209,14 +3209,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSource_get_Id(py::wrapper::Windows::Media::Import::PhotoImportSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -3228,14 +3228,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSource_get_IsLocked(py::wrapper::Windows::Media::Import::PhotoImportSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"IsLocked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"IsLocked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsLocked());
         }
         catch (...)
@@ -3247,14 +3247,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSource_get_IsMassStorage(py::wrapper::Windows::Media::Import::PhotoImportSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"IsMassStorage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"IsMassStorage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsMassStorage());
         }
         catch (...)
@@ -3266,14 +3266,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSource_get_Manufacturer(py::wrapper::Windows::Media::Import::PhotoImportSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"Manufacturer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"Manufacturer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Manufacturer());
         }
         catch (...)
@@ -3285,14 +3285,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSource_get_Model(py::wrapper::Windows::Media::Import::PhotoImportSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"Model"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"Model"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Model());
         }
         catch (...)
@@ -3304,14 +3304,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSource_get_PowerSource(py::wrapper::Windows::Media::Import::PhotoImportSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"PowerSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"PowerSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PowerSource());
         }
         catch (...)
@@ -3323,14 +3323,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSource_get_SerialNumber(py::wrapper::Windows::Media::Import::PhotoImportSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"SerialNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"SerialNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SerialNumber());
         }
         catch (...)
@@ -3342,14 +3342,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSource_get_StorageMedia(py::wrapper::Windows::Media::Import::PhotoImportSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"StorageMedia"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"StorageMedia"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StorageMedia());
         }
         catch (...)
@@ -3361,14 +3361,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSource_get_Thumbnail(py::wrapper::Windows::Media::Import::PhotoImportSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"Thumbnail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"Thumbnail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Thumbnail());
         }
         catch (...)
@@ -3380,14 +3380,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSource_get_Type(py::wrapper::Windows::Media::Import::PhotoImportSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportSource", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -3516,14 +3516,14 @@ namespace py::cpp::Windows::Media::Import
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportStorageMedium", L"Refresh", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Import.PhotoImportStorageMedium", L"Refresh", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Refresh();
                 Py_RETURN_NONE;
             }
@@ -3542,14 +3542,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportStorageMedium_get_AvailableSpaceInBytes(py::wrapper::Windows::Media::Import::PhotoImportStorageMedium* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportStorageMedium", L"AvailableSpaceInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportStorageMedium", L"AvailableSpaceInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AvailableSpaceInBytes());
         }
         catch (...)
@@ -3561,14 +3561,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportStorageMedium_get_CapacityInBytes(py::wrapper::Windows::Media::Import::PhotoImportStorageMedium* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportStorageMedium", L"CapacityInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportStorageMedium", L"CapacityInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CapacityInBytes());
         }
         catch (...)
@@ -3580,14 +3580,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportStorageMedium_get_Description(py::wrapper::Windows::Media::Import::PhotoImportStorageMedium* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportStorageMedium", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportStorageMedium", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -3599,14 +3599,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportStorageMedium_get_Name(py::wrapper::Windows::Media::Import::PhotoImportStorageMedium* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportStorageMedium", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportStorageMedium", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -3618,14 +3618,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportStorageMedium_get_SerialNumber(py::wrapper::Windows::Media::Import::PhotoImportStorageMedium* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportStorageMedium", L"SerialNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportStorageMedium", L"SerialNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SerialNumber());
         }
         catch (...)
@@ -3637,14 +3637,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportStorageMedium_get_StorageMediumType(py::wrapper::Windows::Media::Import::PhotoImportStorageMedium* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportStorageMedium", L"StorageMediumType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportStorageMedium", L"StorageMediumType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StorageMediumType());
         }
         catch (...)
@@ -3656,14 +3656,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportStorageMedium_get_SupportedAccessMode(py::wrapper::Windows::Media::Import::PhotoImportStorageMedium* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportStorageMedium", L"SupportedAccessMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportStorageMedium", L"SupportedAccessMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedAccessMode());
         }
         catch (...)
@@ -3752,14 +3752,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportVideoSegment_get_Date(py::wrapper::Windows::Media::Import::PhotoImportVideoSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportVideoSegment", L"Date"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportVideoSegment", L"Date"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Date());
         }
         catch (...)
@@ -3771,14 +3771,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportVideoSegment_get_Name(py::wrapper::Windows::Media::Import::PhotoImportVideoSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportVideoSegment", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportVideoSegment", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -3790,14 +3790,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportVideoSegment_get_Sibling(py::wrapper::Windows::Media::Import::PhotoImportVideoSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportVideoSegment", L"Sibling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportVideoSegment", L"Sibling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Sibling());
         }
         catch (...)
@@ -3809,14 +3809,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportVideoSegment_get_Sidecars(py::wrapper::Windows::Media::Import::PhotoImportVideoSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportVideoSegment", L"Sidecars"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportVideoSegment", L"Sidecars"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Sidecars());
         }
         catch (...)
@@ -3828,14 +3828,14 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportVideoSegment_get_SizeInBytes(py::wrapper::Windows::Media::Import::PhotoImportVideoSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportVideoSegment", L"SizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Import.PhotoImportVideoSegment", L"SizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SizeInBytes());
         }
         catch (...)

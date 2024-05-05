@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentAction", L"InvokeAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentAction", L"InvokeAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.InvokeAsync());
             }
             catch (...)
@@ -127,14 +127,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentAvailabilityChangedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentAvailabilityChangedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -226,14 +226,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentChangedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentChangedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -251,14 +251,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentChangedEventArgs_get_HasPreviousContentExpired(py::wrapper::Windows::Services::TargetedContent::TargetedContentChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentChangedEventArgs", L"HasPreviousContentExpired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentChangedEventArgs", L"HasPreviousContentExpired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasPreviousContentExpired());
         }
         catch (...)
@@ -345,14 +345,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentCollection", L"ReportCustomInteraction", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentCollection", L"ReportCustomInteraction", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ReportCustomInteraction(param0);
@@ -377,14 +377,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentCollection", L"ReportInteraction", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentCollection", L"ReportInteraction", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Services::TargetedContent::TargetedContentInteraction>(args, 0);
 
                 self->obj.ReportInteraction(param0);
@@ -405,14 +405,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentCollection_get_Collections(py::wrapper::Windows::Services::TargetedContent::TargetedContentCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentCollection", L"Collections"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentCollection", L"Collections"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Collections());
         }
         catch (...)
@@ -424,14 +424,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentCollection_get_Id(py::wrapper::Windows::Services::TargetedContent::TargetedContentCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentCollection", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentCollection", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -443,14 +443,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentCollection_get_Items(py::wrapper::Windows::Services::TargetedContent::TargetedContentCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentCollection", L"Items"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentCollection", L"Items"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Items());
         }
         catch (...)
@@ -462,14 +462,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentCollection_get_Path(py::wrapper::Windows::Services::TargetedContent::TargetedContentCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentCollection", L"Path"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentCollection", L"Path"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Path());
         }
         catch (...)
@@ -481,14 +481,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentCollection_get_Properties(py::wrapper::Windows::Services::TargetedContent::TargetedContentCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentCollection", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentCollection", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -580,14 +580,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentContainer", L"GetAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentContainer", L"GetAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Services::TargetedContent::TargetedContentContainer::GetAsync(param0));
@@ -611,14 +611,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentContainer", L"SelectSingleObject", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentContainer", L"SelectSingleObject", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SelectSingleObject(param0));
@@ -638,14 +638,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentContainer_get_Availability(py::wrapper::Windows::Services::TargetedContent::TargetedContentContainer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentContainer", L"Availability"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentContainer", L"Availability"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Availability());
         }
         catch (...)
@@ -657,14 +657,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentContainer_get_Content(py::wrapper::Windows::Services::TargetedContent::TargetedContentContainer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentContainer", L"Content"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentContainer", L"Content"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Content());
         }
         catch (...)
@@ -676,14 +676,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentContainer_get_Id(py::wrapper::Windows::Services::TargetedContent::TargetedContentContainer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentContainer", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentContainer", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -695,14 +695,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentContainer_get_Timestamp(py::wrapper::Windows::Services::TargetedContent::TargetedContentContainer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentContainer", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentContainer", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -818,14 +818,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentFile", L"OpenReadAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentFile", L"OpenReadAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.OpenReadAsync());
             }
             catch (...)
@@ -917,14 +917,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentImage", L"OpenReadAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentImage", L"OpenReadAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.OpenReadAsync());
             }
             catch (...)
@@ -942,14 +942,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentImage_get_Height(py::wrapper::Windows::Services::TargetedContent::TargetedContentImage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentImage", L"Height"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentImage", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Height());
         }
         catch (...)
@@ -961,14 +961,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentImage_get_Width(py::wrapper::Windows::Services::TargetedContent::TargetedContentImage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentImage", L"Width"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentImage", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Width());
         }
         catch (...)
@@ -1056,14 +1056,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentItem", L"ReportCustomInteraction", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentItem", L"ReportCustomInteraction", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ReportCustomInteraction(param0);
@@ -1088,14 +1088,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentItem", L"ReportInteraction", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentItem", L"ReportInteraction", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Services::TargetedContent::TargetedContentInteraction>(args, 0);
 
                 self->obj.ReportInteraction(param0);
@@ -1116,14 +1116,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentItem_get_Collections(py::wrapper::Windows::Services::TargetedContent::TargetedContentItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentItem", L"Collections"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentItem", L"Collections"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Collections());
         }
         catch (...)
@@ -1135,14 +1135,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentItem_get_Path(py::wrapper::Windows::Services::TargetedContent::TargetedContentItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentItem", L"Path"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentItem", L"Path"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Path());
         }
         catch (...)
@@ -1154,14 +1154,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentItem_get_Properties(py::wrapper::Windows::Services::TargetedContent::TargetedContentItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentItem", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentItem", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -1173,14 +1173,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentItem_get_State(py::wrapper::Windows::Services::TargetedContent::TargetedContentItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentItem", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentItem", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -1267,14 +1267,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentItemState_get_AppInstallationState(py::wrapper::Windows::Services::TargetedContent::TargetedContentItemState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentItemState", L"AppInstallationState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentItemState", L"AppInstallationState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppInstallationState());
         }
         catch (...)
@@ -1286,14 +1286,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentItemState_get_ShouldDisplay(py::wrapper::Windows::Services::TargetedContent::TargetedContentItemState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentItemState", L"ShouldDisplay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentItemState", L"ShouldDisplay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShouldDisplay());
         }
         catch (...)
@@ -1376,14 +1376,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentObject_get_Collection(py::wrapper::Windows::Services::TargetedContent::TargetedContentObject* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentObject", L"Collection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentObject", L"Collection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Collection());
         }
         catch (...)
@@ -1395,14 +1395,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentObject_get_Item(py::wrapper::Windows::Services::TargetedContent::TargetedContentObject* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentObject", L"Item"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentObject", L"Item"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Item());
         }
         catch (...)
@@ -1414,14 +1414,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentObject_get_ObjectKind(py::wrapper::Windows::Services::TargetedContent::TargetedContentObject* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentObject", L"ObjectKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentObject", L"ObjectKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ObjectKind());
         }
         catch (...)
@@ -1433,14 +1433,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentObject_get_Value(py::wrapper::Windows::Services::TargetedContent::TargetedContentObject* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentObject", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentObject", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -1529,14 +1529,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentStateChangedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentStateChangedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1628,14 +1628,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentSubscription", L"GetAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentSubscription", L"GetAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Services::TargetedContent::TargetedContentSubscription::GetAsync(param0));
@@ -1659,14 +1659,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentSubscription", L"GetContentContainerAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentSubscription", L"GetContentContainerAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetContentContainerAsync());
             }
             catch (...)
@@ -1688,14 +1688,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentSubscription", L"GetOptions", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentSubscription", L"GetOptions", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Services::TargetedContent::TargetedContentSubscription::GetOptions(param0));
@@ -1715,14 +1715,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentSubscription_get_Id(py::wrapper::Windows::Services::TargetedContent::TargetedContentSubscription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentSubscription", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentSubscription", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1734,14 +1734,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentSubscription_add_AvailabilityChanged(py::wrapper::Windows::Services::TargetedContent::TargetedContentSubscription* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.TargetedContent.TargetedContentSubscription", L"AvailabilityChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.TargetedContent.TargetedContentSubscription", L"AvailabilityChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::TargetedContent::TargetedContentSubscription, winrt::Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs>>(arg);
 
             return py::convert(self->obj.AvailabilityChanged(param0));
@@ -1755,14 +1755,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentSubscription_remove_AvailabilityChanged(py::wrapper::Windows::Services::TargetedContent::TargetedContentSubscription* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.TargetedContent.TargetedContentSubscription", L"AvailabilityChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.TargetedContent.TargetedContentSubscription", L"AvailabilityChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AvailabilityChanged(param0);
@@ -1777,14 +1777,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentSubscription_add_ContentChanged(py::wrapper::Windows::Services::TargetedContent::TargetedContentSubscription* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.TargetedContent.TargetedContentSubscription", L"ContentChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.TargetedContent.TargetedContentSubscription", L"ContentChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::TargetedContent::TargetedContentSubscription, winrt::Windows::Services::TargetedContent::TargetedContentChangedEventArgs>>(arg);
 
             return py::convert(self->obj.ContentChanged(param0));
@@ -1798,14 +1798,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentSubscription_remove_ContentChanged(py::wrapper::Windows::Services::TargetedContent::TargetedContentSubscription* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.TargetedContent.TargetedContentSubscription", L"ContentChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.TargetedContent.TargetedContentSubscription", L"ContentChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ContentChanged(param0);
@@ -1820,14 +1820,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentSubscription_add_StateChanged(py::wrapper::Windows::Services::TargetedContent::TargetedContentSubscription* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.TargetedContent.TargetedContentSubscription", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.TargetedContent.TargetedContentSubscription", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::TargetedContent::TargetedContentSubscription, winrt::Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs>>(arg);
 
             return py::convert(self->obj.StateChanged(param0));
@@ -1841,14 +1841,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentSubscription_remove_StateChanged(py::wrapper::Windows::Services::TargetedContent::TargetedContentSubscription* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.TargetedContent.TargetedContentSubscription", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.TargetedContent.TargetedContentSubscription", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StateChanged(param0);
@@ -1971,14 +1971,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentSubscriptionOptions", L"Update", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.TargetedContent.TargetedContentSubscriptionOptions", L"Update", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Update();
                 Py_RETURN_NONE;
             }
@@ -1997,14 +1997,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentSubscriptionOptions_get_AllowPartialContentAvailability(py::wrapper::Windows::Services::TargetedContent::TargetedContentSubscriptionOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentSubscriptionOptions", L"AllowPartialContentAvailability"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentSubscriptionOptions", L"AllowPartialContentAvailability"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowPartialContentAvailability());
         }
         catch (...)
@@ -2016,12 +2016,6 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static int TargetedContentSubscriptionOptions_put_AllowPartialContentAvailability(py::wrapper::Windows::Services::TargetedContent::TargetedContentSubscriptionOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentSubscriptionOptions", L"AllowPartialContentAvailability"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2030,6 +2024,12 @@ namespace py::cpp::Windows::Services::TargetedContent
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentSubscriptionOptions", L"AllowPartialContentAvailability"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowPartialContentAvailability(param0);
@@ -2044,14 +2044,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentSubscriptionOptions_get_CloudQueryParameters(py::wrapper::Windows::Services::TargetedContent::TargetedContentSubscriptionOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentSubscriptionOptions", L"CloudQueryParameters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentSubscriptionOptions", L"CloudQueryParameters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CloudQueryParameters());
         }
         catch (...)
@@ -2063,14 +2063,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentSubscriptionOptions_get_LocalFilters(py::wrapper::Windows::Services::TargetedContent::TargetedContentSubscriptionOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentSubscriptionOptions", L"LocalFilters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentSubscriptionOptions", L"LocalFilters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalFilters());
         }
         catch (...)
@@ -2082,14 +2082,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentSubscriptionOptions_get_SubscriptionId(py::wrapper::Windows::Services::TargetedContent::TargetedContentSubscriptionOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentSubscriptionOptions", L"SubscriptionId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentSubscriptionOptions", L"SubscriptionId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SubscriptionId());
         }
         catch (...)
@@ -2175,14 +2175,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentValue_get_Action(py::wrapper::Windows::Services::TargetedContent::TargetedContentValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"Action"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"Action"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Action());
         }
         catch (...)
@@ -2194,14 +2194,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentValue_get_Actions(py::wrapper::Windows::Services::TargetedContent::TargetedContentValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"Actions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"Actions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Actions());
         }
         catch (...)
@@ -2213,14 +2213,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentValue_get_Boolean(py::wrapper::Windows::Services::TargetedContent::TargetedContentValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"Boolean"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"Boolean"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Boolean());
         }
         catch (...)
@@ -2232,14 +2232,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentValue_get_Booleans(py::wrapper::Windows::Services::TargetedContent::TargetedContentValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"Booleans"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"Booleans"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Booleans());
         }
         catch (...)
@@ -2251,14 +2251,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentValue_get_File(py::wrapper::Windows::Services::TargetedContent::TargetedContentValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"File"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"File"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.File());
         }
         catch (...)
@@ -2270,14 +2270,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentValue_get_Files(py::wrapper::Windows::Services::TargetedContent::TargetedContentValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"Files"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"Files"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Files());
         }
         catch (...)
@@ -2289,14 +2289,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentValue_get_ImageFile(py::wrapper::Windows::Services::TargetedContent::TargetedContentValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"ImageFile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"ImageFile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ImageFile());
         }
         catch (...)
@@ -2308,14 +2308,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentValue_get_ImageFiles(py::wrapper::Windows::Services::TargetedContent::TargetedContentValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"ImageFiles"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"ImageFiles"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ImageFiles());
         }
         catch (...)
@@ -2327,14 +2327,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentValue_get_Number(py::wrapper::Windows::Services::TargetedContent::TargetedContentValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"Number"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"Number"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Number());
         }
         catch (...)
@@ -2346,14 +2346,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentValue_get_Numbers(py::wrapper::Windows::Services::TargetedContent::TargetedContentValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"Numbers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"Numbers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Numbers());
         }
         catch (...)
@@ -2365,14 +2365,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentValue_get_Path(py::wrapper::Windows::Services::TargetedContent::TargetedContentValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"Path"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"Path"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Path());
         }
         catch (...)
@@ -2384,14 +2384,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentValue_get_String(py::wrapper::Windows::Services::TargetedContent::TargetedContentValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"String"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"String"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.String());
         }
         catch (...)
@@ -2403,14 +2403,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentValue_get_Strings(py::wrapper::Windows::Services::TargetedContent::TargetedContentValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"Strings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"Strings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Strings());
         }
         catch (...)
@@ -2422,14 +2422,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentValue_get_Uri(py::wrapper::Windows::Services::TargetedContent::TargetedContentValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -2441,14 +2441,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentValue_get_Uris(py::wrapper::Windows::Services::TargetedContent::TargetedContentValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"Uris"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"Uris"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uris());
         }
         catch (...)
@@ -2460,14 +2460,14 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentValue_get_ValueKind(py::wrapper::Windows::Services::TargetedContent::TargetedContentValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"ValueKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.TargetedContent.TargetedContentValue", L"ValueKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ValueKind());
         }
         catch (...)

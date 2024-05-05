@@ -28,14 +28,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -54,14 +54,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_add_CreateFolderRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"CreateFolderRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"CreateFolderRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequestEventArgs>>(arg);
 
             return py::convert(self->obj.CreateFolderRequested(param0));
@@ -75,14 +75,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_remove_CreateFolderRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"CreateFolderRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"CreateFolderRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CreateFolderRequested(param0);
@@ -97,14 +97,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_add_DeleteFolderRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"DeleteFolderRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"DeleteFolderRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequestEventArgs>>(arg);
 
             return py::convert(self->obj.DeleteFolderRequested(param0));
@@ -118,14 +118,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_remove_DeleteFolderRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"DeleteFolderRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"DeleteFolderRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DeleteFolderRequested(param0);
@@ -140,14 +140,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_add_DownloadAttachmentRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"DownloadAttachmentRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"DownloadAttachmentRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequestEventArgs>>(arg);
 
             return py::convert(self->obj.DownloadAttachmentRequested(param0));
@@ -161,14 +161,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_remove_DownloadAttachmentRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"DownloadAttachmentRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"DownloadAttachmentRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DownloadAttachmentRequested(param0);
@@ -183,14 +183,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_add_DownloadMessageRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"DownloadMessageRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"DownloadMessageRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequestEventArgs>>(arg);
 
             return py::convert(self->obj.DownloadMessageRequested(param0));
@@ -204,14 +204,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_remove_DownloadMessageRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"DownloadMessageRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"DownloadMessageRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DownloadMessageRequested(param0);
@@ -226,14 +226,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_add_EmptyFolderRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"EmptyFolderRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"EmptyFolderRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequestEventArgs>>(arg);
 
             return py::convert(self->obj.EmptyFolderRequested(param0));
@@ -247,14 +247,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_remove_EmptyFolderRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"EmptyFolderRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"EmptyFolderRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.EmptyFolderRequested(param0);
@@ -269,14 +269,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_add_ForwardMeetingRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"ForwardMeetingRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"ForwardMeetingRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequestEventArgs>>(arg);
 
             return py::convert(self->obj.ForwardMeetingRequested(param0));
@@ -290,14 +290,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_remove_ForwardMeetingRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"ForwardMeetingRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"ForwardMeetingRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ForwardMeetingRequested(param0);
@@ -312,14 +312,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_add_GetAutoReplySettingsRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"GetAutoReplySettingsRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"GetAutoReplySettingsRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequestEventArgs>>(arg);
 
             return py::convert(self->obj.GetAutoReplySettingsRequested(param0));
@@ -333,14 +333,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_remove_GetAutoReplySettingsRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"GetAutoReplySettingsRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"GetAutoReplySettingsRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.GetAutoReplySettingsRequested(param0);
@@ -355,14 +355,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_add_MailboxSyncRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"MailboxSyncRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"MailboxSyncRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequestEventArgs>>(arg);
 
             return py::convert(self->obj.MailboxSyncRequested(param0));
@@ -376,14 +376,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_remove_MailboxSyncRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"MailboxSyncRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"MailboxSyncRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.MailboxSyncRequested(param0);
@@ -398,14 +398,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_add_MoveFolderRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"MoveFolderRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"MoveFolderRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequestEventArgs>>(arg);
 
             return py::convert(self->obj.MoveFolderRequested(param0));
@@ -419,14 +419,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_remove_MoveFolderRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"MoveFolderRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"MoveFolderRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.MoveFolderRequested(param0);
@@ -441,14 +441,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_add_ProposeNewTimeForMeetingRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"ProposeNewTimeForMeetingRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"ProposeNewTimeForMeetingRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequestEventArgs>>(arg);
 
             return py::convert(self->obj.ProposeNewTimeForMeetingRequested(param0));
@@ -462,14 +462,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_remove_ProposeNewTimeForMeetingRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"ProposeNewTimeForMeetingRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"ProposeNewTimeForMeetingRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ProposeNewTimeForMeetingRequested(param0);
@@ -484,14 +484,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_add_ResolveRecipientsRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"ResolveRecipientsRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"ResolveRecipientsRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequestEventArgs>>(arg);
 
             return py::convert(self->obj.ResolveRecipientsRequested(param0));
@@ -505,14 +505,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_remove_ResolveRecipientsRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"ResolveRecipientsRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"ResolveRecipientsRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ResolveRecipientsRequested(param0);
@@ -527,14 +527,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_add_ServerSearchReadBatchRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"ServerSearchReadBatchRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"ServerSearchReadBatchRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequestEventArgs>>(arg);
 
             return py::convert(self->obj.ServerSearchReadBatchRequested(param0));
@@ -548,14 +548,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_remove_ServerSearchReadBatchRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"ServerSearchReadBatchRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"ServerSearchReadBatchRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ServerSearchReadBatchRequested(param0);
@@ -570,14 +570,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_add_SetAutoReplySettingsRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"SetAutoReplySettingsRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"SetAutoReplySettingsRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequestEventArgs>>(arg);
 
             return py::convert(self->obj.SetAutoReplySettingsRequested(param0));
@@ -591,14 +591,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_remove_SetAutoReplySettingsRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"SetAutoReplySettingsRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"SetAutoReplySettingsRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SetAutoReplySettingsRequested(param0);
@@ -613,14 +613,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_add_UpdateMeetingResponseRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"UpdateMeetingResponseRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"UpdateMeetingResponseRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequestEventArgs>>(arg);
 
             return py::convert(self->obj.UpdateMeetingResponseRequested(param0));
@@ -634,14 +634,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_remove_UpdateMeetingResponseRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"UpdateMeetingResponseRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"UpdateMeetingResponseRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.UpdateMeetingResponseRequested(param0);
@@ -656,14 +656,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_add_ValidateCertificatesRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"ValidateCertificatesRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"ValidateCertificatesRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection, winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequestEventArgs>>(arg);
 
             return py::convert(self->obj.ValidateCertificatesRequested(param0));
@@ -677,14 +677,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderConnection_remove_ValidateCertificatesRequested(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"ValidateCertificatesRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection", L"ValidateCertificatesRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ValidateCertificatesRequested(param0);
@@ -799,14 +799,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailDataProviderTriggerDetails_get_Connection(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderTriggerDetails", L"Connection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailDataProviderTriggerDetails", L"Connection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Connection());
         }
         catch (...)
@@ -892,14 +892,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest", L"ReportCompletedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest", L"ReportCompletedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailFolder>(args, 0);
 
                 return py::convert(self->obj.ReportCompletedAsync(param0));
@@ -923,14 +923,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest", L"ReportFailedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest", L"ReportFailedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMailboxCreateFolderStatus>(args, 0);
 
                 return py::convert(self->obj.ReportFailedAsync(param0));
@@ -950,14 +950,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxCreateFolderRequest_get_EmailMailboxId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest", L"EmailMailboxId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest", L"EmailMailboxId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailMailboxId());
         }
         catch (...)
@@ -969,14 +969,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxCreateFolderRequest_get_Name(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -988,14 +988,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxCreateFolderRequest_get_ParentFolderId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest", L"ParentFolderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest", L"ParentFolderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentFolderId());
         }
         catch (...)
@@ -1085,14 +1085,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1110,14 +1110,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxCreateFolderRequestEventArgs_get_Request(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -1204,14 +1204,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequest", L"ReportCompletedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequest", L"ReportCompletedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportCompletedAsync());
             }
             catch (...)
@@ -1233,14 +1233,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequest", L"ReportFailedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequest", L"ReportFailedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMailboxDeleteFolderStatus>(args, 0);
 
                 return py::convert(self->obj.ReportFailedAsync(param0));
@@ -1260,14 +1260,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxDeleteFolderRequest_get_EmailFolderId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequest", L"EmailFolderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequest", L"EmailFolderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailFolderId());
         }
         catch (...)
@@ -1279,14 +1279,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxDeleteFolderRequest_get_EmailMailboxId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequest", L"EmailMailboxId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequest", L"EmailMailboxId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailMailboxId());
         }
         catch (...)
@@ -1375,14 +1375,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1400,14 +1400,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxDeleteFolderRequestEventArgs_get_Request(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -1494,14 +1494,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest", L"ReportCompletedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest", L"ReportCompletedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportCompletedAsync());
             }
             catch (...)
@@ -1523,14 +1523,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest", L"ReportFailedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest", L"ReportFailedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportFailedAsync());
             }
             catch (...)
@@ -1548,14 +1548,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxDownloadAttachmentRequest_get_EmailAttachmentId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest", L"EmailAttachmentId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest", L"EmailAttachmentId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailAttachmentId());
         }
         catch (...)
@@ -1567,14 +1567,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxDownloadAttachmentRequest_get_EmailMailboxId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest", L"EmailMailboxId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest", L"EmailMailboxId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailMailboxId());
         }
         catch (...)
@@ -1586,14 +1586,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxDownloadAttachmentRequest_get_EmailMessageId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest", L"EmailMessageId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest", L"EmailMessageId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailMessageId());
         }
         catch (...)
@@ -1683,14 +1683,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1708,14 +1708,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxDownloadAttachmentRequestEventArgs_get_Request(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -1802,14 +1802,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequest", L"ReportCompletedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequest", L"ReportCompletedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportCompletedAsync());
             }
             catch (...)
@@ -1831,14 +1831,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequest", L"ReportFailedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequest", L"ReportFailedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportFailedAsync());
             }
             catch (...)
@@ -1856,14 +1856,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxDownloadMessageRequest_get_EmailMailboxId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequest", L"EmailMailboxId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequest", L"EmailMailboxId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailMailboxId());
         }
         catch (...)
@@ -1875,14 +1875,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxDownloadMessageRequest_get_EmailMessageId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequest", L"EmailMessageId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequest", L"EmailMessageId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailMessageId());
         }
         catch (...)
@@ -1971,14 +1971,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1996,14 +1996,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxDownloadMessageRequestEventArgs_get_Request(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -2090,14 +2090,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest", L"ReportCompletedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest", L"ReportCompletedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportCompletedAsync());
             }
             catch (...)
@@ -2119,14 +2119,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest", L"ReportFailedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest", L"ReportFailedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMailboxEmptyFolderStatus>(args, 0);
 
                 return py::convert(self->obj.ReportFailedAsync(param0));
@@ -2146,14 +2146,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxEmptyFolderRequest_get_EmailFolderId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest", L"EmailFolderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest", L"EmailFolderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailFolderId());
         }
         catch (...)
@@ -2165,14 +2165,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxEmptyFolderRequest_get_EmailMailboxId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest", L"EmailMailboxId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest", L"EmailMailboxId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailMailboxId());
         }
         catch (...)
@@ -2261,14 +2261,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -2286,14 +2286,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxEmptyFolderRequestEventArgs_get_Request(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -2380,14 +2380,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest", L"ReportCompletedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest", L"ReportCompletedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportCompletedAsync());
             }
             catch (...)
@@ -2409,14 +2409,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest", L"ReportFailedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest", L"ReportFailedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportFailedAsync());
             }
             catch (...)
@@ -2434,14 +2434,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxForwardMeetingRequest_get_Comment(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest", L"Comment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Comment());
         }
         catch (...)
@@ -2453,14 +2453,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxForwardMeetingRequest_get_EmailMailboxId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest", L"EmailMailboxId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest", L"EmailMailboxId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailMailboxId());
         }
         catch (...)
@@ -2472,14 +2472,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxForwardMeetingRequest_get_EmailMessageId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest", L"EmailMessageId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest", L"EmailMessageId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailMessageId());
         }
         catch (...)
@@ -2491,14 +2491,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxForwardMeetingRequest_get_ForwardHeader(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest", L"ForwardHeader"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest", L"ForwardHeader"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ForwardHeader());
         }
         catch (...)
@@ -2510,14 +2510,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxForwardMeetingRequest_get_ForwardHeaderType(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest", L"ForwardHeaderType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest", L"ForwardHeaderType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ForwardHeaderType());
         }
         catch (...)
@@ -2529,14 +2529,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxForwardMeetingRequest_get_Recipients(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest", L"Recipients"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest", L"Recipients"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Recipients());
         }
         catch (...)
@@ -2548,14 +2548,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxForwardMeetingRequest_get_Subject(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest", L"Subject"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest", L"Subject"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Subject());
         }
         catch (...)
@@ -2649,14 +2649,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -2674,14 +2674,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxForwardMeetingRequestEventArgs_get_Request(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -2768,14 +2768,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequest", L"ReportCompletedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequest", L"ReportCompletedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings>(args, 0);
 
                 return py::convert(self->obj.ReportCompletedAsync(param0));
@@ -2799,14 +2799,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequest", L"ReportFailedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequest", L"ReportFailedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportFailedAsync());
             }
             catch (...)
@@ -2824,14 +2824,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxGetAutoReplySettingsRequest_get_EmailMailboxId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequest", L"EmailMailboxId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequest", L"EmailMailboxId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailMailboxId());
         }
         catch (...)
@@ -2843,14 +2843,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxGetAutoReplySettingsRequest_get_RequestedFormat(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequest", L"RequestedFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequest", L"RequestedFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestedFormat());
         }
         catch (...)
@@ -2939,14 +2939,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -2964,14 +2964,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxGetAutoReplySettingsRequestEventArgs_get_Request(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -3058,14 +3058,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest", L"ReportCompletedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest", L"ReportCompletedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportCompletedAsync());
             }
             catch (...)
@@ -3087,14 +3087,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest", L"ReportFailedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest", L"ReportFailedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportFailedAsync());
             }
             catch (...)
@@ -3112,14 +3112,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxMoveFolderRequest_get_EmailFolderId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest", L"EmailFolderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest", L"EmailFolderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailFolderId());
         }
         catch (...)
@@ -3131,14 +3131,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxMoveFolderRequest_get_EmailMailboxId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest", L"EmailMailboxId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest", L"EmailMailboxId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailMailboxId());
         }
         catch (...)
@@ -3150,14 +3150,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxMoveFolderRequest_get_NewFolderName(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest", L"NewFolderName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest", L"NewFolderName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NewFolderName());
         }
         catch (...)
@@ -3169,14 +3169,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxMoveFolderRequest_get_NewParentFolderId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest", L"NewParentFolderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest", L"NewParentFolderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NewParentFolderId());
         }
         catch (...)
@@ -3267,14 +3267,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -3292,14 +3292,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxMoveFolderRequestEventArgs_get_Request(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -3386,14 +3386,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest", L"ReportCompletedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest", L"ReportCompletedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportCompletedAsync());
             }
             catch (...)
@@ -3415,14 +3415,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest", L"ReportFailedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest", L"ReportFailedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportFailedAsync());
             }
             catch (...)
@@ -3440,14 +3440,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxProposeNewTimeForMeetingRequest_get_Comment(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest", L"Comment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Comment());
         }
         catch (...)
@@ -3459,14 +3459,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxProposeNewTimeForMeetingRequest_get_EmailMailboxId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest", L"EmailMailboxId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest", L"EmailMailboxId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailMailboxId());
         }
         catch (...)
@@ -3478,14 +3478,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxProposeNewTimeForMeetingRequest_get_EmailMessageId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest", L"EmailMessageId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest", L"EmailMessageId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailMessageId());
         }
         catch (...)
@@ -3497,14 +3497,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxProposeNewTimeForMeetingRequest_get_NewDuration(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest", L"NewDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest", L"NewDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NewDuration());
         }
         catch (...)
@@ -3516,14 +3516,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxProposeNewTimeForMeetingRequest_get_NewStartTime(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest", L"NewStartTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest", L"NewStartTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NewStartTime());
         }
         catch (...)
@@ -3535,14 +3535,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxProposeNewTimeForMeetingRequest_get_Subject(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest", L"Subject"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest", L"Subject"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Subject());
         }
         catch (...)
@@ -3635,14 +3635,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -3660,14 +3660,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxProposeNewTimeForMeetingRequestEventArgs_get_Request(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -3754,14 +3754,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequest", L"ReportCompletedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequest", L"ReportCompletedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Email::EmailRecipientResolutionResult>>(args, 0);
 
                 return py::convert(self->obj.ReportCompletedAsync(param0));
@@ -3785,14 +3785,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequest", L"ReportFailedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequest", L"ReportFailedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportFailedAsync());
             }
             catch (...)
@@ -3810,14 +3810,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxResolveRecipientsRequest_get_EmailMailboxId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequest", L"EmailMailboxId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequest", L"EmailMailboxId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailMailboxId());
         }
         catch (...)
@@ -3829,14 +3829,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxResolveRecipientsRequest_get_Recipients(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequest", L"Recipients"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequest", L"Recipients"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Recipients());
         }
         catch (...)
@@ -3925,14 +3925,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -3950,14 +3950,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxResolveRecipientsRequestEventArgs_get_Request(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -4044,14 +4044,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest", L"ReportCompletedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest", L"ReportCompletedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportCompletedAsync());
             }
             catch (...)
@@ -4073,14 +4073,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest", L"ReportFailedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest", L"ReportFailedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailBatchStatus>(args, 0);
 
                 return py::convert(self->obj.ReportFailedAsync(param0));
@@ -4104,14 +4104,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest", L"SaveMessageAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest", L"SaveMessageAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailMessage>(args, 0);
 
                 return py::convert(self->obj.SaveMessageAsync(param0));
@@ -4131,14 +4131,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxServerSearchReadBatchRequest_get_EmailFolderId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest", L"EmailFolderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest", L"EmailFolderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailFolderId());
         }
         catch (...)
@@ -4150,14 +4150,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxServerSearchReadBatchRequest_get_EmailMailboxId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest", L"EmailMailboxId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest", L"EmailMailboxId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailMailboxId());
         }
         catch (...)
@@ -4169,14 +4169,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxServerSearchReadBatchRequest_get_Options(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest", L"Options"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest", L"Options"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Options());
         }
         catch (...)
@@ -4188,14 +4188,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxServerSearchReadBatchRequest_get_SessionId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest", L"SessionId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest", L"SessionId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SessionId());
         }
         catch (...)
@@ -4207,14 +4207,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxServerSearchReadBatchRequest_get_SuggestedBatchSize(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest", L"SuggestedBatchSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest", L"SuggestedBatchSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SuggestedBatchSize());
         }
         catch (...)
@@ -4307,14 +4307,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -4332,14 +4332,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxServerSearchReadBatchRequestEventArgs_get_Request(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -4426,14 +4426,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequest", L"ReportCompletedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequest", L"ReportCompletedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportCompletedAsync());
             }
             catch (...)
@@ -4455,14 +4455,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequest", L"ReportFailedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequest", L"ReportFailedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportFailedAsync());
             }
             catch (...)
@@ -4480,14 +4480,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxSetAutoReplySettingsRequest_get_AutoReplySettings(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequest", L"AutoReplySettings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequest", L"AutoReplySettings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AutoReplySettings());
         }
         catch (...)
@@ -4499,14 +4499,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxSetAutoReplySettingsRequest_get_EmailMailboxId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequest", L"EmailMailboxId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequest", L"EmailMailboxId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailMailboxId());
         }
         catch (...)
@@ -4595,14 +4595,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -4620,14 +4620,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxSetAutoReplySettingsRequestEventArgs_get_Request(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -4714,14 +4714,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequest", L"ReportCompletedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequest", L"ReportCompletedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportCompletedAsync());
             }
             catch (...)
@@ -4743,14 +4743,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequest", L"ReportFailedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequest", L"ReportFailedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportFailedAsync());
             }
             catch (...)
@@ -4768,14 +4768,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxSyncManagerSyncRequest_get_EmailMailboxId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequest", L"EmailMailboxId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequest", L"EmailMailboxId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailMailboxId());
         }
         catch (...)
@@ -4863,14 +4863,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -4888,14 +4888,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxSyncManagerSyncRequestEventArgs_get_Request(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -4982,14 +4982,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest", L"ReportCompletedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest", L"ReportCompletedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportCompletedAsync());
             }
             catch (...)
@@ -5011,14 +5011,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest", L"ReportFailedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest", L"ReportFailedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportFailedAsync());
             }
             catch (...)
@@ -5036,14 +5036,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxUpdateMeetingResponseRequest_get_Comment(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest", L"Comment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Comment());
         }
         catch (...)
@@ -5055,14 +5055,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxUpdateMeetingResponseRequest_get_EmailMailboxId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest", L"EmailMailboxId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest", L"EmailMailboxId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailMailboxId());
         }
         catch (...)
@@ -5074,14 +5074,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxUpdateMeetingResponseRequest_get_EmailMessageId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest", L"EmailMessageId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest", L"EmailMessageId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailMessageId());
         }
         catch (...)
@@ -5093,14 +5093,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxUpdateMeetingResponseRequest_get_Response(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest", L"Response"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest", L"Response"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Response());
         }
         catch (...)
@@ -5112,14 +5112,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxUpdateMeetingResponseRequest_get_SendUpdate(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest", L"SendUpdate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest", L"SendUpdate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SendUpdate());
         }
         catch (...)
@@ -5131,14 +5131,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxUpdateMeetingResponseRequest_get_Subject(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest", L"Subject"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest", L"Subject"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Subject());
         }
         catch (...)
@@ -5231,14 +5231,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -5256,14 +5256,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxUpdateMeetingResponseRequestEventArgs_get_Request(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -5350,14 +5350,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequest", L"ReportCompletedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequest", L"ReportCompletedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Email::EmailCertificateValidationStatus>>(args, 0);
 
                 return py::convert(self->obj.ReportCompletedAsync(param0));
@@ -5381,14 +5381,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequest", L"ReportFailedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequest", L"ReportFailedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportFailedAsync());
             }
             catch (...)
@@ -5406,14 +5406,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxValidateCertificatesRequest_get_Certificates(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequest", L"Certificates"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequest", L"Certificates"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Certificates());
         }
         catch (...)
@@ -5425,14 +5425,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxValidateCertificatesRequest_get_EmailMailboxId(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequest", L"EmailMailboxId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequest", L"EmailMailboxId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailMailboxId());
         }
         catch (...)
@@ -5521,14 +5521,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -5546,14 +5546,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyObject* EmailMailboxValidateCertificatesRequestEventArgs_get_Request(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)

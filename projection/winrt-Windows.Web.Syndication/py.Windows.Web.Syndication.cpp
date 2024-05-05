@@ -63,14 +63,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationAttribute_get_Value(py::wrapper::Windows::Web::Syndication::SyndicationAttribute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationAttribute", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationAttribute", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -82,12 +82,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationAttribute_put_Value(py::wrapper::Windows::Web::Syndication::SyndicationAttribute* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationAttribute", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -96,6 +90,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationAttribute", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Value(param0);
@@ -110,14 +110,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationAttribute_get_Namespace(py::wrapper::Windows::Web::Syndication::SyndicationAttribute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationAttribute", L"Namespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationAttribute", L"Namespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Namespace());
         }
         catch (...)
@@ -129,12 +129,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationAttribute_put_Namespace(py::wrapper::Windows::Web::Syndication::SyndicationAttribute* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationAttribute", L"Namespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -143,6 +137,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationAttribute", L"Namespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Namespace(param0);
@@ -157,14 +157,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationAttribute_get_Name(py::wrapper::Windows::Web::Syndication::SyndicationAttribute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationAttribute", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationAttribute", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -176,12 +176,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationAttribute_put_Name(py::wrapper::Windows::Web::Syndication::SyndicationAttribute* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationAttribute", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -190,6 +184,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationAttribute", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Name(param0);
@@ -334,14 +334,14 @@ namespace py::cpp::Windows::Web::Syndication
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationCategory", L"GetXmlDocument", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationCategory", L"GetXmlDocument", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert(self->obj.GetXmlDocument(param0));
@@ -361,14 +361,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationCategory_get_Term(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Term"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Term"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Term());
         }
         catch (...)
@@ -380,12 +380,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationCategory_put_Term(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Term"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -394,6 +388,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Term"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Term(param0);
@@ -408,14 +408,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationCategory_get_Scheme(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Scheme"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Scheme"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Scheme());
         }
         catch (...)
@@ -427,12 +427,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationCategory_put_Scheme(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Scheme"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -441,6 +435,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Scheme"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Scheme(param0);
@@ -455,14 +455,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationCategory_get_Label(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Label());
         }
         catch (...)
@@ -474,12 +474,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationCategory_put_Label(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -488,6 +482,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Label(param0);
@@ -502,14 +502,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationCategory_get_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -521,12 +521,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationCategory_put_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -535,6 +529,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeValue(param0);
@@ -549,14 +549,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationCategory_get_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeNamespace());
         }
         catch (...)
@@ -568,12 +568,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationCategory_put_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -582,6 +576,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeNamespace(param0);
@@ -596,14 +596,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationCategory_get_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -615,12 +615,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationCategory_put_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -629,6 +623,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeName(param0);
@@ -643,14 +643,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationCategory_get_Language(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -662,12 +662,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationCategory_put_Language(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -676,6 +670,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Language(param0);
@@ -690,14 +690,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationCategory_get_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseUri());
         }
         catch (...)
@@ -709,12 +709,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationCategory_put_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -723,6 +717,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.BaseUri(param0);
@@ -737,14 +737,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationCategory_get_AttributeExtensions(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"AttributeExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"AttributeExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttributeExtensions());
         }
         catch (...)
@@ -756,14 +756,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationCategory_get_ElementExtensions(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"ElementExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationCategory", L"ElementExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ElementExtensions());
         }
         catch (...)
@@ -896,14 +896,14 @@ namespace py::cpp::Windows::Web::Syndication
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationClient", L"RetrieveFeedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationClient", L"RetrieveFeedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(self->obj.RetrieveFeedAsync(param0));
@@ -927,14 +927,14 @@ namespace py::cpp::Windows::Web::Syndication
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationClient", L"SetRequestHeader", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationClient", L"SetRequestHeader", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -956,14 +956,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationClient_get_Timeout(py::wrapper::Windows::Web::Syndication::SyndicationClient* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"Timeout"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"Timeout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timeout());
         }
         catch (...)
@@ -975,12 +975,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationClient_put_Timeout(py::wrapper::Windows::Web::Syndication::SyndicationClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"Timeout"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -989,6 +983,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"Timeout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Timeout(param0);
@@ -1003,14 +1003,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationClient_get_ServerCredential(py::wrapper::Windows::Web::Syndication::SyndicationClient* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"ServerCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"ServerCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServerCredential());
         }
         catch (...)
@@ -1022,12 +1022,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationClient_put_ServerCredential(py::wrapper::Windows::Web::Syndication::SyndicationClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"ServerCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1036,6 +1030,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"ServerCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             self->obj.ServerCredential(param0);
@@ -1050,14 +1050,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationClient_get_ProxyCredential(py::wrapper::Windows::Web::Syndication::SyndicationClient* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"ProxyCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"ProxyCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProxyCredential());
         }
         catch (...)
@@ -1069,12 +1069,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationClient_put_ProxyCredential(py::wrapper::Windows::Web::Syndication::SyndicationClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"ProxyCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1083,6 +1077,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"ProxyCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             self->obj.ProxyCredential(param0);
@@ -1097,14 +1097,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationClient_get_MaxResponseBufferSize(py::wrapper::Windows::Web::Syndication::SyndicationClient* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"MaxResponseBufferSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"MaxResponseBufferSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxResponseBufferSize());
         }
         catch (...)
@@ -1116,12 +1116,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationClient_put_MaxResponseBufferSize(py::wrapper::Windows::Web::Syndication::SyndicationClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"MaxResponseBufferSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1130,6 +1124,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"MaxResponseBufferSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.MaxResponseBufferSize(param0);
@@ -1144,14 +1144,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationClient_get_BypassCacheOnRetrieve(py::wrapper::Windows::Web::Syndication::SyndicationClient* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"BypassCacheOnRetrieve"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"BypassCacheOnRetrieve"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BypassCacheOnRetrieve());
         }
         catch (...)
@@ -1163,12 +1163,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationClient_put_BypassCacheOnRetrieve(py::wrapper::Windows::Web::Syndication::SyndicationClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"BypassCacheOnRetrieve"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1177,6 +1171,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationClient", L"BypassCacheOnRetrieve"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.BypassCacheOnRetrieve(param0);
@@ -1324,14 +1324,14 @@ namespace py::cpp::Windows::Web::Syndication
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationContent", L"GetXmlDocument", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationContent", L"GetXmlDocument", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert(self->obj.GetXmlDocument(param0));
@@ -1351,14 +1351,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationContent_get_SourceUri(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"SourceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"SourceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceUri());
         }
         catch (...)
@@ -1370,12 +1370,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationContent_put_SourceUri(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"SourceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1384,6 +1378,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"SourceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.SourceUri(param0);
@@ -1398,14 +1398,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationContent_get_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -1417,12 +1417,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationContent_put_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1431,6 +1425,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeValue(param0);
@@ -1445,14 +1445,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationContent_get_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseUri());
         }
         catch (...)
@@ -1464,12 +1464,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationContent_put_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1478,6 +1472,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.BaseUri(param0);
@@ -1492,14 +1492,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationContent_get_Language(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -1511,12 +1511,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationContent_put_Language(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1525,6 +1519,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Language(param0);
@@ -1539,14 +1539,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationContent_get_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -1558,12 +1558,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationContent_put_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1572,6 +1566,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeName(param0);
@@ -1586,14 +1586,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationContent_get_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeNamespace());
         }
         catch (...)
@@ -1605,12 +1605,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationContent_put_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1619,6 +1613,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeNamespace(param0);
@@ -1633,14 +1633,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationContent_get_AttributeExtensions(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"AttributeExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"AttributeExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttributeExtensions());
         }
         catch (...)
@@ -1652,14 +1652,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationContent_get_ElementExtensions(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"ElementExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"ElementExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ElementExtensions());
         }
         catch (...)
@@ -1671,14 +1671,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationContent_get_Text(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Text"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Text"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Text());
         }
         catch (...)
@@ -1690,12 +1690,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationContent_put_Text(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Text"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1704,6 +1698,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Text"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Text(param0);
@@ -1718,14 +1718,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationContent_get_Type(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -1737,12 +1737,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationContent_put_Type(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1751,6 +1745,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Type(param0);
@@ -1765,14 +1765,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationContent_get_Xml(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Xml"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Xml"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Xml());
         }
         catch (...)
@@ -1784,12 +1784,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationContent_put_Xml(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Xml"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1798,6 +1792,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationContent", L"Xml"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(arg);
 
             self->obj.Xml(param0);
@@ -1889,14 +1889,14 @@ namespace py::cpp::Windows::Web::Syndication
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationError", L"GetStatus", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationError", L"GetStatus", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Web::Syndication::SyndicationError::GetStatus(param0));
@@ -2027,14 +2027,14 @@ namespace py::cpp::Windows::Web::Syndication
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationFeed", L"GetXmlDocument", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationFeed", L"GetXmlDocument", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert(self->obj.GetXmlDocument(param0));
@@ -2058,14 +2058,14 @@ namespace py::cpp::Windows::Web::Syndication
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Load", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Load", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Load(param0);
@@ -2090,14 +2090,14 @@ namespace py::cpp::Windows::Web::Syndication
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationFeed", L"LoadFromXml", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationFeed", L"LoadFromXml", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(args, 0);
 
                 self->obj.LoadFromXml(param0);
@@ -2118,14 +2118,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_Title(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -2137,12 +2137,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_Title(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2151,6 +2145,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::ISyndicationText>(arg);
 
             self->obj.Title(param0);
@@ -2165,14 +2165,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_Subtitle(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Subtitle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Subtitle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Subtitle());
         }
         catch (...)
@@ -2184,12 +2184,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_Subtitle(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Subtitle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2198,6 +2192,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Subtitle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::ISyndicationText>(arg);
 
             self->obj.Subtitle(param0);
@@ -2212,14 +2212,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_Rights(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Rights"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Rights"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Rights());
         }
         catch (...)
@@ -2231,12 +2231,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_Rights(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Rights"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2245,6 +2239,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Rights"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::ISyndicationText>(arg);
 
             self->obj.Rights(param0);
@@ -2259,14 +2259,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_Generator(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Generator"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Generator"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Generator());
         }
         catch (...)
@@ -2278,12 +2278,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_Generator(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Generator"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2292,6 +2286,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Generator"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationGenerator>(arg);
 
             self->obj.Generator(param0);
@@ -2306,14 +2306,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_LastUpdatedTime(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"LastUpdatedTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"LastUpdatedTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastUpdatedTime());
         }
         catch (...)
@@ -2325,12 +2325,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_LastUpdatedTime(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"LastUpdatedTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2339,6 +2333,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"LastUpdatedTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             self->obj.LastUpdatedTime(param0);
@@ -2353,14 +2353,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_ImageUri(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"ImageUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"ImageUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ImageUri());
         }
         catch (...)
@@ -2372,12 +2372,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_ImageUri(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"ImageUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2386,6 +2380,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"ImageUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.ImageUri(param0);
@@ -2400,14 +2400,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_IconUri(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"IconUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"IconUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IconUri());
         }
         catch (...)
@@ -2419,12 +2419,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_IconUri(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"IconUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2433,6 +2427,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"IconUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.IconUri(param0);
@@ -2447,14 +2447,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_Id(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -2466,12 +2466,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_Id(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2480,6 +2474,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Id(param0);
@@ -2494,14 +2494,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_FirstUri(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"FirstUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"FirstUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstUri());
         }
         catch (...)
@@ -2513,14 +2513,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_Items(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Items"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Items"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Items());
         }
         catch (...)
@@ -2532,14 +2532,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_LastUri(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"LastUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"LastUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastUri());
         }
         catch (...)
@@ -2551,14 +2551,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_Links(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Links"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Links"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Links());
         }
         catch (...)
@@ -2570,14 +2570,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_NextUri(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"NextUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"NextUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NextUri());
         }
         catch (...)
@@ -2589,14 +2589,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_PreviousUri(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"PreviousUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"PreviousUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousUri());
         }
         catch (...)
@@ -2608,14 +2608,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_Categories(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Categories"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Categories"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Categories());
         }
         catch (...)
@@ -2627,14 +2627,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_SourceFormat(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"SourceFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"SourceFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceFormat());
         }
         catch (...)
@@ -2646,14 +2646,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_Contributors(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Contributors"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Contributors"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contributors());
         }
         catch (...)
@@ -2665,14 +2665,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_Authors(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Authors"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Authors"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Authors());
         }
         catch (...)
@@ -2684,14 +2684,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -2703,12 +2703,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2717,6 +2711,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeValue(param0);
@@ -2731,14 +2731,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeNamespace());
         }
         catch (...)
@@ -2750,12 +2750,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2764,6 +2758,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeNamespace(param0);
@@ -2778,14 +2778,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -2797,12 +2797,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2811,6 +2805,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeName(param0);
@@ -2825,14 +2825,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_Language(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -2844,12 +2844,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_Language(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2858,6 +2852,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Language(param0);
@@ -2872,14 +2872,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseUri());
         }
         catch (...)
@@ -2891,12 +2891,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2905,6 +2899,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.BaseUri(param0);
@@ -2919,14 +2919,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_AttributeExtensions(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"AttributeExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"AttributeExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttributeExtensions());
         }
         catch (...)
@@ -2938,14 +2938,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_get_ElementExtensions(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"ElementExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationFeed", L"ElementExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ElementExtensions());
         }
         catch (...)
@@ -3095,14 +3095,14 @@ namespace py::cpp::Windows::Web::Syndication
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"GetXmlDocument", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"GetXmlDocument", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert(self->obj.GetXmlDocument(param0));
@@ -3122,14 +3122,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationGenerator_get_Version(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Version"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Version"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Version());
         }
         catch (...)
@@ -3141,12 +3141,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationGenerator_put_Version(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Version"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3155,6 +3149,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Version"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Version(param0);
@@ -3169,14 +3169,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationGenerator_get_Uri(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -3188,12 +3188,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationGenerator_put_Uri(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3202,6 +3196,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.Uri(param0);
@@ -3216,14 +3216,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationGenerator_get_Text(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Text"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Text"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Text());
         }
         catch (...)
@@ -3235,12 +3235,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationGenerator_put_Text(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Text"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3249,6 +3243,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Text"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Text(param0);
@@ -3263,14 +3263,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationGenerator_get_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -3282,12 +3282,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationGenerator_put_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3296,6 +3290,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeValue(param0);
@@ -3310,14 +3310,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationGenerator_get_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeNamespace());
         }
         catch (...)
@@ -3329,12 +3329,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationGenerator_put_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3343,6 +3337,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeNamespace(param0);
@@ -3357,14 +3357,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationGenerator_get_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -3376,12 +3376,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationGenerator_put_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3390,6 +3384,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeName(param0);
@@ -3404,14 +3404,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationGenerator_get_Language(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -3423,12 +3423,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationGenerator_put_Language(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3437,6 +3431,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Language(param0);
@@ -3451,14 +3451,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationGenerator_get_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseUri());
         }
         catch (...)
@@ -3470,12 +3470,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationGenerator_put_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3484,6 +3478,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.BaseUri(param0);
@@ -3498,14 +3498,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationGenerator_get_AttributeExtensions(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"AttributeExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"AttributeExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttributeExtensions());
         }
         catch (...)
@@ -3517,14 +3517,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationGenerator_get_ElementExtensions(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"ElementExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationGenerator", L"ElementExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ElementExtensions());
         }
         catch (...)
@@ -3659,14 +3659,14 @@ namespace py::cpp::Windows::Web::Syndication
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationItem", L"GetXmlDocument", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationItem", L"GetXmlDocument", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert(self->obj.GetXmlDocument(param0));
@@ -3690,14 +3690,14 @@ namespace py::cpp::Windows::Web::Syndication
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationItem", L"Load", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationItem", L"Load", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Load(param0);
@@ -3722,14 +3722,14 @@ namespace py::cpp::Windows::Web::Syndication
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationItem", L"LoadFromXml", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationItem", L"LoadFromXml", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(args, 0);
 
                 self->obj.LoadFromXml(param0);
@@ -3750,14 +3750,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_Title(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -3769,12 +3769,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_Title(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3783,6 +3777,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::ISyndicationText>(arg);
 
             self->obj.Title(param0);
@@ -3797,14 +3797,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_Source(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -3816,12 +3816,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_Source(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3830,6 +3824,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFeed>(arg);
 
             self->obj.Source(param0);
@@ -3844,14 +3844,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_Rights(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Rights"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Rights"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Rights());
         }
         catch (...)
@@ -3863,12 +3863,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_Rights(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Rights"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3877,6 +3871,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Rights"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::ISyndicationText>(arg);
 
             self->obj.Rights(param0);
@@ -3891,14 +3891,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_Summary(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Summary"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Summary"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Summary());
         }
         catch (...)
@@ -3910,12 +3910,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_Summary(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Summary"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3924,6 +3918,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Summary"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::ISyndicationText>(arg);
 
             self->obj.Summary(param0);
@@ -3938,14 +3938,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_PublishedDate(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"PublishedDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"PublishedDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PublishedDate());
         }
         catch (...)
@@ -3957,12 +3957,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_PublishedDate(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"PublishedDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3971,6 +3965,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"PublishedDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             self->obj.PublishedDate(param0);
@@ -3985,14 +3985,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_CommentsUri(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"CommentsUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"CommentsUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CommentsUri());
         }
         catch (...)
@@ -4004,12 +4004,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_CommentsUri(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"CommentsUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4018,6 +4012,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"CommentsUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.CommentsUri(param0);
@@ -4032,14 +4032,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_Id(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -4051,12 +4051,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_Id(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4065,6 +4059,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Id(param0);
@@ -4079,14 +4079,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_LastUpdatedTime(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"LastUpdatedTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"LastUpdatedTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastUpdatedTime());
         }
         catch (...)
@@ -4098,12 +4098,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_LastUpdatedTime(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"LastUpdatedTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4112,6 +4106,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"LastUpdatedTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             self->obj.LastUpdatedTime(param0);
@@ -4126,14 +4126,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_Content(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Content"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Content"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Content());
         }
         catch (...)
@@ -4145,12 +4145,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_Content(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Content"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4159,6 +4153,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Content"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationContent>(arg);
 
             self->obj.Content(param0);
@@ -4173,14 +4173,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_EditUri(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"EditUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"EditUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EditUri());
         }
         catch (...)
@@ -4192,14 +4192,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_Links(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Links"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Links"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Links());
         }
         catch (...)
@@ -4211,14 +4211,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_Authors(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Authors"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Authors"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Authors());
         }
         catch (...)
@@ -4230,14 +4230,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_Categories(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Categories"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Categories"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Categories());
         }
         catch (...)
@@ -4249,14 +4249,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_Contributors(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Contributors"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Contributors"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contributors());
         }
         catch (...)
@@ -4268,14 +4268,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_ItemUri(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"ItemUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"ItemUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ItemUri());
         }
         catch (...)
@@ -4287,14 +4287,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_ETag(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"ETag"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"ETag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ETag());
         }
         catch (...)
@@ -4306,14 +4306,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_EditMediaUri(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"EditMediaUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"EditMediaUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EditMediaUri());
         }
         catch (...)
@@ -4325,14 +4325,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -4344,12 +4344,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4358,6 +4352,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeValue(param0);
@@ -4372,14 +4372,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeNamespace());
         }
         catch (...)
@@ -4391,12 +4391,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4405,6 +4399,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeNamespace(param0);
@@ -4419,14 +4419,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -4438,12 +4438,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4452,6 +4446,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeName(param0);
@@ -4466,14 +4466,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_Language(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -4485,12 +4485,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_Language(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4499,6 +4493,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Language(param0);
@@ -4513,14 +4513,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseUri());
         }
         catch (...)
@@ -4532,12 +4532,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4546,6 +4540,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.BaseUri(param0);
@@ -4560,14 +4560,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_AttributeExtensions(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"AttributeExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"AttributeExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttributeExtensions());
         }
         catch (...)
@@ -4579,14 +4579,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_get_ElementExtensions(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"ElementExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationItem", L"ElementExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ElementExtensions());
         }
         catch (...)
@@ -4754,14 +4754,14 @@ namespace py::cpp::Windows::Web::Syndication
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationLink", L"GetXmlDocument", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationLink", L"GetXmlDocument", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert(self->obj.GetXmlDocument(param0));
@@ -4781,14 +4781,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationLink_get_Uri(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -4800,12 +4800,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationLink_put_Uri(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4814,6 +4808,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.Uri(param0);
@@ -4828,14 +4828,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationLink_get_Title(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -4847,12 +4847,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationLink_put_Title(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4861,6 +4855,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Title(param0);
@@ -4875,14 +4875,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationLink_get_ResourceLanguage(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"ResourceLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"ResourceLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceLanguage());
         }
         catch (...)
@@ -4894,12 +4894,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationLink_put_ResourceLanguage(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"ResourceLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4908,6 +4902,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"ResourceLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ResourceLanguage(param0);
@@ -4922,14 +4922,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationLink_get_Relationship(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Relationship"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Relationship"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Relationship());
         }
         catch (...)
@@ -4941,12 +4941,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationLink_put_Relationship(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Relationship"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4955,6 +4949,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Relationship"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Relationship(param0);
@@ -4969,14 +4969,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationLink_get_MediaType(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"MediaType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"MediaType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MediaType());
         }
         catch (...)
@@ -4988,12 +4988,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationLink_put_MediaType(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"MediaType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5002,6 +4996,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"MediaType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.MediaType(param0);
@@ -5016,14 +5016,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationLink_get_Length(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Length"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Length"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Length());
         }
         catch (...)
@@ -5035,12 +5035,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationLink_put_Length(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Length"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5049,6 +5043,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Length"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Length(param0);
@@ -5063,14 +5063,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationLink_get_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -5082,12 +5082,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationLink_put_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5096,6 +5090,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeValue(param0);
@@ -5110,14 +5110,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationLink_get_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeNamespace());
         }
         catch (...)
@@ -5129,12 +5129,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationLink_put_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5143,6 +5137,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeNamespace(param0);
@@ -5157,14 +5157,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationLink_get_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -5176,12 +5176,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationLink_put_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5190,6 +5184,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeName(param0);
@@ -5204,14 +5204,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationLink_get_Language(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -5223,12 +5223,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationLink_put_Language(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5237,6 +5231,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Language(param0);
@@ -5251,14 +5251,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationLink_get_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseUri());
         }
         catch (...)
@@ -5270,12 +5270,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationLink_put_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5284,6 +5278,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.BaseUri(param0);
@@ -5298,14 +5298,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationLink_get_AttributeExtensions(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"AttributeExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"AttributeExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttributeExtensions());
         }
         catch (...)
@@ -5317,14 +5317,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationLink_get_ElementExtensions(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"ElementExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationLink", L"ElementExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ElementExtensions());
         }
         catch (...)
@@ -5462,14 +5462,14 @@ namespace py::cpp::Windows::Web::Syndication
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationNode", L"GetXmlDocument", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationNode", L"GetXmlDocument", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert(self->obj.GetXmlDocument(param0));
@@ -5489,14 +5489,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationNode_get_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -5508,12 +5508,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationNode_put_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5522,6 +5516,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeValue(param0);
@@ -5536,14 +5536,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationNode_get_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeNamespace());
         }
         catch (...)
@@ -5555,12 +5555,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationNode_put_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5569,6 +5563,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeNamespace(param0);
@@ -5583,14 +5583,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationNode_get_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -5602,12 +5602,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationNode_put_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5616,6 +5610,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeName(param0);
@@ -5630,14 +5630,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationNode_get_Language(py::wrapper::Windows::Web::Syndication::SyndicationNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -5649,12 +5649,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationNode_put_Language(py::wrapper::Windows::Web::Syndication::SyndicationNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5663,6 +5657,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Language(param0);
@@ -5677,14 +5677,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationNode_get_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseUri());
         }
         catch (...)
@@ -5696,12 +5696,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationNode_put_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5710,6 +5704,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.BaseUri(param0);
@@ -5724,14 +5724,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationNode_get_AttributeExtensions(py::wrapper::Windows::Web::Syndication::SyndicationNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"AttributeExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"AttributeExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttributeExtensions());
         }
         catch (...)
@@ -5743,14 +5743,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationNode_get_ElementExtensions(py::wrapper::Windows::Web::Syndication::SyndicationNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"ElementExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationNode", L"ElementExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ElementExtensions());
         }
         catch (...)
@@ -5897,14 +5897,14 @@ namespace py::cpp::Windows::Web::Syndication
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationPerson", L"GetXmlDocument", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationPerson", L"GetXmlDocument", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert(self->obj.GetXmlDocument(param0));
@@ -5924,14 +5924,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationPerson_get_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -5943,12 +5943,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationPerson_put_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5957,6 +5951,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeValue(param0);
@@ -5971,14 +5971,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationPerson_get_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeNamespace());
         }
         catch (...)
@@ -5990,12 +5990,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationPerson_put_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6004,6 +5998,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeNamespace(param0);
@@ -6018,14 +6018,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationPerson_get_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -6037,12 +6037,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationPerson_put_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6051,6 +6045,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeName(param0);
@@ -6065,14 +6065,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationPerson_get_Language(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -6084,12 +6084,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationPerson_put_Language(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6098,6 +6092,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Language(param0);
@@ -6112,14 +6112,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationPerson_get_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseUri());
         }
         catch (...)
@@ -6131,12 +6131,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationPerson_put_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6145,6 +6139,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.BaseUri(param0);
@@ -6159,14 +6159,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationPerson_get_AttributeExtensions(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"AttributeExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"AttributeExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttributeExtensions());
         }
         catch (...)
@@ -6178,14 +6178,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationPerson_get_ElementExtensions(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"ElementExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"ElementExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ElementExtensions());
         }
         catch (...)
@@ -6197,14 +6197,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationPerson_get_Uri(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -6216,12 +6216,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationPerson_put_Uri(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6230,6 +6224,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.Uri(param0);
@@ -6244,14 +6244,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationPerson_get_Name(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -6263,12 +6263,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationPerson_put_Name(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6277,6 +6271,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Name(param0);
@@ -6291,14 +6291,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationPerson_get_Email(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Email"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Email"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Email());
         }
         catch (...)
@@ -6310,12 +6310,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationPerson_put_Email(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Email"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6324,6 +6318,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationPerson", L"Email"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Email(param0);
@@ -6475,14 +6475,14 @@ namespace py::cpp::Windows::Web::Syndication
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationText", L"GetXmlDocument", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.SyndicationText", L"GetXmlDocument", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert(self->obj.GetXmlDocument(param0));
@@ -6502,14 +6502,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationText_get_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -6521,12 +6521,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationText_put_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6535,6 +6529,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeValue(param0);
@@ -6549,14 +6549,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationText_get_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeNamespace());
         }
         catch (...)
@@ -6568,12 +6568,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationText_put_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6582,6 +6576,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeNamespace(param0);
@@ -6596,14 +6596,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationText_get_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -6615,12 +6615,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationText_put_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6629,6 +6623,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeName(param0);
@@ -6643,14 +6643,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationText_get_Language(py::wrapper::Windows::Web::Syndication::SyndicationText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -6662,12 +6662,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationText_put_Language(py::wrapper::Windows::Web::Syndication::SyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6676,6 +6670,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Language(param0);
@@ -6690,14 +6690,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationText_get_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseUri());
         }
         catch (...)
@@ -6709,12 +6709,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationText_put_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6723,6 +6717,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.BaseUri(param0);
@@ -6737,14 +6737,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationText_get_AttributeExtensions(py::wrapper::Windows::Web::Syndication::SyndicationText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"AttributeExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"AttributeExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttributeExtensions());
         }
         catch (...)
@@ -6756,14 +6756,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationText_get_ElementExtensions(py::wrapper::Windows::Web::Syndication::SyndicationText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"ElementExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"ElementExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ElementExtensions());
         }
         catch (...)
@@ -6775,14 +6775,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationText_get_Xml(py::wrapper::Windows::Web::Syndication::SyndicationText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Xml"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Xml"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Xml());
         }
         catch (...)
@@ -6794,12 +6794,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationText_put_Xml(py::wrapper::Windows::Web::Syndication::SyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Xml"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6808,6 +6802,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Xml"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(arg);
 
             self->obj.Xml(param0);
@@ -6822,14 +6822,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationText_get_Type(py::wrapper::Windows::Web::Syndication::SyndicationText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -6841,12 +6841,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationText_put_Type(py::wrapper::Windows::Web::Syndication::SyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6855,6 +6849,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Type(param0);
@@ -6869,14 +6869,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationText_get_Text(py::wrapper::Windows::Web::Syndication::SyndicationText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Text"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Text"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Text());
         }
         catch (...)
@@ -6888,12 +6888,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationText_put_Text(py::wrapper::Windows::Web::Syndication::SyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Text"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6902,6 +6896,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.SyndicationText", L"Text"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Text(param0);
@@ -7000,14 +7000,14 @@ namespace py::cpp::Windows::Web::Syndication
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.ISyndicationClient", L"RetrieveFeedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.ISyndicationClient", L"RetrieveFeedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(self->obj.RetrieveFeedAsync(param0));
@@ -7031,14 +7031,14 @@ namespace py::cpp::Windows::Web::Syndication
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.ISyndicationClient", L"SetRequestHeader", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.ISyndicationClient", L"SetRequestHeader", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -7060,14 +7060,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationClient_get_BypassCacheOnRetrieve(py::wrapper::Windows::Web::Syndication::ISyndicationClient* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"BypassCacheOnRetrieve"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"BypassCacheOnRetrieve"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BypassCacheOnRetrieve());
         }
         catch (...)
@@ -7079,12 +7079,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationClient_put_BypassCacheOnRetrieve(py::wrapper::Windows::Web::Syndication::ISyndicationClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"BypassCacheOnRetrieve"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7093,6 +7087,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"BypassCacheOnRetrieve"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.BypassCacheOnRetrieve(param0);
@@ -7107,14 +7107,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationClient_get_MaxResponseBufferSize(py::wrapper::Windows::Web::Syndication::ISyndicationClient* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"MaxResponseBufferSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"MaxResponseBufferSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxResponseBufferSize());
         }
         catch (...)
@@ -7126,12 +7126,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationClient_put_MaxResponseBufferSize(py::wrapper::Windows::Web::Syndication::ISyndicationClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"MaxResponseBufferSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7140,6 +7134,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"MaxResponseBufferSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.MaxResponseBufferSize(param0);
@@ -7154,14 +7154,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationClient_get_ProxyCredential(py::wrapper::Windows::Web::Syndication::ISyndicationClient* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"ProxyCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"ProxyCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProxyCredential());
         }
         catch (...)
@@ -7173,12 +7173,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationClient_put_ProxyCredential(py::wrapper::Windows::Web::Syndication::ISyndicationClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"ProxyCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7187,6 +7181,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"ProxyCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             self->obj.ProxyCredential(param0);
@@ -7201,14 +7201,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationClient_get_ServerCredential(py::wrapper::Windows::Web::Syndication::ISyndicationClient* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"ServerCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"ServerCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServerCredential());
         }
         catch (...)
@@ -7220,12 +7220,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationClient_put_ServerCredential(py::wrapper::Windows::Web::Syndication::ISyndicationClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"ServerCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7234,6 +7228,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"ServerCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             self->obj.ServerCredential(param0);
@@ -7248,14 +7248,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationClient_get_Timeout(py::wrapper::Windows::Web::Syndication::ISyndicationClient* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"Timeout"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"Timeout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timeout());
         }
         catch (...)
@@ -7267,12 +7267,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationClient_put_Timeout(py::wrapper::Windows::Web::Syndication::ISyndicationClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"Timeout"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7281,6 +7275,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationClient", L"Timeout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Timeout(param0);
@@ -7375,14 +7375,14 @@ namespace py::cpp::Windows::Web::Syndication
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.ISyndicationNode", L"GetXmlDocument", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.ISyndicationNode", L"GetXmlDocument", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert(self->obj.GetXmlDocument(param0));
@@ -7402,14 +7402,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationNode_get_AttributeExtensions(py::wrapper::Windows::Web::Syndication::ISyndicationNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"AttributeExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"AttributeExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttributeExtensions());
         }
         catch (...)
@@ -7421,14 +7421,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationNode_get_BaseUri(py::wrapper::Windows::Web::Syndication::ISyndicationNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseUri());
         }
         catch (...)
@@ -7440,12 +7440,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationNode_put_BaseUri(py::wrapper::Windows::Web::Syndication::ISyndicationNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7454,6 +7448,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.BaseUri(param0);
@@ -7468,14 +7468,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationNode_get_ElementExtensions(py::wrapper::Windows::Web::Syndication::ISyndicationNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"ElementExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"ElementExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ElementExtensions());
         }
         catch (...)
@@ -7487,14 +7487,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationNode_get_Language(py::wrapper::Windows::Web::Syndication::ISyndicationNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -7506,12 +7506,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationNode_put_Language(py::wrapper::Windows::Web::Syndication::ISyndicationNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7520,6 +7514,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Language(param0);
@@ -7534,14 +7534,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationNode_get_NodeName(py::wrapper::Windows::Web::Syndication::ISyndicationNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -7553,12 +7553,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationNode_put_NodeName(py::wrapper::Windows::Web::Syndication::ISyndicationNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7567,6 +7561,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeName(param0);
@@ -7581,14 +7581,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationNode_get_NodeNamespace(py::wrapper::Windows::Web::Syndication::ISyndicationNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeNamespace());
         }
         catch (...)
@@ -7600,12 +7600,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationNode_put_NodeNamespace(py::wrapper::Windows::Web::Syndication::ISyndicationNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7614,6 +7608,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeNamespace(param0);
@@ -7628,14 +7628,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationNode_get_NodeValue(py::wrapper::Windows::Web::Syndication::ISyndicationNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -7647,12 +7647,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationNode_put_NodeValue(py::wrapper::Windows::Web::Syndication::ISyndicationNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7661,6 +7655,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeValue(param0);
@@ -7756,14 +7756,14 @@ namespace py::cpp::Windows::Web::Syndication
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.ISyndicationNode", L"GetXmlDocument", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Syndication.ISyndicationNode", L"GetXmlDocument", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert(self->obj.GetXmlDocument(param0));
@@ -7783,14 +7783,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationText_get_Text(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationText", L"Text"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationText", L"Text"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Text());
         }
         catch (...)
@@ -7802,12 +7802,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationText_put_Text(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationText", L"Text"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7816,6 +7810,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationText", L"Text"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Text(param0);
@@ -7830,14 +7830,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationText_get_Type(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationText", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationText", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -7849,12 +7849,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationText_put_Type(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationText", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7863,6 +7857,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationText", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Type(param0);
@@ -7877,14 +7877,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationText_get_Xml(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationText", L"Xml"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationText", L"Xml"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Xml());
         }
         catch (...)
@@ -7896,12 +7896,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationText_put_Xml(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationText", L"Xml"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7910,6 +7904,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationText", L"Xml"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(arg);
 
             self->obj.Xml(param0);
@@ -7924,14 +7924,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationText_get_AttributeExtensions(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"AttributeExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"AttributeExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttributeExtensions());
         }
         catch (...)
@@ -7943,14 +7943,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationText_get_BaseUri(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseUri());
         }
         catch (...)
@@ -7962,12 +7962,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationText_put_BaseUri(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7976,6 +7970,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.BaseUri(param0);
@@ -7990,14 +7990,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationText_get_ElementExtensions(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"ElementExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"ElementExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ElementExtensions());
         }
         catch (...)
@@ -8009,14 +8009,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationText_get_Language(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -8028,12 +8028,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationText_put_Language(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8042,6 +8036,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Language(param0);
@@ -8056,14 +8056,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationText_get_NodeName(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -8075,12 +8075,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationText_put_NodeName(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8089,6 +8083,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeName(param0);
@@ -8103,14 +8103,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationText_get_NodeNamespace(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeNamespace());
         }
         catch (...)
@@ -8122,12 +8122,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationText_put_NodeNamespace(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8136,6 +8130,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeNamespace(param0);
@@ -8150,14 +8150,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationText_get_NodeValue(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -8169,12 +8169,6 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationText_put_NodeValue(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8183,6 +8177,12 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Syndication.ISyndicationNode", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeValue(param0);

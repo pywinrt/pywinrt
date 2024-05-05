@@ -20,14 +20,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.GameControllerFactoryManager", L"RegisterCustomFactoryForGipInterface", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.GameControllerFactoryManager", L"RegisterCustomFactoryForGipInterface", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>(args, 0);
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
 
@@ -53,14 +53,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.GameControllerFactoryManager", L"RegisterCustomFactoryForHardwareId", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.GameControllerFactoryManager", L"RegisterCustomFactoryForHardwareId", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
                 auto param2 = py::convert_to<uint16_t>(args, 2);
@@ -87,14 +87,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.GameControllerFactoryManager", L"RegisterCustomFactoryForXusbType", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.GameControllerFactoryManager", L"RegisterCustomFactoryForXusbType", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Gaming::Input::Custom::XusbDeviceType>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Gaming::Input::Custom::XusbDeviceSubtype>(args, 2);
@@ -121,14 +121,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.GameControllerFactoryManager", L"TryGetFactoryControllerFromGameController", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.GameControllerFactoryManager", L"TryGetFactoryControllerFromGameController", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Gaming::Input::IGameController>(args, 1);
 
@@ -220,14 +220,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* GipFirmwareUpdateResult_get_ExtendedErrorCode(py::wrapper::Windows::Gaming::Input::Custom::GipFirmwareUpdateResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.GipFirmwareUpdateResult", L"ExtendedErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.GipFirmwareUpdateResult", L"ExtendedErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedErrorCode());
         }
         catch (...)
@@ -239,14 +239,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* GipFirmwareUpdateResult_get_FinalComponentId(py::wrapper::Windows::Gaming::Input::Custom::GipFirmwareUpdateResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.GipFirmwareUpdateResult", L"FinalComponentId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.GipFirmwareUpdateResult", L"FinalComponentId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FinalComponentId());
         }
         catch (...)
@@ -258,14 +258,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* GipFirmwareUpdateResult_get_Status(py::wrapper::Windows::Gaming::Input::Custom::GipFirmwareUpdateResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.GipFirmwareUpdateResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.GipFirmwareUpdateResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -353,14 +353,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.GipGameControllerProvider", L"SendMessage", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.GipGameControllerProvider", L"SendMessage", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Custom::GipMessageClass>(args, 0);
                 auto param1 = py::convert_to<uint8_t>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 2);
@@ -387,14 +387,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.GipGameControllerProvider", L"SendReceiveMessage", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.GipGameControllerProvider", L"SendReceiveMessage", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Custom::GipMessageClass>(args, 0);
                 auto param1 = py::convert_to<uint8_t>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 2);
@@ -422,14 +422,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.GipGameControllerProvider", L"UpdateFirmwareAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.GipGameControllerProvider", L"UpdateFirmwareAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
                 return py::convert(self->obj.UpdateFirmwareAsync(param0));
@@ -449,14 +449,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* GipGameControllerProvider_get_FirmwareVersionInfo(py::wrapper::Windows::Gaming::Input::Custom::GipGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.GipGameControllerProvider", L"FirmwareVersionInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.GipGameControllerProvider", L"FirmwareVersionInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirmwareVersionInfo());
         }
         catch (...)
@@ -468,14 +468,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* GipGameControllerProvider_get_HardwareProductId(py::wrapper::Windows::Gaming::Input::Custom::GipGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.GipGameControllerProvider", L"HardwareProductId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.GipGameControllerProvider", L"HardwareProductId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HardwareProductId());
         }
         catch (...)
@@ -487,14 +487,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* GipGameControllerProvider_get_HardwareVendorId(py::wrapper::Windows::Gaming::Input::Custom::GipGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.GipGameControllerProvider", L"HardwareVendorId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.GipGameControllerProvider", L"HardwareVendorId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HardwareVendorId());
         }
         catch (...)
@@ -506,14 +506,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* GipGameControllerProvider_get_HardwareVersionInfo(py::wrapper::Windows::Gaming::Input::Custom::GipGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.GipGameControllerProvider", L"HardwareVersionInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.GipGameControllerProvider", L"HardwareVersionInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HardwareVersionInfo());
         }
         catch (...)
@@ -525,14 +525,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* GipGameControllerProvider_get_IsConnected(py::wrapper::Windows::Gaming::Input::Custom::GipGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.GipGameControllerProvider", L"IsConnected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.GipGameControllerProvider", L"IsConnected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsConnected());
         }
         catch (...)
@@ -625,14 +625,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.HidGameControllerProvider", L"GetFeatureReport", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.HidGameControllerProvider", L"GetFeatureReport", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint8_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 1);
 
@@ -658,14 +658,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.HidGameControllerProvider", L"SendFeatureReport", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.HidGameControllerProvider", L"SendFeatureReport", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint8_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
@@ -691,14 +691,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.HidGameControllerProvider", L"SendOutputReport", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.HidGameControllerProvider", L"SendOutputReport", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint8_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
@@ -720,14 +720,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* HidGameControllerProvider_get_FirmwareVersionInfo(py::wrapper::Windows::Gaming::Input::Custom::HidGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.HidGameControllerProvider", L"FirmwareVersionInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.HidGameControllerProvider", L"FirmwareVersionInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirmwareVersionInfo());
         }
         catch (...)
@@ -739,14 +739,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* HidGameControllerProvider_get_HardwareProductId(py::wrapper::Windows::Gaming::Input::Custom::HidGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.HidGameControllerProvider", L"HardwareProductId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.HidGameControllerProvider", L"HardwareProductId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HardwareProductId());
         }
         catch (...)
@@ -758,14 +758,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* HidGameControllerProvider_get_HardwareVendorId(py::wrapper::Windows::Gaming::Input::Custom::HidGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.HidGameControllerProvider", L"HardwareVendorId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.HidGameControllerProvider", L"HardwareVendorId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HardwareVendorId());
         }
         catch (...)
@@ -777,14 +777,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* HidGameControllerProvider_get_HardwareVersionInfo(py::wrapper::Windows::Gaming::Input::Custom::HidGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.HidGameControllerProvider", L"HardwareVersionInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.HidGameControllerProvider", L"HardwareVersionInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HardwareVersionInfo());
         }
         catch (...)
@@ -796,14 +796,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* HidGameControllerProvider_get_IsConnected(py::wrapper::Windows::Gaming::Input::Custom::HidGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.HidGameControllerProvider", L"IsConnected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.HidGameControllerProvider", L"IsConnected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsConnected());
         }
         catch (...)
@@ -815,14 +815,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* HidGameControllerProvider_get_UsageId(py::wrapper::Windows::Gaming::Input::Custom::HidGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.HidGameControllerProvider", L"UsageId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.HidGameControllerProvider", L"UsageId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UsageId());
         }
         catch (...)
@@ -834,14 +834,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* HidGameControllerProvider_get_UsagePage(py::wrapper::Windows::Gaming::Input::Custom::HidGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.HidGameControllerProvider", L"UsagePage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.HidGameControllerProvider", L"UsagePage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UsagePage());
         }
         catch (...)
@@ -936,14 +936,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.XusbGameControllerProvider", L"SetVibration", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.XusbGameControllerProvider", L"SetVibration", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
@@ -965,14 +965,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* XusbGameControllerProvider_get_FirmwareVersionInfo(py::wrapper::Windows::Gaming::Input::Custom::XusbGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.XusbGameControllerProvider", L"FirmwareVersionInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.XusbGameControllerProvider", L"FirmwareVersionInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirmwareVersionInfo());
         }
         catch (...)
@@ -984,14 +984,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* XusbGameControllerProvider_get_HardwareProductId(py::wrapper::Windows::Gaming::Input::Custom::XusbGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.XusbGameControllerProvider", L"HardwareProductId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.XusbGameControllerProvider", L"HardwareProductId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HardwareProductId());
         }
         catch (...)
@@ -1003,14 +1003,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* XusbGameControllerProvider_get_HardwareVendorId(py::wrapper::Windows::Gaming::Input::Custom::XusbGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.XusbGameControllerProvider", L"HardwareVendorId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.XusbGameControllerProvider", L"HardwareVendorId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HardwareVendorId());
         }
         catch (...)
@@ -1022,14 +1022,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* XusbGameControllerProvider_get_HardwareVersionInfo(py::wrapper::Windows::Gaming::Input::Custom::XusbGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.XusbGameControllerProvider", L"HardwareVersionInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.XusbGameControllerProvider", L"HardwareVersionInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HardwareVersionInfo());
         }
         catch (...)
@@ -1041,14 +1041,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* XusbGameControllerProvider_get_IsConnected(py::wrapper::Windows::Gaming::Input::Custom::XusbGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.XusbGameControllerProvider", L"IsConnected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.XusbGameControllerProvider", L"IsConnected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsConnected());
         }
         catch (...)
@@ -1139,14 +1139,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.ICustomGameControllerFactory", L"CreateGameController", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.ICustomGameControllerFactory", L"CreateGameController", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>(args, 0);
 
                 return py::convert(self->obj.CreateGameController(param0));
@@ -1170,14 +1170,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.ICustomGameControllerFactory", L"OnGameControllerAdded", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.ICustomGameControllerFactory", L"OnGameControllerAdded", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::IGameController>(args, 0);
 
                 self->obj.OnGameControllerAdded(param0);
@@ -1202,14 +1202,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.ICustomGameControllerFactory", L"OnGameControllerRemoved", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.ICustomGameControllerFactory", L"OnGameControllerRemoved", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::IGameController>(args, 0);
 
                 self->obj.OnGameControllerRemoved(param0);
@@ -1306,14 +1306,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IGameControllerInputSink", L"OnInputResumed", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IGameControllerInputSink", L"OnInputResumed", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 self->obj.OnInputResumed(param0);
@@ -1338,14 +1338,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IGameControllerInputSink", L"OnInputSuspended", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IGameControllerInputSink", L"OnInputSuspended", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 self->obj.OnInputSuspended(param0);
@@ -1437,14 +1437,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* IGameControllerProvider_get_FirmwareVersionInfo(py::wrapper::Windows::Gaming::Input::Custom::IGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.IGameControllerProvider", L"FirmwareVersionInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.IGameControllerProvider", L"FirmwareVersionInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirmwareVersionInfo());
         }
         catch (...)
@@ -1456,14 +1456,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* IGameControllerProvider_get_HardwareProductId(py::wrapper::Windows::Gaming::Input::Custom::IGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.IGameControllerProvider", L"HardwareProductId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.IGameControllerProvider", L"HardwareProductId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HardwareProductId());
         }
         catch (...)
@@ -1475,14 +1475,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* IGameControllerProvider_get_HardwareVendorId(py::wrapper::Windows::Gaming::Input::Custom::IGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.IGameControllerProvider", L"HardwareVendorId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.IGameControllerProvider", L"HardwareVendorId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HardwareVendorId());
         }
         catch (...)
@@ -1494,14 +1494,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* IGameControllerProvider_get_HardwareVersionInfo(py::wrapper::Windows::Gaming::Input::Custom::IGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.IGameControllerProvider", L"HardwareVersionInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.IGameControllerProvider", L"HardwareVersionInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HardwareVersionInfo());
         }
         catch (...)
@@ -1513,14 +1513,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* IGameControllerProvider_get_IsConnected(py::wrapper::Windows::Gaming::Input::Custom::IGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.IGameControllerProvider", L"IsConnected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Custom.IGameControllerProvider", L"IsConnected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsConnected());
         }
         catch (...)
@@ -1610,14 +1610,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IGameControllerInputSink", L"OnInputResumed", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IGameControllerInputSink", L"OnInputResumed", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 self->obj.OnInputResumed(param0);
@@ -1642,14 +1642,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IGameControllerInputSink", L"OnInputSuspended", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IGameControllerInputSink", L"OnInputSuspended", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 self->obj.OnInputSuspended(param0);
@@ -1674,14 +1674,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IGipGameControllerInputSink", L"OnKeyReceived", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IGipGameControllerInputSink", L"OnKeyReceived", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
                 auto param1 = py::convert_to<uint8_t>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -1708,14 +1708,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IGipGameControllerInputSink", L"OnMessageReceived", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IGipGameControllerInputSink", L"OnMessageReceived", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Gaming::Input::Custom::GipMessageClass>(args, 1);
                 auto param2 = py::convert_to<uint8_t>(args, 2);
@@ -1817,14 +1817,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IHidGameControllerInputSink", L"OnInputReportReceived", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IHidGameControllerInputSink", L"OnInputReportReceived", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
                 auto param1 = py::convert_to<uint8_t>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 2);
@@ -1851,14 +1851,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IGameControllerInputSink", L"OnInputResumed", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IGameControllerInputSink", L"OnInputResumed", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 self->obj.OnInputResumed(param0);
@@ -1883,14 +1883,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IGameControllerInputSink", L"OnInputSuspended", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IGameControllerInputSink", L"OnInputSuspended", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 self->obj.OnInputSuspended(param0);
@@ -1987,14 +1987,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IXusbGameControllerInputSink", L"OnInputReceived", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IXusbGameControllerInputSink", L"OnInputReceived", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
                 auto param1 = py::convert_to<uint8_t>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 2);
@@ -2021,14 +2021,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IGameControllerInputSink", L"OnInputResumed", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IGameControllerInputSink", L"OnInputResumed", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 self->obj.OnInputResumed(param0);
@@ -2053,14 +2053,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IGameControllerInputSink", L"OnInputSuspended", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.IGameControllerInputSink", L"OnInputSuspended", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 self->obj.OnInputSuspended(param0);

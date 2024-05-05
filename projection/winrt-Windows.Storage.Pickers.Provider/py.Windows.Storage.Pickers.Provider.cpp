@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"AddFile", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"AddFile", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 1);
 
@@ -60,14 +60,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"CanAddFile", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"CanAddFile", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert(self->obj.CanAddFile(param0));
@@ -91,14 +91,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"ContainsFile", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"ContainsFile", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ContainsFile(param0));
@@ -122,14 +122,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"RemoveFile", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"RemoveFile", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.RemoveFile(param0);
@@ -150,14 +150,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* FileOpenPickerUI_get_Title(py::wrapper::Windows::Storage::Pickers::Provider::FileOpenPickerUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -169,12 +169,6 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static int FileOpenPickerUI_put_Title(py::wrapper::Windows::Storage::Pickers::Provider::FileOpenPickerUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -183,6 +177,12 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Title(param0);
@@ -197,14 +197,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* FileOpenPickerUI_get_AllowedFileTypes(py::wrapper::Windows::Storage::Pickers::Provider::FileOpenPickerUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"AllowedFileTypes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"AllowedFileTypes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowedFileTypes());
         }
         catch (...)
@@ -216,14 +216,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* FileOpenPickerUI_get_SelectionMode(py::wrapper::Windows::Storage::Pickers::Provider::FileOpenPickerUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"SelectionMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"SelectionMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectionMode());
         }
         catch (...)
@@ -235,14 +235,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* FileOpenPickerUI_get_SettingsIdentifier(py::wrapper::Windows::Storage::Pickers::Provider::FileOpenPickerUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"SettingsIdentifier"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"SettingsIdentifier"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SettingsIdentifier());
         }
         catch (...)
@@ -254,14 +254,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* FileOpenPickerUI_add_Closing(py::wrapper::Windows::Storage::Pickers::Provider::FileOpenPickerUI* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"Closing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"Closing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Pickers::Provider::FileOpenPickerUI, winrt::Windows::Storage::Pickers::Provider::PickerClosingEventArgs>>(arg);
 
             return py::convert(self->obj.Closing(param0));
@@ -275,14 +275,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* FileOpenPickerUI_remove_Closing(py::wrapper::Windows::Storage::Pickers::Provider::FileOpenPickerUI* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"Closing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"Closing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Closing(param0);
@@ -297,14 +297,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* FileOpenPickerUI_add_FileRemoved(py::wrapper::Windows::Storage::Pickers::Provider::FileOpenPickerUI* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"FileRemoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"FileRemoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Pickers::Provider::FileOpenPickerUI, winrt::Windows::Storage::Pickers::Provider::FileRemovedEventArgs>>(arg);
 
             return py::convert(self->obj.FileRemoved(param0));
@@ -318,14 +318,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* FileOpenPickerUI_remove_FileRemoved(py::wrapper::Windows::Storage::Pickers::Provider::FileOpenPickerUI* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"FileRemoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Pickers.Provider.FileOpenPickerUI", L"FileRemoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FileRemoved(param0);
@@ -421,14 +421,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* FileRemovedEventArgs_get_Id(py::wrapper::Windows::Storage::Pickers::Provider::FileRemovedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.FileRemovedEventArgs", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.FileRemovedEventArgs", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -514,14 +514,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.Provider.FileSavePickerUI", L"TrySetFileName", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.Provider.FileSavePickerUI", L"TrySetFileName", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TrySetFileName(param0));
@@ -541,14 +541,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* FileSavePickerUI_get_Title(py::wrapper::Windows::Storage::Pickers::Provider::FileSavePickerUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.FileSavePickerUI", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.FileSavePickerUI", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -560,12 +560,6 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static int FileSavePickerUI_put_Title(py::wrapper::Windows::Storage::Pickers::Provider::FileSavePickerUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.FileSavePickerUI", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -574,6 +568,12 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.FileSavePickerUI", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Title(param0);
@@ -588,14 +588,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* FileSavePickerUI_get_AllowedFileTypes(py::wrapper::Windows::Storage::Pickers::Provider::FileSavePickerUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.FileSavePickerUI", L"AllowedFileTypes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.FileSavePickerUI", L"AllowedFileTypes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowedFileTypes());
         }
         catch (...)
@@ -607,14 +607,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* FileSavePickerUI_get_FileName(py::wrapper::Windows::Storage::Pickers::Provider::FileSavePickerUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.FileSavePickerUI", L"FileName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.FileSavePickerUI", L"FileName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FileName());
         }
         catch (...)
@@ -626,14 +626,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* FileSavePickerUI_get_SettingsIdentifier(py::wrapper::Windows::Storage::Pickers::Provider::FileSavePickerUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.FileSavePickerUI", L"SettingsIdentifier"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.FileSavePickerUI", L"SettingsIdentifier"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SettingsIdentifier());
         }
         catch (...)
@@ -645,14 +645,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* FileSavePickerUI_add_FileNameChanged(py::wrapper::Windows::Storage::Pickers::Provider::FileSavePickerUI* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Pickers.Provider.FileSavePickerUI", L"FileNameChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Pickers.Provider.FileSavePickerUI", L"FileNameChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Pickers::Provider::FileSavePickerUI, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.FileNameChanged(param0));
@@ -666,14 +666,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* FileSavePickerUI_remove_FileNameChanged(py::wrapper::Windows::Storage::Pickers::Provider::FileSavePickerUI* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Pickers.Provider.FileSavePickerUI", L"FileNameChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Pickers.Provider.FileSavePickerUI", L"FileNameChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FileNameChanged(param0);
@@ -688,14 +688,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* FileSavePickerUI_add_TargetFileRequested(py::wrapper::Windows::Storage::Pickers::Provider::FileSavePickerUI* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Pickers.Provider.FileSavePickerUI", L"TargetFileRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Pickers.Provider.FileSavePickerUI", L"TargetFileRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Pickers::Provider::FileSavePickerUI, winrt::Windows::Storage::Pickers::Provider::TargetFileRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.TargetFileRequested(param0));
@@ -709,14 +709,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* FileSavePickerUI_remove_TargetFileRequested(py::wrapper::Windows::Storage::Pickers::Provider::FileSavePickerUI* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Pickers.Provider.FileSavePickerUI", L"TargetFileRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Pickers.Provider.FileSavePickerUI", L"TargetFileRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.TargetFileRequested(param0);
@@ -813,14 +813,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.Provider.PickerClosingDeferral", L"Complete", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.Provider.PickerClosingDeferral", L"Complete", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Complete();
                 Py_RETURN_NONE;
             }
@@ -909,14 +909,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* PickerClosingEventArgs_get_ClosingOperation(py::wrapper::Windows::Storage::Pickers::Provider::PickerClosingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.PickerClosingEventArgs", L"ClosingOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.PickerClosingEventArgs", L"ClosingOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClosingOperation());
         }
         catch (...)
@@ -928,14 +928,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* PickerClosingEventArgs_get_IsCanceled(py::wrapper::Windows::Storage::Pickers::Provider::PickerClosingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.PickerClosingEventArgs", L"IsCanceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.PickerClosingEventArgs", L"IsCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCanceled());
         }
         catch (...)
@@ -1022,14 +1022,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.Provider.PickerClosingOperation", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.Provider.PickerClosingOperation", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1047,14 +1047,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* PickerClosingOperation_get_Deadline(py::wrapper::Windows::Storage::Pickers::Provider::PickerClosingOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.PickerClosingOperation", L"Deadline"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.PickerClosingOperation", L"Deadline"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Deadline());
         }
         catch (...)
@@ -1141,14 +1141,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.Provider.TargetFileRequest", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.Provider.TargetFileRequest", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1166,14 +1166,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* TargetFileRequest_get_TargetFile(py::wrapper::Windows::Storage::Pickers::Provider::TargetFileRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.TargetFileRequest", L"TargetFile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.TargetFileRequest", L"TargetFile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetFile());
         }
         catch (...)
@@ -1185,12 +1185,6 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static int TargetFileRequest_put_TargetFile(py::wrapper::Windows::Storage::Pickers::Provider::TargetFileRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.TargetFileRequest", L"TargetFile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1199,6 +1193,12 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.TargetFileRequest", L"TargetFile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(arg);
 
             self->obj.TargetFile(param0);
@@ -1288,14 +1288,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.Provider.TargetFileRequestDeferral", L"Complete", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.Provider.TargetFileRequestDeferral", L"Complete", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Complete();
                 Py_RETURN_NONE;
             }
@@ -1384,14 +1384,14 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* TargetFileRequestedEventArgs_get_Request(py::wrapper::Windows::Storage::Pickers::Provider::TargetFileRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)

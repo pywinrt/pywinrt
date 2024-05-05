@@ -169,14 +169,14 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"Format", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"Format", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
 
                 return py::convert(self->obj.Format(param0));
@@ -189,14 +189,14 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"Format", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"Format", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -217,14 +217,14 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyObject* DateTimeFormatter_get_NumeralSystem(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"NumeralSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"NumeralSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumeralSystem());
         }
         catch (...)
@@ -236,12 +236,6 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static int DateTimeFormatter_put_NumeralSystem(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"NumeralSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -250,6 +244,12 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"NumeralSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NumeralSystem(param0);
@@ -264,14 +264,14 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyObject* DateTimeFormatter_get_Clock(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"Clock"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"Clock"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Clock());
         }
         catch (...)
@@ -283,14 +283,14 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyObject* DateTimeFormatter_get_GeographicRegion(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"GeographicRegion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"GeographicRegion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GeographicRegion());
         }
         catch (...)
@@ -302,14 +302,14 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyObject* DateTimeFormatter_get_IncludeDay(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"IncludeDay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"IncludeDay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IncludeDay());
         }
         catch (...)
@@ -321,14 +321,14 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyObject* DateTimeFormatter_get_IncludeDayOfWeek(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"IncludeDayOfWeek"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"IncludeDayOfWeek"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IncludeDayOfWeek());
         }
         catch (...)
@@ -340,14 +340,14 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyObject* DateTimeFormatter_get_IncludeHour(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"IncludeHour"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"IncludeHour"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IncludeHour());
         }
         catch (...)
@@ -359,14 +359,14 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyObject* DateTimeFormatter_get_IncludeMinute(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"IncludeMinute"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"IncludeMinute"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IncludeMinute());
         }
         catch (...)
@@ -378,14 +378,14 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyObject* DateTimeFormatter_get_IncludeMonth(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"IncludeMonth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"IncludeMonth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IncludeMonth());
         }
         catch (...)
@@ -397,14 +397,14 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyObject* DateTimeFormatter_get_IncludeSecond(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"IncludeSecond"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"IncludeSecond"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IncludeSecond());
         }
         catch (...)
@@ -416,14 +416,14 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyObject* DateTimeFormatter_get_IncludeYear(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"IncludeYear"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"IncludeYear"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IncludeYear());
         }
         catch (...)
@@ -435,14 +435,14 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyObject* DateTimeFormatter_get_Languages(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"Languages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"Languages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Languages());
         }
         catch (...)
@@ -454,14 +454,14 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyObject* DateTimeFormatter_get_Calendar(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"Calendar"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"Calendar"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Calendar());
         }
         catch (...)
@@ -473,14 +473,14 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyObject* DateTimeFormatter_get_Patterns(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"Patterns"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"Patterns"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Patterns());
         }
         catch (...)
@@ -492,14 +492,14 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyObject* DateTimeFormatter_get_ResolvedGeographicRegion(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"ResolvedGeographicRegion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"ResolvedGeographicRegion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolvedGeographicRegion());
         }
         catch (...)
@@ -511,14 +511,14 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyObject* DateTimeFormatter_get_ResolvedLanguage(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"ResolvedLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"ResolvedLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolvedLanguage());
         }
         catch (...)
@@ -530,14 +530,14 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyObject* DateTimeFormatter_get_Template(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"Template"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"Template"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Template());
         }
         catch (...)
@@ -549,14 +549,14 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyObject* DateTimeFormatter_get_LongDate(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"LongDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"LongDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter::LongDate());
         }
         catch (...)
@@ -568,14 +568,14 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyObject* DateTimeFormatter_get_LongTime(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"LongTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"LongTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter::LongTime());
         }
         catch (...)
@@ -587,14 +587,14 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyObject* DateTimeFormatter_get_ShortDate(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"ShortDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"ShortDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter::ShortDate());
         }
         catch (...)
@@ -606,14 +606,14 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyObject* DateTimeFormatter_get_ShortTime(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"ShortTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.DateTimeFormatting.DateTimeFormatter", L"ShortTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter::ShortTime());
         }
         catch (...)

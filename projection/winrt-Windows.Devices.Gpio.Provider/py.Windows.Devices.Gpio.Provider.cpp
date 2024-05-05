@@ -48,14 +48,14 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     static PyObject* GpioPinProviderValueChangedEventArgs_get_Edge(py::wrapper::Windows::Devices::Gpio::Provider::GpioPinProviderValueChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs", L"Edge"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs", L"Edge"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Edge());
         }
         catch (...)
@@ -141,14 +141,14 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Gpio.Provider.IGpioControllerProvider", L"OpenPinProvider", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Gpio.Provider.IGpioControllerProvider", L"OpenPinProvider", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Gpio::Provider::ProviderGpioSharingMode>(args, 1);
 
@@ -169,14 +169,14 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     static PyObject* IGpioControllerProvider_get_PinCount(py::wrapper::Windows::Devices::Gpio::Provider::IGpioControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Gpio.Provider.IGpioControllerProvider", L"PinCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Gpio.Provider.IGpioControllerProvider", L"PinCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PinCount());
         }
         catch (...)
@@ -263,14 +263,14 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Gpio.Provider.IGpioPinProvider", L"GetDriveMode", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Gpio.Provider.IGpioPinProvider", L"GetDriveMode", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDriveMode());
             }
             catch (...)
@@ -292,14 +292,14 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Gpio.Provider.IGpioPinProvider", L"IsDriveModeSupported", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Gpio.Provider.IGpioPinProvider", L"IsDriveModeSupported", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Gpio::Provider::ProviderGpioPinDriveMode>(args, 0);
 
                 return py::convert(self->obj.IsDriveModeSupported(param0));
@@ -323,14 +323,14 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Gpio.Provider.IGpioPinProvider", L"Read", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Gpio.Provider.IGpioPinProvider", L"Read", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.Read());
             }
             catch (...)
@@ -352,14 +352,14 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Gpio.Provider.IGpioPinProvider", L"SetDriveMode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Gpio.Provider.IGpioPinProvider", L"SetDriveMode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Gpio::Provider::ProviderGpioPinDriveMode>(args, 0);
 
                 self->obj.SetDriveMode(param0);
@@ -384,14 +384,14 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Gpio.Provider.IGpioPinProvider", L"Write", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Gpio.Provider.IGpioPinProvider", L"Write", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Gpio::Provider::ProviderGpioPinValue>(args, 0);
 
                 self->obj.Write(param0);
@@ -412,14 +412,14 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     static PyObject* IGpioPinProvider_get_DebounceTimeout(py::wrapper::Windows::Devices::Gpio::Provider::IGpioPinProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Gpio.Provider.IGpioPinProvider", L"DebounceTimeout"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Gpio.Provider.IGpioPinProvider", L"DebounceTimeout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DebounceTimeout());
         }
         catch (...)
@@ -431,12 +431,6 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     static int IGpioPinProvider_put_DebounceTimeout(py::wrapper::Windows::Devices::Gpio::Provider::IGpioPinProvider* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Gpio.Provider.IGpioPinProvider", L"DebounceTimeout"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -445,6 +439,12 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Gpio.Provider.IGpioPinProvider", L"DebounceTimeout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.DebounceTimeout(param0);
@@ -459,14 +459,14 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     static PyObject* IGpioPinProvider_get_PinNumber(py::wrapper::Windows::Devices::Gpio::Provider::IGpioPinProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Gpio.Provider.IGpioPinProvider", L"PinNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Gpio.Provider.IGpioPinProvider", L"PinNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PinNumber());
         }
         catch (...)
@@ -478,14 +478,14 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     static PyObject* IGpioPinProvider_get_SharingMode(py::wrapper::Windows::Devices::Gpio::Provider::IGpioPinProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Gpio.Provider.IGpioPinProvider", L"SharingMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Gpio.Provider.IGpioPinProvider", L"SharingMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SharingMode());
         }
         catch (...)
@@ -497,14 +497,14 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     static PyObject* IGpioPinProvider_add_ValueChanged(py::wrapper::Windows::Devices::Gpio::Provider::IGpioPinProvider* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Gpio.Provider.IGpioPinProvider", L"ValueChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Gpio.Provider.IGpioPinProvider", L"ValueChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Gpio::Provider::IGpioPinProvider, winrt::Windows::Devices::Gpio::Provider::GpioPinProviderValueChangedEventArgs>>(arg);
 
             return py::convert(self->obj.ValueChanged(param0));
@@ -518,14 +518,14 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     static PyObject* IGpioPinProvider_remove_ValueChanged(py::wrapper::Windows::Devices::Gpio::Provider::IGpioPinProvider* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Gpio.Provider.IGpioPinProvider", L"ValueChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Gpio.Provider.IGpioPinProvider", L"ValueChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ValueChanged(param0);
@@ -623,14 +623,14 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Gpio.Provider.IGpioProvider", L"GetControllers", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Gpio.Provider.IGpioProvider", L"GetControllers", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetControllers());
             }
             catch (...)

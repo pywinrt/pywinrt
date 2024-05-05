@@ -68,14 +68,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletBarcode", L"GetImageAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletBarcode", L"GetImageAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetImageAsync());
             }
             catch (...)
@@ -93,14 +93,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletBarcode_get_Symbology(py::wrapper::Windows::ApplicationModel::Wallet::WalletBarcode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletBarcode", L"Symbology"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletBarcode", L"Symbology"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Symbology());
         }
         catch (...)
@@ -112,14 +112,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletBarcode_get_Value(py::wrapper::Windows::ApplicationModel::Wallet::WalletBarcode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletBarcode", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletBarcode", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -228,14 +228,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_DisplayName(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -247,12 +247,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_DisplayName(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -261,6 +255,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayName(param0);
@@ -275,14 +275,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_DisplayMessage(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"DisplayMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"DisplayMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayMessage());
         }
         catch (...)
@@ -294,12 +294,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_DisplayMessage(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"DisplayMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -308,6 +302,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"DisplayMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayMessage(param0);
@@ -322,14 +322,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_LogoText(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"LogoText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"LogoText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LogoText());
         }
         catch (...)
@@ -341,12 +341,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_LogoText(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"LogoText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -355,6 +349,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"LogoText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.LogoText(param0);
@@ -369,14 +369,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_BodyFontColor(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"BodyFontColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"BodyFontColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BodyFontColor());
         }
         catch (...)
@@ -388,12 +388,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_BodyFontColor(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"BodyFontColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -402,6 +396,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"BodyFontColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.BodyFontColor(param0);
@@ -416,14 +416,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_BodyColor(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"BodyColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"BodyColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BodyColor());
         }
         catch (...)
@@ -435,12 +435,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_BodyColor(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"BodyColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -449,6 +443,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"BodyColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.BodyColor(param0);
@@ -463,14 +463,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_BodyBackgroundImage(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"BodyBackgroundImage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"BodyBackgroundImage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BodyBackgroundImage());
         }
         catch (...)
@@ -482,12 +482,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_BodyBackgroundImage(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"BodyBackgroundImage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -496,6 +490,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"BodyBackgroundImage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
             self->obj.BodyBackgroundImage(param0);
@@ -510,14 +510,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_IsDisplayMessageLaunchable(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"IsDisplayMessageLaunchable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"IsDisplayMessageLaunchable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDisplayMessageLaunchable());
         }
         catch (...)
@@ -529,12 +529,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_IsDisplayMessageLaunchable(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"IsDisplayMessageLaunchable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -543,6 +537,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"IsDisplayMessageLaunchable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsDisplayMessageLaunchable(param0);
@@ -557,14 +557,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_IsAcknowledged(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"IsAcknowledged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"IsAcknowledged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAcknowledged());
         }
         catch (...)
@@ -576,12 +576,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_IsAcknowledged(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"IsAcknowledged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -590,6 +584,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"IsAcknowledged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsAcknowledged(param0);
@@ -604,14 +604,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_IsMoreTransactionHistoryLaunchable(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"IsMoreTransactionHistoryLaunchable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"IsMoreTransactionHistoryLaunchable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsMoreTransactionHistoryLaunchable());
         }
         catch (...)
@@ -623,12 +623,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_IsMoreTransactionHistoryLaunchable(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"IsMoreTransactionHistoryLaunchable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -637,6 +631,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"IsMoreTransactionHistoryLaunchable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsMoreTransactionHistoryLaunchable(param0);
@@ -651,14 +651,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_HeaderFontColor(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"HeaderFontColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"HeaderFontColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HeaderFontColor());
         }
         catch (...)
@@ -670,12 +670,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_HeaderFontColor(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"HeaderFontColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -684,6 +678,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"HeaderFontColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.HeaderFontColor(param0);
@@ -698,14 +698,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_HeaderColor(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"HeaderColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"HeaderColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HeaderColor());
         }
         catch (...)
@@ -717,12 +717,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_HeaderColor(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"HeaderColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -731,6 +725,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"HeaderColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.HeaderColor(param0);
@@ -745,14 +745,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_HeaderBackgroundImage(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"HeaderBackgroundImage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"HeaderBackgroundImage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HeaderBackgroundImage());
         }
         catch (...)
@@ -764,12 +764,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_HeaderBackgroundImage(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"HeaderBackgroundImage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -778,6 +772,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"HeaderBackgroundImage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
             self->obj.HeaderBackgroundImage(param0);
@@ -792,14 +792,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_ExpirationDate(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"ExpirationDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"ExpirationDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExpirationDate());
         }
         catch (...)
@@ -811,12 +811,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_ExpirationDate(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"ExpirationDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -825,6 +819,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"ExpirationDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             self->obj.ExpirationDate(param0);
@@ -839,14 +839,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_Logo99x99(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"Logo99x99"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"Logo99x99"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Logo99x99());
         }
         catch (...)
@@ -858,12 +858,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_Logo99x99(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"Logo99x99"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -872,6 +866,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"Logo99x99"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
             self->obj.Logo99x99(param0);
@@ -886,14 +886,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_LogoImage(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"LogoImage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"LogoImage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LogoImage());
         }
         catch (...)
@@ -905,12 +905,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_LogoImage(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"LogoImage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -919,6 +913,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"LogoImage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
             self->obj.LogoImage(param0);
@@ -933,14 +933,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_PromotionalImage(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"PromotionalImage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"PromotionalImage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PromotionalImage());
         }
         catch (...)
@@ -952,12 +952,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_PromotionalImage(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"PromotionalImage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -966,6 +960,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"PromotionalImage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
             self->obj.PromotionalImage(param0);
@@ -980,14 +980,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_Logo159x159(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"Logo159x159"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"Logo159x159"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Logo159x159());
         }
         catch (...)
@@ -999,12 +999,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_Logo159x159(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"Logo159x159"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1013,6 +1007,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"Logo159x159"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
             self->obj.Logo159x159(param0);
@@ -1027,14 +1027,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_LastUpdated(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"LastUpdated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"LastUpdated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastUpdated());
         }
         catch (...)
@@ -1046,12 +1046,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_LastUpdated(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"LastUpdated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1060,6 +1054,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"LastUpdated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             self->obj.LastUpdated(param0);
@@ -1074,14 +1074,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_IssuerDisplayName(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"IssuerDisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"IssuerDisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IssuerDisplayName());
         }
         catch (...)
@@ -1093,12 +1093,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_IssuerDisplayName(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"IssuerDisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1107,6 +1101,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"IssuerDisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.IssuerDisplayName(param0);
@@ -1121,14 +1121,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_Barcode(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"Barcode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"Barcode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Barcode());
         }
         catch (...)
@@ -1140,12 +1140,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_Barcode(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"Barcode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1154,6 +1148,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"Barcode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Wallet::WalletBarcode>(arg);
 
             self->obj.Barcode(param0);
@@ -1168,14 +1168,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_RelevantDateDisplayMessage(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"RelevantDateDisplayMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"RelevantDateDisplayMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RelevantDateDisplayMessage());
         }
         catch (...)
@@ -1187,12 +1187,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_RelevantDateDisplayMessage(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"RelevantDateDisplayMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1201,6 +1195,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"RelevantDateDisplayMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.RelevantDateDisplayMessage(param0);
@@ -1215,14 +1215,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_RelevantDate(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"RelevantDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"RelevantDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RelevantDate());
         }
         catch (...)
@@ -1234,12 +1234,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_RelevantDate(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"RelevantDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1248,6 +1242,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"RelevantDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             self->obj.RelevantDate(param0);
@@ -1262,14 +1262,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_Logo336x336(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"Logo336x336"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"Logo336x336"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Logo336x336());
         }
         catch (...)
@@ -1281,12 +1281,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_Logo336x336(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"Logo336x336"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1295,6 +1289,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"Logo336x336"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
             self->obj.Logo336x336(param0);
@@ -1309,14 +1309,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_Kind(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -1328,14 +1328,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_DisplayProperties(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"DisplayProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"DisplayProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayProperties());
         }
         catch (...)
@@ -1347,14 +1347,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_Id(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1366,14 +1366,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_RelevantLocations(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"RelevantLocations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"RelevantLocations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RelevantLocations());
         }
         catch (...)
@@ -1385,14 +1385,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_TransactionHistory(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"TransactionHistory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"TransactionHistory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TransactionHistory());
         }
         catch (...)
@@ -1404,14 +1404,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItem_get_Verbs(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"Verbs"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItem", L"Verbs"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verbs());
         }
         catch (...)
@@ -1546,14 +1546,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItemCustomProperty_get_Value(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemCustomProperty* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItemCustomProperty", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItemCustomProperty", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -1565,12 +1565,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItemCustomProperty_put_Value(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemCustomProperty* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItemCustomProperty", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1579,6 +1573,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItemCustomProperty", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Value(param0);
@@ -1593,14 +1593,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItemCustomProperty_get_SummaryViewPosition(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemCustomProperty* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItemCustomProperty", L"SummaryViewPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItemCustomProperty", L"SummaryViewPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SummaryViewPosition());
         }
         catch (...)
@@ -1612,12 +1612,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItemCustomProperty_put_SummaryViewPosition(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemCustomProperty* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItemCustomProperty", L"SummaryViewPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1626,6 +1620,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItemCustomProperty", L"SummaryViewPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Wallet::WalletSummaryViewPosition>(arg);
 
             self->obj.SummaryViewPosition(param0);
@@ -1640,14 +1640,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItemCustomProperty_get_Name(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemCustomProperty* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItemCustomProperty", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItemCustomProperty", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -1659,12 +1659,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItemCustomProperty_put_Name(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemCustomProperty* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItemCustomProperty", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1673,6 +1667,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItemCustomProperty", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Name(param0);
@@ -1687,14 +1687,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItemCustomProperty_get_DetailViewPosition(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemCustomProperty* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItemCustomProperty", L"DetailViewPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItemCustomProperty", L"DetailViewPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DetailViewPosition());
         }
         catch (...)
@@ -1706,12 +1706,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItemCustomProperty_put_DetailViewPosition(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemCustomProperty* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItemCustomProperty", L"DetailViewPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1720,6 +1714,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItemCustomProperty", L"DetailViewPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Wallet::WalletDetailViewPosition>(arg);
 
             self->obj.DetailViewPosition(param0);
@@ -1734,14 +1734,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItemCustomProperty_get_AutoDetectLinks(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemCustomProperty* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItemCustomProperty", L"AutoDetectLinks"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItemCustomProperty", L"AutoDetectLinks"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AutoDetectLinks());
         }
         catch (...)
@@ -1753,12 +1753,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItemCustomProperty_put_AutoDetectLinks(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemCustomProperty* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItemCustomProperty", L"AutoDetectLinks"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1767,6 +1761,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletItemCustomProperty", L"AutoDetectLinks"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AutoDetectLinks(param0);
@@ -1859,14 +1859,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletItemStore", L"AddAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletItemStore", L"AddAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Wallet::WalletItem>(args, 1);
 
@@ -1891,14 +1891,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletItemStore", L"ClearAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletItemStore", L"ClearAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ClearAsync());
             }
             catch (...)
@@ -1920,14 +1920,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletItemStore", L"DeleteAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletItemStore", L"DeleteAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.DeleteAsync(param0));
@@ -1951,14 +1951,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletItemStore", L"GetItemsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletItemStore", L"GetItemsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetItemsAsync());
             }
             catch (...)
@@ -1969,14 +1969,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletItemStore", L"GetItemsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletItemStore", L"GetItemsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Wallet::WalletItemKind>(args, 0);
 
                 return py::convert(self->obj.GetItemsAsync(param0));
@@ -2000,14 +2000,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletItemStore", L"GetWalletItemAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletItemStore", L"GetWalletItemAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetWalletItemAsync(param0));
@@ -2031,14 +2031,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletItemStore", L"ImportItemAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletItemStore", L"ImportItemAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
 
                 return py::convert(self->obj.ImportItemAsync(param0));
@@ -2062,14 +2062,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletItemStore", L"ShowAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletItemStore", L"ShowAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ShowAsync());
             }
             catch (...)
@@ -2080,14 +2080,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletItemStore", L"ShowAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletItemStore", L"ShowAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ShowAsync(param0));
@@ -2111,14 +2111,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletItemStore", L"UpdateAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletItemStore", L"UpdateAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Wallet::WalletItem>(args, 0);
 
                 return py::convert(self->obj.UpdateAsync(param0));
@@ -2211,14 +2211,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletManager", L"RequestStoreAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.WalletManager", L"RequestStoreAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::Wallet::WalletManager::RequestStoreAsync());
             }
             catch (...)
@@ -2326,14 +2326,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletRelevantLocation_get_Position(py::wrapper::Windows::ApplicationModel::Wallet::WalletRelevantLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletRelevantLocation", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletRelevantLocation", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -2345,12 +2345,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletRelevantLocation_put_Position(py::wrapper::Windows::ApplicationModel::Wallet::WalletRelevantLocation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletRelevantLocation", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2359,6 +2353,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletRelevantLocation", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::BasicGeoposition>(arg);
 
             self->obj.Position(param0);
@@ -2373,14 +2373,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletRelevantLocation_get_DisplayMessage(py::wrapper::Windows::ApplicationModel::Wallet::WalletRelevantLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletRelevantLocation", L"DisplayMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletRelevantLocation", L"DisplayMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayMessage());
         }
         catch (...)
@@ -2392,12 +2392,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletRelevantLocation_put_DisplayMessage(py::wrapper::Windows::ApplicationModel::Wallet::WalletRelevantLocation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletRelevantLocation", L"DisplayMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2406,6 +2400,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletRelevantLocation", L"DisplayMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayMessage(param0);
@@ -2513,14 +2513,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletTransaction_get_TransactionDate(py::wrapper::Windows::ApplicationModel::Wallet::WalletTransaction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"TransactionDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"TransactionDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TransactionDate());
         }
         catch (...)
@@ -2532,12 +2532,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletTransaction_put_TransactionDate(py::wrapper::Windows::ApplicationModel::Wallet::WalletTransaction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"TransactionDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2546,6 +2540,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"TransactionDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             self->obj.TransactionDate(param0);
@@ -2560,14 +2560,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletTransaction_get_IsLaunchable(py::wrapper::Windows::ApplicationModel::Wallet::WalletTransaction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"IsLaunchable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"IsLaunchable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsLaunchable());
         }
         catch (...)
@@ -2579,12 +2579,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletTransaction_put_IsLaunchable(py::wrapper::Windows::ApplicationModel::Wallet::WalletTransaction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"IsLaunchable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2593,6 +2587,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"IsLaunchable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsLaunchable(param0);
@@ -2607,14 +2607,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletTransaction_get_IgnoreTimeOfDay(py::wrapper::Windows::ApplicationModel::Wallet::WalletTransaction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"IgnoreTimeOfDay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"IgnoreTimeOfDay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IgnoreTimeOfDay());
         }
         catch (...)
@@ -2626,12 +2626,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletTransaction_put_IgnoreTimeOfDay(py::wrapper::Windows::ApplicationModel::Wallet::WalletTransaction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"IgnoreTimeOfDay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2640,6 +2634,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"IgnoreTimeOfDay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IgnoreTimeOfDay(param0);
@@ -2654,14 +2654,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletTransaction_get_DisplayLocation(py::wrapper::Windows::ApplicationModel::Wallet::WalletTransaction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"DisplayLocation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"DisplayLocation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayLocation());
         }
         catch (...)
@@ -2673,12 +2673,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletTransaction_put_DisplayLocation(py::wrapper::Windows::ApplicationModel::Wallet::WalletTransaction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"DisplayLocation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2687,6 +2681,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"DisplayLocation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayLocation(param0);
@@ -2701,14 +2701,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletTransaction_get_DisplayAmount(py::wrapper::Windows::ApplicationModel::Wallet::WalletTransaction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"DisplayAmount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"DisplayAmount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayAmount());
         }
         catch (...)
@@ -2720,12 +2720,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletTransaction_put_DisplayAmount(py::wrapper::Windows::ApplicationModel::Wallet::WalletTransaction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"DisplayAmount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2734,6 +2728,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"DisplayAmount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayAmount(param0);
@@ -2748,14 +2748,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletTransaction_get_Description(py::wrapper::Windows::ApplicationModel::Wallet::WalletTransaction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -2767,12 +2767,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletTransaction_put_Description(py::wrapper::Windows::ApplicationModel::Wallet::WalletTransaction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2781,6 +2775,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletTransaction", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Description(param0);
@@ -2894,14 +2894,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletVerb_get_Name(py::wrapper::Windows::ApplicationModel::Wallet::WalletVerb* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletVerb", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletVerb", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -2913,12 +2913,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletVerb_put_Name(py::wrapper::Windows::ApplicationModel::Wallet::WalletVerb* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletVerb", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2927,6 +2921,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Wallet.WalletVerb", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Name(param0);

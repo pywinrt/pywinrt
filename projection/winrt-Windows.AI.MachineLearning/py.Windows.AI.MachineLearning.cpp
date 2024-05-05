@@ -24,14 +24,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* ImageFeatureDescriptor_get_BitmapAlphaMode(py::wrapper::Windows::AI::MachineLearning::ImageFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"BitmapAlphaMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"BitmapAlphaMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapAlphaMode());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* ImageFeatureDescriptor_get_BitmapPixelFormat(py::wrapper::Windows::AI::MachineLearning::ImageFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"BitmapPixelFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"BitmapPixelFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapPixelFormat());
         }
         catch (...)
@@ -62,14 +62,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* ImageFeatureDescriptor_get_Height(py::wrapper::Windows::AI::MachineLearning::ImageFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"Height"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Height());
         }
         catch (...)
@@ -81,14 +81,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* ImageFeatureDescriptor_get_Width(py::wrapper::Windows::AI::MachineLearning::ImageFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"Width"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Width());
         }
         catch (...)
@@ -100,14 +100,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* ImageFeatureDescriptor_get_PixelRange(py::wrapper::Windows::AI::MachineLearning::ImageFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"PixelRange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"PixelRange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelRange());
         }
         catch (...)
@@ -119,14 +119,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* ImageFeatureDescriptor_get_Description(py::wrapper::Windows::AI::MachineLearning::ImageFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -138,14 +138,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* ImageFeatureDescriptor_get_IsRequired(py::wrapper::Windows::AI::MachineLearning::ImageFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"IsRequired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"IsRequired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRequired());
         }
         catch (...)
@@ -157,14 +157,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* ImageFeatureDescriptor_get_Kind(py::wrapper::Windows::AI::MachineLearning::ImageFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -176,14 +176,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* ImageFeatureDescriptor_get_Name(py::wrapper::Windows::AI::MachineLearning::ImageFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureDescriptor", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -277,14 +277,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.ImageFeatureValue", L"CreateFromVideoFrame", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.ImageFeatureValue", L"CreateFromVideoFrame", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::VideoFrame>(args, 0);
 
                 return py::convert(winrt::Windows::AI::MachineLearning::ImageFeatureValue::CreateFromVideoFrame(param0));
@@ -304,14 +304,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* ImageFeatureValue_get_VideoFrame(py::wrapper::Windows::AI::MachineLearning::ImageFeatureValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureValue", L"VideoFrame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureValue", L"VideoFrame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoFrame());
         }
         catch (...)
@@ -323,14 +323,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* ImageFeatureValue_get_Kind(py::wrapper::Windows::AI::MachineLearning::ImageFeatureValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureValue", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ImageFeatureValue", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -443,14 +443,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -473,14 +473,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromFilePath", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromFilePath", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::AI::MachineLearning::LearningModel::LoadFromFilePath(param0));
@@ -493,14 +493,14 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromFilePath", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromFilePath", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>(args, 1);
 
@@ -525,14 +525,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromStorageFileAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromStorageFileAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert(winrt::Windows::AI::MachineLearning::LearningModel::LoadFromStorageFileAsync(param0));
@@ -545,14 +545,14 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromStorageFileAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromStorageFileAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>(args, 1);
 
@@ -577,14 +577,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromStream", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromStream", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
 
                 return py::convert(winrt::Windows::AI::MachineLearning::LearningModel::LoadFromStream(param0));
@@ -597,14 +597,14 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromStream", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromStream", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>(args, 1);
 
@@ -629,14 +629,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromStreamAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromStreamAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
 
                 return py::convert(winrt::Windows::AI::MachineLearning::LearningModel::LoadFromStreamAsync(param0));
@@ -649,14 +649,14 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromStreamAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromStreamAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>(args, 1);
 
@@ -677,14 +677,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModel_get_Author(py::wrapper::Windows::AI::MachineLearning::LearningModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"Author"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"Author"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Author());
         }
         catch (...)
@@ -696,14 +696,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModel_get_Description(py::wrapper::Windows::AI::MachineLearning::LearningModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -715,14 +715,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModel_get_Domain(py::wrapper::Windows::AI::MachineLearning::LearningModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"Domain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"Domain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Domain());
         }
         catch (...)
@@ -734,14 +734,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModel_get_InputFeatures(py::wrapper::Windows::AI::MachineLearning::LearningModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"InputFeatures"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"InputFeatures"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InputFeatures());
         }
         catch (...)
@@ -753,14 +753,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModel_get_Metadata(py::wrapper::Windows::AI::MachineLearning::LearningModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"Metadata"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"Metadata"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Metadata());
         }
         catch (...)
@@ -772,14 +772,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModel_get_Name(py::wrapper::Windows::AI::MachineLearning::LearningModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -791,14 +791,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModel_get_OutputFeatures(py::wrapper::Windows::AI::MachineLearning::LearningModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"OutputFeatures"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"OutputFeatures"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutputFeatures());
         }
         catch (...)
@@ -810,14 +810,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModel_get_Version(py::wrapper::Windows::AI::MachineLearning::LearningModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"Version"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModel", L"Version"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Version());
         }
         catch (...)
@@ -985,14 +985,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"Bind", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"Bind", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -1007,14 +1007,14 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"Bind", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"Bind", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 2);
@@ -1041,14 +1041,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -1071,14 +1071,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -1100,14 +1100,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"HasKey", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"HasKey", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.HasKey(param0));
@@ -1131,14 +1131,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"Lookup", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"Lookup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.Lookup(param0));
@@ -1162,14 +1162,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"Split", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"Split", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable> param0 { nullptr };
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable> param1 { nullptr };
 
@@ -1202,14 +1202,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelBinding_get_Size(py::wrapper::Windows::AI::MachineLearning::LearningModelBinding* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelBinding", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -1404,14 +1404,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelDevice", L"CreateFromDirect3D11Device", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelDevice", L"CreateFromDirect3D11Device", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>(args, 0);
 
                 return py::convert(winrt::Windows::AI::MachineLearning::LearningModelDevice::CreateFromDirect3D11Device(param0));
@@ -1431,14 +1431,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelDevice_get_AdapterId(py::wrapper::Windows::AI::MachineLearning::LearningModelDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelDevice", L"AdapterId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelDevice", L"AdapterId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AdapterId());
         }
         catch (...)
@@ -1450,14 +1450,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelDevice_get_Direct3D11Device(py::wrapper::Windows::AI::MachineLearning::LearningModelDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelDevice", L"Direct3D11Device"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelDevice", L"Direct3D11Device"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Direct3D11Device());
         }
         catch (...)
@@ -1566,14 +1566,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelEvaluationResult_get_CorrelationId(py::wrapper::Windows::AI::MachineLearning::LearningModelEvaluationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelEvaluationResult", L"CorrelationId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelEvaluationResult", L"CorrelationId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CorrelationId());
         }
         catch (...)
@@ -1585,14 +1585,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelEvaluationResult_get_ErrorStatus(py::wrapper::Windows::AI::MachineLearning::LearningModelEvaluationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelEvaluationResult", L"ErrorStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelEvaluationResult", L"ErrorStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorStatus());
         }
         catch (...)
@@ -1604,14 +1604,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelEvaluationResult_get_Outputs(py::wrapper::Windows::AI::MachineLearning::LearningModelEvaluationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelEvaluationResult", L"Outputs"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelEvaluationResult", L"Outputs"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Outputs());
         }
         catch (...)
@@ -1623,14 +1623,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelEvaluationResult_get_Succeeded(py::wrapper::Windows::AI::MachineLearning::LearningModelEvaluationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelEvaluationResult", L"Succeeded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelEvaluationResult", L"Succeeded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Succeeded());
         }
         catch (...)
@@ -1776,14 +1776,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -1806,14 +1806,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"Evaluate", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"Evaluate", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::AI::MachineLearning::LearningModelBinding>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1838,14 +1838,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"EvaluateAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"EvaluateAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::AI::MachineLearning::LearningModelBinding>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1870,14 +1870,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"EvaluateFeatures", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"EvaluateFeatures", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1902,14 +1902,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"EvaluateFeaturesAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"EvaluateFeaturesAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1930,14 +1930,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelSession_get_Device(py::wrapper::Windows::AI::MachineLearning::LearningModelSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"Device"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"Device"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Device());
         }
         catch (...)
@@ -1949,14 +1949,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelSession_get_EvaluationProperties(py::wrapper::Windows::AI::MachineLearning::LearningModelSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"EvaluationProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"EvaluationProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EvaluationProperties());
         }
         catch (...)
@@ -1968,14 +1968,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelSession_get_Model(py::wrapper::Windows::AI::MachineLearning::LearningModelSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"Model"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelSession", L"Model"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Model());
         }
         catch (...)
@@ -2111,14 +2111,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelSessionOptions", L"OverrideNamedDimension", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelSessionOptions", L"OverrideNamedDimension", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -2140,14 +2140,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelSessionOptions_get_BatchSizeOverride(py::wrapper::Windows::AI::MachineLearning::LearningModelSessionOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelSessionOptions", L"BatchSizeOverride"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelSessionOptions", L"BatchSizeOverride"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BatchSizeOverride());
         }
         catch (...)
@@ -2159,12 +2159,6 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static int LearningModelSessionOptions_put_BatchSizeOverride(py::wrapper::Windows::AI::MachineLearning::LearningModelSessionOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelSessionOptions", L"BatchSizeOverride"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2173,6 +2167,12 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelSessionOptions", L"BatchSizeOverride"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.BatchSizeOverride(param0);
@@ -2187,14 +2187,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelSessionOptions_get_CloseModelOnSessionCreation(py::wrapper::Windows::AI::MachineLearning::LearningModelSessionOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelSessionOptions", L"CloseModelOnSessionCreation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelSessionOptions", L"CloseModelOnSessionCreation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CloseModelOnSessionCreation());
         }
         catch (...)
@@ -2206,12 +2206,6 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static int LearningModelSessionOptions_put_CloseModelOnSessionCreation(py::wrapper::Windows::AI::MachineLearning::LearningModelSessionOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelSessionOptions", L"CloseModelOnSessionCreation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2220,6 +2214,12 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.LearningModelSessionOptions", L"CloseModelOnSessionCreation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.CloseModelOnSessionCreation(param0);
@@ -2306,14 +2306,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* MapFeatureDescriptor_get_Description(py::wrapper::Windows::AI::MachineLearning::MapFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.MapFeatureDescriptor", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.MapFeatureDescriptor", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -2325,14 +2325,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* MapFeatureDescriptor_get_IsRequired(py::wrapper::Windows::AI::MachineLearning::MapFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.MapFeatureDescriptor", L"IsRequired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.MapFeatureDescriptor", L"IsRequired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRequired());
         }
         catch (...)
@@ -2344,14 +2344,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* MapFeatureDescriptor_get_Kind(py::wrapper::Windows::AI::MachineLearning::MapFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.MapFeatureDescriptor", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.MapFeatureDescriptor", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -2363,14 +2363,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* MapFeatureDescriptor_get_Name(py::wrapper::Windows::AI::MachineLearning::MapFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.MapFeatureDescriptor", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.MapFeatureDescriptor", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -2382,14 +2382,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* MapFeatureDescriptor_get_KeyKind(py::wrapper::Windows::AI::MachineLearning::MapFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.MapFeatureDescriptor", L"KeyKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.MapFeatureDescriptor", L"KeyKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyKind());
         }
         catch (...)
@@ -2401,14 +2401,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* MapFeatureDescriptor_get_ValueDescriptor(py::wrapper::Windows::AI::MachineLearning::MapFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.MapFeatureDescriptor", L"ValueDescriptor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.MapFeatureDescriptor", L"ValueDescriptor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ValueDescriptor());
         }
         catch (...)
@@ -2495,14 +2495,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* SequenceFeatureDescriptor_get_Description(py::wrapper::Windows::AI::MachineLearning::SequenceFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.SequenceFeatureDescriptor", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.SequenceFeatureDescriptor", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -2514,14 +2514,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* SequenceFeatureDescriptor_get_IsRequired(py::wrapper::Windows::AI::MachineLearning::SequenceFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.SequenceFeatureDescriptor", L"IsRequired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.SequenceFeatureDescriptor", L"IsRequired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRequired());
         }
         catch (...)
@@ -2533,14 +2533,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* SequenceFeatureDescriptor_get_Kind(py::wrapper::Windows::AI::MachineLearning::SequenceFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.SequenceFeatureDescriptor", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.SequenceFeatureDescriptor", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -2552,14 +2552,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* SequenceFeatureDescriptor_get_Name(py::wrapper::Windows::AI::MachineLearning::SequenceFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.SequenceFeatureDescriptor", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.SequenceFeatureDescriptor", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -2571,14 +2571,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* SequenceFeatureDescriptor_get_ElementDescriptor(py::wrapper::Windows::AI::MachineLearning::SequenceFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.SequenceFeatureDescriptor", L"ElementDescriptor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.SequenceFeatureDescriptor", L"ElementDescriptor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ElementDescriptor());
         }
         catch (...)
@@ -2668,14 +2668,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -2698,14 +2698,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"Create", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"Create", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorBoolean::Create());
             }
             catch (...)
@@ -2716,14 +2716,14 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorBoolean::Create(param0));
@@ -2747,14 +2747,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"CreateFromArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"CreateFromArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<bool, false>>(args, 1);
 
@@ -2779,14 +2779,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"CreateFromBuffer", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"CreateFromBuffer", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -2811,14 +2811,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"CreateFromIterable", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"CreateFromIterable", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<bool>>(args, 1);
 
@@ -2843,14 +2843,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"CreateFromShapeArrayAndDataArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"CreateFromShapeArrayAndDataArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<bool, false>>(args, 1);
 
@@ -2875,14 +2875,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"CreateReference", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"CreateReference", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateReference());
             }
             catch (...)
@@ -2904,14 +2904,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"GetAsVectorView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"GetAsVectorView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAsVectorView());
             }
             catch (...)
@@ -2929,14 +2929,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorBoolean_get_Kind(py::wrapper::Windows::AI::MachineLearning::TensorBoolean* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -2948,14 +2948,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorBoolean_get_Shape(py::wrapper::Windows::AI::MachineLearning::TensorBoolean* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"Shape"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"Shape"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Shape());
         }
         catch (...)
@@ -2967,14 +2967,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorBoolean_get_TensorKind(py::wrapper::Windows::AI::MachineLearning::TensorBoolean* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"TensorKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"TensorKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TensorKind());
         }
         catch (...)
@@ -3116,14 +3116,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -3146,14 +3146,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"Create", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"Create", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorDouble::Create());
             }
             catch (...)
@@ -3164,14 +3164,14 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorDouble::Create(param0));
@@ -3195,14 +3195,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"CreateFromArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"CreateFromArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<double, false>>(args, 1);
 
@@ -3227,14 +3227,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"CreateFromBuffer", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"CreateFromBuffer", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -3259,14 +3259,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"CreateFromIterable", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"CreateFromIterable", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<double>>(args, 1);
 
@@ -3291,14 +3291,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"CreateFromShapeArrayAndDataArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"CreateFromShapeArrayAndDataArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<double, false>>(args, 1);
 
@@ -3323,14 +3323,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"CreateReference", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"CreateReference", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateReference());
             }
             catch (...)
@@ -3352,14 +3352,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"GetAsVectorView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"GetAsVectorView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAsVectorView());
             }
             catch (...)
@@ -3377,14 +3377,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorDouble_get_Kind(py::wrapper::Windows::AI::MachineLearning::TensorDouble* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorDouble", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorDouble", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -3396,14 +3396,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorDouble_get_Shape(py::wrapper::Windows::AI::MachineLearning::TensorDouble* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorDouble", L"Shape"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorDouble", L"Shape"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Shape());
         }
         catch (...)
@@ -3415,14 +3415,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorDouble_get_TensorKind(py::wrapper::Windows::AI::MachineLearning::TensorDouble* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorDouble", L"TensorKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorDouble", L"TensorKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TensorKind());
         }
         catch (...)
@@ -3560,14 +3560,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFeatureDescriptor_get_Description(py::wrapper::Windows::AI::MachineLearning::TensorFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFeatureDescriptor", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFeatureDescriptor", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -3579,14 +3579,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFeatureDescriptor_get_IsRequired(py::wrapper::Windows::AI::MachineLearning::TensorFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFeatureDescriptor", L"IsRequired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFeatureDescriptor", L"IsRequired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRequired());
         }
         catch (...)
@@ -3598,14 +3598,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFeatureDescriptor_get_Kind(py::wrapper::Windows::AI::MachineLearning::TensorFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFeatureDescriptor", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFeatureDescriptor", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -3617,14 +3617,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFeatureDescriptor_get_Name(py::wrapper::Windows::AI::MachineLearning::TensorFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFeatureDescriptor", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFeatureDescriptor", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -3636,14 +3636,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFeatureDescriptor_get_Shape(py::wrapper::Windows::AI::MachineLearning::TensorFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFeatureDescriptor", L"Shape"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFeatureDescriptor", L"Shape"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Shape());
         }
         catch (...)
@@ -3655,14 +3655,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFeatureDescriptor_get_TensorKind(py::wrapper::Windows::AI::MachineLearning::TensorFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFeatureDescriptor", L"TensorKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFeatureDescriptor", L"TensorKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TensorKind());
         }
         catch (...)
@@ -3753,14 +3753,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -3783,14 +3783,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"Create", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"Create", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorFloat::Create());
             }
             catch (...)
@@ -3801,14 +3801,14 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorFloat::Create(param0));
@@ -3832,14 +3832,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"CreateFromArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"CreateFromArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<float, false>>(args, 1);
 
@@ -3864,14 +3864,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"CreateFromBuffer", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"CreateFromBuffer", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -3896,14 +3896,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"CreateFromIterable", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"CreateFromIterable", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<float>>(args, 1);
 
@@ -3928,14 +3928,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"CreateFromShapeArrayAndDataArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"CreateFromShapeArrayAndDataArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<float, false>>(args, 1);
 
@@ -3960,14 +3960,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"CreateReference", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"CreateReference", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateReference());
             }
             catch (...)
@@ -3989,14 +3989,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"GetAsVectorView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"GetAsVectorView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAsVectorView());
             }
             catch (...)
@@ -4014,14 +4014,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat_get_Kind(py::wrapper::Windows::AI::MachineLearning::TensorFloat* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFloat", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFloat", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -4033,14 +4033,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat_get_Shape(py::wrapper::Windows::AI::MachineLearning::TensorFloat* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFloat", L"Shape"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFloat", L"Shape"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Shape());
         }
         catch (...)
@@ -4052,14 +4052,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat_get_TensorKind(py::wrapper::Windows::AI::MachineLearning::TensorFloat* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFloat", L"TensorKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFloat", L"TensorKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TensorKind());
         }
         catch (...)
@@ -4201,14 +4201,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -4231,14 +4231,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"Create", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"Create", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorFloat16Bit::Create());
             }
             catch (...)
@@ -4249,14 +4249,14 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorFloat16Bit::Create(param0));
@@ -4280,14 +4280,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"CreateFromArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"CreateFromArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<float, false>>(args, 1);
 
@@ -4312,14 +4312,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"CreateFromBuffer", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"CreateFromBuffer", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -4344,14 +4344,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"CreateFromIterable", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"CreateFromIterable", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<float>>(args, 1);
 
@@ -4376,14 +4376,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"CreateFromShapeArrayAndDataArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"CreateFromShapeArrayAndDataArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<float, false>>(args, 1);
 
@@ -4408,14 +4408,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"CreateReference", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"CreateReference", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateReference());
             }
             catch (...)
@@ -4437,14 +4437,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"GetAsVectorView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"GetAsVectorView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAsVectorView());
             }
             catch (...)
@@ -4462,14 +4462,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat16Bit_get_Kind(py::wrapper::Windows::AI::MachineLearning::TensorFloat16Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -4481,14 +4481,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat16Bit_get_Shape(py::wrapper::Windows::AI::MachineLearning::TensorFloat16Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"Shape"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"Shape"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Shape());
         }
         catch (...)
@@ -4500,14 +4500,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat16Bit_get_TensorKind(py::wrapper::Windows::AI::MachineLearning::TensorFloat16Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"TensorKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"TensorKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TensorKind());
         }
         catch (...)
@@ -4649,14 +4649,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -4679,14 +4679,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"Create", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"Create", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorInt16Bit::Create());
             }
             catch (...)
@@ -4697,14 +4697,14 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorInt16Bit::Create(param0));
@@ -4728,14 +4728,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"CreateFromArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"CreateFromArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int16_t, false>>(args, 1);
 
@@ -4760,14 +4760,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"CreateFromBuffer", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"CreateFromBuffer", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -4792,14 +4792,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"CreateFromIterable", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"CreateFromIterable", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int16_t>>(args, 1);
 
@@ -4824,14 +4824,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"CreateFromShapeArrayAndDataArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"CreateFromShapeArrayAndDataArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int16_t, false>>(args, 1);
 
@@ -4856,14 +4856,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"CreateReference", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"CreateReference", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateReference());
             }
             catch (...)
@@ -4885,14 +4885,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"GetAsVectorView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"GetAsVectorView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAsVectorView());
             }
             catch (...)
@@ -4910,14 +4910,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt16Bit_get_Kind(py::wrapper::Windows::AI::MachineLearning::TensorInt16Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -4929,14 +4929,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt16Bit_get_Shape(py::wrapper::Windows::AI::MachineLearning::TensorInt16Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"Shape"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"Shape"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Shape());
         }
         catch (...)
@@ -4948,14 +4948,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt16Bit_get_TensorKind(py::wrapper::Windows::AI::MachineLearning::TensorInt16Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"TensorKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"TensorKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TensorKind());
         }
         catch (...)
@@ -5097,14 +5097,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -5127,14 +5127,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"Create", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"Create", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorInt32Bit::Create());
             }
             catch (...)
@@ -5145,14 +5145,14 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorInt32Bit::Create(param0));
@@ -5176,14 +5176,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"CreateFromArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"CreateFromArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
 
@@ -5208,14 +5208,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"CreateFromBuffer", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"CreateFromBuffer", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -5240,14 +5240,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"CreateFromIterable", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"CreateFromIterable", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int32_t>>(args, 1);
 
@@ -5272,14 +5272,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"CreateFromShapeArrayAndDataArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"CreateFromShapeArrayAndDataArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
 
@@ -5304,14 +5304,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"CreateReference", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"CreateReference", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateReference());
             }
             catch (...)
@@ -5333,14 +5333,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"GetAsVectorView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"GetAsVectorView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAsVectorView());
             }
             catch (...)
@@ -5358,14 +5358,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt32Bit_get_Kind(py::wrapper::Windows::AI::MachineLearning::TensorInt32Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -5377,14 +5377,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt32Bit_get_Shape(py::wrapper::Windows::AI::MachineLearning::TensorInt32Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"Shape"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"Shape"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Shape());
         }
         catch (...)
@@ -5396,14 +5396,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt32Bit_get_TensorKind(py::wrapper::Windows::AI::MachineLearning::TensorInt32Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"TensorKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"TensorKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TensorKind());
         }
         catch (...)
@@ -5545,14 +5545,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -5575,14 +5575,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"Create", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"Create", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorInt64Bit::Create());
             }
             catch (...)
@@ -5593,14 +5593,14 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorInt64Bit::Create(param0));
@@ -5624,14 +5624,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"CreateFromArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"CreateFromArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 1);
 
@@ -5656,14 +5656,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"CreateFromBuffer", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"CreateFromBuffer", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -5688,14 +5688,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"CreateFromIterable", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"CreateFromIterable", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 1);
 
@@ -5720,14 +5720,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"CreateFromShapeArrayAndDataArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"CreateFromShapeArrayAndDataArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 1);
 
@@ -5752,14 +5752,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"CreateReference", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"CreateReference", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateReference());
             }
             catch (...)
@@ -5781,14 +5781,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"GetAsVectorView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"GetAsVectorView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAsVectorView());
             }
             catch (...)
@@ -5806,14 +5806,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt64Bit_get_Kind(py::wrapper::Windows::AI::MachineLearning::TensorInt64Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -5825,14 +5825,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt64Bit_get_Shape(py::wrapper::Windows::AI::MachineLearning::TensorInt64Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"Shape"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"Shape"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Shape());
         }
         catch (...)
@@ -5844,14 +5844,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt64Bit_get_TensorKind(py::wrapper::Windows::AI::MachineLearning::TensorInt64Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"TensorKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"TensorKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TensorKind());
         }
         catch (...)
@@ -5993,14 +5993,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -6023,14 +6023,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"Create", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"Create", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorInt8Bit::Create());
             }
             catch (...)
@@ -6041,14 +6041,14 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorInt8Bit::Create(param0));
@@ -6072,14 +6072,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"CreateFromArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"CreateFromArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
@@ -6104,14 +6104,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"CreateFromBuffer", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"CreateFromBuffer", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -6136,14 +6136,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"CreateFromIterable", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"CreateFromIterable", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<uint8_t>>(args, 1);
 
@@ -6168,14 +6168,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"CreateFromShapeArrayAndDataArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"CreateFromShapeArrayAndDataArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
@@ -6200,14 +6200,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"CreateReference", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"CreateReference", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateReference());
             }
             catch (...)
@@ -6229,14 +6229,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"GetAsVectorView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"GetAsVectorView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAsVectorView());
             }
             catch (...)
@@ -6254,14 +6254,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt8Bit_get_Kind(py::wrapper::Windows::AI::MachineLearning::TensorInt8Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -6273,14 +6273,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt8Bit_get_Shape(py::wrapper::Windows::AI::MachineLearning::TensorInt8Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"Shape"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"Shape"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Shape());
         }
         catch (...)
@@ -6292,14 +6292,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt8Bit_get_TensorKind(py::wrapper::Windows::AI::MachineLearning::TensorInt8Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"TensorKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"TensorKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TensorKind());
         }
         catch (...)
@@ -6441,14 +6441,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -6471,14 +6471,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"Create", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"Create", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorString::Create());
             }
             catch (...)
@@ -6489,14 +6489,14 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorString::Create(param0));
@@ -6520,14 +6520,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"CreateFromArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"CreateFromArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 1);
 
@@ -6552,14 +6552,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"CreateFromIterable", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"CreateFromIterable", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
@@ -6584,14 +6584,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"CreateFromShapeArrayAndDataArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"CreateFromShapeArrayAndDataArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 1);
 
@@ -6616,14 +6616,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"CreateReference", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"CreateReference", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateReference());
             }
             catch (...)
@@ -6645,14 +6645,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"GetAsVectorView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"GetAsVectorView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAsVectorView());
             }
             catch (...)
@@ -6670,14 +6670,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorString_get_Kind(py::wrapper::Windows::AI::MachineLearning::TensorString* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorString", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorString", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -6689,14 +6689,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorString_get_Shape(py::wrapper::Windows::AI::MachineLearning::TensorString* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorString", L"Shape"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorString", L"Shape"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Shape());
         }
         catch (...)
@@ -6708,14 +6708,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorString_get_TensorKind(py::wrapper::Windows::AI::MachineLearning::TensorString* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorString", L"TensorKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorString", L"TensorKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TensorKind());
         }
         catch (...)
@@ -6856,14 +6856,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -6886,14 +6886,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"Create", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"Create", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt16Bit::Create());
             }
             catch (...)
@@ -6904,14 +6904,14 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt16Bit::Create(param0));
@@ -6935,14 +6935,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"CreateFromArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"CreateFromArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint16_t, false>>(args, 1);
 
@@ -6967,14 +6967,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"CreateFromBuffer", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"CreateFromBuffer", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -6999,14 +6999,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"CreateFromIterable", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"CreateFromIterable", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<uint16_t>>(args, 1);
 
@@ -7031,14 +7031,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"CreateFromShapeArrayAndDataArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"CreateFromShapeArrayAndDataArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint16_t, false>>(args, 1);
 
@@ -7063,14 +7063,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"CreateReference", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"CreateReference", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateReference());
             }
             catch (...)
@@ -7092,14 +7092,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"GetAsVectorView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"GetAsVectorView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAsVectorView());
             }
             catch (...)
@@ -7117,14 +7117,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt16Bit_get_Kind(py::wrapper::Windows::AI::MachineLearning::TensorUInt16Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -7136,14 +7136,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt16Bit_get_Shape(py::wrapper::Windows::AI::MachineLearning::TensorUInt16Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"Shape"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"Shape"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Shape());
         }
         catch (...)
@@ -7155,14 +7155,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt16Bit_get_TensorKind(py::wrapper::Windows::AI::MachineLearning::TensorUInt16Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"TensorKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"TensorKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TensorKind());
         }
         catch (...)
@@ -7304,14 +7304,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -7334,14 +7334,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"Create", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"Create", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt32Bit::Create());
             }
             catch (...)
@@ -7352,14 +7352,14 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt32Bit::Create(param0));
@@ -7383,14 +7383,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"CreateFromArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"CreateFromArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint32_t, false>>(args, 1);
 
@@ -7415,14 +7415,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"CreateFromBuffer", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"CreateFromBuffer", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -7447,14 +7447,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"CreateFromIterable", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"CreateFromIterable", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<uint32_t>>(args, 1);
 
@@ -7479,14 +7479,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"CreateFromShapeArrayAndDataArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"CreateFromShapeArrayAndDataArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint32_t, false>>(args, 1);
 
@@ -7511,14 +7511,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"CreateReference", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"CreateReference", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateReference());
             }
             catch (...)
@@ -7540,14 +7540,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"GetAsVectorView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"GetAsVectorView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAsVectorView());
             }
             catch (...)
@@ -7565,14 +7565,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt32Bit_get_Kind(py::wrapper::Windows::AI::MachineLearning::TensorUInt32Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -7584,14 +7584,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt32Bit_get_Shape(py::wrapper::Windows::AI::MachineLearning::TensorUInt32Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"Shape"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"Shape"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Shape());
         }
         catch (...)
@@ -7603,14 +7603,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt32Bit_get_TensorKind(py::wrapper::Windows::AI::MachineLearning::TensorUInt32Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"TensorKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"TensorKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TensorKind());
         }
         catch (...)
@@ -7752,14 +7752,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -7782,14 +7782,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"Create", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"Create", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt64Bit::Create());
             }
             catch (...)
@@ -7800,14 +7800,14 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt64Bit::Create(param0));
@@ -7831,14 +7831,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"CreateFromArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"CreateFromArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint64_t, false>>(args, 1);
 
@@ -7863,14 +7863,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"CreateFromBuffer", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"CreateFromBuffer", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -7895,14 +7895,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"CreateFromIterable", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"CreateFromIterable", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<uint64_t>>(args, 1);
 
@@ -7927,14 +7927,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"CreateFromShapeArrayAndDataArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"CreateFromShapeArrayAndDataArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint64_t, false>>(args, 1);
 
@@ -7959,14 +7959,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"CreateReference", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"CreateReference", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateReference());
             }
             catch (...)
@@ -7988,14 +7988,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"GetAsVectorView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"GetAsVectorView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAsVectorView());
             }
             catch (...)
@@ -8013,14 +8013,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt64Bit_get_Kind(py::wrapper::Windows::AI::MachineLearning::TensorUInt64Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -8032,14 +8032,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt64Bit_get_Shape(py::wrapper::Windows::AI::MachineLearning::TensorUInt64Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"Shape"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"Shape"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Shape());
         }
         catch (...)
@@ -8051,14 +8051,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt64Bit_get_TensorKind(py::wrapper::Windows::AI::MachineLearning::TensorUInt64Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"TensorKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"TensorKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TensorKind());
         }
         catch (...)
@@ -8200,14 +8200,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -8230,14 +8230,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"Create", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"Create", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt8Bit::Create());
             }
             catch (...)
@@ -8248,14 +8248,14 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert(winrt::Windows::AI::MachineLearning::TensorUInt8Bit::Create(param0));
@@ -8279,14 +8279,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"CreateFromArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"CreateFromArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
@@ -8311,14 +8311,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"CreateFromBuffer", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"CreateFromBuffer", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -8343,14 +8343,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"CreateFromIterable", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"CreateFromIterable", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<uint8_t>>(args, 1);
 
@@ -8375,14 +8375,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"CreateFromShapeArrayAndDataArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"CreateFromShapeArrayAndDataArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
@@ -8407,14 +8407,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"CreateReference", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"CreateReference", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateReference());
             }
             catch (...)
@@ -8436,14 +8436,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"GetAsVectorView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"GetAsVectorView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAsVectorView());
             }
             catch (...)
@@ -8461,14 +8461,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt8Bit_get_Kind(py::wrapper::Windows::AI::MachineLearning::TensorUInt8Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -8480,14 +8480,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt8Bit_get_Shape(py::wrapper::Windows::AI::MachineLearning::TensorUInt8Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"Shape"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"Shape"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Shape());
         }
         catch (...)
@@ -8499,14 +8499,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt8Bit_get_TensorKind(py::wrapper::Windows::AI::MachineLearning::TensorUInt8Bit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"TensorKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"TensorKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TensorKind());
         }
         catch (...)
@@ -8644,14 +8644,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* ILearningModelFeatureDescriptor_get_Description(py::wrapper::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ILearningModelFeatureDescriptor", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ILearningModelFeatureDescriptor", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -8663,14 +8663,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* ILearningModelFeatureDescriptor_get_IsRequired(py::wrapper::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ILearningModelFeatureDescriptor", L"IsRequired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ILearningModelFeatureDescriptor", L"IsRequired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRequired());
         }
         catch (...)
@@ -8682,14 +8682,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* ILearningModelFeatureDescriptor_get_Kind(py::wrapper::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ILearningModelFeatureDescriptor", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ILearningModelFeatureDescriptor", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -8701,14 +8701,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* ILearningModelFeatureDescriptor_get_Name(py::wrapper::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ILearningModelFeatureDescriptor", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ILearningModelFeatureDescriptor", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -8793,14 +8793,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* ILearningModelFeatureValue_get_Kind(py::wrapper::Windows::AI::MachineLearning::ILearningModelFeatureValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ILearningModelFeatureValue", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ILearningModelFeatureValue", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -8951,14 +8951,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* ITensor_get_Shape(py::wrapper::Windows::AI::MachineLearning::ITensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ITensor", L"Shape"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ITensor", L"Shape"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Shape());
         }
         catch (...)
@@ -8970,14 +8970,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* ITensor_get_TensorKind(py::wrapper::Windows::AI::MachineLearning::ITensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ITensor", L"TensorKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ITensor", L"TensorKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TensorKind());
         }
         catch (...)
@@ -8989,14 +8989,14 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* ITensor_get_Kind(py::wrapper::Windows::AI::MachineLearning::ITensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ILearningModelFeatureValue", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.ILearningModelFeatureValue", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)

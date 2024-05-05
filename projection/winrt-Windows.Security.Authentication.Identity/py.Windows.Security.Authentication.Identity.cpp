@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity
 
     static PyObject* EnterpriseKeyCredentialRegistrationInfo_get_KeyId(py::wrapper::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo", L"KeyId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo", L"KeyId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyId());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity
 
     static PyObject* EnterpriseKeyCredentialRegistrationInfo_get_KeyName(py::wrapper::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo", L"KeyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo", L"KeyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyName());
         }
         catch (...)
@@ -62,14 +62,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity
 
     static PyObject* EnterpriseKeyCredentialRegistrationInfo_get_Subject(py::wrapper::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo", L"Subject"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo", L"Subject"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Subject());
         }
         catch (...)
@@ -81,14 +81,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity
 
     static PyObject* EnterpriseKeyCredentialRegistrationInfo_get_TenantId(py::wrapper::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo", L"TenantId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo", L"TenantId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TenantId());
         }
         catch (...)
@@ -100,14 +100,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity
 
     static PyObject* EnterpriseKeyCredentialRegistrationInfo_get_TenantName(py::wrapper::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo", L"TenantName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo", L"TenantName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TenantName());
         }
         catch (...)
@@ -197,14 +197,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationManager", L"GetRegistrationsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationManager", L"GetRegistrationsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetRegistrationsAsync());
             }
             catch (...)
@@ -222,14 +222,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity
 
     static PyObject* EnterpriseKeyCredentialRegistrationManager_get_Current(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationManager", L"Current"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationManager", L"Current"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationManager::Current());
         }
         catch (...)

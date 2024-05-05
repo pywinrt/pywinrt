@@ -50,14 +50,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.PropertySet", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.PropertySet", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -80,14 +80,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.PropertySet", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.PropertySet", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -109,14 +109,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.PropertySet", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.PropertySet", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -138,14 +138,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.PropertySet", L"HasKey", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.PropertySet", L"HasKey", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.HasKey(param0));
@@ -169,14 +169,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.PropertySet", L"Insert", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.PropertySet", L"Insert", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -201,14 +201,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.PropertySet", L"Lookup", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.PropertySet", L"Lookup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.Lookup(param0));
@@ -232,14 +232,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.PropertySet", L"Remove", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.PropertySet", L"Remove", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Remove(param0);
@@ -260,14 +260,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* PropertySet_get_Size(py::wrapper::Windows::Foundation::Collections::PropertySet* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.PropertySet", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.PropertySet", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -279,14 +279,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* PropertySet_add_MapChanged(py::wrapper::Windows::Foundation::Collections::PropertySet* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.PropertySet", L"MapChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.PropertySet", L"MapChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::MapChangedEventHandler<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.MapChanged(param0));
@@ -300,14 +300,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* PropertySet_remove_MapChanged(py::wrapper::Windows::Foundation::Collections::PropertySet* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.PropertySet", L"MapChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.PropertySet", L"MapChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.MapChanged(param0);
@@ -533,14 +533,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.StringMap", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.StringMap", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -563,14 +563,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.StringMap", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.StringMap", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -592,14 +592,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.StringMap", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.StringMap", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -621,14 +621,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.StringMap", L"HasKey", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.StringMap", L"HasKey", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.HasKey(param0));
@@ -652,14 +652,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.StringMap", L"Insert", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.StringMap", L"Insert", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -684,14 +684,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.StringMap", L"Lookup", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.StringMap", L"Lookup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.Lookup(param0));
@@ -715,14 +715,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.StringMap", L"Remove", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.StringMap", L"Remove", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Remove(param0);
@@ -743,14 +743,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* StringMap_get_Size(py::wrapper::Windows::Foundation::Collections::StringMap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.StringMap", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.StringMap", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -762,14 +762,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* StringMap_add_MapChanged(py::wrapper::Windows::Foundation::Collections::StringMap* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.StringMap", L"MapChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.StringMap", L"MapChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::MapChangedEventHandler<winrt::hstring, winrt::hstring>>(arg);
 
             return py::convert(self->obj.MapChanged(param0));
@@ -783,14 +783,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* StringMap_remove_MapChanged(py::wrapper::Windows::Foundation::Collections::StringMap* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.StringMap", L"MapChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.StringMap", L"MapChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.MapChanged(param0);
@@ -1016,14 +1016,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.ValueSet", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.ValueSet", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -1046,14 +1046,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.ValueSet", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.ValueSet", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -1075,14 +1075,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.ValueSet", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.ValueSet", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -1104,14 +1104,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.ValueSet", L"HasKey", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.ValueSet", L"HasKey", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.HasKey(param0));
@@ -1135,14 +1135,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.ValueSet", L"Insert", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.ValueSet", L"Insert", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -1167,14 +1167,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.ValueSet", L"Lookup", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.ValueSet", L"Lookup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.Lookup(param0));
@@ -1198,14 +1198,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.ValueSet", L"Remove", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.ValueSet", L"Remove", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Remove(param0);
@@ -1226,14 +1226,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* ValueSet_get_Size(py::wrapper::Windows::Foundation::Collections::ValueSet* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.ValueSet", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.ValueSet", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -1245,14 +1245,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* ValueSet_add_MapChanged(py::wrapper::Windows::Foundation::Collections::ValueSet* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.ValueSet", L"MapChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.ValueSet", L"MapChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::MapChangedEventHandler<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.MapChanged(param0));
@@ -1266,14 +1266,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* ValueSet_remove_MapChanged(py::wrapper::Windows::Foundation::Collections::ValueSet* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.ValueSet", L"MapChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.ValueSet", L"MapChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.MapChanged(param0);
@@ -1541,24 +1541,40 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* IIterator_get_Current(py::wrapper::Windows::Foundation::Collections::IIterator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IIterator`1", L"Current"))
+        try
         {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IIterator`1", L"Current"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return self->impl->get_Current();
+        }
+        catch (...)
+        {
+            py::to_PyErr();
             return nullptr;
         }
-
-        return self->impl->get_Current();
     }
 
     static PyObject* IIterator_get_HasCurrent(py::wrapper::Windows::Foundation::Collections::IIterator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IIterator`1", L"HasCurrent"))
+        try
         {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IIterator`1", L"HasCurrent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return self->impl->get_HasCurrent();
+        }
+        catch (...)
+        {
+            py::to_PyErr();
             return nullptr;
         }
-
-        return self->impl->get_HasCurrent();
     }
 
     static PyObject* _iterator_IIterator(py::wrapper::Windows::Foundation::Collections::IIterator* self) noexcept
@@ -1624,24 +1640,40 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* IKeyValuePair_get_Key(py::wrapper::Windows::Foundation::Collections::IKeyValuePair* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IKeyValuePair`2", L"Key"))
+        try
         {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IKeyValuePair`2", L"Key"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return self->impl->get_Key();
+        }
+        catch (...)
+        {
+            py::to_PyErr();
             return nullptr;
         }
-
-        return self->impl->get_Key();
     }
 
     static PyObject* IKeyValuePair_get_Value(py::wrapper::Windows::Foundation::Collections::IKeyValuePair* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IKeyValuePair`2", L"Value"))
+        try
         {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IKeyValuePair`2", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return self->impl->get_Value();
+        }
+        catch (...)
+        {
+            py::to_PyErr();
             return nullptr;
         }
-
-        return self->impl->get_Value();
     }
 
     static PyMethodDef _methods_IKeyValuePair[] = {
@@ -1693,24 +1725,40 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* IMapChangedEventArgs_get_CollectionChange(py::wrapper::Windows::Foundation::Collections::IMapChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IMapChangedEventArgs`1", L"CollectionChange"))
+        try
         {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IMapChangedEventArgs`1", L"CollectionChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return self->impl->get_CollectionChange();
+        }
+        catch (...)
+        {
+            py::to_PyErr();
             return nullptr;
         }
-
-        return self->impl->get_CollectionChange();
     }
 
     static PyObject* IMapChangedEventArgs_get_Key(py::wrapper::Windows::Foundation::Collections::IMapChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IMapChangedEventArgs`1", L"Key"))
+        try
         {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IMapChangedEventArgs`1", L"Key"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return self->impl->get_Key();
+        }
+        catch (...)
+        {
+            py::to_PyErr();
             return nullptr;
         }
-
-        return self->impl->get_Key();
     }
 
     static PyMethodDef _methods_IMapChangedEventArgs[] = {
@@ -1782,13 +1830,21 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* IMapView_get_Size(py::wrapper::Windows::Foundation::Collections::IMapView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IMapView`2", L"Size"))
+        try
         {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IMapView`2", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return self->impl->get_Size();
+        }
+        catch (...)
+        {
+            py::to_PyErr();
             return nullptr;
         }
-
-        return self->impl->get_Size();
     }
 
     static PyObject* _iterator_IMapView(py::wrapper::Windows::Foundation::Collections::IMapView* self) noexcept
@@ -1902,13 +1958,21 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* IMap_get_Size(py::wrapper::Windows::Foundation::Collections::IMap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IMap`2", L"Size"))
+        try
         {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IMap`2", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return self->impl->get_Size();
+        }
+        catch (...)
+        {
+            py::to_PyErr();
             return nullptr;
         }
-
-        return self->impl->get_Size();
     }
 
     static PyObject* _iterator_IMap(py::wrapper::Windows::Foundation::Collections::IMap* self) noexcept
@@ -2031,35 +2095,59 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* IObservableMap_get_Size(py::wrapper::Windows::Foundation::Collections::IObservableMap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IMap`2", L"Size"))
+        try
         {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IMap`2", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return self->impl->get_Size();
+        }
+        catch (...)
+        {
+            py::to_PyErr();
             return nullptr;
         }
-
-        return self->impl->get_Size();
     }
 
     static PyObject* IObservableMap_add_MapChanged(py::wrapper::Windows::Foundation::Collections::IObservableMap* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.IObservableMap`2", L"MapChanged"))
+        try
         {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.IObservableMap`2", L"MapChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return self->impl->add_MapChanged(arg);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
             return nullptr;
         }
-
-        return self->impl->add_MapChanged(arg);
     }
 
     static PyObject* IObservableMap_remove_MapChanged(py::wrapper::Windows::Foundation::Collections::IObservableMap* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.IObservableMap`2", L"MapChanged"))
+        try
         {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.IObservableMap`2", L"MapChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return self->impl->remove_MapChanged(arg);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
             return nullptr;
         }
-
-        return self->impl->remove_MapChanged(arg);
     }
 
     static PyObject* _iterator_IObservableMap(py::wrapper::Windows::Foundation::Collections::IObservableMap* self) noexcept
@@ -2209,35 +2297,59 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* IObservableVector_get_Size(py::wrapper::Windows::Foundation::Collections::IObservableVector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IVector`1", L"Size"))
+        try
         {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IVector`1", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return self->impl->get_Size();
+        }
+        catch (...)
+        {
+            py::to_PyErr();
             return nullptr;
         }
-
-        return self->impl->get_Size();
     }
 
     static PyObject* IObservableVector_add_VectorChanged(py::wrapper::Windows::Foundation::Collections::IObservableVector* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.IObservableVector`1", L"VectorChanged"))
+        try
         {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.IObservableVector`1", L"VectorChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return self->impl->add_VectorChanged(arg);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
             return nullptr;
         }
-
-        return self->impl->add_VectorChanged(arg);
     }
 
     static PyObject* IObservableVector_remove_VectorChanged(py::wrapper::Windows::Foundation::Collections::IObservableVector* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.IObservableVector`1", L"VectorChanged"))
+        try
         {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.IObservableVector`1", L"VectorChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return self->impl->remove_VectorChanged(arg);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
             return nullptr;
         }
-
-        return self->impl->remove_VectorChanged(arg);
     }
 
     static PyObject* _iterator_IObservableVector(py::wrapper::Windows::Foundation::Collections::IObservableVector* self) noexcept
@@ -2335,14 +2447,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -2365,14 +2477,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -2394,14 +2506,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -2423,14 +2535,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"HasKey", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"HasKey", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.HasKey(param0));
@@ -2454,14 +2566,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Insert", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Insert", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -2486,14 +2598,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Lookup", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Lookup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.Lookup(param0));
@@ -2517,14 +2629,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Remove", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Remove", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Remove(param0);
@@ -2545,14 +2657,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* IPropertySet_get_Size(py::wrapper::Windows::Foundation::Collections::IPropertySet* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IMap`2", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IMap`2", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -2564,14 +2676,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* IPropertySet_add_MapChanged(py::wrapper::Windows::Foundation::Collections::IPropertySet* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.IObservableMap`2", L"MapChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.IObservableMap`2", L"MapChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::MapChangedEventHandler<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.MapChanged(param0));
@@ -2585,14 +2697,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* IPropertySet_remove_MapChanged(py::wrapper::Windows::Foundation::Collections::IPropertySet* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.IObservableMap`2", L"MapChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.IObservableMap`2", L"MapChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.MapChanged(param0);
@@ -2792,14 +2904,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* IVectorChangedEventArgs_get_CollectionChange(py::wrapper::Windows::Foundation::Collections::IVectorChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IVectorChangedEventArgs", L"CollectionChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IVectorChangedEventArgs", L"CollectionChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CollectionChange());
         }
         catch (...)
@@ -2811,14 +2923,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* IVectorChangedEventArgs_get_Index(py::wrapper::Windows::Foundation::Collections::IVectorChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IVectorChangedEventArgs", L"Index"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IVectorChangedEventArgs", L"Index"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Index());
         }
         catch (...)
@@ -2922,13 +3034,21 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* IVectorView_get_Size(py::wrapper::Windows::Foundation::Collections::IVectorView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IVectorView`1", L"Size"))
+        try
         {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IVectorView`1", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return self->impl->get_Size();
+        }
+        catch (...)
+        {
+            py::to_PyErr();
             return nullptr;
         }
-
-        return self->impl->get_Size();
     }
 
     static PyObject* _iterator_IVectorView(py::wrapper::Windows::Foundation::Collections::IVectorView* self) noexcept
@@ -3067,13 +3187,21 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* IVector_get_Size(py::wrapper::Windows::Foundation::Collections::IVector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IVector`1", L"Size"))
+        try
         {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IVector`1", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return self->impl->get_Size();
+        }
+        catch (...)
+        {
+            py::to_PyErr();
             return nullptr;
         }
-
-        return self->impl->get_Size();
     }
 
     static PyObject* _iterator_IVector(py::wrapper::Windows::Foundation::Collections::IVector* self) noexcept

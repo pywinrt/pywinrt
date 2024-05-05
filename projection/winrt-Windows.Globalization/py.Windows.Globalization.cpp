@@ -20,14 +20,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.ApplicationLanguages", L"GetLanguagesForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.ApplicationLanguages", L"GetLanguagesForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::Globalization::ApplicationLanguages::GetLanguagesForUser(param0));
@@ -47,14 +47,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* ApplicationLanguages_get_PrimaryLanguageOverride(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.ApplicationLanguages", L"PrimaryLanguageOverride"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.ApplicationLanguages", L"PrimaryLanguageOverride"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::ApplicationLanguages::PrimaryLanguageOverride());
         }
         catch (...)
@@ -66,12 +66,6 @@ namespace py::cpp::Windows::Globalization
 
     static int ApplicationLanguages_put_PrimaryLanguageOverride(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.ApplicationLanguages", L"PrimaryLanguageOverride"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -80,6 +74,12 @@ namespace py::cpp::Windows::Globalization
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.ApplicationLanguages", L"PrimaryLanguageOverride"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             winrt::Windows::Globalization::ApplicationLanguages::PrimaryLanguageOverride(param0);
@@ -94,14 +94,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* ApplicationLanguages_get_Languages(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.ApplicationLanguages", L"Languages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.ApplicationLanguages", L"Languages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::ApplicationLanguages::Languages());
         }
         catch (...)
@@ -113,14 +113,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* ApplicationLanguages_get_ManifestLanguages(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.ApplicationLanguages", L"ManifestLanguages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.ApplicationLanguages", L"ManifestLanguages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::ApplicationLanguages::ManifestLanguages());
         }
         catch (...)
@@ -279,14 +279,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"AddDays", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"AddDays", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 self->obj.AddDays(param0);
@@ -311,14 +311,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"AddEras", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"AddEras", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 self->obj.AddEras(param0);
@@ -343,14 +343,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"AddHours", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"AddHours", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 self->obj.AddHours(param0);
@@ -375,14 +375,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"AddMinutes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"AddMinutes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 self->obj.AddMinutes(param0);
@@ -407,14 +407,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"AddMonths", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"AddMonths", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 self->obj.AddMonths(param0);
@@ -439,14 +439,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"AddNanoseconds", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"AddNanoseconds", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 self->obj.AddNanoseconds(param0);
@@ -471,14 +471,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"AddPeriods", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"AddPeriods", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 self->obj.AddPeriods(param0);
@@ -503,14 +503,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"AddSeconds", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"AddSeconds", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 self->obj.AddSeconds(param0);
@@ -535,14 +535,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"AddWeeks", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"AddWeeks", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 self->obj.AddWeeks(param0);
@@ -567,14 +567,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"AddYears", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"AddYears", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 self->obj.AddYears(param0);
@@ -599,14 +599,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"ChangeCalendarSystem", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"ChangeCalendarSystem", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ChangeCalendarSystem(param0);
@@ -631,14 +631,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"ChangeClock", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"ChangeClock", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ChangeClock(param0);
@@ -663,14 +663,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"ChangeTimeZone", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"ChangeTimeZone", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ChangeTimeZone(param0);
@@ -695,14 +695,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"Clone", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"Clone", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.Clone());
             }
             catch (...)
@@ -724,14 +724,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"Compare", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"Compare", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Globalization::Calendar>(args, 0);
 
                 return py::convert(self->obj.Compare(param0));
@@ -755,14 +755,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"CompareDateTime", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"CompareDateTime", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
 
                 return py::convert(self->obj.CompareDateTime(param0));
@@ -786,14 +786,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"CopyTo", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"CopyTo", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Globalization::Calendar>(args, 0);
 
                 self->obj.CopyTo(param0);
@@ -818,14 +818,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"DayAsPaddedString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"DayAsPaddedString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.DayAsPaddedString(param0));
@@ -849,14 +849,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"DayAsString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"DayAsString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.DayAsString());
             }
             catch (...)
@@ -878,14 +878,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"DayOfWeekAsSoloString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"DayOfWeekAsSoloString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.DayOfWeekAsSoloString());
             }
             catch (...)
@@ -896,14 +896,14 @@ namespace py::cpp::Windows::Globalization
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"DayOfWeekAsSoloString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"DayOfWeekAsSoloString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.DayOfWeekAsSoloString(param0));
@@ -927,14 +927,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"DayOfWeekAsString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"DayOfWeekAsString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.DayOfWeekAsString());
             }
             catch (...)
@@ -945,14 +945,14 @@ namespace py::cpp::Windows::Globalization
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"DayOfWeekAsString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"DayOfWeekAsString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.DayOfWeekAsString(param0));
@@ -976,14 +976,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"EraAsString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"EraAsString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.EraAsString());
             }
             catch (...)
@@ -994,14 +994,14 @@ namespace py::cpp::Windows::Globalization
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"EraAsString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"EraAsString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.EraAsString(param0));
@@ -1025,14 +1025,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"GetCalendarSystem", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"GetCalendarSystem", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCalendarSystem());
             }
             catch (...)
@@ -1054,14 +1054,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"GetClock", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"GetClock", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetClock());
             }
             catch (...)
@@ -1083,14 +1083,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"GetDateTime", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"GetDateTime", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDateTime());
             }
             catch (...)
@@ -1112,14 +1112,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"GetTimeZone", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"GetTimeZone", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetTimeZone());
             }
             catch (...)
@@ -1141,14 +1141,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"HourAsPaddedString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"HourAsPaddedString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.HourAsPaddedString(param0));
@@ -1172,14 +1172,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"HourAsString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"HourAsString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.HourAsString());
             }
             catch (...)
@@ -1201,14 +1201,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"MinuteAsPaddedString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"MinuteAsPaddedString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.MinuteAsPaddedString(param0));
@@ -1232,14 +1232,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"MinuteAsString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"MinuteAsString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.MinuteAsString());
             }
             catch (...)
@@ -1261,14 +1261,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"MonthAsNumericString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"MonthAsNumericString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.MonthAsNumericString());
             }
             catch (...)
@@ -1290,14 +1290,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"MonthAsPaddedNumericString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"MonthAsPaddedNumericString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.MonthAsPaddedNumericString(param0));
@@ -1321,14 +1321,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"MonthAsSoloString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"MonthAsSoloString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.MonthAsSoloString());
             }
             catch (...)
@@ -1339,14 +1339,14 @@ namespace py::cpp::Windows::Globalization
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"MonthAsSoloString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"MonthAsSoloString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.MonthAsSoloString(param0));
@@ -1370,14 +1370,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"MonthAsString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"MonthAsString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.MonthAsString());
             }
             catch (...)
@@ -1388,14 +1388,14 @@ namespace py::cpp::Windows::Globalization
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"MonthAsString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"MonthAsString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.MonthAsString(param0));
@@ -1419,14 +1419,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"NanosecondAsPaddedString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"NanosecondAsPaddedString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.NanosecondAsPaddedString(param0));
@@ -1450,14 +1450,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"NanosecondAsString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"NanosecondAsString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.NanosecondAsString());
             }
             catch (...)
@@ -1479,14 +1479,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"PeriodAsString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"PeriodAsString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.PeriodAsString());
             }
             catch (...)
@@ -1497,14 +1497,14 @@ namespace py::cpp::Windows::Globalization
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"PeriodAsString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"PeriodAsString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.PeriodAsString(param0));
@@ -1528,14 +1528,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"SecondAsPaddedString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"SecondAsPaddedString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.SecondAsPaddedString(param0));
@@ -1559,14 +1559,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"SecondAsString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"SecondAsString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SecondAsString());
             }
             catch (...)
@@ -1588,14 +1588,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"SetDateTime", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"SetDateTime", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
 
                 self->obj.SetDateTime(param0);
@@ -1620,14 +1620,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"SetToMax", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"SetToMax", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.SetToMax();
                 Py_RETURN_NONE;
             }
@@ -1650,14 +1650,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"SetToMin", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"SetToMin", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.SetToMin();
                 Py_RETURN_NONE;
             }
@@ -1680,14 +1680,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"SetToNow", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"SetToNow", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.SetToNow();
                 Py_RETURN_NONE;
             }
@@ -1710,14 +1710,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"TimeZoneAsString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"TimeZoneAsString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TimeZoneAsString());
             }
             catch (...)
@@ -1728,14 +1728,14 @@ namespace py::cpp::Windows::Globalization
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"TimeZoneAsString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"TimeZoneAsString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.TimeZoneAsString(param0));
@@ -1759,14 +1759,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"YearAsPaddedString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"YearAsPaddedString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.YearAsPaddedString(param0));
@@ -1790,14 +1790,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"YearAsString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"YearAsString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.YearAsString());
             }
             catch (...)
@@ -1819,14 +1819,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"YearAsTruncatedString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"YearAsTruncatedString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.YearAsTruncatedString(param0));
@@ -1846,14 +1846,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_Year(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Year"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Year"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Year());
         }
         catch (...)
@@ -1865,12 +1865,6 @@ namespace py::cpp::Windows::Globalization
 
     static int Calendar_put_Year(py::wrapper::Windows::Globalization::Calendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Year"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1879,6 +1873,12 @@ namespace py::cpp::Windows::Globalization
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Year"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Year(param0);
@@ -1893,14 +1893,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_Second(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Second"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Second"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Second());
         }
         catch (...)
@@ -1912,12 +1912,6 @@ namespace py::cpp::Windows::Globalization
 
     static int Calendar_put_Second(py::wrapper::Windows::Globalization::Calendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Second"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1926,6 +1920,12 @@ namespace py::cpp::Windows::Globalization
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Second"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Second(param0);
@@ -1940,14 +1940,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_Period(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Period"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Period"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Period());
         }
         catch (...)
@@ -1959,12 +1959,6 @@ namespace py::cpp::Windows::Globalization
 
     static int Calendar_put_Period(py::wrapper::Windows::Globalization::Calendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Period"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1973,6 +1967,12 @@ namespace py::cpp::Windows::Globalization
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Period"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Period(param0);
@@ -1987,14 +1987,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_Nanosecond(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Nanosecond"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Nanosecond"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Nanosecond());
         }
         catch (...)
@@ -2006,12 +2006,6 @@ namespace py::cpp::Windows::Globalization
 
     static int Calendar_put_Nanosecond(py::wrapper::Windows::Globalization::Calendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Nanosecond"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2020,6 +2014,12 @@ namespace py::cpp::Windows::Globalization
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Nanosecond"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Nanosecond(param0);
@@ -2034,14 +2034,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_Month(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Month"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Month"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Month());
         }
         catch (...)
@@ -2053,12 +2053,6 @@ namespace py::cpp::Windows::Globalization
 
     static int Calendar_put_Month(py::wrapper::Windows::Globalization::Calendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Month"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2067,6 +2061,12 @@ namespace py::cpp::Windows::Globalization
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Month"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Month(param0);
@@ -2081,14 +2081,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_Minute(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Minute"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Minute"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Minute());
         }
         catch (...)
@@ -2100,12 +2100,6 @@ namespace py::cpp::Windows::Globalization
 
     static int Calendar_put_Minute(py::wrapper::Windows::Globalization::Calendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Minute"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2114,6 +2108,12 @@ namespace py::cpp::Windows::Globalization
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Minute"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Minute(param0);
@@ -2128,14 +2128,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_NumeralSystem(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"NumeralSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"NumeralSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumeralSystem());
         }
         catch (...)
@@ -2147,12 +2147,6 @@ namespace py::cpp::Windows::Globalization
 
     static int Calendar_put_NumeralSystem(py::wrapper::Windows::Globalization::Calendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"NumeralSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2161,6 +2155,12 @@ namespace py::cpp::Windows::Globalization
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"NumeralSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NumeralSystem(param0);
@@ -2175,14 +2175,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_Era(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Era"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Era"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Era());
         }
         catch (...)
@@ -2194,12 +2194,6 @@ namespace py::cpp::Windows::Globalization
 
     static int Calendar_put_Era(py::wrapper::Windows::Globalization::Calendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Era"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2208,6 +2202,12 @@ namespace py::cpp::Windows::Globalization
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Era"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Era(param0);
@@ -2222,14 +2222,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_Hour(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Hour"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Hour"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Hour());
         }
         catch (...)
@@ -2241,12 +2241,6 @@ namespace py::cpp::Windows::Globalization
 
     static int Calendar_put_Hour(py::wrapper::Windows::Globalization::Calendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Hour"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2255,6 +2249,12 @@ namespace py::cpp::Windows::Globalization
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Hour"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Hour(param0);
@@ -2269,14 +2269,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_Day(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Day"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Day"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Day());
         }
         catch (...)
@@ -2288,12 +2288,6 @@ namespace py::cpp::Windows::Globalization
 
     static int Calendar_put_Day(py::wrapper::Windows::Globalization::Calendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Day"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2302,6 +2296,12 @@ namespace py::cpp::Windows::Globalization
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Day"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Day(param0);
@@ -2316,14 +2316,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_FirstSecondInThisMinute(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"FirstSecondInThisMinute"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"FirstSecondInThisMinute"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstSecondInThisMinute());
         }
         catch (...)
@@ -2335,14 +2335,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_FirstYearInThisEra(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"FirstYearInThisEra"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"FirstYearInThisEra"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstYearInThisEra());
         }
         catch (...)
@@ -2354,14 +2354,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_IsDaylightSavingTime(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"IsDaylightSavingTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"IsDaylightSavingTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDaylightSavingTime());
         }
         catch (...)
@@ -2373,14 +2373,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_Languages(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Languages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"Languages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Languages());
         }
         catch (...)
@@ -2392,14 +2392,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_LastDayInThisMonth(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"LastDayInThisMonth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"LastDayInThisMonth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastDayInThisMonth());
         }
         catch (...)
@@ -2411,14 +2411,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_LastEra(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"LastEra"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"LastEra"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastEra());
         }
         catch (...)
@@ -2430,14 +2430,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_LastHourInThisPeriod(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"LastHourInThisPeriod"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"LastHourInThisPeriod"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastHourInThisPeriod());
         }
         catch (...)
@@ -2449,14 +2449,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_LastMinuteInThisHour(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"LastMinuteInThisHour"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"LastMinuteInThisHour"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastMinuteInThisHour());
         }
         catch (...)
@@ -2468,14 +2468,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_LastMonthInThisYear(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"LastMonthInThisYear"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"LastMonthInThisYear"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastMonthInThisYear());
         }
         catch (...)
@@ -2487,14 +2487,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_LastSecondInThisMinute(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"LastSecondInThisMinute"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"LastSecondInThisMinute"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastSecondInThisMinute());
         }
         catch (...)
@@ -2506,14 +2506,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_LastYearInThisEra(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"LastYearInThisEra"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"LastYearInThisEra"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastYearInThisEra());
         }
         catch (...)
@@ -2525,14 +2525,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_DayOfWeek(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"DayOfWeek"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"DayOfWeek"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DayOfWeek());
         }
         catch (...)
@@ -2544,14 +2544,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_FirstDayInThisMonth(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"FirstDayInThisMonth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"FirstDayInThisMonth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstDayInThisMonth());
         }
         catch (...)
@@ -2563,14 +2563,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_LastPeriodInThisDay(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"LastPeriodInThisDay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"LastPeriodInThisDay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastPeriodInThisDay());
         }
         catch (...)
@@ -2582,14 +2582,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_FirstEra(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"FirstEra"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"FirstEra"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstEra());
         }
         catch (...)
@@ -2601,14 +2601,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_NumberOfDaysInThisMonth(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"NumberOfDaysInThisMonth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"NumberOfDaysInThisMonth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumberOfDaysInThisMonth());
         }
         catch (...)
@@ -2620,14 +2620,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_NumberOfEras(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"NumberOfEras"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"NumberOfEras"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumberOfEras());
         }
         catch (...)
@@ -2639,14 +2639,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_NumberOfHoursInThisPeriod(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"NumberOfHoursInThisPeriod"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"NumberOfHoursInThisPeriod"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumberOfHoursInThisPeriod());
         }
         catch (...)
@@ -2658,14 +2658,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_NumberOfMinutesInThisHour(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"NumberOfMinutesInThisHour"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"NumberOfMinutesInThisHour"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumberOfMinutesInThisHour());
         }
         catch (...)
@@ -2677,14 +2677,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_FirstHourInThisPeriod(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"FirstHourInThisPeriod"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"FirstHourInThisPeriod"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstHourInThisPeriod());
         }
         catch (...)
@@ -2696,14 +2696,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_NumberOfMonthsInThisYear(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"NumberOfMonthsInThisYear"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"NumberOfMonthsInThisYear"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumberOfMonthsInThisYear());
         }
         catch (...)
@@ -2715,14 +2715,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_NumberOfPeriodsInThisDay(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"NumberOfPeriodsInThisDay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"NumberOfPeriodsInThisDay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumberOfPeriodsInThisDay());
         }
         catch (...)
@@ -2734,14 +2734,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_NumberOfSecondsInThisMinute(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"NumberOfSecondsInThisMinute"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"NumberOfSecondsInThisMinute"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumberOfSecondsInThisMinute());
         }
         catch (...)
@@ -2753,14 +2753,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_NumberOfYearsInThisEra(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"NumberOfYearsInThisEra"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"NumberOfYearsInThisEra"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumberOfYearsInThisEra());
         }
         catch (...)
@@ -2772,14 +2772,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_FirstMinuteInThisHour(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"FirstMinuteInThisHour"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"FirstMinuteInThisHour"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstMinuteInThisHour());
         }
         catch (...)
@@ -2791,14 +2791,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_ResolvedLanguage(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"ResolvedLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"ResolvedLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolvedLanguage());
         }
         catch (...)
@@ -2810,14 +2810,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_FirstMonthInThisYear(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"FirstMonthInThisYear"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"FirstMonthInThisYear"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstMonthInThisYear());
         }
         catch (...)
@@ -2829,14 +2829,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_get_FirstPeriodInThisDay(py::wrapper::Windows::Globalization::Calendar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"FirstPeriodInThisDay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Calendar", L"FirstPeriodInThisDay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstPeriodInThisDay());
         }
         catch (...)
@@ -2994,14 +2994,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CalendarIdentifiers_get_Julian(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"Julian"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"Julian"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::Julian());
         }
         catch (...)
@@ -3013,14 +3013,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CalendarIdentifiers_get_Gregorian(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"Gregorian"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"Gregorian"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::Gregorian());
         }
         catch (...)
@@ -3032,14 +3032,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CalendarIdentifiers_get_Hebrew(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"Hebrew"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"Hebrew"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::Hebrew());
         }
         catch (...)
@@ -3051,14 +3051,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CalendarIdentifiers_get_Hijri(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"Hijri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"Hijri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::Hijri());
         }
         catch (...)
@@ -3070,14 +3070,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CalendarIdentifiers_get_Japanese(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"Japanese"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"Japanese"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::Japanese());
         }
         catch (...)
@@ -3089,14 +3089,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CalendarIdentifiers_get_Korean(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"Korean"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"Korean"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::Korean());
         }
         catch (...)
@@ -3108,14 +3108,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CalendarIdentifiers_get_Taiwan(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"Taiwan"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"Taiwan"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::Taiwan());
         }
         catch (...)
@@ -3127,14 +3127,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CalendarIdentifiers_get_Thai(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"Thai"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"Thai"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::Thai());
         }
         catch (...)
@@ -3146,14 +3146,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CalendarIdentifiers_get_UmAlQura(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"UmAlQura"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"UmAlQura"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::UmAlQura());
         }
         catch (...)
@@ -3165,14 +3165,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CalendarIdentifiers_get_Persian(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"Persian"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"Persian"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::Persian());
         }
         catch (...)
@@ -3184,14 +3184,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CalendarIdentifiers_get_ChineseLunar(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"ChineseLunar"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"ChineseLunar"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::ChineseLunar());
         }
         catch (...)
@@ -3203,14 +3203,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CalendarIdentifiers_get_VietnameseLunar(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"VietnameseLunar"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"VietnameseLunar"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::VietnameseLunar());
         }
         catch (...)
@@ -3222,14 +3222,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CalendarIdentifiers_get_TaiwanLunar(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"TaiwanLunar"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"TaiwanLunar"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::TaiwanLunar());
         }
         catch (...)
@@ -3241,14 +3241,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CalendarIdentifiers_get_KoreanLunar(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"KoreanLunar"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"KoreanLunar"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::KoreanLunar());
         }
         catch (...)
@@ -3260,14 +3260,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CalendarIdentifiers_get_JapaneseLunar(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"JapaneseLunar"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CalendarIdentifiers", L"JapaneseLunar"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CalendarIdentifiers::JapaneseLunar());
         }
         catch (...)
@@ -3353,14 +3353,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* ClockIdentifiers_get_TwelveHour(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.ClockIdentifiers", L"TwelveHour"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.ClockIdentifiers", L"TwelveHour"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::ClockIdentifiers::TwelveHour());
         }
         catch (...)
@@ -3372,14 +3372,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* ClockIdentifiers_get_TwentyFourHour(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.ClockIdentifiers", L"TwentyFourHour"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.ClockIdentifiers", L"TwentyFourHour"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::ClockIdentifiers::TwentyFourHour());
         }
         catch (...)
@@ -3485,14 +3485,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyAmount_get_Amount(py::wrapper::Windows::Globalization::CurrencyAmount* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyAmount", L"Amount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyAmount", L"Amount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Amount());
         }
         catch (...)
@@ -3504,14 +3504,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyAmount_get_Currency(py::wrapper::Windows::Globalization::CurrencyAmount* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyAmount", L"Currency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyAmount", L"Currency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Currency());
         }
         catch (...)
@@ -3586,14 +3586,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_HNL(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"HNL"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"HNL"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::HNL());
         }
         catch (...)
@@ -3605,14 +3605,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_AED(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"AED"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"AED"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::AED());
         }
         catch (...)
@@ -3624,14 +3624,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_AFN(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"AFN"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"AFN"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::AFN());
         }
         catch (...)
@@ -3643,14 +3643,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_ALL(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"ALL"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"ALL"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::ALL());
         }
         catch (...)
@@ -3662,14 +3662,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_AMD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"AMD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"AMD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::AMD());
         }
         catch (...)
@@ -3681,14 +3681,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_ANG(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"ANG"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"ANG"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::ANG());
         }
         catch (...)
@@ -3700,14 +3700,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_AOA(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"AOA"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"AOA"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::AOA());
         }
         catch (...)
@@ -3719,14 +3719,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_ARS(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"ARS"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"ARS"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::ARS());
         }
         catch (...)
@@ -3738,14 +3738,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_AUD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"AUD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"AUD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::AUD());
         }
         catch (...)
@@ -3757,14 +3757,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_AWG(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"AWG"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"AWG"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::AWG());
         }
         catch (...)
@@ -3776,14 +3776,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_AZN(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"AZN"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"AZN"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::AZN());
         }
         catch (...)
@@ -3795,14 +3795,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_BAM(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BAM"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BAM"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BAM());
         }
         catch (...)
@@ -3814,14 +3814,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_BBD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BBD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BBD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BBD());
         }
         catch (...)
@@ -3833,14 +3833,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_BDT(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BDT"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BDT"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BDT());
         }
         catch (...)
@@ -3852,14 +3852,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_BGN(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BGN"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BGN"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BGN());
         }
         catch (...)
@@ -3871,14 +3871,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_BHD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BHD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BHD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BHD());
         }
         catch (...)
@@ -3890,14 +3890,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_BIF(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BIF"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BIF"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BIF());
         }
         catch (...)
@@ -3909,14 +3909,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_BMD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BMD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BMD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BMD());
         }
         catch (...)
@@ -3928,14 +3928,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_BND(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BND"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BND"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BND());
         }
         catch (...)
@@ -3947,14 +3947,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_BOB(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BOB"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BOB"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BOB());
         }
         catch (...)
@@ -3966,14 +3966,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_BRL(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BRL"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BRL"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BRL());
         }
         catch (...)
@@ -3985,14 +3985,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_BSD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BSD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BSD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BSD());
         }
         catch (...)
@@ -4004,14 +4004,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_BTN(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BTN"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BTN"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BTN());
         }
         catch (...)
@@ -4023,14 +4023,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_BWP(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BWP"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BWP"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BWP());
         }
         catch (...)
@@ -4042,14 +4042,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_BYR(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BYR"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BYR"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BYR());
         }
         catch (...)
@@ -4061,14 +4061,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_BZD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BZD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BZD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BZD());
         }
         catch (...)
@@ -4080,14 +4080,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_CAD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"CAD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"CAD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::CAD());
         }
         catch (...)
@@ -4099,14 +4099,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_CDF(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"CDF"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"CDF"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::CDF());
         }
         catch (...)
@@ -4118,14 +4118,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_CHF(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"CHF"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"CHF"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::CHF());
         }
         catch (...)
@@ -4137,14 +4137,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_CLP(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"CLP"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"CLP"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::CLP());
         }
         catch (...)
@@ -4156,14 +4156,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_CNY(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"CNY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"CNY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::CNY());
         }
         catch (...)
@@ -4175,14 +4175,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_COP(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"COP"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"COP"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::COP());
         }
         catch (...)
@@ -4194,14 +4194,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_CRC(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"CRC"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"CRC"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::CRC());
         }
         catch (...)
@@ -4213,14 +4213,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_CUP(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"CUP"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"CUP"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::CUP());
         }
         catch (...)
@@ -4232,14 +4232,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_CVE(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"CVE"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"CVE"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::CVE());
         }
         catch (...)
@@ -4251,14 +4251,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_CZK(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"CZK"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"CZK"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::CZK());
         }
         catch (...)
@@ -4270,14 +4270,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_DJF(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"DJF"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"DJF"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::DJF());
         }
         catch (...)
@@ -4289,14 +4289,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_DKK(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"DKK"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"DKK"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::DKK());
         }
         catch (...)
@@ -4308,14 +4308,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_DOP(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"DOP"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"DOP"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::DOP());
         }
         catch (...)
@@ -4327,14 +4327,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_DZD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"DZD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"DZD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::DZD());
         }
         catch (...)
@@ -4346,14 +4346,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_EGP(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"EGP"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"EGP"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::EGP());
         }
         catch (...)
@@ -4365,14 +4365,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_ERN(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"ERN"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"ERN"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::ERN());
         }
         catch (...)
@@ -4384,14 +4384,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_ETB(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"ETB"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"ETB"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::ETB());
         }
         catch (...)
@@ -4403,14 +4403,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_EUR(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"EUR"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"EUR"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::EUR());
         }
         catch (...)
@@ -4422,14 +4422,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_FJD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"FJD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"FJD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::FJD());
         }
         catch (...)
@@ -4441,14 +4441,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_FKP(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"FKP"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"FKP"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::FKP());
         }
         catch (...)
@@ -4460,14 +4460,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_GBP(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"GBP"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"GBP"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::GBP());
         }
         catch (...)
@@ -4479,14 +4479,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_GEL(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"GEL"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"GEL"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::GEL());
         }
         catch (...)
@@ -4498,14 +4498,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_GHS(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"GHS"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"GHS"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::GHS());
         }
         catch (...)
@@ -4517,14 +4517,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_GIP(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"GIP"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"GIP"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::GIP());
         }
         catch (...)
@@ -4536,14 +4536,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_GMD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"GMD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"GMD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::GMD());
         }
         catch (...)
@@ -4555,14 +4555,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_GNF(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"GNF"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"GNF"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::GNF());
         }
         catch (...)
@@ -4574,14 +4574,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_GTQ(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"GTQ"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"GTQ"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::GTQ());
         }
         catch (...)
@@ -4593,14 +4593,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_GYD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"GYD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"GYD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::GYD());
         }
         catch (...)
@@ -4612,14 +4612,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_HKD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"HKD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"HKD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::HKD());
         }
         catch (...)
@@ -4631,14 +4631,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_RON(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"RON"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"RON"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::RON());
         }
         catch (...)
@@ -4650,14 +4650,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_HRK(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"HRK"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"HRK"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::HRK());
         }
         catch (...)
@@ -4669,14 +4669,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_HTG(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"HTG"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"HTG"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::HTG());
         }
         catch (...)
@@ -4688,14 +4688,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_HUF(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"HUF"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"HUF"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::HUF());
         }
         catch (...)
@@ -4707,14 +4707,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_IDR(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"IDR"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"IDR"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::IDR());
         }
         catch (...)
@@ -4726,14 +4726,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_ILS(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"ILS"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"ILS"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::ILS());
         }
         catch (...)
@@ -4745,14 +4745,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_INR(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"INR"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"INR"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::INR());
         }
         catch (...)
@@ -4764,14 +4764,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_IQD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"IQD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"IQD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::IQD());
         }
         catch (...)
@@ -4783,14 +4783,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_IRR(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"IRR"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"IRR"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::IRR());
         }
         catch (...)
@@ -4802,14 +4802,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_ISK(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"ISK"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"ISK"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::ISK());
         }
         catch (...)
@@ -4821,14 +4821,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_JMD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"JMD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"JMD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::JMD());
         }
         catch (...)
@@ -4840,14 +4840,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_JOD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"JOD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"JOD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::JOD());
         }
         catch (...)
@@ -4859,14 +4859,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_JPY(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"JPY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"JPY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::JPY());
         }
         catch (...)
@@ -4878,14 +4878,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_KES(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"KES"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"KES"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::KES());
         }
         catch (...)
@@ -4897,14 +4897,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_KGS(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"KGS"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"KGS"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::KGS());
         }
         catch (...)
@@ -4916,14 +4916,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_KHR(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"KHR"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"KHR"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::KHR());
         }
         catch (...)
@@ -4935,14 +4935,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_KMF(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"KMF"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"KMF"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::KMF());
         }
         catch (...)
@@ -4954,14 +4954,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_KPW(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"KPW"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"KPW"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::KPW());
         }
         catch (...)
@@ -4973,14 +4973,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_KRW(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"KRW"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"KRW"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::KRW());
         }
         catch (...)
@@ -4992,14 +4992,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_KWD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"KWD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"KWD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::KWD());
         }
         catch (...)
@@ -5011,14 +5011,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_KYD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"KYD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"KYD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::KYD());
         }
         catch (...)
@@ -5030,14 +5030,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_KZT(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"KZT"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"KZT"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::KZT());
         }
         catch (...)
@@ -5049,14 +5049,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_LAK(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"LAK"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"LAK"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::LAK());
         }
         catch (...)
@@ -5068,14 +5068,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_LBP(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"LBP"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"LBP"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::LBP());
         }
         catch (...)
@@ -5087,14 +5087,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_LKR(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"LKR"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"LKR"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::LKR());
         }
         catch (...)
@@ -5106,14 +5106,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_LRD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"LRD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"LRD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::LRD());
         }
         catch (...)
@@ -5125,14 +5125,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_LSL(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"LSL"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"LSL"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::LSL());
         }
         catch (...)
@@ -5144,14 +5144,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_LTL(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"LTL"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"LTL"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::LTL());
         }
         catch (...)
@@ -5163,14 +5163,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_LVL(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"LVL"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"LVL"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::LVL());
         }
         catch (...)
@@ -5182,14 +5182,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_LYD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"LYD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"LYD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::LYD());
         }
         catch (...)
@@ -5201,14 +5201,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_MAD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MAD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MAD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MAD());
         }
         catch (...)
@@ -5220,14 +5220,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_MDL(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MDL"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MDL"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MDL());
         }
         catch (...)
@@ -5239,14 +5239,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_MGA(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MGA"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MGA"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MGA());
         }
         catch (...)
@@ -5258,14 +5258,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_MKD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MKD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MKD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MKD());
         }
         catch (...)
@@ -5277,14 +5277,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_MMK(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MMK"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MMK"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MMK());
         }
         catch (...)
@@ -5296,14 +5296,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_MNT(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MNT"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MNT"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MNT());
         }
         catch (...)
@@ -5315,14 +5315,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_MOP(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MOP"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MOP"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MOP());
         }
         catch (...)
@@ -5334,14 +5334,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_MRO(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MRO"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MRO"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MRO());
         }
         catch (...)
@@ -5353,14 +5353,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_MUR(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MUR"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MUR"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MUR());
         }
         catch (...)
@@ -5372,14 +5372,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_MVR(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MVR"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MVR"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MVR());
         }
         catch (...)
@@ -5391,14 +5391,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_MWK(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MWK"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MWK"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MWK());
         }
         catch (...)
@@ -5410,14 +5410,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_MXN(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MXN"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MXN"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MXN());
         }
         catch (...)
@@ -5429,14 +5429,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_MYR(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MYR"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MYR"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MYR());
         }
         catch (...)
@@ -5448,14 +5448,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_MZN(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MZN"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MZN"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MZN());
         }
         catch (...)
@@ -5467,14 +5467,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_NAD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"NAD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"NAD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::NAD());
         }
         catch (...)
@@ -5486,14 +5486,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_NGN(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"NGN"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"NGN"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::NGN());
         }
         catch (...)
@@ -5505,14 +5505,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_NIO(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"NIO"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"NIO"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::NIO());
         }
         catch (...)
@@ -5524,14 +5524,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_NOK(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"NOK"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"NOK"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::NOK());
         }
         catch (...)
@@ -5543,14 +5543,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_NPR(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"NPR"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"NPR"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::NPR());
         }
         catch (...)
@@ -5562,14 +5562,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_NZD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"NZD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"NZD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::NZD());
         }
         catch (...)
@@ -5581,14 +5581,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_OMR(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"OMR"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"OMR"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::OMR());
         }
         catch (...)
@@ -5600,14 +5600,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_PAB(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"PAB"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"PAB"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::PAB());
         }
         catch (...)
@@ -5619,14 +5619,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_PEN(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"PEN"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"PEN"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::PEN());
         }
         catch (...)
@@ -5638,14 +5638,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_PGK(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"PGK"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"PGK"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::PGK());
         }
         catch (...)
@@ -5657,14 +5657,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_PHP(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"PHP"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"PHP"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::PHP());
         }
         catch (...)
@@ -5676,14 +5676,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_PKR(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"PKR"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"PKR"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::PKR());
         }
         catch (...)
@@ -5695,14 +5695,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_PLN(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"PLN"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"PLN"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::PLN());
         }
         catch (...)
@@ -5714,14 +5714,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_PYG(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"PYG"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"PYG"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::PYG());
         }
         catch (...)
@@ -5733,14 +5733,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_QAR(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"QAR"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"QAR"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::QAR());
         }
         catch (...)
@@ -5752,14 +5752,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_RSD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"RSD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"RSD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::RSD());
         }
         catch (...)
@@ -5771,14 +5771,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_RUB(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"RUB"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"RUB"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::RUB());
         }
         catch (...)
@@ -5790,14 +5790,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_RWF(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"RWF"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"RWF"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::RWF());
         }
         catch (...)
@@ -5809,14 +5809,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_SAR(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SAR"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SAR"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SAR());
         }
         catch (...)
@@ -5828,14 +5828,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_SBD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SBD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SBD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SBD());
         }
         catch (...)
@@ -5847,14 +5847,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_SCR(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SCR"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SCR"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SCR());
         }
         catch (...)
@@ -5866,14 +5866,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_SDG(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SDG"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SDG"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SDG());
         }
         catch (...)
@@ -5885,14 +5885,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_SEK(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SEK"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SEK"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SEK());
         }
         catch (...)
@@ -5904,14 +5904,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_SGD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SGD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SGD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SGD());
         }
         catch (...)
@@ -5923,14 +5923,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_SHP(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SHP"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SHP"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SHP());
         }
         catch (...)
@@ -5942,14 +5942,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_SLL(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SLL"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SLL"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SLL());
         }
         catch (...)
@@ -5961,14 +5961,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_SOS(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SOS"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SOS"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SOS());
         }
         catch (...)
@@ -5980,14 +5980,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_SRD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SRD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SRD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SRD());
         }
         catch (...)
@@ -5999,14 +5999,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_STD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"STD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"STD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::STD());
         }
         catch (...)
@@ -6018,14 +6018,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_SYP(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SYP"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SYP"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SYP());
         }
         catch (...)
@@ -6037,14 +6037,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_SZL(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SZL"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SZL"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SZL());
         }
         catch (...)
@@ -6056,14 +6056,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_THB(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"THB"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"THB"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::THB());
         }
         catch (...)
@@ -6075,14 +6075,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_TJS(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"TJS"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"TJS"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::TJS());
         }
         catch (...)
@@ -6094,14 +6094,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_TMT(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"TMT"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"TMT"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::TMT());
         }
         catch (...)
@@ -6113,14 +6113,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_TND(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"TND"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"TND"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::TND());
         }
         catch (...)
@@ -6132,14 +6132,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_TOP(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"TOP"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"TOP"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::TOP());
         }
         catch (...)
@@ -6151,14 +6151,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_TRY(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"TRY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"TRY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::TRY());
         }
         catch (...)
@@ -6170,14 +6170,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_TTD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"TTD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"TTD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::TTD());
         }
         catch (...)
@@ -6189,14 +6189,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_TWD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"TWD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"TWD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::TWD());
         }
         catch (...)
@@ -6208,14 +6208,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_TZS(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"TZS"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"TZS"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::TZS());
         }
         catch (...)
@@ -6227,14 +6227,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_UAH(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"UAH"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"UAH"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::UAH());
         }
         catch (...)
@@ -6246,14 +6246,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_UGX(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"UGX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"UGX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::UGX());
         }
         catch (...)
@@ -6265,14 +6265,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_USD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"USD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"USD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::USD());
         }
         catch (...)
@@ -6284,14 +6284,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_UYU(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"UYU"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"UYU"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::UYU());
         }
         catch (...)
@@ -6303,14 +6303,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_UZS(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"UZS"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"UZS"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::UZS());
         }
         catch (...)
@@ -6322,14 +6322,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_VEF(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"VEF"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"VEF"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::VEF());
         }
         catch (...)
@@ -6341,14 +6341,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_VND(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"VND"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"VND"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::VND());
         }
         catch (...)
@@ -6360,14 +6360,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_VUV(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"VUV"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"VUV"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::VUV());
         }
         catch (...)
@@ -6379,14 +6379,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_WST(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"WST"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"WST"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::WST());
         }
         catch (...)
@@ -6398,14 +6398,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_XAF(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"XAF"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"XAF"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::XAF());
         }
         catch (...)
@@ -6417,14 +6417,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_XCD(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"XCD"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"XCD"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::XCD());
         }
         catch (...)
@@ -6436,14 +6436,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_XOF(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"XOF"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"XOF"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::XOF());
         }
         catch (...)
@@ -6455,14 +6455,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_XPF(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"XPF"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"XPF"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::XPF());
         }
         catch (...)
@@ -6474,14 +6474,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_XXX(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"XXX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"XXX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::XXX());
         }
         catch (...)
@@ -6493,14 +6493,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_YER(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"YER"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"YER"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::YER());
         }
         catch (...)
@@ -6512,14 +6512,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_ZAR(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"ZAR"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"ZAR"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::ZAR());
         }
         catch (...)
@@ -6531,14 +6531,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_ZMW(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"ZMW"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"ZMW"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::ZMW());
         }
         catch (...)
@@ -6550,14 +6550,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_ZWL(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"ZWL"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"ZWL"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::ZWL());
         }
         catch (...)
@@ -6569,14 +6569,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_BYN(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BYN"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"BYN"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::BYN());
         }
         catch (...)
@@ -6588,14 +6588,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_SSP(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SSP"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"SSP"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::SSP());
         }
         catch (...)
@@ -6607,14 +6607,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_STN(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"STN"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"STN"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::STN());
         }
         catch (...)
@@ -6626,14 +6626,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_VES(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"VES"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"VES"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::VES());
         }
         catch (...)
@@ -6645,14 +6645,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* CurrencyIdentifiers_get_MRU(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MRU"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.CurrencyIdentifiers", L"MRU"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::CurrencyIdentifiers::MRU());
         }
         catch (...)
@@ -6934,14 +6934,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.GeographicRegion", L"IsSupported", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.GeographicRegion", L"IsSupported", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Globalization::GeographicRegion::IsSupported(param0));
@@ -6961,14 +6961,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* GeographicRegion_get_Code(py::wrapper::Windows::Globalization::GeographicRegion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.GeographicRegion", L"Code"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.GeographicRegion", L"Code"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Code());
         }
         catch (...)
@@ -6980,14 +6980,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* GeographicRegion_get_CodeThreeDigit(py::wrapper::Windows::Globalization::GeographicRegion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.GeographicRegion", L"CodeThreeDigit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.GeographicRegion", L"CodeThreeDigit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CodeThreeDigit());
         }
         catch (...)
@@ -6999,14 +6999,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* GeographicRegion_get_CodeThreeLetter(py::wrapper::Windows::Globalization::GeographicRegion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.GeographicRegion", L"CodeThreeLetter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.GeographicRegion", L"CodeThreeLetter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CodeThreeLetter());
         }
         catch (...)
@@ -7018,14 +7018,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* GeographicRegion_get_CodeTwoLetter(py::wrapper::Windows::Globalization::GeographicRegion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.GeographicRegion", L"CodeTwoLetter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.GeographicRegion", L"CodeTwoLetter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CodeTwoLetter());
         }
         catch (...)
@@ -7037,14 +7037,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* GeographicRegion_get_CurrenciesInUse(py::wrapper::Windows::Globalization::GeographicRegion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.GeographicRegion", L"CurrenciesInUse"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.GeographicRegion", L"CurrenciesInUse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrenciesInUse());
         }
         catch (...)
@@ -7056,14 +7056,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* GeographicRegion_get_DisplayName(py::wrapper::Windows::Globalization::GeographicRegion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.GeographicRegion", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.GeographicRegion", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -7075,14 +7075,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* GeographicRegion_get_NativeName(py::wrapper::Windows::Globalization::GeographicRegion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.GeographicRegion", L"NativeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.GeographicRegion", L"NativeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NativeName());
         }
         catch (...)
@@ -7196,14 +7196,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* JapanesePhoneme_get_DisplayText(py::wrapper::Windows::Globalization::JapanesePhoneme* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.JapanesePhoneme", L"DisplayText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.JapanesePhoneme", L"DisplayText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayText());
         }
         catch (...)
@@ -7215,14 +7215,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* JapanesePhoneme_get_IsPhraseStart(py::wrapper::Windows::Globalization::JapanesePhoneme* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.JapanesePhoneme", L"IsPhraseStart"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.JapanesePhoneme", L"IsPhraseStart"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPhraseStart());
         }
         catch (...)
@@ -7234,14 +7234,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* JapanesePhoneme_get_YomiText(py::wrapper::Windows::Globalization::JapanesePhoneme* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.JapanesePhoneme", L"YomiText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.JapanesePhoneme", L"YomiText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.YomiText());
         }
         catch (...)
@@ -7321,14 +7321,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.JapanesePhoneticAnalyzer", L"GetWords", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.JapanesePhoneticAnalyzer", L"GetWords", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Globalization::JapanesePhoneticAnalyzer::GetWords(param0));
@@ -7341,14 +7341,14 @@ namespace py::cpp::Windows::Globalization
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.JapanesePhoneticAnalyzer", L"GetWords", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.JapanesePhoneticAnalyzer", L"GetWords", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -7465,14 +7465,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Language", L"GetExtensionSubtags", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Language", L"GetExtensionSubtags", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetExtensionSubtags(param0));
@@ -7496,14 +7496,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Language", L"GetMuiCompatibleLanguageListFromLanguageTags", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Language", L"GetMuiCompatibleLanguageListFromLanguageTags", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(winrt::Windows::Globalization::Language::GetMuiCompatibleLanguageListFromLanguageTags(param0));
@@ -7527,14 +7527,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Language", L"IsWellFormed", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Language", L"IsWellFormed", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Globalization::Language::IsWellFormed(param0));
@@ -7558,14 +7558,14 @@ namespace py::cpp::Windows::Globalization
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Language", L"TrySetInputMethodLanguageTag", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Language", L"TrySetInputMethodLanguageTag", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Globalization::Language::TrySetInputMethodLanguageTag(param0));
@@ -7585,14 +7585,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Language_get_DisplayName(py::wrapper::Windows::Globalization::Language* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Language", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Language", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -7604,14 +7604,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Language_get_LanguageTag(py::wrapper::Windows::Globalization::Language* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Language", L"LanguageTag"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Language", L"LanguageTag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LanguageTag());
         }
         catch (...)
@@ -7623,14 +7623,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Language_get_NativeName(py::wrapper::Windows::Globalization::Language* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Language", L"NativeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Language", L"NativeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NativeName());
         }
         catch (...)
@@ -7642,14 +7642,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Language_get_Script(py::wrapper::Windows::Globalization::Language* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Language", L"Script"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Language", L"Script"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Script());
         }
         catch (...)
@@ -7661,14 +7661,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Language_get_LayoutDirection(py::wrapper::Windows::Globalization::Language* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Language", L"LayoutDirection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Language", L"LayoutDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LayoutDirection());
         }
         catch (...)
@@ -7680,14 +7680,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Language_get_AbbreviatedName(py::wrapper::Windows::Globalization::Language* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Language", L"AbbreviatedName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Language", L"AbbreviatedName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AbbreviatedName());
         }
         catch (...)
@@ -7699,14 +7699,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Language_get_CurrentInputMethodLanguageTag(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Language", L"CurrentInputMethodLanguageTag"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Language", L"CurrentInputMethodLanguageTag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::Language::CurrentInputMethodLanguageTag());
         }
         catch (...)
@@ -7815,14 +7815,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_FullWide(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"FullWide"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"FullWide"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::FullWide());
         }
         catch (...)
@@ -7834,14 +7834,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Arab(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Arab"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Arab"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Arab());
         }
         catch (...)
@@ -7853,14 +7853,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_ArabExt(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"ArabExt"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"ArabExt"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::ArabExt());
         }
         catch (...)
@@ -7872,14 +7872,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Bali(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Bali"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Bali"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Bali());
         }
         catch (...)
@@ -7891,14 +7891,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Beng(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Beng"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Beng"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Beng());
         }
         catch (...)
@@ -7910,14 +7910,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Cham(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Cham"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Cham"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Cham());
         }
         catch (...)
@@ -7929,14 +7929,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Deva(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Deva"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Deva"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Deva());
         }
         catch (...)
@@ -7948,14 +7948,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_MymrShan(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"MymrShan"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"MymrShan"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::MymrShan());
         }
         catch (...)
@@ -7967,14 +7967,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Gujr(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Gujr"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Gujr"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Gujr());
         }
         catch (...)
@@ -7986,14 +7986,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Guru(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Guru"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Guru"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Guru());
         }
         catch (...)
@@ -8005,14 +8005,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_HaniDec(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"HaniDec"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"HaniDec"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::HaniDec());
         }
         catch (...)
@@ -8024,14 +8024,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Java(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Java"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Java"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Java());
         }
         catch (...)
@@ -8043,14 +8043,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Kali(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Kali"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Kali"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Kali());
         }
         catch (...)
@@ -8062,14 +8062,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Khmr(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Khmr"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Khmr"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Khmr());
         }
         catch (...)
@@ -8081,14 +8081,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Knda(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Knda"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Knda"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Knda());
         }
         catch (...)
@@ -8100,14 +8100,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Lana(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Lana"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Lana"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Lana());
         }
         catch (...)
@@ -8119,14 +8119,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_LanaTham(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"LanaTham"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"LanaTham"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::LanaTham());
         }
         catch (...)
@@ -8138,14 +8138,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Laoo(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Laoo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Laoo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Laoo());
         }
         catch (...)
@@ -8157,14 +8157,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Latn(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Latn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Latn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Latn());
         }
         catch (...)
@@ -8176,14 +8176,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Lepc(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Lepc"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Lepc"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Lepc());
         }
         catch (...)
@@ -8195,14 +8195,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Limb(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Limb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Limb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Limb());
         }
         catch (...)
@@ -8214,14 +8214,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Mlym(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Mlym"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Mlym"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Mlym());
         }
         catch (...)
@@ -8233,14 +8233,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Mong(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Mong"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Mong"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Mong());
         }
         catch (...)
@@ -8252,14 +8252,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Mtei(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Mtei"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Mtei"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Mtei());
         }
         catch (...)
@@ -8271,14 +8271,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Mymr(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Mymr"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Mymr"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Mymr());
         }
         catch (...)
@@ -8290,14 +8290,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Nkoo(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Nkoo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Nkoo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Nkoo());
         }
         catch (...)
@@ -8309,14 +8309,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Olck(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Olck"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Olck"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Olck());
         }
         catch (...)
@@ -8328,14 +8328,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Orya(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Orya"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Orya"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Orya());
         }
         catch (...)
@@ -8347,14 +8347,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Saur(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Saur"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Saur"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Saur());
         }
         catch (...)
@@ -8366,14 +8366,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Sund(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Sund"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Sund"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Sund());
         }
         catch (...)
@@ -8385,14 +8385,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Talu(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Talu"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Talu"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Talu());
         }
         catch (...)
@@ -8404,14 +8404,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_TamlDec(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"TamlDec"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"TamlDec"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::TamlDec());
         }
         catch (...)
@@ -8423,14 +8423,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Telu(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Telu"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Telu"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Telu());
         }
         catch (...)
@@ -8442,14 +8442,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Thai(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Thai"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Thai"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Thai());
         }
         catch (...)
@@ -8461,14 +8461,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Tibt(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Tibt"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Tibt"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Tibt());
         }
         catch (...)
@@ -8480,14 +8480,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Vaii(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Vaii"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Vaii"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Vaii());
         }
         catch (...)
@@ -8499,14 +8499,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_MathBold(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"MathBold"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"MathBold"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::MathBold());
         }
         catch (...)
@@ -8518,14 +8518,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_MathDbl(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"MathDbl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"MathDbl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::MathDbl());
         }
         catch (...)
@@ -8537,14 +8537,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_MathMono(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"MathMono"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"MathMono"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::MathMono());
         }
         catch (...)
@@ -8556,14 +8556,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_MathSanb(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"MathSanb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"MathSanb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::MathSanb());
         }
         catch (...)
@@ -8575,14 +8575,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_MathSans(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"MathSans"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"MathSans"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::MathSans());
         }
         catch (...)
@@ -8594,14 +8594,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Osma(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Osma"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Osma"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Osma());
         }
         catch (...)
@@ -8613,14 +8613,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_ZmthBold(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"ZmthBold"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"ZmthBold"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::ZmthBold());
         }
         catch (...)
@@ -8632,14 +8632,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_ZmthDbl(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"ZmthDbl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"ZmthDbl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::ZmthDbl());
         }
         catch (...)
@@ -8651,14 +8651,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_ZmthMono(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"ZmthMono"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"ZmthMono"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::ZmthMono());
         }
         catch (...)
@@ -8670,14 +8670,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_ZmthSanb(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"ZmthSanb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"ZmthSanb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::ZmthSanb());
         }
         catch (...)
@@ -8689,14 +8689,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_ZmthSans(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"ZmthSans"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"ZmthSans"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::ZmthSans());
         }
         catch (...)
@@ -8708,14 +8708,14 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* NumeralSystemIdentifiers_get_Brah(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Brah"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumeralSystemIdentifiers", L"Brah"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Globalization::NumeralSystemIdentifiers::Brah());
         }
         catch (...)

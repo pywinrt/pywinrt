@@ -24,14 +24,14 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     static PyObject* OemSupportInfo_get_SupportAppLink(py::wrapper::Windows::System::Profile::SystemManufacturers::OemSupportInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.OemSupportInfo", L"SupportAppLink"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.OemSupportInfo", L"SupportAppLink"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportAppLink());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     static PyObject* OemSupportInfo_get_SupportLink(py::wrapper::Windows::System::Profile::SystemManufacturers::OemSupportInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.OemSupportInfo", L"SupportLink"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.OemSupportInfo", L"SupportLink"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportLink());
         }
         catch (...)
@@ -62,14 +62,14 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     static PyObject* OemSupportInfo_get_SupportProvider(py::wrapper::Windows::System::Profile::SystemManufacturers::OemSupportInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.OemSupportInfo", L"SupportProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.OemSupportInfo", L"SupportProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportProvider());
         }
         catch (...)
@@ -145,14 +145,14 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     static PyObject* SmbiosInformation_get_SerialNumber(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.SmbiosInformation", L"SerialNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.SmbiosInformation", L"SerialNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::SystemManufacturers::SmbiosInformation::SerialNumber());
         }
         catch (...)
@@ -232,14 +232,14 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     static PyObject* SystemSupportDeviceInfo_get_FriendlyName(py::wrapper::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo", L"FriendlyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo", L"FriendlyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FriendlyName());
         }
         catch (...)
@@ -251,14 +251,14 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     static PyObject* SystemSupportDeviceInfo_get_OperatingSystem(py::wrapper::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo", L"OperatingSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo", L"OperatingSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OperatingSystem());
         }
         catch (...)
@@ -270,14 +270,14 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     static PyObject* SystemSupportDeviceInfo_get_SystemFirmwareVersion(py::wrapper::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo", L"SystemFirmwareVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo", L"SystemFirmwareVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SystemFirmwareVersion());
         }
         catch (...)
@@ -289,14 +289,14 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     static PyObject* SystemSupportDeviceInfo_get_SystemHardwareVersion(py::wrapper::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo", L"SystemHardwareVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo", L"SystemHardwareVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SystemHardwareVersion());
         }
         catch (...)
@@ -308,14 +308,14 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     static PyObject* SystemSupportDeviceInfo_get_SystemManufacturer(py::wrapper::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo", L"SystemManufacturer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo", L"SystemManufacturer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SystemManufacturer());
         }
         catch (...)
@@ -327,14 +327,14 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     static PyObject* SystemSupportDeviceInfo_get_SystemProductName(py::wrapper::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo", L"SystemProductName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo", L"SystemProductName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SystemProductName());
         }
         catch (...)
@@ -346,14 +346,14 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     static PyObject* SystemSupportDeviceInfo_get_SystemSku(py::wrapper::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo", L"SystemSku"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo", L"SystemSku"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SystemSku());
         }
         catch (...)
@@ -433,14 +433,14 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     static PyObject* SystemSupportInfo_get_LocalSystemEdition(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.SystemSupportInfo", L"LocalSystemEdition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.SystemSupportInfo", L"LocalSystemEdition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::SystemManufacturers::SystemSupportInfo::LocalSystemEdition());
         }
         catch (...)
@@ -452,14 +452,14 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     static PyObject* SystemSupportInfo_get_OemSupportInfo(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.SystemSupportInfo", L"OemSupportInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.SystemSupportInfo", L"OemSupportInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::SystemManufacturers::SystemSupportInfo::OemSupportInfo());
         }
         catch (...)
@@ -471,14 +471,14 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     static PyObject* SystemSupportInfo_get_LocalDeviceInfo(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.SystemSupportInfo", L"LocalDeviceInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemManufacturers.SystemSupportInfo", L"LocalDeviceInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::SystemManufacturers::SystemSupportInfo::LocalDeviceInfo());
         }
         catch (...)

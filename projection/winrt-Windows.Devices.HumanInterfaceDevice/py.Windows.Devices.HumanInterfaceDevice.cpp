@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidBooleanControl_get_IsActive(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidBooleanControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControl", L"IsActive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControl", L"IsActive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsActive());
         }
         catch (...)
@@ -43,12 +43,6 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static int HidBooleanControl_put_IsActive(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidBooleanControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControl", L"IsActive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -57,6 +51,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControl", L"IsActive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsActive(param0);
@@ -71,14 +71,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidBooleanControl_get_ControlDescription(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidBooleanControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControl", L"ControlDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControl", L"ControlDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ControlDescription());
         }
         catch (...)
@@ -90,14 +90,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidBooleanControl_get_Id(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidBooleanControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControl", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControl", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -109,14 +109,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidBooleanControl_get_UsageId(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidBooleanControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControl", L"UsageId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControl", L"UsageId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UsageId());
         }
         catch (...)
@@ -128,14 +128,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidBooleanControl_get_UsagePage(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidBooleanControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControl", L"UsagePage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControl", L"UsagePage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UsagePage());
         }
         catch (...)
@@ -221,14 +221,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidBooleanControlDescription_get_Id(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -240,14 +240,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidBooleanControlDescription_get_ParentCollections(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription", L"ParentCollections"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription", L"ParentCollections"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentCollections());
         }
         catch (...)
@@ -259,14 +259,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidBooleanControlDescription_get_ReportId(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription", L"ReportId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription", L"ReportId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportId());
         }
         catch (...)
@@ -278,14 +278,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidBooleanControlDescription_get_ReportType(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription", L"ReportType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription", L"ReportType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportType());
         }
         catch (...)
@@ -297,14 +297,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidBooleanControlDescription_get_UsageId(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription", L"UsageId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription", L"UsageId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UsageId());
         }
         catch (...)
@@ -316,14 +316,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidBooleanControlDescription_get_UsagePage(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription", L"UsagePage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription", L"UsagePage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UsagePage());
         }
         catch (...)
@@ -335,14 +335,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidBooleanControlDescription_get_IsAbsolute(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription", L"IsAbsolute"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription", L"IsAbsolute"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAbsolute());
         }
         catch (...)
@@ -430,14 +430,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidCollection_get_Id(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidCollection", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidCollection", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -449,14 +449,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidCollection_get_Type(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidCollection", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidCollection", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -468,14 +468,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidCollection_get_UsageId(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidCollection", L"UsageId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidCollection", L"UsageId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UsageId());
         }
         catch (...)
@@ -487,14 +487,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidCollection_get_UsagePage(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidCollection", L"UsagePage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidCollection", L"UsagePage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UsagePage());
         }
         catch (...)
@@ -583,14 +583,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -613,14 +613,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"CreateFeatureReport", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"CreateFeatureReport", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateFeatureReport());
             }
             catch (...)
@@ -631,14 +631,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"CreateFeatureReport", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"CreateFeatureReport", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint16_t>(args, 0);
 
                 return py::convert(self->obj.CreateFeatureReport(param0));
@@ -662,14 +662,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"CreateOutputReport", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"CreateOutputReport", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateOutputReport());
             }
             catch (...)
@@ -680,14 +680,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"CreateOutputReport", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"CreateOutputReport", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint16_t>(args, 0);
 
                 return py::convert(self->obj.CreateOutputReport(param0));
@@ -711,14 +711,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"FromIdAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"FromIdAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::FileAccessMode>(args, 1);
 
@@ -743,14 +743,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"GetBooleanControlDescriptions", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"GetBooleanControlDescriptions", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::HumanInterfaceDevice::HidReportType>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
                 auto param2 = py::convert_to<uint16_t>(args, 2);
@@ -776,14 +776,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"GetDeviceSelector", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"GetDeviceSelector", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
@@ -797,14 +797,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"GetDeviceSelector", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"GetDeviceSelector", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
                 auto param2 = py::convert_to<uint16_t>(args, 2);
@@ -831,14 +831,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"GetFeatureReportAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"GetFeatureReportAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetFeatureReportAsync());
             }
             catch (...)
@@ -849,14 +849,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"GetFeatureReportAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"GetFeatureReportAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint16_t>(args, 0);
 
                 return py::convert(self->obj.GetFeatureReportAsync(param0));
@@ -880,14 +880,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"GetInputReportAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"GetInputReportAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetInputReportAsync());
             }
             catch (...)
@@ -898,14 +898,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"GetInputReportAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"GetInputReportAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint16_t>(args, 0);
 
                 return py::convert(self->obj.GetInputReportAsync(param0));
@@ -929,14 +929,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"GetNumericControlDescriptions", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"GetNumericControlDescriptions", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::HumanInterfaceDevice::HidReportType>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
                 auto param2 = py::convert_to<uint16_t>(args, 2);
@@ -962,14 +962,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"SendFeatureReportAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"SendFeatureReportAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::HumanInterfaceDevice::HidFeatureReport>(args, 0);
 
                 return py::convert(self->obj.SendFeatureReportAsync(param0));
@@ -993,14 +993,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"SendOutputReportAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"SendOutputReportAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::HumanInterfaceDevice::HidOutputReport>(args, 0);
 
                 return py::convert(self->obj.SendOutputReportAsync(param0));
@@ -1020,14 +1020,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidDevice_get_ProductId(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"ProductId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"ProductId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProductId());
         }
         catch (...)
@@ -1039,14 +1039,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidDevice_get_UsageId(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"UsageId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"UsageId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UsageId());
         }
         catch (...)
@@ -1058,14 +1058,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidDevice_get_UsagePage(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"UsagePage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"UsagePage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UsagePage());
         }
         catch (...)
@@ -1077,14 +1077,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidDevice_get_VendorId(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"VendorId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"VendorId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VendorId());
         }
         catch (...)
@@ -1096,14 +1096,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidDevice_get_Version(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"Version"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"Version"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Version());
         }
         catch (...)
@@ -1115,14 +1115,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidDevice_add_InputReportReceived(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"InputReportReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"InputReportReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::HumanInterfaceDevice::HidDevice, winrt::Windows::Devices::HumanInterfaceDevice::HidInputReportReceivedEventArgs>>(arg);
 
             return py::convert(self->obj.InputReportReceived(param0));
@@ -1136,14 +1136,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidDevice_remove_InputReportReceived(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"InputReportReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.HumanInterfaceDevice.HidDevice", L"InputReportReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.InputReportReceived(param0);
@@ -1295,14 +1295,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidFeatureReport", L"GetBooleanControl", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidFeatureReport", L"GetBooleanControl", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
@@ -1327,14 +1327,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidFeatureReport", L"GetBooleanControlByDescription", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidFeatureReport", L"GetBooleanControlByDescription", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription>(args, 0);
 
                 return py::convert(self->obj.GetBooleanControlByDescription(param0));
@@ -1358,14 +1358,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidFeatureReport", L"GetNumericControl", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidFeatureReport", L"GetNumericControl", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
@@ -1390,14 +1390,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidFeatureReport", L"GetNumericControlByDescription", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidFeatureReport", L"GetNumericControlByDescription", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription>(args, 0);
 
                 return py::convert(self->obj.GetNumericControlByDescription(param0));
@@ -1417,14 +1417,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidFeatureReport_get_Data(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidFeatureReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidFeatureReport", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidFeatureReport", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -1436,12 +1436,6 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static int HidFeatureReport_put_Data(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidFeatureReport* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidFeatureReport", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1450,6 +1444,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidFeatureReport", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             self->obj.Data(param0);
@@ -1464,14 +1464,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidFeatureReport_get_Id(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidFeatureReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidFeatureReport", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidFeatureReport", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1562,14 +1562,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidInputReport", L"GetBooleanControl", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidInputReport", L"GetBooleanControl", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
@@ -1594,14 +1594,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidInputReport", L"GetBooleanControlByDescription", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidInputReport", L"GetBooleanControlByDescription", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription>(args, 0);
 
                 return py::convert(self->obj.GetBooleanControlByDescription(param0));
@@ -1625,14 +1625,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidInputReport", L"GetNumericControl", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidInputReport", L"GetNumericControl", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
@@ -1657,14 +1657,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidInputReport", L"GetNumericControlByDescription", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidInputReport", L"GetNumericControlByDescription", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription>(args, 0);
 
                 return py::convert(self->obj.GetNumericControlByDescription(param0));
@@ -1684,14 +1684,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidInputReport_get_ActivatedBooleanControls(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidInputReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidInputReport", L"ActivatedBooleanControls"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidInputReport", L"ActivatedBooleanControls"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedBooleanControls());
         }
         catch (...)
@@ -1703,14 +1703,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidInputReport_get_Data(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidInputReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidInputReport", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidInputReport", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -1722,14 +1722,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidInputReport_get_Id(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidInputReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidInputReport", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidInputReport", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1741,14 +1741,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidInputReport_get_TransitionedBooleanControls(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidInputReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidInputReport", L"TransitionedBooleanControls"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidInputReport", L"TransitionedBooleanControls"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TransitionedBooleanControls());
         }
         catch (...)
@@ -1837,14 +1837,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidInputReportReceivedEventArgs_get_Report(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidInputReportReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidInputReportReceivedEventArgs", L"Report"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidInputReportReceivedEventArgs", L"Report"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Report());
         }
         catch (...)
@@ -1926,14 +1926,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidNumericControl_get_Value(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControl", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControl", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -1945,12 +1945,6 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static int HidNumericControl_put_Value(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControl", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1959,6 +1953,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControl", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int64_t>(arg);
 
             self->obj.Value(param0);
@@ -1973,14 +1973,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidNumericControl_get_ScaledValue(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControl", L"ScaledValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControl", L"ScaledValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ScaledValue());
         }
         catch (...)
@@ -1992,12 +1992,6 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static int HidNumericControl_put_ScaledValue(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControl", L"ScaledValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2006,6 +2000,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControl", L"ScaledValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int64_t>(arg);
 
             self->obj.ScaledValue(param0);
@@ -2020,14 +2020,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidNumericControl_get_ControlDescription(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControl", L"ControlDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControl", L"ControlDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ControlDescription());
         }
         catch (...)
@@ -2039,14 +2039,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidNumericControl_get_Id(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControl", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControl", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -2058,14 +2058,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidNumericControl_get_IsGrouped(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControl", L"IsGrouped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControl", L"IsGrouped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsGrouped());
         }
         catch (...)
@@ -2077,14 +2077,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidNumericControl_get_UsageId(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControl", L"UsageId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControl", L"UsageId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UsageId());
         }
         catch (...)
@@ -2096,14 +2096,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidNumericControl_get_UsagePage(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControl", L"UsagePage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControl", L"UsagePage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UsagePage());
         }
         catch (...)
@@ -2191,14 +2191,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidNumericControlDescription_get_HasNull(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"HasNull"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"HasNull"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasNull());
         }
         catch (...)
@@ -2210,14 +2210,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidNumericControlDescription_get_Id(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -2229,14 +2229,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidNumericControlDescription_get_IsAbsolute(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"IsAbsolute"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"IsAbsolute"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAbsolute());
         }
         catch (...)
@@ -2248,14 +2248,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidNumericControlDescription_get_LogicalMaximum(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"LogicalMaximum"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"LogicalMaximum"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LogicalMaximum());
         }
         catch (...)
@@ -2267,14 +2267,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidNumericControlDescription_get_LogicalMinimum(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"LogicalMinimum"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"LogicalMinimum"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LogicalMinimum());
         }
         catch (...)
@@ -2286,14 +2286,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidNumericControlDescription_get_ParentCollections(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"ParentCollections"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"ParentCollections"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentCollections());
         }
         catch (...)
@@ -2305,14 +2305,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidNumericControlDescription_get_PhysicalMaximum(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"PhysicalMaximum"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"PhysicalMaximum"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhysicalMaximum());
         }
         catch (...)
@@ -2324,14 +2324,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidNumericControlDescription_get_PhysicalMinimum(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"PhysicalMinimum"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"PhysicalMinimum"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhysicalMinimum());
         }
         catch (...)
@@ -2343,14 +2343,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidNumericControlDescription_get_ReportCount(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"ReportCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"ReportCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportCount());
         }
         catch (...)
@@ -2362,14 +2362,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidNumericControlDescription_get_ReportId(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"ReportId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"ReportId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportId());
         }
         catch (...)
@@ -2381,14 +2381,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidNumericControlDescription_get_ReportSize(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"ReportSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"ReportSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportSize());
         }
         catch (...)
@@ -2400,14 +2400,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidNumericControlDescription_get_ReportType(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"ReportType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"ReportType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportType());
         }
         catch (...)
@@ -2419,14 +2419,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidNumericControlDescription_get_Unit(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"Unit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"Unit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Unit());
         }
         catch (...)
@@ -2438,14 +2438,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidNumericControlDescription_get_UnitExponent(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"UnitExponent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"UnitExponent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UnitExponent());
         }
         catch (...)
@@ -2457,14 +2457,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidNumericControlDescription_get_UsageId(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"UsageId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"UsageId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UsageId());
         }
         catch (...)
@@ -2476,14 +2476,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidNumericControlDescription_get_UsagePage(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"UsagePage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription", L"UsagePage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UsagePage());
         }
         catch (...)
@@ -2584,14 +2584,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidOutputReport", L"GetBooleanControl", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidOutputReport", L"GetBooleanControl", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
@@ -2616,14 +2616,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidOutputReport", L"GetBooleanControlByDescription", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidOutputReport", L"GetBooleanControlByDescription", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription>(args, 0);
 
                 return py::convert(self->obj.GetBooleanControlByDescription(param0));
@@ -2647,14 +2647,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidOutputReport", L"GetNumericControl", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidOutputReport", L"GetNumericControl", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
@@ -2679,14 +2679,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidOutputReport", L"GetNumericControlByDescription", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.HumanInterfaceDevice.HidOutputReport", L"GetNumericControlByDescription", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription>(args, 0);
 
                 return py::convert(self->obj.GetNumericControlByDescription(param0));
@@ -2706,14 +2706,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidOutputReport_get_Data(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidOutputReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidOutputReport", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidOutputReport", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -2725,12 +2725,6 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static int HidOutputReport_put_Data(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidOutputReport* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidOutputReport", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2739,6 +2733,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidOutputReport", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             self->obj.Data(param0);
@@ -2753,14 +2753,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidOutputReport_get_Id(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidOutputReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidOutputReport", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.HumanInterfaceDevice.HidOutputReport", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)

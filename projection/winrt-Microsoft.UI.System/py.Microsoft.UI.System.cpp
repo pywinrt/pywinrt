@@ -28,14 +28,14 @@ namespace py::cpp::Microsoft::UI::System
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.System.ThemeSettings", L"CreateForWindowId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.System.ThemeSettings", L"CreateForWindowId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::System::ThemeSettings::CreateForWindowId(param0));
@@ -55,14 +55,14 @@ namespace py::cpp::Microsoft::UI::System
 
     static PyObject* ThemeSettings_get_HighContrast(py::wrapper::Microsoft::UI::System::ThemeSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.System.ThemeSettings", L"HighContrast"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.System.ThemeSettings", L"HighContrast"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HighContrast());
         }
         catch (...)
@@ -74,14 +74,14 @@ namespace py::cpp::Microsoft::UI::System
 
     static PyObject* ThemeSettings_get_HighContrastScheme(py::wrapper::Microsoft::UI::System::ThemeSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.System.ThemeSettings", L"HighContrastScheme"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.System.ThemeSettings", L"HighContrastScheme"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HighContrastScheme());
         }
         catch (...)
@@ -93,14 +93,14 @@ namespace py::cpp::Microsoft::UI::System
 
     static PyObject* ThemeSettings_add_Changed(py::wrapper::Microsoft::UI::System::ThemeSettings* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.System.ThemeSettings", L"Changed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.System.ThemeSettings", L"Changed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::System::ThemeSettings, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Changed(param0));
@@ -114,14 +114,14 @@ namespace py::cpp::Microsoft::UI::System
 
     static PyObject* ThemeSettings_remove_Changed(py::wrapper::Microsoft::UI::System::ThemeSettings* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.System.ThemeSettings", L"Changed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.System.ThemeSettings", L"Changed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Changed(param0);

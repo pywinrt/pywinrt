@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Management::Update
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.PreviewBuildsManager", L"GetCurrentState", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.PreviewBuildsManager", L"GetCurrentState", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentState());
             }
             catch (...)
@@ -57,14 +57,14 @@ namespace py::cpp::Windows::Management::Update
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.PreviewBuildsManager", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.PreviewBuildsManager", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Management::Update::PreviewBuildsManager::GetDefault());
             }
             catch (...)
@@ -86,14 +86,14 @@ namespace py::cpp::Windows::Management::Update
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.PreviewBuildsManager", L"IsSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.PreviewBuildsManager", L"IsSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Management::Update::PreviewBuildsManager::IsSupported());
             }
             catch (...)
@@ -115,14 +115,14 @@ namespace py::cpp::Windows::Management::Update
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.PreviewBuildsManager", L"SyncAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.PreviewBuildsManager", L"SyncAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SyncAsync());
             }
             catch (...)
@@ -140,14 +140,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* PreviewBuildsManager_get_ArePreviewBuildsAllowed(py::wrapper::Windows::Management::Update::PreviewBuildsManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.PreviewBuildsManager", L"ArePreviewBuildsAllowed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.PreviewBuildsManager", L"ArePreviewBuildsAllowed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ArePreviewBuildsAllowed());
         }
         catch (...)
@@ -159,12 +159,6 @@ namespace py::cpp::Windows::Management::Update
 
     static int PreviewBuildsManager_put_ArePreviewBuildsAllowed(py::wrapper::Windows::Management::Update::PreviewBuildsManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.PreviewBuildsManager", L"ArePreviewBuildsAllowed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -173,6 +167,12 @@ namespace py::cpp::Windows::Management::Update
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.PreviewBuildsManager", L"ArePreviewBuildsAllowed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ArePreviewBuildsAllowed(param0);
@@ -286,14 +286,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* PreviewBuildsState_get_Properties(py::wrapper::Windows::Management::Update::PreviewBuildsState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.PreviewBuildsState", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.PreviewBuildsState", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -379,14 +379,14 @@ namespace py::cpp::Windows::Management::Update
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdate", L"AcceptEula", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdate", L"AcceptEula", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.AcceptEula();
                 Py_RETURN_NONE;
             }
@@ -409,14 +409,14 @@ namespace py::cpp::Windows::Management::Update
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdate", L"GetPropertyValue", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdate", L"GetPropertyValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetPropertyValue(param0));
@@ -436,14 +436,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_get_ActionProgress(py::wrapper::Windows::Management::Update::WindowsUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"ActionProgress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"ActionProgress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActionProgress());
         }
         catch (...)
@@ -455,14 +455,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_get_ActionResult(py::wrapper::Windows::Management::Update::WindowsUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"ActionResult"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"ActionResult"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActionResult());
         }
         catch (...)
@@ -474,14 +474,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_get_AttentionRequiredInfo(py::wrapper::Windows::Management::Update::WindowsUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"AttentionRequiredInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"AttentionRequiredInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttentionRequiredInfo());
         }
         catch (...)
@@ -493,14 +493,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_get_CurrentAction(py::wrapper::Windows::Management::Update::WindowsUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"CurrentAction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"CurrentAction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentAction());
         }
         catch (...)
@@ -512,14 +512,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_get_Deadline(py::wrapper::Windows::Management::Update::WindowsUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"Deadline"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"Deadline"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Deadline());
         }
         catch (...)
@@ -531,14 +531,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_get_Description(py::wrapper::Windows::Management::Update::WindowsUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -550,14 +550,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_get_EulaText(py::wrapper::Windows::Management::Update::WindowsUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"EulaText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"EulaText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EulaText());
         }
         catch (...)
@@ -569,14 +569,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_get_IsCritical(py::wrapper::Windows::Management::Update::WindowsUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"IsCritical"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"IsCritical"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCritical());
         }
         catch (...)
@@ -588,14 +588,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_get_IsDriver(py::wrapper::Windows::Management::Update::WindowsUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"IsDriver"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"IsDriver"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDriver());
         }
         catch (...)
@@ -607,14 +607,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_get_IsEulaAccepted(py::wrapper::Windows::Management::Update::WindowsUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"IsEulaAccepted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"IsEulaAccepted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsEulaAccepted());
         }
         catch (...)
@@ -626,14 +626,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_get_IsFeatureUpdate(py::wrapper::Windows::Management::Update::WindowsUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"IsFeatureUpdate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"IsFeatureUpdate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsFeatureUpdate());
         }
         catch (...)
@@ -645,14 +645,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_get_IsForOS(py::wrapper::Windows::Management::Update::WindowsUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"IsForOS"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"IsForOS"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsForOS());
         }
         catch (...)
@@ -664,14 +664,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_get_IsMandatory(py::wrapper::Windows::Management::Update::WindowsUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"IsMandatory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"IsMandatory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsMandatory());
         }
         catch (...)
@@ -683,14 +683,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_get_IsMinorImpact(py::wrapper::Windows::Management::Update::WindowsUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"IsMinorImpact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"IsMinorImpact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsMinorImpact());
         }
         catch (...)
@@ -702,14 +702,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_get_IsSecurity(py::wrapper::Windows::Management::Update::WindowsUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"IsSecurity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"IsSecurity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSecurity());
         }
         catch (...)
@@ -721,14 +721,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_get_IsSeeker(py::wrapper::Windows::Management::Update::WindowsUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"IsSeeker"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"IsSeeker"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSeeker());
         }
         catch (...)
@@ -740,14 +740,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_get_IsUrgent(py::wrapper::Windows::Management::Update::WindowsUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"IsUrgent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"IsUrgent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsUrgent());
         }
         catch (...)
@@ -759,14 +759,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_get_MoreInfoUrl(py::wrapper::Windows::Management::Update::WindowsUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"MoreInfoUrl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"MoreInfoUrl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MoreInfoUrl());
         }
         catch (...)
@@ -778,14 +778,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_get_ProviderId(py::wrapper::Windows::Management::Update::WindowsUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"ProviderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"ProviderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderId());
         }
         catch (...)
@@ -797,14 +797,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_get_SupportUrl(py::wrapper::Windows::Management::Update::WindowsUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"SupportUrl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"SupportUrl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportUrl());
         }
         catch (...)
@@ -816,14 +816,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_get_Title(py::wrapper::Windows::Management::Update::WindowsUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -835,14 +835,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_get_UpdateId(py::wrapper::Windows::Management::Update::WindowsUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"UpdateId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdate", L"UpdateId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UpdateId());
         }
         catch (...)
@@ -947,14 +947,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateActionCompletedEventArgs_get_Action(py::wrapper::Windows::Management::Update::WindowsUpdateActionCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateActionCompletedEventArgs", L"Action"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateActionCompletedEventArgs", L"Action"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Action());
         }
         catch (...)
@@ -966,14 +966,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateActionCompletedEventArgs_get_ExtendedError(py::wrapper::Windows::Management::Update::WindowsUpdateActionCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateActionCompletedEventArgs", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateActionCompletedEventArgs", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -985,14 +985,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateActionCompletedEventArgs_get_Succeeded(py::wrapper::Windows::Management::Update::WindowsUpdateActionCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateActionCompletedEventArgs", L"Succeeded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateActionCompletedEventArgs", L"Succeeded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Succeeded());
         }
         catch (...)
@@ -1004,14 +1004,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateActionCompletedEventArgs_get_Update(py::wrapper::Windows::Management::Update::WindowsUpdateActionCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateActionCompletedEventArgs", L"Update"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateActionCompletedEventArgs", L"Update"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Update());
         }
         catch (...)
@@ -1096,14 +1096,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateActionProgress_get_Action(py::wrapper::Windows::Management::Update::WindowsUpdateActionProgress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateActionProgress", L"Action"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateActionProgress", L"Action"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Action());
         }
         catch (...)
@@ -1115,14 +1115,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateActionProgress_get_Progress(py::wrapper::Windows::Management::Update::WindowsUpdateActionProgress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateActionProgress", L"Progress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateActionProgress", L"Progress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Progress());
         }
         catch (...)
@@ -1205,14 +1205,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateActionResult_get_Action(py::wrapper::Windows::Management::Update::WindowsUpdateActionResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateActionResult", L"Action"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateActionResult", L"Action"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Action());
         }
         catch (...)
@@ -1224,14 +1224,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateActionResult_get_ExtendedError(py::wrapper::Windows::Management::Update::WindowsUpdateActionResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateActionResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateActionResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -1243,14 +1243,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateActionResult_get_Succeeded(py::wrapper::Windows::Management::Update::WindowsUpdateActionResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateActionResult", L"Succeeded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateActionResult", L"Succeeded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Succeeded());
         }
         catch (...)
@@ -1262,14 +1262,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateActionResult_get_Timestamp(py::wrapper::Windows::Management::Update::WindowsUpdateActionResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateActionResult", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateActionResult", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -1358,14 +1358,14 @@ namespace py::cpp::Windows::Management::Update
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"ApproveWindowsUpdate", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"ApproveWindowsUpdate", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Update::WindowsUpdateApprovalData>(args, 1);
 
@@ -1391,14 +1391,14 @@ namespace py::cpp::Windows::Management::Update
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"ApproveWindowsUpdateAction", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"ApproveWindowsUpdateAction", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1424,14 +1424,14 @@ namespace py::cpp::Windows::Management::Update
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"CancelRestartRequest", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"CancelRestartRequest", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 winrt::Windows::Management::Update::WindowsUpdateAdministrator::CancelRestartRequest(param0);
@@ -1456,14 +1456,14 @@ namespace py::cpp::Windows::Management::Update
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"GetRegisteredAdministrator", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"GetRegisteredAdministrator", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Management::Update::WindowsUpdateAdministrator::GetRegisteredAdministrator(param0));
@@ -1487,14 +1487,14 @@ namespace py::cpp::Windows::Management::Update
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"GetRegisteredAdministratorName", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"GetRegisteredAdministratorName", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Management::Update::WindowsUpdateAdministrator::GetRegisteredAdministratorName());
             }
             catch (...)
@@ -1516,14 +1516,14 @@ namespace py::cpp::Windows::Management::Update
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"GetUpdates", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"GetUpdates", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetUpdates());
             }
             catch (...)
@@ -1545,14 +1545,14 @@ namespace py::cpp::Windows::Management::Update
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"RegisterForAdministration", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"RegisterForAdministration", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Update::WindowsUpdateAdministratorOptions>(args, 1);
 
@@ -1577,14 +1577,14 @@ namespace py::cpp::Windows::Management::Update
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"RequestRestart", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"RequestRestart", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Management::Update::WindowsUpdateRestartRequestOptions>(args, 0);
 
                 return py::convert(winrt::Windows::Management::Update::WindowsUpdateAdministrator::RequestRestart(param0));
@@ -1608,14 +1608,14 @@ namespace py::cpp::Windows::Management::Update
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"RevokeWindowsUpdateActionApproval", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"RevokeWindowsUpdateActionApproval", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1641,14 +1641,14 @@ namespace py::cpp::Windows::Management::Update
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"RevokeWindowsUpdateApproval", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"RevokeWindowsUpdateApproval", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.RevokeWindowsUpdateApproval(param0);
@@ -1673,14 +1673,14 @@ namespace py::cpp::Windows::Management::Update
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"StartAdministratorScan", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"StartAdministratorScan", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.StartAdministratorScan();
                 Py_RETURN_NONE;
             }
@@ -1703,14 +1703,14 @@ namespace py::cpp::Windows::Management::Update
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"UnregisterForAdministration", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateAdministrator", L"UnregisterForAdministration", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Management::Update::WindowsUpdateAdministrator::UnregisterForAdministration(param0));
@@ -1858,14 +1858,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateApprovalData_get_Seeker(py::wrapper::Windows::Management::Update::WindowsUpdateApprovalData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateApprovalData", L"Seeker"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateApprovalData", L"Seeker"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Seeker());
         }
         catch (...)
@@ -1877,12 +1877,6 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateApprovalData_put_Seeker(py::wrapper::Windows::Management::Update::WindowsUpdateApprovalData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateApprovalData", L"Seeker"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1891,6 +1885,12 @@ namespace py::cpp::Windows::Management::Update
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateApprovalData", L"Seeker"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<bool>>(arg);
 
             self->obj.Seeker(param0);
@@ -1905,14 +1905,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateApprovalData_get_OptOutOfAutoReboot(py::wrapper::Windows::Management::Update::WindowsUpdateApprovalData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateApprovalData", L"OptOutOfAutoReboot"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateApprovalData", L"OptOutOfAutoReboot"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OptOutOfAutoReboot());
         }
         catch (...)
@@ -1924,12 +1924,6 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateApprovalData_put_OptOutOfAutoReboot(py::wrapper::Windows::Management::Update::WindowsUpdateApprovalData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateApprovalData", L"OptOutOfAutoReboot"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1938,6 +1932,12 @@ namespace py::cpp::Windows::Management::Update
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateApprovalData", L"OptOutOfAutoReboot"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<bool>>(arg);
 
             self->obj.OptOutOfAutoReboot(param0);
@@ -1952,14 +1952,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateApprovalData_get_ComplianceGracePeriodInDays(py::wrapper::Windows::Management::Update::WindowsUpdateApprovalData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateApprovalData", L"ComplianceGracePeriodInDays"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateApprovalData", L"ComplianceGracePeriodInDays"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ComplianceGracePeriodInDays());
         }
         catch (...)
@@ -1971,12 +1971,6 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateApprovalData_put_ComplianceGracePeriodInDays(py::wrapper::Windows::Management::Update::WindowsUpdateApprovalData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateApprovalData", L"ComplianceGracePeriodInDays"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1985,6 +1979,12 @@ namespace py::cpp::Windows::Management::Update
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateApprovalData", L"ComplianceGracePeriodInDays"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             self->obj.ComplianceGracePeriodInDays(param0);
@@ -1999,14 +1999,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateApprovalData_get_ComplianceDeadlineInDays(py::wrapper::Windows::Management::Update::WindowsUpdateApprovalData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateApprovalData", L"ComplianceDeadlineInDays"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateApprovalData", L"ComplianceDeadlineInDays"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ComplianceDeadlineInDays());
         }
         catch (...)
@@ -2018,12 +2018,6 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateApprovalData_put_ComplianceDeadlineInDays(py::wrapper::Windows::Management::Update::WindowsUpdateApprovalData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateApprovalData", L"ComplianceDeadlineInDays"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2032,6 +2026,12 @@ namespace py::cpp::Windows::Management::Update
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateApprovalData", L"ComplianceDeadlineInDays"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             self->obj.ComplianceDeadlineInDays(param0);
@@ -2046,14 +2046,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateApprovalData_get_AllowDownloadOnMetered(py::wrapper::Windows::Management::Update::WindowsUpdateApprovalData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateApprovalData", L"AllowDownloadOnMetered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateApprovalData", L"AllowDownloadOnMetered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowDownloadOnMetered());
         }
         catch (...)
@@ -2065,12 +2065,6 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateApprovalData_put_AllowDownloadOnMetered(py::wrapper::Windows::Management::Update::WindowsUpdateApprovalData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateApprovalData", L"AllowDownloadOnMetered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2079,6 +2073,12 @@ namespace py::cpp::Windows::Management::Update
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateApprovalData", L"AllowDownloadOnMetered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<bool>>(arg);
 
             self->obj.AllowDownloadOnMetered(param0);
@@ -2167,14 +2167,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateAttentionRequiredInfo_get_Reason(py::wrapper::Windows::Management::Update::WindowsUpdateAttentionRequiredInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateAttentionRequiredInfo", L"Reason"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateAttentionRequiredInfo", L"Reason"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reason());
         }
         catch (...)
@@ -2186,14 +2186,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateAttentionRequiredInfo_get_Timestamp(py::wrapper::Windows::Management::Update::WindowsUpdateAttentionRequiredInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateAttentionRequiredInfo", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateAttentionRequiredInfo", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -2276,14 +2276,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateAttentionRequiredReasonChangedEventArgs_get_Reason(py::wrapper::Windows::Management::Update::WindowsUpdateAttentionRequiredReasonChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs", L"Reason"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs", L"Reason"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reason());
         }
         catch (...)
@@ -2295,14 +2295,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateAttentionRequiredReasonChangedEventArgs_get_Update(py::wrapper::Windows::Management::Update::WindowsUpdateAttentionRequiredReasonChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs", L"Update"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs", L"Update"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Update());
         }
         catch (...)
@@ -2385,14 +2385,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateGetAdministratorResult_get_Administrator(py::wrapper::Windows::Management::Update::WindowsUpdateGetAdministratorResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateGetAdministratorResult", L"Administrator"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateGetAdministratorResult", L"Administrator"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Administrator());
         }
         catch (...)
@@ -2404,14 +2404,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateGetAdministratorResult_get_Status(py::wrapper::Windows::Management::Update::WindowsUpdateGetAdministratorResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateGetAdministratorResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateGetAdministratorResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -2494,14 +2494,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateItem_get_Category(py::wrapper::Windows::Management::Update::WindowsUpdateItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateItem", L"Category"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateItem", L"Category"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Category());
         }
         catch (...)
@@ -2513,14 +2513,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateItem_get_Description(py::wrapper::Windows::Management::Update::WindowsUpdateItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateItem", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateItem", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -2532,14 +2532,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateItem_get_MoreInfoUrl(py::wrapper::Windows::Management::Update::WindowsUpdateItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateItem", L"MoreInfoUrl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateItem", L"MoreInfoUrl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MoreInfoUrl());
         }
         catch (...)
@@ -2551,14 +2551,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateItem_get_Operation(py::wrapper::Windows::Management::Update::WindowsUpdateItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateItem", L"Operation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateItem", L"Operation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Operation());
         }
         catch (...)
@@ -2570,14 +2570,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateItem_get_ProviderId(py::wrapper::Windows::Management::Update::WindowsUpdateItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateItem", L"ProviderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateItem", L"ProviderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderId());
         }
         catch (...)
@@ -2589,14 +2589,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateItem_get_Timestamp(py::wrapper::Windows::Management::Update::WindowsUpdateItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateItem", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateItem", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -2608,14 +2608,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateItem_get_Title(py::wrapper::Windows::Management::Update::WindowsUpdateItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateItem", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateItem", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -2627,14 +2627,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateItem_get_UpdateId(py::wrapper::Windows::Management::Update::WindowsUpdateItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateItem", L"UpdateId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateItem", L"UpdateId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UpdateId());
         }
         catch (...)
@@ -2751,14 +2751,14 @@ namespace py::cpp::Windows::Management::Update
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateManager", L"GetApplicableUpdates", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateManager", L"GetApplicableUpdates", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetApplicableUpdates());
             }
             catch (...)
@@ -2780,14 +2780,14 @@ namespace py::cpp::Windows::Management::Update
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateManager", L"GetMostRecentCompletedUpdates", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateManager", L"GetMostRecentCompletedUpdates", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.GetMostRecentCompletedUpdates(param0));
@@ -2811,14 +2811,14 @@ namespace py::cpp::Windows::Management::Update
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateManager", L"GetMostRecentCompletedUpdatesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateManager", L"GetMostRecentCompletedUpdatesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.GetMostRecentCompletedUpdatesAsync(param0));
@@ -2842,14 +2842,14 @@ namespace py::cpp::Windows::Management::Update
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateManager", L"StartScan", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Update.WindowsUpdateManager", L"StartScan", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 self->obj.StartScan(param0);
@@ -2870,14 +2870,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateManager_get_IsScanning(py::wrapper::Windows::Management::Update::WindowsUpdateManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateManager", L"IsScanning"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateManager", L"IsScanning"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsScanning());
         }
         catch (...)
@@ -2889,14 +2889,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateManager_get_IsWorking(py::wrapper::Windows::Management::Update::WindowsUpdateManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateManager", L"IsWorking"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateManager", L"IsWorking"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsWorking());
         }
         catch (...)
@@ -2908,14 +2908,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateManager_get_LastSuccessfulScanTimestamp(py::wrapper::Windows::Management::Update::WindowsUpdateManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateManager", L"LastSuccessfulScanTimestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateManager", L"LastSuccessfulScanTimestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastSuccessfulScanTimestamp());
         }
         catch (...)
@@ -2927,14 +2927,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateManager_add_ActionCompleted(py::wrapper::Windows::Management::Update::WindowsUpdateManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"ActionCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"ActionCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateActionCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.ActionCompleted(param0));
@@ -2948,14 +2948,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateManager_remove_ActionCompleted(py::wrapper::Windows::Management::Update::WindowsUpdateManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"ActionCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"ActionCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ActionCompleted(param0);
@@ -2970,14 +2970,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateManager_add_AttentionRequiredReasonChanged(py::wrapper::Windows::Management::Update::WindowsUpdateManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"AttentionRequiredReasonChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"AttentionRequiredReasonChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReasonChangedEventArgs>>(arg);
 
             return py::convert(self->obj.AttentionRequiredReasonChanged(param0));
@@ -2991,14 +2991,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateManager_remove_AttentionRequiredReasonChanged(py::wrapper::Windows::Management::Update::WindowsUpdateManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"AttentionRequiredReasonChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"AttentionRequiredReasonChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AttentionRequiredReasonChanged(param0);
@@ -3013,14 +3013,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateManager_add_ProgressChanged(py::wrapper::Windows::Management::Update::WindowsUpdateManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"ProgressChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"ProgressChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateProgressChangedEventArgs>>(arg);
 
             return py::convert(self->obj.ProgressChanged(param0));
@@ -3034,14 +3034,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateManager_remove_ProgressChanged(py::wrapper::Windows::Management::Update::WindowsUpdateManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"ProgressChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"ProgressChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ProgressChanged(param0);
@@ -3056,14 +3056,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateManager_add_ScanCompleted(py::wrapper::Windows::Management::Update::WindowsUpdateManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"ScanCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"ScanCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateScanCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.ScanCompleted(param0));
@@ -3077,14 +3077,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateManager_remove_ScanCompleted(py::wrapper::Windows::Management::Update::WindowsUpdateManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"ScanCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"ScanCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ScanCompleted(param0);
@@ -3099,14 +3099,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateManager_add_ScanningStateChanged(py::wrapper::Windows::Management::Update::WindowsUpdateManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"ScanningStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"ScanningStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ScanningStateChanged(param0));
@@ -3120,14 +3120,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateManager_remove_ScanningStateChanged(py::wrapper::Windows::Management::Update::WindowsUpdateManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"ScanningStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"ScanningStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ScanningStateChanged(param0);
@@ -3142,14 +3142,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateManager_add_WorkingStateChanged(py::wrapper::Windows::Management::Update::WindowsUpdateManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"WorkingStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"WorkingStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.WorkingStateChanged(param0));
@@ -3163,14 +3163,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateManager_remove_WorkingStateChanged(py::wrapper::Windows::Management::Update::WindowsUpdateManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"WorkingStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Update.WindowsUpdateManager", L"WorkingStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.WorkingStateChanged(param0);
@@ -3273,14 +3273,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateProgressChangedEventArgs_get_ActionProgress(py::wrapper::Windows::Management::Update::WindowsUpdateProgressChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateProgressChangedEventArgs", L"ActionProgress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateProgressChangedEventArgs", L"ActionProgress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActionProgress());
         }
         catch (...)
@@ -3292,14 +3292,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateProgressChangedEventArgs_get_Update(py::wrapper::Windows::Management::Update::WindowsUpdateProgressChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateProgressChangedEventArgs", L"Update"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateProgressChangedEventArgs", L"Update"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Update());
         }
         catch (...)
@@ -3423,14 +3423,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateRestartRequestOptions_get_Title(py::wrapper::Windows::Management::Update::WindowsUpdateRestartRequestOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -3442,12 +3442,6 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateRestartRequestOptions_put_Title(py::wrapper::Windows::Management::Update::WindowsUpdateRestartRequestOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3456,6 +3450,12 @@ namespace py::cpp::Windows::Management::Update
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Title(param0);
@@ -3470,14 +3470,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateRestartRequestOptions_get_OrganizationName(py::wrapper::Windows::Management::Update::WindowsUpdateRestartRequestOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"OrganizationName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"OrganizationName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OrganizationName());
         }
         catch (...)
@@ -3489,12 +3489,6 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateRestartRequestOptions_put_OrganizationName(py::wrapper::Windows::Management::Update::WindowsUpdateRestartRequestOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"OrganizationName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3503,6 +3497,12 @@ namespace py::cpp::Windows::Management::Update
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"OrganizationName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.OrganizationName(param0);
@@ -3517,14 +3517,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateRestartRequestOptions_get_OptOutOfAutoReboot(py::wrapper::Windows::Management::Update::WindowsUpdateRestartRequestOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"OptOutOfAutoReboot"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"OptOutOfAutoReboot"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OptOutOfAutoReboot());
         }
         catch (...)
@@ -3536,12 +3536,6 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateRestartRequestOptions_put_OptOutOfAutoReboot(py::wrapper::Windows::Management::Update::WindowsUpdateRestartRequestOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"OptOutOfAutoReboot"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3550,6 +3544,12 @@ namespace py::cpp::Windows::Management::Update
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"OptOutOfAutoReboot"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.OptOutOfAutoReboot(param0);
@@ -3564,14 +3564,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateRestartRequestOptions_get_MoreInfoUrl(py::wrapper::Windows::Management::Update::WindowsUpdateRestartRequestOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"MoreInfoUrl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"MoreInfoUrl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MoreInfoUrl());
         }
         catch (...)
@@ -3583,12 +3583,6 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateRestartRequestOptions_put_MoreInfoUrl(py::wrapper::Windows::Management::Update::WindowsUpdateRestartRequestOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"MoreInfoUrl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3597,6 +3591,12 @@ namespace py::cpp::Windows::Management::Update
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"MoreInfoUrl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.MoreInfoUrl(param0);
@@ -3611,14 +3611,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateRestartRequestOptions_get_Description(py::wrapper::Windows::Management::Update::WindowsUpdateRestartRequestOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -3630,12 +3630,6 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateRestartRequestOptions_put_Description(py::wrapper::Windows::Management::Update::WindowsUpdateRestartRequestOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3644,6 +3638,12 @@ namespace py::cpp::Windows::Management::Update
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Description(param0);
@@ -3658,14 +3658,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateRestartRequestOptions_get_ComplianceGracePeriodInDays(py::wrapper::Windows::Management::Update::WindowsUpdateRestartRequestOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"ComplianceGracePeriodInDays"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"ComplianceGracePeriodInDays"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ComplianceGracePeriodInDays());
         }
         catch (...)
@@ -3677,12 +3677,6 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateRestartRequestOptions_put_ComplianceGracePeriodInDays(py::wrapper::Windows::Management::Update::WindowsUpdateRestartRequestOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"ComplianceGracePeriodInDays"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3691,6 +3685,12 @@ namespace py::cpp::Windows::Management::Update
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"ComplianceGracePeriodInDays"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.ComplianceGracePeriodInDays(param0);
@@ -3705,14 +3705,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateRestartRequestOptions_get_ComplianceDeadlineInDays(py::wrapper::Windows::Management::Update::WindowsUpdateRestartRequestOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"ComplianceDeadlineInDays"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"ComplianceDeadlineInDays"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ComplianceDeadlineInDays());
         }
         catch (...)
@@ -3724,12 +3724,6 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateRestartRequestOptions_put_ComplianceDeadlineInDays(py::wrapper::Windows::Management::Update::WindowsUpdateRestartRequestOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"ComplianceDeadlineInDays"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3738,6 +3732,12 @@ namespace py::cpp::Windows::Management::Update
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateRestartRequestOptions", L"ComplianceDeadlineInDays"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.ComplianceDeadlineInDays(param0);
@@ -3828,14 +3828,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateScanCompletedEventArgs_get_ExtendedError(py::wrapper::Windows::Management::Update::WindowsUpdateScanCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateScanCompletedEventArgs", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateScanCompletedEventArgs", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -3847,14 +3847,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateScanCompletedEventArgs_get_ProviderId(py::wrapper::Windows::Management::Update::WindowsUpdateScanCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateScanCompletedEventArgs", L"ProviderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateScanCompletedEventArgs", L"ProviderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderId());
         }
         catch (...)
@@ -3866,14 +3866,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateScanCompletedEventArgs_get_Succeeded(py::wrapper::Windows::Management::Update::WindowsUpdateScanCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateScanCompletedEventArgs", L"Succeeded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateScanCompletedEventArgs", L"Succeeded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Succeeded());
         }
         catch (...)
@@ -3885,14 +3885,14 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateScanCompletedEventArgs_get_Updates(py::wrapper::Windows::Management::Update::WindowsUpdateScanCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateScanCompletedEventArgs", L"Updates"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Update.WindowsUpdateScanCompletedEventArgs", L"Updates"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Updates());
         }
         catch (...)

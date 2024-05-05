@@ -28,14 +28,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.ActivatedDeferral", L"Complete", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.ActivatedDeferral", L"Complete", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Complete();
                 Py_RETURN_NONE;
             }
@@ -128,14 +128,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.ActivatedOperation", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.ActivatedOperation", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -223,14 +223,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* BackgroundActivatedEventArgs_get_TaskInstance(py::wrapper::Windows::UI::WebUI::BackgroundActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.BackgroundActivatedEventArgs", L"TaskInstance"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.BackgroundActivatedEventArgs", L"TaskInstance"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TaskInstance());
         }
         catch (...)
@@ -316,14 +316,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.EnteredBackgroundEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.EnteredBackgroundEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -415,14 +415,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -445,14 +445,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"TrySetPageRange", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"TrySetPageRange", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TrySetPageRange(param0));
@@ -472,14 +472,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* HtmlPrintDocumentSource_get_TopMargin(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"TopMargin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"TopMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TopMargin());
         }
         catch (...)
@@ -491,12 +491,6 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int HtmlPrintDocumentSource_put_TopMargin(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"TopMargin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -505,6 +499,12 @@ namespace py::cpp::Windows::UI::WebUI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"TopMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.TopMargin(param0);
@@ -519,14 +519,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* HtmlPrintDocumentSource_get_ShrinkToFit(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"ShrinkToFit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"ShrinkToFit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShrinkToFit());
         }
         catch (...)
@@ -538,12 +538,6 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int HtmlPrintDocumentSource_put_ShrinkToFit(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"ShrinkToFit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -552,6 +546,12 @@ namespace py::cpp::Windows::UI::WebUI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"ShrinkToFit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ShrinkToFit(param0);
@@ -566,14 +566,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* HtmlPrintDocumentSource_get_RightMargin(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"RightMargin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"RightMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RightMargin());
         }
         catch (...)
@@ -585,12 +585,6 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int HtmlPrintDocumentSource_put_RightMargin(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"RightMargin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -599,6 +593,12 @@ namespace py::cpp::Windows::UI::WebUI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"RightMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.RightMargin(param0);
@@ -613,14 +613,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* HtmlPrintDocumentSource_get_PercentScale(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"PercentScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"PercentScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PercentScale());
         }
         catch (...)
@@ -632,12 +632,6 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int HtmlPrintDocumentSource_put_PercentScale(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"PercentScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -646,6 +640,12 @@ namespace py::cpp::Windows::UI::WebUI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"PercentScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.PercentScale(param0);
@@ -660,14 +660,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* HtmlPrintDocumentSource_get_LeftMargin(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"LeftMargin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"LeftMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LeftMargin());
         }
         catch (...)
@@ -679,12 +679,6 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int HtmlPrintDocumentSource_put_LeftMargin(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"LeftMargin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -693,6 +687,12 @@ namespace py::cpp::Windows::UI::WebUI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"LeftMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.LeftMargin(param0);
@@ -707,14 +707,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* HtmlPrintDocumentSource_get_EnableHeaderFooter(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"EnableHeaderFooter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"EnableHeaderFooter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EnableHeaderFooter());
         }
         catch (...)
@@ -726,12 +726,6 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int HtmlPrintDocumentSource_put_EnableHeaderFooter(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"EnableHeaderFooter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -740,6 +734,12 @@ namespace py::cpp::Windows::UI::WebUI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"EnableHeaderFooter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.EnableHeaderFooter(param0);
@@ -754,14 +754,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* HtmlPrintDocumentSource_get_Content(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"Content"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"Content"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Content());
         }
         catch (...)
@@ -773,12 +773,6 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int HtmlPrintDocumentSource_put_Content(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"Content"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -787,6 +781,12 @@ namespace py::cpp::Windows::UI::WebUI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"Content"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::WebUI::PrintContent>(arg);
 
             self->obj.Content(param0);
@@ -801,14 +801,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* HtmlPrintDocumentSource_get_BottomMargin(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"BottomMargin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"BottomMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BottomMargin());
         }
         catch (...)
@@ -820,12 +820,6 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int HtmlPrintDocumentSource_put_BottomMargin(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"BottomMargin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -834,6 +828,12 @@ namespace py::cpp::Windows::UI::WebUI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"BottomMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.BottomMargin(param0);
@@ -848,14 +848,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* HtmlPrintDocumentSource_get_PageRange(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"PageRange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.HtmlPrintDocumentSource", L"PageRange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageRange());
         }
         catch (...)
@@ -972,14 +972,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.LeavingBackgroundEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.LeavingBackgroundEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1071,14 +1071,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.NewWebUIViewCreatedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.NewWebUIViewCreatedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1096,14 +1096,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* NewWebUIViewCreatedEventArgs_get_ActivatedEventArgs(py::wrapper::Windows::UI::WebUI::NewWebUIViewCreatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.NewWebUIViewCreatedEventArgs", L"ActivatedEventArgs"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.NewWebUIViewCreatedEventArgs", L"ActivatedEventArgs"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedEventArgs());
         }
         catch (...)
@@ -1115,14 +1115,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* NewWebUIViewCreatedEventArgs_get_HasPendingNavigate(py::wrapper::Windows::UI::WebUI::NewWebUIViewCreatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.NewWebUIViewCreatedEventArgs", L"HasPendingNavigate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.NewWebUIViewCreatedEventArgs", L"HasPendingNavigate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasPendingNavigate());
         }
         catch (...)
@@ -1134,14 +1134,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* NewWebUIViewCreatedEventArgs_get_WebUIView(py::wrapper::Windows::UI::WebUI::NewWebUIViewCreatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.NewWebUIViewCreatedEventArgs", L"WebUIView"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.NewWebUIViewCreatedEventArgs", L"WebUIView"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WebUIView());
         }
         catch (...)
@@ -1230,14 +1230,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.SuspendingDeferral", L"Complete", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.SuspendingDeferral", L"Complete", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Complete();
                 Py_RETURN_NONE;
             }
@@ -1326,14 +1326,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* SuspendingEventArgs_get_SuspendingOperation(py::wrapper::Windows::UI::WebUI::SuspendingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.SuspendingEventArgs", L"SuspendingOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.SuspendingEventArgs", L"SuspendingOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SuspendingOperation());
         }
         catch (...)
@@ -1419,14 +1419,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.SuspendingOperation", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.SuspendingOperation", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1444,14 +1444,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* SuspendingOperation_get_Deadline(py::wrapper::Windows::UI::WebUI::SuspendingOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.SuspendingOperation", L"Deadline"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.SuspendingOperation", L"Deadline"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Deadline());
         }
         catch (...)
@@ -1530,14 +1530,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIApplication", L"EnablePrelaunch", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIApplication", L"EnablePrelaunch", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 winrt::Windows::UI::WebUI::WebUIApplication::EnablePrelaunch(param0);
@@ -1562,14 +1562,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIApplication", L"RequestRestartAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIApplication", L"RequestRestartAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::UI::WebUI::WebUIApplication::RequestRestartAsync(param0));
@@ -1593,14 +1593,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIApplication", L"RequestRestartForUserAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIApplication", L"RequestRestartForUserAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1621,14 +1621,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIApplication_add_BackgroundActivated(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"BackgroundActivated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"BackgroundActivated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::WebUI::BackgroundActivatedEventHandler>(arg);
 
             return py::convert(winrt::Windows::UI::WebUI::WebUIApplication::BackgroundActivated(param0));
@@ -1642,14 +1642,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIApplication_remove_BackgroundActivated(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"BackgroundActivated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"BackgroundActivated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::UI::WebUI::WebUIApplication::BackgroundActivated(param0);
@@ -1664,14 +1664,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIApplication_add_NewWebUIViewCreated(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"NewWebUIViewCreated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"NewWebUIViewCreated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::UI::WebUI::NewWebUIViewCreatedEventArgs>>(arg);
 
             return py::convert(winrt::Windows::UI::WebUI::WebUIApplication::NewWebUIViewCreated(param0));
@@ -1685,14 +1685,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIApplication_remove_NewWebUIViewCreated(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"NewWebUIViewCreated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"NewWebUIViewCreated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::UI::WebUI::WebUIApplication::NewWebUIViewCreated(param0);
@@ -1707,14 +1707,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIApplication_add_EnteredBackground(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"EnteredBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"EnteredBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::WebUI::EnteredBackgroundEventHandler>(arg);
 
             return py::convert(winrt::Windows::UI::WebUI::WebUIApplication::EnteredBackground(param0));
@@ -1728,14 +1728,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIApplication_remove_EnteredBackground(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"EnteredBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"EnteredBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::UI::WebUI::WebUIApplication::EnteredBackground(param0);
@@ -1750,14 +1750,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIApplication_add_LeavingBackground(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"LeavingBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"LeavingBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::WebUI::LeavingBackgroundEventHandler>(arg);
 
             return py::convert(winrt::Windows::UI::WebUI::WebUIApplication::LeavingBackground(param0));
@@ -1771,14 +1771,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIApplication_remove_LeavingBackground(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"LeavingBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"LeavingBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::UI::WebUI::WebUIApplication::LeavingBackground(param0);
@@ -1793,14 +1793,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIApplication_add_Activated(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"Activated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"Activated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::WebUI::ActivatedEventHandler>(arg);
 
             return py::convert(winrt::Windows::UI::WebUI::WebUIApplication::Activated(param0));
@@ -1814,14 +1814,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIApplication_remove_Activated(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"Activated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"Activated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::UI::WebUI::WebUIApplication::Activated(param0);
@@ -1836,14 +1836,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIApplication_add_Navigated(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"Navigated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"Navigated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::WebUI::NavigatedEventHandler>(arg);
 
             return py::convert(winrt::Windows::UI::WebUI::WebUIApplication::Navigated(param0));
@@ -1857,14 +1857,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIApplication_remove_Navigated(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"Navigated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"Navigated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::UI::WebUI::WebUIApplication::Navigated(param0);
@@ -1879,14 +1879,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIApplication_add_Resuming(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"Resuming"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"Resuming"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::WebUI::ResumingEventHandler>(arg);
 
             return py::convert(winrt::Windows::UI::WebUI::WebUIApplication::Resuming(param0));
@@ -1900,14 +1900,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIApplication_remove_Resuming(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"Resuming"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"Resuming"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::UI::WebUI::WebUIApplication::Resuming(param0);
@@ -1922,14 +1922,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIApplication_add_Suspending(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"Suspending"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"Suspending"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::WebUI::SuspendingEventHandler>(arg);
 
             return py::convert(winrt::Windows::UI::WebUI::WebUIApplication::Suspending(param0));
@@ -1943,14 +1943,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIApplication_remove_Suspending(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"Suspending"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIApplication", L"Suspending"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::UI::WebUI::WebUIApplication::Suspending(param0);
@@ -2051,14 +2051,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderAddAppointmentActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderAddAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -2070,14 +2070,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderAddAppointmentActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderAddAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -2089,14 +2089,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderAddAppointmentActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderAddAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -2108,14 +2108,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderAddAppointmentActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderAddAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -2127,14 +2127,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderAddAppointmentActivatedEventArgs_get_Verb(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderAddAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -2146,14 +2146,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderAddAppointmentActivatedEventArgs_get_AddAppointmentOperation(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderAddAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs", L"AddAppointmentOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs", L"AddAppointmentOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AddAppointmentOperation());
         }
         catch (...)
@@ -2165,14 +2165,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderAddAppointmentActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderAddAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -2260,14 +2260,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -2279,14 +2279,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -2298,14 +2298,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -2317,14 +2317,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -2336,14 +2336,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs_get_Verb(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -2355,14 +2355,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs_get_RemoveAppointmentOperation(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs", L"RemoveAppointmentOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs", L"RemoveAppointmentOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoveAppointmentOperation());
         }
         catch (...)
@@ -2374,14 +2374,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -2469,14 +2469,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -2488,14 +2488,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -2507,14 +2507,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -2526,14 +2526,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -2545,14 +2545,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs_get_Verb(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -2564,14 +2564,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs_get_ReplaceAppointmentOperation(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs", L"ReplaceAppointmentOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs", L"ReplaceAppointmentOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReplaceAppointmentOperation());
         }
         catch (...)
@@ -2583,14 +2583,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -2678,14 +2678,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -2697,14 +2697,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -2716,14 +2716,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -2735,14 +2735,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -2754,14 +2754,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_Verb(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -2773,14 +2773,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_InstanceStartDate(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"InstanceStartDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"InstanceStartDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InstanceStartDate());
         }
         catch (...)
@@ -2792,14 +2792,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_LocalId(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"LocalId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"LocalId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalId());
         }
         catch (...)
@@ -2811,14 +2811,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_RoamingId(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"RoamingId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"RoamingId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RoamingId());
         }
         catch (...)
@@ -2830,14 +2830,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -2927,14 +2927,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -2946,14 +2946,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -2965,14 +2965,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -2984,14 +2984,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -3003,14 +3003,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs_get_Verb(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -3022,14 +3022,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs_get_Duration(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -3041,14 +3041,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs_get_TimeToShow(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs", L"TimeToShow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs", L"TimeToShow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimeToShow());
         }
         catch (...)
@@ -3060,14 +3060,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -3148,14 +3148,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIBackgroundTaskInstance_get_Current(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstance", L"Current"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstance", L"Current"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::WebUI::WebUIBackgroundTaskInstance::Current());
         }
         catch (...)
@@ -3239,14 +3239,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -3264,14 +3264,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIBackgroundTaskInstanceRuntimeClass_get_Progress(py::wrapper::Windows::UI::WebUI::WebUIBackgroundTaskInstanceRuntimeClass* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass", L"Progress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass", L"Progress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Progress());
         }
         catch (...)
@@ -3283,12 +3283,6 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int WebUIBackgroundTaskInstanceRuntimeClass_put_Progress(py::wrapper::Windows::UI::WebUI::WebUIBackgroundTaskInstanceRuntimeClass* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass", L"Progress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3297,6 +3291,12 @@ namespace py::cpp::Windows::UI::WebUI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass", L"Progress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Progress(param0);
@@ -3311,14 +3311,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIBackgroundTaskInstanceRuntimeClass_get_InstanceId(py::wrapper::Windows::UI::WebUI::WebUIBackgroundTaskInstanceRuntimeClass* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass", L"InstanceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass", L"InstanceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InstanceId());
         }
         catch (...)
@@ -3330,14 +3330,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIBackgroundTaskInstanceRuntimeClass_get_SuspendedCount(py::wrapper::Windows::UI::WebUI::WebUIBackgroundTaskInstanceRuntimeClass* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass", L"SuspendedCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass", L"SuspendedCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SuspendedCount());
         }
         catch (...)
@@ -3349,14 +3349,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIBackgroundTaskInstanceRuntimeClass_get_Task(py::wrapper::Windows::UI::WebUI::WebUIBackgroundTaskInstanceRuntimeClass* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass", L"Task"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass", L"Task"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Task());
         }
         catch (...)
@@ -3368,14 +3368,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIBackgroundTaskInstanceRuntimeClass_get_TriggerDetails(py::wrapper::Windows::UI::WebUI::WebUIBackgroundTaskInstanceRuntimeClass* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass", L"TriggerDetails"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass", L"TriggerDetails"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TriggerDetails());
         }
         catch (...)
@@ -3387,14 +3387,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIBackgroundTaskInstanceRuntimeClass_get_Succeeded(py::wrapper::Windows::UI::WebUI::WebUIBackgroundTaskInstanceRuntimeClass* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass", L"Succeeded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass", L"Succeeded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Succeeded());
         }
         catch (...)
@@ -3406,12 +3406,6 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int WebUIBackgroundTaskInstanceRuntimeClass_put_Succeeded(py::wrapper::Windows::UI::WebUI::WebUIBackgroundTaskInstanceRuntimeClass* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass", L"Succeeded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3420,6 +3414,12 @@ namespace py::cpp::Windows::UI::WebUI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass", L"Succeeded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Succeeded(param0);
@@ -3434,14 +3434,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIBackgroundTaskInstanceRuntimeClass_add_Canceled(py::wrapper::Windows::UI::WebUI::WebUIBackgroundTaskInstanceRuntimeClass* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass", L"Canceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass", L"Canceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskCanceledEventHandler>(arg);
 
             return py::convert(self->obj.Canceled(param0));
@@ -3455,14 +3455,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIBackgroundTaskInstanceRuntimeClass_remove_Canceled(py::wrapper::Windows::UI::WebUI::WebUIBackgroundTaskInstanceRuntimeClass* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass", L"Canceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass", L"Canceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Canceled(param0);
@@ -3555,14 +3555,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIBarcodeScannerPreviewActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIBarcodeScannerPreviewActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBarcodeScannerPreviewActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBarcodeScannerPreviewActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -3574,14 +3574,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIBarcodeScannerPreviewActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIBarcodeScannerPreviewActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBarcodeScannerPreviewActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBarcodeScannerPreviewActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -3593,14 +3593,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIBarcodeScannerPreviewActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIBarcodeScannerPreviewActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBarcodeScannerPreviewActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBarcodeScannerPreviewActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -3612,14 +3612,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIBarcodeScannerPreviewActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIBarcodeScannerPreviewActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBarcodeScannerPreviewActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBarcodeScannerPreviewActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -3631,14 +3631,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIBarcodeScannerPreviewActivatedEventArgs_get_ConnectionId(py::wrapper::Windows::UI::WebUI::WebUIBarcodeScannerPreviewActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBarcodeScannerPreviewActivatedEventArgs", L"ConnectionId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBarcodeScannerPreviewActivatedEventArgs", L"ConnectionId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionId());
         }
         catch (...)
@@ -3650,14 +3650,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIBarcodeScannerPreviewActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIBarcodeScannerPreviewActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBarcodeScannerPreviewActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIBarcodeScannerPreviewActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -3744,14 +3744,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUICachedFileUpdaterActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUICachedFileUpdaterActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICachedFileUpdaterActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICachedFileUpdaterActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -3763,14 +3763,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUICachedFileUpdaterActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUICachedFileUpdaterActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICachedFileUpdaterActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICachedFileUpdaterActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -3782,14 +3782,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUICachedFileUpdaterActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUICachedFileUpdaterActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICachedFileUpdaterActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICachedFileUpdaterActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -3801,14 +3801,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUICachedFileUpdaterActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUICachedFileUpdaterActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICachedFileUpdaterActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICachedFileUpdaterActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -3820,14 +3820,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUICachedFileUpdaterActivatedEventArgs_get_CachedFileUpdaterUI(py::wrapper::Windows::UI::WebUI::WebUICachedFileUpdaterActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICachedFileUpdaterActivatedEventArgs", L"CachedFileUpdaterUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICachedFileUpdaterActivatedEventArgs", L"CachedFileUpdaterUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CachedFileUpdaterUI());
         }
         catch (...)
@@ -3839,14 +3839,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUICachedFileUpdaterActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUICachedFileUpdaterActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICachedFileUpdaterActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICachedFileUpdaterActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -3933,14 +3933,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUICameraSettingsActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUICameraSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -3952,14 +3952,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUICameraSettingsActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUICameraSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -3971,14 +3971,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUICameraSettingsActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUICameraSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -3990,14 +3990,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUICameraSettingsActivatedEventArgs_get_VideoDeviceController(py::wrapper::Windows::UI::WebUI::WebUICameraSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs", L"VideoDeviceController"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs", L"VideoDeviceController"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoDeviceController());
         }
         catch (...)
@@ -4009,14 +4009,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUICameraSettingsActivatedEventArgs_get_VideoDeviceExtension(py::wrapper::Windows::UI::WebUI::WebUICameraSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs", L"VideoDeviceExtension"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs", L"VideoDeviceExtension"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoDeviceExtension());
         }
         catch (...)
@@ -4028,14 +4028,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUICameraSettingsActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUICameraSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -4122,14 +4122,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUICommandLineActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUICommandLineActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICommandLineActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICommandLineActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -4141,14 +4141,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUICommandLineActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUICommandLineActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICommandLineActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICommandLineActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -4160,14 +4160,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUICommandLineActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUICommandLineActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICommandLineActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICommandLineActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -4179,14 +4179,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUICommandLineActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUICommandLineActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICommandLineActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICommandLineActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -4198,14 +4198,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUICommandLineActivatedEventArgs_get_Operation(py::wrapper::Windows::UI::WebUI::WebUICommandLineActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICommandLineActivatedEventArgs", L"Operation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICommandLineActivatedEventArgs", L"Operation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Operation());
         }
         catch (...)
@@ -4217,14 +4217,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUICommandLineActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUICommandLineActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICommandLineActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUICommandLineActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -4311,14 +4311,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactCallActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIContactCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactCallActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactCallActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -4330,14 +4330,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactCallActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIContactCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactCallActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactCallActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -4349,14 +4349,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactCallActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIContactCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactCallActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactCallActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -4368,14 +4368,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactCallActivatedEventArgs_get_Verb(py::wrapper::Windows::UI::WebUI::WebUIContactCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactCallActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactCallActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -4387,14 +4387,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactCallActivatedEventArgs_get_Contact(py::wrapper::Windows::UI::WebUI::WebUIContactCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactCallActivatedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactCallActivatedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -4406,14 +4406,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactCallActivatedEventArgs_get_ServiceId(py::wrapper::Windows::UI::WebUI::WebUIContactCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactCallActivatedEventArgs", L"ServiceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactCallActivatedEventArgs", L"ServiceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceId());
         }
         catch (...)
@@ -4425,14 +4425,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactCallActivatedEventArgs_get_ServiceUserId(py::wrapper::Windows::UI::WebUI::WebUIContactCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactCallActivatedEventArgs", L"ServiceUserId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactCallActivatedEventArgs", L"ServiceUserId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceUserId());
         }
         catch (...)
@@ -4444,14 +4444,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactCallActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIContactCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactCallActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactCallActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -4540,14 +4540,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactMapActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIContactMapActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMapActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMapActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -4559,14 +4559,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactMapActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIContactMapActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMapActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMapActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -4578,14 +4578,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactMapActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIContactMapActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMapActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMapActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -4597,14 +4597,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactMapActivatedEventArgs_get_Verb(py::wrapper::Windows::UI::WebUI::WebUIContactMapActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMapActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMapActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -4616,14 +4616,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactMapActivatedEventArgs_get_Address(py::wrapper::Windows::UI::WebUI::WebUIContactMapActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMapActivatedEventArgs", L"Address"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMapActivatedEventArgs", L"Address"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Address());
         }
         catch (...)
@@ -4635,14 +4635,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactMapActivatedEventArgs_get_Contact(py::wrapper::Windows::UI::WebUI::WebUIContactMapActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMapActivatedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMapActivatedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -4654,14 +4654,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactMapActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIContactMapActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMapActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMapActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -4749,14 +4749,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactMessageActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIContactMessageActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -4768,14 +4768,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactMessageActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIContactMessageActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -4787,14 +4787,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactMessageActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIContactMessageActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -4806,14 +4806,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactMessageActivatedEventArgs_get_Verb(py::wrapper::Windows::UI::WebUI::WebUIContactMessageActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -4825,14 +4825,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactMessageActivatedEventArgs_get_Contact(py::wrapper::Windows::UI::WebUI::WebUIContactMessageActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -4844,14 +4844,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactMessageActivatedEventArgs_get_ServiceId(py::wrapper::Windows::UI::WebUI::WebUIContactMessageActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs", L"ServiceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs", L"ServiceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceId());
         }
         catch (...)
@@ -4863,14 +4863,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactMessageActivatedEventArgs_get_ServiceUserId(py::wrapper::Windows::UI::WebUI::WebUIContactMessageActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs", L"ServiceUserId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs", L"ServiceUserId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceUserId());
         }
         catch (...)
@@ -4882,14 +4882,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactMessageActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIContactMessageActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -4978,14 +4978,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactPanelActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIContactPanelActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -4997,14 +4997,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactPanelActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIContactPanelActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -5016,14 +5016,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactPanelActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIContactPanelActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -5035,14 +5035,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactPanelActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIContactPanelActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -5054,14 +5054,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactPanelActivatedEventArgs_get_Contact(py::wrapper::Windows::UI::WebUI::WebUIContactPanelActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -5073,14 +5073,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactPanelActivatedEventArgs_get_ContactPanel(py::wrapper::Windows::UI::WebUI::WebUIContactPanelActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs", L"ContactPanel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs", L"ContactPanel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactPanel());
         }
         catch (...)
@@ -5092,14 +5092,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactPanelActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIContactPanelActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -5187,14 +5187,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactPickerActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIContactPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -5206,14 +5206,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactPickerActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIContactPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -5225,14 +5225,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactPickerActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIContactPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -5244,14 +5244,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactPickerActivatedEventArgs_get_ContactPickerUI(py::wrapper::Windows::UI::WebUI::WebUIContactPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs", L"ContactPickerUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs", L"ContactPickerUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactPickerUI());
         }
         catch (...)
@@ -5263,14 +5263,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactPickerActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIContactPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -5356,14 +5356,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactPostActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIContactPostActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPostActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPostActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -5375,14 +5375,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactPostActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIContactPostActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPostActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPostActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -5394,14 +5394,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactPostActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIContactPostActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPostActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPostActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -5413,14 +5413,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactPostActivatedEventArgs_get_Verb(py::wrapper::Windows::UI::WebUI::WebUIContactPostActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPostActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPostActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -5432,14 +5432,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactPostActivatedEventArgs_get_Contact(py::wrapper::Windows::UI::WebUI::WebUIContactPostActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPostActivatedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPostActivatedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -5451,14 +5451,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactPostActivatedEventArgs_get_ServiceId(py::wrapper::Windows::UI::WebUI::WebUIContactPostActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPostActivatedEventArgs", L"ServiceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPostActivatedEventArgs", L"ServiceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceId());
         }
         catch (...)
@@ -5470,14 +5470,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactPostActivatedEventArgs_get_ServiceUserId(py::wrapper::Windows::UI::WebUI::WebUIContactPostActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPostActivatedEventArgs", L"ServiceUserId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPostActivatedEventArgs", L"ServiceUserId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceUserId());
         }
         catch (...)
@@ -5489,14 +5489,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactPostActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIContactPostActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPostActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactPostActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -5585,14 +5585,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactVideoCallActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIContactVideoCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -5604,14 +5604,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactVideoCallActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIContactVideoCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -5623,14 +5623,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactVideoCallActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIContactVideoCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -5642,14 +5642,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactVideoCallActivatedEventArgs_get_Verb(py::wrapper::Windows::UI::WebUI::WebUIContactVideoCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -5661,14 +5661,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactVideoCallActivatedEventArgs_get_Contact(py::wrapper::Windows::UI::WebUI::WebUIContactVideoCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -5680,14 +5680,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactVideoCallActivatedEventArgs_get_ServiceId(py::wrapper::Windows::UI::WebUI::WebUIContactVideoCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs", L"ServiceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs", L"ServiceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceId());
         }
         catch (...)
@@ -5699,14 +5699,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactVideoCallActivatedEventArgs_get_ServiceUserId(py::wrapper::Windows::UI::WebUI::WebUIContactVideoCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs", L"ServiceUserId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs", L"ServiceUserId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceUserId());
         }
         catch (...)
@@ -5718,14 +5718,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIContactVideoCallActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIContactVideoCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -5814,14 +5814,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIDeviceActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIDeviceActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDeviceActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDeviceActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -5833,14 +5833,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIDeviceActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIDeviceActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDeviceActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDeviceActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -5852,14 +5852,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIDeviceActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIDeviceActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDeviceActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDeviceActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -5871,14 +5871,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIDeviceActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIDeviceActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDeviceActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDeviceActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -5890,14 +5890,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIDeviceActivatedEventArgs_get_CurrentlyShownApplicationViewId(py::wrapper::Windows::UI::WebUI::WebUIDeviceActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDeviceActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDeviceActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentlyShownApplicationViewId());
         }
         catch (...)
@@ -5909,14 +5909,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIDeviceActivatedEventArgs_get_DeviceInformationId(py::wrapper::Windows::UI::WebUI::WebUIDeviceActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDeviceActivatedEventArgs", L"DeviceInformationId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDeviceActivatedEventArgs", L"DeviceInformationId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceInformationId());
         }
         catch (...)
@@ -5928,14 +5928,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIDeviceActivatedEventArgs_get_Verb(py::wrapper::Windows::UI::WebUI::WebUIDeviceActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDeviceActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDeviceActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -5947,14 +5947,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIDeviceActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIDeviceActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDeviceActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDeviceActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -6043,14 +6043,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIDevicePairingActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIDevicePairingActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDevicePairingActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDevicePairingActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -6062,14 +6062,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIDevicePairingActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIDevicePairingActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDevicePairingActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDevicePairingActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -6081,14 +6081,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIDevicePairingActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIDevicePairingActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDevicePairingActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDevicePairingActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -6100,14 +6100,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIDevicePairingActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIDevicePairingActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDevicePairingActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDevicePairingActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -6119,14 +6119,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIDevicePairingActivatedEventArgs_get_DeviceInformation(py::wrapper::Windows::UI::WebUI::WebUIDevicePairingActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDevicePairingActivatedEventArgs", L"DeviceInformation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDevicePairingActivatedEventArgs", L"DeviceInformation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceInformation());
         }
         catch (...)
@@ -6138,14 +6138,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIDevicePairingActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIDevicePairingActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDevicePairingActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDevicePairingActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -6232,14 +6232,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIDialReceiverActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIDialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -6251,14 +6251,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIDialReceiverActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIDialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -6270,14 +6270,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIDialReceiverActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIDialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -6289,14 +6289,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIDialReceiverActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIDialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -6308,14 +6308,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIDialReceiverActivatedEventArgs_get_CurrentlyShownApplicationViewId(py::wrapper::Windows::UI::WebUI::WebUIDialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentlyShownApplicationViewId());
         }
         catch (...)
@@ -6327,14 +6327,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIDialReceiverActivatedEventArgs_get_AppName(py::wrapper::Windows::UI::WebUI::WebUIDialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs", L"AppName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs", L"AppName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppName());
         }
         catch (...)
@@ -6346,14 +6346,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIDialReceiverActivatedEventArgs_get_Arguments(py::wrapper::Windows::UI::WebUI::WebUIDialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs", L"Arguments"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs", L"Arguments"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Arguments());
         }
         catch (...)
@@ -6365,14 +6365,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIDialReceiverActivatedEventArgs_get_TileId(py::wrapper::Windows::UI::WebUI::WebUIDialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs", L"TileId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs", L"TileId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TileId());
         }
         catch (...)
@@ -6384,14 +6384,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIDialReceiverActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIDialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -6481,14 +6481,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIFileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -6500,14 +6500,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIFileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -6519,14 +6519,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIFileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -6538,14 +6538,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIFileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -6557,14 +6557,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileActivatedEventArgs_get_CurrentlyShownApplicationViewId(py::wrapper::Windows::UI::WebUI::WebUIFileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentlyShownApplicationViewId());
         }
         catch (...)
@@ -6576,14 +6576,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileActivatedEventArgs_get_Files(py::wrapper::Windows::UI::WebUI::WebUIFileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileActivatedEventArgs", L"Files"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileActivatedEventArgs", L"Files"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Files());
         }
         catch (...)
@@ -6595,14 +6595,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileActivatedEventArgs_get_Verb(py::wrapper::Windows::UI::WebUI::WebUIFileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -6614,14 +6614,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileActivatedEventArgs_get_NeighboringFilesQuery(py::wrapper::Windows::UI::WebUI::WebUIFileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileActivatedEventArgs", L"NeighboringFilesQuery"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileActivatedEventArgs", L"NeighboringFilesQuery"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NeighboringFilesQuery());
         }
         catch (...)
@@ -6633,14 +6633,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIFileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -6730,14 +6730,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileOpenPickerActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIFileOpenPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -6749,14 +6749,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileOpenPickerActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIFileOpenPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -6768,14 +6768,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileOpenPickerActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIFileOpenPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -6787,14 +6787,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileOpenPickerActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIFileOpenPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -6806,14 +6806,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileOpenPickerActivatedEventArgs_get_FileOpenPickerUI(py::wrapper::Windows::UI::WebUI::WebUIFileOpenPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs", L"FileOpenPickerUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs", L"FileOpenPickerUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FileOpenPickerUI());
         }
         catch (...)
@@ -6825,14 +6825,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileOpenPickerActivatedEventArgs_get_CallerPackageFamilyName(py::wrapper::Windows::UI::WebUI::WebUIFileOpenPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs", L"CallerPackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs", L"CallerPackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallerPackageFamilyName());
         }
         catch (...)
@@ -6844,14 +6844,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileOpenPickerActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIFileOpenPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -6939,14 +6939,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileOpenPickerContinuationEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIFileOpenPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -6958,14 +6958,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileOpenPickerContinuationEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIFileOpenPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -6977,14 +6977,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileOpenPickerContinuationEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIFileOpenPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -6996,14 +6996,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileOpenPickerContinuationEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIFileOpenPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -7015,14 +7015,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileOpenPickerContinuationEventArgs_get_ContinuationData(py::wrapper::Windows::UI::WebUI::WebUIFileOpenPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs", L"ContinuationData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs", L"ContinuationData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContinuationData());
         }
         catch (...)
@@ -7034,14 +7034,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileOpenPickerContinuationEventArgs_get_Files(py::wrapper::Windows::UI::WebUI::WebUIFileOpenPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs", L"Files"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs", L"Files"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Files());
         }
         catch (...)
@@ -7053,14 +7053,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileOpenPickerContinuationEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIFileOpenPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -7148,14 +7148,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileSavePickerActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIFileSavePickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -7167,14 +7167,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileSavePickerActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIFileSavePickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -7186,14 +7186,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileSavePickerActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIFileSavePickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -7205,14 +7205,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileSavePickerActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIFileSavePickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -7224,14 +7224,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileSavePickerActivatedEventArgs_get_FileSavePickerUI(py::wrapper::Windows::UI::WebUI::WebUIFileSavePickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs", L"FileSavePickerUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs", L"FileSavePickerUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FileSavePickerUI());
         }
         catch (...)
@@ -7243,14 +7243,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileSavePickerActivatedEventArgs_get_CallerPackageFamilyName(py::wrapper::Windows::UI::WebUI::WebUIFileSavePickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs", L"CallerPackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs", L"CallerPackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallerPackageFamilyName());
         }
         catch (...)
@@ -7262,14 +7262,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileSavePickerActivatedEventArgs_get_EnterpriseId(py::wrapper::Windows::UI::WebUI::WebUIFileSavePickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs", L"EnterpriseId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs", L"EnterpriseId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EnterpriseId());
         }
         catch (...)
@@ -7281,14 +7281,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileSavePickerActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIFileSavePickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -7377,14 +7377,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileSavePickerContinuationEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIFileSavePickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -7396,14 +7396,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileSavePickerContinuationEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIFileSavePickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -7415,14 +7415,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileSavePickerContinuationEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIFileSavePickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -7434,14 +7434,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileSavePickerContinuationEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIFileSavePickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -7453,14 +7453,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileSavePickerContinuationEventArgs_get_ContinuationData(py::wrapper::Windows::UI::WebUI::WebUIFileSavePickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs", L"ContinuationData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs", L"ContinuationData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContinuationData());
         }
         catch (...)
@@ -7472,14 +7472,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileSavePickerContinuationEventArgs_get_File(py::wrapper::Windows::UI::WebUI::WebUIFileSavePickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs", L"File"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs", L"File"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.File());
         }
         catch (...)
@@ -7491,14 +7491,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFileSavePickerContinuationEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIFileSavePickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -7586,14 +7586,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFolderPickerContinuationEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIFolderPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -7605,14 +7605,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFolderPickerContinuationEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIFolderPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -7624,14 +7624,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFolderPickerContinuationEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIFolderPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -7643,14 +7643,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFolderPickerContinuationEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIFolderPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -7662,14 +7662,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFolderPickerContinuationEventArgs_get_ContinuationData(py::wrapper::Windows::UI::WebUI::WebUIFolderPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs", L"ContinuationData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs", L"ContinuationData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContinuationData());
         }
         catch (...)
@@ -7681,14 +7681,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFolderPickerContinuationEventArgs_get_Folder(py::wrapper::Windows::UI::WebUI::WebUIFolderPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs", L"Folder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs", L"Folder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Folder());
         }
         catch (...)
@@ -7700,14 +7700,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIFolderPickerContinuationEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIFolderPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -7795,14 +7795,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILaunchActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUILaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILaunchActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILaunchActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -7814,14 +7814,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILaunchActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUILaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILaunchActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILaunchActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -7833,14 +7833,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILaunchActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUILaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILaunchActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILaunchActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -7852,14 +7852,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILaunchActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUILaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILaunchActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILaunchActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -7871,14 +7871,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILaunchActivatedEventArgs_get_CurrentlyShownApplicationViewId(py::wrapper::Windows::UI::WebUI::WebUILaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILaunchActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILaunchActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentlyShownApplicationViewId());
         }
         catch (...)
@@ -7890,14 +7890,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILaunchActivatedEventArgs_get_Arguments(py::wrapper::Windows::UI::WebUI::WebUILaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILaunchActivatedEventArgs", L"Arguments"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILaunchActivatedEventArgs", L"Arguments"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Arguments());
         }
         catch (...)
@@ -7909,14 +7909,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILaunchActivatedEventArgs_get_TileId(py::wrapper::Windows::UI::WebUI::WebUILaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILaunchActivatedEventArgs", L"TileId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILaunchActivatedEventArgs", L"TileId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TileId());
         }
         catch (...)
@@ -7928,14 +7928,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILaunchActivatedEventArgs_get_TileActivatedInfo(py::wrapper::Windows::UI::WebUI::WebUILaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILaunchActivatedEventArgs", L"TileActivatedInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILaunchActivatedEventArgs", L"TileActivatedInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TileActivatedInfo());
         }
         catch (...)
@@ -7947,14 +7947,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILaunchActivatedEventArgs_get_PrelaunchActivated(py::wrapper::Windows::UI::WebUI::WebUILaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILaunchActivatedEventArgs", L"PrelaunchActivated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILaunchActivatedEventArgs", L"PrelaunchActivated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrelaunchActivated());
         }
         catch (...)
@@ -7966,14 +7966,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILaunchActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUILaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILaunchActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILaunchActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -8064,14 +8064,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILockScreenActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUILockScreenActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -8083,14 +8083,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILockScreenActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUILockScreenActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -8102,14 +8102,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILockScreenActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUILockScreenActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -8121,14 +8121,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILockScreenActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUILockScreenActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -8140,14 +8140,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILockScreenActivatedEventArgs_get_CurrentlyShownApplicationViewId(py::wrapper::Windows::UI::WebUI::WebUILockScreenActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentlyShownApplicationViewId());
         }
         catch (...)
@@ -8159,14 +8159,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILockScreenActivatedEventArgs_get_Info(py::wrapper::Windows::UI::WebUI::WebUILockScreenActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenActivatedEventArgs", L"Info"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenActivatedEventArgs", L"Info"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Info());
         }
         catch (...)
@@ -8178,14 +8178,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILockScreenActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUILockScreenActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -8273,14 +8273,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILockScreenCallActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUILockScreenCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -8292,14 +8292,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILockScreenCallActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUILockScreenCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -8311,14 +8311,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILockScreenCallActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUILockScreenCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -8330,14 +8330,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILockScreenCallActivatedEventArgs_get_CurrentlyShownApplicationViewId(py::wrapper::Windows::UI::WebUI::WebUILockScreenCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentlyShownApplicationViewId());
         }
         catch (...)
@@ -8349,14 +8349,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILockScreenCallActivatedEventArgs_get_Arguments(py::wrapper::Windows::UI::WebUI::WebUILockScreenCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs", L"Arguments"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs", L"Arguments"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Arguments());
         }
         catch (...)
@@ -8368,14 +8368,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILockScreenCallActivatedEventArgs_get_TileId(py::wrapper::Windows::UI::WebUI::WebUILockScreenCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs", L"TileId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs", L"TileId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TileId());
         }
         catch (...)
@@ -8387,14 +8387,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILockScreenCallActivatedEventArgs_get_CallUI(py::wrapper::Windows::UI::WebUI::WebUILockScreenCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs", L"CallUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs", L"CallUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallUI());
         }
         catch (...)
@@ -8406,14 +8406,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILockScreenCallActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUILockScreenCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -8502,14 +8502,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILockScreenComponentActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUILockScreenComponentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenComponentActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenComponentActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -8521,14 +8521,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILockScreenComponentActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUILockScreenComponentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenComponentActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenComponentActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -8540,14 +8540,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILockScreenComponentActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUILockScreenComponentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenComponentActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenComponentActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -8559,14 +8559,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUILockScreenComponentActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUILockScreenComponentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenComponentActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUILockScreenComponentActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -8655,14 +8655,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUINavigatedDeferral", L"Complete", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUINavigatedDeferral", L"Complete", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Complete();
                 Py_RETURN_NONE;
             }
@@ -8751,14 +8751,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUINavigatedEventArgs_get_NavigatedOperation(py::wrapper::Windows::UI::WebUI::WebUINavigatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUINavigatedEventArgs", L"NavigatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUINavigatedEventArgs", L"NavigatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NavigatedOperation());
         }
         catch (...)
@@ -8844,14 +8844,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUINavigatedOperation", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUINavigatedOperation", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -8939,14 +8939,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIPhoneCallActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIPhoneCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPhoneCallActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPhoneCallActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -8958,14 +8958,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIPhoneCallActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIPhoneCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPhoneCallActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPhoneCallActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -8977,14 +8977,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIPhoneCallActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIPhoneCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPhoneCallActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPhoneCallActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -8996,14 +8996,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIPhoneCallActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIPhoneCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPhoneCallActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPhoneCallActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -9015,14 +9015,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIPhoneCallActivatedEventArgs_get_LineId(py::wrapper::Windows::UI::WebUI::WebUIPhoneCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPhoneCallActivatedEventArgs", L"LineId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPhoneCallActivatedEventArgs", L"LineId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LineId());
         }
         catch (...)
@@ -9034,14 +9034,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIPhoneCallActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIPhoneCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPhoneCallActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPhoneCallActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -9128,14 +9128,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIPrint3DWorkflowActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIPrint3DWorkflowActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -9147,14 +9147,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIPrint3DWorkflowActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIPrint3DWorkflowActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -9166,14 +9166,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIPrint3DWorkflowActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIPrint3DWorkflowActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -9185,14 +9185,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIPrint3DWorkflowActivatedEventArgs_get_Workflow(py::wrapper::Windows::UI::WebUI::WebUIPrint3DWorkflowActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs", L"Workflow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs", L"Workflow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Workflow());
         }
         catch (...)
@@ -9204,14 +9204,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIPrint3DWorkflowActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIPrint3DWorkflowActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -9297,14 +9297,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIPrintTaskSettingsActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIPrintTaskSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -9316,14 +9316,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIPrintTaskSettingsActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIPrintTaskSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -9335,14 +9335,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIPrintTaskSettingsActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIPrintTaskSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -9354,14 +9354,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIPrintTaskSettingsActivatedEventArgs_get_Configuration(py::wrapper::Windows::UI::WebUI::WebUIPrintTaskSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs", L"Configuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs", L"Configuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Configuration());
         }
         catch (...)
@@ -9373,14 +9373,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIPrintTaskSettingsActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIPrintTaskSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -9466,14 +9466,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIPrintWorkflowForegroundTaskActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIPrintWorkflowForegroundTaskActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrintWorkflowForegroundTaskActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrintWorkflowForegroundTaskActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -9485,14 +9485,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIPrintWorkflowForegroundTaskActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIPrintWorkflowForegroundTaskActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrintWorkflowForegroundTaskActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrintWorkflowForegroundTaskActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -9504,14 +9504,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIPrintWorkflowForegroundTaskActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIPrintWorkflowForegroundTaskActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrintWorkflowForegroundTaskActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrintWorkflowForegroundTaskActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -9523,14 +9523,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIPrintWorkflowForegroundTaskActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIPrintWorkflowForegroundTaskActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrintWorkflowForegroundTaskActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIPrintWorkflowForegroundTaskActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -9615,14 +9615,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIProtocolActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIProtocolActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -9634,14 +9634,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIProtocolActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIProtocolActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -9653,14 +9653,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIProtocolActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIProtocolActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -9672,14 +9672,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIProtocolActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIProtocolActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -9691,14 +9691,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIProtocolActivatedEventArgs_get_CurrentlyShownApplicationViewId(py::wrapper::Windows::UI::WebUI::WebUIProtocolActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentlyShownApplicationViewId());
         }
         catch (...)
@@ -9710,14 +9710,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIProtocolActivatedEventArgs_get_Uri(py::wrapper::Windows::UI::WebUI::WebUIProtocolActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolActivatedEventArgs", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolActivatedEventArgs", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -9729,14 +9729,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIProtocolActivatedEventArgs_get_CallerPackageFamilyName(py::wrapper::Windows::UI::WebUI::WebUIProtocolActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolActivatedEventArgs", L"CallerPackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolActivatedEventArgs", L"CallerPackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallerPackageFamilyName());
         }
         catch (...)
@@ -9748,14 +9748,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIProtocolActivatedEventArgs_get_Data(py::wrapper::Windows::UI::WebUI::WebUIProtocolActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolActivatedEventArgs", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolActivatedEventArgs", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -9767,14 +9767,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIProtocolActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIProtocolActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -9864,14 +9864,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIProtocolForResultsActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -9883,14 +9883,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIProtocolForResultsActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -9902,14 +9902,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIProtocolForResultsActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -9921,14 +9921,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIProtocolForResultsActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -9940,14 +9940,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIProtocolForResultsActivatedEventArgs_get_CurrentlyShownApplicationViewId(py::wrapper::Windows::UI::WebUI::WebUIProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentlyShownApplicationViewId());
         }
         catch (...)
@@ -9959,14 +9959,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIProtocolForResultsActivatedEventArgs_get_Uri(py::wrapper::Windows::UI::WebUI::WebUIProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -9978,14 +9978,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIProtocolForResultsActivatedEventArgs_get_CallerPackageFamilyName(py::wrapper::Windows::UI::WebUI::WebUIProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs", L"CallerPackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs", L"CallerPackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallerPackageFamilyName());
         }
         catch (...)
@@ -9997,14 +9997,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIProtocolForResultsActivatedEventArgs_get_Data(py::wrapper::Windows::UI::WebUI::WebUIProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -10016,14 +10016,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIProtocolForResultsActivatedEventArgs_get_ProtocolForResultsOperation(py::wrapper::Windows::UI::WebUI::WebUIProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs", L"ProtocolForResultsOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs", L"ProtocolForResultsOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProtocolForResultsOperation());
         }
         catch (...)
@@ -10035,14 +10035,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIProtocolForResultsActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -10133,14 +10133,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIRestrictedLaunchActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIRestrictedLaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIRestrictedLaunchActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIRestrictedLaunchActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -10152,14 +10152,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIRestrictedLaunchActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIRestrictedLaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIRestrictedLaunchActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIRestrictedLaunchActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -10171,14 +10171,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIRestrictedLaunchActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIRestrictedLaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIRestrictedLaunchActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIRestrictedLaunchActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -10190,14 +10190,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIRestrictedLaunchActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIRestrictedLaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIRestrictedLaunchActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIRestrictedLaunchActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -10209,14 +10209,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIRestrictedLaunchActivatedEventArgs_get_SharedContext(py::wrapper::Windows::UI::WebUI::WebUIRestrictedLaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIRestrictedLaunchActivatedEventArgs", L"SharedContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIRestrictedLaunchActivatedEventArgs", L"SharedContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SharedContext());
         }
         catch (...)
@@ -10228,14 +10228,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIRestrictedLaunchActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIRestrictedLaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIRestrictedLaunchActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIRestrictedLaunchActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -10322,14 +10322,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUISearchActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUISearchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUISearchActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUISearchActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -10341,14 +10341,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUISearchActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUISearchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUISearchActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUISearchActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -10360,14 +10360,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUISearchActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUISearchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUISearchActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUISearchActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -10379,14 +10379,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUISearchActivatedEventArgs_get_CurrentlyShownApplicationViewId(py::wrapper::Windows::UI::WebUI::WebUISearchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUISearchActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUISearchActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentlyShownApplicationViewId());
         }
         catch (...)
@@ -10398,14 +10398,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUISearchActivatedEventArgs_get_Language(py::wrapper::Windows::UI::WebUI::WebUISearchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUISearchActivatedEventArgs", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUISearchActivatedEventArgs", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -10417,14 +10417,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUISearchActivatedEventArgs_get_QueryText(py::wrapper::Windows::UI::WebUI::WebUISearchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUISearchActivatedEventArgs", L"QueryText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUISearchActivatedEventArgs", L"QueryText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.QueryText());
         }
         catch (...)
@@ -10436,14 +10436,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUISearchActivatedEventArgs_get_LinguisticDetails(py::wrapper::Windows::UI::WebUI::WebUISearchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUISearchActivatedEventArgs", L"LinguisticDetails"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUISearchActivatedEventArgs", L"LinguisticDetails"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LinguisticDetails());
         }
         catch (...)
@@ -10455,14 +10455,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUISearchActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUISearchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUISearchActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUISearchActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -10551,14 +10551,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIShareTargetActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIShareTargetActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIShareTargetActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIShareTargetActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -10570,14 +10570,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIShareTargetActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIShareTargetActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIShareTargetActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIShareTargetActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -10589,14 +10589,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIShareTargetActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIShareTargetActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIShareTargetActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIShareTargetActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -10608,14 +10608,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIShareTargetActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIShareTargetActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIShareTargetActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIShareTargetActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -10627,14 +10627,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIShareTargetActivatedEventArgs_get_ShareOperation(py::wrapper::Windows::UI::WebUI::WebUIShareTargetActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIShareTargetActivatedEventArgs", L"ShareOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIShareTargetActivatedEventArgs", L"ShareOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShareOperation());
         }
         catch (...)
@@ -10646,14 +10646,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIShareTargetActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIShareTargetActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIShareTargetActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIShareTargetActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -10740,14 +10740,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIStartupTaskActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIStartupTaskActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIStartupTaskActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIStartupTaskActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -10759,14 +10759,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIStartupTaskActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIStartupTaskActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIStartupTaskActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIStartupTaskActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -10778,14 +10778,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIStartupTaskActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIStartupTaskActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIStartupTaskActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIStartupTaskActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -10797,14 +10797,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIStartupTaskActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIStartupTaskActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIStartupTaskActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIStartupTaskActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -10816,14 +10816,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIStartupTaskActivatedEventArgs_get_TaskId(py::wrapper::Windows::UI::WebUI::WebUIStartupTaskActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIStartupTaskActivatedEventArgs", L"TaskId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIStartupTaskActivatedEventArgs", L"TaskId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TaskId());
         }
         catch (...)
@@ -10835,14 +10835,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIStartupTaskActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIStartupTaskActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIStartupTaskActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIStartupTaskActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -10929,14 +10929,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIToastNotificationActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIToastNotificationActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -10948,14 +10948,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIToastNotificationActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIToastNotificationActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -10967,14 +10967,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIToastNotificationActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIToastNotificationActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -10986,14 +10986,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIToastNotificationActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIToastNotificationActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -11005,14 +11005,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIToastNotificationActivatedEventArgs_get_Argument(py::wrapper::Windows::UI::WebUI::WebUIToastNotificationActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs", L"Argument"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs", L"Argument"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Argument());
         }
         catch (...)
@@ -11024,14 +11024,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIToastNotificationActivatedEventArgs_get_UserInput(py::wrapper::Windows::UI::WebUI::WebUIToastNotificationActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs", L"UserInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs", L"UserInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserInput());
         }
         catch (...)
@@ -11043,14 +11043,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIToastNotificationActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIToastNotificationActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -11138,14 +11138,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIUserDataAccountProviderActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIUserDataAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIUserDataAccountProviderActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIUserDataAccountProviderActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -11157,14 +11157,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIUserDataAccountProviderActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIUserDataAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIUserDataAccountProviderActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIUserDataAccountProviderActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -11176,14 +11176,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIUserDataAccountProviderActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIUserDataAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIUserDataAccountProviderActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIUserDataAccountProviderActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -11195,14 +11195,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIUserDataAccountProviderActivatedEventArgs_get_Operation(py::wrapper::Windows::UI::WebUI::WebUIUserDataAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIUserDataAccountProviderActivatedEventArgs", L"Operation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIUserDataAccountProviderActivatedEventArgs", L"Operation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Operation());
         }
         catch (...)
@@ -11214,14 +11214,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIUserDataAccountProviderActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIUserDataAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIUserDataAccountProviderActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIUserDataAccountProviderActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -11311,14 +11311,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"AddInitializeScript", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"AddInitializeScript", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.AddInitializeScript(param0);
@@ -11343,14 +11343,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"BuildLocalStreamUri", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"BuildLocalStreamUri", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -11375,14 +11375,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"CapturePreviewToStreamAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"CapturePreviewToStreamAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
                 return py::convert(self->obj.CapturePreviewToStreamAsync(param0));
@@ -11406,14 +11406,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"CaptureSelectedContentToDataPackageAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"CaptureSelectedContentToDataPackageAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CaptureSelectedContentToDataPackageAsync());
             }
             catch (...)
@@ -11435,14 +11435,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"CreateAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"CreateAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::WebUI::WebUIView::CreateAsync());
             }
             catch (...)
@@ -11453,14 +11453,14 @@ namespace py::cpp::Windows::UI::WebUI
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"CreateAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"CreateAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(winrt::Windows::UI::WebUI::WebUIView::CreateAsync(param0));
@@ -11484,14 +11484,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"GetDeferredPermissionRequestById", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"GetDeferredPermissionRequestById", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 winrt::Windows::Web::UI::WebViewControlDeferredPermissionRequest param1 { nullptr };
 
@@ -11523,14 +11523,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"GoBack", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"GoBack", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.GoBack();
                 Py_RETURN_NONE;
             }
@@ -11553,14 +11553,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"GoForward", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"GoForward", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.GoForward();
                 Py_RETURN_NONE;
             }
@@ -11583,14 +11583,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"InvokeScriptAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"InvokeScriptAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
@@ -11615,14 +11615,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"Navigate", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"Navigate", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 self->obj.Navigate(param0);
@@ -11647,14 +11647,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"NavigateToLocalStreamUri", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"NavigateToLocalStreamUri", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::IUriToStreamResolver>(args, 1);
 
@@ -11680,14 +11680,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"NavigateToString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"NavigateToString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.NavigateToString(param0);
@@ -11712,14 +11712,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"NavigateWithHttpRequestMessage", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"NavigateWithHttpRequestMessage", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpRequestMessage>(args, 0);
 
                 self->obj.NavigateWithHttpRequestMessage(param0);
@@ -11744,14 +11744,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"Refresh", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"Refresh", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Refresh();
                 Py_RETURN_NONE;
             }
@@ -11774,14 +11774,14 @@ namespace py::cpp::Windows::UI::WebUI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.WebUIView", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -11800,14 +11800,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_get_IgnoreApplicationContentUriRulesNavigationRestrictions(py::wrapper::Windows::UI::WebUI::WebUIView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"IgnoreApplicationContentUriRulesNavigationRestrictions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"IgnoreApplicationContentUriRulesNavigationRestrictions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IgnoreApplicationContentUriRulesNavigationRestrictions());
         }
         catch (...)
@@ -11819,12 +11819,6 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int WebUIView_put_IgnoreApplicationContentUriRulesNavigationRestrictions(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"IgnoreApplicationContentUriRulesNavigationRestrictions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11833,6 +11827,12 @@ namespace py::cpp::Windows::UI::WebUI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"IgnoreApplicationContentUriRulesNavigationRestrictions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IgnoreApplicationContentUriRulesNavigationRestrictions(param0);
@@ -11847,14 +11847,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_get_ApplicationViewId(py::wrapper::Windows::UI::WebUI::WebUIView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"ApplicationViewId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"ApplicationViewId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ApplicationViewId());
         }
         catch (...)
@@ -11866,14 +11866,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_get_Source(py::wrapper::Windows::UI::WebUI::WebUIView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -11885,12 +11885,6 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int WebUIView_put_Source(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11899,6 +11893,12 @@ namespace py::cpp::Windows::UI::WebUI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.Source(param0);
@@ -11913,14 +11913,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_get_DefaultBackgroundColor(py::wrapper::Windows::UI::WebUI::WebUIView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"DefaultBackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"DefaultBackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultBackgroundColor());
         }
         catch (...)
@@ -11932,12 +11932,6 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int WebUIView_put_DefaultBackgroundColor(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"DefaultBackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11946,6 +11940,12 @@ namespace py::cpp::Windows::UI::WebUI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"DefaultBackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.DefaultBackgroundColor(param0);
@@ -11960,14 +11960,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_get_CanGoBack(py::wrapper::Windows::UI::WebUI::WebUIView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"CanGoBack"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"CanGoBack"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanGoBack());
         }
         catch (...)
@@ -11979,14 +11979,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_get_CanGoForward(py::wrapper::Windows::UI::WebUI::WebUIView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"CanGoForward"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"CanGoForward"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanGoForward());
         }
         catch (...)
@@ -11998,14 +11998,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_get_ContainsFullScreenElement(py::wrapper::Windows::UI::WebUI::WebUIView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"ContainsFullScreenElement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"ContainsFullScreenElement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContainsFullScreenElement());
         }
         catch (...)
@@ -12017,14 +12017,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_get_DeferredPermissionRequests(py::wrapper::Windows::UI::WebUI::WebUIView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"DeferredPermissionRequests"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"DeferredPermissionRequests"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeferredPermissionRequests());
         }
         catch (...)
@@ -12036,14 +12036,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_get_DocumentTitle(py::wrapper::Windows::UI::WebUI::WebUIView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"DocumentTitle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"DocumentTitle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentTitle());
         }
         catch (...)
@@ -12055,14 +12055,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_get_Settings(py::wrapper::Windows::UI::WebUI::WebUIView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"Settings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIView", L"Settings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Settings());
         }
         catch (...)
@@ -12074,14 +12074,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_add_Activated(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"Activated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"Activated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WebUI::WebUIView, winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs>>(arg);
 
             return py::convert(self->obj.Activated(param0));
@@ -12095,14 +12095,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_remove_Activated(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"Activated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"Activated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Activated(param0);
@@ -12117,14 +12117,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_add_Closed(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WebUI::WebUIView, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Closed(param0));
@@ -12138,14 +12138,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_remove_Closed(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Closed(param0);
@@ -12160,14 +12160,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_add_ContainsFullScreenElementChanged(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"ContainsFullScreenElementChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"ContainsFullScreenElementChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ContainsFullScreenElementChanged(param0));
@@ -12181,14 +12181,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_remove_ContainsFullScreenElementChanged(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"ContainsFullScreenElementChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"ContainsFullScreenElementChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ContainsFullScreenElementChanged(param0);
@@ -12203,14 +12203,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_add_ContentLoading(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"ContentLoading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"ContentLoading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlContentLoadingEventArgs>>(arg);
 
             return py::convert(self->obj.ContentLoading(param0));
@@ -12224,14 +12224,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_remove_ContentLoading(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"ContentLoading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"ContentLoading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ContentLoading(param0);
@@ -12246,14 +12246,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_add_DOMContentLoaded(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"DOMContentLoaded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"DOMContentLoaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlDOMContentLoadedEventArgs>>(arg);
 
             return py::convert(self->obj.DOMContentLoaded(param0));
@@ -12267,14 +12267,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_remove_DOMContentLoaded(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"DOMContentLoaded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"DOMContentLoaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DOMContentLoaded(param0);
@@ -12289,14 +12289,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_add_FrameContentLoading(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"FrameContentLoading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"FrameContentLoading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlContentLoadingEventArgs>>(arg);
 
             return py::convert(self->obj.FrameContentLoading(param0));
@@ -12310,14 +12310,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_remove_FrameContentLoading(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"FrameContentLoading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"FrameContentLoading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FrameContentLoading(param0);
@@ -12332,14 +12332,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_add_FrameDOMContentLoaded(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"FrameDOMContentLoaded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"FrameDOMContentLoaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlDOMContentLoadedEventArgs>>(arg);
 
             return py::convert(self->obj.FrameDOMContentLoaded(param0));
@@ -12353,14 +12353,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_remove_FrameDOMContentLoaded(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"FrameDOMContentLoaded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"FrameDOMContentLoaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FrameDOMContentLoaded(param0);
@@ -12375,14 +12375,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_add_FrameNavigationCompleted(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"FrameNavigationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"FrameNavigationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlNavigationCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.FrameNavigationCompleted(param0));
@@ -12396,14 +12396,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_remove_FrameNavigationCompleted(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"FrameNavigationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"FrameNavigationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FrameNavigationCompleted(param0);
@@ -12418,14 +12418,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_add_FrameNavigationStarting(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"FrameNavigationStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"FrameNavigationStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlNavigationStartingEventArgs>>(arg);
 
             return py::convert(self->obj.FrameNavigationStarting(param0));
@@ -12439,14 +12439,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_remove_FrameNavigationStarting(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"FrameNavigationStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"FrameNavigationStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FrameNavigationStarting(param0);
@@ -12461,14 +12461,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_add_LongRunningScriptDetected(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"LongRunningScriptDetected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"LongRunningScriptDetected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlLongRunningScriptDetectedEventArgs>>(arg);
 
             return py::convert(self->obj.LongRunningScriptDetected(param0));
@@ -12482,14 +12482,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_remove_LongRunningScriptDetected(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"LongRunningScriptDetected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"LongRunningScriptDetected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.LongRunningScriptDetected(param0);
@@ -12504,14 +12504,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_add_NavigationCompleted(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"NavigationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"NavigationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlNavigationCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.NavigationCompleted(param0));
@@ -12525,14 +12525,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_remove_NavigationCompleted(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"NavigationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"NavigationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.NavigationCompleted(param0);
@@ -12547,14 +12547,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_add_NavigationStarting(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"NavigationStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"NavigationStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlNavigationStartingEventArgs>>(arg);
 
             return py::convert(self->obj.NavigationStarting(param0));
@@ -12568,14 +12568,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_remove_NavigationStarting(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"NavigationStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"NavigationStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.NavigationStarting(param0);
@@ -12590,14 +12590,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_add_NewWindowRequested(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"NewWindowRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"NewWindowRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.NewWindowRequested(param0));
@@ -12611,14 +12611,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_remove_NewWindowRequested(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"NewWindowRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"NewWindowRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.NewWindowRequested(param0);
@@ -12633,14 +12633,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_add_PermissionRequested(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"PermissionRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"PermissionRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlPermissionRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.PermissionRequested(param0));
@@ -12654,14 +12654,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_remove_PermissionRequested(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"PermissionRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"PermissionRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PermissionRequested(param0);
@@ -12676,14 +12676,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_add_ScriptNotify(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"ScriptNotify"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"ScriptNotify"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlScriptNotifyEventArgs>>(arg);
 
             return py::convert(self->obj.ScriptNotify(param0));
@@ -12697,14 +12697,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_remove_ScriptNotify(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"ScriptNotify"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"ScriptNotify"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ScriptNotify(param0);
@@ -12719,14 +12719,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_add_UnsafeContentWarningDisplaying(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"UnsafeContentWarningDisplaying"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"UnsafeContentWarningDisplaying"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.UnsafeContentWarningDisplaying(param0));
@@ -12740,14 +12740,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_remove_UnsafeContentWarningDisplaying(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"UnsafeContentWarningDisplaying"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"UnsafeContentWarningDisplaying"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.UnsafeContentWarningDisplaying(param0);
@@ -12762,14 +12762,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_add_UnsupportedUriSchemeIdentified(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"UnsupportedUriSchemeIdentified"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"UnsupportedUriSchemeIdentified"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlUnsupportedUriSchemeIdentifiedEventArgs>>(arg);
 
             return py::convert(self->obj.UnsupportedUriSchemeIdentified(param0));
@@ -12783,14 +12783,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_remove_UnsupportedUriSchemeIdentified(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"UnsupportedUriSchemeIdentified"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"UnsupportedUriSchemeIdentified"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.UnsupportedUriSchemeIdentified(param0);
@@ -12805,14 +12805,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_add_UnviewableContentIdentified(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"UnviewableContentIdentified"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"UnviewableContentIdentified"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlUnviewableContentIdentifiedEventArgs>>(arg);
 
             return py::convert(self->obj.UnviewableContentIdentified(param0));
@@ -12826,14 +12826,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_remove_UnviewableContentIdentified(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"UnviewableContentIdentified"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"UnviewableContentIdentified"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.UnviewableContentIdentified(param0);
@@ -12848,14 +12848,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_add_WebResourceRequested(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"WebResourceRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"WebResourceRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlWebResourceRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.WebResourceRequested(param0));
@@ -12869,14 +12869,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_remove_WebResourceRequested(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"WebResourceRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.WebUIView", L"WebResourceRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.WebResourceRequested(param0);
@@ -13048,14 +13048,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIVoiceCommandActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIVoiceCommandActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIVoiceCommandActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIVoiceCommandActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -13067,14 +13067,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIVoiceCommandActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIVoiceCommandActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIVoiceCommandActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIVoiceCommandActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -13086,14 +13086,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIVoiceCommandActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIVoiceCommandActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIVoiceCommandActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIVoiceCommandActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -13105,14 +13105,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIVoiceCommandActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIVoiceCommandActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIVoiceCommandActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIVoiceCommandActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -13124,14 +13124,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIVoiceCommandActivatedEventArgs_get_Result(py::wrapper::Windows::UI::WebUI::WebUIVoiceCommandActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIVoiceCommandActivatedEventArgs", L"Result"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIVoiceCommandActivatedEventArgs", L"Result"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Result());
         }
         catch (...)
@@ -13143,14 +13143,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIVoiceCommandActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIVoiceCommandActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIVoiceCommandActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIVoiceCommandActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -13237,14 +13237,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIWalletActionActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIWalletActionActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -13256,14 +13256,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIWalletActionActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIWalletActionActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -13275,14 +13275,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIWalletActionActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIWalletActionActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -13294,14 +13294,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIWalletActionActivatedEventArgs_get_ActionId(py::wrapper::Windows::UI::WebUI::WebUIWalletActionActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs", L"ActionId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs", L"ActionId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActionId());
         }
         catch (...)
@@ -13313,14 +13313,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIWalletActionActivatedEventArgs_get_ActionKind(py::wrapper::Windows::UI::WebUI::WebUIWalletActionActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs", L"ActionKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs", L"ActionKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActionKind());
         }
         catch (...)
@@ -13332,14 +13332,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIWalletActionActivatedEventArgs_get_ItemId(py::wrapper::Windows::UI::WebUI::WebUIWalletActionActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs", L"ItemId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs", L"ItemId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ItemId());
         }
         catch (...)
@@ -13351,14 +13351,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIWalletActionActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIWalletActionActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -13446,14 +13446,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIWebAccountProviderActivatedEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIWebAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAccountProviderActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAccountProviderActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -13465,14 +13465,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIWebAccountProviderActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIWebAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAccountProviderActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAccountProviderActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -13484,14 +13484,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIWebAccountProviderActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIWebAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAccountProviderActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAccountProviderActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -13503,14 +13503,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIWebAccountProviderActivatedEventArgs_get_User(py::wrapper::Windows::UI::WebUI::WebUIWebAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAccountProviderActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAccountProviderActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -13522,14 +13522,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIWebAccountProviderActivatedEventArgs_get_Operation(py::wrapper::Windows::UI::WebUI::WebUIWebAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAccountProviderActivatedEventArgs", L"Operation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAccountProviderActivatedEventArgs", L"Operation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Operation());
         }
         catch (...)
@@ -13541,14 +13541,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIWebAccountProviderActivatedEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIWebAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAccountProviderActivatedEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAccountProviderActivatedEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -13635,14 +13635,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIWebAuthenticationBrokerContinuationEventArgs_get_Kind(py::wrapper::Windows::UI::WebUI::WebUIWebAuthenticationBrokerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAuthenticationBrokerContinuationEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAuthenticationBrokerContinuationEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -13654,14 +13654,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIWebAuthenticationBrokerContinuationEventArgs_get_PreviousExecutionState(py::wrapper::Windows::UI::WebUI::WebUIWebAuthenticationBrokerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAuthenticationBrokerContinuationEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAuthenticationBrokerContinuationEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -13673,14 +13673,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIWebAuthenticationBrokerContinuationEventArgs_get_SplashScreen(py::wrapper::Windows::UI::WebUI::WebUIWebAuthenticationBrokerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAuthenticationBrokerContinuationEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAuthenticationBrokerContinuationEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -13692,14 +13692,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIWebAuthenticationBrokerContinuationEventArgs_get_ContinuationData(py::wrapper::Windows::UI::WebUI::WebUIWebAuthenticationBrokerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAuthenticationBrokerContinuationEventArgs", L"ContinuationData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAuthenticationBrokerContinuationEventArgs", L"ContinuationData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContinuationData());
         }
         catch (...)
@@ -13711,14 +13711,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIWebAuthenticationBrokerContinuationEventArgs_get_WebAuthenticationResult(py::wrapper::Windows::UI::WebUI::WebUIWebAuthenticationBrokerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAuthenticationBrokerContinuationEventArgs", L"WebAuthenticationResult"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAuthenticationBrokerContinuationEventArgs", L"WebAuthenticationResult"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WebAuthenticationResult());
         }
         catch (...)
@@ -13730,14 +13730,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIWebAuthenticationBrokerContinuationEventArgs_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::WebUIWebAuthenticationBrokerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAuthenticationBrokerContinuationEventArgs", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.WebUIWebAuthenticationBrokerContinuationEventArgs", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -13824,14 +13824,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* IActivatedEventArgsDeferral_get_ActivatedOperation(py::wrapper::Windows::UI::WebUI::IActivatedEventArgsDeferral* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.IActivatedEventArgsDeferral", L"ActivatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.IActivatedEventArgsDeferral", L"ActivatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatedOperation());
         }
         catch (...)
@@ -13913,14 +13913,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* IWebUIBackgroundTaskInstance_get_Succeeded(py::wrapper::Windows::UI::WebUI::IWebUIBackgroundTaskInstance* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.IWebUIBackgroundTaskInstance", L"Succeeded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.IWebUIBackgroundTaskInstance", L"Succeeded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Succeeded());
         }
         catch (...)
@@ -13932,12 +13932,6 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int IWebUIBackgroundTaskInstance_put_Succeeded(py::wrapper::Windows::UI::WebUI::IWebUIBackgroundTaskInstance* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.IWebUIBackgroundTaskInstance", L"Succeeded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13946,6 +13940,12 @@ namespace py::cpp::Windows::UI::WebUI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.IWebUIBackgroundTaskInstance", L"Succeeded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Succeeded(param0);
@@ -14030,14 +14030,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* IWebUINavigatedEventArgs_get_NavigatedOperation(py::wrapper::Windows::UI::WebUI::IWebUINavigatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.IWebUINavigatedEventArgs", L"NavigatedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.IWebUINavigatedEventArgs", L"NavigatedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NavigatedOperation());
         }
         catch (...)

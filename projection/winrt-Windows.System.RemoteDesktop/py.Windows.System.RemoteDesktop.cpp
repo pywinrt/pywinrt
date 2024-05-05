@@ -16,14 +16,14 @@ namespace py::cpp::Windows::System::RemoteDesktop
 
     static PyObject* InteractiveSession_get_IsRemote(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteDesktop.InteractiveSession", L"IsRemote"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteDesktop.InteractiveSession", L"IsRemote"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::RemoteDesktop::InteractiveSession::IsRemote());
         }
         catch (...)

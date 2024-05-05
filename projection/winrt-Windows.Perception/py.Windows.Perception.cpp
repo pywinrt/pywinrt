@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Perception
 
     static PyObject* PerceptionTimestamp_get_PredictionAmount(py::wrapper::Windows::Perception::PerceptionTimestamp* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.PerceptionTimestamp", L"PredictionAmount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.PerceptionTimestamp", L"PredictionAmount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PredictionAmount());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::Perception
 
     static PyObject* PerceptionTimestamp_get_TargetTime(py::wrapper::Windows::Perception::PerceptionTimestamp* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.PerceptionTimestamp", L"TargetTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.PerceptionTimestamp", L"TargetTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetTime());
         }
         catch (...)
@@ -62,14 +62,14 @@ namespace py::cpp::Windows::Perception
 
     static PyObject* PerceptionTimestamp_get_SystemRelativeTargetTime(py::wrapper::Windows::Perception::PerceptionTimestamp* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.PerceptionTimestamp", L"SystemRelativeTargetTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.PerceptionTimestamp", L"SystemRelativeTargetTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SystemRelativeTargetTime());
         }
         catch (...)
@@ -149,14 +149,14 @@ namespace py::cpp::Windows::Perception
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.PerceptionTimestampHelper", L"FromHistoricalTargetTime", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.PerceptionTimestampHelper", L"FromHistoricalTargetTime", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
 
                 return py::convert(winrt::Windows::Perception::PerceptionTimestampHelper::FromHistoricalTargetTime(param0));
@@ -180,14 +180,14 @@ namespace py::cpp::Windows::Perception
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.PerceptionTimestampHelper", L"FromSystemRelativeTargetTime", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.PerceptionTimestampHelper", L"FromSystemRelativeTargetTime", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
                 return py::convert(winrt::Windows::Perception::PerceptionTimestampHelper::FromSystemRelativeTargetTime(param0));

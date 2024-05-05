@@ -28,14 +28,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentOperation", L"DismissUI", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentOperation", L"DismissUI", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.DismissUI();
                 Py_RETURN_NONE;
             }
@@ -58,14 +58,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentOperation", L"ReportCanceled", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentOperation", L"ReportCanceled", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportCanceled();
                 Py_RETURN_NONE;
             }
@@ -88,14 +88,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentOperation", L"ReportCompleted", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentOperation", L"ReportCompleted", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ReportCompleted(param0);
@@ -120,14 +120,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentOperation", L"ReportError", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentOperation", L"ReportError", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ReportError(param0);
@@ -148,14 +148,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* AddAppointmentOperation_get_AppointmentInformation(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::AddAppointmentOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentOperation", L"AppointmentInformation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentOperation", L"AppointmentInformation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppointmentInformation());
         }
         catch (...)
@@ -167,14 +167,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* AddAppointmentOperation_get_SourcePackageFamilyName(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::AddAppointmentOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentOperation", L"SourcePackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentOperation", L"SourcePackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourcePackageFamilyName());
         }
         catch (...)
@@ -253,14 +253,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* AppointmentsProviderLaunchActionVerbs_get_AddAppointment(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.AppointmentsProviderLaunchActionVerbs", L"AddAppointment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.AppointmentsProviderLaunchActionVerbs", L"AddAppointment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::AppointmentsProviderLaunchActionVerbs::AddAppointment());
         }
         catch (...)
@@ -272,14 +272,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* AppointmentsProviderLaunchActionVerbs_get_RemoveAppointment(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.AppointmentsProviderLaunchActionVerbs", L"RemoveAppointment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.AppointmentsProviderLaunchActionVerbs", L"RemoveAppointment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::AppointmentsProviderLaunchActionVerbs::RemoveAppointment());
         }
         catch (...)
@@ -291,14 +291,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* AppointmentsProviderLaunchActionVerbs_get_ReplaceAppointment(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.AppointmentsProviderLaunchActionVerbs", L"ReplaceAppointment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.AppointmentsProviderLaunchActionVerbs", L"ReplaceAppointment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::AppointmentsProviderLaunchActionVerbs::ReplaceAppointment());
         }
         catch (...)
@@ -310,14 +310,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* AppointmentsProviderLaunchActionVerbs_get_ShowTimeFrame(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.AppointmentsProviderLaunchActionVerbs", L"ShowTimeFrame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.AppointmentsProviderLaunchActionVerbs", L"ShowTimeFrame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::AppointmentsProviderLaunchActionVerbs::ShowTimeFrame());
         }
         catch (...)
@@ -329,14 +329,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* AppointmentsProviderLaunchActionVerbs_get_ShowAppointmentDetails(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.AppointmentsProviderLaunchActionVerbs", L"ShowAppointmentDetails"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.AppointmentsProviderLaunchActionVerbs", L"ShowAppointmentDetails"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::AppointmentsProviderLaunchActionVerbs::ShowAppointmentDetails());
         }
         catch (...)
@@ -424,14 +424,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation", L"DismissUI", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation", L"DismissUI", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.DismissUI();
                 Py_RETURN_NONE;
             }
@@ -454,14 +454,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation", L"ReportCanceled", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation", L"ReportCanceled", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportCanceled();
                 Py_RETURN_NONE;
             }
@@ -484,14 +484,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation", L"ReportCompleted", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation", L"ReportCompleted", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportCompleted();
                 Py_RETURN_NONE;
             }
@@ -514,14 +514,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation", L"ReportError", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation", L"ReportError", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ReportError(param0);
@@ -542,14 +542,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* RemoveAppointmentOperation_get_AppointmentId(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::RemoveAppointmentOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation", L"AppointmentId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation", L"AppointmentId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppointmentId());
         }
         catch (...)
@@ -561,14 +561,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* RemoveAppointmentOperation_get_InstanceStartDate(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::RemoveAppointmentOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation", L"InstanceStartDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation", L"InstanceStartDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InstanceStartDate());
         }
         catch (...)
@@ -580,14 +580,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* RemoveAppointmentOperation_get_SourcePackageFamilyName(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::RemoveAppointmentOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation", L"SourcePackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation", L"SourcePackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourcePackageFamilyName());
         }
         catch (...)
@@ -679,14 +679,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation", L"DismissUI", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation", L"DismissUI", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.DismissUI();
                 Py_RETURN_NONE;
             }
@@ -709,14 +709,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation", L"ReportCanceled", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation", L"ReportCanceled", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportCanceled();
                 Py_RETURN_NONE;
             }
@@ -739,14 +739,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation", L"ReportCompleted", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation", L"ReportCompleted", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ReportCompleted(param0);
@@ -771,14 +771,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation", L"ReportError", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation", L"ReportError", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ReportError(param0);
@@ -799,14 +799,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* ReplaceAppointmentOperation_get_AppointmentId(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::ReplaceAppointmentOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation", L"AppointmentId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation", L"AppointmentId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppointmentId());
         }
         catch (...)
@@ -818,14 +818,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* ReplaceAppointmentOperation_get_AppointmentInformation(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::ReplaceAppointmentOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation", L"AppointmentInformation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation", L"AppointmentInformation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppointmentInformation());
         }
         catch (...)
@@ -837,14 +837,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* ReplaceAppointmentOperation_get_InstanceStartDate(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::ReplaceAppointmentOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation", L"InstanceStartDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation", L"InstanceStartDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InstanceStartDate());
         }
         catch (...)
@@ -856,14 +856,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* ReplaceAppointmentOperation_get_SourcePackageFamilyName(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::ReplaceAppointmentOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation", L"SourcePackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation", L"SourcePackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourcePackageFamilyName());
         }
         catch (...)

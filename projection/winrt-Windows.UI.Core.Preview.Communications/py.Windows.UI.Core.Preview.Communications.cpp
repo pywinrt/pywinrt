@@ -28,14 +28,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamCleanupRequestedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamCleanupRequestedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -123,14 +123,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamCommandInvokedEventArgs_get_Command(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamCommandInvokedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamCommandInvokedEventArgs", L"Command"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamCommandInvokedEventArgs", L"Command"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Command());
         }
         catch (...)
@@ -234,14 +234,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamDeviceCredentials_get_DomainUserName(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamDeviceCredentials* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamDeviceCredentials", L"DomainUserName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamDeviceCredentials", L"DomainUserName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DomainUserName());
         }
         catch (...)
@@ -253,14 +253,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamDeviceCredentials_get_Password(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamDeviceCredentials* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamDeviceCredentials", L"Password"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamDeviceCredentials", L"Password"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Password());
         }
         catch (...)
@@ -272,14 +272,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamDeviceCredentials_get_UserPrincipalName(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamDeviceCredentials* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamDeviceCredentials", L"UserPrincipalName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamDeviceCredentials", L"UserPrincipalName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserPrincipalName());
         }
         catch (...)
@@ -367,14 +367,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamEndMeetingRequestedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamEndMeetingRequestedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -466,14 +466,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamJoinMeetingRequestedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamJoinMeetingRequestedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -491,14 +491,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamJoinMeetingRequestedEventArgs_get_MeetingUri(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamJoinMeetingRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamJoinMeetingRequestedEventArgs", L"MeetingUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamJoinMeetingRequestedEventArgs", L"MeetingUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MeetingUri());
         }
         catch (...)
@@ -585,14 +585,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"EnterFullScreen", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"EnterFullScreen", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.EnterFullScreen();
                 Py_RETURN_NONE;
             }
@@ -615,14 +615,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::Core::Preview::Communications::PreviewTeamView::GetForCurrentView());
             }
             catch (...)
@@ -644,14 +644,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"JoinMeetingWithUri", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"JoinMeetingWithUri", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 self->obj.JoinMeetingWithUri(param0);
@@ -676,14 +676,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"LeaveFullScreen", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"LeaveFullScreen", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.LeaveFullScreen();
                 Py_RETURN_NONE;
             }
@@ -706,14 +706,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"NotifyMeetingEnded", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"NotifyMeetingEnded", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamEndMeetingKind>(args, 0);
 
                 self->obj.NotifyMeetingEnded(param0);
@@ -738,14 +738,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"RequestForeground", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"RequestForeground", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RequestForeground();
                 Py_RETURN_NONE;
             }
@@ -768,14 +768,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"SetButtonLabel", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"SetButtonLabel", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.SetButtonLabel(param0);
@@ -800,14 +800,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"SetTitle", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"SetTitle", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.SetTitle(param0);
@@ -832,14 +832,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"StartSharingScreen", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"StartSharingScreen", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.StartSharingScreen();
                 Py_RETURN_NONE;
             }
@@ -862,14 +862,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"StopSharingScreen", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"StopSharingScreen", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.StopSharingScreen();
                 Py_RETURN_NONE;
             }
@@ -888,14 +888,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamView_get_IsFullScreen(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"IsFullScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"IsFullScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsFullScreen());
         }
         catch (...)
@@ -907,14 +907,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamView_get_IsScreenSharing(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"IsScreenSharing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"IsScreenSharing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsScreenSharing());
         }
         catch (...)
@@ -926,14 +926,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamView_get_MeetingInfoDisplayType(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"MeetingInfoDisplayType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"MeetingInfoDisplayType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MeetingInfoDisplayType());
         }
         catch (...)
@@ -945,14 +945,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamView_get_MeetingUri(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"MeetingUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"MeetingUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MeetingUri());
         }
         catch (...)
@@ -964,14 +964,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamView_get_SharingScreenBounds(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"SharingScreenBounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"SharingScreenBounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SharingScreenBounds());
         }
         catch (...)
@@ -983,14 +983,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamView_get_SystemState(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"SystemState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"SystemState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SystemState());
         }
         catch (...)
@@ -1002,14 +1002,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamView_add_CleanupRequested(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"CleanupRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"CleanupRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamView, winrt::Windows::UI::Core::Preview::Communications::PreviewTeamCleanupRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.CleanupRequested(param0));
@@ -1023,14 +1023,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamView_remove_CleanupRequested(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"CleanupRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"CleanupRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CleanupRequested(param0);
@@ -1045,14 +1045,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamView_add_CommandInvoked(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"CommandInvoked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"CommandInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamView, winrt::Windows::UI::Core::Preview::Communications::PreviewTeamCommandInvokedEventArgs>>(arg);
 
             return py::convert(self->obj.CommandInvoked(param0));
@@ -1066,14 +1066,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamView_remove_CommandInvoked(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"CommandInvoked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"CommandInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CommandInvoked(param0);
@@ -1088,14 +1088,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamView_add_EndMeetingRequested(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"EndMeetingRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"EndMeetingRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamView, winrt::Windows::UI::Core::Preview::Communications::PreviewTeamEndMeetingRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.EndMeetingRequested(param0));
@@ -1109,14 +1109,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamView_remove_EndMeetingRequested(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"EndMeetingRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"EndMeetingRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.EndMeetingRequested(param0);
@@ -1131,14 +1131,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamView_add_IsFullScreenChanged(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"IsFullScreenChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"IsFullScreenChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamView, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.IsFullScreenChanged(param0));
@@ -1152,14 +1152,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamView_remove_IsFullScreenChanged(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"IsFullScreenChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"IsFullScreenChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.IsFullScreenChanged(param0);
@@ -1174,14 +1174,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamView_add_IsScreenSharingChanged(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"IsScreenSharingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"IsScreenSharingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamView, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.IsScreenSharingChanged(param0));
@@ -1195,14 +1195,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamView_remove_IsScreenSharingChanged(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"IsScreenSharingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"IsScreenSharingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.IsScreenSharingChanged(param0);
@@ -1217,14 +1217,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamView_add_JoinMeetingRequested(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"JoinMeetingRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"JoinMeetingRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamView, winrt::Windows::UI::Core::Preview::Communications::PreviewTeamJoinMeetingRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.JoinMeetingRequested(param0));
@@ -1238,14 +1238,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamView_remove_JoinMeetingRequested(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"JoinMeetingRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"JoinMeetingRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.JoinMeetingRequested(param0);
@@ -1260,14 +1260,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamView_add_SharingScreenBoundsChanged(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"SharingScreenBoundsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"SharingScreenBoundsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamView, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.SharingScreenBoundsChanged(param0));
@@ -1281,14 +1281,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamView_remove_SharingScreenBoundsChanged(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"SharingScreenBoundsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"SharingScreenBoundsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SharingScreenBoundsChanged(param0);
@@ -1303,14 +1303,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamView_add_SystemStateChanged(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"SystemStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"SystemStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamView, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.SystemStateChanged(param0));
@@ -1324,14 +1324,14 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyObject* PreviewTeamView_remove_SystemStateChanged(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"SystemStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.Communications.PreviewTeamView", L"SystemStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SystemStateChanged(param0);

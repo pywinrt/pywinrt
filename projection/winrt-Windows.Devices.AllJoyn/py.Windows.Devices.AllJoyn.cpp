@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutData_get_DefaultDescription(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"DefaultDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"DefaultDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultDescription());
         }
         catch (...)
@@ -43,12 +43,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static int AllJoynAboutData_put_DefaultDescription(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"DefaultDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -57,6 +51,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"DefaultDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DefaultDescription(param0);
@@ -71,14 +71,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutData_get_DefaultAppName(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"DefaultAppName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"DefaultAppName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultAppName());
         }
         catch (...)
@@ -90,12 +90,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static int AllJoynAboutData_put_DefaultAppName(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"DefaultAppName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -104,6 +98,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"DefaultAppName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DefaultAppName(param0);
@@ -118,14 +118,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutData_get_DateOfManufacture(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"DateOfManufacture"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"DateOfManufacture"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DateOfManufacture());
         }
         catch (...)
@@ -137,12 +137,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static int AllJoynAboutData_put_DateOfManufacture(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"DateOfManufacture"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -151,6 +145,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"DateOfManufacture"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             self->obj.DateOfManufacture(param0);
@@ -165,14 +165,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutData_get_DefaultManufacturer(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"DefaultManufacturer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"DefaultManufacturer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultManufacturer());
         }
         catch (...)
@@ -184,12 +184,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static int AllJoynAboutData_put_DefaultManufacturer(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"DefaultManufacturer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -198,6 +192,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"DefaultManufacturer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DefaultManufacturer(param0);
@@ -212,14 +212,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutData_get_AppId(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"AppId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"AppId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppId());
         }
         catch (...)
@@ -231,12 +231,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static int AllJoynAboutData_put_AppId(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"AppId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -245,6 +239,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"AppId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::guid>(arg);
 
             self->obj.AppId(param0);
@@ -259,14 +259,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutData_get_SupportUrl(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"SupportUrl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"SupportUrl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportUrl());
         }
         catch (...)
@@ -278,12 +278,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static int AllJoynAboutData_put_SupportUrl(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"SupportUrl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -292,6 +286,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"SupportUrl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.SupportUrl(param0);
@@ -306,14 +306,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutData_get_SoftwareVersion(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"SoftwareVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"SoftwareVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SoftwareVersion());
         }
         catch (...)
@@ -325,12 +325,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static int AllJoynAboutData_put_SoftwareVersion(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"SoftwareVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -339,6 +333,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"SoftwareVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.SoftwareVersion(param0);
@@ -353,14 +353,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutData_get_ModelNumber(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"ModelNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"ModelNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ModelNumber());
         }
         catch (...)
@@ -372,12 +372,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static int AllJoynAboutData_put_ModelNumber(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"ModelNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -386,6 +380,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"ModelNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ModelNumber(param0);
@@ -400,14 +400,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutData_get_IsEnabled(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"IsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsEnabled());
         }
         catch (...)
@@ -419,12 +419,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static int AllJoynAboutData_put_IsEnabled(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"IsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -433,6 +427,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsEnabled(param0);
@@ -447,14 +447,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutData_get_AppNames(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"AppNames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"AppNames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppNames());
         }
         catch (...)
@@ -466,14 +466,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutData_get_Manufacturers(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"Manufacturers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"Manufacturers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Manufacturers());
         }
         catch (...)
@@ -485,14 +485,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutData_get_Descriptions(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"Descriptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutData", L"Descriptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Descriptions());
         }
         catch (...)
@@ -589,14 +589,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"GetDataBySessionPortAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"GetDataBySessionPortAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::AllJoyn::AllJoynBusAttachment>(args, 1);
                 auto param2 = py::convert_to<uint16_t>(args, 2);
@@ -611,14 +611,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"GetDataBySessionPortAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"GetDataBySessionPortAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::AllJoyn::AllJoynBusAttachment>(args, 1);
                 auto param2 = py::convert_to<uint16_t>(args, 2);
@@ -641,14 +641,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutDataView_get_AJSoftwareVersion(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutDataView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"AJSoftwareVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"AJSoftwareVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AJSoftwareVersion());
         }
         catch (...)
@@ -660,14 +660,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutDataView_get_AppId(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutDataView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"AppId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"AppId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppId());
         }
         catch (...)
@@ -679,14 +679,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutDataView_get_AppName(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutDataView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"AppName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"AppName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppName());
         }
         catch (...)
@@ -698,14 +698,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutDataView_get_DateOfManufacture(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutDataView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"DateOfManufacture"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"DateOfManufacture"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DateOfManufacture());
         }
         catch (...)
@@ -717,14 +717,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutDataView_get_DefaultLanguage(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutDataView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"DefaultLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"DefaultLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultLanguage());
         }
         catch (...)
@@ -736,14 +736,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutDataView_get_Description(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutDataView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -755,14 +755,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutDataView_get_DeviceId(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutDataView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -774,14 +774,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutDataView_get_DeviceName(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutDataView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"DeviceName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"DeviceName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceName());
         }
         catch (...)
@@ -793,14 +793,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutDataView_get_HardwareVersion(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutDataView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"HardwareVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"HardwareVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HardwareVersion());
         }
         catch (...)
@@ -812,14 +812,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutDataView_get_Manufacturer(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutDataView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"Manufacturer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"Manufacturer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Manufacturer());
         }
         catch (...)
@@ -831,14 +831,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutDataView_get_ModelNumber(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutDataView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"ModelNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"ModelNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ModelNumber());
         }
         catch (...)
@@ -850,14 +850,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutDataView_get_Properties(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutDataView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -869,14 +869,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutDataView_get_SoftwareVersion(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutDataView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"SoftwareVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"SoftwareVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SoftwareVersion());
         }
         catch (...)
@@ -888,14 +888,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutDataView_get_Status(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutDataView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -907,14 +907,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutDataView_get_SupportUrl(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutDataView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"SupportUrl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"SupportUrl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportUrl());
         }
         catch (...)
@@ -926,14 +926,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAboutDataView_get_SupportedLanguages(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutDataView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"SupportedLanguages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAboutDataView", L"SupportedLanguages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedLanguages());
         }
         catch (...)
@@ -1088,14 +1088,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynAcceptSessionJoinerEventArgs", L"Accept", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynAcceptSessionJoinerEventArgs", L"Accept", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Accept();
                 Py_RETURN_NONE;
             }
@@ -1114,14 +1114,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAcceptSessionJoinerEventArgs_get_SameNetwork(py::wrapper::Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAcceptSessionJoinerEventArgs", L"SameNetwork"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAcceptSessionJoinerEventArgs", L"SameNetwork"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SameNetwork());
         }
         catch (...)
@@ -1133,14 +1133,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAcceptSessionJoinerEventArgs_get_SamePhysicalNode(py::wrapper::Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAcceptSessionJoinerEventArgs", L"SamePhysicalNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAcceptSessionJoinerEventArgs", L"SamePhysicalNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SamePhysicalNode());
         }
         catch (...)
@@ -1152,14 +1152,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAcceptSessionJoinerEventArgs_get_SessionPort(py::wrapper::Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAcceptSessionJoinerEventArgs", L"SessionPort"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAcceptSessionJoinerEventArgs", L"SessionPort"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SessionPort());
         }
         catch (...)
@@ -1171,14 +1171,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAcceptSessionJoinerEventArgs_get_TrafficType(py::wrapper::Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAcceptSessionJoinerEventArgs", L"TrafficType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAcceptSessionJoinerEventArgs", L"TrafficType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrafficType());
         }
         catch (...)
@@ -1190,14 +1190,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAcceptSessionJoinerEventArgs_get_UniqueName(py::wrapper::Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAcceptSessionJoinerEventArgs", L"UniqueName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAcceptSessionJoinerEventArgs", L"UniqueName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UniqueName());
         }
         catch (...)
@@ -1284,14 +1284,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAuthenticationCompleteEventArgs_get_AuthenticationMechanism(py::wrapper::Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAuthenticationCompleteEventArgs", L"AuthenticationMechanism"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAuthenticationCompleteEventArgs", L"AuthenticationMechanism"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AuthenticationMechanism());
         }
         catch (...)
@@ -1303,14 +1303,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAuthenticationCompleteEventArgs_get_PeerUniqueName(py::wrapper::Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAuthenticationCompleteEventArgs", L"PeerUniqueName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAuthenticationCompleteEventArgs", L"PeerUniqueName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PeerUniqueName());
         }
         catch (...)
@@ -1322,14 +1322,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynAuthenticationCompleteEventArgs_get_Succeeded(py::wrapper::Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAuthenticationCompleteEventArgs", L"Succeeded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynAuthenticationCompleteEventArgs", L"Succeeded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Succeeded());
         }
         catch (...)
@@ -1454,14 +1454,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"Connect", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"Connect", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Connect();
                 Py_RETURN_NONE;
             }
@@ -1484,14 +1484,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"Disconnect", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"Disconnect", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Disconnect();
                 Py_RETURN_NONE;
             }
@@ -1514,14 +1514,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"GetAboutDataAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"GetAboutDataAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::AllJoyn::AllJoynServiceInfo>(args, 0);
 
                 return py::convert(self->obj.GetAboutDataAsync(param0));
@@ -1534,14 +1534,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"GetAboutDataAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"GetAboutDataAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::AllJoyn::AllJoynServiceInfo>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Globalization::Language>(args, 1);
 
@@ -1566,14 +1566,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::AllJoyn::AllJoynBusAttachment::GetDefault());
             }
             catch (...)
@@ -1595,14 +1595,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"GetWatcher", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"GetWatcher", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::AllJoyn::AllJoynBusAttachment::GetWatcher(param0));
@@ -1626,14 +1626,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"PingAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"PingAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.PingAsync(param0));
@@ -1653,14 +1653,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusAttachment_get_AboutData(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusAttachment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"AboutData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"AboutData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AboutData());
         }
         catch (...)
@@ -1672,14 +1672,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusAttachment_get_AuthenticationMechanisms(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusAttachment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"AuthenticationMechanisms"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"AuthenticationMechanisms"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AuthenticationMechanisms());
         }
         catch (...)
@@ -1691,14 +1691,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusAttachment_get_ConnectionSpecification(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusAttachment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"ConnectionSpecification"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"ConnectionSpecification"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionSpecification());
         }
         catch (...)
@@ -1710,14 +1710,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusAttachment_get_State(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusAttachment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -1729,14 +1729,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusAttachment_get_UniqueName(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusAttachment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"UniqueName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"UniqueName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UniqueName());
         }
         catch (...)
@@ -1748,14 +1748,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusAttachment_add_AuthenticationComplete(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusAttachment* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"AuthenticationComplete"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"AuthenticationComplete"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::AllJoyn::AllJoynBusAttachment, winrt::Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs>>(arg);
 
             return py::convert(self->obj.AuthenticationComplete(param0));
@@ -1769,14 +1769,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusAttachment_remove_AuthenticationComplete(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusAttachment* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"AuthenticationComplete"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"AuthenticationComplete"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AuthenticationComplete(param0);
@@ -1791,14 +1791,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusAttachment_add_CredentialsRequested(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusAttachment* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"CredentialsRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"CredentialsRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::AllJoyn::AllJoynBusAttachment, winrt::Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.CredentialsRequested(param0));
@@ -1812,14 +1812,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusAttachment_remove_CredentialsRequested(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusAttachment* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"CredentialsRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"CredentialsRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CredentialsRequested(param0);
@@ -1834,14 +1834,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusAttachment_add_CredentialsVerificationRequested(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusAttachment* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"CredentialsVerificationRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"CredentialsVerificationRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::AllJoyn::AllJoynBusAttachment, winrt::Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.CredentialsVerificationRequested(param0));
@@ -1855,14 +1855,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusAttachment_remove_CredentialsVerificationRequested(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusAttachment* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"CredentialsVerificationRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"CredentialsVerificationRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CredentialsVerificationRequested(param0);
@@ -1877,14 +1877,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusAttachment_add_StateChanged(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusAttachment* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::AllJoyn::AllJoynBusAttachment, winrt::Windows::Devices::AllJoyn::AllJoynBusAttachmentStateChangedEventArgs>>(arg);
 
             return py::convert(self->obj.StateChanged(param0));
@@ -1898,14 +1898,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusAttachment_remove_StateChanged(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusAttachment* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StateChanged(param0);
@@ -1920,14 +1920,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusAttachment_add_AcceptSessionJoinerRequested(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusAttachment* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"AcceptSessionJoinerRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"AcceptSessionJoinerRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::AllJoyn::AllJoynBusAttachment, winrt::Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs>>(arg);
 
             return py::convert(self->obj.AcceptSessionJoinerRequested(param0));
@@ -1941,14 +1941,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusAttachment_remove_AcceptSessionJoinerRequested(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusAttachment* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"AcceptSessionJoinerRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"AcceptSessionJoinerRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AcceptSessionJoinerRequested(param0);
@@ -1963,14 +1963,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusAttachment_add_SessionJoined(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusAttachment* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"SessionJoined"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"SessionJoined"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::AllJoyn::AllJoynBusAttachment, winrt::Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs>>(arg);
 
             return py::convert(self->obj.SessionJoined(param0));
@@ -1984,14 +1984,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusAttachment_remove_SessionJoined(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusAttachment* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"SessionJoined"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachment", L"SessionJoined"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SessionJoined(param0);
@@ -2123,14 +2123,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusAttachmentStateChangedEventArgs_get_State(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusAttachmentStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachmentStateChangedEventArgs", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachmentStateChangedEventArgs", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -2142,14 +2142,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusAttachmentStateChangedEventArgs_get_Status(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusAttachmentStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachmentStateChangedEventArgs", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynBusAttachmentStateChangedEventArgs", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -2289,14 +2289,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynBusObject", L"AddProducer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynBusObject", L"AddProducer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::AllJoyn::IAllJoynProducer>(args, 0);
 
                 self->obj.AddProducer(param0);
@@ -2321,14 +2321,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynBusObject", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynBusObject", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -2351,14 +2351,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynBusObject", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynBusObject", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -2377,14 +2377,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusObject_get_BusAttachment(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusObject* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynBusObject", L"BusAttachment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynBusObject", L"BusAttachment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BusAttachment());
         }
         catch (...)
@@ -2396,14 +2396,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusObject_get_Session(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusObject* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynBusObject", L"Session"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynBusObject", L"Session"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Session());
         }
         catch (...)
@@ -2415,14 +2415,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusObject_add_Stopped(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusObject* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusObject", L"Stopped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusObject", L"Stopped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::AllJoyn::AllJoynBusObject, winrt::Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs>>(arg);
 
             return py::convert(self->obj.Stopped(param0));
@@ -2436,14 +2436,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusObject_remove_Stopped(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusObject* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusObject", L"Stopped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynBusObject", L"Stopped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Stopped(param0);
@@ -2558,14 +2558,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynBusObjectStoppedEventArgs_get_Status(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynBusObjectStoppedEventArgs", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynBusObjectStoppedEventArgs", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -2647,14 +2647,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynCredentials_get_Timeout(py::wrapper::Windows::Devices::AllJoyn::AllJoynCredentials* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentials", L"Timeout"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentials", L"Timeout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timeout());
         }
         catch (...)
@@ -2666,12 +2666,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static int AllJoynCredentials_put_Timeout(py::wrapper::Windows::Devices::AllJoyn::AllJoynCredentials* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentials", L"Timeout"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2680,6 +2674,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentials", L"Timeout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.Timeout(param0);
@@ -2694,14 +2694,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynCredentials_get_PasswordCredential(py::wrapper::Windows::Devices::AllJoyn::AllJoynCredentials* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentials", L"PasswordCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentials", L"PasswordCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PasswordCredential());
         }
         catch (...)
@@ -2713,12 +2713,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static int AllJoynCredentials_put_PasswordCredential(py::wrapper::Windows::Devices::AllJoyn::AllJoynCredentials* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentials", L"PasswordCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2727,6 +2721,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentials", L"PasswordCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             self->obj.PasswordCredential(param0);
@@ -2741,14 +2741,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynCredentials_get_Certificate(py::wrapper::Windows::Devices::AllJoyn::AllJoynCredentials* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentials", L"Certificate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentials", L"Certificate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Certificate());
         }
         catch (...)
@@ -2760,12 +2760,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static int AllJoynCredentials_put_Certificate(py::wrapper::Windows::Devices::AllJoyn::AllJoynCredentials* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentials", L"Certificate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2774,6 +2768,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentials", L"Certificate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(arg);
 
             self->obj.Certificate(param0);
@@ -2788,14 +2788,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynCredentials_get_AuthenticationMechanism(py::wrapper::Windows::Devices::AllJoyn::AllJoynCredentials* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentials", L"AuthenticationMechanism"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentials", L"AuthenticationMechanism"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AuthenticationMechanism());
         }
         catch (...)
@@ -2884,14 +2884,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsRequestedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsRequestedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -2909,14 +2909,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynCredentialsRequestedEventArgs_get_AttemptCount(py::wrapper::Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsRequestedEventArgs", L"AttemptCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsRequestedEventArgs", L"AttemptCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttemptCount());
         }
         catch (...)
@@ -2928,14 +2928,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynCredentialsRequestedEventArgs_get_Credentials(py::wrapper::Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsRequestedEventArgs", L"Credentials"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsRequestedEventArgs", L"Credentials"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Credentials());
         }
         catch (...)
@@ -2947,14 +2947,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynCredentialsRequestedEventArgs_get_PeerUniqueName(py::wrapper::Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsRequestedEventArgs", L"PeerUniqueName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsRequestedEventArgs", L"PeerUniqueName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PeerUniqueName());
         }
         catch (...)
@@ -2966,14 +2966,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynCredentialsRequestedEventArgs_get_RequestedUserName(py::wrapper::Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsRequestedEventArgs", L"RequestedUserName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsRequestedEventArgs", L"RequestedUserName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestedUserName());
         }
         catch (...)
@@ -3063,14 +3063,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsVerificationRequestedEventArgs", L"Accept", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsVerificationRequestedEventArgs", L"Accept", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Accept();
                 Py_RETURN_NONE;
             }
@@ -3093,14 +3093,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsVerificationRequestedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsVerificationRequestedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -3118,14 +3118,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynCredentialsVerificationRequestedEventArgs_get_AuthenticationMechanism(py::wrapper::Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsVerificationRequestedEventArgs", L"AuthenticationMechanism"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsVerificationRequestedEventArgs", L"AuthenticationMechanism"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AuthenticationMechanism());
         }
         catch (...)
@@ -3137,14 +3137,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynCredentialsVerificationRequestedEventArgs_get_PeerCertificate(py::wrapper::Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsVerificationRequestedEventArgs", L"PeerCertificate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsVerificationRequestedEventArgs", L"PeerCertificate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PeerCertificate());
         }
         catch (...)
@@ -3156,14 +3156,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynCredentialsVerificationRequestedEventArgs_get_PeerCertificateErrorSeverity(py::wrapper::Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsVerificationRequestedEventArgs", L"PeerCertificateErrorSeverity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsVerificationRequestedEventArgs", L"PeerCertificateErrorSeverity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PeerCertificateErrorSeverity());
         }
         catch (...)
@@ -3175,14 +3175,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynCredentialsVerificationRequestedEventArgs_get_PeerCertificateErrors(py::wrapper::Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsVerificationRequestedEventArgs", L"PeerCertificateErrors"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsVerificationRequestedEventArgs", L"PeerCertificateErrors"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PeerCertificateErrors());
         }
         catch (...)
@@ -3194,14 +3194,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynCredentialsVerificationRequestedEventArgs_get_PeerIntermediateCertificates(py::wrapper::Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsVerificationRequestedEventArgs", L"PeerIntermediateCertificates"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsVerificationRequestedEventArgs", L"PeerIntermediateCertificates"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PeerIntermediateCertificates());
         }
         catch (...)
@@ -3213,14 +3213,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynCredentialsVerificationRequestedEventArgs_get_PeerUniqueName(py::wrapper::Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsVerificationRequestedEventArgs", L"PeerUniqueName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynCredentialsVerificationRequestedEventArgs", L"PeerUniqueName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PeerUniqueName());
         }
         catch (...)
@@ -3333,14 +3333,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynMessageInfo_get_SenderUniqueName(py::wrapper::Windows::Devices::AllJoyn::AllJoynMessageInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynMessageInfo", L"SenderUniqueName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynMessageInfo", L"SenderUniqueName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SenderUniqueName());
         }
         catch (...)
@@ -3446,14 +3446,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynProducerStoppedEventArgs_get_Status(py::wrapper::Windows::Devices::AllJoyn::AllJoynProducerStoppedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynProducerStoppedEventArgs", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynProducerStoppedEventArgs", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -3565,14 +3565,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynServiceInfo", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynServiceInfo", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::AllJoyn::AllJoynServiceInfo::FromIdAsync(param0));
@@ -3592,14 +3592,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynServiceInfo_get_ObjectPath(py::wrapper::Windows::Devices::AllJoyn::AllJoynServiceInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynServiceInfo", L"ObjectPath"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynServiceInfo", L"ObjectPath"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ObjectPath());
         }
         catch (...)
@@ -3611,14 +3611,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynServiceInfo_get_SessionPort(py::wrapper::Windows::Devices::AllJoyn::AllJoynServiceInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynServiceInfo", L"SessionPort"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynServiceInfo", L"SessionPort"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SessionPort());
         }
         catch (...)
@@ -3630,14 +3630,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynServiceInfo_get_UniqueName(py::wrapper::Windows::Devices::AllJoyn::AllJoynServiceInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynServiceInfo", L"UniqueName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynServiceInfo", L"UniqueName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UniqueName());
         }
         catch (...)
@@ -3771,14 +3771,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynServiceInfoRemovedEventArgs_get_UniqueName(py::wrapper::Windows::Devices::AllJoyn::AllJoynServiceInfoRemovedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynServiceInfoRemovedEventArgs", L"UniqueName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynServiceInfoRemovedEventArgs", L"UniqueName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UniqueName());
         }
         catch (...)
@@ -3864,14 +3864,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynSession", L"GetFromServiceInfoAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynSession", L"GetFromServiceInfoAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::AllJoyn::AllJoynServiceInfo>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::AllJoyn::AllJoynSession::GetFromServiceInfoAsync(param0));
@@ -3884,14 +3884,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynSession", L"GetFromServiceInfoAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynSession", L"GetFromServiceInfoAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::AllJoyn::AllJoynServiceInfo>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::AllJoyn::AllJoynBusAttachment>(args, 1);
 
@@ -3916,14 +3916,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynSession", L"RemoveMemberAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.AllJoynSession", L"RemoveMemberAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.RemoveMemberAsync(param0));
@@ -3943,14 +3943,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynSession_get_Id(py::wrapper::Windows::Devices::AllJoyn::AllJoynSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynSession", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynSession", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -3962,14 +3962,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynSession_get_Status(py::wrapper::Windows::Devices::AllJoyn::AllJoynSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynSession", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynSession", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -3981,14 +3981,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynSession_add_Lost(py::wrapper::Windows::Devices::AllJoyn::AllJoynSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynSession", L"Lost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynSession", L"Lost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::AllJoyn::AllJoynSession, winrt::Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs>>(arg);
 
             return py::convert(self->obj.Lost(param0));
@@ -4002,14 +4002,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynSession_remove_Lost(py::wrapper::Windows::Devices::AllJoyn::AllJoynSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynSession", L"Lost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynSession", L"Lost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Lost(param0);
@@ -4024,14 +4024,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynSession_add_MemberAdded(py::wrapper::Windows::Devices::AllJoyn::AllJoynSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynSession", L"MemberAdded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynSession", L"MemberAdded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::AllJoyn::AllJoynSession, winrt::Windows::Devices::AllJoyn::AllJoynSessionMemberAddedEventArgs>>(arg);
 
             return py::convert(self->obj.MemberAdded(param0));
@@ -4045,14 +4045,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynSession_remove_MemberAdded(py::wrapper::Windows::Devices::AllJoyn::AllJoynSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynSession", L"MemberAdded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynSession", L"MemberAdded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.MemberAdded(param0);
@@ -4067,14 +4067,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynSession_add_MemberRemoved(py::wrapper::Windows::Devices::AllJoyn::AllJoynSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynSession", L"MemberRemoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynSession", L"MemberRemoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::AllJoyn::AllJoynSession, winrt::Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs>>(arg);
 
             return py::convert(self->obj.MemberRemoved(param0));
@@ -4088,14 +4088,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynSession_remove_MemberRemoved(py::wrapper::Windows::Devices::AllJoyn::AllJoynSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynSession", L"MemberRemoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.AllJoyn.AllJoynSession", L"MemberRemoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.MemberRemoved(param0);
@@ -4238,14 +4238,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynSessionJoinedEventArgs_get_Session(py::wrapper::Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynSessionJoinedEventArgs", L"Session"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynSessionJoinedEventArgs", L"Session"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Session());
         }
         catch (...)
@@ -4351,14 +4351,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynSessionLostEventArgs_get_Reason(py::wrapper::Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynSessionLostEventArgs", L"Reason"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynSessionLostEventArgs", L"Reason"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reason());
         }
         catch (...)
@@ -4464,14 +4464,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynSessionMemberAddedEventArgs_get_UniqueName(py::wrapper::Windows::Devices::AllJoyn::AllJoynSessionMemberAddedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynSessionMemberAddedEventArgs", L"UniqueName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynSessionMemberAddedEventArgs", L"UniqueName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UniqueName());
         }
         catch (...)
@@ -4577,14 +4577,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynSessionMemberRemovedEventArgs_get_UniqueName(py::wrapper::Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynSessionMemberRemovedEventArgs", L"UniqueName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynSessionMemberRemovedEventArgs", L"UniqueName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UniqueName());
         }
         catch (...)
@@ -4658,14 +4658,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynStatus_get_AuthenticationFailed(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"AuthenticationFailed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"AuthenticationFailed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::AllJoyn::AllJoynStatus::AuthenticationFailed());
         }
         catch (...)
@@ -4677,14 +4677,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynStatus_get_AuthenticationRejectedByUser(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"AuthenticationRejectedByUser"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"AuthenticationRejectedByUser"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::AllJoyn::AllJoynStatus::AuthenticationRejectedByUser());
         }
         catch (...)
@@ -4696,14 +4696,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynStatus_get_ConnectionRefused(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"ConnectionRefused"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"ConnectionRefused"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::AllJoyn::AllJoynStatus::ConnectionRefused());
         }
         catch (...)
@@ -4715,14 +4715,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynStatus_get_Fail(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"Fail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"Fail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::AllJoyn::AllJoynStatus::Fail());
         }
         catch (...)
@@ -4734,14 +4734,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynStatus_get_InsufficientSecurity(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"InsufficientSecurity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"InsufficientSecurity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::AllJoyn::AllJoynStatus::InsufficientSecurity());
         }
         catch (...)
@@ -4753,14 +4753,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynStatus_get_InvalidArgument1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"InvalidArgument1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"InvalidArgument1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::AllJoyn::AllJoynStatus::InvalidArgument1());
         }
         catch (...)
@@ -4772,14 +4772,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynStatus_get_InvalidArgument2(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"InvalidArgument2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"InvalidArgument2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::AllJoyn::AllJoynStatus::InvalidArgument2());
         }
         catch (...)
@@ -4791,14 +4791,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynStatus_get_InvalidArgument3(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"InvalidArgument3"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"InvalidArgument3"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::AllJoyn::AllJoynStatus::InvalidArgument3());
         }
         catch (...)
@@ -4810,14 +4810,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynStatus_get_InvalidArgument4(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"InvalidArgument4"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"InvalidArgument4"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::AllJoyn::AllJoynStatus::InvalidArgument4());
         }
         catch (...)
@@ -4829,14 +4829,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynStatus_get_InvalidArgument5(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"InvalidArgument5"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"InvalidArgument5"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::AllJoyn::AllJoynStatus::InvalidArgument5());
         }
         catch (...)
@@ -4848,14 +4848,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynStatus_get_InvalidArgument6(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"InvalidArgument6"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"InvalidArgument6"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::AllJoyn::AllJoynStatus::InvalidArgument6());
         }
         catch (...)
@@ -4867,14 +4867,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynStatus_get_InvalidArgument7(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"InvalidArgument7"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"InvalidArgument7"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::AllJoyn::AllJoynStatus::InvalidArgument7());
         }
         catch (...)
@@ -4886,14 +4886,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynStatus_get_InvalidArgument8(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"InvalidArgument8"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"InvalidArgument8"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::AllJoyn::AllJoynStatus::InvalidArgument8());
         }
         catch (...)
@@ -4905,14 +4905,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynStatus_get_Ok(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"Ok"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"Ok"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::AllJoyn::AllJoynStatus::Ok());
         }
         catch (...)
@@ -4924,14 +4924,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynStatus_get_OperationTimedOut(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"OperationTimedOut"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"OperationTimedOut"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::AllJoyn::AllJoynStatus::OperationTimedOut());
         }
         catch (...)
@@ -4943,14 +4943,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynStatus_get_OtherEndClosed(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"OtherEndClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"OtherEndClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::AllJoyn::AllJoynStatus::OtherEndClosed());
         }
         catch (...)
@@ -4962,14 +4962,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynStatus_get_SslConnectFailed(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"SslConnectFailed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"SslConnectFailed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::AllJoyn::AllJoynStatus::SslConnectFailed());
         }
         catch (...)
@@ -4981,14 +4981,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynStatus_get_SslIdentityVerificationFailed(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"SslIdentityVerificationFailed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynStatus", L"SslIdentityVerificationFailed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::AllJoyn::AllJoynStatus::SslIdentityVerificationFailed());
         }
         catch (...)
@@ -5109,14 +5109,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
     static PyObject* AllJoynWatcherStoppedEventArgs_get_Status(py::wrapper::Windows::Devices::AllJoyn::AllJoynWatcherStoppedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynWatcherStoppedEventArgs", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.AllJoyn.AllJoynWatcherStoppedEventArgs", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -5202,14 +5202,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.IAllJoynAcceptSessionJoiner", L"Accept", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.IAllJoynAcceptSessionJoiner", L"Accept", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Accept();
                 Py_RETURN_NONE;
             }
@@ -5302,14 +5302,14 @@ namespace py::cpp::Windows::Devices::AllJoyn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.IAllJoynProducer", L"SetBusObject", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.AllJoyn.IAllJoynProducer", L"SetBusObject", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::AllJoyn::AllJoynBusObject>(args, 0);
 
                 self->obj.SetBusObject(param0);

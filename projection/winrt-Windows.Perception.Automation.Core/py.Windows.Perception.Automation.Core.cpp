@@ -20,14 +20,14 @@ namespace py::cpp::Windows::Perception::Automation::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Automation.Core.CorePerceptionAutomation", L"SetActivationFactoryProvider", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Automation.Core.CorePerceptionAutomation", L"SetActivationFactoryProvider", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IGetActivationFactory>(args, 0);
 
                 winrt::Windows::Perception::Automation::Core::CorePerceptionAutomation::SetActivationFactoryProvider(param0);

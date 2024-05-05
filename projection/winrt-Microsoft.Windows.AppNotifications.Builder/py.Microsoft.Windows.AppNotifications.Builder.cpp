@@ -50,14 +50,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"AddArgument", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"AddArgument", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -82,14 +82,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"AddButton", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"AddButton", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton>(args, 0);
 
                 return py::convert(self->obj.AddButton(param0));
@@ -113,14 +113,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"AddComboBox", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"AddComboBox", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationComboBox>(args, 0);
 
                 return py::convert(self->obj.AddComboBox(param0));
@@ -144,14 +144,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"AddProgressBar", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"AddProgressBar", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar>(args, 0);
 
                 return py::convert(self->obj.AddProgressBar(param0));
@@ -175,14 +175,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"AddText", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"AddText", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.AddText(param0));
@@ -195,14 +195,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"AddText", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"AddText", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationTextProperties>(args, 1);
 
@@ -227,14 +227,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"AddTextBox", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"AddTextBox", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.AddTextBox(param0));
@@ -247,14 +247,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"AddTextBox", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"AddTextBox", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -280,14 +280,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"BuildNotification", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"BuildNotification", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.BuildNotification());
             }
             catch (...)
@@ -309,14 +309,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"IsUrgentScenarioSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"IsUrgentScenarioSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder::IsUrgentScenarioSupported());
             }
             catch (...)
@@ -338,14 +338,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"MuteAudio", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"MuteAudio", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.MuteAudio());
             }
             catch (...)
@@ -367,14 +367,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetAppLogoOverride", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetAppLogoOverride", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(self->obj.SetAppLogoOverride(param0));
@@ -387,14 +387,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetAppLogoOverride", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetAppLogoOverride", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationImageCrop>(args, 1);
 
@@ -408,14 +408,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetAppLogoOverride", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetAppLogoOverride", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationImageCrop>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -441,14 +441,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetAttributionText", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetAttributionText", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SetAttributionText(param0));
@@ -461,14 +461,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetAttributionText", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetAttributionText", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -493,14 +493,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetAudioEvent", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetAudioEvent", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationSoundEvent>(args, 0);
 
                 return py::convert(self->obj.SetAudioEvent(param0));
@@ -513,14 +513,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetAudioEvent", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetAudioEvent", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationSoundEvent>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationAudioLooping>(args, 1);
 
@@ -545,14 +545,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetAudioUri", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetAudioUri", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(self->obj.SetAudioUri(param0));
@@ -565,14 +565,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetAudioUri", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetAudioUri", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationAudioLooping>(args, 1);
 
@@ -597,14 +597,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetDuration", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetDuration", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationDuration>(args, 0);
 
                 return py::convert(self->obj.SetDuration(param0));
@@ -628,14 +628,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetGroup", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SetGroup(param0));
@@ -659,14 +659,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetHeroImage", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetHeroImage", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(self->obj.SetHeroImage(param0));
@@ -679,14 +679,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetHeroImage", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetHeroImage", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -711,14 +711,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetInlineImage", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetInlineImage", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(self->obj.SetInlineImage(param0));
@@ -731,14 +731,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetInlineImage", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetInlineImage", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationImageCrop>(args, 1);
 
@@ -752,14 +752,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetInlineImage", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetInlineImage", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationImageCrop>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -785,14 +785,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetScenario", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetScenario", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationScenario>(args, 0);
 
                 return py::convert(self->obj.SetScenario(param0));
@@ -816,14 +816,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetTag", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetTag", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SetTag(param0));
@@ -847,14 +847,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetTimeStamp", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder", L"SetTimeStamp", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
 
                 return py::convert(self->obj.SetTimeStamp(param0));
@@ -1029,14 +1029,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"AddArgument", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"AddArgument", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1061,14 +1061,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"IsButtonStyleSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"IsButtonStyleSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton::IsButtonStyleSupported());
             }
             catch (...)
@@ -1090,14 +1090,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"IsToolTipSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"IsToolTipSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton::IsToolTipSupported());
             }
             catch (...)
@@ -1119,14 +1119,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"SetButtonStyle", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"SetButtonStyle", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButtonStyle>(args, 0);
 
                 return py::convert(self->obj.SetButtonStyle(param0));
@@ -1150,14 +1150,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"SetContextMenuPlacement", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"SetContextMenuPlacement", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SetContextMenuPlacement());
             }
             catch (...)
@@ -1179,14 +1179,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"SetIcon", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"SetIcon", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(self->obj.SetIcon(param0));
@@ -1210,14 +1210,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"SetInputId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"SetInputId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SetInputId(param0));
@@ -1241,14 +1241,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"SetInvokeUri", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"SetInvokeUri", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(self->obj.SetInvokeUri(param0));
@@ -1261,14 +1261,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"SetInvokeUri", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"SetInvokeUri", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1293,14 +1293,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"SetToolTip", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"SetToolTip", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SetToolTip(param0));
@@ -1320,14 +1320,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationButton_get_ToolTip(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"ToolTip"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"ToolTip"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ToolTip());
         }
         catch (...)
@@ -1339,12 +1339,6 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationButton_put_ToolTip(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"ToolTip"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1353,6 +1347,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"ToolTip"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ToolTip(param0);
@@ -1367,14 +1367,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationButton_get_TargetAppId(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"TargetAppId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"TargetAppId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetAppId());
         }
         catch (...)
@@ -1386,12 +1386,6 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationButton_put_TargetAppId(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"TargetAppId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1400,6 +1394,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"TargetAppId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.TargetAppId(param0);
@@ -1414,14 +1414,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationButton_get_InvokeUri(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"InvokeUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"InvokeUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InvokeUri());
         }
         catch (...)
@@ -1433,12 +1433,6 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationButton_put_InvokeUri(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"InvokeUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1447,6 +1441,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"InvokeUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.InvokeUri(param0);
@@ -1461,14 +1461,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationButton_get_InputId(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"InputId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"InputId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InputId());
         }
         catch (...)
@@ -1480,12 +1480,6 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationButton_put_InputId(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"InputId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1494,6 +1488,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"InputId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.InputId(param0);
@@ -1508,14 +1508,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationButton_get_Icon(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"Icon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"Icon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Icon());
         }
         catch (...)
@@ -1527,12 +1527,6 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationButton_put_Icon(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"Icon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1541,6 +1535,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"Icon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.Icon(param0);
@@ -1555,14 +1555,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationButton_get_ContextMenuPlacement(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"ContextMenuPlacement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"ContextMenuPlacement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContextMenuPlacement());
         }
         catch (...)
@@ -1574,12 +1574,6 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationButton_put_ContextMenuPlacement(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"ContextMenuPlacement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1588,6 +1582,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"ContextMenuPlacement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ContextMenuPlacement(param0);
@@ -1602,14 +1602,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationButton_get_Content(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"Content"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"Content"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Content());
         }
         catch (...)
@@ -1621,12 +1621,6 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationButton_put_Content(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"Content"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1635,6 +1629,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"Content"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Content(param0);
@@ -1649,14 +1649,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationButton_get_ButtonStyle(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"ButtonStyle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"ButtonStyle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ButtonStyle());
         }
         catch (...)
@@ -1668,12 +1668,6 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationButton_put_ButtonStyle(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"ButtonStyle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1682,6 +1676,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"ButtonStyle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButtonStyle>(arg);
 
             self->obj.ButtonStyle(param0);
@@ -1696,14 +1696,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationButton_get_Arguments(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"Arguments"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"Arguments"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Arguments());
         }
         catch (...)
@@ -1715,12 +1715,6 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationButton_put_Arguments(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"Arguments"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1729,6 +1723,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButton", L"Arguments"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(arg);
 
             self->obj.Arguments(param0);
@@ -1883,14 +1883,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox", L"AddItem", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox", L"AddItem", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1915,14 +1915,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox", L"SetSelectedItem", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox", L"SetSelectedItem", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SetSelectedItem(param0));
@@ -1946,14 +1946,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox", L"SetTitle", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox", L"SetTitle", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SetTitle(param0));
@@ -1973,14 +1973,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationComboBox_get_Title(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationComboBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -1992,12 +1992,6 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationComboBox_put_Title(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationComboBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2006,6 +2000,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Title(param0);
@@ -2020,14 +2020,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationComboBox_get_SelectedItem(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationComboBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox", L"SelectedItem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox", L"SelectedItem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedItem());
         }
         catch (...)
@@ -2039,12 +2039,6 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationComboBox_put_SelectedItem(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationComboBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox", L"SelectedItem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2053,6 +2047,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox", L"SelectedItem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.SelectedItem(param0);
@@ -2067,14 +2067,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationComboBox_get_Items(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationComboBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox", L"Items"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox", L"Items"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Items());
         }
         catch (...)
@@ -2086,12 +2086,6 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationComboBox_put_Items(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationComboBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox", L"Items"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2100,6 +2094,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox", L"Items"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(arg);
 
             self->obj.Items(param0);
@@ -2215,14 +2215,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"BindStatus", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"BindStatus", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.BindStatus());
             }
             catch (...)
@@ -2244,14 +2244,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"BindTitle", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"BindTitle", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.BindTitle());
             }
             catch (...)
@@ -2273,14 +2273,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"BindValue", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"BindValue", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.BindValue());
             }
             catch (...)
@@ -2302,14 +2302,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"BindValueStringOverride", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"BindValueStringOverride", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.BindValueStringOverride());
             }
             catch (...)
@@ -2331,14 +2331,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"SetStatus", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"SetStatus", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SetStatus(param0));
@@ -2362,14 +2362,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"SetTitle", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"SetTitle", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SetTitle(param0));
@@ -2393,14 +2393,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"SetValue", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"SetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(self->obj.SetValue(param0));
@@ -2424,14 +2424,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"SetValueStringOverride", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"SetValueStringOverride", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SetValueStringOverride(param0));
@@ -2451,14 +2451,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationProgressBar_get_ValueStringOverride(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"ValueStringOverride"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"ValueStringOverride"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ValueStringOverride());
         }
         catch (...)
@@ -2470,12 +2470,6 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationProgressBar_put_ValueStringOverride(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"ValueStringOverride"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2484,6 +2478,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"ValueStringOverride"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ValueStringOverride(param0);
@@ -2498,14 +2498,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationProgressBar_get_Value(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -2517,12 +2517,6 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationProgressBar_put_Value(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2531,6 +2525,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Value(param0);
@@ -2545,14 +2545,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationProgressBar_get_Title(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -2564,12 +2564,6 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationProgressBar_put_Title(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2578,6 +2572,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Title(param0);
@@ -2592,14 +2592,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationProgressBar_get_Status(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -2611,12 +2611,6 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationProgressBar_put_Status(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2625,6 +2619,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Status(param0);
@@ -2746,14 +2746,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties", L"SetIncomingCallAlignment", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties", L"SetIncomingCallAlignment", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SetIncomingCallAlignment());
             }
             catch (...)
@@ -2775,14 +2775,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties", L"SetLanguage", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties", L"SetLanguage", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SetLanguage(param0));
@@ -2806,14 +2806,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties", L"SetMaxLines", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties", L"SetMaxLines", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.SetMaxLines(param0));
@@ -2833,14 +2833,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationTextProperties_get_MaxLines(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationTextProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties", L"MaxLines"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties", L"MaxLines"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxLines());
         }
         catch (...)
@@ -2852,12 +2852,6 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationTextProperties_put_MaxLines(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationTextProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties", L"MaxLines"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2866,6 +2860,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties", L"MaxLines"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.MaxLines(param0);
@@ -2880,14 +2880,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationTextProperties_get_Language(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationTextProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -2899,12 +2899,6 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationTextProperties_put_Language(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationTextProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2913,6 +2907,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Language(param0);
@@ -2927,14 +2927,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationTextProperties_get_IncomingCallAlignment(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationTextProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties", L"IncomingCallAlignment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties", L"IncomingCallAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IncomingCallAlignment());
         }
         catch (...)
@@ -2946,12 +2946,6 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationTextProperties_put_IncomingCallAlignment(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationTextProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties", L"IncomingCallAlignment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2960,6 +2954,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties", L"IncomingCallAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IncomingCallAlignment(param0);

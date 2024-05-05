@@ -49,14 +49,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* AnimationDescription_get_Animations(py::wrapper::Windows::UI::Core::AnimationMetrics::AnimationDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.AnimationDescription", L"Animations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.AnimationDescription", L"Animations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Animations());
         }
         catch (...)
@@ -68,14 +68,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* AnimationDescription_get_DelayLimit(py::wrapper::Windows::UI::Core::AnimationMetrics::AnimationDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.AnimationDescription", L"DelayLimit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.AnimationDescription", L"DelayLimit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DelayLimit());
         }
         catch (...)
@@ -87,14 +87,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* AnimationDescription_get_StaggerDelay(py::wrapper::Windows::UI::Core::AnimationMetrics::AnimationDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.AnimationDescription", L"StaggerDelay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.AnimationDescription", L"StaggerDelay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StaggerDelay());
         }
         catch (...)
@@ -106,14 +106,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* AnimationDescription_get_StaggerDelayFactor(py::wrapper::Windows::UI::Core::AnimationMetrics::AnimationDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.AnimationDescription", L"StaggerDelayFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.AnimationDescription", L"StaggerDelayFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StaggerDelayFactor());
         }
         catch (...)
@@ -125,14 +125,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* AnimationDescription_get_ZOrder(py::wrapper::Windows::UI::Core::AnimationMetrics::AnimationDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.AnimationDescription", L"ZOrder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.AnimationDescription", L"ZOrder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ZOrder());
         }
         catch (...)
@@ -218,14 +218,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* OpacityAnimation_get_FinalOpacity(py::wrapper::Windows::UI::Core::AnimationMetrics::OpacityAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.OpacityAnimation", L"FinalOpacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.OpacityAnimation", L"FinalOpacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FinalOpacity());
         }
         catch (...)
@@ -237,14 +237,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* OpacityAnimation_get_InitialOpacity(py::wrapper::Windows::UI::Core::AnimationMetrics::OpacityAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.OpacityAnimation", L"InitialOpacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.OpacityAnimation", L"InitialOpacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InitialOpacity());
         }
         catch (...)
@@ -256,14 +256,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* OpacityAnimation_get_Control1(py::wrapper::Windows::UI::Core::AnimationMetrics::OpacityAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.OpacityAnimation", L"Control1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.OpacityAnimation", L"Control1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Control1());
         }
         catch (...)
@@ -275,14 +275,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* OpacityAnimation_get_Control2(py::wrapper::Windows::UI::Core::AnimationMetrics::OpacityAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.OpacityAnimation", L"Control2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.OpacityAnimation", L"Control2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Control2());
         }
         catch (...)
@@ -294,14 +294,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* OpacityAnimation_get_Delay(py::wrapper::Windows::UI::Core::AnimationMetrics::OpacityAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.OpacityAnimation", L"Delay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.OpacityAnimation", L"Delay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Delay());
         }
         catch (...)
@@ -313,14 +313,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* OpacityAnimation_get_Duration(py::wrapper::Windows::UI::Core::AnimationMetrics::OpacityAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.OpacityAnimation", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.OpacityAnimation", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -332,14 +332,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* OpacityAnimation_get_Type(py::wrapper::Windows::UI::Core::AnimationMetrics::OpacityAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.OpacityAnimation", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.OpacityAnimation", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -427,14 +427,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* PropertyAnimation_get_Control1(py::wrapper::Windows::UI::Core::AnimationMetrics::PropertyAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.PropertyAnimation", L"Control1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.PropertyAnimation", L"Control1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Control1());
         }
         catch (...)
@@ -446,14 +446,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* PropertyAnimation_get_Control2(py::wrapper::Windows::UI::Core::AnimationMetrics::PropertyAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.PropertyAnimation", L"Control2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.PropertyAnimation", L"Control2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Control2());
         }
         catch (...)
@@ -465,14 +465,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* PropertyAnimation_get_Delay(py::wrapper::Windows::UI::Core::AnimationMetrics::PropertyAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.PropertyAnimation", L"Delay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.PropertyAnimation", L"Delay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Delay());
         }
         catch (...)
@@ -484,14 +484,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* PropertyAnimation_get_Duration(py::wrapper::Windows::UI::Core::AnimationMetrics::PropertyAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.PropertyAnimation", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.PropertyAnimation", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -503,14 +503,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* PropertyAnimation_get_Type(py::wrapper::Windows::UI::Core::AnimationMetrics::PropertyAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.PropertyAnimation", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.PropertyAnimation", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -596,14 +596,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* ScaleAnimation_get_Control1(py::wrapper::Windows::UI::Core::AnimationMetrics::ScaleAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"Control1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"Control1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Control1());
         }
         catch (...)
@@ -615,14 +615,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* ScaleAnimation_get_Control2(py::wrapper::Windows::UI::Core::AnimationMetrics::ScaleAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"Control2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"Control2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Control2());
         }
         catch (...)
@@ -634,14 +634,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* ScaleAnimation_get_Delay(py::wrapper::Windows::UI::Core::AnimationMetrics::ScaleAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"Delay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"Delay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Delay());
         }
         catch (...)
@@ -653,14 +653,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* ScaleAnimation_get_Duration(py::wrapper::Windows::UI::Core::AnimationMetrics::ScaleAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -672,14 +672,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* ScaleAnimation_get_Type(py::wrapper::Windows::UI::Core::AnimationMetrics::ScaleAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -691,14 +691,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* ScaleAnimation_get_FinalScaleX(py::wrapper::Windows::UI::Core::AnimationMetrics::ScaleAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"FinalScaleX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"FinalScaleX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FinalScaleX());
         }
         catch (...)
@@ -710,14 +710,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* ScaleAnimation_get_FinalScaleY(py::wrapper::Windows::UI::Core::AnimationMetrics::ScaleAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"FinalScaleY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"FinalScaleY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FinalScaleY());
         }
         catch (...)
@@ -729,14 +729,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* ScaleAnimation_get_InitialScaleX(py::wrapper::Windows::UI::Core::AnimationMetrics::ScaleAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"InitialScaleX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"InitialScaleX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InitialScaleX());
         }
         catch (...)
@@ -748,14 +748,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* ScaleAnimation_get_InitialScaleY(py::wrapper::Windows::UI::Core::AnimationMetrics::ScaleAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"InitialScaleY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"InitialScaleY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InitialScaleY());
         }
         catch (...)
@@ -767,14 +767,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* ScaleAnimation_get_NormalizedOrigin(py::wrapper::Windows::UI::Core::AnimationMetrics::ScaleAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"NormalizedOrigin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"NormalizedOrigin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NormalizedOrigin());
         }
         catch (...)
@@ -865,14 +865,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* TranslationAnimation_get_Control1(py::wrapper::Windows::UI::Core::AnimationMetrics::TranslationAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.TranslationAnimation", L"Control1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.TranslationAnimation", L"Control1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Control1());
         }
         catch (...)
@@ -884,14 +884,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* TranslationAnimation_get_Control2(py::wrapper::Windows::UI::Core::AnimationMetrics::TranslationAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.TranslationAnimation", L"Control2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.TranslationAnimation", L"Control2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Control2());
         }
         catch (...)
@@ -903,14 +903,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* TranslationAnimation_get_Delay(py::wrapper::Windows::UI::Core::AnimationMetrics::TranslationAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.TranslationAnimation", L"Delay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.TranslationAnimation", L"Delay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Delay());
         }
         catch (...)
@@ -922,14 +922,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* TranslationAnimation_get_Duration(py::wrapper::Windows::UI::Core::AnimationMetrics::TranslationAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.TranslationAnimation", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.TranslationAnimation", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -941,14 +941,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* TranslationAnimation_get_Type(py::wrapper::Windows::UI::Core::AnimationMetrics::TranslationAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.TranslationAnimation", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.TranslationAnimation", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -1034,14 +1034,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* IPropertyAnimation_get_Control1(py::wrapper::Windows::UI::Core::AnimationMetrics::IPropertyAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.IPropertyAnimation", L"Control1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.IPropertyAnimation", L"Control1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Control1());
         }
         catch (...)
@@ -1053,14 +1053,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* IPropertyAnimation_get_Control2(py::wrapper::Windows::UI::Core::AnimationMetrics::IPropertyAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.IPropertyAnimation", L"Control2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.IPropertyAnimation", L"Control2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Control2());
         }
         catch (...)
@@ -1072,14 +1072,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* IPropertyAnimation_get_Delay(py::wrapper::Windows::UI::Core::AnimationMetrics::IPropertyAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.IPropertyAnimation", L"Delay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.IPropertyAnimation", L"Delay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Delay());
         }
         catch (...)
@@ -1091,14 +1091,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* IPropertyAnimation_get_Duration(py::wrapper::Windows::UI::Core::AnimationMetrics::IPropertyAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.IPropertyAnimation", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.IPropertyAnimation", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -1110,14 +1110,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     static PyObject* IPropertyAnimation_get_Type(py::wrapper::Windows::UI::Core::AnimationMetrics::IPropertyAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.IPropertyAnimation", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.IPropertyAnimation", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)

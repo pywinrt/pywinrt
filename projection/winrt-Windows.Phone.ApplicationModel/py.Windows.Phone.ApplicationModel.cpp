@@ -16,14 +16,14 @@ namespace py::cpp::Windows::Phone::ApplicationModel
 
     static PyObject* ApplicationProfile_get_Modes(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.ApplicationModel.ApplicationProfile", L"Modes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.ApplicationModel.ApplicationProfile", L"Modes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::ApplicationModel::ApplicationProfile::Modes());
         }
         catch (...)

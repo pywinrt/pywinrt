@@ -28,14 +28,14 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Diagnostics.CompositionDebugHeatMaps", L"Hide", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Diagnostics.CompositionDebugHeatMaps", L"Hide", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
 
                 self->obj.Hide(param0);
@@ -60,14 +60,14 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Diagnostics.CompositionDebugHeatMaps", L"ShowMemoryUsage", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Diagnostics.CompositionDebugHeatMaps", L"ShowMemoryUsage", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
 
                 self->obj.ShowMemoryUsage(param0);
@@ -92,14 +92,14 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Diagnostics.CompositionDebugHeatMaps", L"ShowOverdraw", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Diagnostics.CompositionDebugHeatMaps", L"ShowOverdraw", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Diagnostics::CompositionDebugOverdrawContentKinds>(args, 1);
 
@@ -125,14 +125,14 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Diagnostics.CompositionDebugHeatMaps", L"ShowRedraw", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Diagnostics.CompositionDebugHeatMaps", L"ShowRedraw", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
 
                 self->obj.ShowRedraw(param0);
@@ -230,14 +230,14 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Diagnostics.CompositionDebugSettings", L"TryGetSettings", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Diagnostics.CompositionDebugSettings", L"TryGetSettings", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Composition::Diagnostics::CompositionDebugSettings::TryGetSettings(param0));
@@ -257,14 +257,14 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
 
     static PyObject* CompositionDebugSettings_get_HeatMaps(py::wrapper::Microsoft::UI::Composition::Diagnostics::CompositionDebugSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Diagnostics.CompositionDebugSettings", L"HeatMaps"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Diagnostics.CompositionDebugSettings", L"HeatMaps"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HeatMaps());
         }
         catch (...)

@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"AddDeviceAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"AddDeviceAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -61,14 +61,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"ApproveSessionAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"ApproveSessionAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionAuthenticationStatus>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo>(args, 1);
 
@@ -82,14 +82,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"ApproveSessionAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"ApproveSessionAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionAuthenticationStatus>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -116,14 +116,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"DenySessionAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"DenySessionAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo>(args, 0);
 
                 return py::convert(self->obj.DenySessionAsync(param0));
@@ -136,14 +136,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"DenySessionAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"DenySessionAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationType>(args, 2);
@@ -169,14 +169,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"GetOneTimePassCodeAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"GetOneTimePassCodeAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -201,14 +201,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"GetSessionsAndUnregisteredAccountsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"GetSessionsAndUnregisteredAccountsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(self->obj.GetSessionsAndUnregisteredAccountsAsync(param0));
@@ -232,14 +232,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"GetSessionsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"GetSessionsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(self->obj.GetSessionsAsync(param0));
@@ -263,14 +263,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"RemoveDeviceAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"RemoveDeviceAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.RemoveDeviceAsync(param0));
@@ -294,14 +294,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"UpdateWnsChannelAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"UpdateWnsChannelAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -322,14 +322,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorAuthenticationManager_get_Current(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"Current"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"Current"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager::Current());
         }
         catch (...)
@@ -444,14 +444,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorGetSessionsResult_get_ServiceResponse(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult", L"ServiceResponse"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult", L"ServiceResponse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceResponse());
         }
         catch (...)
@@ -463,14 +463,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorGetSessionsResult_get_Sessions(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult", L"Sessions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult", L"Sessions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Sessions());
         }
         catch (...)
@@ -553,14 +553,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorOneTimeCodedInfo_get_Code(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo", L"Code"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo", L"Code"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Code());
         }
         catch (...)
@@ -572,14 +572,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorOneTimeCodedInfo_get_ServiceResponse(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo", L"ServiceResponse"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo", L"ServiceResponse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceResponse());
         }
         catch (...)
@@ -591,14 +591,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorOneTimeCodedInfo_get_TimeInterval(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo", L"TimeInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo", L"TimeInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimeInterval());
         }
         catch (...)
@@ -610,14 +610,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorOneTimeCodedInfo_get_TimeToLive(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo", L"TimeToLive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo", L"TimeToLive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimeToLive());
         }
         catch (...)
@@ -702,14 +702,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorSessionInfo_get_ApprovalStatus(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo", L"ApprovalStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo", L"ApprovalStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ApprovalStatus());
         }
         catch (...)
@@ -721,14 +721,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorSessionInfo_get_AuthenticationType(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo", L"AuthenticationType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo", L"AuthenticationType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AuthenticationType());
         }
         catch (...)
@@ -740,14 +740,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorSessionInfo_get_DisplaySessionId(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo", L"DisplaySessionId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo", L"DisplaySessionId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplaySessionId());
         }
         catch (...)
@@ -759,14 +759,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorSessionInfo_get_ExpirationTime(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo", L"ExpirationTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo", L"ExpirationTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExpirationTime());
         }
         catch (...)
@@ -778,14 +778,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorSessionInfo_get_RequestTime(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo", L"RequestTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo", L"RequestTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestTime());
         }
         catch (...)
@@ -797,14 +797,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorSessionInfo_get_SessionId(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo", L"SessionId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo", L"SessionId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SessionId());
         }
         catch (...)
@@ -816,14 +816,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorSessionInfo_get_UserAccountId(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo", L"UserAccountId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo", L"UserAccountId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserAccountId());
         }
         catch (...)
@@ -911,14 +911,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_get_ServiceResponse(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo", L"ServiceResponse"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo", L"ServiceResponse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceResponse());
         }
         catch (...)
@@ -930,14 +930,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_get_Sessions(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo", L"Sessions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo", L"Sessions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Sessions());
         }
         catch (...)
@@ -949,14 +949,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_get_UnregisteredAccounts(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo", L"UnregisteredAccounts"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo", L"UnregisteredAccounts"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UnregisteredAccounts());
         }
         catch (...)

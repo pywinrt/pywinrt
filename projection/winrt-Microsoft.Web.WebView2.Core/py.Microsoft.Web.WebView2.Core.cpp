@@ -28,14 +28,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"AddHostObjectToScript", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"AddHostObjectToScript", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -61,14 +61,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"AddScriptToExecuteOnDocumentCreatedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"AddScriptToExecuteOnDocumentCreatedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.AddScriptToExecuteOnDocumentCreatedAsync(param0));
@@ -92,14 +92,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"AddWebResourceRequestedFilter", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"AddWebResourceRequestedFilter", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceContext>(args, 1);
 
@@ -125,14 +125,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"CallDevToolsProtocolMethodAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"CallDevToolsProtocolMethodAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -157,14 +157,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"CallDevToolsProtocolMethodForSessionAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"CallDevToolsProtocolMethodForSessionAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -190,14 +190,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"CapturePreviewAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"CapturePreviewAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CapturePreviewImageFormat>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
@@ -222,14 +222,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ClearServerCertificateErrorActionsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ClearServerCertificateErrorActionsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ClearServerCertificateErrorActionsAsync());
             }
             catch (...)
@@ -251,14 +251,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ClearVirtualHostNameToFolderMapping", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ClearVirtualHostNameToFolderMapping", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ClearVirtualHostNameToFolderMapping(param0);
@@ -283,14 +283,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"CloseDefaultDownloadDialog", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"CloseDefaultDownloadDialog", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.CloseDefaultDownloadDialog();
                 Py_RETURN_NONE;
             }
@@ -313,14 +313,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ExecuteScriptAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ExecuteScriptAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ExecuteScriptAsync(param0));
@@ -344,14 +344,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"GetDevToolsProtocolEventReceiver", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"GetDevToolsProtocolEventReceiver", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetDevToolsProtocolEventReceiver(param0));
@@ -375,14 +375,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"GetFaviconAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"GetFaviconAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FaviconImageFormat>(args, 0);
 
                 return py::convert(self->obj.GetFaviconAsync(param0));
@@ -406,14 +406,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"GoBack", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"GoBack", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.GoBack();
                 Py_RETURN_NONE;
             }
@@ -436,14 +436,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"GoForward", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"GoForward", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.GoForward();
                 Py_RETURN_NONE;
             }
@@ -466,14 +466,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"Navigate", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"Navigate", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Navigate(param0);
@@ -498,14 +498,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"NavigateToString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"NavigateToString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.NavigateToString(param0);
@@ -530,14 +530,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"NavigateWithWebResourceRequest", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"NavigateWithWebResourceRequest", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequest>(args, 0);
 
                 self->obj.NavigateWithWebResourceRequest(param0);
@@ -562,14 +562,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"OpenDefaultDownloadDialog", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"OpenDefaultDownloadDialog", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.OpenDefaultDownloadDialog();
                 Py_RETURN_NONE;
             }
@@ -592,14 +592,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"OpenDevToolsWindow", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"OpenDevToolsWindow", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.OpenDevToolsWindow();
                 Py_RETURN_NONE;
             }
@@ -622,14 +622,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"OpenTaskManagerWindow", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"OpenTaskManagerWindow", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.OpenTaskManagerWindow();
                 Py_RETURN_NONE;
             }
@@ -652,14 +652,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"PostSharedBufferToScript", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"PostSharedBufferToScript", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SharedBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SharedBufferAccess>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -686,14 +686,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"PostWebMessageAsJson", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"PostWebMessageAsJson", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.PostWebMessageAsJson(param0);
@@ -718,14 +718,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"PostWebMessageAsString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"PostWebMessageAsString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.PostWebMessageAsString(param0);
@@ -750,14 +750,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"PrintAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"PrintAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings>(args, 0);
 
                 return py::convert(self->obj.PrintAsync(param0));
@@ -781,14 +781,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"PrintToPdfAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"PrintToPdfAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings>(args, 1);
 
@@ -813,14 +813,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"PrintToPdfStreamAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"PrintToPdfStreamAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings>(args, 0);
 
                 return py::convert(self->obj.PrintToPdfStreamAsync(param0));
@@ -844,14 +844,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"Reload", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"Reload", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Reload();
                 Py_RETURN_NONE;
             }
@@ -874,14 +874,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"RemoveHostObjectFromScript", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"RemoveHostObjectFromScript", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.RemoveHostObjectFromScript(param0);
@@ -906,14 +906,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"RemoveScriptToExecuteOnDocumentCreated", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"RemoveScriptToExecuteOnDocumentCreated", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.RemoveScriptToExecuteOnDocumentCreated(param0);
@@ -938,14 +938,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"RemoveWebResourceRequestedFilter", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"RemoveWebResourceRequestedFilter", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceContext>(args, 1);
 
@@ -971,14 +971,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"Resume", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"Resume", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Resume();
                 Py_RETURN_NONE;
             }
@@ -1001,14 +1001,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"SetVirtualHostNameToFolderMapping", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"SetVirtualHostNameToFolderMapping", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2HostResourceAccessKind>(args, 2);
@@ -1035,14 +1035,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ShowPrintUI", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ShowPrintUI", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PrintDialogKind>(args, 0);
 
                 self->obj.ShowPrintUI(param0);
@@ -1067,14 +1067,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -1097,14 +1097,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"TrySuspendAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"TrySuspendAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TrySuspendAsync());
             }
             catch (...)
@@ -1122,14 +1122,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_get_BrowserProcessId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"BrowserProcessId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"BrowserProcessId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BrowserProcessId());
         }
         catch (...)
@@ -1141,14 +1141,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_get_CanGoBack(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"CanGoBack"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"CanGoBack"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanGoBack());
         }
         catch (...)
@@ -1160,14 +1160,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_get_CanGoForward(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"CanGoForward"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"CanGoForward"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanGoForward());
         }
         catch (...)
@@ -1179,14 +1179,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_get_ContainsFullScreenElement(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ContainsFullScreenElement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ContainsFullScreenElement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContainsFullScreenElement());
         }
         catch (...)
@@ -1198,14 +1198,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_get_DocumentTitle(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"DocumentTitle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"DocumentTitle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentTitle());
         }
         catch (...)
@@ -1217,14 +1217,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_get_Settings(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"Settings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"Settings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Settings());
         }
         catch (...)
@@ -1236,14 +1236,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_get_Source(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -1255,14 +1255,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_get_StatusBarText(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"StatusBarText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"StatusBarText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StatusBarText());
         }
         catch (...)
@@ -1274,14 +1274,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_get_Profile(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"Profile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"Profile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Profile());
         }
         catch (...)
@@ -1293,14 +1293,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_get_FaviconUri(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"FaviconUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"FaviconUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FaviconUri());
         }
         catch (...)
@@ -1312,14 +1312,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_get_MemoryUsageTargetLevel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"MemoryUsageTargetLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"MemoryUsageTargetLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MemoryUsageTargetLevel());
         }
         catch (...)
@@ -1331,12 +1331,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2_put_MemoryUsageTargetLevel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"MemoryUsageTargetLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1345,6 +1339,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"MemoryUsageTargetLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2MemoryUsageTargetLevel>(arg);
 
             self->obj.MemoryUsageTargetLevel(param0);
@@ -1359,14 +1359,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_get_CookieManager(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"CookieManager"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"CookieManager"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CookieManager());
         }
         catch (...)
@@ -1378,14 +1378,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_get_Environment(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"Environment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"Environment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Environment());
         }
         catch (...)
@@ -1397,14 +1397,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_get_FrameId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"FrameId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"FrameId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameId());
         }
         catch (...)
@@ -1416,14 +1416,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_get_IsSuspended(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"IsSuspended"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"IsSuspended"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSuspended());
         }
         catch (...)
@@ -1435,14 +1435,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_get_IsMuted(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"IsMuted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"IsMuted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsMuted());
         }
         catch (...)
@@ -1454,12 +1454,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2_put_IsMuted(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"IsMuted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1468,6 +1462,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"IsMuted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsMuted(param0);
@@ -1482,14 +1482,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_get_IsDocumentPlayingAudio(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"IsDocumentPlayingAudio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"IsDocumentPlayingAudio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDocumentPlayingAudio());
         }
         catch (...)
@@ -1501,14 +1501,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_get_DefaultDownloadDialogMargin(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"DefaultDownloadDialogMargin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"DefaultDownloadDialogMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultDownloadDialogMargin());
         }
         catch (...)
@@ -1520,12 +1520,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2_put_DefaultDownloadDialogMargin(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"DefaultDownloadDialogMargin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1534,6 +1528,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"DefaultDownloadDialogMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             self->obj.DefaultDownloadDialogMargin(param0);
@@ -1548,14 +1548,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_get_DefaultDownloadDialogCornerAlignment(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"DefaultDownloadDialogCornerAlignment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"DefaultDownloadDialogCornerAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultDownloadDialogCornerAlignment());
         }
         catch (...)
@@ -1567,12 +1567,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2_put_DefaultDownloadDialogCornerAlignment(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"DefaultDownloadDialogCornerAlignment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1581,6 +1575,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"DefaultDownloadDialogCornerAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2DefaultDownloadDialogCornerAlignment>(arg);
 
             self->obj.DefaultDownloadDialogCornerAlignment(param0);
@@ -1595,14 +1595,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_get_IsDefaultDownloadDialogOpen(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"IsDefaultDownloadDialogOpen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"IsDefaultDownloadDialogOpen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDefaultDownloadDialogOpen());
         }
         catch (...)
@@ -1614,14 +1614,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_BasicAuthenticationRequested(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"BasicAuthenticationRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"BasicAuthenticationRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.BasicAuthenticationRequested(param0));
@@ -1635,14 +1635,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_BasicAuthenticationRequested(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"BasicAuthenticationRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"BasicAuthenticationRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.BasicAuthenticationRequested(param0);
@@ -1657,14 +1657,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_ContextMenuRequested(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ContextMenuRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ContextMenuRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.ContextMenuRequested(param0));
@@ -1678,14 +1678,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_ContextMenuRequested(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ContextMenuRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ContextMenuRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ContextMenuRequested(param0);
@@ -1700,14 +1700,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_StatusBarTextChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"StatusBarTextChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"StatusBarTextChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.StatusBarTextChanged(param0));
@@ -1721,14 +1721,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_StatusBarTextChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"StatusBarTextChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"StatusBarTextChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StatusBarTextChanged(param0);
@@ -1743,14 +1743,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_ServerCertificateErrorDetected(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ServerCertificateErrorDetected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ServerCertificateErrorDetected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ServerCertificateErrorDetectedEventArgs>>(arg);
 
             return py::convert(self->obj.ServerCertificateErrorDetected(param0));
@@ -1764,14 +1764,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_ServerCertificateErrorDetected(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ServerCertificateErrorDetected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ServerCertificateErrorDetected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ServerCertificateErrorDetected(param0);
@@ -1786,14 +1786,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_FaviconChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"FaviconChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"FaviconChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.FaviconChanged(param0));
@@ -1807,14 +1807,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_FaviconChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"FaviconChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"FaviconChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FaviconChanged(param0);
@@ -1829,14 +1829,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_LaunchingExternalUriScheme(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"LaunchingExternalUriScheme"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"LaunchingExternalUriScheme"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2LaunchingExternalUriSchemeEventArgs>>(arg);
 
             return py::convert(self->obj.LaunchingExternalUriScheme(param0));
@@ -1850,14 +1850,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_LaunchingExternalUriScheme(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"LaunchingExternalUriScheme"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"LaunchingExternalUriScheme"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.LaunchingExternalUriScheme(param0);
@@ -1872,14 +1872,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_DOMContentLoaded(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"DOMContentLoaded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"DOMContentLoaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2DOMContentLoadedEventArgs>>(arg);
 
             return py::convert(self->obj.DOMContentLoaded(param0));
@@ -1893,14 +1893,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_DOMContentLoaded(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"DOMContentLoaded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"DOMContentLoaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DOMContentLoaded(param0);
@@ -1915,14 +1915,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_WebResourceResponseReceived(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"WebResourceResponseReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"WebResourceResponseReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponseReceivedEventArgs>>(arg);
 
             return py::convert(self->obj.WebResourceResponseReceived(param0));
@@ -1936,14 +1936,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_WebResourceResponseReceived(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"WebResourceResponseReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"WebResourceResponseReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.WebResourceResponseReceived(param0);
@@ -1958,14 +1958,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_DownloadStarting(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"DownloadStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"DownloadStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2DownloadStartingEventArgs>>(arg);
 
             return py::convert(self->obj.DownloadStarting(param0));
@@ -1979,14 +1979,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_DownloadStarting(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"DownloadStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"DownloadStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DownloadStarting(param0);
@@ -2001,14 +2001,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_FrameCreated(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"FrameCreated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"FrameCreated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2FrameCreatedEventArgs>>(arg);
 
             return py::convert(self->obj.FrameCreated(param0));
@@ -2022,14 +2022,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_FrameCreated(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"FrameCreated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"FrameCreated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FrameCreated(param0);
@@ -2044,14 +2044,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_ClientCertificateRequested(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ClientCertificateRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ClientCertificateRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificateRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.ClientCertificateRequested(param0));
@@ -2065,14 +2065,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_ClientCertificateRequested(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ClientCertificateRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ClientCertificateRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ClientCertificateRequested(param0);
@@ -2087,14 +2087,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_IsDocumentPlayingAudioChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"IsDocumentPlayingAudioChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"IsDocumentPlayingAudioChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.IsDocumentPlayingAudioChanged(param0));
@@ -2108,14 +2108,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_IsDocumentPlayingAudioChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"IsDocumentPlayingAudioChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"IsDocumentPlayingAudioChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.IsDocumentPlayingAudioChanged(param0);
@@ -2130,14 +2130,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_IsMutedChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"IsMutedChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"IsMutedChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.IsMutedChanged(param0));
@@ -2151,14 +2151,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_IsMutedChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"IsMutedChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"IsMutedChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.IsMutedChanged(param0);
@@ -2173,14 +2173,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_IsDefaultDownloadDialogOpenChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"IsDefaultDownloadDialogOpenChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"IsDefaultDownloadDialogOpenChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.IsDefaultDownloadDialogOpenChanged(param0));
@@ -2194,14 +2194,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_IsDefaultDownloadDialogOpenChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"IsDefaultDownloadDialogOpenChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"IsDefaultDownloadDialogOpenChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.IsDefaultDownloadDialogOpenChanged(param0);
@@ -2216,14 +2216,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_ContainsFullScreenElementChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ContainsFullScreenElementChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ContainsFullScreenElementChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ContainsFullScreenElementChanged(param0));
@@ -2237,14 +2237,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_ContainsFullScreenElementChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ContainsFullScreenElementChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ContainsFullScreenElementChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ContainsFullScreenElementChanged(param0);
@@ -2259,14 +2259,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_ContentLoading(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ContentLoading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ContentLoading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ContentLoadingEventArgs>>(arg);
 
             return py::convert(self->obj.ContentLoading(param0));
@@ -2280,14 +2280,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_ContentLoading(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ContentLoading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ContentLoading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ContentLoading(param0);
@@ -2302,14 +2302,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_DocumentTitleChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"DocumentTitleChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"DocumentTitleChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.DocumentTitleChanged(param0));
@@ -2323,14 +2323,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_DocumentTitleChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"DocumentTitleChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"DocumentTitleChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DocumentTitleChanged(param0);
@@ -2345,14 +2345,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_FrameNavigationCompleted(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"FrameNavigationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"FrameNavigationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2NavigationCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.FrameNavigationCompleted(param0));
@@ -2366,14 +2366,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_FrameNavigationCompleted(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"FrameNavigationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"FrameNavigationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FrameNavigationCompleted(param0);
@@ -2388,14 +2388,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_FrameNavigationStarting(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"FrameNavigationStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"FrameNavigationStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs>>(arg);
 
             return py::convert(self->obj.FrameNavigationStarting(param0));
@@ -2409,14 +2409,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_FrameNavigationStarting(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"FrameNavigationStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"FrameNavigationStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FrameNavigationStarting(param0);
@@ -2431,14 +2431,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_HistoryChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"HistoryChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"HistoryChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.HistoryChanged(param0));
@@ -2452,14 +2452,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_HistoryChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"HistoryChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"HistoryChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.HistoryChanged(param0);
@@ -2474,14 +2474,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_NavigationCompleted(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"NavigationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"NavigationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2NavigationCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.NavigationCompleted(param0));
@@ -2495,14 +2495,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_NavigationCompleted(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"NavigationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"NavigationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.NavigationCompleted(param0);
@@ -2517,14 +2517,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_NavigationStarting(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"NavigationStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"NavigationStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs>>(arg);
 
             return py::convert(self->obj.NavigationStarting(param0));
@@ -2538,14 +2538,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_NavigationStarting(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"NavigationStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"NavigationStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.NavigationStarting(param0);
@@ -2560,14 +2560,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_NewWindowRequested(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"NewWindowRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"NewWindowRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2NewWindowRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.NewWindowRequested(param0));
@@ -2581,14 +2581,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_NewWindowRequested(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"NewWindowRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"NewWindowRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.NewWindowRequested(param0);
@@ -2603,14 +2603,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_PermissionRequested(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"PermissionRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"PermissionRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2PermissionRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.PermissionRequested(param0));
@@ -2624,14 +2624,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_PermissionRequested(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"PermissionRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"PermissionRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PermissionRequested(param0);
@@ -2646,14 +2646,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_ProcessFailed(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ProcessFailed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ProcessFailed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessFailedEventArgs>>(arg);
 
             return py::convert(self->obj.ProcessFailed(param0));
@@ -2667,14 +2667,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_ProcessFailed(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ProcessFailed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ProcessFailed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ProcessFailed(param0);
@@ -2689,14 +2689,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_ScriptDialogOpening(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ScriptDialogOpening"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ScriptDialogOpening"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScriptDialogOpeningEventArgs>>(arg);
 
             return py::convert(self->obj.ScriptDialogOpening(param0));
@@ -2710,14 +2710,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_ScriptDialogOpening(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ScriptDialogOpening"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"ScriptDialogOpening"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ScriptDialogOpening(param0);
@@ -2732,14 +2732,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_SourceChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"SourceChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"SourceChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2SourceChangedEventArgs>>(arg);
 
             return py::convert(self->obj.SourceChanged(param0));
@@ -2753,14 +2753,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_SourceChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"SourceChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"SourceChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SourceChanged(param0);
@@ -2775,14 +2775,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_WebMessageReceived(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"WebMessageReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"WebMessageReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebMessageReceivedEventArgs>>(arg);
 
             return py::convert(self->obj.WebMessageReceived(param0));
@@ -2796,14 +2796,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_WebMessageReceived(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"WebMessageReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"WebMessageReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.WebMessageReceived(param0);
@@ -2818,14 +2818,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_WebResourceRequested(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"WebResourceRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"WebResourceRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.WebResourceRequested(param0));
@@ -2839,14 +2839,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_WebResourceRequested(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"WebResourceRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"WebResourceRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.WebResourceRequested(param0);
@@ -2861,14 +2861,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_add_WindowCloseRequested(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"WindowCloseRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"WindowCloseRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.WindowCloseRequested(param0));
@@ -2882,14 +2882,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_remove_WindowCloseRequested(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"WindowCloseRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"WindowCloseRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.WindowCloseRequested(param0);
@@ -3088,14 +3088,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2AcceleratorKeyPressedEventArgs_get_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2AcceleratorKeyPressedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -3107,12 +3107,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2AcceleratorKeyPressedEventArgs_put_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2AcceleratorKeyPressedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3121,6 +3115,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -3135,14 +3135,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2AcceleratorKeyPressedEventArgs_get_KeyEventKind(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2AcceleratorKeyPressedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs", L"KeyEventKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs", L"KeyEventKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyEventKind());
         }
         catch (...)
@@ -3154,14 +3154,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2AcceleratorKeyPressedEventArgs_get_KeyEventLParam(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2AcceleratorKeyPressedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs", L"KeyEventLParam"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs", L"KeyEventLParam"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyEventLParam());
         }
         catch (...)
@@ -3173,14 +3173,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2AcceleratorKeyPressedEventArgs_get_PhysicalKeyStatus(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2AcceleratorKeyPressedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs", L"PhysicalKeyStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs", L"PhysicalKeyStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhysicalKeyStatus());
         }
         catch (...)
@@ -3192,14 +3192,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2AcceleratorKeyPressedEventArgs_get_VirtualKey(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2AcceleratorKeyPressedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs", L"VirtualKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs", L"VirtualKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VirtualKey());
         }
         catch (...)
@@ -3211,14 +3211,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2AcceleratorKeyPressedEventArgs_get_IsBrowserAcceleratorKeyEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2AcceleratorKeyPressedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs", L"IsBrowserAcceleratorKeyEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs", L"IsBrowserAcceleratorKeyEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsBrowserAcceleratorKeyEnabled());
         }
         catch (...)
@@ -3230,12 +3230,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2AcceleratorKeyPressedEventArgs_put_IsBrowserAcceleratorKeyEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2AcceleratorKeyPressedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs", L"IsBrowserAcceleratorKeyEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3244,6 +3238,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs", L"IsBrowserAcceleratorKeyEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsBrowserAcceleratorKeyEnabled(param0);
@@ -3337,14 +3337,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationRequestedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationRequestedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -3362,14 +3362,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2BasicAuthenticationRequestedEventArgs_get_Cancel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationRequestedEventArgs", L"Cancel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationRequestedEventArgs", L"Cancel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Cancel());
         }
         catch (...)
@@ -3381,12 +3381,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2BasicAuthenticationRequestedEventArgs_put_Cancel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationRequestedEventArgs", L"Cancel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3395,6 +3389,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationRequestedEventArgs", L"Cancel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Cancel(param0);
@@ -3409,14 +3409,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2BasicAuthenticationRequestedEventArgs_get_Challenge(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationRequestedEventArgs", L"Challenge"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationRequestedEventArgs", L"Challenge"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Challenge());
         }
         catch (...)
@@ -3428,14 +3428,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2BasicAuthenticationRequestedEventArgs_get_Response(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationRequestedEventArgs", L"Response"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationRequestedEventArgs", L"Response"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Response());
         }
         catch (...)
@@ -3447,14 +3447,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2BasicAuthenticationRequestedEventArgs_get_Uri(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationRequestedEventArgs", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationRequestedEventArgs", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -3540,14 +3540,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2BasicAuthenticationResponse_get_UserName(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationResponse* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationResponse", L"UserName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationResponse", L"UserName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserName());
         }
         catch (...)
@@ -3559,12 +3559,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2BasicAuthenticationResponse_put_UserName(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationResponse* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationResponse", L"UserName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3573,6 +3567,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationResponse", L"UserName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.UserName(param0);
@@ -3587,14 +3587,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2BasicAuthenticationResponse_get_Password(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationResponse* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationResponse", L"Password"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationResponse", L"Password"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Password());
         }
         catch (...)
@@ -3606,12 +3606,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2BasicAuthenticationResponse_put_Password(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationResponse* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationResponse", L"Password"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3620,6 +3614,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationResponse", L"Password"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Password(param0);
@@ -3709,14 +3709,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension", L"EnableAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension", L"EnableAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(self->obj.EnableAsync(param0));
@@ -3740,14 +3740,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension", L"RemoveAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension", L"RemoveAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.RemoveAsync());
             }
             catch (...)
@@ -3765,14 +3765,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2BrowserExtension_get_Id(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BrowserExtension* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -3784,14 +3784,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2BrowserExtension_get_IsEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BrowserExtension* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension", L"IsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsEnabled());
         }
         catch (...)
@@ -3803,14 +3803,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2BrowserExtension_get_Name(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BrowserExtension* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -3896,14 +3896,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2BrowserProcessExitedEventArgs_get_BrowserProcessExitKind(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BrowserProcessExitedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BrowserProcessExitedEventArgs", L"BrowserProcessExitKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BrowserProcessExitedEventArgs", L"BrowserProcessExitKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BrowserProcessExitKind());
         }
         catch (...)
@@ -3915,14 +3915,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2BrowserProcessExitedEventArgs_get_BrowserProcessId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BrowserProcessExitedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BrowserProcessExitedEventArgs", L"BrowserProcessId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BrowserProcessExitedEventArgs", L"BrowserProcessId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BrowserProcessId());
         }
         catch (...)
@@ -4009,14 +4009,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Certificate", L"ToCertificate", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Certificate", L"ToCertificate", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToCertificate());
             }
             catch (...)
@@ -4038,14 +4038,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Certificate", L"ToPemEncoding", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Certificate", L"ToPemEncoding", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToPemEncoding());
             }
             catch (...)
@@ -4063,14 +4063,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Certificate_get_DerEncodedSerialNumber(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Certificate", L"DerEncodedSerialNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Certificate", L"DerEncodedSerialNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DerEncodedSerialNumber());
         }
         catch (...)
@@ -4082,14 +4082,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Certificate_get_DisplayName(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Certificate", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Certificate", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -4101,14 +4101,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Certificate_get_Issuer(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Certificate", L"Issuer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Certificate", L"Issuer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Issuer());
         }
         catch (...)
@@ -4120,14 +4120,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Certificate_get_PemEncodedIssuerCertificateChain(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Certificate", L"PemEncodedIssuerCertificateChain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Certificate", L"PemEncodedIssuerCertificateChain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PemEncodedIssuerCertificateChain());
         }
         catch (...)
@@ -4139,14 +4139,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Certificate_get_Subject(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Certificate", L"Subject"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Certificate", L"Subject"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Subject());
         }
         catch (...)
@@ -4158,14 +4158,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Certificate_get_ValidFrom(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Certificate", L"ValidFrom"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Certificate", L"ValidFrom"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ValidFrom());
         }
         catch (...)
@@ -4177,14 +4177,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Certificate_get_ValidTo(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Certificate", L"ValidTo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Certificate", L"ValidTo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ValidTo());
         }
         catch (...)
@@ -4278,14 +4278,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate", L"ToCertificate", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate", L"ToCertificate", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToCertificate());
             }
             catch (...)
@@ -4307,14 +4307,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate", L"ToPemEncoding", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate", L"ToPemEncoding", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToPemEncoding());
             }
             catch (...)
@@ -4332,14 +4332,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ClientCertificate_get_DerEncodedSerialNumber(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate", L"DerEncodedSerialNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate", L"DerEncodedSerialNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DerEncodedSerialNumber());
         }
         catch (...)
@@ -4351,14 +4351,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ClientCertificate_get_DisplayName(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -4370,14 +4370,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ClientCertificate_get_Issuer(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate", L"Issuer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate", L"Issuer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Issuer());
         }
         catch (...)
@@ -4389,14 +4389,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ClientCertificate_get_Kind(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -4408,14 +4408,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ClientCertificate_get_PemEncodedIssuerCertificateChain(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate", L"PemEncodedIssuerCertificateChain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate", L"PemEncodedIssuerCertificateChain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PemEncodedIssuerCertificateChain());
         }
         catch (...)
@@ -4427,14 +4427,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ClientCertificate_get_Subject(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate", L"Subject"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate", L"Subject"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Subject());
         }
         catch (...)
@@ -4446,14 +4446,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ClientCertificate_get_ValidFrom(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate", L"ValidFrom"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate", L"ValidFrom"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ValidFrom());
         }
         catch (...)
@@ -4465,14 +4465,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ClientCertificate_get_ValidTo(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate", L"ValidTo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate", L"ValidTo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ValidTo());
         }
         catch (...)
@@ -4567,14 +4567,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -4592,14 +4592,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ClientCertificateRequestedEventArgs_get_SelectedCertificate(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificateRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"SelectedCertificate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"SelectedCertificate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedCertificate());
         }
         catch (...)
@@ -4611,12 +4611,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ClientCertificateRequestedEventArgs_put_SelectedCertificate(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificateRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"SelectedCertificate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4625,6 +4619,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"SelectedCertificate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificate>(arg);
 
             self->obj.SelectedCertificate(param0);
@@ -4639,14 +4639,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ClientCertificateRequestedEventArgs_get_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificateRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -4658,12 +4658,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ClientCertificateRequestedEventArgs_put_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificateRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4672,6 +4666,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -4686,14 +4686,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ClientCertificateRequestedEventArgs_get_Cancel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificateRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"Cancel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"Cancel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Cancel());
         }
         catch (...)
@@ -4705,12 +4705,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ClientCertificateRequestedEventArgs_put_Cancel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificateRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"Cancel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4719,6 +4713,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"Cancel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Cancel(param0);
@@ -4733,14 +4733,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ClientCertificateRequestedEventArgs_get_AllowedCertificateAuthorities(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificateRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"AllowedCertificateAuthorities"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"AllowedCertificateAuthorities"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowedCertificateAuthorities());
         }
         catch (...)
@@ -4752,14 +4752,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ClientCertificateRequestedEventArgs_get_Host(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificateRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"Host"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"Host"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Host());
         }
         catch (...)
@@ -4771,14 +4771,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ClientCertificateRequestedEventArgs_get_IsProxy(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificateRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"IsProxy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"IsProxy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsProxy());
         }
         catch (...)
@@ -4790,14 +4790,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ClientCertificateRequestedEventArgs_get_MutuallyTrustedCertificates(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificateRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"MutuallyTrustedCertificates"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"MutuallyTrustedCertificates"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MutuallyTrustedCertificates());
         }
         catch (...)
@@ -4809,14 +4809,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ClientCertificateRequestedEventArgs_get_Port(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificateRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"Port"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs", L"Port"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Port());
         }
         catch (...)
@@ -4910,14 +4910,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CompositionController", L"DragEnter", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CompositionController", L"DragEnter", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride>(args, 1);
 
@@ -4942,14 +4942,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CompositionController", L"DragLeave", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CompositionController", L"DragLeave", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.DragLeave();
                 Py_RETURN_NONE;
             }
@@ -4972,14 +4972,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CompositionController", L"DragOver", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CompositionController", L"DragOver", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride>(args, 1);
 
@@ -5004,14 +5004,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CompositionController", L"Drop", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CompositionController", L"Drop", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo>(args, 0);
 
                 return py::convert(self->obj.Drop(param0));
@@ -5035,14 +5035,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CompositionController", L"SendMouseInput", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CompositionController", L"SendMouseInput", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2MouseEventKind>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2MouseEventVirtualKeys>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -5070,14 +5070,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CompositionController", L"SendPointerInput", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CompositionController", L"SendPointerInput", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PointerEventKind>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo>(args, 1);
 
@@ -5099,14 +5099,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CompositionController_get_RootVisualTarget(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CompositionController", L"RootVisualTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CompositionController", L"RootVisualTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RootVisualTarget());
         }
         catch (...)
@@ -5118,12 +5118,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2CompositionController_put_RootVisualTarget(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CompositionController", L"RootVisualTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5132,6 +5126,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CompositionController", L"RootVisualTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.RootVisualTarget(param0);
@@ -5146,14 +5146,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CompositionController_get_Cursor(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CompositionController", L"Cursor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CompositionController", L"Cursor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Cursor());
         }
         catch (...)
@@ -5165,14 +5165,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CompositionController_add_CursorChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CompositionController", L"CursorChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CompositionController", L"CursorChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.CursorChanged(param0));
@@ -5186,14 +5186,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CompositionController_remove_CursorChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CompositionController", L"CursorChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CompositionController", L"CursorChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CursorChanged(param0);
@@ -5287,14 +5287,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContentLoadingEventArgs_get_IsErrorPage(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContentLoadingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContentLoadingEventArgs", L"IsErrorPage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContentLoadingEventArgs", L"IsErrorPage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsErrorPage());
         }
         catch (...)
@@ -5306,14 +5306,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContentLoadingEventArgs_get_NavigationId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContentLoadingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContentLoadingEventArgs", L"NavigationId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContentLoadingEventArgs", L"NavigationId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NavigationId());
         }
         catch (...)
@@ -5396,14 +5396,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuItem_get_IsEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"IsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsEnabled());
         }
         catch (...)
@@ -5415,12 +5415,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ContextMenuItem_put_IsEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"IsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5429,6 +5423,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsEnabled(param0);
@@ -5443,14 +5443,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuItem_get_IsChecked(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"IsChecked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"IsChecked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsChecked());
         }
         catch (...)
@@ -5462,12 +5462,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ContextMenuItem_put_IsChecked(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"IsChecked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5476,6 +5470,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"IsChecked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsChecked(param0);
@@ -5490,14 +5490,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuItem_get_Children(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"Children"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"Children"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Children());
         }
         catch (...)
@@ -5509,14 +5509,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuItem_get_CommandId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"CommandId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"CommandId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CommandId());
         }
         catch (...)
@@ -5528,14 +5528,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuItem_get_Icon(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"Icon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"Icon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Icon());
         }
         catch (...)
@@ -5547,14 +5547,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuItem_get_Kind(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -5566,14 +5566,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuItem_get_Label(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Label());
         }
         catch (...)
@@ -5585,14 +5585,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuItem_get_Name(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -5604,14 +5604,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuItem_get_ShortcutKeyDescription(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"ShortcutKeyDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"ShortcutKeyDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShortcutKeyDescription());
         }
         catch (...)
@@ -5623,14 +5623,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuItem_add_CustomItemSelected(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuItem* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"CustomItemSelected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"CustomItemSelected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuItem, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.CustomItemSelected(param0));
@@ -5644,14 +5644,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuItem_remove_CustomItemSelected(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuItem* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"CustomItemSelected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem", L"CustomItemSelected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CustomItemSelected(param0);
@@ -5750,14 +5750,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuRequestedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuRequestedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -5775,14 +5775,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuRequestedEventArgs_get_SelectedCommandId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuRequestedEventArgs", L"SelectedCommandId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuRequestedEventArgs", L"SelectedCommandId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedCommandId());
         }
         catch (...)
@@ -5794,12 +5794,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ContextMenuRequestedEventArgs_put_SelectedCommandId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuRequestedEventArgs", L"SelectedCommandId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5808,6 +5802,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuRequestedEventArgs", L"SelectedCommandId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.SelectedCommandId(param0);
@@ -5822,14 +5822,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuRequestedEventArgs_get_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuRequestedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuRequestedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -5841,12 +5841,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ContextMenuRequestedEventArgs_put_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuRequestedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5855,6 +5849,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuRequestedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -5869,14 +5869,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuRequestedEventArgs_get_ContextMenuTarget(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuRequestedEventArgs", L"ContextMenuTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuRequestedEventArgs", L"ContextMenuTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContextMenuTarget());
         }
         catch (...)
@@ -5888,14 +5888,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuRequestedEventArgs_get_Location(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuRequestedEventArgs", L"Location"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuRequestedEventArgs", L"Location"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Location());
         }
         catch (...)
@@ -5907,14 +5907,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuRequestedEventArgs_get_MenuItems(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuRequestedEventArgs", L"MenuItems"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuRequestedEventArgs", L"MenuItems"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MenuItems());
         }
         catch (...)
@@ -6001,14 +6001,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuTarget_get_FrameUri(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"FrameUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"FrameUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameUri());
         }
         catch (...)
@@ -6020,14 +6020,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuTarget_get_HasLinkText(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"HasLinkText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"HasLinkText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasLinkText());
         }
         catch (...)
@@ -6039,14 +6039,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuTarget_get_HasLinkUri(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"HasLinkUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"HasLinkUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasLinkUri());
         }
         catch (...)
@@ -6058,14 +6058,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuTarget_get_HasSelection(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"HasSelection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"HasSelection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasSelection());
         }
         catch (...)
@@ -6077,14 +6077,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuTarget_get_HasSourceUri(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"HasSourceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"HasSourceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasSourceUri());
         }
         catch (...)
@@ -6096,14 +6096,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuTarget_get_IsEditable(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"IsEditable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"IsEditable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsEditable());
         }
         catch (...)
@@ -6115,14 +6115,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuTarget_get_IsRequestedForMainFrame(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"IsRequestedForMainFrame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"IsRequestedForMainFrame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRequestedForMainFrame());
         }
         catch (...)
@@ -6134,14 +6134,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuTarget_get_Kind(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -6153,14 +6153,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuTarget_get_LinkText(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"LinkText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"LinkText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LinkText());
         }
         catch (...)
@@ -6172,14 +6172,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuTarget_get_LinkUri(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"LinkUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"LinkUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LinkUri());
         }
         catch (...)
@@ -6191,14 +6191,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuTarget_get_PageUri(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"PageUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"PageUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageUri());
         }
         catch (...)
@@ -6210,14 +6210,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuTarget_get_SelectionText(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"SelectionText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"SelectionText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectionText());
         }
         catch (...)
@@ -6229,14 +6229,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuTarget_get_SourceUri(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"SourceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget", L"SourceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceUri());
         }
         catch (...)
@@ -6334,14 +6334,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -6364,14 +6364,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"MoveFocus", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"MoveFocus", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2MoveFocusReason>(args, 0);
 
                 self->obj.MoveFocus(param0);
@@ -6396,14 +6396,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"NotifyParentWindowPositionChanged", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"NotifyParentWindowPositionChanged", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.NotifyParentWindowPositionChanged();
                 Py_RETURN_NONE;
             }
@@ -6426,14 +6426,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"SetBoundsAndZoomFactor", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"SetBoundsAndZoomFactor", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
@@ -6455,14 +6455,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_get_ZoomFactor(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ZoomFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ZoomFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ZoomFactor());
         }
         catch (...)
@@ -6474,12 +6474,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Controller_put_ZoomFactor(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ZoomFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6488,6 +6482,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ZoomFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.ZoomFactor(param0);
@@ -6502,14 +6502,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_get_ParentWindow(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ParentWindow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ParentWindow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentWindow());
         }
         catch (...)
@@ -6521,12 +6521,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Controller_put_ParentWindow(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ParentWindow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6535,6 +6529,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ParentWindow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference>(arg);
 
             self->obj.ParentWindow(param0);
@@ -6549,14 +6549,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_get_IsVisible(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"IsVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"IsVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsVisible());
         }
         catch (...)
@@ -6568,12 +6568,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Controller_put_IsVisible(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"IsVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6582,6 +6576,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"IsVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsVisible(param0);
@@ -6596,14 +6596,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_get_Bounds(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"Bounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"Bounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bounds());
         }
         catch (...)
@@ -6615,12 +6615,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Controller_put_Bounds(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"Bounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6629,6 +6623,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"Bounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
             self->obj.Bounds(param0);
@@ -6643,14 +6643,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_get_CoreWebView2(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"CoreWebView2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"CoreWebView2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CoreWebView2());
         }
         catch (...)
@@ -6662,14 +6662,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_get_DefaultBackgroundColor(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"DefaultBackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"DefaultBackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultBackgroundColor());
         }
         catch (...)
@@ -6681,12 +6681,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Controller_put_DefaultBackgroundColor(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"DefaultBackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6695,6 +6689,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"DefaultBackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.DefaultBackgroundColor(param0);
@@ -6709,14 +6709,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_get_ShouldDetectMonitorScaleChanges(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ShouldDetectMonitorScaleChanges"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ShouldDetectMonitorScaleChanges"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShouldDetectMonitorScaleChanges());
         }
         catch (...)
@@ -6728,12 +6728,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Controller_put_ShouldDetectMonitorScaleChanges(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ShouldDetectMonitorScaleChanges"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6742,6 +6736,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ShouldDetectMonitorScaleChanges"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ShouldDetectMonitorScaleChanges(param0);
@@ -6756,14 +6756,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_get_RasterizationScale(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"RasterizationScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"RasterizationScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RasterizationScale());
         }
         catch (...)
@@ -6775,12 +6775,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Controller_put_RasterizationScale(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"RasterizationScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6789,6 +6783,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"RasterizationScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.RasterizationScale(param0);
@@ -6803,14 +6803,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_get_BoundsMode(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"BoundsMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"BoundsMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BoundsMode());
         }
         catch (...)
@@ -6822,12 +6822,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Controller_put_BoundsMode(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"BoundsMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6836,6 +6830,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"BoundsMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BoundsMode>(arg);
 
             self->obj.BoundsMode(param0);
@@ -6850,14 +6850,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_get_AllowExternalDrop(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"AllowExternalDrop"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"AllowExternalDrop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowExternalDrop());
         }
         catch (...)
@@ -6869,12 +6869,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Controller_put_AllowExternalDrop(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"AllowExternalDrop"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6883,6 +6877,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"AllowExternalDrop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowExternalDrop(param0);
@@ -6897,14 +6897,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_get_IsBrowserHitTransparent(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"IsBrowserHitTransparent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"IsBrowserHitTransparent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsBrowserHitTransparent());
         }
         catch (...)
@@ -6916,14 +6916,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_add_RasterizationScaleChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"RasterizationScaleChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"RasterizationScaleChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.RasterizationScaleChanged(param0));
@@ -6937,14 +6937,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_remove_RasterizationScaleChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"RasterizationScaleChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"RasterizationScaleChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.RasterizationScaleChanged(param0);
@@ -6959,14 +6959,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_add_AcceleratorKeyPressed(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"AcceleratorKeyPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"AcceleratorKeyPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Microsoft::Web::WebView2::Core::CoreWebView2AcceleratorKeyPressedEventArgs>>(arg);
 
             return py::convert(self->obj.AcceleratorKeyPressed(param0));
@@ -6980,14 +6980,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_remove_AcceleratorKeyPressed(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"AcceleratorKeyPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"AcceleratorKeyPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AcceleratorKeyPressed(param0);
@@ -7002,14 +7002,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_add_GotFocus(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"GotFocus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"GotFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.GotFocus(param0));
@@ -7023,14 +7023,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_remove_GotFocus(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"GotFocus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"GotFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.GotFocus(param0);
@@ -7045,14 +7045,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_add_LostFocus(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"LostFocus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"LostFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.LostFocus(param0));
@@ -7066,14 +7066,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_remove_LostFocus(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"LostFocus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"LostFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.LostFocus(param0);
@@ -7088,14 +7088,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_add_MoveFocusRequested(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"MoveFocusRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"MoveFocusRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Microsoft::Web::WebView2::Core::CoreWebView2MoveFocusRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.MoveFocusRequested(param0));
@@ -7109,14 +7109,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_remove_MoveFocusRequested(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"MoveFocusRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"MoveFocusRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.MoveFocusRequested(param0);
@@ -7131,14 +7131,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_add_ZoomFactorChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ZoomFactorChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ZoomFactorChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ZoomFactorChanged(param0));
@@ -7152,14 +7152,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_remove_ZoomFactorChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ZoomFactorChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ZoomFactorChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ZoomFactorChanged(param0);
@@ -7270,14 +7270,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ControllerOptions_get_ProfileName(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ControllerOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions", L"ProfileName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions", L"ProfileName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProfileName());
         }
         catch (...)
@@ -7289,12 +7289,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ControllerOptions_put_ProfileName(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ControllerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions", L"ProfileName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7303,6 +7297,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions", L"ProfileName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ProfileName(param0);
@@ -7317,14 +7317,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ControllerOptions_get_IsInPrivateModeEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ControllerOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions", L"IsInPrivateModeEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions", L"IsInPrivateModeEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsInPrivateModeEnabled());
         }
         catch (...)
@@ -7336,12 +7336,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ControllerOptions_put_IsInPrivateModeEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ControllerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions", L"IsInPrivateModeEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7350,6 +7344,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions", L"IsInPrivateModeEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsInPrivateModeEnabled(param0);
@@ -7364,14 +7364,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ControllerOptions_get_ScriptLocale(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ControllerOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions", L"ScriptLocale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions", L"ScriptLocale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ScriptLocale());
         }
         catch (...)
@@ -7383,12 +7383,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ControllerOptions_put_ScriptLocale(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ControllerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions", L"ScriptLocale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7397,6 +7391,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions", L"ScriptLocale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ScriptLocale(param0);
@@ -7487,14 +7487,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ControllerWindowReference", L"CreateFromCoreWindow", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ControllerWindowReference", L"CreateFromCoreWindow", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreWindow>(args, 0);
 
                 return py::convert(winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference::CreateFromCoreWindow(param0));
@@ -7518,14 +7518,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ControllerWindowReference", L"CreateFromWindowHandle", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ControllerWindowReference", L"CreateFromWindowHandle", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference::CreateFromWindowHandle(param0));
@@ -7545,14 +7545,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ControllerWindowReference_get_CoreWindow(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ControllerWindowReference", L"CoreWindow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ControllerWindowReference", L"CoreWindow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CoreWindow());
         }
         catch (...)
@@ -7564,14 +7564,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ControllerWindowReference_get_WindowHandle(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ControllerWindowReference", L"WindowHandle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ControllerWindowReference", L"WindowHandle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WindowHandle());
         }
         catch (...)
@@ -7681,14 +7681,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Cookie_get_Value(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Cookie* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -7700,12 +7700,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Cookie_put_Value(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Cookie* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7714,6 +7708,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Value(param0);
@@ -7728,14 +7728,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Cookie_get_SameSite(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Cookie* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"SameSite"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"SameSite"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SameSite());
         }
         catch (...)
@@ -7747,12 +7747,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Cookie_put_SameSite(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Cookie* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"SameSite"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7761,6 +7755,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"SameSite"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CookieSameSiteKind>(arg);
 
             self->obj.SameSite(param0);
@@ -7775,14 +7775,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Cookie_get_IsSecure(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Cookie* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"IsSecure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"IsSecure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSecure());
         }
         catch (...)
@@ -7794,12 +7794,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Cookie_put_IsSecure(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Cookie* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"IsSecure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7808,6 +7802,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"IsSecure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsSecure(param0);
@@ -7822,14 +7822,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Cookie_get_IsHttpOnly(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Cookie* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"IsHttpOnly"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"IsHttpOnly"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsHttpOnly());
         }
         catch (...)
@@ -7841,12 +7841,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Cookie_put_IsHttpOnly(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Cookie* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"IsHttpOnly"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7855,6 +7849,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"IsHttpOnly"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsHttpOnly(param0);
@@ -7869,14 +7869,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Cookie_get_Expires(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Cookie* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"Expires"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"Expires"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Expires());
         }
         catch (...)
@@ -7888,12 +7888,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Cookie_put_Expires(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Cookie* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"Expires"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7902,6 +7896,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"Expires"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Expires(param0);
@@ -7916,14 +7916,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Cookie_get_Domain(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Cookie* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"Domain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"Domain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Domain());
         }
         catch (...)
@@ -7935,14 +7935,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Cookie_get_IsSession(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Cookie* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"IsSession"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"IsSession"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSession());
         }
         catch (...)
@@ -7954,14 +7954,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Cookie_get_Name(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Cookie* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -7973,14 +7973,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Cookie_get_Path(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Cookie* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"Path"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Cookie", L"Path"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Path());
         }
         catch (...)
@@ -8074,14 +8074,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CookieManager", L"AddOrUpdateCookie", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CookieManager", L"AddOrUpdateCookie", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Cookie>(args, 0);
 
                 self->obj.AddOrUpdateCookie(param0);
@@ -8106,14 +8106,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CookieManager", L"CopyCookie", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CookieManager", L"CopyCookie", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Cookie>(args, 0);
 
                 return py::convert(self->obj.CopyCookie(param0));
@@ -8137,14 +8137,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CookieManager", L"CreateCookie", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CookieManager", L"CreateCookie", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -8171,14 +8171,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CookieManager", L"DeleteAllCookies", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CookieManager", L"DeleteAllCookies", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.DeleteAllCookies();
                 Py_RETURN_NONE;
             }
@@ -8201,14 +8201,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CookieManager", L"DeleteCookie", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CookieManager", L"DeleteCookie", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Cookie>(args, 0);
 
                 self->obj.DeleteCookie(param0);
@@ -8233,14 +8233,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CookieManager", L"DeleteCookies", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CookieManager", L"DeleteCookies", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -8266,14 +8266,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CookieManager", L"DeleteCookiesWithDomainAndPath", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CookieManager", L"DeleteCookiesWithDomainAndPath", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -8300,14 +8300,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CookieManager", L"GetCookiesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CookieManager", L"GetCookiesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetCookiesAsync(param0));
@@ -8428,14 +8428,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CustomSchemeRegistration_get_TreatAsSecure(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CustomSchemeRegistration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration", L"TreatAsSecure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration", L"TreatAsSecure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TreatAsSecure());
         }
         catch (...)
@@ -8447,12 +8447,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2CustomSchemeRegistration_put_TreatAsSecure(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CustomSchemeRegistration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration", L"TreatAsSecure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8461,6 +8455,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration", L"TreatAsSecure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.TreatAsSecure(param0);
@@ -8475,14 +8475,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CustomSchemeRegistration_get_HasAuthorityComponent(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CustomSchemeRegistration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration", L"HasAuthorityComponent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration", L"HasAuthorityComponent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasAuthorityComponent());
         }
         catch (...)
@@ -8494,12 +8494,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2CustomSchemeRegistration_put_HasAuthorityComponent(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CustomSchemeRegistration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration", L"HasAuthorityComponent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8508,6 +8502,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration", L"HasAuthorityComponent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.HasAuthorityComponent(param0);
@@ -8522,14 +8522,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CustomSchemeRegistration_get_AllowedOrigins(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CustomSchemeRegistration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration", L"AllowedOrigins"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration", L"AllowedOrigins"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowedOrigins());
         }
         catch (...)
@@ -8541,14 +8541,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CustomSchemeRegistration_get_SchemeName(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CustomSchemeRegistration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration", L"SchemeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration", L"SchemeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SchemeName());
         }
         catch (...)
@@ -8633,14 +8633,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DOMContentLoadedEventArgs_get_NavigationId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DOMContentLoadedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DOMContentLoadedEventArgs", L"NavigationId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DOMContentLoadedEventArgs", L"NavigationId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NavigationId());
         }
         catch (...)
@@ -8722,14 +8722,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DevToolsProtocolEventReceivedEventArgs_get_ParameterObjectAsJson(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DevToolsProtocolEventReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceivedEventArgs", L"ParameterObjectAsJson"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceivedEventArgs", L"ParameterObjectAsJson"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParameterObjectAsJson());
         }
         catch (...)
@@ -8741,14 +8741,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DevToolsProtocolEventReceivedEventArgs_get_SessionId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DevToolsProtocolEventReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceivedEventArgs", L"SessionId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceivedEventArgs", L"SessionId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SessionId());
         }
         catch (...)
@@ -8831,14 +8831,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DevToolsProtocolEventReceiver_add_DevToolsProtocolEventReceived(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DevToolsProtocolEventReceiver* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceiver", L"DevToolsProtocolEventReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceiver", L"DevToolsProtocolEventReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2DevToolsProtocolEventReceivedEventArgs>>(arg);
 
             return py::convert(self->obj.DevToolsProtocolEventReceived(param0));
@@ -8852,14 +8852,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DevToolsProtocolEventReceiver_remove_DevToolsProtocolEventReceived(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DevToolsProtocolEventReceiver* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceiver", L"DevToolsProtocolEventReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceiver", L"DevToolsProtocolEventReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DevToolsProtocolEventReceived(param0);
@@ -8949,14 +8949,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"Cancel", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"Cancel", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Cancel();
                 Py_RETURN_NONE;
             }
@@ -8979,14 +8979,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"Pause", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"Pause", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Pause();
                 Py_RETURN_NONE;
             }
@@ -9009,14 +9009,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"Resume", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"Resume", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Resume();
                 Py_RETURN_NONE;
             }
@@ -9035,14 +9035,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadOperation_get_BytesReceived(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"BytesReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"BytesReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BytesReceived());
         }
         catch (...)
@@ -9054,14 +9054,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadOperation_get_CanResume(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"CanResume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"CanResume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanResume());
         }
         catch (...)
@@ -9073,14 +9073,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadOperation_get_ContentDisposition(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"ContentDisposition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"ContentDisposition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentDisposition());
         }
         catch (...)
@@ -9092,14 +9092,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadOperation_get_EstimatedEndTime(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"EstimatedEndTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"EstimatedEndTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EstimatedEndTime());
         }
         catch (...)
@@ -9111,14 +9111,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadOperation_get_InterruptReason(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"InterruptReason"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"InterruptReason"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InterruptReason());
         }
         catch (...)
@@ -9130,14 +9130,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadOperation_get_MimeType(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"MimeType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"MimeType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MimeType());
         }
         catch (...)
@@ -9149,14 +9149,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadOperation_get_ResultFilePath(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"ResultFilePath"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"ResultFilePath"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResultFilePath());
         }
         catch (...)
@@ -9168,14 +9168,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadOperation_get_State(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -9187,14 +9187,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadOperation_get_TotalBytesToReceive(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"TotalBytesToReceive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"TotalBytesToReceive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TotalBytesToReceive());
         }
         catch (...)
@@ -9206,14 +9206,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadOperation_get_Uri(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -9225,14 +9225,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadOperation_add_BytesReceivedChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"BytesReceivedChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"BytesReceivedChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.BytesReceivedChanged(param0));
@@ -9246,14 +9246,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadOperation_remove_BytesReceivedChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"BytesReceivedChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"BytesReceivedChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.BytesReceivedChanged(param0);
@@ -9268,14 +9268,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadOperation_add_EstimatedEndTimeChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"EstimatedEndTimeChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"EstimatedEndTimeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.EstimatedEndTimeChanged(param0));
@@ -9289,14 +9289,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadOperation_remove_EstimatedEndTimeChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"EstimatedEndTimeChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"EstimatedEndTimeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.EstimatedEndTimeChanged(param0);
@@ -9311,14 +9311,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadOperation_add_StateChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.StateChanged(param0));
@@ -9332,14 +9332,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadOperation_remove_StateChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StateChanged(param0);
@@ -9446,14 +9446,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadStartingEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadStartingEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -9471,14 +9471,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadStartingEventArgs_get_ResultFilePath(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadStartingEventArgs", L"ResultFilePath"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadStartingEventArgs", L"ResultFilePath"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResultFilePath());
         }
         catch (...)
@@ -9490,12 +9490,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2DownloadStartingEventArgs_put_ResultFilePath(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadStartingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadStartingEventArgs", L"ResultFilePath"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9504,6 +9498,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadStartingEventArgs", L"ResultFilePath"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ResultFilePath(param0);
@@ -9518,14 +9518,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadStartingEventArgs_get_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadStartingEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadStartingEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -9537,12 +9537,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2DownloadStartingEventArgs_put_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadStartingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadStartingEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9551,6 +9545,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadStartingEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -9565,14 +9565,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadStartingEventArgs_get_Cancel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadStartingEventArgs", L"Cancel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadStartingEventArgs", L"Cancel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Cancel());
         }
         catch (...)
@@ -9584,12 +9584,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2DownloadStartingEventArgs_put_Cancel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadStartingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadStartingEventArgs", L"Cancel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9598,6 +9592,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadStartingEventArgs", L"Cancel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Cancel(param0);
@@ -9612,14 +9612,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadStartingEventArgs_get_DownloadOperation(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadStartingEventArgs", L"DownloadOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2DownloadStartingEventArgs", L"DownloadOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DownloadOperation());
         }
         catch (...)
@@ -9709,14 +9709,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CompareBrowserVersionString", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CompareBrowserVersionString", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -9741,14 +9741,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment::CreateAsync());
             }
             catch (...)
@@ -9770,14 +9770,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateContextMenuItem", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateContextMenuItem", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuItemKind>(args, 2);
@@ -9803,14 +9803,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateCoreWebView2CompositionControllerAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateCoreWebView2CompositionControllerAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference>(args, 0);
 
                 return py::convert(self->obj.CreateCoreWebView2CompositionControllerAsync(param0));
@@ -9823,14 +9823,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateCoreWebView2CompositionControllerAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateCoreWebView2CompositionControllerAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerOptions>(args, 1);
 
@@ -9855,14 +9855,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateCoreWebView2ControllerAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateCoreWebView2ControllerAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference>(args, 0);
 
                 return py::convert(self->obj.CreateCoreWebView2ControllerAsync(param0));
@@ -9875,14 +9875,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateCoreWebView2ControllerAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateCoreWebView2ControllerAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerOptions>(args, 1);
 
@@ -9907,14 +9907,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateCoreWebView2ControllerOptions", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateCoreWebView2ControllerOptions", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateCoreWebView2ControllerOptions());
             }
             catch (...)
@@ -9936,14 +9936,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateCoreWebView2PointerInfo", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateCoreWebView2PointerInfo", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateCoreWebView2PointerInfo());
             }
             catch (...)
@@ -9965,14 +9965,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreatePrintSettings", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreatePrintSettings", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreatePrintSettings());
             }
             catch (...)
@@ -9994,14 +9994,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateSharedBuffer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateSharedBuffer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(self->obj.CreateSharedBuffer(param0));
@@ -10025,14 +10025,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateWebResourceRequest", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateWebResourceRequest", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 2);
@@ -10059,14 +10059,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateWebResourceResponse", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateWebResourceResponse", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -10093,14 +10093,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateWithOptionsAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"CreateWithOptionsAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions>(args, 2);
@@ -10126,14 +10126,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"GetAvailableBrowserVersionString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"GetAvailableBrowserVersionString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment::GetAvailableBrowserVersionString());
             }
             catch (...)
@@ -10144,14 +10144,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"GetAvailableBrowserVersionString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"GetAvailableBrowserVersionString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment::GetAvailableBrowserVersionString(param0));
@@ -10175,14 +10175,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"GetProcessExtendedInfosAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"GetProcessExtendedInfosAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetProcessExtendedInfosAsync());
             }
             catch (...)
@@ -10204,14 +10204,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"GetProcessInfos", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"GetProcessInfos", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetProcessInfos());
             }
             catch (...)
@@ -10229,14 +10229,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_get_BrowserVersionString(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"BrowserVersionString"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"BrowserVersionString"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BrowserVersionString());
         }
         catch (...)
@@ -10248,14 +10248,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_get_FailureReportFolderPath(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"FailureReportFolderPath"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"FailureReportFolderPath"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FailureReportFolderPath());
         }
         catch (...)
@@ -10267,14 +10267,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_get_UserDataFolder(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"UserDataFolder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"UserDataFolder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserDataFolder());
         }
         catch (...)
@@ -10286,14 +10286,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_add_BrowserProcessExited(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"BrowserProcessExited"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"BrowserProcessExited"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment, winrt::Microsoft::Web::WebView2::Core::CoreWebView2BrowserProcessExitedEventArgs>>(arg);
 
             return py::convert(self->obj.BrowserProcessExited(param0));
@@ -10307,14 +10307,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_remove_BrowserProcessExited(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"BrowserProcessExited"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"BrowserProcessExited"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.BrowserProcessExited(param0);
@@ -10329,14 +10329,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_add_ProcessInfosChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"ProcessInfosChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"ProcessInfosChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ProcessInfosChanged(param0));
@@ -10350,14 +10350,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_remove_ProcessInfosChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"ProcessInfosChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"ProcessInfosChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ProcessInfosChanged(param0);
@@ -10372,14 +10372,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_add_NewBrowserVersionAvailable(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"NewBrowserVersionAvailable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"NewBrowserVersionAvailable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.NewBrowserVersionAvailable(param0));
@@ -10393,14 +10393,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_remove_NewBrowserVersionAvailable(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"NewBrowserVersionAvailable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"NewBrowserVersionAvailable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.NewBrowserVersionAvailable(param0);
@@ -10555,14 +10555,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2EnvironmentOptions_get_TargetCompatibleBrowserVersion(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"TargetCompatibleBrowserVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"TargetCompatibleBrowserVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetCompatibleBrowserVersion());
         }
         catch (...)
@@ -10574,12 +10574,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2EnvironmentOptions_put_TargetCompatibleBrowserVersion(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"TargetCompatibleBrowserVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10588,6 +10582,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"TargetCompatibleBrowserVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.TargetCompatibleBrowserVersion(param0);
@@ -10602,14 +10602,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2EnvironmentOptions_get_Language(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -10621,12 +10621,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2EnvironmentOptions_put_Language(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10635,6 +10629,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Language(param0);
@@ -10649,14 +10649,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2EnvironmentOptions_get_AllowSingleSignOnUsingOSPrimaryAccount(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"AllowSingleSignOnUsingOSPrimaryAccount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"AllowSingleSignOnUsingOSPrimaryAccount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowSingleSignOnUsingOSPrimaryAccount());
         }
         catch (...)
@@ -10668,12 +10668,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2EnvironmentOptions_put_AllowSingleSignOnUsingOSPrimaryAccount(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"AllowSingleSignOnUsingOSPrimaryAccount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10682,6 +10676,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"AllowSingleSignOnUsingOSPrimaryAccount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowSingleSignOnUsingOSPrimaryAccount(param0);
@@ -10696,14 +10696,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2EnvironmentOptions_get_AdditionalBrowserArguments(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"AdditionalBrowserArguments"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"AdditionalBrowserArguments"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AdditionalBrowserArguments());
         }
         catch (...)
@@ -10715,12 +10715,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2EnvironmentOptions_put_AdditionalBrowserArguments(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"AdditionalBrowserArguments"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10729,6 +10723,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"AdditionalBrowserArguments"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.AdditionalBrowserArguments(param0);
@@ -10743,14 +10743,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2EnvironmentOptions_get_CustomSchemeRegistrations(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"CustomSchemeRegistrations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"CustomSchemeRegistrations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CustomSchemeRegistrations());
         }
         catch (...)
@@ -10762,12 +10762,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2EnvironmentOptions_put_CustomSchemeRegistrations(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"CustomSchemeRegistrations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10776,6 +10770,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"CustomSchemeRegistrations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CustomSchemeRegistration>>(arg);
 
             self->obj.CustomSchemeRegistrations(param0);
@@ -10790,14 +10790,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2EnvironmentOptions_get_ExclusiveUserDataFolderAccess(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"ExclusiveUserDataFolderAccess"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"ExclusiveUserDataFolderAccess"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExclusiveUserDataFolderAccess());
         }
         catch (...)
@@ -10809,12 +10809,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2EnvironmentOptions_put_ExclusiveUserDataFolderAccess(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"ExclusiveUserDataFolderAccess"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10823,6 +10817,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"ExclusiveUserDataFolderAccess"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ExclusiveUserDataFolderAccess(param0);
@@ -10837,14 +10837,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2EnvironmentOptions_get_IsCustomCrashReportingEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"IsCustomCrashReportingEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"IsCustomCrashReportingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCustomCrashReportingEnabled());
         }
         catch (...)
@@ -10856,12 +10856,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2EnvironmentOptions_put_IsCustomCrashReportingEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"IsCustomCrashReportingEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10870,6 +10864,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"IsCustomCrashReportingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsCustomCrashReportingEnabled(param0);
@@ -10884,14 +10884,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2EnvironmentOptions_get_EnableTrackingPrevention(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"EnableTrackingPrevention"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"EnableTrackingPrevention"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EnableTrackingPrevention());
         }
         catch (...)
@@ -10903,12 +10903,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2EnvironmentOptions_put_EnableTrackingPrevention(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"EnableTrackingPrevention"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10917,6 +10911,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"EnableTrackingPrevention"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.EnableTrackingPrevention(param0);
@@ -10931,14 +10931,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2EnvironmentOptions_get_AreBrowserExtensionsEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"AreBrowserExtensionsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"AreBrowserExtensionsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreBrowserExtensionsEnabled());
         }
         catch (...)
@@ -10950,12 +10950,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2EnvironmentOptions_put_AreBrowserExtensionsEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"AreBrowserExtensionsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10964,6 +10958,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"AreBrowserExtensionsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AreBrowserExtensionsEnabled(param0);
@@ -11056,14 +11056,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2File_get_Path(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2File* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2File", L"Path"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2File", L"Path"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Path());
         }
         catch (...)
@@ -11149,14 +11149,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"ExecuteScriptAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"ExecuteScriptAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ExecuteScriptAsync(param0));
@@ -11180,14 +11180,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"IsDestroyed", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"IsDestroyed", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.IsDestroyed());
             }
             catch (...)
@@ -11209,14 +11209,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"PostSharedBufferToScript", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"PostSharedBufferToScript", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SharedBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SharedBufferAccess>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -11243,14 +11243,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"PostWebMessageAsJson", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"PostWebMessageAsJson", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.PostWebMessageAsJson(param0);
@@ -11275,14 +11275,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"PostWebMessageAsString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"PostWebMessageAsString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.PostWebMessageAsString(param0);
@@ -11307,14 +11307,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"RemoveHostObjectFromScript", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"RemoveHostObjectFromScript", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.RemoveHostObjectFromScript(param0);
@@ -11335,14 +11335,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_get_Name(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -11354,14 +11354,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_get_FrameId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"FrameId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"FrameId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameId());
         }
         catch (...)
@@ -11373,14 +11373,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_add_ContentLoading(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"ContentLoading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"ContentLoading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ContentLoadingEventArgs>>(arg);
 
             return py::convert(self->obj.ContentLoading(param0));
@@ -11394,14 +11394,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_remove_ContentLoading(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"ContentLoading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"ContentLoading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ContentLoading(param0);
@@ -11416,14 +11416,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_add_DOMContentLoaded(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"DOMContentLoaded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"DOMContentLoaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2DOMContentLoadedEventArgs>>(arg);
 
             return py::convert(self->obj.DOMContentLoaded(param0));
@@ -11437,14 +11437,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_remove_DOMContentLoaded(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"DOMContentLoaded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"DOMContentLoaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DOMContentLoaded(param0);
@@ -11459,14 +11459,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_add_NavigationCompleted(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"NavigationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"NavigationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2NavigationCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.NavigationCompleted(param0));
@@ -11480,14 +11480,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_remove_NavigationCompleted(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"NavigationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"NavigationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.NavigationCompleted(param0);
@@ -11502,14 +11502,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_add_NavigationStarting(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"NavigationStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"NavigationStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs>>(arg);
 
             return py::convert(self->obj.NavigationStarting(param0));
@@ -11523,14 +11523,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_remove_NavigationStarting(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"NavigationStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"NavigationStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.NavigationStarting(param0);
@@ -11545,14 +11545,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_add_WebMessageReceived(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"WebMessageReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"WebMessageReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebMessageReceivedEventArgs>>(arg);
 
             return py::convert(self->obj.WebMessageReceived(param0));
@@ -11566,14 +11566,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_remove_WebMessageReceived(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"WebMessageReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"WebMessageReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.WebMessageReceived(param0);
@@ -11588,14 +11588,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_add_PermissionRequested(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"PermissionRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"PermissionRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2PermissionRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.PermissionRequested(param0));
@@ -11609,14 +11609,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_remove_PermissionRequested(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"PermissionRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"PermissionRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PermissionRequested(param0);
@@ -11631,14 +11631,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_add_Destroyed(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"Destroyed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"Destroyed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Destroyed(param0));
@@ -11652,14 +11652,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_remove_Destroyed(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"Destroyed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"Destroyed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Destroyed(param0);
@@ -11674,14 +11674,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_add_NameChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"NameChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"NameChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.NameChanged(param0));
@@ -11695,14 +11695,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_remove_NameChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"NameChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"NameChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.NameChanged(param0);
@@ -11810,14 +11810,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2FrameCreatedEventArgs_get_Frame(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2FrameCreatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2FrameCreatedEventArgs", L"Frame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2FrameCreatedEventArgs", L"Frame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Frame());
         }
         catch (...)
@@ -11899,14 +11899,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2FrameInfo_get_Name(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2FrameInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -11918,14 +11918,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2FrameInfo_get_Source(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2FrameInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -11937,14 +11937,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2FrameInfo_get_FrameId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2FrameInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo", L"FrameId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo", L"FrameId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameId());
         }
         catch (...)
@@ -11956,14 +11956,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2FrameInfo_get_FrameKind(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2FrameInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo", L"FrameKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo", L"FrameKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameKind());
         }
         catch (...)
@@ -11975,14 +11975,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2FrameInfo_get_ParentFrameInfo(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2FrameInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo", L"ParentFrameInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo", L"ParentFrameInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentFrameInfo());
         }
         catch (...)
@@ -12072,14 +12072,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpHeadersCollectionIterator", L"GetMany", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpHeadersCollectionIterator", L"GetMany", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>, true>>(args, 0);
 
                 return py::convert(self->obj.GetMany(param0));
@@ -12103,14 +12103,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpHeadersCollectionIterator", L"MoveNext", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpHeadersCollectionIterator", L"MoveNext", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.MoveNext());
             }
             catch (...)
@@ -12128,14 +12128,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2HttpHeadersCollectionIterator_get_Current(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2HttpHeadersCollectionIterator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpHeadersCollectionIterator", L"Current"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpHeadersCollectionIterator", L"Current"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Current());
         }
         catch (...)
@@ -12147,14 +12147,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2HttpHeadersCollectionIterator_get_HasCurrent(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2HttpHeadersCollectionIterator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpHeadersCollectionIterator", L"HasCurrent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpHeadersCollectionIterator", L"HasCurrent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasCurrent());
         }
         catch (...)
@@ -12271,14 +12271,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpRequestHeaders", L"Contains", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpRequestHeaders", L"Contains", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.Contains(param0));
@@ -12302,14 +12302,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpRequestHeaders", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpRequestHeaders", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -12331,14 +12331,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpRequestHeaders", L"GetHeader", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpRequestHeaders", L"GetHeader", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetHeader(param0));
@@ -12362,14 +12362,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpRequestHeaders", L"GetHeaders", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpRequestHeaders", L"GetHeaders", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetHeaders(param0));
@@ -12393,14 +12393,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpRequestHeaders", L"RemoveHeader", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpRequestHeaders", L"RemoveHeader", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.RemoveHeader(param0);
@@ -12425,14 +12425,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpRequestHeaders", L"SetHeader", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpRequestHeaders", L"SetHeader", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -12547,14 +12547,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpResponseHeaders", L"AppendHeader", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpResponseHeaders", L"AppendHeader", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -12580,14 +12580,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpResponseHeaders", L"Contains", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpResponseHeaders", L"Contains", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.Contains(param0));
@@ -12611,14 +12611,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpResponseHeaders", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpResponseHeaders", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -12640,14 +12640,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpResponseHeaders", L"GetHeader", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpResponseHeaders", L"GetHeader", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetHeader(param0));
@@ -12671,14 +12671,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpResponseHeaders", L"GetHeaders", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2HttpResponseHeaders", L"GetHeaders", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetHeaders(param0));
@@ -12790,14 +12790,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2LaunchingExternalUriSchemeEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2LaunchingExternalUriSchemeEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -12815,14 +12815,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2LaunchingExternalUriSchemeEventArgs_get_Cancel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2LaunchingExternalUriSchemeEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2LaunchingExternalUriSchemeEventArgs", L"Cancel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2LaunchingExternalUriSchemeEventArgs", L"Cancel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Cancel());
         }
         catch (...)
@@ -12834,12 +12834,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2LaunchingExternalUriSchemeEventArgs_put_Cancel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2LaunchingExternalUriSchemeEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2LaunchingExternalUriSchemeEventArgs", L"Cancel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12848,6 +12842,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2LaunchingExternalUriSchemeEventArgs", L"Cancel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Cancel(param0);
@@ -12862,14 +12862,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2LaunchingExternalUriSchemeEventArgs_get_InitiatingOrigin(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2LaunchingExternalUriSchemeEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2LaunchingExternalUriSchemeEventArgs", L"InitiatingOrigin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2LaunchingExternalUriSchemeEventArgs", L"InitiatingOrigin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InitiatingOrigin());
         }
         catch (...)
@@ -12881,14 +12881,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2LaunchingExternalUriSchemeEventArgs_get_IsUserInitiated(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2LaunchingExternalUriSchemeEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2LaunchingExternalUriSchemeEventArgs", L"IsUserInitiated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2LaunchingExternalUriSchemeEventArgs", L"IsUserInitiated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsUserInitiated());
         }
         catch (...)
@@ -12900,14 +12900,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2LaunchingExternalUriSchemeEventArgs_get_Uri(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2LaunchingExternalUriSchemeEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2LaunchingExternalUriSchemeEventArgs", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2LaunchingExternalUriSchemeEventArgs", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -12993,14 +12993,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2MoveFocusRequestedEventArgs_get_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2MoveFocusRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusRequestedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusRequestedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -13012,12 +13012,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2MoveFocusRequestedEventArgs_put_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2MoveFocusRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusRequestedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13026,6 +13020,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusRequestedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -13040,14 +13040,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2MoveFocusRequestedEventArgs_get_Reason(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2MoveFocusRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusRequestedEventArgs", L"Reason"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusRequestedEventArgs", L"Reason"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reason());
         }
         catch (...)
@@ -13130,14 +13130,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2NavigationCompletedEventArgs_get_IsSuccess(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NavigationCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs", L"IsSuccess"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs", L"IsSuccess"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSuccess());
         }
         catch (...)
@@ -13149,14 +13149,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2NavigationCompletedEventArgs_get_NavigationId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NavigationCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs", L"NavigationId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs", L"NavigationId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NavigationId());
         }
         catch (...)
@@ -13168,14 +13168,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2NavigationCompletedEventArgs_get_WebErrorStatus(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NavigationCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs", L"WebErrorStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs", L"WebErrorStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WebErrorStatus());
         }
         catch (...)
@@ -13187,14 +13187,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2NavigationCompletedEventArgs_get_HttpStatusCode(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NavigationCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs", L"HttpStatusCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs", L"HttpStatusCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HttpStatusCode());
         }
         catch (...)
@@ -13279,14 +13279,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2NavigationStartingEventArgs_get_Cancel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs", L"Cancel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs", L"Cancel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Cancel());
         }
         catch (...)
@@ -13298,12 +13298,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2NavigationStartingEventArgs_put_Cancel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs", L"Cancel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13312,6 +13306,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs", L"Cancel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Cancel(param0);
@@ -13326,14 +13326,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2NavigationStartingEventArgs_get_IsRedirected(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs", L"IsRedirected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs", L"IsRedirected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRedirected());
         }
         catch (...)
@@ -13345,14 +13345,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2NavigationStartingEventArgs_get_IsUserInitiated(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs", L"IsUserInitiated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs", L"IsUserInitiated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsUserInitiated());
         }
         catch (...)
@@ -13364,14 +13364,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2NavigationStartingEventArgs_get_NavigationId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs", L"NavigationId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs", L"NavigationId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NavigationId());
         }
         catch (...)
@@ -13383,14 +13383,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2NavigationStartingEventArgs_get_RequestHeaders(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs", L"RequestHeaders"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs", L"RequestHeaders"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestHeaders());
         }
         catch (...)
@@ -13402,14 +13402,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2NavigationStartingEventArgs_get_Uri(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -13421,14 +13421,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2NavigationStartingEventArgs_get_AdditionalAllowedFrameAncestors(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs", L"AdditionalAllowedFrameAncestors"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs", L"AdditionalAllowedFrameAncestors"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AdditionalAllowedFrameAncestors());
         }
         catch (...)
@@ -13440,12 +13440,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2NavigationStartingEventArgs_put_AdditionalAllowedFrameAncestors(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs", L"AdditionalAllowedFrameAncestors"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13454,6 +13448,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs", L"AdditionalAllowedFrameAncestors"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.AdditionalAllowedFrameAncestors(param0);
@@ -13468,14 +13468,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2NavigationStartingEventArgs_get_NavigationKind(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs", L"NavigationKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs", L"NavigationKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NavigationKind());
         }
         catch (...)
@@ -13568,14 +13568,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -13593,14 +13593,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2NewWindowRequestedEventArgs_get_NewWindow(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NewWindowRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs", L"NewWindow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs", L"NewWindow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NewWindow());
         }
         catch (...)
@@ -13612,12 +13612,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2NewWindowRequestedEventArgs_put_NewWindow(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NewWindowRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs", L"NewWindow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13626,6 +13620,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs", L"NewWindow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2>(arg);
 
             self->obj.NewWindow(param0);
@@ -13640,14 +13640,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2NewWindowRequestedEventArgs_get_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NewWindowRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -13659,12 +13659,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2NewWindowRequestedEventArgs_put_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NewWindowRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13673,6 +13667,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -13687,14 +13687,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2NewWindowRequestedEventArgs_get_IsUserInitiated(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NewWindowRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs", L"IsUserInitiated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs", L"IsUserInitiated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsUserInitiated());
         }
         catch (...)
@@ -13706,14 +13706,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2NewWindowRequestedEventArgs_get_Uri(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NewWindowRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -13725,14 +13725,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2NewWindowRequestedEventArgs_get_WindowFeatures(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NewWindowRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs", L"WindowFeatures"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs", L"WindowFeatures"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WindowFeatures());
         }
         catch (...)
@@ -13744,14 +13744,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2NewWindowRequestedEventArgs_get_Name(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NewWindowRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -13763,14 +13763,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2NewWindowRequestedEventArgs_get_OriginalSourceFrameInfo(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NewWindowRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs", L"OriginalSourceFrameInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs", L"OriginalSourceFrameInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OriginalSourceFrameInfo());
         }
         catch (...)
@@ -13863,14 +13863,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -13888,14 +13888,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PermissionRequestedEventArgs_get_State(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PermissionRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -13907,12 +13907,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PermissionRequestedEventArgs_put_State(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PermissionRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13921,6 +13915,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PermissionState>(arg);
 
             self->obj.State(param0);
@@ -13935,14 +13935,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PermissionRequestedEventArgs_get_IsUserInitiated(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PermissionRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs", L"IsUserInitiated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs", L"IsUserInitiated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsUserInitiated());
         }
         catch (...)
@@ -13954,14 +13954,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PermissionRequestedEventArgs_get_PermissionKind(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PermissionRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs", L"PermissionKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs", L"PermissionKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PermissionKind());
         }
         catch (...)
@@ -13973,14 +13973,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PermissionRequestedEventArgs_get_Uri(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PermissionRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -13992,14 +13992,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PermissionRequestedEventArgs_get_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PermissionRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -14011,12 +14011,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PermissionRequestedEventArgs_put_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PermissionRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14025,6 +14019,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -14039,14 +14039,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PermissionRequestedEventArgs_get_SavesInProfile(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PermissionRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs", L"SavesInProfile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs", L"SavesInProfile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SavesInProfile());
         }
         catch (...)
@@ -14058,12 +14058,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PermissionRequestedEventArgs_put_SavesInProfile(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PermissionRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs", L"SavesInProfile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14072,6 +14066,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs", L"SavesInProfile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.SavesInProfile(param0);
@@ -14162,14 +14162,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PermissionSetting_get_PermissionKind(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PermissionSetting* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionSetting", L"PermissionKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionSetting", L"PermissionKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PermissionKind());
         }
         catch (...)
@@ -14181,14 +14181,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PermissionSetting_get_PermissionOrigin(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PermissionSetting* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionSetting", L"PermissionOrigin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionSetting", L"PermissionOrigin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PermissionOrigin());
         }
         catch (...)
@@ -14200,14 +14200,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PermissionSetting_get_PermissionState(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PermissionSetting* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionSetting", L"PermissionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PermissionSetting", L"PermissionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PermissionState());
         }
         catch (...)
@@ -14291,14 +14291,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_TouchPressure(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchPressure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchPressure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TouchPressure());
         }
         catch (...)
@@ -14310,12 +14310,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_TouchPressure(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchPressure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14324,6 +14318,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchPressure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.TouchPressure(param0);
@@ -14338,14 +14338,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_TouchOrientation(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchOrientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchOrientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TouchOrientation());
         }
         catch (...)
@@ -14357,12 +14357,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_TouchOrientation(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchOrientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14371,6 +14365,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchOrientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.TouchOrientation(param0);
@@ -14385,14 +14385,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_TouchMask(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchMask"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchMask"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TouchMask());
         }
         catch (...)
@@ -14404,12 +14404,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_TouchMask(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchMask"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14418,6 +14412,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchMask"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.TouchMask(param0);
@@ -14432,14 +14432,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_TouchFlags(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchFlags"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchFlags"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TouchFlags());
         }
         catch (...)
@@ -14451,12 +14451,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_TouchFlags(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchFlags"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14465,6 +14459,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchFlags"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.TouchFlags(param0);
@@ -14479,14 +14479,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_TouchContactRaw(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchContactRaw"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchContactRaw"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TouchContactRaw());
         }
         catch (...)
@@ -14498,12 +14498,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_TouchContactRaw(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchContactRaw"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14512,6 +14506,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchContactRaw"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
             self->obj.TouchContactRaw(param0);
@@ -14526,14 +14526,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_TouchContact(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchContact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchContact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TouchContact());
         }
         catch (...)
@@ -14545,12 +14545,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_TouchContact(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchContact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14559,6 +14553,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"TouchContact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
             self->obj.TouchContact(param0);
@@ -14573,14 +14573,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_Time(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"Time"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"Time"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Time());
         }
         catch (...)
@@ -14592,12 +14592,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_Time(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"Time"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14606,6 +14600,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"Time"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Time(param0);
@@ -14620,14 +14620,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_PointerKind(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PointerKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PointerKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerKind());
         }
         catch (...)
@@ -14639,12 +14639,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PointerKind(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PointerKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14653,6 +14647,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PointerKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.PointerKind(param0);
@@ -14667,14 +14667,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_PointerId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PointerId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PointerId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerId());
         }
         catch (...)
@@ -14686,12 +14686,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PointerId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PointerId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14700,6 +14694,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PointerId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.PointerId(param0);
@@ -14714,14 +14714,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_PointerFlags(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PointerFlags"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PointerFlags"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerFlags());
         }
         catch (...)
@@ -14733,12 +14733,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PointerFlags(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PointerFlags"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14747,6 +14741,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PointerFlags"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.PointerFlags(param0);
@@ -14761,14 +14761,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_PointerDeviceRect(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PointerDeviceRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PointerDeviceRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerDeviceRect());
         }
         catch (...)
@@ -14780,12 +14780,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PointerDeviceRect(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PointerDeviceRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14794,6 +14788,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PointerDeviceRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
             self->obj.PointerDeviceRect(param0);
@@ -14808,14 +14808,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_PixelLocationRaw(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PixelLocationRaw"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PixelLocationRaw"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelLocationRaw());
         }
         catch (...)
@@ -14827,12 +14827,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PixelLocationRaw(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PixelLocationRaw"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14841,6 +14835,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PixelLocationRaw"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             self->obj.PixelLocationRaw(param0);
@@ -14855,14 +14855,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_PixelLocation(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PixelLocation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PixelLocation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelLocation());
         }
         catch (...)
@@ -14874,12 +14874,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PixelLocation(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PixelLocation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14888,6 +14882,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PixelLocation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             self->obj.PixelLocation(param0);
@@ -14902,14 +14902,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_PerformanceCount(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PerformanceCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PerformanceCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PerformanceCount());
         }
         catch (...)
@@ -14921,12 +14921,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PerformanceCount(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PerformanceCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14935,6 +14929,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PerformanceCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint64_t>(arg);
 
             self->obj.PerformanceCount(param0);
@@ -14949,14 +14949,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_PenTiltY(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenTiltY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenTiltY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PenTiltY());
         }
         catch (...)
@@ -14968,12 +14968,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PenTiltY(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenTiltY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14982,6 +14976,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenTiltY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.PenTiltY(param0);
@@ -14996,14 +14996,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_PenTiltX(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenTiltX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenTiltX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PenTiltX());
         }
         catch (...)
@@ -15015,12 +15015,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PenTiltX(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenTiltX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15029,6 +15023,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenTiltX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.PenTiltX(param0);
@@ -15043,14 +15043,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_PenRotation(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenRotation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenRotation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PenRotation());
         }
         catch (...)
@@ -15062,12 +15062,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PenRotation(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenRotation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15076,6 +15070,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenRotation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.PenRotation(param0);
@@ -15090,14 +15090,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_PenPressure(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenPressure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenPressure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PenPressure());
         }
         catch (...)
@@ -15109,12 +15109,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PenPressure(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenPressure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15123,6 +15117,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenPressure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.PenPressure(param0);
@@ -15137,14 +15137,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_PenMask(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenMask"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenMask"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PenMask());
         }
         catch (...)
@@ -15156,12 +15156,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PenMask(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenMask"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15170,6 +15164,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenMask"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.PenMask(param0);
@@ -15184,14 +15184,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_PenFlags(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenFlags"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenFlags"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PenFlags());
         }
         catch (...)
@@ -15203,12 +15203,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PenFlags(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenFlags"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15217,6 +15211,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"PenFlags"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.PenFlags(param0);
@@ -15231,14 +15231,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_KeyStates(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"KeyStates"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"KeyStates"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyStates());
         }
         catch (...)
@@ -15250,12 +15250,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_KeyStates(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"KeyStates"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15264,6 +15258,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"KeyStates"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.KeyStates(param0);
@@ -15278,14 +15278,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_InputData(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"InputData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"InputData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InputData());
         }
         catch (...)
@@ -15297,12 +15297,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_InputData(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"InputData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15311,6 +15305,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"InputData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.InputData(param0);
@@ -15325,14 +15325,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_HistoryCount(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"HistoryCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"HistoryCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HistoryCount());
         }
         catch (...)
@@ -15344,12 +15344,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_HistoryCount(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"HistoryCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15358,6 +15352,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"HistoryCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.HistoryCount(param0);
@@ -15372,14 +15372,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_HimetricLocationRaw(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"HimetricLocationRaw"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"HimetricLocationRaw"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HimetricLocationRaw());
         }
         catch (...)
@@ -15391,12 +15391,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_HimetricLocationRaw(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"HimetricLocationRaw"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15405,6 +15399,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"HimetricLocationRaw"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             self->obj.HimetricLocationRaw(param0);
@@ -15419,14 +15419,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_HimetricLocation(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"HimetricLocation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"HimetricLocation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HimetricLocation());
         }
         catch (...)
@@ -15438,12 +15438,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_HimetricLocation(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"HimetricLocation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15452,6 +15446,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"HimetricLocation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             self->obj.HimetricLocation(param0);
@@ -15466,14 +15466,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_FrameId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"FrameId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"FrameId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameId());
         }
         catch (...)
@@ -15485,12 +15485,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_FrameId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"FrameId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15499,6 +15493,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"FrameId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.FrameId(param0);
@@ -15513,14 +15513,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_DisplayRect(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"DisplayRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"DisplayRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayRect());
         }
         catch (...)
@@ -15532,12 +15532,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_DisplayRect(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"DisplayRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15546,6 +15540,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"DisplayRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
             self->obj.DisplayRect(param0);
@@ -15560,14 +15560,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PointerInfo_get_ButtonChangeKind(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"ButtonChangeKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"ButtonChangeKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ButtonChangeKind());
         }
         catch (...)
@@ -15579,12 +15579,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_ButtonChangeKind(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"ButtonChangeKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15593,6 +15587,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo", L"ButtonChangeKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.ButtonChangeKind(param0);
@@ -15704,14 +15704,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PrintSettings_get_ShouldPrintSelectionOnly(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"ShouldPrintSelectionOnly"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"ShouldPrintSelectionOnly"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShouldPrintSelectionOnly());
         }
         catch (...)
@@ -15723,12 +15723,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_ShouldPrintSelectionOnly(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"ShouldPrintSelectionOnly"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15737,6 +15731,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"ShouldPrintSelectionOnly"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ShouldPrintSelectionOnly(param0);
@@ -15751,14 +15751,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PrintSettings_get_ShouldPrintHeaderAndFooter(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"ShouldPrintHeaderAndFooter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"ShouldPrintHeaderAndFooter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShouldPrintHeaderAndFooter());
         }
         catch (...)
@@ -15770,12 +15770,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_ShouldPrintHeaderAndFooter(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"ShouldPrintHeaderAndFooter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15784,6 +15778,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"ShouldPrintHeaderAndFooter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ShouldPrintHeaderAndFooter(param0);
@@ -15798,14 +15798,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PrintSettings_get_ShouldPrintBackgrounds(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"ShouldPrintBackgrounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"ShouldPrintBackgrounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShouldPrintBackgrounds());
         }
         catch (...)
@@ -15817,12 +15817,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_ShouldPrintBackgrounds(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"ShouldPrintBackgrounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15831,6 +15825,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"ShouldPrintBackgrounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ShouldPrintBackgrounds(param0);
@@ -15845,14 +15845,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PrintSettings_get_ScaleFactor(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"ScaleFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"ScaleFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ScaleFactor());
         }
         catch (...)
@@ -15864,12 +15864,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_ScaleFactor(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"ScaleFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15878,6 +15872,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"ScaleFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.ScaleFactor(param0);
@@ -15892,14 +15892,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PrintSettings_get_PageWidth(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"PageWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"PageWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageWidth());
         }
         catch (...)
@@ -15911,12 +15911,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_PageWidth(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"PageWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15925,6 +15919,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"PageWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.PageWidth(param0);
@@ -15939,14 +15939,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PrintSettings_get_PageHeight(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"PageHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"PageHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageHeight());
         }
         catch (...)
@@ -15958,12 +15958,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_PageHeight(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"PageHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15972,6 +15966,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"PageHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.PageHeight(param0);
@@ -15986,14 +15986,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PrintSettings_get_Orientation(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Orientation());
         }
         catch (...)
@@ -16005,12 +16005,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_Orientation(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16019,6 +16013,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PrintOrientation>(arg);
 
             self->obj.Orientation(param0);
@@ -16033,14 +16033,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PrintSettings_get_MarginTop(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"MarginTop"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"MarginTop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MarginTop());
         }
         catch (...)
@@ -16052,12 +16052,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_MarginTop(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"MarginTop"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16066,6 +16060,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"MarginTop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.MarginTop(param0);
@@ -16080,14 +16080,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PrintSettings_get_MarginRight(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"MarginRight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"MarginRight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MarginRight());
         }
         catch (...)
@@ -16099,12 +16099,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_MarginRight(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"MarginRight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16113,6 +16107,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"MarginRight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.MarginRight(param0);
@@ -16127,14 +16127,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PrintSettings_get_MarginLeft(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"MarginLeft"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"MarginLeft"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MarginLeft());
         }
         catch (...)
@@ -16146,12 +16146,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_MarginLeft(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"MarginLeft"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16160,6 +16154,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"MarginLeft"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.MarginLeft(param0);
@@ -16174,14 +16174,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PrintSettings_get_MarginBottom(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"MarginBottom"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"MarginBottom"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MarginBottom());
         }
         catch (...)
@@ -16193,12 +16193,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_MarginBottom(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"MarginBottom"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16207,6 +16201,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"MarginBottom"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.MarginBottom(param0);
@@ -16221,14 +16221,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PrintSettings_get_HeaderTitle(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"HeaderTitle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"HeaderTitle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HeaderTitle());
         }
         catch (...)
@@ -16240,12 +16240,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_HeaderTitle(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"HeaderTitle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16254,6 +16248,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"HeaderTitle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.HeaderTitle(param0);
@@ -16268,14 +16268,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PrintSettings_get_FooterUri(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"FooterUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"FooterUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FooterUri());
         }
         catch (...)
@@ -16287,12 +16287,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_FooterUri(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"FooterUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16301,6 +16295,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"FooterUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.FooterUri(param0);
@@ -16315,14 +16315,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PrintSettings_get_PrinterName(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"PrinterName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"PrinterName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrinterName());
         }
         catch (...)
@@ -16334,12 +16334,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_PrinterName(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"PrinterName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16348,6 +16342,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"PrinterName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.PrinterName(param0);
@@ -16362,14 +16362,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PrintSettings_get_PagesPerSide(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"PagesPerSide"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"PagesPerSide"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PagesPerSide());
         }
         catch (...)
@@ -16381,12 +16381,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_PagesPerSide(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"PagesPerSide"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16395,6 +16389,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"PagesPerSide"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.PagesPerSide(param0);
@@ -16409,14 +16409,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PrintSettings_get_PageRanges(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"PageRanges"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"PageRanges"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageRanges());
         }
         catch (...)
@@ -16428,12 +16428,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_PageRanges(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"PageRanges"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16442,6 +16436,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"PageRanges"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.PageRanges(param0);
@@ -16456,14 +16456,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PrintSettings_get_MediaSize(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"MediaSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"MediaSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MediaSize());
         }
         catch (...)
@@ -16475,12 +16475,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_MediaSize(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"MediaSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16489,6 +16483,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"MediaSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PrintMediaSize>(arg);
 
             self->obj.MediaSize(param0);
@@ -16503,14 +16503,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PrintSettings_get_Duplex(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"Duplex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"Duplex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duplex());
         }
         catch (...)
@@ -16522,12 +16522,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_Duplex(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"Duplex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16536,6 +16530,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"Duplex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PrintDuplex>(arg);
 
             self->obj.Duplex(param0);
@@ -16550,14 +16550,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PrintSettings_get_Copies(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"Copies"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"Copies"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Copies());
         }
         catch (...)
@@ -16569,12 +16569,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_Copies(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"Copies"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16583,6 +16577,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"Copies"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Copies(param0);
@@ -16597,14 +16597,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PrintSettings_get_ColorMode(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"ColorMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"ColorMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ColorMode());
         }
         catch (...)
@@ -16616,12 +16616,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_ColorMode(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"ColorMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16630,6 +16624,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"ColorMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PrintColorMode>(arg);
 
             self->obj.ColorMode(param0);
@@ -16644,14 +16644,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PrintSettings_get_Collation(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"Collation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"Collation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Collation());
         }
         catch (...)
@@ -16663,12 +16663,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_Collation(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"Collation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16677,6 +16671,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings", L"Collation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PrintCollation>(arg);
 
             self->obj.Collation(param0);
@@ -16781,14 +16781,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ProcessExtendedInfo_get_AssociatedFrameInfos(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ProcessExtendedInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ProcessExtendedInfo", L"AssociatedFrameInfos"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ProcessExtendedInfo", L"AssociatedFrameInfos"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AssociatedFrameInfos());
         }
         catch (...)
@@ -16800,14 +16800,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ProcessExtendedInfo_get_ProcessInfo(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ProcessExtendedInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ProcessExtendedInfo", L"ProcessInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ProcessExtendedInfo", L"ProcessInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProcessInfo());
         }
         catch (...)
@@ -16890,14 +16890,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ProcessFailedEventArgs_get_ProcessFailedKind(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ProcessFailedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs", L"ProcessFailedKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs", L"ProcessFailedKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProcessFailedKind());
         }
         catch (...)
@@ -16909,14 +16909,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ProcessFailedEventArgs_get_ExitCode(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ProcessFailedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs", L"ExitCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs", L"ExitCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExitCode());
         }
         catch (...)
@@ -16928,14 +16928,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ProcessFailedEventArgs_get_FrameInfosForFailedProcess(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ProcessFailedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs", L"FrameInfosForFailedProcess"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs", L"FrameInfosForFailedProcess"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameInfosForFailedProcess());
         }
         catch (...)
@@ -16947,14 +16947,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ProcessFailedEventArgs_get_ProcessDescription(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ProcessFailedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs", L"ProcessDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs", L"ProcessDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProcessDescription());
         }
         catch (...)
@@ -16966,14 +16966,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ProcessFailedEventArgs_get_Reason(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ProcessFailedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs", L"Reason"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs", L"Reason"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reason());
         }
         catch (...)
@@ -17059,14 +17059,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ProcessInfo_get_Kind(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ProcessInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ProcessInfo", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ProcessInfo", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -17078,14 +17078,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ProcessInfo_get_ProcessId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ProcessInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ProcessInfo", L"ProcessId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ProcessInfo", L"ProcessId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProcessId());
         }
         catch (...)
@@ -17172,14 +17172,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"AddBrowserExtensionAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"AddBrowserExtensionAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.AddBrowserExtensionAsync(param0));
@@ -17203,14 +17203,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"ClearBrowsingDataAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"ClearBrowsingDataAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ClearBrowsingDataAsync());
             }
             catch (...)
@@ -17221,14 +17221,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"ClearBrowsingDataAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"ClearBrowsingDataAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BrowsingDataKinds>(args, 0);
 
                 return py::convert(self->obj.ClearBrowsingDataAsync(param0));
@@ -17241,14 +17241,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"ClearBrowsingDataAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"ClearBrowsingDataAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BrowsingDataKinds>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 2);
@@ -17274,14 +17274,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"Delete", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"Delete", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Delete();
                 Py_RETURN_NONE;
             }
@@ -17304,14 +17304,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"GetNonDefaultPermissionSettingsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"GetNonDefaultPermissionSettingsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetNonDefaultPermissionSettingsAsync());
             }
             catch (...)
@@ -17333,14 +17333,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"SetPermissionStateAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"SetPermissionStateAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PermissionKind>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PermissionState>(args, 2);
@@ -17362,14 +17362,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Profile_get_PreferredColorScheme(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"PreferredColorScheme"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"PreferredColorScheme"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreferredColorScheme());
         }
         catch (...)
@@ -17381,12 +17381,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Profile_put_PreferredColorScheme(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"PreferredColorScheme"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17395,6 +17389,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"PreferredColorScheme"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PreferredColorScheme>(arg);
 
             self->obj.PreferredColorScheme(param0);
@@ -17409,14 +17409,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Profile_get_DefaultDownloadFolderPath(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"DefaultDownloadFolderPath"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"DefaultDownloadFolderPath"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultDownloadFolderPath());
         }
         catch (...)
@@ -17428,12 +17428,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Profile_put_DefaultDownloadFolderPath(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"DefaultDownloadFolderPath"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17442,6 +17436,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"DefaultDownloadFolderPath"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DefaultDownloadFolderPath(param0);
@@ -17456,14 +17456,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Profile_get_IsInPrivateModeEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"IsInPrivateModeEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"IsInPrivateModeEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsInPrivateModeEnabled());
         }
         catch (...)
@@ -17475,14 +17475,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Profile_get_ProfileName(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"ProfileName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"ProfileName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProfileName());
         }
         catch (...)
@@ -17494,14 +17494,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Profile_get_ProfilePath(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"ProfilePath"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"ProfilePath"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProfilePath());
         }
         catch (...)
@@ -17513,14 +17513,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Profile_get_PreferredTrackingPreventionLevel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"PreferredTrackingPreventionLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"PreferredTrackingPreventionLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreferredTrackingPreventionLevel());
         }
         catch (...)
@@ -17532,12 +17532,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Profile_put_PreferredTrackingPreventionLevel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"PreferredTrackingPreventionLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17546,6 +17540,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"PreferredTrackingPreventionLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2TrackingPreventionLevel>(arg);
 
             self->obj.PreferredTrackingPreventionLevel(param0);
@@ -17560,14 +17560,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Profile_get_CookieManager(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"CookieManager"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"CookieManager"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CookieManager());
         }
         catch (...)
@@ -17579,14 +17579,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Profile_get_IsPasswordAutosaveEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"IsPasswordAutosaveEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"IsPasswordAutosaveEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPasswordAutosaveEnabled());
         }
         catch (...)
@@ -17598,12 +17598,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Profile_put_IsPasswordAutosaveEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"IsPasswordAutosaveEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17612,6 +17606,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"IsPasswordAutosaveEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsPasswordAutosaveEnabled(param0);
@@ -17626,14 +17626,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Profile_get_IsGeneralAutofillEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"IsGeneralAutofillEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"IsGeneralAutofillEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsGeneralAutofillEnabled());
         }
         catch (...)
@@ -17645,12 +17645,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Profile_put_IsGeneralAutofillEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"IsGeneralAutofillEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17659,6 +17653,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"IsGeneralAutofillEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsGeneralAutofillEnabled(param0);
@@ -17673,14 +17673,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Profile_add_Deleted(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"Deleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"Deleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Deleted(param0));
@@ -17694,14 +17694,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Profile_remove_Deleted(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"Deleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"Deleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Deleted(param0);
@@ -17805,14 +17805,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs", L"Accept", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs", L"Accept", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Accept();
                 Py_RETURN_NONE;
             }
@@ -17835,14 +17835,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -17860,14 +17860,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ScriptDialogOpeningEventArgs_get_ResultText(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ScriptDialogOpeningEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs", L"ResultText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs", L"ResultText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResultText());
         }
         catch (...)
@@ -17879,12 +17879,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ScriptDialogOpeningEventArgs_put_ResultText(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ScriptDialogOpeningEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs", L"ResultText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17893,6 +17887,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs", L"ResultText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ResultText(param0);
@@ -17907,14 +17907,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ScriptDialogOpeningEventArgs_get_DefaultText(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ScriptDialogOpeningEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs", L"DefaultText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs", L"DefaultText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultText());
         }
         catch (...)
@@ -17926,14 +17926,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ScriptDialogOpeningEventArgs_get_Kind(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ScriptDialogOpeningEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -17945,14 +17945,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ScriptDialogOpeningEventArgs_get_Message(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ScriptDialogOpeningEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Message());
         }
         catch (...)
@@ -17964,14 +17964,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ScriptDialogOpeningEventArgs_get_Uri(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ScriptDialogOpeningEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -18063,14 +18063,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ServerCertificateErrorDetectedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ServerCertificateErrorDetectedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -18088,14 +18088,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ServerCertificateErrorDetectedEventArgs_get_Action(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ServerCertificateErrorDetectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ServerCertificateErrorDetectedEventArgs", L"Action"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ServerCertificateErrorDetectedEventArgs", L"Action"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Action());
         }
         catch (...)
@@ -18107,12 +18107,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ServerCertificateErrorDetectedEventArgs_put_Action(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ServerCertificateErrorDetectedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ServerCertificateErrorDetectedEventArgs", L"Action"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18121,6 +18115,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ServerCertificateErrorDetectedEventArgs", L"Action"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ServerCertificateErrorAction>(arg);
 
             self->obj.Action(param0);
@@ -18135,14 +18135,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ServerCertificateErrorDetectedEventArgs_get_ErrorStatus(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ServerCertificateErrorDetectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ServerCertificateErrorDetectedEventArgs", L"ErrorStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ServerCertificateErrorDetectedEventArgs", L"ErrorStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorStatus());
         }
         catch (...)
@@ -18154,14 +18154,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ServerCertificateErrorDetectedEventArgs_get_RequestUri(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ServerCertificateErrorDetectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ServerCertificateErrorDetectedEventArgs", L"RequestUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ServerCertificateErrorDetectedEventArgs", L"RequestUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestUri());
         }
         catch (...)
@@ -18173,14 +18173,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ServerCertificateErrorDetectedEventArgs_get_ServerCertificate(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ServerCertificateErrorDetectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ServerCertificateErrorDetectedEventArgs", L"ServerCertificate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ServerCertificateErrorDetectedEventArgs", L"ServerCertificate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServerCertificate());
         }
         catch (...)
@@ -18266,14 +18266,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Settings_get_IsZoomControlEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsZoomControlEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsZoomControlEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsZoomControlEnabled());
         }
         catch (...)
@@ -18285,12 +18285,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_IsZoomControlEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsZoomControlEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18299,6 +18293,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsZoomControlEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsZoomControlEnabled(param0);
@@ -18313,14 +18313,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Settings_get_IsWebMessageEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsWebMessageEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsWebMessageEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsWebMessageEnabled());
         }
         catch (...)
@@ -18332,12 +18332,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_IsWebMessageEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsWebMessageEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18346,6 +18340,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsWebMessageEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsWebMessageEnabled(param0);
@@ -18360,14 +18360,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Settings_get_IsStatusBarEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsStatusBarEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsStatusBarEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsStatusBarEnabled());
         }
         catch (...)
@@ -18379,12 +18379,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_IsStatusBarEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsStatusBarEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18393,6 +18387,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsStatusBarEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsStatusBarEnabled(param0);
@@ -18407,14 +18407,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Settings_get_IsScriptEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsScriptEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsScriptEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsScriptEnabled());
         }
         catch (...)
@@ -18426,12 +18426,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_IsScriptEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsScriptEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18440,6 +18434,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsScriptEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsScriptEnabled(param0);
@@ -18454,14 +18454,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Settings_get_IsBuiltInErrorPageEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsBuiltInErrorPageEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsBuiltInErrorPageEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsBuiltInErrorPageEnabled());
         }
         catch (...)
@@ -18473,12 +18473,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_IsBuiltInErrorPageEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsBuiltInErrorPageEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18487,6 +18481,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsBuiltInErrorPageEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsBuiltInErrorPageEnabled(param0);
@@ -18501,14 +18501,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Settings_get_AreHostObjectsAllowed(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"AreHostObjectsAllowed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"AreHostObjectsAllowed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreHostObjectsAllowed());
         }
         catch (...)
@@ -18520,12 +18520,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_AreHostObjectsAllowed(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"AreHostObjectsAllowed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18534,6 +18528,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"AreHostObjectsAllowed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AreHostObjectsAllowed(param0);
@@ -18548,14 +18548,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Settings_get_AreDevToolsEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"AreDevToolsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"AreDevToolsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreDevToolsEnabled());
         }
         catch (...)
@@ -18567,12 +18567,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_AreDevToolsEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"AreDevToolsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18581,6 +18575,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"AreDevToolsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AreDevToolsEnabled(param0);
@@ -18595,14 +18595,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Settings_get_AreDefaultScriptDialogsEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"AreDefaultScriptDialogsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"AreDefaultScriptDialogsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreDefaultScriptDialogsEnabled());
         }
         catch (...)
@@ -18614,12 +18614,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_AreDefaultScriptDialogsEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"AreDefaultScriptDialogsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18628,6 +18622,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"AreDefaultScriptDialogsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AreDefaultScriptDialogsEnabled(param0);
@@ -18642,14 +18642,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Settings_get_AreDefaultContextMenusEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"AreDefaultContextMenusEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"AreDefaultContextMenusEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreDefaultContextMenusEnabled());
         }
         catch (...)
@@ -18661,12 +18661,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_AreDefaultContextMenusEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"AreDefaultContextMenusEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18675,6 +18669,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"AreDefaultContextMenusEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AreDefaultContextMenusEnabled(param0);
@@ -18689,14 +18689,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Settings_get_HostObjectDispatchAdapter(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"HostObjectDispatchAdapter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"HostObjectDispatchAdapter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HostObjectDispatchAdapter());
         }
         catch (...)
@@ -18708,12 +18708,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_HostObjectDispatchAdapter(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"HostObjectDispatchAdapter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18722,6 +18716,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"HostObjectDispatchAdapter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2DispatchAdapter>(arg);
 
             self->obj.HostObjectDispatchAdapter(param0);
@@ -18736,14 +18736,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Settings_get_UserAgent(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"UserAgent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"UserAgent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserAgent());
         }
         catch (...)
@@ -18755,12 +18755,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_UserAgent(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"UserAgent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18769,6 +18763,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"UserAgent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.UserAgent(param0);
@@ -18783,14 +18783,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Settings_get_AreBrowserAcceleratorKeysEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"AreBrowserAcceleratorKeysEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"AreBrowserAcceleratorKeysEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreBrowserAcceleratorKeysEnabled());
         }
         catch (...)
@@ -18802,12 +18802,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_AreBrowserAcceleratorKeysEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"AreBrowserAcceleratorKeysEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18816,6 +18810,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"AreBrowserAcceleratorKeysEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AreBrowserAcceleratorKeysEnabled(param0);
@@ -18830,14 +18830,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Settings_get_IsPasswordAutosaveEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsPasswordAutosaveEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsPasswordAutosaveEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPasswordAutosaveEnabled());
         }
         catch (...)
@@ -18849,12 +18849,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_IsPasswordAutosaveEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsPasswordAutosaveEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18863,6 +18857,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsPasswordAutosaveEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsPasswordAutosaveEnabled(param0);
@@ -18877,14 +18877,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Settings_get_IsGeneralAutofillEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsGeneralAutofillEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsGeneralAutofillEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsGeneralAutofillEnabled());
         }
         catch (...)
@@ -18896,12 +18896,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_IsGeneralAutofillEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsGeneralAutofillEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18910,6 +18904,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsGeneralAutofillEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsGeneralAutofillEnabled(param0);
@@ -18924,14 +18924,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Settings_get_IsPinchZoomEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsPinchZoomEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsPinchZoomEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPinchZoomEnabled());
         }
         catch (...)
@@ -18943,12 +18943,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_IsPinchZoomEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsPinchZoomEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18957,6 +18951,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsPinchZoomEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsPinchZoomEnabled(param0);
@@ -18971,14 +18971,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Settings_get_IsSwipeNavigationEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsSwipeNavigationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsSwipeNavigationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSwipeNavigationEnabled());
         }
         catch (...)
@@ -18990,12 +18990,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_IsSwipeNavigationEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsSwipeNavigationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19004,6 +18998,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsSwipeNavigationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsSwipeNavigationEnabled(param0);
@@ -19018,14 +19018,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Settings_get_HiddenPdfToolbarItems(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"HiddenPdfToolbarItems"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"HiddenPdfToolbarItems"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HiddenPdfToolbarItems());
         }
         catch (...)
@@ -19037,12 +19037,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_HiddenPdfToolbarItems(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"HiddenPdfToolbarItems"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19051,6 +19045,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"HiddenPdfToolbarItems"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PdfToolbarItems>(arg);
 
             self->obj.HiddenPdfToolbarItems(param0);
@@ -19065,14 +19065,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Settings_get_IsReputationCheckingRequired(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsReputationCheckingRequired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsReputationCheckingRequired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsReputationCheckingRequired());
         }
         catch (...)
@@ -19084,12 +19084,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_IsReputationCheckingRequired(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsReputationCheckingRequired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19098,6 +19092,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Settings", L"IsReputationCheckingRequired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsReputationCheckingRequired(param0);
@@ -19203,14 +19203,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2SharedBuffer", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2SharedBuffer", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -19233,14 +19233,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2SharedBuffer", L"OpenStream", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2SharedBuffer", L"OpenStream", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.OpenStream());
             }
             catch (...)
@@ -19258,14 +19258,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2SharedBuffer_get_Size(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2SharedBuffer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2SharedBuffer", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2SharedBuffer", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -19277,14 +19277,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2SharedBuffer_get_Buffer(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2SharedBuffer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2SharedBuffer", L"Buffer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2SharedBuffer", L"Buffer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Buffer());
         }
         catch (...)
@@ -19390,14 +19390,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2SourceChangedEventArgs_get_IsNewDocument(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2SourceChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs", L"IsNewDocument"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs", L"IsNewDocument"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsNewDocument());
         }
         catch (...)
@@ -19483,14 +19483,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs", L"TryGetWebMessageAsString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs", L"TryGetWebMessageAsString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryGetWebMessageAsString());
             }
             catch (...)
@@ -19508,14 +19508,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WebMessageReceivedEventArgs_get_Source(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebMessageReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -19527,14 +19527,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WebMessageReceivedEventArgs_get_WebMessageAsJson(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebMessageReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs", L"WebMessageAsJson"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs", L"WebMessageAsJson"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WebMessageAsJson());
         }
         catch (...)
@@ -19546,14 +19546,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WebMessageReceivedEventArgs_get_AdditionalObjects(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebMessageReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs", L"AdditionalObjects"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs", L"AdditionalObjects"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AdditionalObjects());
         }
         catch (...)
@@ -19638,14 +19638,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WebResourceRequest_get_Uri(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -19657,12 +19657,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2WebResourceRequest_put_Uri(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19671,6 +19665,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Uri(param0);
@@ -19685,14 +19685,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WebResourceRequest_get_Method(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest", L"Method"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest", L"Method"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Method());
         }
         catch (...)
@@ -19704,12 +19704,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2WebResourceRequest_put_Method(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest", L"Method"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19718,6 +19712,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest", L"Method"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Method(param0);
@@ -19732,14 +19732,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WebResourceRequest_get_Content(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest", L"Content"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest", L"Content"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Content());
         }
         catch (...)
@@ -19751,12 +19751,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2WebResourceRequest_put_Content(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest", L"Content"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19765,6 +19759,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest", L"Content"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(arg);
 
             self->obj.Content(param0);
@@ -19779,14 +19779,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WebResourceRequest_get_Headers(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest", L"Headers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest", L"Headers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Headers());
         }
         catch (...)
@@ -19875,14 +19875,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -19900,14 +19900,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WebResourceRequestedEventArgs_get_Response(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs", L"Response"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs", L"Response"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Response());
         }
         catch (...)
@@ -19919,12 +19919,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2WebResourceRequestedEventArgs_put_Response(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs", L"Response"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19933,6 +19927,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs", L"Response"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponse>(arg);
 
             self->obj.Response(param0);
@@ -19947,14 +19947,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WebResourceRequestedEventArgs_get_Request(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -19966,14 +19966,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WebResourceRequestedEventArgs_get_ResourceContext(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs", L"ResourceContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs", L"ResourceContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceContext());
         }
         catch (...)
@@ -20058,14 +20058,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WebResourceResponse_get_StatusCode(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponse* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponse", L"StatusCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponse", L"StatusCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StatusCode());
         }
         catch (...)
@@ -20077,12 +20077,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2WebResourceResponse_put_StatusCode(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponse* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponse", L"StatusCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20091,6 +20085,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponse", L"StatusCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.StatusCode(param0);
@@ -20105,14 +20105,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WebResourceResponse_get_ReasonPhrase(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponse* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponse", L"ReasonPhrase"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponse", L"ReasonPhrase"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReasonPhrase());
         }
         catch (...)
@@ -20124,12 +20124,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2WebResourceResponse_put_ReasonPhrase(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponse* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponse", L"ReasonPhrase"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20138,6 +20132,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponse", L"ReasonPhrase"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ReasonPhrase(param0);
@@ -20152,14 +20152,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WebResourceResponse_get_Content(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponse* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponse", L"Content"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponse", L"Content"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Content());
         }
         catch (...)
@@ -20171,12 +20171,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2WebResourceResponse_put_Content(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponse* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponse", L"Content"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20185,6 +20179,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponse", L"Content"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(arg);
 
             self->obj.Content(param0);
@@ -20199,14 +20199,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WebResourceResponse_get_Headers(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponse* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponse", L"Headers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponse", L"Headers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Headers());
         }
         catch (...)
@@ -20291,14 +20291,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WebResourceResponseReceivedEventArgs_get_Request(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponseReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponseReceivedEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponseReceivedEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -20310,14 +20310,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WebResourceResponseReceivedEventArgs_get_Response(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponseReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponseReceivedEventArgs", L"Response"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponseReceivedEventArgs", L"Response"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Response());
         }
         catch (...)
@@ -20404,14 +20404,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponseView", L"GetContentAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponseView", L"GetContentAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetContentAsync());
             }
             catch (...)
@@ -20429,14 +20429,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WebResourceResponseView_get_Headers(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponseView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponseView", L"Headers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponseView", L"Headers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Headers());
         }
         catch (...)
@@ -20448,14 +20448,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WebResourceResponseView_get_ReasonPhrase(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponseView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponseView", L"ReasonPhrase"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponseView", L"ReasonPhrase"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReasonPhrase());
         }
         catch (...)
@@ -20467,14 +20467,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WebResourceResponseView_get_StatusCode(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponseView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponseView", L"StatusCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponseView", L"StatusCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StatusCode());
         }
         catch (...)
@@ -20559,14 +20559,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WindowFeatures_get_HasPosition(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WindowFeatures* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WindowFeatures", L"HasPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WindowFeatures", L"HasPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasPosition());
         }
         catch (...)
@@ -20578,14 +20578,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WindowFeatures_get_HasSize(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WindowFeatures* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WindowFeatures", L"HasSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WindowFeatures", L"HasSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasSize());
         }
         catch (...)
@@ -20597,14 +20597,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WindowFeatures_get_Height(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WindowFeatures* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WindowFeatures", L"Height"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WindowFeatures", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Height());
         }
         catch (...)
@@ -20616,14 +20616,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WindowFeatures_get_Left(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WindowFeatures* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WindowFeatures", L"Left"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WindowFeatures", L"Left"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Left());
         }
         catch (...)
@@ -20635,14 +20635,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WindowFeatures_get_ShouldDisplayMenuBar(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WindowFeatures* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WindowFeatures", L"ShouldDisplayMenuBar"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WindowFeatures", L"ShouldDisplayMenuBar"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShouldDisplayMenuBar());
         }
         catch (...)
@@ -20654,14 +20654,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WindowFeatures_get_ShouldDisplayScrollBars(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WindowFeatures* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WindowFeatures", L"ShouldDisplayScrollBars"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WindowFeatures", L"ShouldDisplayScrollBars"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShouldDisplayScrollBars());
         }
         catch (...)
@@ -20673,14 +20673,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WindowFeatures_get_ShouldDisplayStatus(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WindowFeatures* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WindowFeatures", L"ShouldDisplayStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WindowFeatures", L"ShouldDisplayStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShouldDisplayStatus());
         }
         catch (...)
@@ -20692,14 +20692,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WindowFeatures_get_ShouldDisplayToolbar(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WindowFeatures* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WindowFeatures", L"ShouldDisplayToolbar"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WindowFeatures", L"ShouldDisplayToolbar"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShouldDisplayToolbar());
         }
         catch (...)
@@ -20711,14 +20711,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WindowFeatures_get_Top(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WindowFeatures* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WindowFeatures", L"Top"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WindowFeatures", L"Top"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Top());
         }
         catch (...)
@@ -20730,14 +20730,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WindowFeatures_get_Width(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WindowFeatures* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WindowFeatures", L"Width"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2WindowFeatures", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Width());
         }
         catch (...)
@@ -20832,14 +20832,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.ICoreWebView2DispatchAdapter", L"Clean", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.ICoreWebView2DispatchAdapter", L"Clean", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clean();
                 Py_RETURN_NONE;
             }
@@ -20862,14 +20862,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.ICoreWebView2DispatchAdapter", L"UnwrapObject", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.ICoreWebView2DispatchAdapter", L"UnwrapObject", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 return py::convert(self->obj.UnwrapObject(param0));
@@ -20893,14 +20893,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.ICoreWebView2DispatchAdapter", L"WrapNamedObject", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.ICoreWebView2DispatchAdapter", L"WrapNamedObject", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2DispatchAdapter>(args, 1);
 
@@ -20925,14 +20925,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.ICoreWebView2DispatchAdapter", L"WrapObject", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.ICoreWebView2DispatchAdapter", L"WrapObject", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2DispatchAdapter>(args, 1);
 

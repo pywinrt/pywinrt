@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* ErrorReceivedEventArgs_get_Error(py::wrapper::Windows::Devices::SerialCommunication::ErrorReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.ErrorReceivedEventArgs", L"Error"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.ErrorReceivedEventArgs", L"Error"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Error());
         }
         catch (...)
@@ -113,14 +113,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* PinChangedEventArgs_get_PinChange(py::wrapper::Windows::Devices::SerialCommunication::PinChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.PinChangedEventArgs", L"PinChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.PinChangedEventArgs", L"PinChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PinChange());
         }
         catch (...)
@@ -206,14 +206,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -236,14 +236,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::SerialCommunication::SerialDevice::FromIdAsync(param0));
@@ -267,14 +267,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::SerialCommunication::SerialDevice::GetDeviceSelector());
             }
             catch (...)
@@ -285,14 +285,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"GetDeviceSelector", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"GetDeviceSelector", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::SerialCommunication::SerialDevice::GetDeviceSelector(param0));
@@ -316,14 +316,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"GetDeviceSelectorFromUsbVidPid", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"GetDeviceSelectorFromUsbVidPid", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
@@ -344,14 +344,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_get_IsDataTerminalReadyEnabled(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"IsDataTerminalReadyEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"IsDataTerminalReadyEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDataTerminalReadyEnabled());
         }
         catch (...)
@@ -363,12 +363,6 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static int SerialDevice_put_IsDataTerminalReadyEnabled(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"IsDataTerminalReadyEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -377,6 +371,12 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"IsDataTerminalReadyEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsDataTerminalReadyEnabled(param0);
@@ -391,14 +391,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_get_DataBits(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"DataBits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"DataBits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DataBits());
         }
         catch (...)
@@ -410,12 +410,6 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static int SerialDevice_put_DataBits(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"DataBits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -424,6 +418,12 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"DataBits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint16_t>(arg);
 
             self->obj.DataBits(param0);
@@ -438,14 +438,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_get_Handshake(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"Handshake"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"Handshake"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handshake());
         }
         catch (...)
@@ -457,12 +457,6 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static int SerialDevice_put_Handshake(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"Handshake"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -471,6 +465,12 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"Handshake"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::SerialCommunication::SerialHandshake>(arg);
 
             self->obj.Handshake(param0);
@@ -485,14 +485,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_get_BreakSignalState(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"BreakSignalState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"BreakSignalState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BreakSignalState());
         }
         catch (...)
@@ -504,12 +504,6 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static int SerialDevice_put_BreakSignalState(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"BreakSignalState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -518,6 +512,12 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"BreakSignalState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.BreakSignalState(param0);
@@ -532,14 +532,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_get_BaudRate(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"BaudRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"BaudRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaudRate());
         }
         catch (...)
@@ -551,12 +551,6 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static int SerialDevice_put_BaudRate(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"BaudRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -565,6 +559,12 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"BaudRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.BaudRate(param0);
@@ -579,14 +579,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_get_WriteTimeout(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"WriteTimeout"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"WriteTimeout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WriteTimeout());
         }
         catch (...)
@@ -598,12 +598,6 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static int SerialDevice_put_WriteTimeout(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"WriteTimeout"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -612,6 +606,12 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"WriteTimeout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.WriteTimeout(param0);
@@ -626,14 +626,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_get_StopBits(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"StopBits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"StopBits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StopBits());
         }
         catch (...)
@@ -645,12 +645,6 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static int SerialDevice_put_StopBits(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"StopBits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -659,6 +653,12 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"StopBits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::SerialCommunication::SerialStopBitCount>(arg);
 
             self->obj.StopBits(param0);
@@ -673,14 +673,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_get_ReadTimeout(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"ReadTimeout"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"ReadTimeout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReadTimeout());
         }
         catch (...)
@@ -692,12 +692,6 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static int SerialDevice_put_ReadTimeout(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"ReadTimeout"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -706,6 +700,12 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"ReadTimeout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.ReadTimeout(param0);
@@ -720,14 +720,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_get_Parity(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"Parity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"Parity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parity());
         }
         catch (...)
@@ -739,12 +739,6 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static int SerialDevice_put_Parity(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"Parity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -753,6 +747,12 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"Parity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::SerialCommunication::SerialParity>(arg);
 
             self->obj.Parity(param0);
@@ -767,14 +767,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_get_IsRequestToSendEnabled(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"IsRequestToSendEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"IsRequestToSendEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRequestToSendEnabled());
         }
         catch (...)
@@ -786,12 +786,6 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static int SerialDevice_put_IsRequestToSendEnabled(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"IsRequestToSendEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -800,6 +794,12 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"IsRequestToSendEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsRequestToSendEnabled(param0);
@@ -814,14 +814,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_get_BytesReceived(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"BytesReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"BytesReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BytesReceived());
         }
         catch (...)
@@ -833,14 +833,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_get_CarrierDetectState(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"CarrierDetectState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"CarrierDetectState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CarrierDetectState());
         }
         catch (...)
@@ -852,14 +852,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_get_ClearToSendState(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"ClearToSendState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"ClearToSendState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClearToSendState());
         }
         catch (...)
@@ -871,14 +871,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_get_DataSetReadyState(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"DataSetReadyState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"DataSetReadyState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DataSetReadyState());
         }
         catch (...)
@@ -890,14 +890,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_get_InputStream(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"InputStream"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"InputStream"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InputStream());
         }
         catch (...)
@@ -909,14 +909,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_get_OutputStream(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"OutputStream"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"OutputStream"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutputStream());
         }
         catch (...)
@@ -928,14 +928,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_get_PortName(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"PortName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"PortName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PortName());
         }
         catch (...)
@@ -947,14 +947,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_get_UsbProductId(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"UsbProductId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"UsbProductId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UsbProductId());
         }
         catch (...)
@@ -966,14 +966,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_get_UsbVendorId(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"UsbVendorId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"UsbVendorId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UsbVendorId());
         }
         catch (...)
@@ -985,14 +985,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_add_ErrorReceived(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"ErrorReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"ErrorReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::SerialCommunication::SerialDevice, winrt::Windows::Devices::SerialCommunication::ErrorReceivedEventArgs>>(arg);
 
             return py::convert(self->obj.ErrorReceived(param0));
@@ -1006,14 +1006,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_remove_ErrorReceived(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"ErrorReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"ErrorReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ErrorReceived(param0);
@@ -1028,14 +1028,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_add_PinChanged(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"PinChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"PinChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::SerialCommunication::SerialDevice, winrt::Windows::Devices::SerialCommunication::PinChangedEventArgs>>(arg);
 
             return py::convert(self->obj.PinChanged(param0));
@@ -1049,14 +1049,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_remove_PinChanged(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"PinChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.SerialCommunication.SerialDevice", L"PinChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PinChanged(param0);

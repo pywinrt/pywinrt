@@ -50,14 +50,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherExitDeferral", L"Complete", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherExitDeferral", L"Complete", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Complete();
                 Py_RETURN_NONE;
             }
@@ -150,14 +150,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"CreateTimer", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"CreateTimer", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateTimer());
             }
             catch (...)
@@ -179,14 +179,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"EnqueueEventLoopExit", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"EnqueueEventLoopExit", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.EnqueueEventLoopExit();
                 Py_RETURN_NONE;
             }
@@ -209,14 +209,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"EnsureSystemDispatcherQueue", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"EnsureSystemDispatcherQueue", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.EnsureSystemDispatcherQueue();
                 Py_RETURN_NONE;
             }
@@ -239,14 +239,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"GetForCurrentThread", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"GetForCurrentThread", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Microsoft::UI::Dispatching::DispatcherQueue::GetForCurrentThread());
             }
             catch (...)
@@ -268,14 +268,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"RunEventLoop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"RunEventLoop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RunEventLoop();
                 Py_RETURN_NONE;
             }
@@ -287,14 +287,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"RunEventLoop", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"RunEventLoop", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Dispatching::DispatcherRunOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Dispatching::DispatcherExitDeferral>(args, 1);
 
@@ -320,14 +320,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"TryEnqueue", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"TryEnqueue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Dispatching::DispatcherQueueHandler>(args, 0);
 
                 return py::convert(self->obj.TryEnqueue(param0));
@@ -340,14 +340,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"TryEnqueue", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"TryEnqueue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Dispatching::DispatcherQueuePriority>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Dispatching::DispatcherQueueHandler>(args, 1);
 
@@ -368,14 +368,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueue_get_HasThreadAccess(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"HasThreadAccess"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"HasThreadAccess"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasThreadAccess());
         }
         catch (...)
@@ -387,14 +387,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueue_add_ShutdownCompleted(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueue* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"ShutdownCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"ShutdownCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Dispatching::DispatcherQueue, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ShutdownCompleted(param0));
@@ -408,14 +408,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueue_remove_ShutdownCompleted(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueue* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"ShutdownCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"ShutdownCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ShutdownCompleted(param0);
@@ -430,14 +430,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueue_add_ShutdownStarting(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueue* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"ShutdownStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"ShutdownStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Dispatching::DispatcherQueue, winrt::Microsoft::UI::Dispatching::DispatcherQueueShutdownStartingEventArgs>>(arg);
 
             return py::convert(self->obj.ShutdownStarting(param0));
@@ -451,14 +451,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueue_remove_ShutdownStarting(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueue* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"ShutdownStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"ShutdownStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ShutdownStarting(param0);
@@ -473,14 +473,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueue_add_FrameworkShutdownCompleted(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueue* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"FrameworkShutdownCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"FrameworkShutdownCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Dispatching::DispatcherQueue, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.FrameworkShutdownCompleted(param0));
@@ -494,14 +494,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueue_remove_FrameworkShutdownCompleted(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueue* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"FrameworkShutdownCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"FrameworkShutdownCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FrameworkShutdownCompleted(param0);
@@ -516,14 +516,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueue_add_FrameworkShutdownStarting(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueue* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"FrameworkShutdownStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"FrameworkShutdownStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Dispatching::DispatcherQueue, winrt::Microsoft::UI::Dispatching::DispatcherQueueShutdownStartingEventArgs>>(arg);
 
             return py::convert(self->obj.FrameworkShutdownStarting(param0));
@@ -537,14 +537,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueue_remove_FrameworkShutdownStarting(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueue* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"FrameworkShutdownStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"FrameworkShutdownStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FrameworkShutdownStarting(param0);
@@ -672,14 +672,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueueController", L"CreateOnCurrentThread", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueueController", L"CreateOnCurrentThread", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Microsoft::UI::Dispatching::DispatcherQueueController::CreateOnCurrentThread());
             }
             catch (...)
@@ -701,14 +701,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueueController", L"CreateOnDedicatedThread", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueueController", L"CreateOnDedicatedThread", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Microsoft::UI::Dispatching::DispatcherQueueController::CreateOnDedicatedThread());
             }
             catch (...)
@@ -730,14 +730,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueueController", L"ShutdownQueue", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueueController", L"ShutdownQueue", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ShutdownQueue();
                 Py_RETURN_NONE;
             }
@@ -760,14 +760,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueueController", L"ShutdownQueueAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueueController", L"ShutdownQueueAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ShutdownQueueAsync());
             }
             catch (...)
@@ -785,14 +785,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueueController_get_DispatcherQueue(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueueController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Dispatching.DispatcherQueueController", L"DispatcherQueue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Dispatching.DispatcherQueueController", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DispatcherQueue());
         }
         catch (...)
@@ -907,14 +907,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueueShutdownStartingEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueueShutdownStartingEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1006,14 +1006,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -1036,14 +1036,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -1062,14 +1062,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueueTimer_get_IsRepeating(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueueTimer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"IsRepeating"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"IsRepeating"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRepeating());
         }
         catch (...)
@@ -1081,12 +1081,6 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static int DispatcherQueueTimer_put_IsRepeating(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueueTimer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"IsRepeating"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1095,6 +1089,12 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"IsRepeating"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsRepeating(param0);
@@ -1109,14 +1109,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueueTimer_get_Interval(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueueTimer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"Interval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"Interval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Interval());
         }
         catch (...)
@@ -1128,12 +1128,6 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static int DispatcherQueueTimer_put_Interval(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueueTimer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"Interval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1142,6 +1136,12 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"Interval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.Interval(param0);
@@ -1156,14 +1156,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueueTimer_get_IsRunning(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueueTimer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"IsRunning"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"IsRunning"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRunning());
         }
         catch (...)
@@ -1175,14 +1175,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueueTimer_add_Tick(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueueTimer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"Tick"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"Tick"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Dispatching::DispatcherQueueTimer, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Tick(param0));
@@ -1196,14 +1196,14 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueueTimer_remove_Tick(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueueTimer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"Tick"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"Tick"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Tick(param0);

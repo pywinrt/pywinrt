@@ -16,14 +16,14 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
 
     static PyObject* ClosedCaptionProperties_get_BackgroundColor(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"BackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"BackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::BackgroundColor());
         }
         catch (...)
@@ -35,14 +35,14 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
 
     static PyObject* ClosedCaptionProperties_get_BackgroundOpacity(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"BackgroundOpacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"BackgroundOpacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::BackgroundOpacity());
         }
         catch (...)
@@ -54,14 +54,14 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
 
     static PyObject* ClosedCaptionProperties_get_ComputedBackgroundColor(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"ComputedBackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"ComputedBackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::ComputedBackgroundColor());
         }
         catch (...)
@@ -73,14 +73,14 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
 
     static PyObject* ClosedCaptionProperties_get_ComputedFontColor(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"ComputedFontColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"ComputedFontColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::ComputedFontColor());
         }
         catch (...)
@@ -92,14 +92,14 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
 
     static PyObject* ClosedCaptionProperties_get_ComputedRegionColor(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"ComputedRegionColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"ComputedRegionColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::ComputedRegionColor());
         }
         catch (...)
@@ -111,14 +111,14 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
 
     static PyObject* ClosedCaptionProperties_get_FontColor(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"FontColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"FontColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::FontColor());
         }
         catch (...)
@@ -130,14 +130,14 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
 
     static PyObject* ClosedCaptionProperties_get_FontEffect(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"FontEffect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"FontEffect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::FontEffect());
         }
         catch (...)
@@ -149,14 +149,14 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
 
     static PyObject* ClosedCaptionProperties_get_FontOpacity(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"FontOpacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"FontOpacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::FontOpacity());
         }
         catch (...)
@@ -168,14 +168,14 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
 
     static PyObject* ClosedCaptionProperties_get_FontSize(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"FontSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"FontSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::FontSize());
         }
         catch (...)
@@ -187,14 +187,14 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
 
     static PyObject* ClosedCaptionProperties_get_FontStyle(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"FontStyle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"FontStyle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::FontStyle());
         }
         catch (...)
@@ -206,14 +206,14 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
 
     static PyObject* ClosedCaptionProperties_get_RegionColor(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"RegionColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"RegionColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::RegionColor());
         }
         catch (...)
@@ -225,14 +225,14 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
 
     static PyObject* ClosedCaptionProperties_get_RegionOpacity(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"RegionOpacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"RegionOpacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::RegionOpacity());
         }
         catch (...)
@@ -244,14 +244,14 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
 
     static PyObject* ClosedCaptionProperties_add_PropertiesChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"PropertiesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"PropertiesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::PropertiesChanged(param0));
@@ -265,14 +265,14 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
 
     static PyObject* ClosedCaptionProperties_remove_PropertiesChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"PropertiesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties", L"PropertiesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::PropertiesChanged(param0);

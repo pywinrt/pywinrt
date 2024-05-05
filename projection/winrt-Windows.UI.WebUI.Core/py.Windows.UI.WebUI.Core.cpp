@@ -28,14 +28,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::WebUI::Core::WebUICommandBar::GetForCurrentView());
             }
             catch (...)
@@ -53,14 +53,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBar_get_Visible(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"Visible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"Visible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Visible());
         }
         catch (...)
@@ -72,12 +72,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBar_put_Visible(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"Visible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -86,6 +80,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"Visible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Visible(param0);
@@ -100,14 +100,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBar_get_Opacity(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"Opacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Opacity());
         }
         catch (...)
@@ -119,12 +119,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBar_put_Opacity(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"Opacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -133,6 +127,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Opacity(param0);
@@ -147,14 +147,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBar_get_IsOpen(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"IsOpen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"IsOpen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsOpen());
         }
         catch (...)
@@ -166,12 +166,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBar_put_IsOpen(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"IsOpen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -180,6 +174,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"IsOpen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsOpen(param0);
@@ -194,14 +194,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBar_get_ForegroundColor(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"ForegroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"ForegroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ForegroundColor());
         }
         catch (...)
@@ -213,12 +213,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBar_put_ForegroundColor(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"ForegroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -227,6 +221,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"ForegroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.ForegroundColor(param0);
@@ -241,14 +241,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBar_get_ClosedDisplayMode(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"ClosedDisplayMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"ClosedDisplayMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClosedDisplayMode());
         }
         catch (...)
@@ -260,12 +260,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBar_put_ClosedDisplayMode(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"ClosedDisplayMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -274,6 +268,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"ClosedDisplayMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::WebUI::Core::WebUICommandBarClosedDisplayMode>(arg);
 
             self->obj.ClosedDisplayMode(param0);
@@ -288,14 +288,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBar_get_BackgroundColor(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"BackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"BackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BackgroundColor());
         }
         catch (...)
@@ -307,12 +307,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBar_put_BackgroundColor(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"BackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -321,6 +315,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"BackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.BackgroundColor(param0);
@@ -335,14 +335,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBar_get_PrimaryCommands(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"PrimaryCommands"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"PrimaryCommands"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrimaryCommands());
         }
         catch (...)
@@ -354,14 +354,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBar_get_SecondaryCommands(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"SecondaryCommands"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"SecondaryCommands"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SecondaryCommands());
         }
         catch (...)
@@ -373,14 +373,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBar_get_Size(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -392,14 +392,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBar_add_MenuClosed(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"MenuClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"MenuClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::WebUI::Core::MenuClosedEventHandler>(arg);
 
             return py::convert(self->obj.MenuClosed(param0));
@@ -413,14 +413,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBar_remove_MenuClosed(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"MenuClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"MenuClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.MenuClosed(param0);
@@ -435,14 +435,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBar_add_MenuOpened(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"MenuOpened"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"MenuOpened"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::WebUI::Core::MenuOpenedEventHandler>(arg);
 
             return py::convert(self->obj.MenuOpened(param0));
@@ -456,14 +456,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBar_remove_MenuOpened(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"MenuOpened"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"MenuOpened"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.MenuOpened(param0);
@@ -478,14 +478,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBar_add_SizeChanged(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"SizeChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"SizeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::WebUI::Core::SizeChangedEventHandler>(arg);
 
             return py::convert(self->obj.SizeChanged(param0));
@@ -499,14 +499,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBar_remove_SizeChanged(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"SizeChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.Core.WebUICommandBar", L"SizeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SizeChanged(param0);
@@ -668,14 +668,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBarBitmapIcon_get_Uri(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarBitmapIcon* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarBitmapIcon", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarBitmapIcon", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -687,12 +687,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBarBitmapIcon_put_Uri(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarBitmapIcon* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarBitmapIcon", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -701,6 +695,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarBitmapIcon", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.Uri(param0);
@@ -807,14 +807,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBarConfirmationButton_get_Text(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarConfirmationButton", L"Text"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarConfirmationButton", L"Text"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Text());
         }
         catch (...)
@@ -826,12 +826,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBarConfirmationButton_put_Text(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarConfirmationButton", L"Text"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -840,6 +834,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarConfirmationButton", L"Text"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Text(param0);
@@ -854,14 +854,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBarConfirmationButton_add_ItemInvoked(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.Core.WebUICommandBarConfirmationButton", L"ItemInvoked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.Core.WebUICommandBarConfirmationButton", L"ItemInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton, winrt::Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs>>(arg);
 
             return py::convert(self->obj.ItemInvoked(param0));
@@ -875,14 +875,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBarConfirmationButton_remove_ItemInvoked(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.Core.WebUICommandBarConfirmationButton", L"ItemInvoked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.Core.WebUICommandBarConfirmationButton", L"ItemInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ItemInvoked(param0);
@@ -991,14 +991,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBarIconButton_get_Label(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarIconButton* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Label());
         }
         catch (...)
@@ -1010,12 +1010,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBarIconButton_put_Label(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarIconButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1024,6 +1018,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Label(param0);
@@ -1038,14 +1038,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBarIconButton_get_IsToggleButton(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarIconButton* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"IsToggleButton"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"IsToggleButton"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsToggleButton());
         }
         catch (...)
@@ -1057,12 +1057,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBarIconButton_put_IsToggleButton(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarIconButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"IsToggleButton"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1071,6 +1065,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"IsToggleButton"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsToggleButton(param0);
@@ -1085,14 +1085,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBarIconButton_get_IsChecked(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarIconButton* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"IsChecked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"IsChecked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsChecked());
         }
         catch (...)
@@ -1104,12 +1104,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBarIconButton_put_IsChecked(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarIconButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"IsChecked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1118,6 +1112,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"IsChecked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsChecked(param0);
@@ -1132,14 +1132,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBarIconButton_get_Icon(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarIconButton* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"Icon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"Icon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Icon());
         }
         catch (...)
@@ -1151,12 +1151,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBarIconButton_put_Icon(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarIconButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"Icon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1165,6 +1159,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"Icon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon>(arg);
 
             self->obj.Icon(param0);
@@ -1179,14 +1179,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBarIconButton_get_Enabled(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarIconButton* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"Enabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"Enabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Enabled());
         }
         catch (...)
@@ -1198,12 +1198,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBarIconButton_put_Enabled(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarIconButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"Enabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1212,6 +1206,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"Enabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Enabled(param0);
@@ -1226,14 +1226,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBarIconButton_add_ItemInvoked(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarIconButton* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"ItemInvoked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"ItemInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WebUI::Core::WebUICommandBarIconButton, winrt::Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs>>(arg);
 
             return py::convert(self->obj.ItemInvoked(param0));
@@ -1247,14 +1247,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBarIconButton_remove_ItemInvoked(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarIconButton* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"ItemInvoked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.WebUI.Core.WebUICommandBarIconButton", L"ItemInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ItemInvoked(param0);
@@ -1345,14 +1345,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBarItemInvokedEventArgs_get_IsPrimaryCommand(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarItemInvokedEventArgs", L"IsPrimaryCommand"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarItemInvokedEventArgs", L"IsPrimaryCommand"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPrimaryCommand());
         }
         catch (...)
@@ -1434,14 +1434,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBarSizeChangedEventArgs_get_Size(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarSizeChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarSizeChangedEventArgs", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarSizeChangedEventArgs", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -1560,14 +1560,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* WebUICommandBarSymbolIcon_get_Symbol(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarSymbolIcon* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarSymbolIcon", L"Symbol"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarSymbolIcon", L"Symbol"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Symbol());
         }
         catch (...)
@@ -1579,12 +1579,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBarSymbolIcon_put_Symbol(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarSymbolIcon* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarSymbolIcon", L"Symbol"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1593,6 +1587,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WebUI.Core.WebUICommandBarSymbolIcon", L"Symbol"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Symbol(param0);

@@ -20,14 +20,14 @@ namespace py::cpp::Windows::UI::Notifications::Preview
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.Preview.ToastOcclusionManagerPreview", L"SetToastWindowMargin", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.Preview.ToastOcclusionManagerPreview", L"SetToastWindowMargin", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowId>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 

@@ -46,14 +46,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentAddress_get_SortingCode(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"SortingCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"SortingCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SortingCode());
         }
         catch (...)
@@ -65,12 +65,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentAddress_put_SortingCode(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"SortingCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -79,6 +73,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"SortingCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.SortingCode(param0);
@@ -93,14 +93,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentAddress_get_Region(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"Region"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"Region"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Region());
         }
         catch (...)
@@ -112,12 +112,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentAddress_put_Region(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"Region"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -126,6 +120,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"Region"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Region(param0);
@@ -140,14 +140,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentAddress_get_Recipient(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"Recipient"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"Recipient"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Recipient());
         }
         catch (...)
@@ -159,12 +159,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentAddress_put_Recipient(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"Recipient"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -173,6 +167,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"Recipient"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Recipient(param0);
@@ -187,14 +187,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentAddress_get_PostalCode(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"PostalCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"PostalCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PostalCode());
         }
         catch (...)
@@ -206,12 +206,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentAddress_put_PostalCode(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"PostalCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -220,6 +214,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"PostalCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.PostalCode(param0);
@@ -234,14 +234,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentAddress_get_PhoneNumber(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"PhoneNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"PhoneNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhoneNumber());
         }
         catch (...)
@@ -253,12 +253,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentAddress_put_PhoneNumber(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"PhoneNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -267,6 +261,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"PhoneNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.PhoneNumber(param0);
@@ -281,14 +281,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentAddress_get_Organization(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"Organization"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"Organization"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Organization());
         }
         catch (...)
@@ -300,12 +300,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentAddress_put_Organization(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"Organization"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -314,6 +308,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"Organization"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Organization(param0);
@@ -328,14 +328,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentAddress_get_LanguageCode(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"LanguageCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"LanguageCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LanguageCode());
         }
         catch (...)
@@ -347,12 +347,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentAddress_put_LanguageCode(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"LanguageCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -361,6 +355,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"LanguageCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.LanguageCode(param0);
@@ -375,14 +375,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentAddress_get_DependentLocality(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"DependentLocality"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"DependentLocality"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DependentLocality());
         }
         catch (...)
@@ -394,12 +394,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentAddress_put_DependentLocality(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"DependentLocality"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -408,6 +402,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"DependentLocality"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DependentLocality(param0);
@@ -422,14 +422,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentAddress_get_Country(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"Country"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"Country"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Country());
         }
         catch (...)
@@ -441,12 +441,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentAddress_put_Country(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"Country"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -455,6 +449,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"Country"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Country(param0);
@@ -469,14 +469,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentAddress_get_City(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"City"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"City"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.City());
         }
         catch (...)
@@ -488,12 +488,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentAddress_put_City(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"City"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -502,6 +496,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"City"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.City(param0);
@@ -516,14 +516,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentAddress_get_AddressLines(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"AddressLines"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"AddressLines"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AddressLines());
         }
         catch (...)
@@ -535,12 +535,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentAddress_put_AddressLines(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"AddressLines"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -549,6 +543,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"AddressLines"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring>>(arg);
 
             self->obj.AddressLines(param0);
@@ -563,14 +563,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentAddress_get_Properties(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentAddress", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -687,14 +687,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentCanMakePaymentResult_get_Status(py::wrapper::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -818,14 +818,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentCurrencyAmount_get_Value(py::wrapper::Windows::ApplicationModel::Payments::PaymentCurrencyAmount* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentCurrencyAmount", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentCurrencyAmount", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -837,12 +837,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentCurrencyAmount_put_Value(py::wrapper::Windows::ApplicationModel::Payments::PaymentCurrencyAmount* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentCurrencyAmount", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -851,6 +845,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentCurrencyAmount", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Value(param0);
@@ -865,14 +865,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentCurrencyAmount_get_CurrencySystem(py::wrapper::Windows::ApplicationModel::Payments::PaymentCurrencyAmount* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentCurrencyAmount", L"CurrencySystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentCurrencyAmount", L"CurrencySystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrencySystem());
         }
         catch (...)
@@ -884,12 +884,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentCurrencyAmount_put_CurrencySystem(py::wrapper::Windows::ApplicationModel::Payments::PaymentCurrencyAmount* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentCurrencyAmount", L"CurrencySystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -898,6 +892,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentCurrencyAmount", L"CurrencySystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.CurrencySystem(param0);
@@ -912,14 +912,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentCurrencyAmount_get_Currency(py::wrapper::Windows::ApplicationModel::Payments::PaymentCurrencyAmount* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentCurrencyAmount", L"Currency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentCurrencyAmount", L"Currency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Currency());
         }
         catch (...)
@@ -931,12 +931,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentCurrencyAmount_put_Currency(py::wrapper::Windows::ApplicationModel::Payments::PaymentCurrencyAmount* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentCurrencyAmount", L"Currency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -945,6 +939,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentCurrencyAmount", L"Currency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Currency(param0);
@@ -1084,14 +1084,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentDetails_get_Total(py::wrapper::Windows::ApplicationModel::Payments::PaymentDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetails", L"Total"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetails", L"Total"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Total());
         }
         catch (...)
@@ -1103,12 +1103,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentDetails_put_Total(py::wrapper::Windows::ApplicationModel::Payments::PaymentDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetails", L"Total"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1117,6 +1111,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetails", L"Total"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentItem>(arg);
 
             self->obj.Total(param0);
@@ -1131,14 +1131,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentDetails_get_ShippingOptions(py::wrapper::Windows::ApplicationModel::Payments::PaymentDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetails", L"ShippingOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetails", L"ShippingOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShippingOptions());
         }
         catch (...)
@@ -1150,12 +1150,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentDetails_put_ShippingOptions(py::wrapper::Windows::ApplicationModel::Payments::PaymentDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetails", L"ShippingOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1164,6 +1158,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetails", L"ShippingOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentShippingOption>>(arg);
 
             self->obj.ShippingOptions(param0);
@@ -1178,14 +1178,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentDetails_get_Modifiers(py::wrapper::Windows::ApplicationModel::Payments::PaymentDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetails", L"Modifiers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetails", L"Modifiers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Modifiers());
         }
         catch (...)
@@ -1197,12 +1197,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentDetails_put_Modifiers(py::wrapper::Windows::ApplicationModel::Payments::PaymentDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetails", L"Modifiers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1211,6 +1205,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetails", L"Modifiers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier>>(arg);
 
             self->obj.Modifiers(param0);
@@ -1225,14 +1225,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentDetails_get_DisplayItems(py::wrapper::Windows::ApplicationModel::Payments::PaymentDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetails", L"DisplayItems"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetails", L"DisplayItems"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayItems());
         }
         catch (...)
@@ -1244,12 +1244,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentDetails_put_DisplayItems(py::wrapper::Windows::ApplicationModel::Payments::PaymentDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetails", L"DisplayItems"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1258,6 +1252,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetails", L"DisplayItems"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentItem>>(arg);
 
             self->obj.DisplayItems(param0);
@@ -1405,14 +1405,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentDetailsModifier_get_AdditionalDisplayItems(py::wrapper::Windows::ApplicationModel::Payments::PaymentDetailsModifier* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetailsModifier", L"AdditionalDisplayItems"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetailsModifier", L"AdditionalDisplayItems"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AdditionalDisplayItems());
         }
         catch (...)
@@ -1424,14 +1424,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentDetailsModifier_get_JsonData(py::wrapper::Windows::ApplicationModel::Payments::PaymentDetailsModifier* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetailsModifier", L"JsonData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetailsModifier", L"JsonData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.JsonData());
         }
         catch (...)
@@ -1443,14 +1443,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentDetailsModifier_get_SupportedMethodIds(py::wrapper::Windows::ApplicationModel::Payments::PaymentDetailsModifier* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetailsModifier", L"SupportedMethodIds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetailsModifier", L"SupportedMethodIds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedMethodIds());
         }
         catch (...)
@@ -1462,14 +1462,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentDetailsModifier_get_Total(py::wrapper::Windows::ApplicationModel::Payments::PaymentDetailsModifier* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetailsModifier", L"Total"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentDetailsModifier", L"Total"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Total());
         }
         catch (...)
@@ -1579,14 +1579,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentItem_get_Pending(py::wrapper::Windows::ApplicationModel::Payments::PaymentItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentItem", L"Pending"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentItem", L"Pending"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Pending());
         }
         catch (...)
@@ -1598,12 +1598,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentItem_put_Pending(py::wrapper::Windows::ApplicationModel::Payments::PaymentItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentItem", L"Pending"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1612,6 +1606,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentItem", L"Pending"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Pending(param0);
@@ -1626,14 +1626,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentItem_get_Label(py::wrapper::Windows::ApplicationModel::Payments::PaymentItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentItem", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentItem", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Label());
         }
         catch (...)
@@ -1645,12 +1645,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentItem_put_Label(py::wrapper::Windows::ApplicationModel::Payments::PaymentItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentItem", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1659,6 +1653,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentItem", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Label(param0);
@@ -1673,14 +1673,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentItem_get_Amount(py::wrapper::Windows::ApplicationModel::Payments::PaymentItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentItem", L"Amount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentItem", L"Amount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Amount());
         }
         catch (...)
@@ -1692,12 +1692,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentItem_put_Amount(py::wrapper::Windows::ApplicationModel::Payments::PaymentItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentItem", L"Amount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1706,6 +1700,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentItem", L"Amount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount>(arg);
 
             self->obj.Amount(param0);
@@ -1818,14 +1818,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Payments.PaymentMediator", L"CanMakePaymentAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Payments.PaymentMediator", L"CanMakePaymentAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentRequest>(args, 0);
 
                 return py::convert(self->obj.CanMakePaymentAsync(param0));
@@ -1849,14 +1849,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Payments.PaymentMediator", L"GetSupportedMethodIdsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Payments.PaymentMediator", L"GetSupportedMethodIdsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetSupportedMethodIdsAsync());
             }
             catch (...)
@@ -1878,14 +1878,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Payments.PaymentMediator", L"SubmitPaymentRequestAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Payments.PaymentMediator", L"SubmitPaymentRequestAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentRequest>(args, 0);
 
                 return py::convert(self->obj.SubmitPaymentRequestAsync(param0));
@@ -1898,14 +1898,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Payments.PaymentMediator", L"SubmitPaymentRequestAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Payments.PaymentMediator", L"SubmitPaymentRequestAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentRequest>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedHandler>(args, 1);
 
@@ -2035,14 +2035,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentMerchantInfo_get_PackageFullName(py::wrapper::Windows::ApplicationModel::Payments::PaymentMerchantInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentMerchantInfo", L"PackageFullName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentMerchantInfo", L"PackageFullName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PackageFullName());
         }
         catch (...)
@@ -2054,14 +2054,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentMerchantInfo_get_Uri(py::wrapper::Windows::ApplicationModel::Payments::PaymentMerchantInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentMerchantInfo", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentMerchantInfo", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -2184,14 +2184,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentMethodData_get_JsonData(py::wrapper::Windows::ApplicationModel::Payments::PaymentMethodData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentMethodData", L"JsonData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentMethodData", L"JsonData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.JsonData());
         }
         catch (...)
@@ -2203,14 +2203,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentMethodData_get_SupportedMethodIds(py::wrapper::Windows::ApplicationModel::Payments::PaymentMethodData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentMethodData", L"SupportedMethodIds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentMethodData", L"SupportedMethodIds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedMethodIds());
         }
         catch (...)
@@ -2315,14 +2315,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentOptions_get_ShippingType(py::wrapper::Windows::ApplicationModel::Payments::PaymentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentOptions", L"ShippingType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentOptions", L"ShippingType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShippingType());
         }
         catch (...)
@@ -2334,12 +2334,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentOptions_put_ShippingType(py::wrapper::Windows::ApplicationModel::Payments::PaymentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentOptions", L"ShippingType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2348,6 +2342,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentOptions", L"ShippingType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentShippingType>(arg);
 
             self->obj.ShippingType(param0);
@@ -2362,14 +2362,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentOptions_get_RequestShipping(py::wrapper::Windows::ApplicationModel::Payments::PaymentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentOptions", L"RequestShipping"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentOptions", L"RequestShipping"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestShipping());
         }
         catch (...)
@@ -2381,12 +2381,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentOptions_put_RequestShipping(py::wrapper::Windows::ApplicationModel::Payments::PaymentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentOptions", L"RequestShipping"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2395,6 +2389,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentOptions", L"RequestShipping"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.RequestShipping(param0);
@@ -2409,14 +2409,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentOptions_get_RequestPayerPhoneNumber(py::wrapper::Windows::ApplicationModel::Payments::PaymentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentOptions", L"RequestPayerPhoneNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentOptions", L"RequestPayerPhoneNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestPayerPhoneNumber());
         }
         catch (...)
@@ -2428,12 +2428,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentOptions_put_RequestPayerPhoneNumber(py::wrapper::Windows::ApplicationModel::Payments::PaymentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentOptions", L"RequestPayerPhoneNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2442,6 +2436,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentOptions", L"RequestPayerPhoneNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence>(arg);
 
             self->obj.RequestPayerPhoneNumber(param0);
@@ -2456,14 +2456,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentOptions_get_RequestPayerName(py::wrapper::Windows::ApplicationModel::Payments::PaymentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentOptions", L"RequestPayerName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentOptions", L"RequestPayerName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestPayerName());
         }
         catch (...)
@@ -2475,12 +2475,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentOptions_put_RequestPayerName(py::wrapper::Windows::ApplicationModel::Payments::PaymentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentOptions", L"RequestPayerName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2489,6 +2483,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentOptions", L"RequestPayerName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence>(arg);
 
             self->obj.RequestPayerName(param0);
@@ -2503,14 +2503,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentOptions_get_RequestPayerEmail(py::wrapper::Windows::ApplicationModel::Payments::PaymentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentOptions", L"RequestPayerEmail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentOptions", L"RequestPayerEmail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestPayerEmail());
         }
         catch (...)
@@ -2522,12 +2522,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentOptions_put_RequestPayerEmail(py::wrapper::Windows::ApplicationModel::Payments::PaymentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentOptions", L"RequestPayerEmail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2536,6 +2530,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentOptions", L"RequestPayerEmail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence>(arg);
 
             self->obj.RequestPayerEmail(param0);
@@ -2703,14 +2703,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentRequest_get_Details(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequest", L"Details"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequest", L"Details"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Details());
         }
         catch (...)
@@ -2722,14 +2722,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentRequest_get_MerchantInfo(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequest", L"MerchantInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequest", L"MerchantInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MerchantInfo());
         }
         catch (...)
@@ -2741,14 +2741,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentRequest_get_MethodData(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequest", L"MethodData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequest", L"MethodData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MethodData());
         }
         catch (...)
@@ -2760,14 +2760,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentRequest_get_Options(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequest", L"Options"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequest", L"Options"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Options());
         }
         catch (...)
@@ -2779,14 +2779,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentRequest_get_Id(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequest", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequest", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -2876,14 +2876,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Payments.PaymentRequestChangedArgs", L"Acknowledge", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Payments.PaymentRequestChangedArgs", L"Acknowledge", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedResult>(args, 0);
 
                 self->obj.Acknowledge(param0);
@@ -2904,14 +2904,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentRequestChangedArgs_get_ChangeKind(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestChangedArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequestChangedArgs", L"ChangeKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequestChangedArgs", L"ChangeKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChangeKind());
         }
         catch (...)
@@ -2923,14 +2923,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentRequestChangedArgs_get_SelectedShippingOption(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestChangedArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequestChangedArgs", L"SelectedShippingOption"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequestChangedArgs", L"SelectedShippingOption"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedShippingOption());
         }
         catch (...)
@@ -2942,14 +2942,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentRequestChangedArgs_get_ShippingAddress(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestChangedArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequestChangedArgs", L"ShippingAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequestChangedArgs", L"ShippingAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShippingAddress());
         }
         catch (...)
@@ -3074,14 +3074,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentRequestChangedResult_get_UpdatedPaymentDetails(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestChangedResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequestChangedResult", L"UpdatedPaymentDetails"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequestChangedResult", L"UpdatedPaymentDetails"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UpdatedPaymentDetails());
         }
         catch (...)
@@ -3093,12 +3093,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentRequestChangedResult_put_UpdatedPaymentDetails(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestChangedResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequestChangedResult", L"UpdatedPaymentDetails"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3107,6 +3101,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequestChangedResult", L"UpdatedPaymentDetails"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentDetails>(arg);
 
             self->obj.UpdatedPaymentDetails(param0);
@@ -3121,14 +3121,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentRequestChangedResult_get_Message(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestChangedResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequestChangedResult", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequestChangedResult", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Message());
         }
         catch (...)
@@ -3140,12 +3140,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentRequestChangedResult_put_Message(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestChangedResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequestChangedResult", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3154,6 +3148,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequestChangedResult", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Message(param0);
@@ -3168,14 +3168,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentRequestChangedResult_get_ChangeAcceptedByMerchant(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestChangedResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequestChangedResult", L"ChangeAcceptedByMerchant"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequestChangedResult", L"ChangeAcceptedByMerchant"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChangeAcceptedByMerchant());
         }
         catch (...)
@@ -3187,12 +3187,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentRequestChangedResult_put_ChangeAcceptedByMerchant(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestChangedResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequestChangedResult", L"ChangeAcceptedByMerchant"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3201,6 +3195,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequestChangedResult", L"ChangeAcceptedByMerchant"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ChangeAcceptedByMerchant(param0);
@@ -3287,14 +3287,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentRequestSubmitResult_get_Response(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestSubmitResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequestSubmitResult", L"Response"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequestSubmitResult", L"Response"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Response());
         }
         catch (...)
@@ -3306,14 +3306,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentRequestSubmitResult_get_Status(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestSubmitResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequestSubmitResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentRequestSubmitResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -3400,14 +3400,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Payments.PaymentResponse", L"CompleteAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Payments.PaymentResponse", L"CompleteAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentRequestCompletionStatus>(args, 0);
 
                 return py::convert(self->obj.CompleteAsync(param0));
@@ -3427,14 +3427,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentResponse_get_PayerEmail(py::wrapper::Windows::ApplicationModel::Payments::PaymentResponse* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentResponse", L"PayerEmail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentResponse", L"PayerEmail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PayerEmail());
         }
         catch (...)
@@ -3446,14 +3446,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentResponse_get_PayerName(py::wrapper::Windows::ApplicationModel::Payments::PaymentResponse* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentResponse", L"PayerName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentResponse", L"PayerName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PayerName());
         }
         catch (...)
@@ -3465,14 +3465,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentResponse_get_PayerPhoneNumber(py::wrapper::Windows::ApplicationModel::Payments::PaymentResponse* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentResponse", L"PayerPhoneNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentResponse", L"PayerPhoneNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PayerPhoneNumber());
         }
         catch (...)
@@ -3484,14 +3484,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentResponse_get_PaymentToken(py::wrapper::Windows::ApplicationModel::Payments::PaymentResponse* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentResponse", L"PaymentToken"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentResponse", L"PaymentToken"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PaymentToken());
         }
         catch (...)
@@ -3503,14 +3503,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentResponse_get_ShippingAddress(py::wrapper::Windows::ApplicationModel::Payments::PaymentResponse* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentResponse", L"ShippingAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentResponse", L"ShippingAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShippingAddress());
         }
         catch (...)
@@ -3522,14 +3522,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentResponse_get_ShippingOption(py::wrapper::Windows::ApplicationModel::Payments::PaymentResponse* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentResponse", L"ShippingOption"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentResponse", L"ShippingOption"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShippingOption());
         }
         catch (...)
@@ -3677,14 +3677,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentShippingOption_get_Tag(py::wrapper::Windows::ApplicationModel::Payments::PaymentShippingOption* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentShippingOption", L"Tag"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentShippingOption", L"Tag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Tag());
         }
         catch (...)
@@ -3696,12 +3696,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentShippingOption_put_Tag(py::wrapper::Windows::ApplicationModel::Payments::PaymentShippingOption* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentShippingOption", L"Tag"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3710,6 +3704,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentShippingOption", L"Tag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Tag(param0);
@@ -3724,14 +3724,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentShippingOption_get_Label(py::wrapper::Windows::ApplicationModel::Payments::PaymentShippingOption* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentShippingOption", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentShippingOption", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Label());
         }
         catch (...)
@@ -3743,12 +3743,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentShippingOption_put_Label(py::wrapper::Windows::ApplicationModel::Payments::PaymentShippingOption* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentShippingOption", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3757,6 +3751,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentShippingOption", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Label(param0);
@@ -3771,14 +3771,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentShippingOption_get_IsSelected(py::wrapper::Windows::ApplicationModel::Payments::PaymentShippingOption* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentShippingOption", L"IsSelected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentShippingOption", L"IsSelected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSelected());
         }
         catch (...)
@@ -3790,12 +3790,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentShippingOption_put_IsSelected(py::wrapper::Windows::ApplicationModel::Payments::PaymentShippingOption* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentShippingOption", L"IsSelected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3804,6 +3798,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentShippingOption", L"IsSelected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsSelected(param0);
@@ -3818,14 +3818,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentShippingOption_get_Amount(py::wrapper::Windows::ApplicationModel::Payments::PaymentShippingOption* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentShippingOption", L"Amount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentShippingOption", L"Amount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Amount());
         }
         catch (...)
@@ -3837,12 +3837,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentShippingOption_put_Amount(py::wrapper::Windows::ApplicationModel::Payments::PaymentShippingOption* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentShippingOption", L"Amount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3851,6 +3845,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentShippingOption", L"Amount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount>(arg);
 
             self->obj.Amount(param0);
@@ -3978,14 +3978,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentToken_get_JsonDetails(py::wrapper::Windows::ApplicationModel::Payments::PaymentToken* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentToken", L"JsonDetails"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentToken", L"JsonDetails"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.JsonDetails());
         }
         catch (...)
@@ -3997,14 +3997,14 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentToken_get_PaymentMethodId(py::wrapper::Windows::ApplicationModel::Payments::PaymentToken* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentToken", L"PaymentMethodId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.PaymentToken", L"PaymentMethodId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PaymentMethodId());
         }
         catch (...)

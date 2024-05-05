@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Print3DManager", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Print3DManager", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Graphics::Printing3D::Print3DManager::GetForCurrentView());
             }
             catch (...)
@@ -57,14 +57,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Print3DManager", L"ShowPrintUIAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Print3DManager", L"ShowPrintUIAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Graphics::Printing3D::Print3DManager::ShowPrintUIAsync());
             }
             catch (...)
@@ -82,14 +82,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Print3DManager_add_TaskRequested(py::wrapper::Windows::Graphics::Printing3D::Print3DManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing3D.Print3DManager", L"TaskRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing3D.Print3DManager", L"TaskRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing3D::Print3DManager, winrt::Windows::Graphics::Printing3D::Print3DTaskRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.TaskRequested(param0));
@@ -103,14 +103,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Print3DManager_remove_TaskRequested(py::wrapper::Windows::Graphics::Printing3D::Print3DManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing3D.Print3DManager", L"TaskRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing3D.Print3DManager", L"TaskRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.TaskRequested(param0);
@@ -223,14 +223,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Print3DTask_get_Source(py::wrapper::Windows::Graphics::Printing3D::Print3DTask* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Print3DTask", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Print3DTask", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -242,14 +242,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Print3DTask_add_Completed(py::wrapper::Windows::Graphics::Printing3D::Print3DTask* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing3D.Print3DTask", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing3D.Print3DTask", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing3D::Print3DTask, winrt::Windows::Graphics::Printing3D::Print3DTaskCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.Completed(param0));
@@ -263,14 +263,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Print3DTask_remove_Completed(py::wrapper::Windows::Graphics::Printing3D::Print3DTask* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing3D.Print3DTask", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing3D.Print3DTask", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Completed(param0);
@@ -285,14 +285,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Print3DTask_add_SourceChanged(py::wrapper::Windows::Graphics::Printing3D::Print3DTask* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing3D.Print3DTask", L"SourceChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing3D.Print3DTask", L"SourceChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing3D::Print3DTask, winrt::Windows::Graphics::Printing3D::Print3DTaskSourceChangedEventArgs>>(arg);
 
             return py::convert(self->obj.SourceChanged(param0));
@@ -306,14 +306,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Print3DTask_remove_SourceChanged(py::wrapper::Windows::Graphics::Printing3D::Print3DTask* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing3D.Print3DTask", L"SourceChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing3D.Print3DTask", L"SourceChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SourceChanged(param0);
@@ -328,14 +328,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Print3DTask_add_Submitting(py::wrapper::Windows::Graphics::Printing3D::Print3DTask* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing3D.Print3DTask", L"Submitting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing3D.Print3DTask", L"Submitting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing3D::Print3DTask, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Submitting(param0));
@@ -349,14 +349,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Print3DTask_remove_Submitting(py::wrapper::Windows::Graphics::Printing3D::Print3DTask* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing3D.Print3DTask", L"Submitting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing3D.Print3DTask", L"Submitting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Submitting(param0);
@@ -447,14 +447,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Print3DTaskCompletedEventArgs_get_Completion(py::wrapper::Windows::Graphics::Printing3D::Print3DTaskCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs", L"Completion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs", L"Completion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Completion());
         }
         catch (...)
@@ -466,14 +466,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Print3DTaskCompletedEventArgs_get_ExtendedStatus(py::wrapper::Windows::Graphics::Printing3D::Print3DTaskCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs", L"ExtendedStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs", L"ExtendedStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedStatus());
         }
         catch (...)
@@ -560,14 +560,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Print3DTaskRequest", L"CreateTask", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Print3DTaskRequest", L"CreateTask", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Graphics::Printing3D::Print3DTaskSourceRequestedHandler>(args, 2);
@@ -659,14 +659,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Print3DTaskRequestedEventArgs_get_Request(py::wrapper::Windows::Graphics::Printing3D::Print3DTaskRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -748,14 +748,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Print3DTaskSourceChangedEventArgs_get_Source(py::wrapper::Windows::Graphics::Printing3D::Print3DTaskSourceChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -841,14 +841,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Print3DTaskSourceRequestedArgs", L"SetSource", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Print3DTaskSourceRequestedArgs", L"SetSource", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3D3MFPackage>(args, 0);
 
                 self->obj.SetSource(param0);
@@ -965,14 +965,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"LoadAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"LoadAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
                 return py::convert(winrt::Windows::Graphics::Printing3D::Printing3D3MFPackage::LoadAsync(param0));
@@ -996,14 +996,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"LoadModelFromPackageAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"LoadModelFromPackageAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
                 return py::convert(self->obj.LoadModelFromPackageAsync(param0));
@@ -1027,14 +1027,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"SaveAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"SaveAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SaveAsync());
             }
             catch (...)
@@ -1056,14 +1056,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"SaveModelToPackageAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"SaveModelToPackageAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DModel>(args, 0);
 
                 return py::convert(self->obj.SaveModelToPackageAsync(param0));
@@ -1083,14 +1083,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3D3MFPackage_get_Thumbnail(py::wrapper::Windows::Graphics::Printing3D::Printing3D3MFPackage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"Thumbnail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"Thumbnail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Thumbnail());
         }
         catch (...)
@@ -1102,12 +1102,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3D3MFPackage_put_Thumbnail(py::wrapper::Windows::Graphics::Printing3D::Printing3D3MFPackage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"Thumbnail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1116,6 +1110,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"Thumbnail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DTextureResource>(arg);
 
             self->obj.Thumbnail(param0);
@@ -1130,14 +1130,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3D3MFPackage_get_PrintTicket(py::wrapper::Windows::Graphics::Printing3D::Printing3D3MFPackage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"PrintTicket"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"PrintTicket"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrintTicket());
         }
         catch (...)
@@ -1149,12 +1149,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3D3MFPackage_put_PrintTicket(py::wrapper::Windows::Graphics::Printing3D::Printing3D3MFPackage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"PrintTicket"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1163,6 +1157,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"PrintTicket"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(arg);
 
             self->obj.PrintTicket(param0);
@@ -1177,14 +1177,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3D3MFPackage_get_ModelPart(py::wrapper::Windows::Graphics::Printing3D::Printing3D3MFPackage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"ModelPart"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"ModelPart"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ModelPart());
         }
         catch (...)
@@ -1196,12 +1196,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3D3MFPackage_put_ModelPart(py::wrapper::Windows::Graphics::Printing3D::Printing3D3MFPackage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"ModelPart"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1210,6 +1204,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"ModelPart"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(arg);
 
             self->obj.ModelPart(param0);
@@ -1224,14 +1224,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3D3MFPackage_get_Textures(py::wrapper::Windows::Graphics::Printing3D::Printing3D3MFPackage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"Textures"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"Textures"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Textures());
         }
         catch (...)
@@ -1243,14 +1243,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3D3MFPackage_get_Compression(py::wrapper::Windows::Graphics::Printing3D::Printing3D3MFPackage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"Compression"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"Compression"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Compression());
         }
         catch (...)
@@ -1262,12 +1262,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3D3MFPackage_put_Compression(py::wrapper::Windows::Graphics::Printing3D::Printing3D3MFPackage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"Compression"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1276,6 +1270,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3D3MFPackage", L"Compression"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DPackageCompression>(arg);
 
             self->obj.Compression(param0);
@@ -1415,14 +1415,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DBaseMaterial_get_Name(py::wrapper::Windows::Graphics::Printing3D::Printing3DBaseMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DBaseMaterial", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DBaseMaterial", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -1434,12 +1434,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DBaseMaterial_put_Name(py::wrapper::Windows::Graphics::Printing3D::Printing3DBaseMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DBaseMaterial", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1448,6 +1442,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DBaseMaterial", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Name(param0);
@@ -1462,14 +1462,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DBaseMaterial_get_Color(py::wrapper::Windows::Graphics::Printing3D::Printing3DBaseMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DBaseMaterial", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DBaseMaterial", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Color());
         }
         catch (...)
@@ -1481,12 +1481,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DBaseMaterial_put_Color(py::wrapper::Windows::Graphics::Printing3D::Printing3DBaseMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DBaseMaterial", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1495,6 +1489,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DBaseMaterial", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DColorMaterial>(arg);
 
             self->obj.Color(param0);
@@ -1509,14 +1509,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DBaseMaterial_get_Abs(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DBaseMaterial", L"Abs"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DBaseMaterial", L"Abs"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Printing3D::Printing3DBaseMaterial::Abs());
         }
         catch (...)
@@ -1528,14 +1528,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DBaseMaterial_get_Pla(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DBaseMaterial", L"Pla"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DBaseMaterial", L"Pla"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Printing3D::Printing3DBaseMaterial::Pla());
         }
         catch (...)
@@ -1669,14 +1669,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DBaseMaterialGroup_get_Bases(py::wrapper::Windows::Graphics::Printing3D::Printing3DBaseMaterialGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup", L"Bases"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup", L"Bases"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bases());
         }
         catch (...)
@@ -1688,14 +1688,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DBaseMaterialGroup_get_MaterialGroupId(py::wrapper::Windows::Graphics::Printing3D::Printing3DBaseMaterialGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup", L"MaterialGroupId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup", L"MaterialGroupId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaterialGroupId());
         }
         catch (...)
@@ -1800,14 +1800,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DColorMaterial_get_Value(py::wrapper::Windows::Graphics::Printing3D::Printing3DColorMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DColorMaterial", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DColorMaterial", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -1819,12 +1819,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DColorMaterial_put_Value(py::wrapper::Windows::Graphics::Printing3D::Printing3DColorMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DColorMaterial", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1833,6 +1827,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DColorMaterial", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Value(param0);
@@ -1847,14 +1847,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DColorMaterial_get_Color(py::wrapper::Windows::Graphics::Printing3D::Printing3DColorMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DColorMaterial", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DColorMaterial", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Color());
         }
         catch (...)
@@ -1866,12 +1866,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DColorMaterial_put_Color(py::wrapper::Windows::Graphics::Printing3D::Printing3DColorMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DColorMaterial", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1880,6 +1874,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DColorMaterial", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.Color(param0);
@@ -1989,14 +1989,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DColorMaterialGroup_get_Colors(py::wrapper::Windows::Graphics::Printing3D::Printing3DColorMaterialGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DColorMaterialGroup", L"Colors"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DColorMaterialGroup", L"Colors"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Colors());
         }
         catch (...)
@@ -2008,14 +2008,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DColorMaterialGroup_get_MaterialGroupId(py::wrapper::Windows::Graphics::Printing3D::Printing3DColorMaterialGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DColorMaterialGroup", L"MaterialGroupId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DColorMaterialGroup", L"MaterialGroupId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaterialGroupId());
         }
         catch (...)
@@ -2120,14 +2120,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DComponent_get_Type(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponent", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponent", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -2139,12 +2139,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DComponent_put_Type(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponent", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2153,6 +2147,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponent", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DObjectType>(arg);
 
             self->obj.Type(param0);
@@ -2167,14 +2167,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DComponent_get_Thumbnail(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponent", L"Thumbnail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponent", L"Thumbnail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Thumbnail());
         }
         catch (...)
@@ -2186,12 +2186,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DComponent_put_Thumbnail(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponent", L"Thumbnail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2200,6 +2194,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponent", L"Thumbnail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DTextureResource>(arg);
 
             self->obj.Thumbnail(param0);
@@ -2214,14 +2214,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DComponent_get_PartNumber(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponent", L"PartNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponent", L"PartNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PartNumber());
         }
         catch (...)
@@ -2233,12 +2233,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DComponent_put_PartNumber(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponent", L"PartNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2247,6 +2241,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponent", L"PartNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.PartNumber(param0);
@@ -2261,14 +2261,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DComponent_get_Name(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponent", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponent", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -2280,12 +2280,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DComponent_put_Name(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponent", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2294,6 +2288,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponent", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Name(param0);
@@ -2308,14 +2308,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DComponent_get_Mesh(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponent", L"Mesh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponent", L"Mesh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mesh());
         }
         catch (...)
@@ -2327,12 +2327,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DComponent_put_Mesh(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponent", L"Mesh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2341,6 +2335,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponent", L"Mesh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DMesh>(arg);
 
             self->obj.Mesh(param0);
@@ -2355,14 +2355,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DComponent_get_Components(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponent", L"Components"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponent", L"Components"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Components());
         }
         catch (...)
@@ -2471,14 +2471,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DComponentWithMatrix_get_Matrix(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponentWithMatrix* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponentWithMatrix", L"Matrix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponentWithMatrix", L"Matrix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Matrix());
         }
         catch (...)
@@ -2490,12 +2490,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DComponentWithMatrix_put_Matrix(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponentWithMatrix* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponentWithMatrix", L"Matrix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2504,6 +2498,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponentWithMatrix", L"Matrix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(arg);
 
             self->obj.Matrix(param0);
@@ -2518,14 +2518,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DComponentWithMatrix_get_Component(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponentWithMatrix* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponentWithMatrix", L"Component"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponentWithMatrix", L"Component"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Component());
         }
         catch (...)
@@ -2537,12 +2537,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DComponentWithMatrix_put_Component(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponentWithMatrix* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponentWithMatrix", L"Component"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2551,6 +2545,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DComponentWithMatrix", L"Component"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DComponent>(arg);
 
             self->obj.Component(param0);
@@ -2658,14 +2658,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DCompositeMaterial_get_Values(py::wrapper::Windows::Graphics::Printing3D::Printing3DCompositeMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DCompositeMaterial", L"Values"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DCompositeMaterial", L"Values"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Values());
         }
         catch (...)
@@ -2771,14 +2771,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DCompositeMaterialGroup_get_Composites(py::wrapper::Windows::Graphics::Printing3D::Printing3DCompositeMaterialGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup", L"Composites"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup", L"Composites"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Composites());
         }
         catch (...)
@@ -2790,14 +2790,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DCompositeMaterialGroup_get_MaterialGroupId(py::wrapper::Windows::Graphics::Printing3D::Printing3DCompositeMaterialGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup", L"MaterialGroupId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup", L"MaterialGroupId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaterialGroupId());
         }
         catch (...)
@@ -2809,14 +2809,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DCompositeMaterialGroup_get_MaterialIndices(py::wrapper::Windows::Graphics::Printing3D::Printing3DCompositeMaterialGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup", L"MaterialIndices"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup", L"MaterialIndices"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaterialIndices());
         }
         catch (...)
@@ -2828,14 +2828,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DCompositeMaterialGroup_get_BaseMaterialGroup(py::wrapper::Windows::Graphics::Printing3D::Printing3DCompositeMaterialGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup", L"BaseMaterialGroup"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup", L"BaseMaterialGroup"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseMaterialGroup());
         }
         catch (...)
@@ -2847,12 +2847,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DCompositeMaterialGroup_put_BaseMaterialGroup(py::wrapper::Windows::Graphics::Printing3D::Printing3DCompositeMaterialGroup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup", L"BaseMaterialGroup"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2861,6 +2855,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup", L"BaseMaterialGroup"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DBaseMaterialGroup>(arg);
 
             self->obj.BaseMaterialGroup(param0);
@@ -2970,14 +2970,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DFaceReductionOptions_get_TargetTriangleCount(py::wrapper::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DFaceReductionOptions", L"TargetTriangleCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DFaceReductionOptions", L"TargetTriangleCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetTriangleCount());
         }
         catch (...)
@@ -2989,12 +2989,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DFaceReductionOptions_put_TargetTriangleCount(py::wrapper::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DFaceReductionOptions", L"TargetTriangleCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3003,6 +2997,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DFaceReductionOptions", L"TargetTriangleCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.TargetTriangleCount(param0);
@@ -3017,14 +3017,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DFaceReductionOptions_get_MaxReductionArea(py::wrapper::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DFaceReductionOptions", L"MaxReductionArea"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DFaceReductionOptions", L"MaxReductionArea"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxReductionArea());
         }
         catch (...)
@@ -3036,12 +3036,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DFaceReductionOptions_put_MaxReductionArea(py::wrapper::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DFaceReductionOptions", L"MaxReductionArea"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3050,6 +3044,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DFaceReductionOptions", L"MaxReductionArea"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.MaxReductionArea(param0);
@@ -3064,14 +3064,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DFaceReductionOptions_get_MaxEdgeLength(py::wrapper::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DFaceReductionOptions", L"MaxEdgeLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DFaceReductionOptions", L"MaxEdgeLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxEdgeLength());
         }
         catch (...)
@@ -3083,12 +3083,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DFaceReductionOptions_put_MaxEdgeLength(py::wrapper::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DFaceReductionOptions", L"MaxEdgeLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3097,6 +3091,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DFaceReductionOptions", L"MaxEdgeLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.MaxEdgeLength(param0);
@@ -3205,14 +3205,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMaterial_get_BaseGroups(py::wrapper::Windows::Graphics::Printing3D::Printing3DMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMaterial", L"BaseGroups"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMaterial", L"BaseGroups"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseGroups());
         }
         catch (...)
@@ -3224,14 +3224,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMaterial_get_ColorGroups(py::wrapper::Windows::Graphics::Printing3D::Printing3DMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMaterial", L"ColorGroups"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMaterial", L"ColorGroups"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ColorGroups());
         }
         catch (...)
@@ -3243,14 +3243,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMaterial_get_CompositeGroups(py::wrapper::Windows::Graphics::Printing3D::Printing3DMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMaterial", L"CompositeGroups"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMaterial", L"CompositeGroups"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CompositeGroups());
         }
         catch (...)
@@ -3262,14 +3262,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMaterial_get_MultiplePropertyGroups(py::wrapper::Windows::Graphics::Printing3D::Printing3DMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMaterial", L"MultiplePropertyGroups"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMaterial", L"MultiplePropertyGroups"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MultiplePropertyGroups());
         }
         catch (...)
@@ -3281,14 +3281,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMaterial_get_Texture2CoordGroups(py::wrapper::Windows::Graphics::Printing3D::Printing3DMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMaterial", L"Texture2CoordGroups"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMaterial", L"Texture2CoordGroups"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Texture2CoordGroups());
         }
         catch (...)
@@ -3400,14 +3400,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"CreateTriangleIndices", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"CreateTriangleIndices", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.CreateTriangleIndices(param0);
@@ -3432,14 +3432,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"CreateTriangleMaterialIndices", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"CreateTriangleMaterialIndices", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.CreateTriangleMaterialIndices(param0);
@@ -3464,14 +3464,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"CreateVertexNormals", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"CreateVertexNormals", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.CreateVertexNormals(param0);
@@ -3496,14 +3496,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"CreateVertexPositions", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"CreateVertexPositions", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.CreateVertexPositions(param0);
@@ -3528,14 +3528,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"GetTriangleIndices", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"GetTriangleIndices", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetTriangleIndices());
             }
             catch (...)
@@ -3557,14 +3557,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"GetTriangleMaterialIndices", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"GetTriangleMaterialIndices", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetTriangleMaterialIndices());
             }
             catch (...)
@@ -3586,14 +3586,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"GetVertexNormals", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"GetVertexNormals", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetVertexNormals());
             }
             catch (...)
@@ -3615,14 +3615,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"GetVertexPositions", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"GetVertexPositions", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetVertexPositions());
             }
             catch (...)
@@ -3644,14 +3644,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"VerifyAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"VerifyAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DMeshVerificationMode>(args, 0);
 
                 return py::convert(self->obj.VerifyAsync(param0));
@@ -3671,14 +3671,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMesh_get_VertexPositionsDescription(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"VertexPositionsDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"VertexPositionsDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VertexPositionsDescription());
         }
         catch (...)
@@ -3690,12 +3690,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DMesh_put_VertexPositionsDescription(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"VertexPositionsDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3704,6 +3698,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"VertexPositionsDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription>(arg);
 
             self->obj.VertexPositionsDescription(param0);
@@ -3718,14 +3718,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMesh_get_VertexNormalsDescription(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"VertexNormalsDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"VertexNormalsDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VertexNormalsDescription());
         }
         catch (...)
@@ -3737,12 +3737,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DMesh_put_VertexNormalsDescription(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"VertexNormalsDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3751,6 +3745,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"VertexNormalsDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription>(arg);
 
             self->obj.VertexNormalsDescription(param0);
@@ -3765,14 +3765,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMesh_get_VertexCount(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"VertexCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"VertexCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VertexCount());
         }
         catch (...)
@@ -3784,12 +3784,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DMesh_put_VertexCount(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"VertexCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3798,6 +3792,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"VertexCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.VertexCount(param0);
@@ -3812,14 +3812,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMesh_get_TriangleMaterialIndicesDescription(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"TriangleMaterialIndicesDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"TriangleMaterialIndicesDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TriangleMaterialIndicesDescription());
         }
         catch (...)
@@ -3831,12 +3831,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DMesh_put_TriangleMaterialIndicesDescription(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"TriangleMaterialIndicesDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3845,6 +3839,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"TriangleMaterialIndicesDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription>(arg);
 
             self->obj.TriangleMaterialIndicesDescription(param0);
@@ -3859,14 +3859,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMesh_get_TriangleIndicesDescription(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"TriangleIndicesDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"TriangleIndicesDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TriangleIndicesDescription());
         }
         catch (...)
@@ -3878,12 +3878,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DMesh_put_TriangleIndicesDescription(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"TriangleIndicesDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3892,6 +3886,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"TriangleIndicesDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription>(arg);
 
             self->obj.TriangleIndicesDescription(param0);
@@ -3906,14 +3906,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMesh_get_IndexCount(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"IndexCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"IndexCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IndexCount());
         }
         catch (...)
@@ -3925,12 +3925,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DMesh_put_IndexCount(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"IndexCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3939,6 +3933,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"IndexCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.IndexCount(param0);
@@ -3953,14 +3953,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMesh_get_BufferDescriptionSet(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"BufferDescriptionSet"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"BufferDescriptionSet"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BufferDescriptionSet());
         }
         catch (...)
@@ -3972,14 +3972,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMesh_get_BufferSet(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"BufferSet"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMesh", L"BufferSet"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BufferSet());
         }
         catch (...)
@@ -4077,14 +4077,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMeshVerificationResult_get_IsValid(py::wrapper::Windows::Graphics::Printing3D::Printing3DMeshVerificationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMeshVerificationResult", L"IsValid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMeshVerificationResult", L"IsValid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsValid());
         }
         catch (...)
@@ -4096,14 +4096,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMeshVerificationResult_get_NonmanifoldTriangles(py::wrapper::Windows::Graphics::Printing3D::Printing3DMeshVerificationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMeshVerificationResult", L"NonmanifoldTriangles"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMeshVerificationResult", L"NonmanifoldTriangles"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NonmanifoldTriangles());
         }
         catch (...)
@@ -4115,14 +4115,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMeshVerificationResult_get_ReversedNormalTriangles(py::wrapper::Windows::Graphics::Printing3D::Printing3DMeshVerificationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMeshVerificationResult", L"ReversedNormalTriangles"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMeshVerificationResult", L"ReversedNormalTriangles"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReversedNormalTriangles());
         }
         catch (...)
@@ -4232,14 +4232,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Clone", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Clone", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.Clone());
             }
             catch (...)
@@ -4261,14 +4261,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"RepairAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"RepairAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.RepairAsync());
             }
             catch (...)
@@ -4290,14 +4290,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"RepairWithProgressAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"RepairWithProgressAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.RepairWithProgressAsync());
             }
             catch (...)
@@ -4319,14 +4319,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"TryPartialRepairAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"TryPartialRepairAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryPartialRepairAsync());
             }
             catch (...)
@@ -4337,14 +4337,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"TryPartialRepairAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"TryPartialRepairAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
                 return py::convert(self->obj.TryPartialRepairAsync(param0));
@@ -4368,14 +4368,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"TryReduceFacesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"TryReduceFacesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryReduceFacesAsync());
             }
             catch (...)
@@ -4386,14 +4386,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"TryReduceFacesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"TryReduceFacesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions>(args, 0);
 
                 return py::convert(self->obj.TryReduceFacesAsync(param0));
@@ -4406,14 +4406,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"TryReduceFacesAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"TryReduceFacesAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
@@ -4434,14 +4434,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DModel_get_Version(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Version"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Version"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Version());
         }
         catch (...)
@@ -4453,12 +4453,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DModel_put_Version(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Version"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4467,6 +4461,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Version"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Version(param0);
@@ -4481,14 +4481,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DModel_get_Unit(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Unit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Unit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Unit());
         }
         catch (...)
@@ -4500,12 +4500,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DModel_put_Unit(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Unit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4514,6 +4508,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Unit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DModelUnit>(arg);
 
             self->obj.Unit(param0);
@@ -4528,14 +4528,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DModel_get_Material(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Material"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Material"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Material());
         }
         catch (...)
@@ -4547,12 +4547,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DModel_put_Material(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Material"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4561,6 +4555,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Material"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DMaterial>(arg);
 
             self->obj.Material(param0);
@@ -4575,14 +4575,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DModel_get_Build(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Build"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Build"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Build());
         }
         catch (...)
@@ -4594,12 +4594,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DModel_put_Build(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Build"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4608,6 +4602,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Build"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DComponent>(arg);
 
             self->obj.Build(param0);
@@ -4622,14 +4622,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DModel_get_Components(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Components"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Components"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Components());
         }
         catch (...)
@@ -4641,14 +4641,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DModel_get_Meshes(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Meshes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Meshes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Meshes());
         }
         catch (...)
@@ -4660,14 +4660,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DModel_get_Metadata(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Metadata"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Metadata"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Metadata());
         }
         catch (...)
@@ -4679,14 +4679,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DModel_get_RequiredExtensions(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"RequiredExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"RequiredExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequiredExtensions());
         }
         catch (...)
@@ -4698,14 +4698,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DModel_get_Textures(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Textures"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"Textures"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Textures());
         }
         catch (...)
@@ -4822,14 +4822,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DModelTexture_get_TileStyleV(py::wrapper::Windows::Graphics::Printing3D::Printing3DModelTexture* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModelTexture", L"TileStyleV"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModelTexture", L"TileStyleV"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TileStyleV());
         }
         catch (...)
@@ -4841,12 +4841,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DModelTexture_put_TileStyleV(py::wrapper::Windows::Graphics::Printing3D::Printing3DModelTexture* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModelTexture", L"TileStyleV"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4855,6 +4849,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModelTexture", L"TileStyleV"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DTextureEdgeBehavior>(arg);
 
             self->obj.TileStyleV(param0);
@@ -4869,14 +4869,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DModelTexture_get_TileStyleU(py::wrapper::Windows::Graphics::Printing3D::Printing3DModelTexture* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModelTexture", L"TileStyleU"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModelTexture", L"TileStyleU"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TileStyleU());
         }
         catch (...)
@@ -4888,12 +4888,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DModelTexture_put_TileStyleU(py::wrapper::Windows::Graphics::Printing3D::Printing3DModelTexture* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModelTexture", L"TileStyleU"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4902,6 +4896,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModelTexture", L"TileStyleU"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DTextureEdgeBehavior>(arg);
 
             self->obj.TileStyleU(param0);
@@ -4916,14 +4916,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DModelTexture_get_TextureResource(py::wrapper::Windows::Graphics::Printing3D::Printing3DModelTexture* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModelTexture", L"TextureResource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModelTexture", L"TextureResource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TextureResource());
         }
         catch (...)
@@ -4935,12 +4935,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DModelTexture_put_TextureResource(py::wrapper::Windows::Graphics::Printing3D::Printing3DModelTexture* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModelTexture", L"TextureResource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4949,6 +4943,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DModelTexture", L"TextureResource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DTextureResource>(arg);
 
             self->obj.TextureResource(param0);
@@ -5057,14 +5057,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMultiplePropertyMaterial_get_MaterialIndices(py::wrapper::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial", L"MaterialIndices"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial", L"MaterialIndices"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaterialIndices());
         }
         catch (...)
@@ -5170,14 +5170,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMultiplePropertyMaterialGroup_get_MaterialGroupId(py::wrapper::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterialGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup", L"MaterialGroupId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup", L"MaterialGroupId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaterialGroupId());
         }
         catch (...)
@@ -5189,14 +5189,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMultiplePropertyMaterialGroup_get_MaterialGroupIndices(py::wrapper::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterialGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup", L"MaterialGroupIndices"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup", L"MaterialGroupIndices"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaterialGroupIndices());
         }
         catch (...)
@@ -5208,14 +5208,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMultiplePropertyMaterialGroup_get_MultipleProperties(py::wrapper::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterialGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup", L"MultipleProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup", L"MultipleProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MultipleProperties());
         }
         catch (...)
@@ -5321,14 +5321,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DTexture2CoordMaterial_get_V(py::wrapper::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial", L"V"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial", L"V"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.V());
         }
         catch (...)
@@ -5340,12 +5340,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DTexture2CoordMaterial_put_V(py::wrapper::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial", L"V"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5354,6 +5348,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial", L"V"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.V(param0);
@@ -5368,14 +5368,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DTexture2CoordMaterial_get_U(py::wrapper::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial", L"U"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial", L"U"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.U());
         }
         catch (...)
@@ -5387,12 +5387,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DTexture2CoordMaterial_put_U(py::wrapper::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial", L"U"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5401,6 +5395,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial", L"U"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.U(param0);
@@ -5415,14 +5415,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DTexture2CoordMaterial_get_Texture(py::wrapper::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial", L"Texture"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial", L"Texture"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Texture());
         }
         catch (...)
@@ -5434,12 +5434,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DTexture2CoordMaterial_put_Texture(py::wrapper::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial", L"Texture"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5448,6 +5442,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial", L"Texture"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DModelTexture>(arg);
 
             self->obj.Texture(param0);
@@ -5558,14 +5558,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DTexture2CoordMaterialGroup_get_MaterialGroupId(py::wrapper::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterialGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup", L"MaterialGroupId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup", L"MaterialGroupId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaterialGroupId());
         }
         catch (...)
@@ -5577,14 +5577,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DTexture2CoordMaterialGroup_get_Texture2Coords(py::wrapper::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterialGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup", L"Texture2Coords"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup", L"Texture2Coords"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Texture2Coords());
         }
         catch (...)
@@ -5596,14 +5596,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DTexture2CoordMaterialGroup_get_Texture(py::wrapper::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterialGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup", L"Texture"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup", L"Texture"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Texture());
         }
         catch (...)
@@ -5615,12 +5615,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DTexture2CoordMaterialGroup_put_Texture(py::wrapper::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterialGroup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup", L"Texture"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5629,6 +5623,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup", L"Texture"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DModelTexture>(arg);
 
             self->obj.Texture(param0);
@@ -5737,14 +5737,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DTextureResource_get_TextureData(py::wrapper::Windows::Graphics::Printing3D::Printing3DTextureResource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTextureResource", L"TextureData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTextureResource", L"TextureData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TextureData());
         }
         catch (...)
@@ -5756,12 +5756,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DTextureResource_put_TextureData(py::wrapper::Windows::Graphics::Printing3D::Printing3DTextureResource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTextureResource", L"TextureData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5770,6 +5764,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTextureResource", L"TextureData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamWithContentType>(arg);
 
             self->obj.TextureData(param0);
@@ -5784,14 +5784,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DTextureResource_get_Name(py::wrapper::Windows::Graphics::Printing3D::Printing3DTextureResource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTextureResource", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTextureResource", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -5803,12 +5803,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DTextureResource_put_Name(py::wrapper::Windows::Graphics::Printing3D::Printing3DTextureResource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTextureResource", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5817,6 +5811,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing3D.Printing3DTextureResource", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Name(param0);

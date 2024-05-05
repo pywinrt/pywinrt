@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>(args, 0);
 
                 self->obj.Append(param0);
@@ -60,14 +60,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -90,14 +90,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -119,14 +119,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -150,14 +150,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue, true>>(args, 1);
 
@@ -182,14 +182,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -211,14 +211,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>(args, 0);
                 uint32_t param1 {  };
 
@@ -255,14 +255,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>(args, 1);
 
@@ -288,14 +288,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"ParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"ParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ParseAdd(param0);
@@ -320,14 +320,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -352,14 +352,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -382,14 +382,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -414,14 +414,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>(args, 1);
 
@@ -447,14 +447,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -476,14 +476,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"TryParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"TryParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TryParseAdd(param0));
@@ -503,14 +503,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCacheDirectiveHeaderValueCollection_get_Size(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -522,14 +522,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCacheDirectiveHeaderValueCollection_get_SharedMaxAge(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"SharedMaxAge"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"SharedMaxAge"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SharedMaxAge());
         }
         catch (...)
@@ -541,12 +541,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpCacheDirectiveHeaderValueCollection_put_SharedMaxAge(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"SharedMaxAge"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -555,6 +549,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"SharedMaxAge"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             self->obj.SharedMaxAge(param0);
@@ -569,14 +569,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCacheDirectiveHeaderValueCollection_get_MinFresh(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"MinFresh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"MinFresh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinFresh());
         }
         catch (...)
@@ -588,12 +588,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpCacheDirectiveHeaderValueCollection_put_MinFresh(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"MinFresh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -602,6 +596,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"MinFresh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             self->obj.MinFresh(param0);
@@ -616,14 +616,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCacheDirectiveHeaderValueCollection_get_MaxStale(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"MaxStale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"MaxStale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxStale());
         }
         catch (...)
@@ -635,12 +635,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpCacheDirectiveHeaderValueCollection_put_MaxStale(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"MaxStale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -649,6 +643,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"MaxStale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             self->obj.MaxStale(param0);
@@ -663,14 +663,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCacheDirectiveHeaderValueCollection_get_MaxAge(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"MaxAge"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"MaxAge"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxAge());
         }
         catch (...)
@@ -682,12 +682,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpCacheDirectiveHeaderValueCollection_put_MaxAge(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"MaxAge"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -696,6 +690,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"MaxAge"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             self->obj.MaxAge(param0);
@@ -986,14 +986,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValue", L"Parse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValue", L"Parse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue::Parse(param0));
@@ -1017,14 +1017,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValue", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValue", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -1046,14 +1046,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValue", L"TryParse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValue", L"TryParse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue param1 { nullptr };
 
@@ -1086,14 +1086,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpChallengeHeaderValue_get_Parameters(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValue", L"Parameters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValue", L"Parameters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parameters());
         }
         catch (...)
@@ -1105,14 +1105,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpChallengeHeaderValue_get_Scheme(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValue", L"Scheme"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValue", L"Scheme"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Scheme());
         }
         catch (...)
@@ -1124,14 +1124,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpChallengeHeaderValue_get_Token(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValue", L"Token"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValue", L"Token"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Token());
         }
         catch (...)
@@ -1261,14 +1261,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>(args, 0);
 
                 self->obj.Append(param0);
@@ -1293,14 +1293,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -1323,14 +1323,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -1352,14 +1352,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -1383,14 +1383,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue, true>>(args, 1);
 
@@ -1415,14 +1415,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -1444,14 +1444,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>(args, 0);
                 uint32_t param1 {  };
 
@@ -1488,14 +1488,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>(args, 1);
 
@@ -1521,14 +1521,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"ParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"ParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ParseAdd(param0);
@@ -1553,14 +1553,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -1585,14 +1585,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -1615,14 +1615,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -1647,14 +1647,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>(args, 1);
 
@@ -1680,14 +1680,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -1709,14 +1709,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"TryParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"TryParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TryParseAdd(param0));
@@ -1736,14 +1736,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpChallengeHeaderValueCollection_get_Size(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -2011,14 +2011,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue", L"Parse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue", L"Parse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue::Parse(param0));
@@ -2042,14 +2042,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -2071,14 +2071,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue", L"TryParse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue", L"TryParse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue param1 { nullptr };
 
@@ -2111,14 +2111,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpConnectionOptionHeaderValue_get_Token(py::wrapper::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue", L"Token"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue", L"Token"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Token());
         }
         catch (...)
@@ -2246,14 +2246,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>(args, 0);
 
                 self->obj.Append(param0);
@@ -2278,14 +2278,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -2308,14 +2308,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -2337,14 +2337,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -2368,14 +2368,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue, true>>(args, 1);
 
@@ -2400,14 +2400,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -2429,14 +2429,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>(args, 0);
                 uint32_t param1 {  };
 
@@ -2473,14 +2473,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>(args, 1);
 
@@ -2506,14 +2506,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"ParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"ParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ParseAdd(param0);
@@ -2538,14 +2538,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -2570,14 +2570,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -2600,14 +2600,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -2632,14 +2632,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>(args, 1);
 
@@ -2665,14 +2665,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -2694,14 +2694,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"TryParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"TryParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TryParseAdd(param0));
@@ -2721,14 +2721,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpConnectionOptionHeaderValueCollection_get_Size(py::wrapper::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -2996,14 +2996,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValue", L"Parse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValue", L"Parse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue::Parse(param0));
@@ -3027,14 +3027,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValue", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValue", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -3056,14 +3056,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValue", L"TryParse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValue", L"TryParse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue param1 { nullptr };
 
@@ -3096,14 +3096,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingHeaderValue_get_ContentCoding(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValue", L"ContentCoding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValue", L"ContentCoding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentCoding());
         }
         catch (...)
@@ -3231,14 +3231,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>(args, 0);
 
                 self->obj.Append(param0);
@@ -3263,14 +3263,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -3293,14 +3293,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -3322,14 +3322,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -3353,14 +3353,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue, true>>(args, 1);
 
@@ -3385,14 +3385,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -3414,14 +3414,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>(args, 0);
                 uint32_t param1 {  };
 
@@ -3458,14 +3458,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>(args, 1);
 
@@ -3491,14 +3491,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"ParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"ParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ParseAdd(param0);
@@ -3523,14 +3523,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -3555,14 +3555,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -3585,14 +3585,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -3617,14 +3617,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>(args, 1);
 
@@ -3650,14 +3650,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -3679,14 +3679,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"TryParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"TryParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TryParseAdd(param0));
@@ -3706,14 +3706,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingHeaderValueCollection_get_Size(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -3997,14 +3997,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue", L"Parse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue", L"Parse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue::Parse(param0));
@@ -4028,14 +4028,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -4057,14 +4057,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue", L"TryParse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue", L"TryParse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue param1 { nullptr };
 
@@ -4097,14 +4097,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingWithQualityHeaderValue_get_ContentCoding(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue", L"ContentCoding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue", L"ContentCoding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentCoding());
         }
         catch (...)
@@ -4116,14 +4116,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingWithQualityHeaderValue_get_Quality(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue", L"Quality"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue", L"Quality"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Quality());
         }
         catch (...)
@@ -4252,14 +4252,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(args, 0);
 
                 self->obj.Append(param0);
@@ -4284,14 +4284,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -4314,14 +4314,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -4343,14 +4343,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -4374,14 +4374,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue, true>>(args, 1);
 
@@ -4406,14 +4406,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -4435,14 +4435,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(args, 0);
                 uint32_t param1 {  };
 
@@ -4479,14 +4479,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(args, 1);
 
@@ -4512,14 +4512,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"ParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"ParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ParseAdd(param0);
@@ -4544,14 +4544,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -4576,14 +4576,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -4606,14 +4606,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -4638,14 +4638,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(args, 1);
 
@@ -4671,14 +4671,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -4700,14 +4700,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"TryParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"TryParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TryParseAdd(param0));
@@ -4727,14 +4727,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingWithQualityHeaderValueCollection_get_Size(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -5002,14 +5002,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"Parse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"Parse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue::Parse(param0));
@@ -5033,14 +5033,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -5062,14 +5062,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"TryParse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"TryParse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue param1 { nullptr };
 
@@ -5102,14 +5102,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentDispositionHeaderValue_get_Size(py::wrapper::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -5121,12 +5121,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentDispositionHeaderValue_put_Size(py::wrapper::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5135,6 +5129,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint64_t>>(arg);
 
             self->obj.Size(param0);
@@ -5149,14 +5149,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentDispositionHeaderValue_get_Name(py::wrapper::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -5168,12 +5168,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentDispositionHeaderValue_put_Name(py::wrapper::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5182,6 +5176,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Name(param0);
@@ -5196,14 +5196,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentDispositionHeaderValue_get_FileNameStar(py::wrapper::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"FileNameStar"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"FileNameStar"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FileNameStar());
         }
         catch (...)
@@ -5215,12 +5215,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentDispositionHeaderValue_put_FileNameStar(py::wrapper::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"FileNameStar"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5229,6 +5223,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"FileNameStar"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.FileNameStar(param0);
@@ -5243,14 +5243,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentDispositionHeaderValue_get_FileName(py::wrapper::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"FileName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"FileName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FileName());
         }
         catch (...)
@@ -5262,12 +5262,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentDispositionHeaderValue_put_FileName(py::wrapper::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"FileName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5276,6 +5270,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"FileName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.FileName(param0);
@@ -5290,14 +5290,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentDispositionHeaderValue_get_DispositionType(py::wrapper::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"DispositionType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"DispositionType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DispositionType());
         }
         catch (...)
@@ -5309,12 +5309,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentDispositionHeaderValue_put_DispositionType(py::wrapper::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"DispositionType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5323,6 +5317,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"DispositionType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DispositionType(param0);
@@ -5337,14 +5337,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentDispositionHeaderValue_get_Parameters(py::wrapper::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"Parameters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"Parameters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parameters());
         }
         catch (...)
@@ -5499,14 +5499,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Append", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Append", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -5532,14 +5532,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -5562,14 +5562,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -5591,14 +5591,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -5620,14 +5620,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"HasKey", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"HasKey", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.HasKey(param0));
@@ -5651,14 +5651,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Insert", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Insert", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -5683,14 +5683,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Lookup", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Lookup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.Lookup(param0));
@@ -5714,14 +5714,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Remove", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Remove", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Remove(param0);
@@ -5746,14 +5746,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -5775,14 +5775,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"TryAppendWithoutValidation", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"TryAppendWithoutValidation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -5803,14 +5803,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentHeaderCollection_get_Size(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -5822,14 +5822,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentHeaderCollection_get_LastModified(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"LastModified"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"LastModified"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastModified());
         }
         catch (...)
@@ -5841,12 +5841,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentHeaderCollection_put_LastModified(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"LastModified"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5855,6 +5849,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"LastModified"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             self->obj.LastModified(param0);
@@ -5869,14 +5869,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentHeaderCollection_get_Expires(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Expires"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Expires"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Expires());
         }
         catch (...)
@@ -5888,12 +5888,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentHeaderCollection_put_Expires(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Expires"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5902,6 +5896,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Expires"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             self->obj.Expires(param0);
@@ -5916,14 +5916,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentHeaderCollection_get_ContentType(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentType());
         }
         catch (...)
@@ -5935,12 +5935,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentHeaderCollection_put_ContentType(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5949,6 +5943,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue>(arg);
 
             self->obj.ContentType(param0);
@@ -5963,14 +5963,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentHeaderCollection_get_ContentRange(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentRange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentRange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentRange());
         }
         catch (...)
@@ -5982,12 +5982,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentHeaderCollection_put_ContentRange(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentRange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5996,6 +5990,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentRange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue>(arg);
 
             self->obj.ContentRange(param0);
@@ -6010,14 +6010,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentHeaderCollection_get_ContentMD5(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentMD5"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentMD5"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentMD5());
         }
         catch (...)
@@ -6029,12 +6029,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentHeaderCollection_put_ContentMD5(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentMD5"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6043,6 +6037,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentMD5"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             self->obj.ContentMD5(param0);
@@ -6057,14 +6057,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentHeaderCollection_get_ContentLocation(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentLocation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentLocation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentLocation());
         }
         catch (...)
@@ -6076,12 +6076,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentHeaderCollection_put_ContentLocation(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentLocation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6090,6 +6084,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentLocation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.ContentLocation(param0);
@@ -6104,14 +6104,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentHeaderCollection_get_ContentLength(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentLength());
         }
         catch (...)
@@ -6123,12 +6123,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentHeaderCollection_put_ContentLength(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6137,6 +6131,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint64_t>>(arg);
 
             self->obj.ContentLength(param0);
@@ -6151,14 +6151,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentHeaderCollection_get_ContentDisposition(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentDisposition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentDisposition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentDisposition());
         }
         catch (...)
@@ -6170,12 +6170,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentHeaderCollection_put_ContentDisposition(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentDisposition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6184,6 +6178,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentDisposition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue>(arg);
 
             self->obj.ContentDisposition(param0);
@@ -6198,14 +6198,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentHeaderCollection_get_ContentEncoding(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentEncoding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentEncoding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentEncoding());
         }
         catch (...)
@@ -6217,14 +6217,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentHeaderCollection_get_ContentLanguage(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentLanguage());
         }
         catch (...)
@@ -6507,14 +6507,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentRangeHeaderValue", L"Parse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentRangeHeaderValue", L"Parse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue::Parse(param0));
@@ -6538,14 +6538,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentRangeHeaderValue", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentRangeHeaderValue", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -6567,14 +6567,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentRangeHeaderValue", L"TryParse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentRangeHeaderValue", L"TryParse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue param1 { nullptr };
 
@@ -6607,14 +6607,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentRangeHeaderValue_get_Unit(py::wrapper::Windows::Web::Http::Headers::HttpContentRangeHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentRangeHeaderValue", L"Unit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentRangeHeaderValue", L"Unit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Unit());
         }
         catch (...)
@@ -6626,12 +6626,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentRangeHeaderValue_put_Unit(py::wrapper::Windows::Web::Http::Headers::HttpContentRangeHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentRangeHeaderValue", L"Unit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6640,6 +6634,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentRangeHeaderValue", L"Unit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Unit(param0);
@@ -6654,14 +6654,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentRangeHeaderValue_get_FirstBytePosition(py::wrapper::Windows::Web::Http::Headers::HttpContentRangeHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentRangeHeaderValue", L"FirstBytePosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentRangeHeaderValue", L"FirstBytePosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstBytePosition());
         }
         catch (...)
@@ -6673,14 +6673,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentRangeHeaderValue_get_LastBytePosition(py::wrapper::Windows::Web::Http::Headers::HttpContentRangeHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentRangeHeaderValue", L"LastBytePosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentRangeHeaderValue", L"LastBytePosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastBytePosition());
         }
         catch (...)
@@ -6692,14 +6692,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentRangeHeaderValue_get_Length(py::wrapper::Windows::Web::Http::Headers::HttpContentRangeHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentRangeHeaderValue", L"Length"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentRangeHeaderValue", L"Length"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Length());
         }
         catch (...)
@@ -6870,14 +6870,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValue", L"Parse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValue", L"Parse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue::Parse(param0));
@@ -6901,14 +6901,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValue", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValue", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -6930,14 +6930,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValue", L"TryParse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValue", L"TryParse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue param1 { nullptr };
 
@@ -6970,14 +6970,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCookiePairHeaderValue_get_Value(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValue", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValue", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -6989,12 +6989,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpCookiePairHeaderValue_put_Value(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValue", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7003,6 +6997,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValue", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Value(param0);
@@ -7017,14 +7017,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCookiePairHeaderValue_get_Name(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValue", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValue", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -7153,14 +7153,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>(args, 0);
 
                 self->obj.Append(param0);
@@ -7185,14 +7185,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -7215,14 +7215,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -7244,14 +7244,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -7275,14 +7275,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue, true>>(args, 1);
 
@@ -7307,14 +7307,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -7336,14 +7336,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>(args, 0);
                 uint32_t param1 {  };
 
@@ -7380,14 +7380,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>(args, 1);
 
@@ -7413,14 +7413,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"ParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"ParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ParseAdd(param0);
@@ -7445,14 +7445,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -7477,14 +7477,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -7507,14 +7507,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -7539,14 +7539,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>(args, 1);
 
@@ -7572,14 +7572,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -7601,14 +7601,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"TryParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"TryParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TryParseAdd(param0));
@@ -7628,14 +7628,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCookiePairHeaderValueCollection_get_Size(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -7919,14 +7919,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCredentialsHeaderValue", L"Parse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCredentialsHeaderValue", L"Parse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue::Parse(param0));
@@ -7950,14 +7950,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCredentialsHeaderValue", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCredentialsHeaderValue", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -7979,14 +7979,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCredentialsHeaderValue", L"TryParse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCredentialsHeaderValue", L"TryParse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue param1 { nullptr };
 
@@ -8019,14 +8019,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCredentialsHeaderValue_get_Parameters(py::wrapper::Windows::Web::Http::Headers::HttpCredentialsHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCredentialsHeaderValue", L"Parameters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCredentialsHeaderValue", L"Parameters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parameters());
         }
         catch (...)
@@ -8038,14 +8038,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCredentialsHeaderValue_get_Scheme(py::wrapper::Windows::Web::Http::Headers::HttpCredentialsHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCredentialsHeaderValue", L"Scheme"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCredentialsHeaderValue", L"Scheme"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Scheme());
         }
         catch (...)
@@ -8057,14 +8057,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCredentialsHeaderValue_get_Token(py::wrapper::Windows::Web::Http::Headers::HttpCredentialsHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCredentialsHeaderValue", L"Token"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCredentialsHeaderValue", L"Token"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Token());
         }
         catch (...)
@@ -8194,14 +8194,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue", L"Parse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue", L"Parse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue::Parse(param0));
@@ -8225,14 +8225,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -8254,14 +8254,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue", L"TryParse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue", L"TryParse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue param1 { nullptr };
 
@@ -8294,14 +8294,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpDateOrDeltaHeaderValue_get_Date(py::wrapper::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue", L"Date"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue", L"Date"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Date());
         }
         catch (...)
@@ -8313,14 +8313,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpDateOrDeltaHeaderValue_get_Delta(py::wrapper::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue", L"Delta"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue", L"Delta"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Delta());
         }
         catch (...)
@@ -8489,14 +8489,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValue", L"Parse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValue", L"Parse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue::Parse(param0));
@@ -8520,14 +8520,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValue", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValue", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -8549,14 +8549,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValue", L"TryParse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValue", L"TryParse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue param1 { nullptr };
 
@@ -8589,14 +8589,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpExpectationHeaderValue_get_Value(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValue", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValue", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -8608,12 +8608,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpExpectationHeaderValue_put_Value(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValue", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8622,6 +8616,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValue", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Value(param0);
@@ -8636,14 +8636,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpExpectationHeaderValue_get_Name(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValue", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValue", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -8655,14 +8655,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpExpectationHeaderValue_get_Parameters(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValue", L"Parameters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValue", L"Parameters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parameters());
         }
         catch (...)
@@ -8792,14 +8792,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>(args, 0);
 
                 self->obj.Append(param0);
@@ -8824,14 +8824,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -8854,14 +8854,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -8883,14 +8883,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -8914,14 +8914,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue, true>>(args, 1);
 
@@ -8946,14 +8946,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -8975,14 +8975,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>(args, 0);
                 uint32_t param1 {  };
 
@@ -9019,14 +9019,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>(args, 1);
 
@@ -9052,14 +9052,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"ParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"ParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ParseAdd(param0);
@@ -9084,14 +9084,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -9116,14 +9116,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -9146,14 +9146,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -9178,14 +9178,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>(args, 1);
 
@@ -9211,14 +9211,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -9240,14 +9240,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"TryParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"TryParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TryParseAdd(param0));
@@ -9267,14 +9267,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpExpectationHeaderValueCollection_get_Size(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -9518,14 +9518,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Globalization::Language>(args, 0);
 
                 self->obj.Append(param0);
@@ -9550,14 +9550,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -9580,14 +9580,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -9609,14 +9609,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -9640,14 +9640,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Globalization::Language, true>>(args, 1);
 
@@ -9672,14 +9672,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -9701,14 +9701,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Globalization::Language>(args, 0);
                 uint32_t param1 {  };
 
@@ -9745,14 +9745,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Globalization::Language>(args, 1);
 
@@ -9778,14 +9778,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"ParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"ParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ParseAdd(param0);
@@ -9810,14 +9810,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -9842,14 +9842,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -9872,14 +9872,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Globalization::Language, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -9904,14 +9904,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Globalization::Language>(args, 1);
 
@@ -9937,14 +9937,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -9966,14 +9966,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"TryParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"TryParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TryParseAdd(param0));
@@ -9993,14 +9993,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageHeaderValueCollection_get_Size(py::wrapper::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -10284,14 +10284,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue", L"Parse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue", L"Parse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue::Parse(param0));
@@ -10315,14 +10315,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -10344,14 +10344,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue", L"TryParse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue", L"TryParse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue param1 { nullptr };
 
@@ -10384,14 +10384,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageRangeWithQualityHeaderValue_get_LanguageRange(py::wrapper::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue", L"LanguageRange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue", L"LanguageRange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LanguageRange());
         }
         catch (...)
@@ -10403,14 +10403,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageRangeWithQualityHeaderValue_get_Quality(py::wrapper::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue", L"Quality"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue", L"Quality"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Quality());
         }
         catch (...)
@@ -10539,14 +10539,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(args, 0);
 
                 self->obj.Append(param0);
@@ -10571,14 +10571,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -10601,14 +10601,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -10630,14 +10630,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -10661,14 +10661,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue, true>>(args, 1);
 
@@ -10693,14 +10693,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -10722,14 +10722,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(args, 0);
                 uint32_t param1 {  };
 
@@ -10766,14 +10766,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(args, 1);
 
@@ -10799,14 +10799,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"ParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"ParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ParseAdd(param0);
@@ -10831,14 +10831,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -10863,14 +10863,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -10893,14 +10893,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -10925,14 +10925,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(args, 1);
 
@@ -10958,14 +10958,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -10987,14 +10987,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"TryParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"TryParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TryParseAdd(param0));
@@ -11014,14 +11014,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageRangeWithQualityHeaderValueCollection_get_Size(py::wrapper::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -11289,14 +11289,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", L"Parse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", L"Parse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue::Parse(param0));
@@ -11320,14 +11320,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -11349,14 +11349,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", L"TryParse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", L"TryParse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue param1 { nullptr };
 
@@ -11389,14 +11389,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeHeaderValue_get_MediaType(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", L"MediaType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", L"MediaType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MediaType());
         }
         catch (...)
@@ -11408,12 +11408,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpMediaTypeHeaderValue_put_MediaType(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", L"MediaType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11422,6 +11416,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", L"MediaType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.MediaType(param0);
@@ -11436,14 +11436,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeHeaderValue_get_CharSet(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", L"CharSet"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", L"CharSet"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CharSet());
         }
         catch (...)
@@ -11455,12 +11455,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpMediaTypeHeaderValue_put_CharSet(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", L"CharSet"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11469,6 +11463,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", L"CharSet"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.CharSet(param0);
@@ -11483,14 +11483,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeHeaderValue_get_Parameters(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", L"Parameters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", L"Parameters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parameters());
         }
         catch (...)
@@ -11660,14 +11660,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"Parse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"Parse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue::Parse(param0));
@@ -11691,14 +11691,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -11720,14 +11720,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"TryParse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"TryParse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue param1 { nullptr };
 
@@ -11760,14 +11760,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeWithQualityHeaderValue_get_Quality(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"Quality"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"Quality"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Quality());
         }
         catch (...)
@@ -11779,12 +11779,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpMediaTypeWithQualityHeaderValue_put_Quality(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"Quality"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11793,6 +11787,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"Quality"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(arg);
 
             self->obj.Quality(param0);
@@ -11807,14 +11807,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeWithQualityHeaderValue_get_MediaType(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"MediaType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"MediaType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MediaType());
         }
         catch (...)
@@ -11826,12 +11826,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpMediaTypeWithQualityHeaderValue_put_MediaType(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"MediaType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11840,6 +11834,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"MediaType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.MediaType(param0);
@@ -11854,14 +11854,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeWithQualityHeaderValue_get_CharSet(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"CharSet"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"CharSet"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CharSet());
         }
         catch (...)
@@ -11873,12 +11873,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpMediaTypeWithQualityHeaderValue_put_CharSet(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"CharSet"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11887,6 +11881,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"CharSet"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.CharSet(param0);
@@ -11901,14 +11901,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeWithQualityHeaderValue_get_Parameters(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"Parameters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"Parameters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parameters());
         }
         catch (...)
@@ -12039,14 +12039,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(args, 0);
 
                 self->obj.Append(param0);
@@ -12071,14 +12071,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -12101,14 +12101,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -12130,14 +12130,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -12161,14 +12161,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue, true>>(args, 1);
 
@@ -12193,14 +12193,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -12222,14 +12222,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(args, 0);
                 uint32_t param1 {  };
 
@@ -12266,14 +12266,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(args, 1);
 
@@ -12299,14 +12299,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"ParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"ParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ParseAdd(param0);
@@ -12331,14 +12331,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -12363,14 +12363,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -12393,14 +12393,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -12425,14 +12425,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(args, 1);
 
@@ -12458,14 +12458,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -12487,14 +12487,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"TryParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"TryParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TryParseAdd(param0));
@@ -12514,14 +12514,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeWithQualityHeaderValueCollection_get_Size(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -12765,14 +12765,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpMethod>(args, 0);
 
                 self->obj.Append(param0);
@@ -12797,14 +12797,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -12827,14 +12827,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -12856,14 +12856,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -12887,14 +12887,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::HttpMethod, true>>(args, 1);
 
@@ -12919,14 +12919,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -12948,14 +12948,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpMethod>(args, 0);
                 uint32_t param1 {  };
 
@@ -12992,14 +12992,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::HttpMethod>(args, 1);
 
@@ -13025,14 +13025,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"ParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"ParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ParseAdd(param0);
@@ -13057,14 +13057,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -13089,14 +13089,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -13119,14 +13119,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::HttpMethod, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -13151,14 +13151,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::HttpMethod>(args, 1);
 
@@ -13184,14 +13184,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -13213,14 +13213,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"TryParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"TryParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TryParseAdd(param0));
@@ -13240,14 +13240,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMethodHeaderValueCollection_get_Size(py::wrapper::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -13531,14 +13531,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpNameValueHeaderValue", L"Parse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpNameValueHeaderValue", L"Parse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue::Parse(param0));
@@ -13562,14 +13562,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpNameValueHeaderValue", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpNameValueHeaderValue", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -13591,14 +13591,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpNameValueHeaderValue", L"TryParse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpNameValueHeaderValue", L"TryParse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue param1 { nullptr };
 
@@ -13631,14 +13631,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpNameValueHeaderValue_get_Value(py::wrapper::Windows::Web::Http::Headers::HttpNameValueHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpNameValueHeaderValue", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpNameValueHeaderValue", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -13650,12 +13650,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpNameValueHeaderValue_put_Value(py::wrapper::Windows::Web::Http::Headers::HttpNameValueHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpNameValueHeaderValue", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13664,6 +13658,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpNameValueHeaderValue", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Value(param0);
@@ -13678,14 +13678,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpNameValueHeaderValue_get_Name(py::wrapper::Windows::Web::Http::Headers::HttpNameValueHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpNameValueHeaderValue", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpNameValueHeaderValue", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -13854,14 +13854,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductHeaderValue", L"Parse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductHeaderValue", L"Parse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Web::Http::Headers::HttpProductHeaderValue::Parse(param0));
@@ -13885,14 +13885,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductHeaderValue", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductHeaderValue", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -13914,14 +13914,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductHeaderValue", L"TryParse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductHeaderValue", L"TryParse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpProductHeaderValue param1 { nullptr };
 
@@ -13954,14 +13954,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductHeaderValue_get_Name(py::wrapper::Windows::Web::Http::Headers::HttpProductHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpProductHeaderValue", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpProductHeaderValue", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -13973,14 +13973,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductHeaderValue_get_Version(py::wrapper::Windows::Web::Http::Headers::HttpProductHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpProductHeaderValue", L"Version"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpProductHeaderValue", L"Version"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Version());
         }
         catch (...)
@@ -14149,14 +14149,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValue", L"Parse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValue", L"Parse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue::Parse(param0));
@@ -14180,14 +14180,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValue", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValue", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -14209,14 +14209,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValue", L"TryParse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValue", L"TryParse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue param1 { nullptr };
 
@@ -14249,14 +14249,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductInfoHeaderValue_get_Comment(py::wrapper::Windows::Web::Http::Headers::HttpProductInfoHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValue", L"Comment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValue", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Comment());
         }
         catch (...)
@@ -14268,14 +14268,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductInfoHeaderValue_get_Product(py::wrapper::Windows::Web::Http::Headers::HttpProductInfoHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValue", L"Product"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValue", L"Product"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Product());
         }
         catch (...)
@@ -14404,14 +14404,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(args, 0);
 
                 self->obj.Append(param0);
@@ -14436,14 +14436,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -14466,14 +14466,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -14495,14 +14495,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -14526,14 +14526,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue, true>>(args, 1);
 
@@ -14558,14 +14558,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -14587,14 +14587,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(args, 0);
                 uint32_t param1 {  };
 
@@ -14631,14 +14631,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(args, 1);
 
@@ -14664,14 +14664,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"ParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"ParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ParseAdd(param0);
@@ -14696,14 +14696,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -14728,14 +14728,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -14758,14 +14758,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -14790,14 +14790,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(args, 1);
 
@@ -14823,14 +14823,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -14852,14 +14852,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"TryParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"TryParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TryParseAdd(param0));
@@ -14879,14 +14879,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductInfoHeaderValueCollection_get_Size(py::wrapper::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -15130,14 +15130,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Append", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Append", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -15163,14 +15163,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -15193,14 +15193,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -15222,14 +15222,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -15251,14 +15251,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"HasKey", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"HasKey", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.HasKey(param0));
@@ -15282,14 +15282,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Insert", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Insert", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -15314,14 +15314,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Lookup", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Lookup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.Lookup(param0));
@@ -15345,14 +15345,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Remove", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Remove", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Remove(param0);
@@ -15377,14 +15377,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -15406,14 +15406,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"TryAppendWithoutValidation", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"TryAppendWithoutValidation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -15434,14 +15434,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_get_Size(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -15453,14 +15453,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_get_Referer(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Referer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Referer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Referer());
         }
         catch (...)
@@ -15472,12 +15472,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpRequestHeaderCollection_put_Referer(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Referer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15486,6 +15480,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Referer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.Referer(param0);
@@ -15500,14 +15500,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_get_ProxyAuthorization(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"ProxyAuthorization"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"ProxyAuthorization"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProxyAuthorization());
         }
         catch (...)
@@ -15519,12 +15519,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpRequestHeaderCollection_put_ProxyAuthorization(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"ProxyAuthorization"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15533,6 +15527,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"ProxyAuthorization"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue>(arg);
 
             self->obj.ProxyAuthorization(param0);
@@ -15547,14 +15547,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_get_MaxForwards(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"MaxForwards"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"MaxForwards"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxForwards());
         }
         catch (...)
@@ -15566,12 +15566,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpRequestHeaderCollection_put_MaxForwards(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"MaxForwards"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15580,6 +15574,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"MaxForwards"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
             self->obj.MaxForwards(param0);
@@ -15594,14 +15594,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_get_IfUnmodifiedSince(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"IfUnmodifiedSince"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"IfUnmodifiedSince"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IfUnmodifiedSince());
         }
         catch (...)
@@ -15613,12 +15613,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpRequestHeaderCollection_put_IfUnmodifiedSince(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"IfUnmodifiedSince"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15627,6 +15621,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"IfUnmodifiedSince"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             self->obj.IfUnmodifiedSince(param0);
@@ -15641,14 +15641,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_get_IfModifiedSince(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"IfModifiedSince"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"IfModifiedSince"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IfModifiedSince());
         }
         catch (...)
@@ -15660,12 +15660,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpRequestHeaderCollection_put_IfModifiedSince(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"IfModifiedSince"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15674,6 +15668,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"IfModifiedSince"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             self->obj.IfModifiedSince(param0);
@@ -15688,14 +15688,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_get_Host(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Host"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Host"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Host());
         }
         catch (...)
@@ -15707,12 +15707,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpRequestHeaderCollection_put_Host(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Host"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15721,6 +15715,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Host"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(arg);
 
             self->obj.Host(param0);
@@ -15735,14 +15735,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_get_From(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"From"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"From"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.From());
         }
         catch (...)
@@ -15754,12 +15754,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpRequestHeaderCollection_put_From(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"From"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15768,6 +15762,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"From"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.From(param0);
@@ -15782,14 +15782,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_get_Date(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Date"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Date"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Date());
         }
         catch (...)
@@ -15801,12 +15801,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpRequestHeaderCollection_put_Date(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Date"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15815,6 +15809,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Date"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             self->obj.Date(param0);
@@ -15829,14 +15829,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_get_Authorization(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Authorization"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Authorization"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Authorization());
         }
         catch (...)
@@ -15848,12 +15848,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpRequestHeaderCollection_put_Authorization(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Authorization"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15862,6 +15856,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Authorization"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue>(arg);
 
             self->obj.Authorization(param0);
@@ -15876,14 +15876,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_get_Accept(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Accept"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Accept"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Accept());
         }
         catch (...)
@@ -15895,14 +15895,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_get_AcceptEncoding(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"AcceptEncoding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"AcceptEncoding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AcceptEncoding());
         }
         catch (...)
@@ -15914,14 +15914,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_get_AcceptLanguage(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"AcceptLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"AcceptLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AcceptLanguage());
         }
         catch (...)
@@ -15933,14 +15933,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_get_CacheControl(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"CacheControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"CacheControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CacheControl());
         }
         catch (...)
@@ -15952,14 +15952,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_get_Connection(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Connection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Connection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Connection());
         }
         catch (...)
@@ -15971,14 +15971,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_get_Cookie(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Cookie"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Cookie"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Cookie());
         }
         catch (...)
@@ -15990,14 +15990,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_get_Expect(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Expect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Expect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Expect());
         }
         catch (...)
@@ -16009,14 +16009,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_get_TransferEncoding(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"TransferEncoding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"TransferEncoding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TransferEncoding());
         }
         catch (...)
@@ -16028,14 +16028,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_get_UserAgent(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"UserAgent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"UserAgent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserAgent());
         }
         catch (...)
@@ -16269,14 +16269,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Append", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Append", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -16302,14 +16302,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -16332,14 +16332,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -16361,14 +16361,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -16390,14 +16390,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"HasKey", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"HasKey", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.HasKey(param0));
@@ -16421,14 +16421,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Insert", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Insert", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -16453,14 +16453,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Lookup", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Lookup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.Lookup(param0));
@@ -16484,14 +16484,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Remove", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Remove", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Remove(param0);
@@ -16516,14 +16516,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -16545,14 +16545,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"TryAppendWithoutValidation", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"TryAppendWithoutValidation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -16573,14 +16573,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpResponseHeaderCollection_get_Size(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -16592,14 +16592,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpResponseHeaderCollection_get_RetryAfter(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"RetryAfter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"RetryAfter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RetryAfter());
         }
         catch (...)
@@ -16611,12 +16611,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpResponseHeaderCollection_put_RetryAfter(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"RetryAfter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16625,6 +16619,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"RetryAfter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue>(arg);
 
             self->obj.RetryAfter(param0);
@@ -16639,14 +16639,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpResponseHeaderCollection_get_Location(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Location"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Location"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Location());
         }
         catch (...)
@@ -16658,12 +16658,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpResponseHeaderCollection_put_Location(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Location"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16672,6 +16666,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Location"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.Location(param0);
@@ -16686,14 +16686,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpResponseHeaderCollection_get_Date(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Date"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Date"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Date());
         }
         catch (...)
@@ -16705,12 +16705,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpResponseHeaderCollection_put_Date(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Date"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16719,6 +16713,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Date"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             self->obj.Date(param0);
@@ -16733,14 +16733,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpResponseHeaderCollection_get_Age(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Age"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Age"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Age());
         }
         catch (...)
@@ -16752,12 +16752,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpResponseHeaderCollection_put_Age(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Age"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16766,6 +16760,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Age"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             self->obj.Age(param0);
@@ -16780,14 +16780,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpResponseHeaderCollection_get_Allow(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Allow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Allow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Allow());
         }
         catch (...)
@@ -16799,14 +16799,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpResponseHeaderCollection_get_CacheControl(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"CacheControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"CacheControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CacheControl());
         }
         catch (...)
@@ -16818,14 +16818,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpResponseHeaderCollection_get_Connection(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Connection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Connection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Connection());
         }
         catch (...)
@@ -16837,14 +16837,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpResponseHeaderCollection_get_ProxyAuthenticate(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"ProxyAuthenticate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"ProxyAuthenticate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProxyAuthenticate());
         }
         catch (...)
@@ -16856,14 +16856,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpResponseHeaderCollection_get_TransferEncoding(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"TransferEncoding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"TransferEncoding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TransferEncoding());
         }
         catch (...)
@@ -16875,14 +16875,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpResponseHeaderCollection_get_WwwAuthenticate(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"WwwAuthenticate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"WwwAuthenticate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WwwAuthenticate());
         }
         catch (...)
@@ -17132,14 +17132,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValue", L"Parse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValue", L"Parse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue::Parse(param0));
@@ -17163,14 +17163,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValue", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValue", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -17192,14 +17192,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValue", L"TryParse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValue", L"TryParse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue param1 { nullptr };
 
@@ -17232,14 +17232,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpTransferCodingHeaderValue_get_Parameters(py::wrapper::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValue", L"Parameters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValue", L"Parameters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parameters());
         }
         catch (...)
@@ -17251,14 +17251,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpTransferCodingHeaderValue_get_Value(py::wrapper::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValue", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValue", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -17387,14 +17387,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>(args, 0);
 
                 self->obj.Append(param0);
@@ -17419,14 +17419,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -17449,14 +17449,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -17478,14 +17478,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -17509,14 +17509,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue, true>>(args, 1);
 
@@ -17541,14 +17541,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -17570,14 +17570,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>(args, 0);
                 uint32_t param1 {  };
 
@@ -17614,14 +17614,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>(args, 1);
 
@@ -17647,14 +17647,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"ParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"ParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ParseAdd(param0);
@@ -17679,14 +17679,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -17711,14 +17711,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -17741,14 +17741,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -17773,14 +17773,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>(args, 1);
 
@@ -17806,14 +17806,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -17835,14 +17835,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"TryParseAdd", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"TryParseAdd", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TryParseAdd(param0));
@@ -17862,14 +17862,14 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpTransferCodingHeaderValueCollection_get_Size(py::wrapper::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)

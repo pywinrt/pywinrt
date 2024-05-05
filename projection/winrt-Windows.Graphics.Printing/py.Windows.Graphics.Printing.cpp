@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintManager", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintManager", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Graphics::Printing::PrintManager::GetForCurrentView());
             }
             catch (...)
@@ -57,14 +57,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintManager", L"IsSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintManager", L"IsSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Graphics::Printing::PrintManager::IsSupported());
             }
             catch (...)
@@ -86,14 +86,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintManager", L"ShowPrintUIAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintManager", L"ShowPrintUIAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Graphics::Printing::PrintManager::ShowPrintUIAsync());
             }
             catch (...)
@@ -111,14 +111,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintManager_add_PrintTaskRequested(py::wrapper::Windows::Graphics::Printing::PrintManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintManager", L"PrintTaskRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintManager", L"PrintTaskRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintManager, winrt::Windows::Graphics::Printing::PrintTaskRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.PrintTaskRequested(param0));
@@ -132,14 +132,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintManager_remove_PrintTaskRequested(py::wrapper::Windows::Graphics::Printing::PrintManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintManager", L"PrintTaskRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintManager", L"PrintTaskRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PrintTaskRequested(param0);
@@ -275,14 +275,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintPageInfo_get_PageSize(py::wrapper::Windows::Graphics::Printing::PrintPageInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageInfo", L"PageSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageInfo", L"PageSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageSize());
         }
         catch (...)
@@ -294,12 +294,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int PrintPageInfo_put_PageSize(py::wrapper::Windows::Graphics::Printing::PrintPageInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageInfo", L"PageSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -308,6 +302,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageInfo", L"PageSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(arg);
 
             self->obj.PageSize(param0);
@@ -322,14 +322,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintPageInfo_get_Orientation(py::wrapper::Windows::Graphics::Printing::PrintPageInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageInfo", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageInfo", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Orientation());
         }
         catch (...)
@@ -341,12 +341,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int PrintPageInfo_put_Orientation(py::wrapper::Windows::Graphics::Printing::PrintPageInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageInfo", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -355,6 +349,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageInfo", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintOrientation>(arg);
 
             self->obj.Orientation(param0);
@@ -369,14 +369,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintPageInfo_get_MediaSize(py::wrapper::Windows::Graphics::Printing::PrintPageInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageInfo", L"MediaSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageInfo", L"MediaSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MediaSize());
         }
         catch (...)
@@ -388,12 +388,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int PrintPageInfo_put_MediaSize(py::wrapper::Windows::Graphics::Printing::PrintPageInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageInfo", L"MediaSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -402,6 +396,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageInfo", L"MediaSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintMediaSize>(arg);
 
             self->obj.MediaSize(param0);
@@ -416,14 +416,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintPageInfo_get_DpiY(py::wrapper::Windows::Graphics::Printing::PrintPageInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageInfo", L"DpiY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageInfo", L"DpiY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DpiY());
         }
         catch (...)
@@ -435,12 +435,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int PrintPageInfo_put_DpiY(py::wrapper::Windows::Graphics::Printing::PrintPageInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageInfo", L"DpiY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -449,6 +443,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageInfo", L"DpiY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.DpiY(param0);
@@ -463,14 +463,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintPageInfo_get_DpiX(py::wrapper::Windows::Graphics::Printing::PrintPageInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageInfo", L"DpiX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageInfo", L"DpiX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DpiX());
         }
         catch (...)
@@ -482,12 +482,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int PrintPageInfo_put_DpiX(py::wrapper::Windows::Graphics::Printing::PrintPageInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageInfo", L"DpiX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -496,6 +490,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageInfo", L"DpiX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.DpiX(param0);
@@ -624,14 +624,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintPageRange_get_FirstPageNumber(py::wrapper::Windows::Graphics::Printing::PrintPageRange* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageRange", L"FirstPageNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageRange", L"FirstPageNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstPageNumber());
         }
         catch (...)
@@ -643,14 +643,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintPageRange_get_LastPageNumber(py::wrapper::Windows::Graphics::Printing::PrintPageRange* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageRange", L"LastPageNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageRange", L"LastPageNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastPageNumber());
         }
         catch (...)
@@ -733,14 +733,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintPageRangeOptions_get_AllowCustomSetOfPages(py::wrapper::Windows::Graphics::Printing::PrintPageRangeOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageRangeOptions", L"AllowCustomSetOfPages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageRangeOptions", L"AllowCustomSetOfPages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowCustomSetOfPages());
         }
         catch (...)
@@ -752,12 +752,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int PrintPageRangeOptions_put_AllowCustomSetOfPages(py::wrapper::Windows::Graphics::Printing::PrintPageRangeOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageRangeOptions", L"AllowCustomSetOfPages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -766,6 +760,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageRangeOptions", L"AllowCustomSetOfPages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowCustomSetOfPages(param0);
@@ -780,14 +780,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintPageRangeOptions_get_AllowCurrentPage(py::wrapper::Windows::Graphics::Printing::PrintPageRangeOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageRangeOptions", L"AllowCurrentPage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageRangeOptions", L"AllowCurrentPage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowCurrentPage());
         }
         catch (...)
@@ -799,12 +799,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int PrintPageRangeOptions_put_AllowCurrentPage(py::wrapper::Windows::Graphics::Printing::PrintPageRangeOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageRangeOptions", L"AllowCurrentPage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -813,6 +807,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageRangeOptions", L"AllowCurrentPage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowCurrentPage(param0);
@@ -827,14 +827,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintPageRangeOptions_get_AllowAllPages(py::wrapper::Windows::Graphics::Printing::PrintPageRangeOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageRangeOptions", L"AllowAllPages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageRangeOptions", L"AllowAllPages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowAllPages());
         }
         catch (...)
@@ -846,12 +846,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int PrintPageRangeOptions_put_AllowAllPages(py::wrapper::Windows::Graphics::Printing::PrintPageRangeOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageRangeOptions", L"AllowAllPages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -860,6 +854,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintPageRangeOptions", L"AllowAllPages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowAllPages(param0);
@@ -946,14 +946,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTask_get_Options(py::wrapper::Windows::Graphics::Printing::PrintTask* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTask", L"Options"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTask", L"Options"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Options());
         }
         catch (...)
@@ -965,14 +965,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTask_get_Properties(py::wrapper::Windows::Graphics::Printing::PrintTask* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTask", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTask", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -984,14 +984,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTask_get_Source(py::wrapper::Windows::Graphics::Printing::PrintTask* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTask", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTask", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -1003,14 +1003,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTask_get_IsPreviewEnabled(py::wrapper::Windows::Graphics::Printing::PrintTask* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTask", L"IsPreviewEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTask", L"IsPreviewEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPreviewEnabled());
         }
         catch (...)
@@ -1022,12 +1022,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int PrintTask_put_IsPreviewEnabled(py::wrapper::Windows::Graphics::Printing::PrintTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTask", L"IsPreviewEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1036,6 +1030,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTask", L"IsPreviewEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsPreviewEnabled(param0);
@@ -1050,14 +1050,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTask_get_IsPrinterTargetEnabled(py::wrapper::Windows::Graphics::Printing::PrintTask* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTask", L"IsPrinterTargetEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTask", L"IsPrinterTargetEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPrinterTargetEnabled());
         }
         catch (...)
@@ -1069,12 +1069,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int PrintTask_put_IsPrinterTargetEnabled(py::wrapper::Windows::Graphics::Printing::PrintTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTask", L"IsPrinterTargetEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1083,6 +1077,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTask", L"IsPrinterTargetEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsPrinterTargetEnabled(param0);
@@ -1097,14 +1097,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTask_get_Is3DManufacturingTargetEnabled(py::wrapper::Windows::Graphics::Printing::PrintTask* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTask", L"Is3DManufacturingTargetEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTask", L"Is3DManufacturingTargetEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Is3DManufacturingTargetEnabled());
         }
         catch (...)
@@ -1116,12 +1116,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int PrintTask_put_Is3DManufacturingTargetEnabled(py::wrapper::Windows::Graphics::Printing::PrintTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTask", L"Is3DManufacturingTargetEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1130,6 +1124,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTask", L"Is3DManufacturingTargetEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Is3DManufacturingTargetEnabled(param0);
@@ -1144,14 +1144,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTask_add_Completed(py::wrapper::Windows::Graphics::Printing::PrintTask* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintTask", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintTask", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintTask, winrt::Windows::Graphics::Printing::PrintTaskCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.Completed(param0));
@@ -1165,14 +1165,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTask_remove_Completed(py::wrapper::Windows::Graphics::Printing::PrintTask* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintTask", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintTask", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Completed(param0);
@@ -1187,14 +1187,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTask_add_Previewing(py::wrapper::Windows::Graphics::Printing::PrintTask* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintTask", L"Previewing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintTask", L"Previewing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintTask, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Previewing(param0));
@@ -1208,14 +1208,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTask_remove_Previewing(py::wrapper::Windows::Graphics::Printing::PrintTask* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintTask", L"Previewing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintTask", L"Previewing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Previewing(param0);
@@ -1230,14 +1230,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTask_add_Progressing(py::wrapper::Windows::Graphics::Printing::PrintTask* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintTask", L"Progressing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintTask", L"Progressing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintTask, winrt::Windows::Graphics::Printing::PrintTaskProgressingEventArgs>>(arg);
 
             return py::convert(self->obj.Progressing(param0));
@@ -1251,14 +1251,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTask_remove_Progressing(py::wrapper::Windows::Graphics::Printing::PrintTask* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintTask", L"Progressing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintTask", L"Progressing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Progressing(param0);
@@ -1273,14 +1273,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTask_add_Submitting(py::wrapper::Windows::Graphics::Printing::PrintTask* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintTask", L"Submitting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintTask", L"Submitting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintTask, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Submitting(param0));
@@ -1294,14 +1294,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTask_remove_Submitting(py::wrapper::Windows::Graphics::Printing::PrintTask* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintTask", L"Submitting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintTask", L"Submitting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Submitting(param0);
@@ -1399,14 +1399,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTaskCompletedEventArgs_get_Completion(py::wrapper::Windows::Graphics::Printing::PrintTaskCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskCompletedEventArgs", L"Completion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskCompletedEventArgs", L"Completion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Completion());
         }
         catch (...)
@@ -1492,14 +1492,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"GetPageDescription", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"GetPageDescription", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetPageDescription(param0));
@@ -1523,14 +1523,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"GetPagePrintTicket", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"GetPagePrintTicket", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintPageInfo>(args, 0);
 
                 return py::convert(self->obj.GetPagePrintTicket(param0));
@@ -1550,14 +1550,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTaskOptions_get_Bordering(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Bordering"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Bordering"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bordering());
         }
         catch (...)
@@ -1569,12 +1569,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int PrintTaskOptions_put_Bordering(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Bordering"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1583,6 +1577,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Bordering"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintBordering>(arg);
 
             self->obj.Bordering(param0);
@@ -1597,14 +1597,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTaskOptions_get_PageRangeOptions(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"PageRangeOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"PageRangeOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageRangeOptions());
         }
         catch (...)
@@ -1616,14 +1616,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTaskOptions_get_CustomPageRanges(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"CustomPageRanges"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"CustomPageRanges"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CustomPageRanges());
         }
         catch (...)
@@ -1635,14 +1635,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTaskOptions_get_MediaType(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"MediaType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"MediaType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MediaType());
         }
         catch (...)
@@ -1654,12 +1654,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int PrintTaskOptions_put_MediaType(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"MediaType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1668,6 +1662,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"MediaType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintMediaType>(arg);
 
             self->obj.MediaType(param0);
@@ -1682,14 +1682,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTaskOptions_get_HolePunch(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"HolePunch"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"HolePunch"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HolePunch());
         }
         catch (...)
@@ -1701,12 +1701,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int PrintTaskOptions_put_HolePunch(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"HolePunch"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1715,6 +1709,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"HolePunch"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintHolePunch>(arg);
 
             self->obj.HolePunch(param0);
@@ -1729,14 +1729,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTaskOptions_get_Binding(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Binding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Binding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Binding());
         }
         catch (...)
@@ -1748,12 +1748,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int PrintTaskOptions_put_Binding(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Binding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1762,6 +1756,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Binding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintBinding>(arg);
 
             self->obj.Binding(param0);
@@ -1776,14 +1776,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTaskOptions_get_Duplex(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Duplex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Duplex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duplex());
         }
         catch (...)
@@ -1795,12 +1795,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int PrintTaskOptions_put_Duplex(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Duplex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1809,6 +1803,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Duplex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintDuplex>(arg);
 
             self->obj.Duplex(param0);
@@ -1823,14 +1823,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTaskOptions_get_ColorMode(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"ColorMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"ColorMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ColorMode());
         }
         catch (...)
@@ -1842,12 +1842,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int PrintTaskOptions_put_ColorMode(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"ColorMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1856,6 +1850,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"ColorMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintColorMode>(arg);
 
             self->obj.ColorMode(param0);
@@ -1870,14 +1870,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTaskOptions_get_Collation(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Collation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Collation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Collation());
         }
         catch (...)
@@ -1889,12 +1889,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int PrintTaskOptions_put_Collation(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Collation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1903,6 +1897,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Collation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintCollation>(arg);
 
             self->obj.Collation(param0);
@@ -1917,14 +1917,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTaskOptions_get_Staple(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Staple"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Staple"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Staple());
         }
         catch (...)
@@ -1936,12 +1936,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int PrintTaskOptions_put_Staple(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Staple"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1950,6 +1944,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Staple"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintStaple>(arg);
 
             self->obj.Staple(param0);
@@ -1964,14 +1964,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTaskOptions_get_PrintQuality(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"PrintQuality"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"PrintQuality"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrintQuality());
         }
         catch (...)
@@ -1983,12 +1983,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int PrintTaskOptions_put_PrintQuality(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"PrintQuality"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1997,6 +1991,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"PrintQuality"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintQuality>(arg);
 
             self->obj.PrintQuality(param0);
@@ -2011,14 +2011,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTaskOptions_get_Orientation(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Orientation());
         }
         catch (...)
@@ -2030,12 +2030,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int PrintTaskOptions_put_Orientation(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2044,6 +2038,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintOrientation>(arg);
 
             self->obj.Orientation(param0);
@@ -2058,14 +2058,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTaskOptions_get_MediaSize(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"MediaSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"MediaSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MediaSize());
         }
         catch (...)
@@ -2077,12 +2077,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int PrintTaskOptions_put_MediaSize(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"MediaSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2091,6 +2085,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"MediaSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintMediaSize>(arg);
 
             self->obj.MediaSize(param0);
@@ -2105,14 +2105,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTaskOptions_get_NumberOfCopies(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"NumberOfCopies"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"NumberOfCopies"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumberOfCopies());
         }
         catch (...)
@@ -2124,12 +2124,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int PrintTaskOptions_put_NumberOfCopies(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"NumberOfCopies"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2138,6 +2132,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"NumberOfCopies"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.NumberOfCopies(param0);
@@ -2152,14 +2152,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTaskOptions_get_MaxCopies(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"MaxCopies"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"MaxCopies"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxCopies());
         }
         catch (...)
@@ -2171,14 +2171,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTaskOptions_get_MinCopies(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"MinCopies"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"MinCopies"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinCopies());
         }
         catch (...)
@@ -2190,14 +2190,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTaskOptions_get_DisplayedOptions(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"DisplayedOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskOptions", L"DisplayedOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayedOptions());
         }
         catch (...)
@@ -2297,14 +2297,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTaskProgressingEventArgs_get_DocumentPageCount(py::wrapper::Windows::Graphics::Printing::PrintTaskProgressingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskProgressingEventArgs", L"DocumentPageCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskProgressingEventArgs", L"DocumentPageCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentPageCount());
         }
         catch (...)
@@ -2390,14 +2390,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTaskRequest", L"CreatePrintTask", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTaskRequest", L"CreatePrintTask", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Printing::PrintTaskSourceRequestedHandler>(args, 1);
 
@@ -2422,14 +2422,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTaskRequest", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTaskRequest", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -2447,14 +2447,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTaskRequest_get_Deadline(py::wrapper::Windows::Graphics::Printing::PrintTaskRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskRequest", L"Deadline"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskRequest", L"Deadline"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Deadline());
         }
         catch (...)
@@ -2542,14 +2542,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTaskRequestedDeferral", L"Complete", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTaskRequestedDeferral", L"Complete", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Complete();
                 Py_RETURN_NONE;
             }
@@ -2638,14 +2638,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTaskRequestedEventArgs_get_Request(py::wrapper::Windows::Graphics::Printing::PrintTaskRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskRequestedEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskRequestedEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -2731,14 +2731,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTaskSourceRequestedArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTaskSourceRequestedArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -2760,14 +2760,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTaskSourceRequestedArgs", L"SetSource", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTaskSourceRequestedArgs", L"SetSource", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::IPrintDocumentSource>(args, 0);
 
                 self->obj.SetSource(param0);
@@ -2788,14 +2788,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* PrintTaskSourceRequestedArgs_get_Deadline(py::wrapper::Windows::Graphics::Printing::PrintTaskSourceRequestedArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskSourceRequestedArgs", L"Deadline"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTaskSourceRequestedArgs", L"Deadline"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Deadline());
         }
         catch (...)
@@ -2883,14 +2883,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTaskSourceRequestedDeferral", L"Complete", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTaskSourceRequestedDeferral", L"Complete", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Complete();
                 Py_RETURN_NONE;
             }
@@ -2971,14 +2971,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* StandardPrintTaskOptions_get_Copies(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"Copies"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"Copies"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Printing::StandardPrintTaskOptions::Copies());
         }
         catch (...)
@@ -2990,14 +2990,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* StandardPrintTaskOptions_get_Binding(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"Binding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"Binding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Printing::StandardPrintTaskOptions::Binding());
         }
         catch (...)
@@ -3009,14 +3009,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* StandardPrintTaskOptions_get_Collation(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"Collation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"Collation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Printing::StandardPrintTaskOptions::Collation());
         }
         catch (...)
@@ -3028,14 +3028,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* StandardPrintTaskOptions_get_ColorMode(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"ColorMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"ColorMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Printing::StandardPrintTaskOptions::ColorMode());
         }
         catch (...)
@@ -3047,14 +3047,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* StandardPrintTaskOptions_get_MediaType(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"MediaType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"MediaType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Printing::StandardPrintTaskOptions::MediaType());
         }
         catch (...)
@@ -3066,14 +3066,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* StandardPrintTaskOptions_get_Duplex(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"Duplex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"Duplex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Printing::StandardPrintTaskOptions::Duplex());
         }
         catch (...)
@@ -3085,14 +3085,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* StandardPrintTaskOptions_get_HolePunch(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"HolePunch"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"HolePunch"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Printing::StandardPrintTaskOptions::HolePunch());
         }
         catch (...)
@@ -3104,14 +3104,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* StandardPrintTaskOptions_get_InputBin(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"InputBin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"InputBin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Printing::StandardPrintTaskOptions::InputBin());
         }
         catch (...)
@@ -3123,14 +3123,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* StandardPrintTaskOptions_get_MediaSize(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"MediaSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"MediaSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Printing::StandardPrintTaskOptions::MediaSize());
         }
         catch (...)
@@ -3142,14 +3142,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* StandardPrintTaskOptions_get_NUp(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"NUp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"NUp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Printing::StandardPrintTaskOptions::NUp());
         }
         catch (...)
@@ -3161,14 +3161,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* StandardPrintTaskOptions_get_Orientation(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Printing::StandardPrintTaskOptions::Orientation());
         }
         catch (...)
@@ -3180,14 +3180,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* StandardPrintTaskOptions_get_PrintQuality(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"PrintQuality"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"PrintQuality"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Printing::StandardPrintTaskOptions::PrintQuality());
         }
         catch (...)
@@ -3199,14 +3199,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* StandardPrintTaskOptions_get_Staple(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"Staple"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"Staple"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Printing::StandardPrintTaskOptions::Staple());
         }
         catch (...)
@@ -3218,14 +3218,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* StandardPrintTaskOptions_get_Bordering(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"Bordering"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"Bordering"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Printing::StandardPrintTaskOptions::Bordering());
         }
         catch (...)
@@ -3237,14 +3237,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* StandardPrintTaskOptions_get_CustomPageRanges(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"CustomPageRanges"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.StandardPrintTaskOptions", L"CustomPageRanges"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Printing::StandardPrintTaskOptions::CustomPageRanges());
         }
         catch (...)
@@ -3411,14 +3411,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCore", L"GetPageDescription", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCore", L"GetPageDescription", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetPageDescription(param0));
@@ -3508,14 +3508,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* IPrintTaskOptionsCoreProperties_get_Binding(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"Binding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"Binding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Binding());
         }
         catch (...)
@@ -3527,12 +3527,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int IPrintTaskOptionsCoreProperties_put_Binding(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"Binding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3541,6 +3535,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"Binding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintBinding>(arg);
 
             self->obj.Binding(param0);
@@ -3555,14 +3555,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* IPrintTaskOptionsCoreProperties_get_Collation(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"Collation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"Collation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Collation());
         }
         catch (...)
@@ -3574,12 +3574,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int IPrintTaskOptionsCoreProperties_put_Collation(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"Collation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3588,6 +3582,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"Collation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintCollation>(arg);
 
             self->obj.Collation(param0);
@@ -3602,14 +3602,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* IPrintTaskOptionsCoreProperties_get_ColorMode(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"ColorMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"ColorMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ColorMode());
         }
         catch (...)
@@ -3621,12 +3621,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int IPrintTaskOptionsCoreProperties_put_ColorMode(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"ColorMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3635,6 +3629,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"ColorMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintColorMode>(arg);
 
             self->obj.ColorMode(param0);
@@ -3649,14 +3649,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* IPrintTaskOptionsCoreProperties_get_Duplex(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"Duplex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"Duplex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duplex());
         }
         catch (...)
@@ -3668,12 +3668,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int IPrintTaskOptionsCoreProperties_put_Duplex(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"Duplex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3682,6 +3676,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"Duplex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintDuplex>(arg);
 
             self->obj.Duplex(param0);
@@ -3696,14 +3696,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* IPrintTaskOptionsCoreProperties_get_HolePunch(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"HolePunch"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"HolePunch"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HolePunch());
         }
         catch (...)
@@ -3715,12 +3715,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int IPrintTaskOptionsCoreProperties_put_HolePunch(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"HolePunch"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3729,6 +3723,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"HolePunch"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintHolePunch>(arg);
 
             self->obj.HolePunch(param0);
@@ -3743,14 +3743,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* IPrintTaskOptionsCoreProperties_get_MaxCopies(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"MaxCopies"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"MaxCopies"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxCopies());
         }
         catch (...)
@@ -3762,14 +3762,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* IPrintTaskOptionsCoreProperties_get_MediaSize(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"MediaSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"MediaSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MediaSize());
         }
         catch (...)
@@ -3781,12 +3781,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int IPrintTaskOptionsCoreProperties_put_MediaSize(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"MediaSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3795,6 +3789,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"MediaSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintMediaSize>(arg);
 
             self->obj.MediaSize(param0);
@@ -3809,14 +3809,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* IPrintTaskOptionsCoreProperties_get_MediaType(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"MediaType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"MediaType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MediaType());
         }
         catch (...)
@@ -3828,12 +3828,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int IPrintTaskOptionsCoreProperties_put_MediaType(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"MediaType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3842,6 +3836,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"MediaType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintMediaType>(arg);
 
             self->obj.MediaType(param0);
@@ -3856,14 +3856,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* IPrintTaskOptionsCoreProperties_get_MinCopies(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"MinCopies"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"MinCopies"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinCopies());
         }
         catch (...)
@@ -3875,14 +3875,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* IPrintTaskOptionsCoreProperties_get_NumberOfCopies(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"NumberOfCopies"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"NumberOfCopies"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumberOfCopies());
         }
         catch (...)
@@ -3894,12 +3894,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int IPrintTaskOptionsCoreProperties_put_NumberOfCopies(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"NumberOfCopies"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3908,6 +3902,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"NumberOfCopies"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.NumberOfCopies(param0);
@@ -3922,14 +3922,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* IPrintTaskOptionsCoreProperties_get_Orientation(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Orientation());
         }
         catch (...)
@@ -3941,12 +3941,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int IPrintTaskOptionsCoreProperties_put_Orientation(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3955,6 +3949,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintOrientation>(arg);
 
             self->obj.Orientation(param0);
@@ -3969,14 +3969,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* IPrintTaskOptionsCoreProperties_get_PrintQuality(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"PrintQuality"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"PrintQuality"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrintQuality());
         }
         catch (...)
@@ -3988,12 +3988,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int IPrintTaskOptionsCoreProperties_put_PrintQuality(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"PrintQuality"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4002,6 +3996,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"PrintQuality"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintQuality>(arg);
 
             self->obj.PrintQuality(param0);
@@ -4016,14 +4016,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* IPrintTaskOptionsCoreProperties_get_Staple(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"Staple"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"Staple"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Staple());
         }
         catch (...)
@@ -4035,12 +4035,6 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static int IPrintTaskOptionsCoreProperties_put_Staple(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"Staple"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4049,6 +4043,12 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties", L"Staple"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintStaple>(arg);
 
             self->obj.Staple(param0);
@@ -4145,14 +4145,14 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static PyObject* IPrintTaskOptionsCoreUIConfiguration_get_DisplayedOptions(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreUIConfiguration", L"DisplayedOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.IPrintTaskOptionsCoreUIConfiguration", L"DisplayedOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayedOptions());
         }
         catch (...)

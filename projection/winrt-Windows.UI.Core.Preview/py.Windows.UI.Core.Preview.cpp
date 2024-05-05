@@ -28,14 +28,14 @@ namespace py::cpp::Windows::UI::Core::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.CoreAppWindowPreview", L"GetIdFromWindow", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.CoreAppWindowPreview", L"GetIdFromWindow", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowManagement::AppWindow>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Core::Preview::CoreAppWindowPreview::GetIdFromWindow(param0));
@@ -154,14 +154,14 @@ namespace py::cpp::Windows::UI::Core::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -179,14 +179,14 @@ namespace py::cpp::Windows::UI::Core::Preview
 
     static PyObject* SystemNavigationCloseRequestedPreviewEventArgs_get_Handled(py::wrapper::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -198,12 +198,6 @@ namespace py::cpp::Windows::UI::Core::Preview
 
     static int SystemNavigationCloseRequestedPreviewEventArgs_put_Handled(py::wrapper::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -212,6 +206,12 @@ namespace py::cpp::Windows::UI::Core::Preview
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -301,14 +301,14 @@ namespace py::cpp::Windows::UI::Core::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.SystemNavigationManagerPreview", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.Preview.SystemNavigationManagerPreview", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::Core::Preview::SystemNavigationManagerPreview::GetForCurrentView());
             }
             catch (...)
@@ -326,14 +326,14 @@ namespace py::cpp::Windows::UI::Core::Preview
 
     static PyObject* SystemNavigationManagerPreview_add_CloseRequested(py::wrapper::Windows::UI::Core::Preview::SystemNavigationManagerPreview* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.SystemNavigationManagerPreview", L"CloseRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.SystemNavigationManagerPreview", L"CloseRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs>>(arg);
 
             return py::convert(self->obj.CloseRequested(param0));
@@ -347,14 +347,14 @@ namespace py::cpp::Windows::UI::Core::Preview
 
     static PyObject* SystemNavigationManagerPreview_remove_CloseRequested(py::wrapper::Windows::UI::Core::Preview::SystemNavigationManagerPreview* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.SystemNavigationManagerPreview", L"CloseRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.Preview.SystemNavigationManagerPreview", L"CloseRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CloseRequested(param0);

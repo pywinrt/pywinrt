@@ -28,14 +28,14 @@ namespace py::cpp::Windows::System::Inventory
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Inventory.InstalledDesktopApp", L"GetInventoryAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Inventory.InstalledDesktopApp", L"GetInventoryAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::System::Inventory::InstalledDesktopApp::GetInventoryAsync());
             }
             catch (...)
@@ -57,14 +57,14 @@ namespace py::cpp::Windows::System::Inventory
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Inventory.InstalledDesktopApp", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Inventory.InstalledDesktopApp", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -82,14 +82,14 @@ namespace py::cpp::Windows::System::Inventory
 
     static PyObject* InstalledDesktopApp_get_DisplayName(py::wrapper::Windows::System::Inventory::InstalledDesktopApp* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Inventory.InstalledDesktopApp", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Inventory.InstalledDesktopApp", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -101,14 +101,14 @@ namespace py::cpp::Windows::System::Inventory
 
     static PyObject* InstalledDesktopApp_get_DisplayVersion(py::wrapper::Windows::System::Inventory::InstalledDesktopApp* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Inventory.InstalledDesktopApp", L"DisplayVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Inventory.InstalledDesktopApp", L"DisplayVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayVersion());
         }
         catch (...)
@@ -120,14 +120,14 @@ namespace py::cpp::Windows::System::Inventory
 
     static PyObject* InstalledDesktopApp_get_Id(py::wrapper::Windows::System::Inventory::InstalledDesktopApp* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Inventory.InstalledDesktopApp", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Inventory.InstalledDesktopApp", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -139,14 +139,14 @@ namespace py::cpp::Windows::System::Inventory
 
     static PyObject* InstalledDesktopApp_get_Publisher(py::wrapper::Windows::System::Inventory::InstalledDesktopApp* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Inventory.InstalledDesktopApp", L"Publisher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Inventory.InstalledDesktopApp", L"Publisher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Publisher());
         }
         catch (...)

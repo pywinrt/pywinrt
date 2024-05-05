@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchor", L"TryCreateRelativeTo", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchor", L"TryCreateRelativeTo", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
                 return py::convert(winrt::Windows::Perception::Spatial::SpatialAnchor::TryCreateRelativeTo(param0));
@@ -48,14 +48,14 @@ namespace py::cpp::Windows::Perception::Spatial
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchor", L"TryCreateRelativeTo", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchor", L"TryCreateRelativeTo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
 
@@ -69,14 +69,14 @@ namespace py::cpp::Windows::Perception::Spatial
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchor", L"TryCreateRelativeTo", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchor", L"TryCreateRelativeTo", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 2);
@@ -98,14 +98,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchor_get_CoordinateSystem(py::wrapper::Windows::Perception::Spatial::SpatialAnchor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialAnchor", L"CoordinateSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialAnchor", L"CoordinateSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CoordinateSystem());
         }
         catch (...)
@@ -117,14 +117,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchor_get_RawCoordinateSystem(py::wrapper::Windows::Perception::Spatial::SpatialAnchor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialAnchor", L"RawCoordinateSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialAnchor", L"RawCoordinateSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawCoordinateSystem());
         }
         catch (...)
@@ -136,14 +136,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchor_get_RemovedByUser(py::wrapper::Windows::Perception::Spatial::SpatialAnchor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialAnchor", L"RemovedByUser"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialAnchor", L"RemovedByUser"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemovedByUser());
         }
         catch (...)
@@ -155,14 +155,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchor_add_RawCoordinateSystemAdjusted(py::wrapper::Windows::Perception::Spatial::SpatialAnchor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialAnchor", L"RawCoordinateSystemAdjusted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialAnchor", L"RawCoordinateSystemAdjusted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Perception::Spatial::SpatialAnchor, winrt::Windows::Perception::Spatial::SpatialAnchorRawCoordinateSystemAdjustedEventArgs>>(arg);
 
             return py::convert(self->obj.RawCoordinateSystemAdjusted(param0));
@@ -176,14 +176,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchor_remove_RawCoordinateSystemAdjusted(py::wrapper::Windows::Perception::Spatial::SpatialAnchor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialAnchor", L"RawCoordinateSystemAdjusted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialAnchor", L"RawCoordinateSystemAdjusted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.RawCoordinateSystemAdjusted(param0);
@@ -298,14 +298,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchorExportSufficiency_get_IsMinimallySufficient(py::wrapper::Windows::Perception::Spatial::SpatialAnchorExportSufficiency* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialAnchorExportSufficiency", L"IsMinimallySufficient"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialAnchorExportSufficiency", L"IsMinimallySufficient"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsMinimallySufficient());
         }
         catch (...)
@@ -317,14 +317,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchorExportSufficiency_get_RecommendedSufficiencyLevel(py::wrapper::Windows::Perception::Spatial::SpatialAnchorExportSufficiency* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialAnchorExportSufficiency", L"RecommendedSufficiencyLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialAnchorExportSufficiency", L"RecommendedSufficiencyLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RecommendedSufficiencyLevel());
         }
         catch (...)
@@ -336,14 +336,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchorExportSufficiency_get_SufficiencyLevel(py::wrapper::Windows::Perception::Spatial::SpatialAnchorExportSufficiency* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialAnchorExportSufficiency", L"SufficiencyLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialAnchorExportSufficiency", L"SufficiencyLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SufficiencyLevel());
         }
         catch (...)
@@ -431,14 +431,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorExporter", L"GetAnchorExportSufficiencyAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorExporter", L"GetAnchorExportSufficiencyAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialAnchor>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialAnchorExportPurpose>(args, 1);
 
@@ -463,14 +463,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorExporter", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorExporter", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Perception::Spatial::SpatialAnchorExporter::GetDefault());
             }
             catch (...)
@@ -492,14 +492,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorExporter", L"RequestAccessAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorExporter", L"RequestAccessAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Perception::Spatial::SpatialAnchorExporter::RequestAccessAsync());
             }
             catch (...)
@@ -521,14 +521,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorExporter", L"TryExportAnchorAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorExporter", L"TryExportAnchorAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialAnchor>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialAnchorExportPurpose>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 2);
@@ -644,14 +644,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorManager", L"RequestStoreAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorManager", L"RequestStoreAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Perception::Spatial::SpatialAnchorManager::RequestStoreAsync());
             }
             catch (...)
@@ -737,14 +737,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchorRawCoordinateSystemAdjustedEventArgs_get_OldRawCoordinateSystemToNewRawCoordinateSystemTransform(py::wrapper::Windows::Perception::Spatial::SpatialAnchorRawCoordinateSystemAdjustedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialAnchorRawCoordinateSystemAdjustedEventArgs", L"OldRawCoordinateSystemToNewRawCoordinateSystemTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialAnchorRawCoordinateSystemAdjustedEventArgs", L"OldRawCoordinateSystemToNewRawCoordinateSystemTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OldRawCoordinateSystemToNewRawCoordinateSystemTransform());
         }
         catch (...)
@@ -830,14 +830,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorStore", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorStore", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -860,14 +860,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorStore", L"GetAllSavedAnchors", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorStore", L"GetAllSavedAnchors", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAllSavedAnchors());
             }
             catch (...)
@@ -889,14 +889,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorStore", L"Remove", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorStore", L"Remove", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Remove(param0);
@@ -921,14 +921,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorStore", L"TrySave", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorStore", L"TrySave", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialAnchor>(args, 1);
 
@@ -1018,14 +1018,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorTransferManager", L"RequestAccessAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorTransferManager", L"RequestAccessAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Perception::Spatial::SpatialAnchorTransferManager::RequestAccessAsync());
             }
             catch (...)
@@ -1047,14 +1047,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorTransferManager", L"TryExportAnchorsAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorTransferManager", L"TryExportAnchorsAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Perception::Spatial::SpatialAnchor>>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 1);
 
@@ -1079,14 +1079,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorTransferManager", L"TryImportAnchorsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchorTransferManager", L"TryImportAnchorsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
                 return py::convert(winrt::Windows::Perception::Spatial::SpatialAnchorTransferManager::TryImportAnchorsAsync(param0));
@@ -1180,14 +1180,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialBoundingVolume", L"FromBox", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialBoundingVolume", L"FromBox", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialBoundingBox>(args, 1);
 
@@ -1212,14 +1212,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialBoundingVolume", L"FromFrustum", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialBoundingVolume", L"FromFrustum", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialBoundingFrustum>(args, 1);
 
@@ -1244,14 +1244,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialBoundingVolume", L"FromOrientedBox", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialBoundingVolume", L"FromOrientedBox", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox>(args, 1);
 
@@ -1276,14 +1276,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialBoundingVolume", L"FromSphere", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialBoundingVolume", L"FromSphere", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialBoundingSphere>(args, 1);
 
@@ -1406,14 +1406,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialCoordinateSystem", L"TryGetTransformTo", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialCoordinateSystem", L"TryGetTransformTo", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
                 return py::convert(self->obj.TryGetTransformTo(param0));
@@ -1543,14 +1543,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialEntity_get_Anchor(py::wrapper::Windows::Perception::Spatial::SpatialEntity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialEntity", L"Anchor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialEntity", L"Anchor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Anchor());
         }
         catch (...)
@@ -1562,14 +1562,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialEntity_get_Id(py::wrapper::Windows::Perception::Spatial::SpatialEntity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialEntity", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialEntity", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1581,14 +1581,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialEntity_get_Properties(py::wrapper::Windows::Perception::Spatial::SpatialEntity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialEntity", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialEntity", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -1672,14 +1672,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialEntityAddedEventArgs_get_Entity(py::wrapper::Windows::Perception::Spatial::SpatialEntityAddedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialEntityAddedEventArgs", L"Entity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialEntityAddedEventArgs", L"Entity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Entity());
         }
         catch (...)
@@ -1761,14 +1761,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialEntityRemovedEventArgs_get_Entity(py::wrapper::Windows::Perception::Spatial::SpatialEntityRemovedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialEntityRemovedEventArgs", L"Entity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialEntityRemovedEventArgs", L"Entity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Entity());
         }
         catch (...)
@@ -1854,14 +1854,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialEntityStore", L"CreateEntityWatcher", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialEntityStore", L"CreateEntityWatcher", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateEntityWatcher());
             }
             catch (...)
@@ -1883,14 +1883,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialEntityStore", L"RemoveAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialEntityStore", L"RemoveAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialEntity>(args, 0);
 
                 return py::convert(self->obj.RemoveAsync(param0));
@@ -1914,14 +1914,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialEntityStore", L"SaveAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialEntityStore", L"SaveAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialEntity>(args, 0);
 
                 return py::convert(self->obj.SaveAsync(param0));
@@ -1945,14 +1945,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialEntityStore", L"TryGet", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialEntityStore", L"TryGet", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::RemoteSystems::RemoteSystemSession>(args, 0);
 
                 return py::convert(winrt::Windows::Perception::Spatial::SpatialEntityStore::TryGet(param0));
@@ -1972,14 +1972,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialEntityStore_get_IsSupported(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialEntityStore", L"IsSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialEntityStore", L"IsSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Perception::Spatial::SpatialEntityStore::IsSupported());
         }
         catch (...)
@@ -2090,14 +2090,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialEntityUpdatedEventArgs_get_Entity(py::wrapper::Windows::Perception::Spatial::SpatialEntityUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialEntityUpdatedEventArgs", L"Entity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialEntityUpdatedEventArgs", L"Entity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Entity());
         }
         catch (...)
@@ -2183,14 +2183,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialEntityWatcher", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialEntityWatcher", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -2213,14 +2213,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialEntityWatcher", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialEntityWatcher", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -2239,14 +2239,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialEntityWatcher_get_Status(py::wrapper::Windows::Perception::Spatial::SpatialEntityWatcher* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialEntityWatcher", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialEntityWatcher", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -2258,14 +2258,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialEntityWatcher_add_Added(py::wrapper::Windows::Perception::Spatial::SpatialEntityWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialEntityWatcher", L"Added"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialEntityWatcher", L"Added"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Perception::Spatial::SpatialEntityWatcher, winrt::Windows::Perception::Spatial::SpatialEntityAddedEventArgs>>(arg);
 
             return py::convert(self->obj.Added(param0));
@@ -2279,14 +2279,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialEntityWatcher_remove_Added(py::wrapper::Windows::Perception::Spatial::SpatialEntityWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialEntityWatcher", L"Added"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialEntityWatcher", L"Added"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Added(param0);
@@ -2301,14 +2301,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialEntityWatcher_add_EnumerationCompleted(py::wrapper::Windows::Perception::Spatial::SpatialEntityWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialEntityWatcher", L"EnumerationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialEntityWatcher", L"EnumerationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Perception::Spatial::SpatialEntityWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.EnumerationCompleted(param0));
@@ -2322,14 +2322,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialEntityWatcher_remove_EnumerationCompleted(py::wrapper::Windows::Perception::Spatial::SpatialEntityWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialEntityWatcher", L"EnumerationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialEntityWatcher", L"EnumerationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.EnumerationCompleted(param0);
@@ -2344,14 +2344,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialEntityWatcher_add_Removed(py::wrapper::Windows::Perception::Spatial::SpatialEntityWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialEntityWatcher", L"Removed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialEntityWatcher", L"Removed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Perception::Spatial::SpatialEntityWatcher, winrt::Windows::Perception::Spatial::SpatialEntityRemovedEventArgs>>(arg);
 
             return py::convert(self->obj.Removed(param0));
@@ -2365,14 +2365,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialEntityWatcher_remove_Removed(py::wrapper::Windows::Perception::Spatial::SpatialEntityWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialEntityWatcher", L"Removed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialEntityWatcher", L"Removed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Removed(param0);
@@ -2387,14 +2387,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialEntityWatcher_add_Updated(py::wrapper::Windows::Perception::Spatial::SpatialEntityWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialEntityWatcher", L"Updated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialEntityWatcher", L"Updated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Perception::Spatial::SpatialEntityWatcher, winrt::Windows::Perception::Spatial::SpatialEntityUpdatedEventArgs>>(arg);
 
             return py::convert(self->obj.Updated(param0));
@@ -2408,14 +2408,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialEntityWatcher_remove_Updated(py::wrapper::Windows::Perception::Spatial::SpatialEntityWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialEntityWatcher", L"Updated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialEntityWatcher", L"Updated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Updated(param0);
@@ -2510,14 +2510,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocation_get_AbsoluteAngularAcceleration(py::wrapper::Windows::Perception::Spatial::SpatialLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocation", L"AbsoluteAngularAcceleration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocation", L"AbsoluteAngularAcceleration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AbsoluteAngularAcceleration());
         }
         catch (...)
@@ -2529,14 +2529,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocation_get_AbsoluteAngularVelocity(py::wrapper::Windows::Perception::Spatial::SpatialLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocation", L"AbsoluteAngularVelocity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocation", L"AbsoluteAngularVelocity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AbsoluteAngularVelocity());
         }
         catch (...)
@@ -2548,14 +2548,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocation_get_AbsoluteLinearAcceleration(py::wrapper::Windows::Perception::Spatial::SpatialLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocation", L"AbsoluteLinearAcceleration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocation", L"AbsoluteLinearAcceleration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AbsoluteLinearAcceleration());
         }
         catch (...)
@@ -2567,14 +2567,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocation_get_AbsoluteLinearVelocity(py::wrapper::Windows::Perception::Spatial::SpatialLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocation", L"AbsoluteLinearVelocity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocation", L"AbsoluteLinearVelocity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AbsoluteLinearVelocity());
         }
         catch (...)
@@ -2586,14 +2586,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocation_get_Orientation(py::wrapper::Windows::Perception::Spatial::SpatialLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocation", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocation", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Orientation());
         }
         catch (...)
@@ -2605,14 +2605,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocation_get_Position(py::wrapper::Windows::Perception::Spatial::SpatialLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocation", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocation", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -2624,14 +2624,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocation_get_AbsoluteAngularAccelerationAxisAngle(py::wrapper::Windows::Perception::Spatial::SpatialLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocation", L"AbsoluteAngularAccelerationAxisAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocation", L"AbsoluteAngularAccelerationAxisAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AbsoluteAngularAccelerationAxisAngle());
         }
         catch (...)
@@ -2643,14 +2643,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocation_get_AbsoluteAngularVelocityAxisAngle(py::wrapper::Windows::Perception::Spatial::SpatialLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocation", L"AbsoluteAngularVelocityAxisAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocation", L"AbsoluteAngularVelocityAxisAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AbsoluteAngularVelocityAxisAngle());
         }
         catch (...)
@@ -2743,14 +2743,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocator", L"CreateAttachedFrameOfReferenceAtCurrentHeading", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocator", L"CreateAttachedFrameOfReferenceAtCurrentHeading", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateAttachedFrameOfReferenceAtCurrentHeading());
             }
             catch (...)
@@ -2761,14 +2761,14 @@ namespace py::cpp::Windows::Perception::Spatial
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocator", L"CreateAttachedFrameOfReferenceAtCurrentHeading", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocator", L"CreateAttachedFrameOfReferenceAtCurrentHeading", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
 
                 return py::convert(self->obj.CreateAttachedFrameOfReferenceAtCurrentHeading(param0));
@@ -2781,14 +2781,14 @@ namespace py::cpp::Windows::Perception::Spatial
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocator", L"CreateAttachedFrameOfReferenceAtCurrentHeading", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocator", L"CreateAttachedFrameOfReferenceAtCurrentHeading", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 1);
 
@@ -2802,14 +2802,14 @@ namespace py::cpp::Windows::Perception::Spatial
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocator", L"CreateAttachedFrameOfReferenceAtCurrentHeading", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocator", L"CreateAttachedFrameOfReferenceAtCurrentHeading", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 1);
                 auto param2 = py::convert_to<double>(args, 2);
@@ -2835,14 +2835,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocator", L"CreateStationaryFrameOfReferenceAtCurrentLocation", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocator", L"CreateStationaryFrameOfReferenceAtCurrentLocation", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateStationaryFrameOfReferenceAtCurrentLocation());
             }
             catch (...)
@@ -2853,14 +2853,14 @@ namespace py::cpp::Windows::Perception::Spatial
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocator", L"CreateStationaryFrameOfReferenceAtCurrentLocation", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocator", L"CreateStationaryFrameOfReferenceAtCurrentLocation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
 
                 return py::convert(self->obj.CreateStationaryFrameOfReferenceAtCurrentLocation(param0));
@@ -2873,14 +2873,14 @@ namespace py::cpp::Windows::Perception::Spatial
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocator", L"CreateStationaryFrameOfReferenceAtCurrentLocation", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocator", L"CreateStationaryFrameOfReferenceAtCurrentLocation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 1);
 
@@ -2894,14 +2894,14 @@ namespace py::cpp::Windows::Perception::Spatial
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocator", L"CreateStationaryFrameOfReferenceAtCurrentLocation", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocator", L"CreateStationaryFrameOfReferenceAtCurrentLocation", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 1);
                 auto param2 = py::convert_to<double>(args, 2);
@@ -2927,14 +2927,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocator", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocator", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Perception::Spatial::SpatialLocator::GetDefault());
             }
             catch (...)
@@ -2956,14 +2956,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocator", L"TryLocateAtTimestamp", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocator", L"TryLocateAtTimestamp", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::PerceptionTimestamp>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 1);
 
@@ -2984,14 +2984,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocator_get_Locatability(py::wrapper::Windows::Perception::Spatial::SpatialLocator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocator", L"Locatability"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocator", L"Locatability"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Locatability());
         }
         catch (...)
@@ -3003,14 +3003,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocator_add_LocatabilityChanged(py::wrapper::Windows::Perception::Spatial::SpatialLocator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialLocator", L"LocatabilityChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialLocator", L"LocatabilityChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Perception::Spatial::SpatialLocator, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.LocatabilityChanged(param0));
@@ -3024,14 +3024,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocator_remove_LocatabilityChanged(py::wrapper::Windows::Perception::Spatial::SpatialLocator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialLocator", L"LocatabilityChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialLocator", L"LocatabilityChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.LocatabilityChanged(param0);
@@ -3046,14 +3046,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocator_add_PositionalTrackingDeactivating(py::wrapper::Windows::Perception::Spatial::SpatialLocator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialLocator", L"PositionalTrackingDeactivating"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialLocator", L"PositionalTrackingDeactivating"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Perception::Spatial::SpatialLocator, winrt::Windows::Perception::Spatial::SpatialLocatorPositionalTrackingDeactivatingEventArgs>>(arg);
 
             return py::convert(self->obj.PositionalTrackingDeactivating(param0));
@@ -3067,14 +3067,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocator_remove_PositionalTrackingDeactivating(py::wrapper::Windows::Perception::Spatial::SpatialLocator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialLocator", L"PositionalTrackingDeactivating"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialLocator", L"PositionalTrackingDeactivating"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PositionalTrackingDeactivating(param0);
@@ -3196,14 +3196,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference", L"AdjustHeading", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference", L"AdjustHeading", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 self->obj.AdjustHeading(param0);
@@ -3228,14 +3228,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference", L"GetStationaryCoordinateSystemAtTimestamp", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference", L"GetStationaryCoordinateSystemAtTimestamp", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::PerceptionTimestamp>(args, 0);
 
                 return py::convert(self->obj.GetStationaryCoordinateSystemAtTimestamp(param0));
@@ -3259,14 +3259,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference", L"TryGetRelativeHeadingAtTimestamp", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference", L"TryGetRelativeHeadingAtTimestamp", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::PerceptionTimestamp>(args, 0);
 
                 return py::convert(self->obj.TryGetRelativeHeadingAtTimestamp(param0));
@@ -3286,14 +3286,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocatorAttachedFrameOfReference_get_RelativePosition(py::wrapper::Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference", L"RelativePosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference", L"RelativePosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RelativePosition());
         }
         catch (...)
@@ -3305,12 +3305,6 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static int SpatialLocatorAttachedFrameOfReference_put_RelativePosition(py::wrapper::Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference", L"RelativePosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3319,6 +3313,12 @@ namespace py::cpp::Windows::Perception::Spatial
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference", L"RelativePosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.RelativePosition(param0);
@@ -3333,14 +3333,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocatorAttachedFrameOfReference_get_RelativeOrientation(py::wrapper::Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference", L"RelativeOrientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference", L"RelativeOrientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RelativeOrientation());
         }
         catch (...)
@@ -3352,12 +3352,6 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static int SpatialLocatorAttachedFrameOfReference_put_RelativeOrientation(py::wrapper::Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference", L"RelativeOrientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3366,6 +3360,12 @@ namespace py::cpp::Windows::Perception::Spatial
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference", L"RelativeOrientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
 
             self->obj.RelativeOrientation(param0);
@@ -3454,14 +3454,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocatorPositionalTrackingDeactivatingEventArgs_get_Canceled(py::wrapper::Windows::Perception::Spatial::SpatialLocatorPositionalTrackingDeactivatingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocatorPositionalTrackingDeactivatingEventArgs", L"Canceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocatorPositionalTrackingDeactivatingEventArgs", L"Canceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Canceled());
         }
         catch (...)
@@ -3473,12 +3473,6 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static int SpatialLocatorPositionalTrackingDeactivatingEventArgs_put_Canceled(py::wrapper::Windows::Perception::Spatial::SpatialLocatorPositionalTrackingDeactivatingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocatorPositionalTrackingDeactivatingEventArgs", L"Canceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3487,6 +3481,12 @@ namespace py::cpp::Windows::Perception::Spatial
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialLocatorPositionalTrackingDeactivatingEventArgs", L"Canceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Canceled(param0);
@@ -3575,14 +3575,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialStageFrameOfReference", L"GetCoordinateSystemAtCurrentLocation", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialStageFrameOfReference", L"GetCoordinateSystemAtCurrentLocation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialLocator>(args, 0);
 
                 return py::convert(self->obj.GetCoordinateSystemAtCurrentLocation(param0));
@@ -3606,14 +3606,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialStageFrameOfReference", L"RequestNewStageAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialStageFrameOfReference", L"RequestNewStageAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference::RequestNewStageAsync());
             }
             catch (...)
@@ -3635,14 +3635,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialStageFrameOfReference", L"TryGetMovementBounds", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialStageFrameOfReference", L"TryGetMovementBounds", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
                 return py::convert(self->obj.TryGetMovementBounds(param0));
@@ -3662,14 +3662,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialStageFrameOfReference_get_CoordinateSystem(py::wrapper::Windows::Perception::Spatial::SpatialStageFrameOfReference* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialStageFrameOfReference", L"CoordinateSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialStageFrameOfReference", L"CoordinateSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CoordinateSystem());
         }
         catch (...)
@@ -3681,14 +3681,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialStageFrameOfReference_get_LookDirectionRange(py::wrapper::Windows::Perception::Spatial::SpatialStageFrameOfReference* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialStageFrameOfReference", L"LookDirectionRange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialStageFrameOfReference", L"LookDirectionRange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LookDirectionRange());
         }
         catch (...)
@@ -3700,14 +3700,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialStageFrameOfReference_get_MovementRange(py::wrapper::Windows::Perception::Spatial::SpatialStageFrameOfReference* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialStageFrameOfReference", L"MovementRange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialStageFrameOfReference", L"MovementRange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MovementRange());
         }
         catch (...)
@@ -3719,14 +3719,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialStageFrameOfReference_get_Current(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialStageFrameOfReference", L"Current"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialStageFrameOfReference", L"Current"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference::Current());
         }
         catch (...)
@@ -3738,14 +3738,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialStageFrameOfReference_add_CurrentChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialStageFrameOfReference", L"CurrentChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialStageFrameOfReference", L"CurrentChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference::CurrentChanged(param0));
@@ -3759,14 +3759,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialStageFrameOfReference_remove_CurrentChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialStageFrameOfReference", L"CurrentChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.SpatialStageFrameOfReference", L"CurrentChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference::CurrentChanged(param0);
@@ -3884,14 +3884,14 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialStationaryFrameOfReference_get_CoordinateSystem(py::wrapper::Windows::Perception::Spatial::SpatialStationaryFrameOfReference* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialStationaryFrameOfReference", L"CoordinateSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.SpatialStationaryFrameOfReference", L"CoordinateSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CoordinateSystem());
         }
         catch (...)

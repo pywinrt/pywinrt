@@ -20,14 +20,14 @@ namespace py::cpp::Windows::Phone::System
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.System.SystemProtection", L"RequestScreenUnlock", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.System.SystemProtection", L"RequestScreenUnlock", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::Phone::System::SystemProtection::RequestScreenUnlock();
                 Py_RETURN_NONE;
             }
@@ -46,14 +46,14 @@ namespace py::cpp::Windows::Phone::System
 
     static PyObject* SystemProtection_get_ScreenLocked(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.System.SystemProtection", L"ScreenLocked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.System.SystemProtection", L"ScreenLocked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::System::SystemProtection::ScreenLocked());
         }
         catch (...)

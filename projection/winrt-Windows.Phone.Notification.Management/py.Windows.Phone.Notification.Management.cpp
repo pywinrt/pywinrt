@@ -20,14 +20,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"AcceptPhoneCall", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"AcceptPhoneCall", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::AcceptPhoneCall(param0);
@@ -41,14 +41,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"AcceptPhoneCall", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"AcceptPhoneCall", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Phone::Notification::Management::PhoneCallAudioEndpoint>(args, 1);
 
@@ -74,14 +74,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"AcceptPhoneCallWithVideo", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"AcceptPhoneCallWithVideo", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::AcceptPhoneCallWithVideo(param0);
@@ -95,14 +95,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"AcceptPhoneCallWithVideo", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"AcceptPhoneCallWithVideo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Phone::Notification::Management::PhoneCallAudioEndpoint>(args, 1);
 
@@ -128,14 +128,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"ClearToast", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"ClearToast", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::ClearToast(param0);
@@ -160,14 +160,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"DecreaseVolume", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"DecreaseVolume", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::DecreaseVolume(param0);
@@ -192,14 +192,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"DisableAllAccessoryNotificationTypes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"DisableAllAccessoryNotificationTypes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::DisableAllAccessoryNotificationTypes();
                 Py_RETURN_NONE;
             }
@@ -222,14 +222,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"DisableEmailNotificationEmailAccount", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"DisableEmailNotificationEmailAccount", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::DisableEmailNotificationEmailAccount(param0);
@@ -254,14 +254,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"DisableNotificationsForApplication", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"DisableNotificationsForApplication", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::DisableNotificationsForApplication(param0);
@@ -286,14 +286,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"DismissAlarm", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"DismissAlarm", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::DismissAlarm(param0);
@@ -318,14 +318,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"DismissAlarmByInstanceId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"DismissAlarmByInstanceId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::DismissAlarmByInstanceId(param0);
@@ -350,14 +350,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"DismissReminder", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"DismissReminder", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::DismissReminder(param0);
@@ -382,14 +382,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"DismissReminderByInstanceId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"DismissReminderByInstanceId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::DismissReminderByInstanceId(param0);
@@ -414,14 +414,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"EnableAccessoryNotificationTypes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"EnableAccessoryNotificationTypes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::EnableAccessoryNotificationTypes(param0);
@@ -446,14 +446,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"EnableEmailNotificationEmailAccount", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"EnableEmailNotificationEmailAccount", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::EnableEmailNotificationEmailAccount(param0);
@@ -478,14 +478,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"EnableEmailNotificationFolderFilter", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"EnableEmailNotificationFolderFilter", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring>>(args, 1);
 
@@ -511,14 +511,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"EnableNotificationsForApplication", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"EnableNotificationsForApplication", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::EnableNotificationsForApplication(param0);
@@ -543,14 +543,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"EndPhoneCall", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"EndPhoneCall", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::EndPhoneCall(param0);
@@ -575,14 +575,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"GetAllEmailAccounts", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"GetAllEmailAccounts", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::GetAllEmailAccounts());
             }
             catch (...)
@@ -604,14 +604,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"GetAppIcon", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"GetAppIcon", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::GetAppIcon(param0));
@@ -635,14 +635,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"GetApps", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"GetApps", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::GetApps());
             }
             catch (...)
@@ -664,14 +664,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"GetEnabledAccessoryNotificationTypes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"GetEnabledAccessoryNotificationTypes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::GetEnabledAccessoryNotificationTypes());
             }
             catch (...)
@@ -693,14 +693,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"GetFolders", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"GetFolders", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::GetFolders(param0));
@@ -724,14 +724,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"GetMediaMetadata", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"GetMediaMetadata", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::GetMediaMetadata());
             }
             catch (...)
@@ -753,14 +753,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"GetNextTriggerDetails", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"GetNextTriggerDetails", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::GetNextTriggerDetails());
             }
             catch (...)
@@ -782,14 +782,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"GetPhoneLineDetails", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"GetPhoneLineDetails", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::GetPhoneLineDetails(param0));
@@ -813,14 +813,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"GetUserConsent", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"GetUserConsent", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::GetUserConsent());
             }
             catch (...)
@@ -842,14 +842,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"HoldPhoneCall", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"HoldPhoneCall", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -875,14 +875,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"IncreaseVolume", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"IncreaseVolume", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::IncreaseVolume(param0);
@@ -907,14 +907,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"IsNotificationEnabledForApplication", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"IsNotificationEnabledForApplication", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::IsNotificationEnabledForApplication(param0));
@@ -938,14 +938,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"MakePhoneCall", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"MakePhoneCall", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -960,14 +960,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"MakePhoneCall", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"MakePhoneCall", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Phone::Notification::Management::PhoneCallAudioEndpoint>(args, 2);
@@ -994,14 +994,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"MakePhoneCallWithVideo", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"MakePhoneCallWithVideo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1016,14 +1016,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"MakePhoneCallWithVideo", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"MakePhoneCallWithVideo", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Phone::Notification::Management::PhoneCallAudioEndpoint>(args, 2);
@@ -1050,14 +1050,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"PerformMediaPlaybackCommand", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"PerformMediaPlaybackCommand", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Phone::Notification::Management::PlaybackCommand>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::PerformMediaPlaybackCommand(param0);
@@ -1082,14 +1082,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"ProcessTriggerDetails", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"ProcessTriggerDetails", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::ProcessTriggerDetails(param0);
@@ -1114,14 +1114,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"RegisterAccessoryApp", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"RegisterAccessoryApp", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::RegisterAccessoryApp());
             }
             catch (...)
@@ -1143,14 +1143,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"RejectPhoneCall", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"RejectPhoneCall", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::RejectPhoneCall(param0);
@@ -1164,14 +1164,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"RejectPhoneCall", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"RejectPhoneCall", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -1197,14 +1197,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"RingDevice", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"RingDevice", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::RingDevice();
                 Py_RETURN_NONE;
             }
@@ -1227,14 +1227,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SetMute", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SetMute", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::SetMute(param0);
@@ -1259,14 +1259,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SetRingerVibrate", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SetRingerVibrate", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -1292,14 +1292,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SnoozeAlarm", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SnoozeAlarm", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::SnoozeAlarm(param0);
@@ -1313,14 +1313,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SnoozeAlarm", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SnoozeAlarm", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
@@ -1346,14 +1346,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SnoozeAlarmByInstanceId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SnoozeAlarmByInstanceId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::SnoozeAlarmByInstanceId(param0);
@@ -1378,14 +1378,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SnoozeReminder", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SnoozeReminder", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::SnoozeReminder(param0);
@@ -1399,14 +1399,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SnoozeReminder", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SnoozeReminder", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
@@ -1432,14 +1432,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SnoozeReminderByInstanceId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SnoozeReminderByInstanceId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::SnoozeReminderByInstanceId(param0);
@@ -1464,14 +1464,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SwapPhoneCalls", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SwapPhoneCalls", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -1497,14 +1497,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"UpdateEmailReadStatus", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"UpdateEmailReadStatus", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Phone::Notification::Management::BinaryId>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -1526,14 +1526,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_get_PhoneMute(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"PhoneMute"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"PhoneMute"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::PhoneMute());
         }
         catch (...)
@@ -1545,12 +1545,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int AccessoryManager_put_PhoneMute(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"PhoneMute"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1559,6 +1553,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"PhoneMute"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             winrt::Windows::Phone::Notification::Management::AccessoryManager::PhoneMute(param0);
@@ -1573,14 +1573,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_get_PhoneCallAudioEndpoint(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"PhoneCallAudioEndpoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"PhoneCallAudioEndpoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::PhoneCallAudioEndpoint());
         }
         catch (...)
@@ -1592,12 +1592,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int AccessoryManager_put_PhoneCallAudioEndpoint(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"PhoneCallAudioEndpoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1606,6 +1600,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"PhoneCallAudioEndpoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Phone::Notification::Management::PhoneCallAudioEndpoint>(arg);
 
             winrt::Windows::Phone::Notification::Management::AccessoryManager::PhoneCallAudioEndpoint(param0);
@@ -1620,14 +1620,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_get_BatterySaverState(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"BatterySaverState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"BatterySaverState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::BatterySaverState());
         }
         catch (...)
@@ -1639,14 +1639,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_get_DoNotDisturbEnabled(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"DoNotDisturbEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"DoNotDisturbEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::DoNotDisturbEnabled());
         }
         catch (...)
@@ -1658,14 +1658,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_get_DrivingModeEnabled(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"DrivingModeEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"DrivingModeEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::DrivingModeEnabled());
         }
         catch (...)
@@ -1677,14 +1677,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_get_MediaPlaybackCapabilities(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"MediaPlaybackCapabilities"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"MediaPlaybackCapabilities"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::MediaPlaybackCapabilities());
         }
         catch (...)
@@ -1696,14 +1696,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_get_MediaPlaybackStatus(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"MediaPlaybackStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"MediaPlaybackStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::MediaPlaybackStatus());
         }
         catch (...)
@@ -1715,14 +1715,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_get_PhoneLineDetails(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"PhoneLineDetails"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"PhoneLineDetails"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::PhoneLineDetails());
         }
         catch (...)
@@ -1734,14 +1734,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_get_IsPhonePinLocked(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"IsPhonePinLocked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"IsPhonePinLocked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::IsPhonePinLocked());
         }
         catch (...)
@@ -1753,14 +1753,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_get_SpeedDialList(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SpeedDialList"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SpeedDialList"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::SpeedDialList());
         }
         catch (...)
@@ -1772,14 +1772,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_get_VolumeInfo(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"VolumeInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"VolumeInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::VolumeInfo());
         }
         catch (...)
@@ -1912,14 +1912,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AlarmNotificationTriggerDetails_get_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::AlarmNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AlarmNotificationTriggerDetails", L"StartedProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AlarmNotificationTriggerDetails", L"StartedProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartedProcessing());
         }
         catch (...)
@@ -1931,12 +1931,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int AlarmNotificationTriggerDetails_put_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::AlarmNotificationTriggerDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AlarmNotificationTriggerDetails", L"StartedProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1945,6 +1939,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AlarmNotificationTriggerDetails", L"StartedProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.StartedProcessing(param0);
@@ -1959,14 +1959,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AlarmNotificationTriggerDetails_get_AccessoryNotificationType(py::wrapper::Windows::Phone::Notification::Management::AlarmNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AlarmNotificationTriggerDetails", L"AccessoryNotificationType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AlarmNotificationTriggerDetails", L"AccessoryNotificationType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccessoryNotificationType());
         }
         catch (...)
@@ -1978,14 +1978,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AlarmNotificationTriggerDetails_get_AppDisplayName(py::wrapper::Windows::Phone::Notification::Management::AlarmNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AlarmNotificationTriggerDetails", L"AppDisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AlarmNotificationTriggerDetails", L"AppDisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppDisplayName());
         }
         catch (...)
@@ -1997,14 +1997,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AlarmNotificationTriggerDetails_get_AppId(py::wrapper::Windows::Phone::Notification::Management::AlarmNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AlarmNotificationTriggerDetails", L"AppId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AlarmNotificationTriggerDetails", L"AppId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppId());
         }
         catch (...)
@@ -2016,14 +2016,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AlarmNotificationTriggerDetails_get_TimeCreated(py::wrapper::Windows::Phone::Notification::Management::AlarmNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AlarmNotificationTriggerDetails", L"TimeCreated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AlarmNotificationTriggerDetails", L"TimeCreated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimeCreated());
         }
         catch (...)
@@ -2035,14 +2035,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AlarmNotificationTriggerDetails_get_AlarmId(py::wrapper::Windows::Phone::Notification::Management::AlarmNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AlarmNotificationTriggerDetails", L"AlarmId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AlarmNotificationTriggerDetails", L"AlarmId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlarmId());
         }
         catch (...)
@@ -2054,14 +2054,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AlarmNotificationTriggerDetails_get_ReminderState(py::wrapper::Windows::Phone::Notification::Management::AlarmNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AlarmNotificationTriggerDetails", L"ReminderState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AlarmNotificationTriggerDetails", L"ReminderState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReminderState());
         }
         catch (...)
@@ -2073,14 +2073,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AlarmNotificationTriggerDetails_get_Timestamp(py::wrapper::Windows::Phone::Notification::Management::AlarmNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AlarmNotificationTriggerDetails", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AlarmNotificationTriggerDetails", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -2092,14 +2092,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AlarmNotificationTriggerDetails_get_Title(py::wrapper::Windows::Phone::Notification::Management::AlarmNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AlarmNotificationTriggerDetails", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AlarmNotificationTriggerDetails", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -2111,14 +2111,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AlarmNotificationTriggerDetails_get_InstanceId(py::wrapper::Windows::Phone::Notification::Management::AlarmNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AlarmNotificationTriggerDetails", L"InstanceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AlarmNotificationTriggerDetails", L"InstanceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InstanceId());
         }
         catch (...)
@@ -2209,14 +2209,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AppNotificationInfo_get_Id(py::wrapper::Windows::Phone::Notification::Management::AppNotificationInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AppNotificationInfo", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AppNotificationInfo", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -2228,14 +2228,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AppNotificationInfo_get_Name(py::wrapper::Windows::Phone::Notification::Management::AppNotificationInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AppNotificationInfo", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AppNotificationInfo", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -2318,14 +2318,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* BinaryId_get_Id(py::wrapper::Windows::Phone::Notification::Management::BinaryId* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.BinaryId", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.BinaryId", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -2337,14 +2337,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* BinaryId_get_Length(py::wrapper::Windows::Phone::Notification::Management::BinaryId* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.BinaryId", L"Length"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.BinaryId", L"Length"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Length());
         }
         catch (...)
@@ -2427,14 +2427,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* CalendarChangedNotificationTriggerDetails_get_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::CalendarChangedNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CalendarChangedNotificationTriggerDetails", L"StartedProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CalendarChangedNotificationTriggerDetails", L"StartedProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartedProcessing());
         }
         catch (...)
@@ -2446,12 +2446,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int CalendarChangedNotificationTriggerDetails_put_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::CalendarChangedNotificationTriggerDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CalendarChangedNotificationTriggerDetails", L"StartedProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2460,6 +2454,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CalendarChangedNotificationTriggerDetails", L"StartedProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.StartedProcessing(param0);
@@ -2474,14 +2474,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* CalendarChangedNotificationTriggerDetails_get_AccessoryNotificationType(py::wrapper::Windows::Phone::Notification::Management::CalendarChangedNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CalendarChangedNotificationTriggerDetails", L"AccessoryNotificationType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CalendarChangedNotificationTriggerDetails", L"AccessoryNotificationType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccessoryNotificationType());
         }
         catch (...)
@@ -2493,14 +2493,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* CalendarChangedNotificationTriggerDetails_get_AppDisplayName(py::wrapper::Windows::Phone::Notification::Management::CalendarChangedNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CalendarChangedNotificationTriggerDetails", L"AppDisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CalendarChangedNotificationTriggerDetails", L"AppDisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppDisplayName());
         }
         catch (...)
@@ -2512,14 +2512,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* CalendarChangedNotificationTriggerDetails_get_AppId(py::wrapper::Windows::Phone::Notification::Management::CalendarChangedNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CalendarChangedNotificationTriggerDetails", L"AppId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CalendarChangedNotificationTriggerDetails", L"AppId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppId());
         }
         catch (...)
@@ -2531,14 +2531,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* CalendarChangedNotificationTriggerDetails_get_TimeCreated(py::wrapper::Windows::Phone::Notification::Management::CalendarChangedNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CalendarChangedNotificationTriggerDetails", L"TimeCreated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CalendarChangedNotificationTriggerDetails", L"TimeCreated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimeCreated());
         }
         catch (...)
@@ -2550,14 +2550,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* CalendarChangedNotificationTriggerDetails_get_EventType(py::wrapper::Windows::Phone::Notification::Management::CalendarChangedNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CalendarChangedNotificationTriggerDetails", L"EventType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CalendarChangedNotificationTriggerDetails", L"EventType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EventType());
         }
         catch (...)
@@ -2569,14 +2569,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* CalendarChangedNotificationTriggerDetails_get_ItemId(py::wrapper::Windows::Phone::Notification::Management::CalendarChangedNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CalendarChangedNotificationTriggerDetails", L"ItemId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CalendarChangedNotificationTriggerDetails", L"ItemId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ItemId());
         }
         catch (...)
@@ -2664,14 +2664,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* CortanaTileNotificationTriggerDetails_get_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"StartedProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"StartedProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartedProcessing());
         }
         catch (...)
@@ -2683,12 +2683,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int CortanaTileNotificationTriggerDetails_put_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"StartedProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2697,6 +2691,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"StartedProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.StartedProcessing(param0);
@@ -2711,14 +2711,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* CortanaTileNotificationTriggerDetails_get_AccessoryNotificationType(py::wrapper::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"AccessoryNotificationType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"AccessoryNotificationType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccessoryNotificationType());
         }
         catch (...)
@@ -2730,14 +2730,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* CortanaTileNotificationTriggerDetails_get_AppDisplayName(py::wrapper::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"AppDisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"AppDisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppDisplayName());
         }
         catch (...)
@@ -2749,14 +2749,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* CortanaTileNotificationTriggerDetails_get_AppId(py::wrapper::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"AppId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"AppId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppId());
         }
         catch (...)
@@ -2768,14 +2768,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* CortanaTileNotificationTriggerDetails_get_TimeCreated(py::wrapper::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"TimeCreated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"TimeCreated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimeCreated());
         }
         catch (...)
@@ -2787,14 +2787,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* CortanaTileNotificationTriggerDetails_get_Content(py::wrapper::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"Content"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"Content"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Content());
         }
         catch (...)
@@ -2806,14 +2806,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* CortanaTileNotificationTriggerDetails_get_EmphasizedText(py::wrapper::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"EmphasizedText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"EmphasizedText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmphasizedText());
         }
         catch (...)
@@ -2825,14 +2825,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* CortanaTileNotificationTriggerDetails_get_LargeContent1(py::wrapper::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"LargeContent1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"LargeContent1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LargeContent1());
         }
         catch (...)
@@ -2844,14 +2844,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* CortanaTileNotificationTriggerDetails_get_LargeContent2(py::wrapper::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"LargeContent2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"LargeContent2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LargeContent2());
         }
         catch (...)
@@ -2863,14 +2863,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* CortanaTileNotificationTriggerDetails_get_NonWrappedSmallContent1(py::wrapper::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"NonWrappedSmallContent1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"NonWrappedSmallContent1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NonWrappedSmallContent1());
         }
         catch (...)
@@ -2882,14 +2882,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* CortanaTileNotificationTriggerDetails_get_NonWrappedSmallContent2(py::wrapper::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"NonWrappedSmallContent2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"NonWrappedSmallContent2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NonWrappedSmallContent2());
         }
         catch (...)
@@ -2901,14 +2901,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* CortanaTileNotificationTriggerDetails_get_NonWrappedSmallContent3(py::wrapper::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"NonWrappedSmallContent3"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"NonWrappedSmallContent3"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NonWrappedSmallContent3());
         }
         catch (...)
@@ -2920,14 +2920,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* CortanaTileNotificationTriggerDetails_get_NonWrappedSmallContent4(py::wrapper::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"NonWrappedSmallContent4"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"NonWrappedSmallContent4"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NonWrappedSmallContent4());
         }
         catch (...)
@@ -2939,14 +2939,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* CortanaTileNotificationTriggerDetails_get_Source(py::wrapper::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -2958,14 +2958,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* CortanaTileNotificationTriggerDetails_get_TileId(py::wrapper::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"TileId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails", L"TileId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TileId());
         }
         catch (...)
@@ -3061,14 +3061,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailAccountInfo_get_DisplayName(py::wrapper::Windows::Phone::Notification::Management::EmailAccountInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailAccountInfo", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailAccountInfo", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -3080,14 +3080,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailAccountInfo_get_IsNotificationEnabled(py::wrapper::Windows::Phone::Notification::Management::EmailAccountInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailAccountInfo", L"IsNotificationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailAccountInfo", L"IsNotificationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsNotificationEnabled());
         }
         catch (...)
@@ -3170,14 +3170,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailFolderInfo_get_DisplayName(py::wrapper::Windows::Phone::Notification::Management::EmailFolderInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailFolderInfo", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailFolderInfo", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -3189,14 +3189,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailFolderInfo_get_IsNotificationEnabled(py::wrapper::Windows::Phone::Notification::Management::EmailFolderInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailFolderInfo", L"IsNotificationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailFolderInfo", L"IsNotificationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsNotificationEnabled());
         }
         catch (...)
@@ -3279,14 +3279,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailNotificationTriggerDetails_get_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::EmailNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"StartedProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"StartedProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartedProcessing());
         }
         catch (...)
@@ -3298,12 +3298,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int EmailNotificationTriggerDetails_put_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::EmailNotificationTriggerDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"StartedProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3312,6 +3306,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"StartedProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.StartedProcessing(param0);
@@ -3326,14 +3326,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailNotificationTriggerDetails_get_AccessoryNotificationType(py::wrapper::Windows::Phone::Notification::Management::EmailNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"AccessoryNotificationType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"AccessoryNotificationType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccessoryNotificationType());
         }
         catch (...)
@@ -3345,14 +3345,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailNotificationTriggerDetails_get_AppDisplayName(py::wrapper::Windows::Phone::Notification::Management::EmailNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"AppDisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"AppDisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppDisplayName());
         }
         catch (...)
@@ -3364,14 +3364,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailNotificationTriggerDetails_get_AppId(py::wrapper::Windows::Phone::Notification::Management::EmailNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"AppId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"AppId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppId());
         }
         catch (...)
@@ -3383,14 +3383,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailNotificationTriggerDetails_get_TimeCreated(py::wrapper::Windows::Phone::Notification::Management::EmailNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"TimeCreated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"TimeCreated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimeCreated());
         }
         catch (...)
@@ -3402,14 +3402,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailNotificationTriggerDetails_get_AccountName(py::wrapper::Windows::Phone::Notification::Management::EmailNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"AccountName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"AccountName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccountName());
         }
         catch (...)
@@ -3421,14 +3421,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailNotificationTriggerDetails_get_EmailMessage(py::wrapper::Windows::Phone::Notification::Management::EmailNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"EmailMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"EmailMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailMessage());
         }
         catch (...)
@@ -3440,14 +3440,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailNotificationTriggerDetails_get_ParentFolderName(py::wrapper::Windows::Phone::Notification::Management::EmailNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"ParentFolderName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"ParentFolderName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentFolderName());
         }
         catch (...)
@@ -3459,14 +3459,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailNotificationTriggerDetails_get_SenderAddress(py::wrapper::Windows::Phone::Notification::Management::EmailNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"SenderAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"SenderAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SenderAddress());
         }
         catch (...)
@@ -3478,14 +3478,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailNotificationTriggerDetails_get_SenderName(py::wrapper::Windows::Phone::Notification::Management::EmailNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"SenderName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"SenderName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SenderName());
         }
         catch (...)
@@ -3497,14 +3497,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailNotificationTriggerDetails_get_Timestamp(py::wrapper::Windows::Phone::Notification::Management::EmailNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -3516,14 +3516,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailNotificationTriggerDetails_get_MessageEntryId(py::wrapper::Windows::Phone::Notification::Management::EmailNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"MessageEntryId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailNotificationTriggerDetails", L"MessageEntryId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageEntryId());
         }
         catch (...)
@@ -3616,14 +3616,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailReadNotificationTriggerDetails_get_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::EmailReadNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailReadNotificationTriggerDetails", L"StartedProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailReadNotificationTriggerDetails", L"StartedProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartedProcessing());
         }
         catch (...)
@@ -3635,12 +3635,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int EmailReadNotificationTriggerDetails_put_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::EmailReadNotificationTriggerDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailReadNotificationTriggerDetails", L"StartedProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3649,6 +3643,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailReadNotificationTriggerDetails", L"StartedProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.StartedProcessing(param0);
@@ -3663,14 +3663,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailReadNotificationTriggerDetails_get_AccessoryNotificationType(py::wrapper::Windows::Phone::Notification::Management::EmailReadNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailReadNotificationTriggerDetails", L"AccessoryNotificationType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailReadNotificationTriggerDetails", L"AccessoryNotificationType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccessoryNotificationType());
         }
         catch (...)
@@ -3682,14 +3682,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailReadNotificationTriggerDetails_get_AppDisplayName(py::wrapper::Windows::Phone::Notification::Management::EmailReadNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailReadNotificationTriggerDetails", L"AppDisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailReadNotificationTriggerDetails", L"AppDisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppDisplayName());
         }
         catch (...)
@@ -3701,14 +3701,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailReadNotificationTriggerDetails_get_AppId(py::wrapper::Windows::Phone::Notification::Management::EmailReadNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailReadNotificationTriggerDetails", L"AppId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailReadNotificationTriggerDetails", L"AppId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppId());
         }
         catch (...)
@@ -3720,14 +3720,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailReadNotificationTriggerDetails_get_TimeCreated(py::wrapper::Windows::Phone::Notification::Management::EmailReadNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailReadNotificationTriggerDetails", L"TimeCreated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailReadNotificationTriggerDetails", L"TimeCreated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimeCreated());
         }
         catch (...)
@@ -3739,14 +3739,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailReadNotificationTriggerDetails_get_AccountName(py::wrapper::Windows::Phone::Notification::Management::EmailReadNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailReadNotificationTriggerDetails", L"AccountName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailReadNotificationTriggerDetails", L"AccountName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccountName());
         }
         catch (...)
@@ -3758,14 +3758,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailReadNotificationTriggerDetails_get_IsRead(py::wrapper::Windows::Phone::Notification::Management::EmailReadNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailReadNotificationTriggerDetails", L"IsRead"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailReadNotificationTriggerDetails", L"IsRead"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRead());
         }
         catch (...)
@@ -3777,14 +3777,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailReadNotificationTriggerDetails_get_MessageEntryId(py::wrapper::Windows::Phone::Notification::Management::EmailReadNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailReadNotificationTriggerDetails", L"MessageEntryId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailReadNotificationTriggerDetails", L"MessageEntryId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageEntryId());
         }
         catch (...)
@@ -3796,14 +3796,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* EmailReadNotificationTriggerDetails_get_ParentFolderName(py::wrapper::Windows::Phone::Notification::Management::EmailReadNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailReadNotificationTriggerDetails", L"ParentFolderName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.EmailReadNotificationTriggerDetails", L"ParentFolderName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentFolderName());
         }
         catch (...)
@@ -3893,14 +3893,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* MediaControlsTriggerDetails_get_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::MediaControlsTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaControlsTriggerDetails", L"StartedProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaControlsTriggerDetails", L"StartedProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartedProcessing());
         }
         catch (...)
@@ -3912,12 +3912,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int MediaControlsTriggerDetails_put_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::MediaControlsTriggerDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaControlsTriggerDetails", L"StartedProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3926,6 +3920,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaControlsTriggerDetails", L"StartedProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.StartedProcessing(param0);
@@ -3940,14 +3940,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* MediaControlsTriggerDetails_get_AccessoryNotificationType(py::wrapper::Windows::Phone::Notification::Management::MediaControlsTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaControlsTriggerDetails", L"AccessoryNotificationType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaControlsTriggerDetails", L"AccessoryNotificationType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccessoryNotificationType());
         }
         catch (...)
@@ -3959,14 +3959,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* MediaControlsTriggerDetails_get_AppDisplayName(py::wrapper::Windows::Phone::Notification::Management::MediaControlsTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaControlsTriggerDetails", L"AppDisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaControlsTriggerDetails", L"AppDisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppDisplayName());
         }
         catch (...)
@@ -3978,14 +3978,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* MediaControlsTriggerDetails_get_AppId(py::wrapper::Windows::Phone::Notification::Management::MediaControlsTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaControlsTriggerDetails", L"AppId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaControlsTriggerDetails", L"AppId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppId());
         }
         catch (...)
@@ -3997,14 +3997,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* MediaControlsTriggerDetails_get_TimeCreated(py::wrapper::Windows::Phone::Notification::Management::MediaControlsTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaControlsTriggerDetails", L"TimeCreated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaControlsTriggerDetails", L"TimeCreated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimeCreated());
         }
         catch (...)
@@ -4016,14 +4016,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* MediaControlsTriggerDetails_get_MediaMetadata(py::wrapper::Windows::Phone::Notification::Management::MediaControlsTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaControlsTriggerDetails", L"MediaMetadata"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaControlsTriggerDetails", L"MediaMetadata"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MediaMetadata());
         }
         catch (...)
@@ -4035,14 +4035,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* MediaControlsTriggerDetails_get_PlaybackStatus(py::wrapper::Windows::Phone::Notification::Management::MediaControlsTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaControlsTriggerDetails", L"PlaybackStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaControlsTriggerDetails", L"PlaybackStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PlaybackStatus());
         }
         catch (...)
@@ -4130,14 +4130,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* MediaMetadata_get_Album(py::wrapper::Windows::Phone::Notification::Management::MediaMetadata* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaMetadata", L"Album"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaMetadata", L"Album"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Album());
         }
         catch (...)
@@ -4149,14 +4149,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* MediaMetadata_get_Artist(py::wrapper::Windows::Phone::Notification::Management::MediaMetadata* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaMetadata", L"Artist"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaMetadata", L"Artist"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Artist());
         }
         catch (...)
@@ -4168,14 +4168,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* MediaMetadata_get_Duration(py::wrapper::Windows::Phone::Notification::Management::MediaMetadata* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaMetadata", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaMetadata", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -4187,14 +4187,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* MediaMetadata_get_Subtitle(py::wrapper::Windows::Phone::Notification::Management::MediaMetadata* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaMetadata", L"Subtitle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaMetadata", L"Subtitle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Subtitle());
         }
         catch (...)
@@ -4206,14 +4206,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* MediaMetadata_get_Thumbnail(py::wrapper::Windows::Phone::Notification::Management::MediaMetadata* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaMetadata", L"Thumbnail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaMetadata", L"Thumbnail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Thumbnail());
         }
         catch (...)
@@ -4225,14 +4225,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* MediaMetadata_get_Title(py::wrapper::Windows::Phone::Notification::Management::MediaMetadata* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaMetadata", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaMetadata", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -4244,14 +4244,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* MediaMetadata_get_Track(py::wrapper::Windows::Phone::Notification::Management::MediaMetadata* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaMetadata", L"Track"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.MediaMetadata", L"Track"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Track());
         }
         catch (...)
@@ -4339,14 +4339,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneCallDetails_get_CallDirection(py::wrapper::Windows::Phone::Notification::Management::PhoneCallDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"CallDirection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"CallDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallDirection());
         }
         catch (...)
@@ -4358,14 +4358,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneCallDetails_get_CallId(py::wrapper::Windows::Phone::Notification::Management::PhoneCallDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"CallId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"CallId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallId());
         }
         catch (...)
@@ -4377,14 +4377,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneCallDetails_get_CallMediaType(py::wrapper::Windows::Phone::Notification::Management::PhoneCallDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"CallMediaType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"CallMediaType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallMediaType());
         }
         catch (...)
@@ -4396,14 +4396,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneCallDetails_get_CallTransport(py::wrapper::Windows::Phone::Notification::Management::PhoneCallDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"CallTransport"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"CallTransport"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallTransport());
         }
         catch (...)
@@ -4415,14 +4415,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneCallDetails_get_ConferenceCallId(py::wrapper::Windows::Phone::Notification::Management::PhoneCallDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"ConferenceCallId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"ConferenceCallId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConferenceCallId());
         }
         catch (...)
@@ -4434,14 +4434,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneCallDetails_get_ContactName(py::wrapper::Windows::Phone::Notification::Management::PhoneCallDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"ContactName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"ContactName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactName());
         }
         catch (...)
@@ -4453,14 +4453,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneCallDetails_get_EndTime(py::wrapper::Windows::Phone::Notification::Management::PhoneCallDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"EndTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"EndTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndTime());
         }
         catch (...)
@@ -4472,14 +4472,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneCallDetails_get_PhoneLine(py::wrapper::Windows::Phone::Notification::Management::PhoneCallDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"PhoneLine"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"PhoneLine"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhoneLine());
         }
         catch (...)
@@ -4491,14 +4491,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneCallDetails_get_PhoneNumber(py::wrapper::Windows::Phone::Notification::Management::PhoneCallDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"PhoneNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"PhoneNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhoneNumber());
         }
         catch (...)
@@ -4510,14 +4510,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneCallDetails_get_PresetTextResponses(py::wrapper::Windows::Phone::Notification::Management::PhoneCallDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"PresetTextResponses"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"PresetTextResponses"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PresetTextResponses());
         }
         catch (...)
@@ -4529,14 +4529,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneCallDetails_get_StartTime(py::wrapper::Windows::Phone::Notification::Management::PhoneCallDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"StartTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"StartTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartTime());
         }
         catch (...)
@@ -4548,14 +4548,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneCallDetails_get_State(py::wrapper::Windows::Phone::Notification::Management::PhoneCallDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneCallDetails", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -4648,14 +4648,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneLineDetails_get_DefaultOutgoingLine(py::wrapper::Windows::Phone::Notification::Management::PhoneLineDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneLineDetails", L"DefaultOutgoingLine"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneLineDetails", L"DefaultOutgoingLine"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultOutgoingLine());
         }
         catch (...)
@@ -4667,14 +4667,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneLineDetails_get_DisplayName(py::wrapper::Windows::Phone::Notification::Management::PhoneLineDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneLineDetails", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneLineDetails", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -4686,14 +4686,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneLineDetails_get_LineId(py::wrapper::Windows::Phone::Notification::Management::PhoneLineDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneLineDetails", L"LineId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneLineDetails", L"LineId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LineId());
         }
         catch (...)
@@ -4705,14 +4705,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneLineDetails_get_LineNumber(py::wrapper::Windows::Phone::Notification::Management::PhoneLineDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneLineDetails", L"LineNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneLineDetails", L"LineNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LineNumber());
         }
         catch (...)
@@ -4724,14 +4724,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneLineDetails_get_RegistrationState(py::wrapper::Windows::Phone::Notification::Management::PhoneLineDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneLineDetails", L"RegistrationState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneLineDetails", L"RegistrationState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RegistrationState());
         }
         catch (...)
@@ -4743,14 +4743,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneLineDetails_get_VoicemailCount(py::wrapper::Windows::Phone::Notification::Management::PhoneLineDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneLineDetails", L"VoicemailCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneLineDetails", L"VoicemailCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VoicemailCount());
         }
         catch (...)
@@ -4762,14 +4762,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneLineDetails_get_MissedCallCount(py::wrapper::Windows::Phone::Notification::Management::PhoneLineDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneLineDetails", L"MissedCallCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneLineDetails", L"MissedCallCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MissedCallCount());
         }
         catch (...)
@@ -4857,14 +4857,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneNotificationTriggerDetails_get_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::PhoneNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneNotificationTriggerDetails", L"StartedProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneNotificationTriggerDetails", L"StartedProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartedProcessing());
         }
         catch (...)
@@ -4876,12 +4876,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int PhoneNotificationTriggerDetails_put_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::PhoneNotificationTriggerDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneNotificationTriggerDetails", L"StartedProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4890,6 +4884,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneNotificationTriggerDetails", L"StartedProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.StartedProcessing(param0);
@@ -4904,14 +4904,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneNotificationTriggerDetails_get_AccessoryNotificationType(py::wrapper::Windows::Phone::Notification::Management::PhoneNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneNotificationTriggerDetails", L"AccessoryNotificationType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneNotificationTriggerDetails", L"AccessoryNotificationType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccessoryNotificationType());
         }
         catch (...)
@@ -4923,14 +4923,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneNotificationTriggerDetails_get_AppDisplayName(py::wrapper::Windows::Phone::Notification::Management::PhoneNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneNotificationTriggerDetails", L"AppDisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneNotificationTriggerDetails", L"AppDisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppDisplayName());
         }
         catch (...)
@@ -4942,14 +4942,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneNotificationTriggerDetails_get_AppId(py::wrapper::Windows::Phone::Notification::Management::PhoneNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneNotificationTriggerDetails", L"AppId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneNotificationTriggerDetails", L"AppId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppId());
         }
         catch (...)
@@ -4961,14 +4961,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneNotificationTriggerDetails_get_TimeCreated(py::wrapper::Windows::Phone::Notification::Management::PhoneNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneNotificationTriggerDetails", L"TimeCreated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneNotificationTriggerDetails", L"TimeCreated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimeCreated());
         }
         catch (...)
@@ -4980,14 +4980,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneNotificationTriggerDetails_get_CallDetails(py::wrapper::Windows::Phone::Notification::Management::PhoneNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneNotificationTriggerDetails", L"CallDetails"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneNotificationTriggerDetails", L"CallDetails"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallDetails());
         }
         catch (...)
@@ -4999,14 +4999,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneNotificationTriggerDetails_get_PhoneLineChangedId(py::wrapper::Windows::Phone::Notification::Management::PhoneNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneNotificationTriggerDetails", L"PhoneLineChangedId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneNotificationTriggerDetails", L"PhoneLineChangedId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhoneLineChangedId());
         }
         catch (...)
@@ -5018,14 +5018,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* PhoneNotificationTriggerDetails_get_PhoneNotificationType(py::wrapper::Windows::Phone::Notification::Management::PhoneNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneNotificationTriggerDetails", L"PhoneNotificationType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.PhoneNotificationTriggerDetails", L"PhoneNotificationType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhoneNotificationType());
         }
         catch (...)
@@ -5114,14 +5114,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ReminderNotificationTriggerDetails_get_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"StartedProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"StartedProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartedProcessing());
         }
         catch (...)
@@ -5133,12 +5133,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int ReminderNotificationTriggerDetails_put_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"StartedProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5147,6 +5141,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"StartedProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.StartedProcessing(param0);
@@ -5161,14 +5161,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ReminderNotificationTriggerDetails_get_AccessoryNotificationType(py::wrapper::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"AccessoryNotificationType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"AccessoryNotificationType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccessoryNotificationType());
         }
         catch (...)
@@ -5180,14 +5180,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ReminderNotificationTriggerDetails_get_AppDisplayName(py::wrapper::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"AppDisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"AppDisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppDisplayName());
         }
         catch (...)
@@ -5199,14 +5199,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ReminderNotificationTriggerDetails_get_AppId(py::wrapper::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"AppId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"AppId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppId());
         }
         catch (...)
@@ -5218,14 +5218,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ReminderNotificationTriggerDetails_get_TimeCreated(py::wrapper::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"TimeCreated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"TimeCreated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimeCreated());
         }
         catch (...)
@@ -5237,14 +5237,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ReminderNotificationTriggerDetails_get_Appointment(py::wrapper::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"Appointment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"Appointment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Appointment());
         }
         catch (...)
@@ -5256,14 +5256,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ReminderNotificationTriggerDetails_get_Description(py::wrapper::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -5275,14 +5275,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ReminderNotificationTriggerDetails_get_Details(py::wrapper::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"Details"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"Details"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Details());
         }
         catch (...)
@@ -5294,14 +5294,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ReminderNotificationTriggerDetails_get_ReminderId(py::wrapper::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"ReminderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"ReminderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReminderId());
         }
         catch (...)
@@ -5313,14 +5313,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ReminderNotificationTriggerDetails_get_ReminderState(py::wrapper::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"ReminderState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"ReminderState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReminderState());
         }
         catch (...)
@@ -5332,14 +5332,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ReminderNotificationTriggerDetails_get_Timestamp(py::wrapper::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -5351,14 +5351,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ReminderNotificationTriggerDetails_get_Title(py::wrapper::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -5370,14 +5370,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ReminderNotificationTriggerDetails_get_InstanceId(py::wrapper::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"InstanceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails", L"InstanceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InstanceId());
         }
         catch (...)
@@ -5471,14 +5471,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* SpeedDialEntry_get_ContactName(py::wrapper::Windows::Phone::Notification::Management::SpeedDialEntry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.SpeedDialEntry", L"ContactName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.SpeedDialEntry", L"ContactName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactName());
         }
         catch (...)
@@ -5490,14 +5490,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* SpeedDialEntry_get_NumberType(py::wrapper::Windows::Phone::Notification::Management::SpeedDialEntry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.SpeedDialEntry", L"NumberType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.SpeedDialEntry", L"NumberType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumberType());
         }
         catch (...)
@@ -5509,14 +5509,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* SpeedDialEntry_get_PhoneNumber(py::wrapper::Windows::Phone::Notification::Management::SpeedDialEntry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.SpeedDialEntry", L"PhoneNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.SpeedDialEntry", L"PhoneNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhoneNumber());
         }
         catch (...)
@@ -5600,14 +5600,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* TextResponse_get_Content(py::wrapper::Windows::Phone::Notification::Management::TextResponse* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.TextResponse", L"Content"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.TextResponse", L"Content"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Content());
         }
         catch (...)
@@ -5619,14 +5619,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* TextResponse_get_Id(py::wrapper::Windows::Phone::Notification::Management::TextResponse* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.TextResponse", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.TextResponse", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -5709,14 +5709,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ToastNotificationTriggerDetails_get_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::ToastNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"StartedProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"StartedProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartedProcessing());
         }
         catch (...)
@@ -5728,12 +5728,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int ToastNotificationTriggerDetails_put_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::ToastNotificationTriggerDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"StartedProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5742,6 +5736,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"StartedProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.StartedProcessing(param0);
@@ -5756,14 +5756,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ToastNotificationTriggerDetails_get_AccessoryNotificationType(py::wrapper::Windows::Phone::Notification::Management::ToastNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"AccessoryNotificationType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"AccessoryNotificationType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccessoryNotificationType());
         }
         catch (...)
@@ -5775,14 +5775,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ToastNotificationTriggerDetails_get_AppDisplayName(py::wrapper::Windows::Phone::Notification::Management::ToastNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"AppDisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"AppDisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppDisplayName());
         }
         catch (...)
@@ -5794,14 +5794,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ToastNotificationTriggerDetails_get_AppId(py::wrapper::Windows::Phone::Notification::Management::ToastNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"AppId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"AppId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppId());
         }
         catch (...)
@@ -5813,14 +5813,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ToastNotificationTriggerDetails_get_TimeCreated(py::wrapper::Windows::Phone::Notification::Management::ToastNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"TimeCreated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"TimeCreated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimeCreated());
         }
         catch (...)
@@ -5832,14 +5832,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ToastNotificationTriggerDetails_get_SuppressPopup(py::wrapper::Windows::Phone::Notification::Management::ToastNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"SuppressPopup"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"SuppressPopup"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SuppressPopup());
         }
         catch (...)
@@ -5851,14 +5851,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ToastNotificationTriggerDetails_get_Text1(py::wrapper::Windows::Phone::Notification::Management::ToastNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"Text1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"Text1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Text1());
         }
         catch (...)
@@ -5870,14 +5870,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ToastNotificationTriggerDetails_get_Text2(py::wrapper::Windows::Phone::Notification::Management::ToastNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"Text2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"Text2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Text2());
         }
         catch (...)
@@ -5889,14 +5889,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ToastNotificationTriggerDetails_get_Text3(py::wrapper::Windows::Phone::Notification::Management::ToastNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"Text3"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"Text3"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Text3());
         }
         catch (...)
@@ -5908,14 +5908,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ToastNotificationTriggerDetails_get_Text4(py::wrapper::Windows::Phone::Notification::Management::ToastNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"Text4"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"Text4"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Text4());
         }
         catch (...)
@@ -5927,14 +5927,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* ToastNotificationTriggerDetails_get_InstanceId(py::wrapper::Windows::Phone::Notification::Management::ToastNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"InstanceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.ToastNotificationTriggerDetails", L"InstanceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InstanceId());
         }
         catch (...)
@@ -6026,14 +6026,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* VolumeInfo_get_CallVolume(py::wrapper::Windows::Phone::Notification::Management::VolumeInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.VolumeInfo", L"CallVolume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.VolumeInfo", L"CallVolume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallVolume());
         }
         catch (...)
@@ -6045,14 +6045,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* VolumeInfo_get_IsMuted(py::wrapper::Windows::Phone::Notification::Management::VolumeInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.VolumeInfo", L"IsMuted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.VolumeInfo", L"IsMuted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsMuted());
         }
         catch (...)
@@ -6064,14 +6064,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* VolumeInfo_get_IsVibrateEnabled(py::wrapper::Windows::Phone::Notification::Management::VolumeInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.VolumeInfo", L"IsVibrateEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.VolumeInfo", L"IsVibrateEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsVibrateEnabled());
         }
         catch (...)
@@ -6083,14 +6083,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* VolumeInfo_get_MediaVolume(py::wrapper::Windows::Phone::Notification::Management::VolumeInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.VolumeInfo", L"MediaVolume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.VolumeInfo", L"MediaVolume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MediaVolume());
         }
         catch (...)
@@ -6102,14 +6102,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* VolumeInfo_get_SystemVolume(py::wrapper::Windows::Phone::Notification::Management::VolumeInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.VolumeInfo", L"SystemVolume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.VolumeInfo", L"SystemVolume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SystemVolume());
         }
         catch (...)
@@ -6195,14 +6195,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* IAccessoryNotificationTriggerDetails_get_AccessoryNotificationType(py::wrapper::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails", L"AccessoryNotificationType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails", L"AccessoryNotificationType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccessoryNotificationType());
         }
         catch (...)
@@ -6214,14 +6214,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* IAccessoryNotificationTriggerDetails_get_AppDisplayName(py::wrapper::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails", L"AppDisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails", L"AppDisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppDisplayName());
         }
         catch (...)
@@ -6233,14 +6233,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* IAccessoryNotificationTriggerDetails_get_AppId(py::wrapper::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails", L"AppId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails", L"AppId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppId());
         }
         catch (...)
@@ -6252,14 +6252,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* IAccessoryNotificationTriggerDetails_get_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails", L"StartedProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails", L"StartedProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartedProcessing());
         }
         catch (...)
@@ -6271,12 +6271,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int IAccessoryNotificationTriggerDetails_put_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails", L"StartedProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6285,6 +6279,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails", L"StartedProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.StartedProcessing(param0);
@@ -6299,14 +6299,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* IAccessoryNotificationTriggerDetails_get_TimeCreated(py::wrapper::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails", L"TimeCreated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails", L"TimeCreated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimeCreated());
         }
         catch (...)

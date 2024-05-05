@@ -66,14 +66,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountClientView_get_AccountPairwiseId(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountClientView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountClientView", L"AccountPairwiseId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountClientView", L"AccountPairwiseId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccountPairwiseId());
         }
         catch (...)
@@ -85,14 +85,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountClientView_get_ApplicationCallbackUri(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountClientView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountClientView", L"ApplicationCallbackUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountClientView", L"ApplicationCallbackUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ApplicationCallbackUri());
         }
         catch (...)
@@ -104,14 +104,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountClientView_get_Type(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountClientView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountClientView", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountClientView", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -191,14 +191,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring>>(args, 2);
@@ -213,14 +213,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring>>(args, 2);
@@ -236,14 +236,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         }
         else if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountAsync", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountAsync", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring>>(args, 2);
@@ -271,14 +271,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountForUserAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountForUserAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -294,14 +294,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         }
         else if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountForUserAsync", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountForUserAsync", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -318,14 +318,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         }
         else if (arg_count == 6)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountForUserAsync", 6))
-            {
-                py::set_arg_count_version_error(6);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountForUserAsync", 6))
+                {
+                    py::set_arg_count_version_error(6);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -354,14 +354,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"ClearPerUserFromPerAppAccountAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"ClearPerUserFromPerAppAccountAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager::ClearPerUserFromPerAppAccountAsync(param0));
@@ -385,14 +385,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"ClearViewAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"ClearViewAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
 
@@ -417,14 +417,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"ClearWebAccountPictureAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"ClearWebAccountPictureAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager::ClearWebAccountPictureAsync(param0));
@@ -448,14 +448,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"DeleteWebAccountAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"DeleteWebAccountAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager::DeleteWebAccountAsync(param0));
@@ -479,14 +479,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"FindAllProviderWebAccountsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"FindAllProviderWebAccountsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager::FindAllProviderWebAccountsAsync());
             }
             catch (...)
@@ -508,14 +508,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"FindAllProviderWebAccountsForUserAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"FindAllProviderWebAccountsForUserAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager::FindAllProviderWebAccountsForUserAsync(param0));
@@ -539,14 +539,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"GetPerUserFromPerAppAccountAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"GetPerUserFromPerAppAccountAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager::GetPerUserFromPerAppAccountAsync(param0));
@@ -570,14 +570,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"GetScope", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"GetScope", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager::GetScope(param0));
@@ -601,14 +601,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"GetViewsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"GetViewsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager::GetViewsAsync(param0));
@@ -632,14 +632,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"InvalidateAppCacheForAccountAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"InvalidateAppCacheForAccountAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager::InvalidateAppCacheForAccountAsync(param0));
@@ -663,14 +663,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"InvalidateAppCacheForAllAccountsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"InvalidateAppCacheForAllAccountsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager::InvalidateAppCacheForAllAccountsAsync());
             }
             catch (...)
@@ -692,14 +692,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"PullCookiesAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"PullCookiesAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -724,14 +724,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"PushCookiesAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"PushCookiesAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Web::Http::HttpCookie>>(args, 1);
 
@@ -756,14 +756,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"SetPerAppToPerUserAccountAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"SetPerAppToPerUserAccountAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -788,14 +788,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"SetScopeAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"SetScopeAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Authentication::Web::Provider::WebAccountScope>(args, 1);
 
@@ -820,14 +820,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"SetViewAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"SetViewAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Authentication::Web::Provider::WebAccountClientView>(args, 1);
 
@@ -852,14 +852,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"SetWebAccountPictureAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"SetWebAccountPictureAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
@@ -884,14 +884,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"UpdateWebAccountPropertiesAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"UpdateWebAccountPropertiesAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring>>(args, 2);
@@ -1004,14 +1004,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderAddAccountOperation", L"ReportCompleted", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderAddAccountOperation", L"ReportCompleted", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportCompleted();
                 Py_RETURN_NONE;
             }
@@ -1030,14 +1030,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderAddAccountOperation_get_Kind(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderAddAccountOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderAddAccountOperation", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderAddAccountOperation", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -1124,14 +1124,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderDeleteAccountOperation", L"ReportCompleted", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderDeleteAccountOperation", L"ReportCompleted", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportCompleted();
                 Py_RETURN_NONE;
             }
@@ -1154,14 +1154,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderDeleteAccountOperation", L"ReportError", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderDeleteAccountOperation", L"ReportError", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebProviderError>(args, 0);
 
                 self->obj.ReportError(param0);
@@ -1182,14 +1182,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderDeleteAccountOperation_get_WebAccount(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderDeleteAccountOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderDeleteAccountOperation", L"WebAccount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderDeleteAccountOperation", L"WebAccount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WebAccount());
         }
         catch (...)
@@ -1201,14 +1201,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderDeleteAccountOperation_get_Kind(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderDeleteAccountOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderDeleteAccountOperation", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderDeleteAccountOperation", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -1297,14 +1297,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation", L"ReportCompleted", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation", L"ReportCompleted", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportCompleted();
                 Py_RETURN_NONE;
             }
@@ -1327,14 +1327,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation", L"ReportError", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation", L"ReportError", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebProviderError>(args, 0);
 
                 self->obj.ReportError(param0);
@@ -1359,14 +1359,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation", L"ReportUserInteractionRequired", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation", L"ReportUserInteractionRequired", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportUserInteractionRequired();
                 Py_RETURN_NONE;
             }
@@ -1378,14 +1378,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation", L"ReportUserInteractionRequired", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation", L"ReportUserInteractionRequired", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebProviderError>(args, 0);
 
                 self->obj.ReportUserInteractionRequired(param0);
@@ -1406,14 +1406,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderGetTokenSilentOperation_get_Kind(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderGetTokenSilentOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -1425,14 +1425,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderGetTokenSilentOperation_get_CacheExpirationTime(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderGetTokenSilentOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation", L"CacheExpirationTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation", L"CacheExpirationTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CacheExpirationTime());
         }
         catch (...)
@@ -1444,12 +1444,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static int WebAccountProviderGetTokenSilentOperation_put_CacheExpirationTime(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderGetTokenSilentOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation", L"CacheExpirationTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1458,6 +1452,12 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation", L"CacheExpirationTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             self->obj.CacheExpirationTime(param0);
@@ -1472,14 +1472,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderGetTokenSilentOperation_get_ProviderRequest(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderGetTokenSilentOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation", L"ProviderRequest"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation", L"ProviderRequest"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderRequest());
         }
         catch (...)
@@ -1491,14 +1491,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderGetTokenSilentOperation_get_ProviderResponses(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderGetTokenSilentOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation", L"ProviderResponses"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation", L"ProviderResponses"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderResponses());
         }
         catch (...)
@@ -1590,14 +1590,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderManageAccountOperation", L"ReportCompleted", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderManageAccountOperation", L"ReportCompleted", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportCompleted();
                 Py_RETURN_NONE;
             }
@@ -1616,14 +1616,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderManageAccountOperation_get_WebAccount(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderManageAccountOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderManageAccountOperation", L"WebAccount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderManageAccountOperation", L"WebAccount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WebAccount());
         }
         catch (...)
@@ -1635,14 +1635,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderManageAccountOperation_get_Kind(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderManageAccountOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderManageAccountOperation", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderManageAccountOperation", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -1730,14 +1730,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRequestTokenOperation", L"ReportCompleted", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRequestTokenOperation", L"ReportCompleted", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportCompleted();
                 Py_RETURN_NONE;
             }
@@ -1760,14 +1760,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRequestTokenOperation", L"ReportError", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRequestTokenOperation", L"ReportError", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebProviderError>(args, 0);
 
                 self->obj.ReportError(param0);
@@ -1792,14 +1792,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRequestTokenOperation", L"ReportUserCanceled", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRequestTokenOperation", L"ReportUserCanceled", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportUserCanceled();
                 Py_RETURN_NONE;
             }
@@ -1818,14 +1818,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderRequestTokenOperation_get_Kind(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderRequestTokenOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRequestTokenOperation", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRequestTokenOperation", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -1837,14 +1837,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderRequestTokenOperation_get_CacheExpirationTime(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderRequestTokenOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRequestTokenOperation", L"CacheExpirationTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRequestTokenOperation", L"CacheExpirationTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CacheExpirationTime());
         }
         catch (...)
@@ -1856,12 +1856,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static int WebAccountProviderRequestTokenOperation_put_CacheExpirationTime(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderRequestTokenOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRequestTokenOperation", L"CacheExpirationTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1870,6 +1864,12 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRequestTokenOperation", L"CacheExpirationTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             self->obj.CacheExpirationTime(param0);
@@ -1884,14 +1884,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderRequestTokenOperation_get_ProviderRequest(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderRequestTokenOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRequestTokenOperation", L"ProviderRequest"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRequestTokenOperation", L"ProviderRequest"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderRequest());
         }
         catch (...)
@@ -1903,14 +1903,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderRequestTokenOperation_get_ProviderResponses(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderRequestTokenOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRequestTokenOperation", L"ProviderResponses"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRequestTokenOperation", L"ProviderResponses"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderResponses());
         }
         catch (...)
@@ -2002,14 +2002,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRetrieveCookiesOperation", L"ReportCompleted", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRetrieveCookiesOperation", L"ReportCompleted", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportCompleted();
                 Py_RETURN_NONE;
             }
@@ -2032,14 +2032,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRetrieveCookiesOperation", L"ReportError", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRetrieveCookiesOperation", L"ReportError", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebProviderError>(args, 0);
 
                 self->obj.ReportError(param0);
@@ -2060,14 +2060,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderRetrieveCookiesOperation_get_Kind(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderRetrieveCookiesOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRetrieveCookiesOperation", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRetrieveCookiesOperation", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -2079,14 +2079,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderRetrieveCookiesOperation_get_Uri(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderRetrieveCookiesOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRetrieveCookiesOperation", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRetrieveCookiesOperation", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -2098,12 +2098,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static int WebAccountProviderRetrieveCookiesOperation_put_Uri(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderRetrieveCookiesOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRetrieveCookiesOperation", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2112,6 +2106,12 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRetrieveCookiesOperation", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.Uri(param0);
@@ -2126,14 +2126,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderRetrieveCookiesOperation_get_ApplicationCallbackUri(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderRetrieveCookiesOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRetrieveCookiesOperation", L"ApplicationCallbackUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRetrieveCookiesOperation", L"ApplicationCallbackUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ApplicationCallbackUri());
         }
         catch (...)
@@ -2145,14 +2145,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderRetrieveCookiesOperation_get_Context(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderRetrieveCookiesOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRetrieveCookiesOperation", L"Context"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRetrieveCookiesOperation", L"Context"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Context());
         }
         catch (...)
@@ -2164,14 +2164,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderRetrieveCookiesOperation_get_Cookies(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderRetrieveCookiesOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRetrieveCookiesOperation", L"Cookies"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderRetrieveCookiesOperation", L"Cookies"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Cookies());
         }
         catch (...)
@@ -2263,14 +2263,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderSignOutAccountOperation", L"ReportCompleted", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderSignOutAccountOperation", L"ReportCompleted", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportCompleted();
                 Py_RETURN_NONE;
             }
@@ -2293,14 +2293,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderSignOutAccountOperation", L"ReportError", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderSignOutAccountOperation", L"ReportError", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebProviderError>(args, 0);
 
                 self->obj.ReportError(param0);
@@ -2321,14 +2321,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderSignOutAccountOperation_get_Kind(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderSignOutAccountOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderSignOutAccountOperation", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderSignOutAccountOperation", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -2340,14 +2340,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderSignOutAccountOperation_get_ApplicationCallbackUri(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderSignOutAccountOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderSignOutAccountOperation", L"ApplicationCallbackUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderSignOutAccountOperation", L"ApplicationCallbackUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ApplicationCallbackUri());
         }
         catch (...)
@@ -2359,14 +2359,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderSignOutAccountOperation_get_ClientId(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderSignOutAccountOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderSignOutAccountOperation", L"ClientId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderSignOutAccountOperation", L"ClientId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClientId());
         }
         catch (...)
@@ -2378,14 +2378,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderSignOutAccountOperation_get_WebAccount(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderSignOutAccountOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderSignOutAccountOperation", L"WebAccount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderSignOutAccountOperation", L"WebAccount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WebAccount());
         }
         catch (...)
@@ -2472,14 +2472,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderTriggerDetails_get_Operation(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderTriggerDetails", L"Operation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderTriggerDetails", L"Operation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Operation());
         }
         catch (...)
@@ -2491,14 +2491,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebAccountProviderTriggerDetails_get_User(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderTriggerDetails", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountProviderTriggerDetails", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -2585,14 +2585,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest", L"CheckApplicationForCapabilityAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest", L"CheckApplicationForCapabilityAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CheckApplicationForCapabilityAsync(param0));
@@ -2616,14 +2616,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest", L"GetApplicationTokenBindingKeyAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest", L"GetApplicationTokenBindingKeyAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::TokenBindingKeyType>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
 
@@ -2648,14 +2648,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest", L"GetApplicationTokenBindingKeyIdAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest", L"GetApplicationTokenBindingKeyIdAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::TokenBindingKeyType>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
 
@@ -2676,14 +2676,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebProviderTokenRequest_get_ApplicationCallbackUri(py::wrapper::Windows::Security::Authentication::Web::Provider::WebProviderTokenRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest", L"ApplicationCallbackUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest", L"ApplicationCallbackUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ApplicationCallbackUri());
         }
         catch (...)
@@ -2695,14 +2695,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebProviderTokenRequest_get_ClientRequest(py::wrapper::Windows::Security::Authentication::Web::Provider::WebProviderTokenRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest", L"ClientRequest"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest", L"ClientRequest"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClientRequest());
         }
         catch (...)
@@ -2714,14 +2714,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebProviderTokenRequest_get_WebAccountSelectionOptions(py::wrapper::Windows::Security::Authentication::Web::Provider::WebProviderTokenRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest", L"WebAccountSelectionOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest", L"WebAccountSelectionOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WebAccountSelectionOptions());
         }
         catch (...)
@@ -2733,14 +2733,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebProviderTokenRequest_get_WebAccounts(py::wrapper::Windows::Security::Authentication::Web::Provider::WebProviderTokenRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest", L"WebAccounts"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest", L"WebAccounts"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WebAccounts());
         }
         catch (...)
@@ -2752,14 +2752,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebProviderTokenRequest_get_ApplicationPackageFamilyName(py::wrapper::Windows::Security::Authentication::Web::Provider::WebProviderTokenRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest", L"ApplicationPackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest", L"ApplicationPackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ApplicationPackageFamilyName());
         }
         catch (...)
@@ -2771,14 +2771,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebProviderTokenRequest_get_ApplicationProcessName(py::wrapper::Windows::Security::Authentication::Web::Provider::WebProviderTokenRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest", L"ApplicationProcessName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest", L"ApplicationProcessName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ApplicationProcessName());
         }
         catch (...)
@@ -2892,14 +2892,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* WebProviderTokenResponse_get_ClientResponse(py::wrapper::Windows::Security::Authentication::Web::Provider::WebProviderTokenResponse* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse", L"ClientResponse"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse", L"ClientResponse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClientResponse());
         }
         catch (...)
@@ -2985,14 +2985,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderBaseReportOperation", L"ReportCompleted", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderBaseReportOperation", L"ReportCompleted", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportCompleted();
                 Py_RETURN_NONE;
             }
@@ -3015,14 +3015,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderBaseReportOperation", L"ReportError", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderBaseReportOperation", L"ReportError", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebProviderError>(args, 0);
 
                 self->obj.ReportError(param0);
@@ -3114,14 +3114,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* IWebAccountProviderOperation_get_Kind(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -3207,14 +3207,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderBaseReportOperation", L"ReportCompleted", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderBaseReportOperation", L"ReportCompleted", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportCompleted();
                 Py_RETURN_NONE;
             }
@@ -3237,14 +3237,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderBaseReportOperation", L"ReportError", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderBaseReportOperation", L"ReportError", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebProviderError>(args, 0);
 
                 self->obj.ReportError(param0);
@@ -3269,14 +3269,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderSilentReportOperation", L"ReportUserInteractionRequired", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderSilentReportOperation", L"ReportUserInteractionRequired", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportUserInteractionRequired();
                 Py_RETURN_NONE;
             }
@@ -3288,14 +3288,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderSilentReportOperation", L"ReportUserInteractionRequired", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderSilentReportOperation", L"ReportUserInteractionRequired", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebProviderError>(args, 0);
 
                 self->obj.ReportUserInteractionRequired(param0);
@@ -3388,14 +3388,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* IWebAccountProviderTokenObjects_get_Operation(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenObjects", L"Operation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenObjects", L"Operation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Operation());
         }
         catch (...)
@@ -3477,14 +3477,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* IWebAccountProviderTokenObjects2_get_User(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenObjects2", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenObjects2", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -3496,14 +3496,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* IWebAccountProviderTokenObjects2_get_Operation(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenObjects", L"Operation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenObjects", L"Operation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Operation());
         }
         catch (...)
@@ -3586,14 +3586,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* IWebAccountProviderTokenOperation_get_CacheExpirationTime(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenOperation", L"CacheExpirationTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenOperation", L"CacheExpirationTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CacheExpirationTime());
         }
         catch (...)
@@ -3605,12 +3605,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static int IWebAccountProviderTokenOperation_put_CacheExpirationTime(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenOperation", L"CacheExpirationTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3619,6 +3613,12 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenOperation", L"CacheExpirationTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             self->obj.CacheExpirationTime(param0);
@@ -3633,14 +3633,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* IWebAccountProviderTokenOperation_get_ProviderRequest(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenOperation", L"ProviderRequest"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenOperation", L"ProviderRequest"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderRequest());
         }
         catch (...)
@@ -3652,14 +3652,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* IWebAccountProviderTokenOperation_get_ProviderResponses(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenOperation", L"ProviderResponses"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenOperation", L"ProviderResponses"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderResponses());
         }
         catch (...)
@@ -3671,14 +3671,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     static PyObject* IWebAccountProviderTokenOperation_get_Kind(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -3767,14 +3767,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderBaseReportOperation", L"ReportCompleted", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderBaseReportOperation", L"ReportCompleted", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportCompleted();
                 Py_RETURN_NONE;
             }
@@ -3797,14 +3797,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderBaseReportOperation", L"ReportError", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderBaseReportOperation", L"ReportError", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebProviderError>(args, 0);
 
                 self->obj.ReportError(param0);
@@ -3829,14 +3829,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderUIReportOperation", L"ReportUserCanceled", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.IWebAccountProviderUIReportOperation", L"ReportUserCanceled", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportUserCanceled();
                 Py_RETURN_NONE;
             }

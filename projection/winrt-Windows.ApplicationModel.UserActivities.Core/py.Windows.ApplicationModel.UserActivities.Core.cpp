@@ -20,14 +20,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.Core.CoreUserActivityManager", L"CreateUserActivitySessionInBackground", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.Core.CoreUserActivityManager", L"CreateUserActivitySessionInBackground", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserActivities::UserActivity>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::UserActivities::Core::CoreUserActivityManager::CreateUserActivitySessionInBackground(param0));
@@ -51,14 +51,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities::Core
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.Core.CoreUserActivityManager", L"DeleteUserActivitySessionsInTimeRangeAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.Core.CoreUserActivityManager", L"DeleteUserActivitySessionsInTimeRangeAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 2);

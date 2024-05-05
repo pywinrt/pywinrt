@@ -260,14 +260,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.First());
                 }
                 catch (...)
@@ -308,14 +308,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 1)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterator`1", L"GetMany", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterator`1", L"GetMany", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<py::pybuf_view<T, true>>(args, 0);
 
                     return py::convert(_obj.GetMany(param0));
@@ -338,14 +338,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterator`1", L"MoveNext", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterator`1", L"MoveNext", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.MoveNext());
                 }
                 catch (...)
@@ -486,14 +486,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.First());
                 }
                 catch (...)
@@ -514,14 +514,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 1)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMapView`2", L"HasKey", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMapView`2", L"HasKey", 1))
+                    {
+                        py::set_arg_count_version_error(1);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<K>(args, 0);
 
                     return py::convert(_obj.HasKey(param0));
@@ -544,14 +544,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 1)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMapView`2", L"Lookup", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMapView`2", L"Lookup", 1))
+                    {
+                        py::set_arg_count_version_error(1);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<K>(args, 0);
 
                     return py::convert(_obj.Lookup(param0));
@@ -574,14 +574,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMapView`2", L"Split", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMapView`2", L"Split", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::Windows::Foundation::Collections::IMapView<K, V> param0 { nullptr };
                     winrt::Windows::Foundation::Collections::IMapView<K, V> param1 { nullptr };
 
@@ -708,14 +708,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Clear", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Clear", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     _obj.Clear();
                     Py_RETURN_NONE;
                 }
@@ -737,14 +737,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.First());
                 }
                 catch (...)
@@ -765,14 +765,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"GetView", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"GetView", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetView());
                 }
                 catch (...)
@@ -793,14 +793,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 1)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"HasKey", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"HasKey", 1))
+                    {
+                        py::set_arg_count_version_error(1);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<K>(args, 0);
 
                     return py::convert(_obj.HasKey(param0));
@@ -823,14 +823,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 2)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Insert", 2))
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Insert", 2))
+                    {
+                        py::set_arg_count_version_error(2);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<K>(args, 0);
                     auto param1 = py::convert_to<V>(args, 1);
 
@@ -854,14 +854,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 1)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Lookup", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Lookup", 1))
+                    {
+                        py::set_arg_count_version_error(1);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<K>(args, 0);
 
                     return py::convert(_obj.Lookup(param0));
@@ -884,14 +884,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 1)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Remove", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Remove", 1))
+                    {
+                        py::set_arg_count_version_error(1);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<K>(args, 0);
 
                     _obj.Remove(param0);
@@ -1031,14 +1031,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Clear", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Clear", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     _obj.Clear();
                     Py_RETURN_NONE;
                 }
@@ -1060,14 +1060,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.First());
                 }
                 catch (...)
@@ -1088,14 +1088,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"GetView", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"GetView", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetView());
                 }
                 catch (...)
@@ -1116,14 +1116,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 1)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"HasKey", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"HasKey", 1))
+                    {
+                        py::set_arg_count_version_error(1);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<K>(args, 0);
 
                     return py::convert(_obj.HasKey(param0));
@@ -1146,14 +1146,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 2)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Insert", 2))
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Insert", 2))
+                    {
+                        py::set_arg_count_version_error(2);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<K>(args, 0);
                     auto param1 = py::convert_to<V>(args, 1);
 
@@ -1177,14 +1177,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 1)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Lookup", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Lookup", 1))
+                    {
+                        py::set_arg_count_version_error(1);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<K>(args, 0);
 
                     return py::convert(_obj.Lookup(param0));
@@ -1207,14 +1207,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 1)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Remove", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Remove", 1))
+                    {
+                        py::set_arg_count_version_error(1);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<K>(args, 0);
 
                     _obj.Remove(param0);
@@ -1383,14 +1383,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 1)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"Append", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"Append", 1))
+                    {
+                        py::set_arg_count_version_error(1);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<T>(args, 0);
 
                     _obj.Append(param0);
@@ -1414,14 +1414,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"Clear", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"Clear", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     _obj.Clear();
                     Py_RETURN_NONE;
                 }
@@ -1443,14 +1443,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.First());
                 }
                 catch (...)
@@ -1471,14 +1471,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 1)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetAt", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetAt", 1))
+                    {
+                        py::set_arg_count_version_error(1);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<uint32_t>(args, 0);
 
                     return py::convert(_obj.GetAt(param0));
@@ -1501,14 +1501,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 2)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetMany", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetMany", 1))
+                    {
+                        py::set_arg_count_version_error(1);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<uint32_t>(args, 0);
                     auto param1 = py::convert_to<py::pybuf_view<T, true>>(args, 1);
 
@@ -1532,14 +1532,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetView", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetView", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetView());
                 }
                 catch (...)
@@ -1560,14 +1560,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 1)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"IndexOf", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"IndexOf", 1))
+                    {
+                        py::set_arg_count_version_error(1);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<T>(args, 0);
                     uint32_t param1 {  };
 
@@ -1603,14 +1603,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 2)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"InsertAt", 2))
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"InsertAt", 2))
+                    {
+                        py::set_arg_count_version_error(2);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<uint32_t>(args, 0);
                     auto param1 = py::convert_to<T>(args, 1);
 
@@ -1635,14 +1635,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 1)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"RemoveAt", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"RemoveAt", 1))
+                    {
+                        py::set_arg_count_version_error(1);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<uint32_t>(args, 0);
 
                     _obj.RemoveAt(param0);
@@ -1666,14 +1666,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"RemoveAtEnd", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"RemoveAtEnd", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     _obj.RemoveAtEnd();
                     Py_RETURN_NONE;
                 }
@@ -1695,14 +1695,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 1)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"ReplaceAll", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"ReplaceAll", 1))
+                    {
+                        py::set_arg_count_version_error(1);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<py::pybuf_view<T, false>>(args, 0);
 
                     _obj.ReplaceAll(param0);
@@ -1726,14 +1726,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 2)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"SetAt", 2))
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"SetAt", 2))
+                    {
+                        py::set_arg_count_version_error(2);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<uint32_t>(args, 0);
                     auto param1 = py::convert_to<T>(args, 1);
 
@@ -1926,14 +1926,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.First());
                 }
                 catch (...)
@@ -1954,14 +1954,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 1)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVectorView`1", L"GetAt", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVectorView`1", L"GetAt", 1))
+                    {
+                        py::set_arg_count_version_error(1);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<uint32_t>(args, 0);
 
                     return py::convert(_obj.GetAt(param0));
@@ -1984,14 +1984,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 2)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVectorView`1", L"GetMany", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVectorView`1", L"GetMany", 1))
+                    {
+                        py::set_arg_count_version_error(1);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<uint32_t>(args, 0);
                     auto param1 = py::convert_to<py::pybuf_view<T, true>>(args, 1);
 
@@ -2015,14 +2015,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 1)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVectorView`1", L"IndexOf", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVectorView`1", L"IndexOf", 1))
+                    {
+                        py::set_arg_count_version_error(1);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<T>(args, 0);
                     uint32_t param1 {  };
 
@@ -2183,14 +2183,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 1)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"Append", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"Append", 1))
+                    {
+                        py::set_arg_count_version_error(1);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<T>(args, 0);
 
                     _obj.Append(param0);
@@ -2214,14 +2214,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"Clear", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"Clear", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     _obj.Clear();
                     Py_RETURN_NONE;
                 }
@@ -2243,14 +2243,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.First());
                 }
                 catch (...)
@@ -2271,14 +2271,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 1)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetAt", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetAt", 1))
+                    {
+                        py::set_arg_count_version_error(1);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<uint32_t>(args, 0);
 
                     return py::convert(_obj.GetAt(param0));
@@ -2301,14 +2301,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 2)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetMany", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetMany", 1))
+                    {
+                        py::set_arg_count_version_error(1);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<uint32_t>(args, 0);
                     auto param1 = py::convert_to<py::pybuf_view<T, true>>(args, 1);
 
@@ -2332,14 +2332,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetView", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetView", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetView());
                 }
                 catch (...)
@@ -2360,14 +2360,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 1)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"IndexOf", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"IndexOf", 1))
+                    {
+                        py::set_arg_count_version_error(1);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<T>(args, 0);
                     uint32_t param1 {  };
 
@@ -2403,14 +2403,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 2)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"InsertAt", 2))
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"InsertAt", 2))
+                    {
+                        py::set_arg_count_version_error(2);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<uint32_t>(args, 0);
                     auto param1 = py::convert_to<T>(args, 1);
 
@@ -2435,14 +2435,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 1)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"RemoveAt", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"RemoveAt", 1))
+                    {
+                        py::set_arg_count_version_error(1);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<uint32_t>(args, 0);
 
                     _obj.RemoveAt(param0);
@@ -2466,14 +2466,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"RemoveAtEnd", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"RemoveAtEnd", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     _obj.RemoveAtEnd();
                     Py_RETURN_NONE;
                 }
@@ -2495,14 +2495,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 1)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"ReplaceAll", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"ReplaceAll", 1))
+                    {
+                        py::set_arg_count_version_error(1);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<py::pybuf_view<T, false>>(args, 0);
 
                     _obj.ReplaceAll(param0);
@@ -2526,14 +2526,14 @@ namespace py::impl::Windows::Foundation::Collections
 
             if (arg_count == 2)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"SetAt", 2))
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"SetAt", 2))
+                    {
+                        py::set_arg_count_version_error(2);
+                        return nullptr;
+                    }
+
                     auto param0 = py::convert_to<uint32_t>(args, 0);
                     auto param1 = py::convert_to<T>(args, 1);
 

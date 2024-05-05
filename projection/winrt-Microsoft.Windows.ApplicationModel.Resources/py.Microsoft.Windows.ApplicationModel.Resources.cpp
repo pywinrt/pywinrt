@@ -16,14 +16,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* KnownResourceQualifierName_get_Contrast(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.KnownResourceQualifierName", L"Contrast"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.KnownResourceQualifierName", L"Contrast"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::ApplicationModel::Resources::KnownResourceQualifierName::Contrast());
         }
         catch (...)
@@ -35,14 +35,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* KnownResourceQualifierName_get_Custom(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.KnownResourceQualifierName", L"Custom"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.KnownResourceQualifierName", L"Custom"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::ApplicationModel::Resources::KnownResourceQualifierName::Custom());
         }
         catch (...)
@@ -54,14 +54,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* KnownResourceQualifierName_get_DeviceFamily(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.KnownResourceQualifierName", L"DeviceFamily"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.KnownResourceQualifierName", L"DeviceFamily"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::ApplicationModel::Resources::KnownResourceQualifierName::DeviceFamily());
         }
         catch (...)
@@ -73,14 +73,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* KnownResourceQualifierName_get_HomeRegion(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.KnownResourceQualifierName", L"HomeRegion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.KnownResourceQualifierName", L"HomeRegion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::ApplicationModel::Resources::KnownResourceQualifierName::HomeRegion());
         }
         catch (...)
@@ -92,14 +92,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* KnownResourceQualifierName_get_Language(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.KnownResourceQualifierName", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.KnownResourceQualifierName", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::ApplicationModel::Resources::KnownResourceQualifierName::Language());
         }
         catch (...)
@@ -111,14 +111,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* KnownResourceQualifierName_get_LayoutDirection(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.KnownResourceQualifierName", L"LayoutDirection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.KnownResourceQualifierName", L"LayoutDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::ApplicationModel::Resources::KnownResourceQualifierName::LayoutDirection());
         }
         catch (...)
@@ -130,14 +130,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* KnownResourceQualifierName_get_Scale(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.KnownResourceQualifierName", L"Scale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.KnownResourceQualifierName", L"Scale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::ApplicationModel::Resources::KnownResourceQualifierName::Scale());
         }
         catch (...)
@@ -149,14 +149,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* KnownResourceQualifierName_get_TargetSize(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.KnownResourceQualifierName", L"TargetSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.KnownResourceQualifierName", L"TargetSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::ApplicationModel::Resources::KnownResourceQualifierName::TargetSize());
         }
         catch (...)
@@ -168,14 +168,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* KnownResourceQualifierName_get_Theme(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.KnownResourceQualifierName", L"Theme"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.KnownResourceQualifierName", L"Theme"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::ApplicationModel::Resources::KnownResourceQualifierName::Theme());
         }
         catch (...)
@@ -303,14 +303,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceCandidate_get_Kind(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceCandidate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -322,14 +322,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceCandidate_get_QualifierValues(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceCandidate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate", L"QualifierValues"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate", L"QualifierValues"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.QualifierValues());
         }
         catch (...)
@@ -341,14 +341,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceCandidate_get_ValueAsBytes(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceCandidate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate", L"ValueAsBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate", L"ValueAsBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ValueAsBytes());
         }
         catch (...)
@@ -360,14 +360,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceCandidate_get_ValueAsString(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceCandidate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate", L"ValueAsString"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate", L"ValueAsString"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ValueAsString());
         }
         catch (...)
@@ -452,14 +452,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceContext_get_QualifierValues(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceContext", L"QualifierValues"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceContext", L"QualifierValues"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.QualifierValues());
         }
         catch (...)
@@ -598,14 +598,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceLoader", L"GetDefaultResourceFilePath", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceLoader", L"GetDefaultResourceFilePath", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceLoader::GetDefaultResourceFilePath());
             }
             catch (...)
@@ -627,14 +627,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceLoader", L"GetString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceLoader", L"GetString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetString(param0));
@@ -658,14 +658,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceLoader", L"GetStringForUri", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceLoader", L"GetStringForUri", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(self->obj.GetStringForUri(param0));
@@ -823,14 +823,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceManager", L"CreateResourceContext", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceManager", L"CreateResourceContext", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateResourceContext());
             }
             catch (...)
@@ -848,14 +848,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceManager_get_MainResourceMap(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceManager", L"MainResourceMap"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceManager", L"MainResourceMap"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MainResourceMap());
         }
         catch (...)
@@ -867,14 +867,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceManager_add_ResourceNotFound(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceManager", L"ResourceNotFound"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceManager", L"ResourceNotFound"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceManager, winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceNotFoundEventArgs>>(arg);
 
             return py::convert(self->obj.ResourceNotFound(param0));
@@ -888,14 +888,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceManager_remove_ResourceNotFound(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceManager", L"ResourceNotFound"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceManager", L"ResourceNotFound"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ResourceNotFound(param0);
@@ -987,14 +987,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceMap", L"GetSubtree", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceMap", L"GetSubtree", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetSubtree(param0));
@@ -1018,14 +1018,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceMap", L"GetValue", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceMap", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetValue(param0));
@@ -1038,14 +1038,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceMap", L"GetValue", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceMap", L"GetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceContext>(args, 1);
 
@@ -1070,14 +1070,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceMap", L"GetValueByIndex", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceMap", L"GetValueByIndex", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetValueByIndex(param0));
@@ -1090,14 +1090,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceMap", L"GetValueByIndex", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceMap", L"GetValueByIndex", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceContext>(args, 1);
 
@@ -1122,14 +1122,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceMap", L"TryGetSubtree", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceMap", L"TryGetSubtree", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TryGetSubtree(param0));
@@ -1153,14 +1153,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceMap", L"TryGetValue", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceMap", L"TryGetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TryGetValue(param0));
@@ -1173,14 +1173,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceMap", L"TryGetValue", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceMap", L"TryGetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceContext>(args, 1);
 
@@ -1201,14 +1201,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceMap_get_ResourceCount(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceMap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceMap", L"ResourceCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceMap", L"ResourceCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceCount());
         }
         catch (...)
@@ -1299,14 +1299,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceNotFoundEventArgs", L"SetResolvedCandidate", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceNotFoundEventArgs", L"SetResolvedCandidate", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceCandidate>(args, 0);
 
                 self->obj.SetResolvedCandidate(param0);
@@ -1327,14 +1327,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceNotFoundEventArgs_get_Context(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceNotFoundEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceNotFoundEventArgs", L"Context"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceNotFoundEventArgs", L"Context"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Context());
         }
         catch (...)
@@ -1346,14 +1346,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceNotFoundEventArgs_get_Name(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceNotFoundEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceNotFoundEventArgs", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceNotFoundEventArgs", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -1437,14 +1437,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* IResourceContext_get_QualifierValues(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::IResourceContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.IResourceContext", L"QualifierValues"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.IResourceContext", L"QualifierValues"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.QualifierValues());
         }
         catch (...)
@@ -1530,14 +1530,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.IResourceManager", L"CreateResourceContext", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.IResourceManager", L"CreateResourceContext", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateResourceContext());
             }
             catch (...)
@@ -1555,14 +1555,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* IResourceManager_get_MainResourceMap(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::IResourceManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.IResourceManager", L"MainResourceMap"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Resources.IResourceManager", L"MainResourceMap"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MainResourceMap());
         }
         catch (...)
@@ -1574,14 +1574,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* IResourceManager_add_ResourceNotFound(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::IResourceManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.ApplicationModel.Resources.IResourceManager", L"ResourceNotFound"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.ApplicationModel.Resources.IResourceManager", L"ResourceNotFound"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceManager, winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceNotFoundEventArgs>>(arg);
 
             return py::convert(self->obj.ResourceNotFound(param0));
@@ -1595,14 +1595,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* IResourceManager_remove_ResourceNotFound(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::IResourceManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.ApplicationModel.Resources.IResourceManager", L"ResourceNotFound"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.ApplicationModel.Resources.IResourceManager", L"ResourceNotFound"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ResourceNotFound(param0);

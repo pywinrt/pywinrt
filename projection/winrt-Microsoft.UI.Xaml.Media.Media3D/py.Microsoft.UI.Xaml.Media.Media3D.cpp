@@ -46,14 +46,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_TranslateZ(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"TranslateZ"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"TranslateZ"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TranslateZ());
         }
         catch (...)
@@ -65,12 +65,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_TranslateZ(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"TranslateZ"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -79,6 +73,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"TranslateZ"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.TranslateZ(param0);
@@ -93,14 +93,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_TranslateY(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"TranslateY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"TranslateY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TranslateY());
         }
         catch (...)
@@ -112,12 +112,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_TranslateY(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"TranslateY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -126,6 +120,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"TranslateY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.TranslateY(param0);
@@ -140,14 +140,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_TranslateX(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"TranslateX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"TranslateX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TranslateX());
         }
         catch (...)
@@ -159,12 +159,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_TranslateX(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"TranslateX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -173,6 +167,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"TranslateX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.TranslateX(param0);
@@ -187,14 +187,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_ScaleZ(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"ScaleZ"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"ScaleZ"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ScaleZ());
         }
         catch (...)
@@ -206,12 +206,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_ScaleZ(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"ScaleZ"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -220,6 +214,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"ScaleZ"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.ScaleZ(param0);
@@ -234,14 +234,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_ScaleY(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"ScaleY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"ScaleY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ScaleY());
         }
         catch (...)
@@ -253,12 +253,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_ScaleY(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"ScaleY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -267,6 +261,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"ScaleY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.ScaleY(param0);
@@ -281,14 +281,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_ScaleX(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"ScaleX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"ScaleX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ScaleX());
         }
         catch (...)
@@ -300,12 +300,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_ScaleX(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"ScaleX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -314,6 +308,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"ScaleX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.ScaleX(param0);
@@ -328,14 +328,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_RotationZ(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"RotationZ"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"RotationZ"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotationZ());
         }
         catch (...)
@@ -347,12 +347,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_RotationZ(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"RotationZ"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -361,6 +355,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"RotationZ"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.RotationZ(param0);
@@ -375,14 +375,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_RotationY(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"RotationY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"RotationY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotationY());
         }
         catch (...)
@@ -394,12 +394,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_RotationY(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"RotationY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -408,6 +402,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"RotationY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.RotationY(param0);
@@ -422,14 +422,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_RotationX(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"RotationX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"RotationX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotationX());
         }
         catch (...)
@@ -441,12 +441,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_RotationX(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"RotationX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -455,6 +449,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"RotationX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.RotationX(param0);
@@ -469,14 +469,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_CenterZ(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"CenterZ"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"CenterZ"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CenterZ());
         }
         catch (...)
@@ -488,12 +488,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_CenterZ(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"CenterZ"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -502,6 +496,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"CenterZ"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.CenterZ(param0);
@@ -516,14 +516,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_CenterY(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"CenterY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"CenterY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CenterY());
         }
         catch (...)
@@ -535,12 +535,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_CenterY(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"CenterY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -549,6 +543,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"CenterY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.CenterY(param0);
@@ -563,14 +563,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_CenterX(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"CenterX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"CenterX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CenterX());
         }
         catch (...)
@@ -582,12 +582,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_CenterX(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"CenterX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -596,6 +590,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"CenterX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.CenterX(param0);
@@ -610,14 +610,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_CenterXProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"CenterXProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"CenterXProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D::CenterXProperty());
         }
         catch (...)
@@ -629,14 +629,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_CenterYProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"CenterYProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"CenterYProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D::CenterYProperty());
         }
         catch (...)
@@ -648,14 +648,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_CenterZProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"CenterZProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"CenterZProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D::CenterZProperty());
         }
         catch (...)
@@ -667,14 +667,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_RotationXProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"RotationXProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"RotationXProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D::RotationXProperty());
         }
         catch (...)
@@ -686,14 +686,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_RotationYProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"RotationYProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"RotationYProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D::RotationYProperty());
         }
         catch (...)
@@ -705,14 +705,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_RotationZProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"RotationZProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"RotationZProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D::RotationZProperty());
         }
         catch (...)
@@ -724,14 +724,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_ScaleXProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"ScaleXProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"ScaleXProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D::ScaleXProperty());
         }
         catch (...)
@@ -743,14 +743,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_ScaleYProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"ScaleYProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"ScaleYProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D::ScaleYProperty());
         }
         catch (...)
@@ -762,14 +762,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_ScaleZProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"ScaleZProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"ScaleZProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D::ScaleZProperty());
         }
         catch (...)
@@ -781,14 +781,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_TranslateXProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"TranslateXProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"TranslateXProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D::TranslateXProperty());
         }
         catch (...)
@@ -800,14 +800,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_TranslateYProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"TranslateYProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"TranslateYProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D::TranslateYProperty());
         }
         catch (...)
@@ -819,14 +819,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* CompositeTransform3D_get_TranslateZProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"TranslateZProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D", L"TranslateZProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D::TranslateZProperty());
         }
         catch (...)
@@ -960,14 +960,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
         if (arg_count == 16)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.Media3D.Matrix3DHelper", L"FromElements", 16))
-            {
-                py::set_arg_count_version_error(16);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.Media3D.Matrix3DHelper", L"FromElements", 16))
+                {
+                    py::set_arg_count_version_error(16);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<double>(args, 2);
@@ -1006,14 +1006,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.Media3D.Matrix3DHelper", L"GetHasInverse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.Media3D.Matrix3DHelper", L"GetHasInverse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3D>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3DHelper::GetHasInverse(param0));
@@ -1037,14 +1037,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.Media3D.Matrix3DHelper", L"GetIsIdentity", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.Media3D.Matrix3DHelper", L"GetIsIdentity", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3D>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3DHelper::GetIsIdentity(param0));
@@ -1068,14 +1068,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.Media3D.Matrix3DHelper", L"Invert", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.Media3D.Matrix3DHelper", L"Invert", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3D>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3DHelper::Invert(param0));
@@ -1099,14 +1099,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.Media3D.Matrix3DHelper", L"Multiply", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.Media3D.Matrix3DHelper", L"Multiply", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3D>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3D>(args, 1);
 
@@ -1127,14 +1127,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* Matrix3DHelper_get_Identity(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.Matrix3DHelper", L"Identity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.Matrix3DHelper", L"Identity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3DHelper::Identity());
         }
         catch (...)
@@ -1268,14 +1268,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* PerspectiveTransform3D_get_OffsetY(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::PerspectiveTransform3D* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.PerspectiveTransform3D", L"OffsetY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.PerspectiveTransform3D", L"OffsetY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OffsetY());
         }
         catch (...)
@@ -1287,12 +1287,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static int PerspectiveTransform3D_put_OffsetY(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::PerspectiveTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.PerspectiveTransform3D", L"OffsetY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1301,6 +1295,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.PerspectiveTransform3D", L"OffsetY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.OffsetY(param0);
@@ -1315,14 +1315,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* PerspectiveTransform3D_get_OffsetX(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::PerspectiveTransform3D* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.PerspectiveTransform3D", L"OffsetX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.PerspectiveTransform3D", L"OffsetX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OffsetX());
         }
         catch (...)
@@ -1334,12 +1334,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static int PerspectiveTransform3D_put_OffsetX(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::PerspectiveTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.PerspectiveTransform3D", L"OffsetX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1348,6 +1342,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.PerspectiveTransform3D", L"OffsetX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.OffsetX(param0);
@@ -1362,14 +1362,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* PerspectiveTransform3D_get_Depth(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::PerspectiveTransform3D* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.PerspectiveTransform3D", L"Depth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.PerspectiveTransform3D", L"Depth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Depth());
         }
         catch (...)
@@ -1381,12 +1381,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static int PerspectiveTransform3D_put_Depth(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::PerspectiveTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.PerspectiveTransform3D", L"Depth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1395,6 +1389,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.PerspectiveTransform3D", L"Depth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Depth(param0);
@@ -1409,14 +1409,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* PerspectiveTransform3D_get_DepthProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.PerspectiveTransform3D", L"DepthProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.PerspectiveTransform3D", L"DepthProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::Media::Media3D::PerspectiveTransform3D::DepthProperty());
         }
         catch (...)
@@ -1428,14 +1428,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* PerspectiveTransform3D_get_OffsetXProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.PerspectiveTransform3D", L"OffsetXProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.PerspectiveTransform3D", L"OffsetXProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::Media::Media3D::PerspectiveTransform3D::OffsetXProperty());
         }
         catch (...)
@@ -1447,14 +1447,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyObject* PerspectiveTransform3D_get_OffsetYProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.PerspectiveTransform3D", L"OffsetYProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Media3D.PerspectiveTransform3D", L"OffsetYProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::Media::Media3D::PerspectiveTransform3D::OffsetYProperty());
         }
         catch (...)

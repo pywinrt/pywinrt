@@ -24,14 +24,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetActionInvokedArgs_get_CustomState(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetActionInvokedArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetActionInvokedArgs", L"CustomState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetActionInvokedArgs", L"CustomState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CustomState());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetActionInvokedArgs_get_Data(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetActionInvokedArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetActionInvokedArgs", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetActionInvokedArgs", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -62,14 +62,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetActionInvokedArgs_get_Verb(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetActionInvokedArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetActionInvokedArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetActionInvokedArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -81,14 +81,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetActionInvokedArgs_get_WidgetContext(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetActionInvokedArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetActionInvokedArgs", L"WidgetContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetActionInvokedArgs", L"WidgetContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WidgetContext());
         }
         catch (...)
@@ -173,14 +173,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetAnalyticsInfoReportedArgs_get_AnalyticsJson(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetAnalyticsInfoReportedArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetAnalyticsInfoReportedArgs", L"AnalyticsJson"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetAnalyticsInfoReportedArgs", L"AnalyticsJson"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AnalyticsJson());
         }
         catch (...)
@@ -192,14 +192,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetAnalyticsInfoReportedArgs_get_WidgetContext(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetAnalyticsInfoReportedArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetAnalyticsInfoReportedArgs", L"WidgetContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetAnalyticsInfoReportedArgs", L"WidgetContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WidgetContext());
         }
         catch (...)
@@ -282,14 +282,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetContext_get_DefinitionId(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetContext", L"DefinitionId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetContext", L"DefinitionId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefinitionId());
         }
         catch (...)
@@ -301,14 +301,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetContext_get_Id(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetContext", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetContext", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -320,14 +320,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetContext_get_IsActive(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetContext", L"IsActive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetContext", L"IsActive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsActive());
         }
         catch (...)
@@ -339,14 +339,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetContext_get_Size(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetContext", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetContext", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -431,14 +431,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetContextChangedArgs_get_WidgetContext(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetContextChangedArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetContextChangedArgs", L"WidgetContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetContextChangedArgs", L"WidgetContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WidgetContext());
         }
         catch (...)
@@ -520,14 +520,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetCustomizationRequestedArgs_get_CustomState(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetCustomizationRequestedArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetCustomizationRequestedArgs", L"CustomState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetCustomizationRequestedArgs", L"CustomState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CustomState());
         }
         catch (...)
@@ -539,14 +539,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetCustomizationRequestedArgs_get_WidgetContext(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetCustomizationRequestedArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetCustomizationRequestedArgs", L"WidgetContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetCustomizationRequestedArgs", L"WidgetContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WidgetContext());
         }
         catch (...)
@@ -629,14 +629,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetErrorInfoReportedArgs_get_ErrorJson(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetErrorInfoReportedArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetErrorInfoReportedArgs", L"ErrorJson"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetErrorInfoReportedArgs", L"ErrorJson"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorJson());
         }
         catch (...)
@@ -648,14 +648,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetErrorInfoReportedArgs_get_WidgetContext(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetErrorInfoReportedArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetErrorInfoReportedArgs", L"WidgetContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetErrorInfoReportedArgs", L"WidgetContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WidgetContext());
         }
         catch (...)
@@ -738,14 +738,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetInfo_get_CustomState(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetInfo", L"CustomState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetInfo", L"CustomState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CustomState());
         }
         catch (...)
@@ -757,14 +757,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetInfo_get_Data(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetInfo", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetInfo", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -776,14 +776,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetInfo_get_LastUpdateTime(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetInfo", L"LastUpdateTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetInfo", L"LastUpdateTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastUpdateTime());
         }
         catch (...)
@@ -795,14 +795,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetInfo_get_Template(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetInfo", L"Template"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetInfo", L"Template"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Template());
         }
         catch (...)
@@ -814,14 +814,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetInfo_get_WidgetContext(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetInfo", L"WidgetContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetInfo", L"WidgetContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WidgetContext());
         }
         catch (...)
@@ -911,14 +911,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.WidgetManager", L"DeleteWidget", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.WidgetManager", L"DeleteWidget", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.DeleteWidget(param0);
@@ -943,14 +943,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.WidgetManager", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.WidgetManager", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Microsoft::Windows::Widgets::Providers::WidgetManager::GetDefault());
             }
             catch (...)
@@ -972,14 +972,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.WidgetManager", L"GetWidgetIds", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.WidgetManager", L"GetWidgetIds", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetWidgetIds());
             }
             catch (...)
@@ -1001,14 +1001,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.WidgetManager", L"GetWidgetInfo", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.WidgetManager", L"GetWidgetInfo", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetWidgetInfo(param0));
@@ -1032,14 +1032,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.WidgetManager", L"GetWidgetInfos", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.WidgetManager", L"GetWidgetInfos", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetWidgetInfos());
             }
             catch (...)
@@ -1061,14 +1061,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.WidgetManager", L"UpdateWidget", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.WidgetManager", L"UpdateWidget", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions>(args, 0);
 
                 self->obj.UpdateWidget(param0);
@@ -1213,14 +1213,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetUpdateRequestOptions_get_Template(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions", L"Template"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions", L"Template"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Template());
         }
         catch (...)
@@ -1232,12 +1232,6 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static int WidgetUpdateRequestOptions_put_Template(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions", L"Template"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1246,6 +1240,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions", L"Template"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Template(param0);
@@ -1260,14 +1260,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetUpdateRequestOptions_get_Data(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -1279,12 +1279,6 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static int WidgetUpdateRequestOptions_put_Data(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1293,6 +1287,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Data(param0);
@@ -1307,14 +1307,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetUpdateRequestOptions_get_CustomState(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions", L"CustomState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions", L"CustomState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CustomState());
         }
         catch (...)
@@ -1326,12 +1326,6 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static int WidgetUpdateRequestOptions_put_CustomState(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions", L"CustomState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1340,6 +1334,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions", L"CustomState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.CustomState(param0);
@@ -1354,14 +1354,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetUpdateRequestOptions_get_WidgetId(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions", L"WidgetId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions", L"WidgetId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WidgetId());
         }
         catch (...)
@@ -1373,14 +1373,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetUpdateRequestOptions_get_UnsetValue(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions", L"UnsetValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions", L"UnsetValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions::UnsetValue());
         }
         catch (...)
@@ -1495,14 +1495,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetManager", L"DeleteWidget", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetManager", L"DeleteWidget", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.DeleteWidget(param0);
@@ -1527,14 +1527,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetManager", L"GetWidgetIds", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetManager", L"GetWidgetIds", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetWidgetIds());
             }
             catch (...)
@@ -1556,14 +1556,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetManager", L"GetWidgetInfo", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetManager", L"GetWidgetInfo", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetWidgetInfo(param0));
@@ -1587,14 +1587,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetManager", L"GetWidgetInfos", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetManager", L"GetWidgetInfos", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetWidgetInfos());
             }
             catch (...)
@@ -1616,14 +1616,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetManager", L"UpdateWidget", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetManager", L"UpdateWidget", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions>(args, 0);
 
                 self->obj.UpdateWidget(param0);
@@ -1722,14 +1722,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetProvider", L"Activate", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetProvider", L"Activate", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Providers::WidgetContext>(args, 0);
 
                 self->obj.Activate(param0);
@@ -1754,14 +1754,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetProvider", L"CreateWidget", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetProvider", L"CreateWidget", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Providers::WidgetContext>(args, 0);
 
                 self->obj.CreateWidget(param0);
@@ -1786,14 +1786,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetProvider", L"Deactivate", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetProvider", L"Deactivate", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Deactivate(param0);
@@ -1818,14 +1818,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetProvider", L"DeleteWidget", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetProvider", L"DeleteWidget", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1851,14 +1851,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetProvider", L"OnActionInvoked", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetProvider", L"OnActionInvoked", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Providers::WidgetActionInvokedArgs>(args, 0);
 
                 self->obj.OnActionInvoked(param0);
@@ -1883,14 +1883,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetProvider", L"OnWidgetContextChanged", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetProvider", L"OnWidgetContextChanged", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Providers::WidgetContextChangedArgs>(args, 0);
 
                 self->obj.OnWidgetContextChanged(param0);
@@ -1990,14 +1990,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetProvider2", L"OnCustomizationRequested", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetProvider2", L"OnCustomizationRequested", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Providers::WidgetCustomizationRequestedArgs>(args, 0);
 
                 self->obj.OnCustomizationRequested(param0);
@@ -2092,14 +2092,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetProviderAnalytics", L"OnAnalyticsInfoReported", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetProviderAnalytics", L"OnAnalyticsInfoReported", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Providers::WidgetAnalyticsInfoReportedArgs>(args, 0);
 
                 self->obj.OnAnalyticsInfoReported(param0);
@@ -2194,14 +2194,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetProviderErrors", L"OnErrorInfoReported", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetProviderErrors", L"OnErrorInfoReported", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Providers::WidgetErrorInfoReportedArgs>(args, 0);
 
                 self->obj.OnErrorInfoReported(param0);

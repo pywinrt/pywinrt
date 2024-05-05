@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Media::Ocr
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Ocr.OcrEngine", L"IsLanguageSupported", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Ocr.OcrEngine", L"IsLanguageSupported", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Globalization::Language>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Ocr::OcrEngine::IsLanguageSupported(param0));
@@ -59,14 +59,14 @@ namespace py::cpp::Windows::Media::Ocr
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Ocr.OcrEngine", L"RecognizeAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Ocr.OcrEngine", L"RecognizeAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
                 return py::convert(self->obj.RecognizeAsync(param0));
@@ -90,14 +90,14 @@ namespace py::cpp::Windows::Media::Ocr
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Ocr.OcrEngine", L"TryCreateFromLanguage", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Ocr.OcrEngine", L"TryCreateFromLanguage", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Globalization::Language>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Ocr::OcrEngine::TryCreateFromLanguage(param0));
@@ -121,14 +121,14 @@ namespace py::cpp::Windows::Media::Ocr
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Ocr.OcrEngine", L"TryCreateFromUserProfileLanguages", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Ocr.OcrEngine", L"TryCreateFromUserProfileLanguages", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::Ocr::OcrEngine::TryCreateFromUserProfileLanguages());
             }
             catch (...)
@@ -146,14 +146,14 @@ namespace py::cpp::Windows::Media::Ocr
 
     static PyObject* OcrEngine_get_RecognizerLanguage(py::wrapper::Windows::Media::Ocr::OcrEngine* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Ocr.OcrEngine", L"RecognizerLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Ocr.OcrEngine", L"RecognizerLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RecognizerLanguage());
         }
         catch (...)
@@ -165,14 +165,14 @@ namespace py::cpp::Windows::Media::Ocr
 
     static PyObject* OcrEngine_get_AvailableRecognizerLanguages(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Ocr.OcrEngine", L"AvailableRecognizerLanguages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Ocr.OcrEngine", L"AvailableRecognizerLanguages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::Ocr::OcrEngine::AvailableRecognizerLanguages());
         }
         catch (...)
@@ -184,14 +184,14 @@ namespace py::cpp::Windows::Media::Ocr
 
     static PyObject* OcrEngine_get_MaxImageDimension(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Ocr.OcrEngine", L"MaxImageDimension"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Ocr.OcrEngine", L"MaxImageDimension"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::Ocr::OcrEngine::MaxImageDimension());
         }
         catch (...)
@@ -304,14 +304,14 @@ namespace py::cpp::Windows::Media::Ocr
 
     static PyObject* OcrLine_get_Text(py::wrapper::Windows::Media::Ocr::OcrLine* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Ocr.OcrLine", L"Text"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Ocr.OcrLine", L"Text"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Text());
         }
         catch (...)
@@ -323,14 +323,14 @@ namespace py::cpp::Windows::Media::Ocr
 
     static PyObject* OcrLine_get_Words(py::wrapper::Windows::Media::Ocr::OcrLine* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Ocr.OcrLine", L"Words"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Ocr.OcrLine", L"Words"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Words());
         }
         catch (...)
@@ -413,14 +413,14 @@ namespace py::cpp::Windows::Media::Ocr
 
     static PyObject* OcrResult_get_Lines(py::wrapper::Windows::Media::Ocr::OcrResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Ocr.OcrResult", L"Lines"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Ocr.OcrResult", L"Lines"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Lines());
         }
         catch (...)
@@ -432,14 +432,14 @@ namespace py::cpp::Windows::Media::Ocr
 
     static PyObject* OcrResult_get_Text(py::wrapper::Windows::Media::Ocr::OcrResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Ocr.OcrResult", L"Text"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Ocr.OcrResult", L"Text"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Text());
         }
         catch (...)
@@ -451,14 +451,14 @@ namespace py::cpp::Windows::Media::Ocr
 
     static PyObject* OcrResult_get_TextAngle(py::wrapper::Windows::Media::Ocr::OcrResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Ocr.OcrResult", L"TextAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Ocr.OcrResult", L"TextAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TextAngle());
         }
         catch (...)
@@ -542,14 +542,14 @@ namespace py::cpp::Windows::Media::Ocr
 
     static PyObject* OcrWord_get_BoundingRect(py::wrapper::Windows::Media::Ocr::OcrWord* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Ocr.OcrWord", L"BoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Ocr.OcrWord", L"BoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BoundingRect());
         }
         catch (...)
@@ -561,14 +561,14 @@ namespace py::cpp::Windows::Media::Ocr
 
     static PyObject* OcrWord_get_Text(py::wrapper::Windows::Media::Ocr::OcrWord* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Ocr.OcrWord", L"Text"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Ocr.OcrWord", L"Text"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Text());
         }
         catch (...)

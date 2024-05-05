@@ -20,14 +20,14 @@ namespace py::cpp::Windows::Management::Workplace
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Workplace.MdmPolicy", L"GetMessagingSyncPolicy", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Workplace.MdmPolicy", L"GetMessagingSyncPolicy", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Management::Workplace::MdmPolicy::GetMessagingSyncPolicy());
             }
             catch (...)
@@ -49,14 +49,14 @@ namespace py::cpp::Windows::Management::Workplace
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Workplace.MdmPolicy", L"IsBrowserAllowed", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Workplace.MdmPolicy", L"IsBrowserAllowed", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Management::Workplace::MdmPolicy::IsBrowserAllowed());
             }
             catch (...)
@@ -78,14 +78,14 @@ namespace py::cpp::Windows::Management::Workplace
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Workplace.MdmPolicy", L"IsCameraAllowed", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Workplace.MdmPolicy", L"IsCameraAllowed", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Management::Workplace::MdmPolicy::IsCameraAllowed());
             }
             catch (...)
@@ -107,14 +107,14 @@ namespace py::cpp::Windows::Management::Workplace
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Workplace.MdmPolicy", L"IsMicrosoftAccountAllowed", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Workplace.MdmPolicy", L"IsMicrosoftAccountAllowed", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Management::Workplace::MdmPolicy::IsMicrosoftAccountAllowed());
             }
             catch (...)
@@ -136,14 +136,14 @@ namespace py::cpp::Windows::Management::Workplace
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Workplace.MdmPolicy", L"IsStoreAllowed", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Workplace.MdmPolicy", L"IsStoreAllowed", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Management::Workplace::MdmPolicy::IsStoreAllowed());
             }
             catch (...)
@@ -225,14 +225,14 @@ namespace py::cpp::Windows::Management::Workplace
 
     static PyObject* WorkplaceSettings_get_IsMicrosoftAccountOptional(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Workplace.WorkplaceSettings", L"IsMicrosoftAccountOptional"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Workplace.WorkplaceSettings", L"IsMicrosoftAccountOptional"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Management::Workplace::WorkplaceSettings::IsMicrosoftAccountOptional());
         }
         catch (...)

@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreAcquireLicenseResult_get_ExtendedError(py::wrapper::Windows::Services::Store::StoreAcquireLicenseResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAcquireLicenseResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAcquireLicenseResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreAcquireLicenseResult_get_StorePackageLicense(py::wrapper::Windows::Services::Store::StoreAcquireLicenseResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAcquireLicenseResult", L"StorePackageLicense"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAcquireLicenseResult", L"StorePackageLicense"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StorePackageLicense());
         }
         catch (...)
@@ -133,14 +133,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreAppLicense_get_AddOnLicenses(py::wrapper::Windows::Services::Store::StoreAppLicense* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAppLicense", L"AddOnLicenses"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAppLicense", L"AddOnLicenses"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AddOnLicenses());
         }
         catch (...)
@@ -152,14 +152,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreAppLicense_get_ExpirationDate(py::wrapper::Windows::Services::Store::StoreAppLicense* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAppLicense", L"ExpirationDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAppLicense", L"ExpirationDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExpirationDate());
         }
         catch (...)
@@ -171,14 +171,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreAppLicense_get_ExtendedJsonData(py::wrapper::Windows::Services::Store::StoreAppLicense* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAppLicense", L"ExtendedJsonData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAppLicense", L"ExtendedJsonData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedJsonData());
         }
         catch (...)
@@ -190,14 +190,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreAppLicense_get_IsActive(py::wrapper::Windows::Services::Store::StoreAppLicense* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAppLicense", L"IsActive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAppLicense", L"IsActive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsActive());
         }
         catch (...)
@@ -209,14 +209,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreAppLicense_get_IsTrial(py::wrapper::Windows::Services::Store::StoreAppLicense* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAppLicense", L"IsTrial"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAppLicense", L"IsTrial"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsTrial());
         }
         catch (...)
@@ -228,14 +228,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreAppLicense_get_IsTrialOwnedByThisUser(py::wrapper::Windows::Services::Store::StoreAppLicense* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAppLicense", L"IsTrialOwnedByThisUser"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAppLicense", L"IsTrialOwnedByThisUser"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsTrialOwnedByThisUser());
         }
         catch (...)
@@ -247,14 +247,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreAppLicense_get_SkuStoreId(py::wrapper::Windows::Services::Store::StoreAppLicense* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAppLicense", L"SkuStoreId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAppLicense", L"SkuStoreId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SkuStoreId());
         }
         catch (...)
@@ -266,14 +266,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreAppLicense_get_TrialTimeRemaining(py::wrapper::Windows::Services::Store::StoreAppLicense* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAppLicense", L"TrialTimeRemaining"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAppLicense", L"TrialTimeRemaining"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrialTimeRemaining());
         }
         catch (...)
@@ -285,14 +285,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreAppLicense_get_TrialUniqueId(py::wrapper::Windows::Services::Store::StoreAppLicense* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAppLicense", L"TrialUniqueId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAppLicense", L"TrialUniqueId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrialUniqueId());
         }
         catch (...)
@@ -304,14 +304,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreAppLicense_get_IsDiscLicense(py::wrapper::Windows::Services::Store::StoreAppLicense* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAppLicense", L"IsDiscLicense"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAppLicense", L"IsDiscLicense"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDiscLicense());
         }
         catch (...)
@@ -406,14 +406,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreAvailability", L"RequestPurchaseAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreAvailability", L"RequestPurchaseAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.RequestPurchaseAsync());
             }
             catch (...)
@@ -424,14 +424,14 @@ namespace py::cpp::Windows::Services::Store
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreAvailability", L"RequestPurchaseAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreAvailability", L"RequestPurchaseAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Services::Store::StorePurchaseProperties>(args, 0);
 
                 return py::convert(self->obj.RequestPurchaseAsync(param0));
@@ -451,14 +451,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreAvailability_get_EndDate(py::wrapper::Windows::Services::Store::StoreAvailability* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAvailability", L"EndDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAvailability", L"EndDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndDate());
         }
         catch (...)
@@ -470,14 +470,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreAvailability_get_ExtendedJsonData(py::wrapper::Windows::Services::Store::StoreAvailability* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAvailability", L"ExtendedJsonData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAvailability", L"ExtendedJsonData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedJsonData());
         }
         catch (...)
@@ -489,14 +489,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreAvailability_get_Price(py::wrapper::Windows::Services::Store::StoreAvailability* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAvailability", L"Price"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAvailability", L"Price"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Price());
         }
         catch (...)
@@ -508,14 +508,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreAvailability_get_StoreId(py::wrapper::Windows::Services::Store::StoreAvailability* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAvailability", L"StoreId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreAvailability", L"StoreId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StoreId());
         }
         catch (...)
@@ -601,14 +601,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreCanAcquireLicenseResult_get_ExtendedError(py::wrapper::Windows::Services::Store::StoreCanAcquireLicenseResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreCanAcquireLicenseResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreCanAcquireLicenseResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -620,14 +620,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreCanAcquireLicenseResult_get_LicensableSku(py::wrapper::Windows::Services::Store::StoreCanAcquireLicenseResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreCanAcquireLicenseResult", L"LicensableSku"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreCanAcquireLicenseResult", L"LicensableSku"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LicensableSku());
         }
         catch (...)
@@ -639,14 +639,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreCanAcquireLicenseResult_get_Status(py::wrapper::Windows::Services::Store::StoreCanAcquireLicenseResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreCanAcquireLicenseResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreCanAcquireLicenseResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -730,14 +730,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreCollectionData_get_AcquiredDate(py::wrapper::Windows::Services::Store::StoreCollectionData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreCollectionData", L"AcquiredDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreCollectionData", L"AcquiredDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AcquiredDate());
         }
         catch (...)
@@ -749,14 +749,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreCollectionData_get_CampaignId(py::wrapper::Windows::Services::Store::StoreCollectionData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreCollectionData", L"CampaignId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreCollectionData", L"CampaignId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CampaignId());
         }
         catch (...)
@@ -768,14 +768,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreCollectionData_get_DeveloperOfferId(py::wrapper::Windows::Services::Store::StoreCollectionData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreCollectionData", L"DeveloperOfferId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreCollectionData", L"DeveloperOfferId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeveloperOfferId());
         }
         catch (...)
@@ -787,14 +787,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreCollectionData_get_EndDate(py::wrapper::Windows::Services::Store::StoreCollectionData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreCollectionData", L"EndDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreCollectionData", L"EndDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndDate());
         }
         catch (...)
@@ -806,14 +806,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreCollectionData_get_ExtendedJsonData(py::wrapper::Windows::Services::Store::StoreCollectionData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreCollectionData", L"ExtendedJsonData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreCollectionData", L"ExtendedJsonData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedJsonData());
         }
         catch (...)
@@ -825,14 +825,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreCollectionData_get_IsTrial(py::wrapper::Windows::Services::Store::StoreCollectionData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreCollectionData", L"IsTrial"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreCollectionData", L"IsTrial"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsTrial());
         }
         catch (...)
@@ -844,14 +844,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreCollectionData_get_StartDate(py::wrapper::Windows::Services::Store::StoreCollectionData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreCollectionData", L"StartDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreCollectionData", L"StartDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartDate());
         }
         catch (...)
@@ -863,14 +863,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreCollectionData_get_TrialTimeRemaining(py::wrapper::Windows::Services::Store::StoreCollectionData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreCollectionData", L"TrialTimeRemaining"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreCollectionData", L"TrialTimeRemaining"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrialTimeRemaining());
         }
         catch (...)
@@ -959,14 +959,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreConsumableResult_get_BalanceRemaining(py::wrapper::Windows::Services::Store::StoreConsumableResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreConsumableResult", L"BalanceRemaining"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreConsumableResult", L"BalanceRemaining"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BalanceRemaining());
         }
         catch (...)
@@ -978,14 +978,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreConsumableResult_get_ExtendedError(py::wrapper::Windows::Services::Store::StoreConsumableResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreConsumableResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreConsumableResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -997,14 +997,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreConsumableResult_get_Status(py::wrapper::Windows::Services::Store::StoreConsumableResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreConsumableResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreConsumableResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1016,14 +1016,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreConsumableResult_get_TrackingId(py::wrapper::Windows::Services::Store::StoreConsumableResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreConsumableResult", L"TrackingId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreConsumableResult", L"TrackingId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrackingId());
         }
         catch (...)
@@ -1112,14 +1112,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"AcquireStoreLicenseForOptionalPackageAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"AcquireStoreLicenseForOptionalPackageAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Package>(args, 0);
 
                 return py::convert(self->obj.AcquireStoreLicenseForOptionalPackageAsync(param0));
@@ -1143,14 +1143,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"CanAcquireStoreLicenseAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"CanAcquireStoreLicenseAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CanAcquireStoreLicenseAsync(param0));
@@ -1174,14 +1174,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"CanAcquireStoreLicenseForOptionalPackageAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"CanAcquireStoreLicenseForOptionalPackageAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Package>(args, 0);
 
                 return py::convert(self->obj.CanAcquireStoreLicenseForOptionalPackageAsync(param0));
@@ -1205,14 +1205,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"DownloadAndInstallStorePackagesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"DownloadAndInstallStorePackagesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(self->obj.DownloadAndInstallStorePackagesAsync(param0));
@@ -1236,14 +1236,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"FindStoreProductForPackageAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"FindStoreProductForPackageAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Package>(args, 1);
 
@@ -1268,14 +1268,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetAppAndOptionalStorePackageUpdatesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetAppAndOptionalStorePackageUpdatesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAppAndOptionalStorePackageUpdatesAsync());
             }
             catch (...)
@@ -1297,14 +1297,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetAppLicenseAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetAppLicenseAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAppLicenseAsync());
             }
             catch (...)
@@ -1326,14 +1326,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetAssociatedStoreProductsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetAssociatedStoreProductsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(self->obj.GetAssociatedStoreProductsAsync(param0));
@@ -1357,14 +1357,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetAssociatedStoreProductsByInAppOfferTokenAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetAssociatedStoreProductsByInAppOfferTokenAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(self->obj.GetAssociatedStoreProductsByInAppOfferTokenAsync(param0));
@@ -1388,14 +1388,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetAssociatedStoreProductsWithPagingAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetAssociatedStoreProductsWithPagingAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -1420,14 +1420,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetAssociatedStoreQueueItemsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetAssociatedStoreQueueItemsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAssociatedStoreQueueItemsAsync());
             }
             catch (...)
@@ -1449,14 +1449,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetConsumableBalanceRemainingAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetConsumableBalanceRemainingAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetConsumableBalanceRemainingAsync(param0));
@@ -1480,14 +1480,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetCustomerCollectionsIdAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetCustomerCollectionsIdAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1512,14 +1512,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetCustomerPurchaseIdAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetCustomerPurchaseIdAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1544,14 +1544,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Services::Store::StoreContext::GetDefault());
             }
             catch (...)
@@ -1573,14 +1573,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::Services::Store::StoreContext::GetForUser(param0));
@@ -1604,14 +1604,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetStoreProductForCurrentAppAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetStoreProductForCurrentAppAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetStoreProductForCurrentAppAsync());
             }
             catch (...)
@@ -1633,14 +1633,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetStoreProductsAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetStoreProductsAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
@@ -1654,14 +1654,14 @@ namespace py::cpp::Windows::Services::Store
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetStoreProductsAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetStoreProductsAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Services::Store::StoreProductOptions>(args, 2);
@@ -1687,14 +1687,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetStoreQueueItemsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetStoreQueueItemsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(self->obj.GetStoreQueueItemsAsync(param0));
@@ -1718,14 +1718,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetUserCollectionAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetUserCollectionAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(self->obj.GetUserCollectionAsync(param0));
@@ -1749,14 +1749,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetUserCollectionWithPagingAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetUserCollectionWithPagingAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -1781,14 +1781,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetUserPurchaseHistoryAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"GetUserPurchaseHistoryAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(self->obj.GetUserPurchaseHistoryAsync(param0));
@@ -1812,14 +1812,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"ReportConsumableFulfillmentAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"ReportConsumableFulfillmentAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::guid>(args, 2);
@@ -1845,14 +1845,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"RequestDownloadAndInstallStorePackageUpdatesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"RequestDownloadAndInstallStorePackageUpdatesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Services::Store::StorePackageUpdate>>(args, 0);
 
                 return py::convert(self->obj.RequestDownloadAndInstallStorePackageUpdatesAsync(param0));
@@ -1876,14 +1876,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"RequestDownloadAndInstallStorePackagesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"RequestDownloadAndInstallStorePackagesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(self->obj.RequestDownloadAndInstallStorePackagesAsync(param0));
@@ -1896,14 +1896,14 @@ namespace py::cpp::Windows::Services::Store
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"RequestDownloadAndInstallStorePackagesAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"RequestDownloadAndInstallStorePackagesAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Services::Store::StorePackageInstallOptions>(args, 1);
 
@@ -1928,14 +1928,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"RequestDownloadStorePackageUpdatesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"RequestDownloadStorePackageUpdatesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Services::Store::StorePackageUpdate>>(args, 0);
 
                 return py::convert(self->obj.RequestDownloadStorePackageUpdatesAsync(param0));
@@ -1959,14 +1959,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"RequestPurchaseAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"RequestPurchaseAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.RequestPurchaseAsync(param0));
@@ -1979,14 +1979,14 @@ namespace py::cpp::Windows::Services::Store
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"RequestPurchaseAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"RequestPurchaseAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Services::Store::StorePurchaseProperties>(args, 1);
 
@@ -2011,14 +2011,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"RequestPurchaseByInAppOfferTokenAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"RequestPurchaseByInAppOfferTokenAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.RequestPurchaseByInAppOfferTokenAsync(param0));
@@ -2042,14 +2042,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"RequestRateAndReviewAppAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"RequestRateAndReviewAppAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.RequestRateAndReviewAppAsync());
             }
             catch (...)
@@ -2071,14 +2071,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"RequestUninstallStorePackageAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"RequestUninstallStorePackageAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Package>(args, 0);
 
                 return py::convert(self->obj.RequestUninstallStorePackageAsync(param0));
@@ -2102,14 +2102,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"RequestUninstallStorePackageByStoreIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"RequestUninstallStorePackageByStoreIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.RequestUninstallStorePackageByStoreIdAsync(param0));
@@ -2133,14 +2133,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"SetInstallOrderForAssociatedStoreQueueItemsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"SetInstallOrderForAssociatedStoreQueueItemsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Services::Store::StoreQueueItem>>(args, 0);
 
                 return py::convert(self->obj.SetInstallOrderForAssociatedStoreQueueItemsAsync(param0));
@@ -2164,14 +2164,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"TrySilentDownloadAndInstallStorePackageUpdatesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"TrySilentDownloadAndInstallStorePackageUpdatesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Services::Store::StorePackageUpdate>>(args, 0);
 
                 return py::convert(self->obj.TrySilentDownloadAndInstallStorePackageUpdatesAsync(param0));
@@ -2195,14 +2195,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"TrySilentDownloadStorePackageUpdatesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"TrySilentDownloadStorePackageUpdatesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Services::Store::StorePackageUpdate>>(args, 0);
 
                 return py::convert(self->obj.TrySilentDownloadStorePackageUpdatesAsync(param0));
@@ -2226,14 +2226,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"UninstallStorePackageAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"UninstallStorePackageAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Package>(args, 0);
 
                 return py::convert(self->obj.UninstallStorePackageAsync(param0));
@@ -2257,14 +2257,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"UninstallStorePackageByStoreIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"UninstallStorePackageByStoreIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.UninstallStorePackageByStoreIdAsync(param0));
@@ -2284,14 +2284,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_get_User(py::wrapper::Windows::Services::Store::StoreContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreContext", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreContext", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -2303,14 +2303,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_get_CanSilentlyDownloadStorePackageUpdates(py::wrapper::Windows::Services::Store::StoreContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreContext", L"CanSilentlyDownloadStorePackageUpdates"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreContext", L"CanSilentlyDownloadStorePackageUpdates"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanSilentlyDownloadStorePackageUpdates());
         }
         catch (...)
@@ -2322,14 +2322,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_add_OfflineLicensesChanged(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Store.StoreContext", L"OfflineLicensesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Store.StoreContext", L"OfflineLicensesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Store::StoreContext, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.OfflineLicensesChanged(param0));
@@ -2343,14 +2343,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_remove_OfflineLicensesChanged(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Store.StoreContext", L"OfflineLicensesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Store.StoreContext", L"OfflineLicensesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.OfflineLicensesChanged(param0);
@@ -2499,14 +2499,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreImage_get_Caption(py::wrapper::Windows::Services::Store::StoreImage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreImage", L"Caption"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreImage", L"Caption"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Caption());
         }
         catch (...)
@@ -2518,14 +2518,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreImage_get_Height(py::wrapper::Windows::Services::Store::StoreImage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreImage", L"Height"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreImage", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Height());
         }
         catch (...)
@@ -2537,14 +2537,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreImage_get_ImagePurposeTag(py::wrapper::Windows::Services::Store::StoreImage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreImage", L"ImagePurposeTag"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreImage", L"ImagePurposeTag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ImagePurposeTag());
         }
         catch (...)
@@ -2556,14 +2556,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreImage_get_Uri(py::wrapper::Windows::Services::Store::StoreImage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreImage", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreImage", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -2575,14 +2575,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreImage_get_Width(py::wrapper::Windows::Services::Store::StoreImage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreImage", L"Width"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreImage", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Width());
         }
         catch (...)
@@ -2668,14 +2668,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreLicense_get_ExpirationDate(py::wrapper::Windows::Services::Store::StoreLicense* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreLicense", L"ExpirationDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreLicense", L"ExpirationDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExpirationDate());
         }
         catch (...)
@@ -2687,14 +2687,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreLicense_get_ExtendedJsonData(py::wrapper::Windows::Services::Store::StoreLicense* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreLicense", L"ExtendedJsonData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreLicense", L"ExtendedJsonData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedJsonData());
         }
         catch (...)
@@ -2706,14 +2706,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreLicense_get_InAppOfferToken(py::wrapper::Windows::Services::Store::StoreLicense* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreLicense", L"InAppOfferToken"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreLicense", L"InAppOfferToken"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InAppOfferToken());
         }
         catch (...)
@@ -2725,14 +2725,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreLicense_get_IsActive(py::wrapper::Windows::Services::Store::StoreLicense* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreLicense", L"IsActive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreLicense", L"IsActive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsActive());
         }
         catch (...)
@@ -2744,14 +2744,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreLicense_get_SkuStoreId(py::wrapper::Windows::Services::Store::StoreLicense* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreLicense", L"SkuStoreId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreLicense", L"SkuStoreId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SkuStoreId());
         }
         catch (...)
@@ -2859,14 +2859,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePackageInstallOptions_get_AllowForcedAppRestart(py::wrapper::Windows::Services::Store::StorePackageInstallOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePackageInstallOptions", L"AllowForcedAppRestart"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePackageInstallOptions", L"AllowForcedAppRestart"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowForcedAppRestart());
         }
         catch (...)
@@ -2878,12 +2878,6 @@ namespace py::cpp::Windows::Services::Store
 
     static int StorePackageInstallOptions_put_AllowForcedAppRestart(py::wrapper::Windows::Services::Store::StorePackageInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePackageInstallOptions", L"AllowForcedAppRestart"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2892,6 +2886,12 @@ namespace py::cpp::Windows::Services::Store
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePackageInstallOptions", L"AllowForcedAppRestart"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowForcedAppRestart(param0);
@@ -2980,14 +2980,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StorePackageLicense", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StorePackageLicense", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -3010,14 +3010,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StorePackageLicense", L"ReleaseLicense", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StorePackageLicense", L"ReleaseLicense", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReleaseLicense();
                 Py_RETURN_NONE;
             }
@@ -3036,14 +3036,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePackageLicense_get_IsValid(py::wrapper::Windows::Services::Store::StorePackageLicense* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePackageLicense", L"IsValid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePackageLicense", L"IsValid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsValid());
         }
         catch (...)
@@ -3055,14 +3055,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePackageLicense_get_Package(py::wrapper::Windows::Services::Store::StorePackageLicense* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePackageLicense", L"Package"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePackageLicense", L"Package"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Package());
         }
         catch (...)
@@ -3074,14 +3074,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePackageLicense_add_LicenseLost(py::wrapper::Windows::Services::Store::StorePackageLicense* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Store.StorePackageLicense", L"LicenseLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Store.StorePackageLicense", L"LicenseLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Store::StorePackageLicense, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.LicenseLost(param0));
@@ -3095,14 +3095,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePackageLicense_remove_LicenseLost(py::wrapper::Windows::Services::Store::StorePackageLicense* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Store.StorePackageLicense", L"LicenseLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Store.StorePackageLicense", L"LicenseLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.LicenseLost(param0);
@@ -3213,14 +3213,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePackageUpdate_get_Mandatory(py::wrapper::Windows::Services::Store::StorePackageUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePackageUpdate", L"Mandatory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePackageUpdate", L"Mandatory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mandatory());
         }
         catch (...)
@@ -3232,14 +3232,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePackageUpdate_get_Package(py::wrapper::Windows::Services::Store::StorePackageUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePackageUpdate", L"Package"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePackageUpdate", L"Package"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Package());
         }
         catch (...)
@@ -3322,14 +3322,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePackageUpdateResult_get_OverallState(py::wrapper::Windows::Services::Store::StorePackageUpdateResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePackageUpdateResult", L"OverallState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePackageUpdateResult", L"OverallState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OverallState());
         }
         catch (...)
@@ -3341,14 +3341,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePackageUpdateResult_get_StorePackageUpdateStatuses(py::wrapper::Windows::Services::Store::StorePackageUpdateResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePackageUpdateResult", L"StorePackageUpdateStatuses"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePackageUpdateResult", L"StorePackageUpdateStatuses"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StorePackageUpdateStatuses());
         }
         catch (...)
@@ -3360,14 +3360,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePackageUpdateResult_get_StoreQueueItems(py::wrapper::Windows::Services::Store::StorePackageUpdateResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePackageUpdateResult", L"StoreQueueItems"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePackageUpdateResult", L"StoreQueueItems"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StoreQueueItems());
         }
         catch (...)
@@ -3451,14 +3451,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePrice_get_CurrencyCode(py::wrapper::Windows::Services::Store::StorePrice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePrice", L"CurrencyCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePrice", L"CurrencyCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrencyCode());
         }
         catch (...)
@@ -3470,14 +3470,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePrice_get_FormattedBasePrice(py::wrapper::Windows::Services::Store::StorePrice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePrice", L"FormattedBasePrice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePrice", L"FormattedBasePrice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FormattedBasePrice());
         }
         catch (...)
@@ -3489,14 +3489,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePrice_get_FormattedPrice(py::wrapper::Windows::Services::Store::StorePrice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePrice", L"FormattedPrice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePrice", L"FormattedPrice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FormattedPrice());
         }
         catch (...)
@@ -3508,14 +3508,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePrice_get_FormattedRecurrencePrice(py::wrapper::Windows::Services::Store::StorePrice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePrice", L"FormattedRecurrencePrice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePrice", L"FormattedRecurrencePrice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FormattedRecurrencePrice());
         }
         catch (...)
@@ -3527,14 +3527,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePrice_get_IsOnSale(py::wrapper::Windows::Services::Store::StorePrice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePrice", L"IsOnSale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePrice", L"IsOnSale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsOnSale());
         }
         catch (...)
@@ -3546,14 +3546,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePrice_get_SaleEndDate(py::wrapper::Windows::Services::Store::StorePrice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePrice", L"SaleEndDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePrice", L"SaleEndDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SaleEndDate());
         }
         catch (...)
@@ -3565,14 +3565,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePrice_get_UnformattedBasePrice(py::wrapper::Windows::Services::Store::StorePrice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePrice", L"UnformattedBasePrice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePrice", L"UnformattedBasePrice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UnformattedBasePrice());
         }
         catch (...)
@@ -3584,14 +3584,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePrice_get_UnformattedPrice(py::wrapper::Windows::Services::Store::StorePrice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePrice", L"UnformattedPrice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePrice", L"UnformattedPrice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UnformattedPrice());
         }
         catch (...)
@@ -3603,14 +3603,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePrice_get_UnformattedRecurrencePrice(py::wrapper::Windows::Services::Store::StorePrice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePrice", L"UnformattedRecurrencePrice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePrice", L"UnformattedRecurrencePrice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UnformattedRecurrencePrice());
         }
         catch (...)
@@ -3704,14 +3704,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreProduct", L"GetIsAnySkuInstalledAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreProduct", L"GetIsAnySkuInstalledAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetIsAnySkuInstalledAsync());
             }
             catch (...)
@@ -3733,14 +3733,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreProduct", L"RequestPurchaseAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreProduct", L"RequestPurchaseAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.RequestPurchaseAsync());
             }
             catch (...)
@@ -3751,14 +3751,14 @@ namespace py::cpp::Windows::Services::Store
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreProduct", L"RequestPurchaseAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreProduct", L"RequestPurchaseAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Services::Store::StorePurchaseProperties>(args, 0);
 
                 return py::convert(self->obj.RequestPurchaseAsync(param0));
@@ -3778,14 +3778,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProduct_get_Description(py::wrapper::Windows::Services::Store::StoreProduct* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -3797,14 +3797,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProduct_get_ExtendedJsonData(py::wrapper::Windows::Services::Store::StoreProduct* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"ExtendedJsonData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"ExtendedJsonData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedJsonData());
         }
         catch (...)
@@ -3816,14 +3816,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProduct_get_HasDigitalDownload(py::wrapper::Windows::Services::Store::StoreProduct* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"HasDigitalDownload"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"HasDigitalDownload"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasDigitalDownload());
         }
         catch (...)
@@ -3835,14 +3835,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProduct_get_Images(py::wrapper::Windows::Services::Store::StoreProduct* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"Images"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"Images"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Images());
         }
         catch (...)
@@ -3854,14 +3854,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProduct_get_InAppOfferToken(py::wrapper::Windows::Services::Store::StoreProduct* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"InAppOfferToken"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"InAppOfferToken"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InAppOfferToken());
         }
         catch (...)
@@ -3873,14 +3873,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProduct_get_IsInUserCollection(py::wrapper::Windows::Services::Store::StoreProduct* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"IsInUserCollection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"IsInUserCollection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsInUserCollection());
         }
         catch (...)
@@ -3892,14 +3892,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProduct_get_Keywords(py::wrapper::Windows::Services::Store::StoreProduct* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"Keywords"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"Keywords"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Keywords());
         }
         catch (...)
@@ -3911,14 +3911,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProduct_get_Language(py::wrapper::Windows::Services::Store::StoreProduct* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -3930,14 +3930,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProduct_get_LinkUri(py::wrapper::Windows::Services::Store::StoreProduct* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"LinkUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"LinkUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LinkUri());
         }
         catch (...)
@@ -3949,14 +3949,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProduct_get_Price(py::wrapper::Windows::Services::Store::StoreProduct* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"Price"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"Price"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Price());
         }
         catch (...)
@@ -3968,14 +3968,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProduct_get_ProductKind(py::wrapper::Windows::Services::Store::StoreProduct* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"ProductKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"ProductKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProductKind());
         }
         catch (...)
@@ -3987,14 +3987,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProduct_get_Skus(py::wrapper::Windows::Services::Store::StoreProduct* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"Skus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"Skus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Skus());
         }
         catch (...)
@@ -4006,14 +4006,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProduct_get_StoreId(py::wrapper::Windows::Services::Store::StoreProduct* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"StoreId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"StoreId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StoreId());
         }
         catch (...)
@@ -4025,14 +4025,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProduct_get_Title(py::wrapper::Windows::Services::Store::StoreProduct* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -4044,14 +4044,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProduct_get_Videos(py::wrapper::Windows::Services::Store::StoreProduct* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"Videos"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProduct", L"Videos"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Videos());
         }
         catch (...)
@@ -4171,14 +4171,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProductOptions_get_ActionFilters(py::wrapper::Windows::Services::Store::StoreProductOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProductOptions", L"ActionFilters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProductOptions", L"ActionFilters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActionFilters());
         }
         catch (...)
@@ -4264,14 +4264,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreProductPagedQueryResult", L"GetNextAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreProductPagedQueryResult", L"GetNextAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetNextAsync());
             }
             catch (...)
@@ -4289,14 +4289,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProductPagedQueryResult_get_ExtendedError(py::wrapper::Windows::Services::Store::StoreProductPagedQueryResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProductPagedQueryResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProductPagedQueryResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -4308,14 +4308,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProductPagedQueryResult_get_HasMoreResults(py::wrapper::Windows::Services::Store::StoreProductPagedQueryResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProductPagedQueryResult", L"HasMoreResults"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProductPagedQueryResult", L"HasMoreResults"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasMoreResults());
         }
         catch (...)
@@ -4327,14 +4327,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProductPagedQueryResult_get_Products(py::wrapper::Windows::Services::Store::StoreProductPagedQueryResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProductPagedQueryResult", L"Products"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProductPagedQueryResult", L"Products"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Products());
         }
         catch (...)
@@ -4419,14 +4419,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProductQueryResult_get_ExtendedError(py::wrapper::Windows::Services::Store::StoreProductQueryResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProductQueryResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProductQueryResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -4438,14 +4438,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProductQueryResult_get_Products(py::wrapper::Windows::Services::Store::StoreProductQueryResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProductQueryResult", L"Products"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProductQueryResult", L"Products"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Products());
         }
         catch (...)
@@ -4528,14 +4528,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProductResult_get_ExtendedError(py::wrapper::Windows::Services::Store::StoreProductResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProductResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProductResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -4547,14 +4547,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProductResult_get_Product(py::wrapper::Windows::Services::Store::StoreProductResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProductResult", L"Product"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreProductResult", L"Product"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Product());
         }
         catch (...)
@@ -4674,14 +4674,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePurchaseProperties_get_Name(py::wrapper::Windows::Services::Store::StorePurchaseProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePurchaseProperties", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePurchaseProperties", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -4693,12 +4693,6 @@ namespace py::cpp::Windows::Services::Store
 
     static int StorePurchaseProperties_put_Name(py::wrapper::Windows::Services::Store::StorePurchaseProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePurchaseProperties", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4707,6 +4701,12 @@ namespace py::cpp::Windows::Services::Store
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePurchaseProperties", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Name(param0);
@@ -4721,14 +4721,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePurchaseProperties_get_ExtendedJsonData(py::wrapper::Windows::Services::Store::StorePurchaseProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePurchaseProperties", L"ExtendedJsonData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePurchaseProperties", L"ExtendedJsonData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedJsonData());
         }
         catch (...)
@@ -4740,12 +4740,6 @@ namespace py::cpp::Windows::Services::Store
 
     static int StorePurchaseProperties_put_ExtendedJsonData(py::wrapper::Windows::Services::Store::StorePurchaseProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePurchaseProperties", L"ExtendedJsonData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4754,6 +4748,12 @@ namespace py::cpp::Windows::Services::Store
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePurchaseProperties", L"ExtendedJsonData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ExtendedJsonData(param0);
@@ -4839,14 +4839,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePurchaseResult_get_ExtendedError(py::wrapper::Windows::Services::Store::StorePurchaseResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePurchaseResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePurchaseResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -4858,14 +4858,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePurchaseResult_get_Status(py::wrapper::Windows::Services::Store::StorePurchaseResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePurchaseResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StorePurchaseResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -4952,14 +4952,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreQueueItem", L"CancelInstallAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreQueueItem", L"CancelInstallAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CancelInstallAsync());
             }
             catch (...)
@@ -4981,14 +4981,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreQueueItem", L"GetCurrentStatus", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreQueueItem", L"GetCurrentStatus", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentStatus());
             }
             catch (...)
@@ -5010,14 +5010,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreQueueItem", L"PauseInstallAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreQueueItem", L"PauseInstallAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.PauseInstallAsync());
             }
             catch (...)
@@ -5039,14 +5039,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreQueueItem", L"ResumeInstallAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreQueueItem", L"ResumeInstallAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ResumeInstallAsync());
             }
             catch (...)
@@ -5064,14 +5064,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreQueueItem_get_InstallKind(py::wrapper::Windows::Services::Store::StoreQueueItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreQueueItem", L"InstallKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreQueueItem", L"InstallKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InstallKind());
         }
         catch (...)
@@ -5083,14 +5083,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreQueueItem_get_PackageFamilyName(py::wrapper::Windows::Services::Store::StoreQueueItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreQueueItem", L"PackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreQueueItem", L"PackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PackageFamilyName());
         }
         catch (...)
@@ -5102,14 +5102,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreQueueItem_get_ProductId(py::wrapper::Windows::Services::Store::StoreQueueItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreQueueItem", L"ProductId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreQueueItem", L"ProductId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProductId());
         }
         catch (...)
@@ -5121,14 +5121,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreQueueItem_add_Completed(py::wrapper::Windows::Services::Store::StoreQueueItem* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Store.StoreQueueItem", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Store.StoreQueueItem", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Store::StoreQueueItem, winrt::Windows::Services::Store::StoreQueueItemCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.Completed(param0));
@@ -5142,14 +5142,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreQueueItem_remove_Completed(py::wrapper::Windows::Services::Store::StoreQueueItem* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Store.StoreQueueItem", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Store.StoreQueueItem", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Completed(param0);
@@ -5164,14 +5164,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreQueueItem_add_StatusChanged(py::wrapper::Windows::Services::Store::StoreQueueItem* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Store.StoreQueueItem", L"StatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Store.StoreQueueItem", L"StatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Store::StoreQueueItem, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.StatusChanged(param0));
@@ -5185,14 +5185,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreQueueItem_remove_StatusChanged(py::wrapper::Windows::Services::Store::StoreQueueItem* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Store.StoreQueueItem", L"StatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Store.StoreQueueItem", L"StatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StatusChanged(param0);
@@ -5287,14 +5287,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreQueueItemCompletedEventArgs_get_Status(py::wrapper::Windows::Services::Store::StoreQueueItemCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreQueueItemCompletedEventArgs", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreQueueItemCompletedEventArgs", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -5376,14 +5376,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreQueueItemStatus_get_ExtendedError(py::wrapper::Windows::Services::Store::StoreQueueItemStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreQueueItemStatus", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreQueueItemStatus", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -5395,14 +5395,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreQueueItemStatus_get_PackageInstallExtendedState(py::wrapper::Windows::Services::Store::StoreQueueItemStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreQueueItemStatus", L"PackageInstallExtendedState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreQueueItemStatus", L"PackageInstallExtendedState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PackageInstallExtendedState());
         }
         catch (...)
@@ -5414,14 +5414,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreQueueItemStatus_get_PackageInstallState(py::wrapper::Windows::Services::Store::StoreQueueItemStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreQueueItemStatus", L"PackageInstallState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreQueueItemStatus", L"PackageInstallState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PackageInstallState());
         }
         catch (...)
@@ -5433,14 +5433,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreQueueItemStatus_get_UpdateStatus(py::wrapper::Windows::Services::Store::StoreQueueItemStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreQueueItemStatus", L"UpdateStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreQueueItemStatus", L"UpdateStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UpdateStatus());
         }
         catch (...)
@@ -5525,14 +5525,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreRateAndReviewResult_get_ExtendedError(py::wrapper::Windows::Services::Store::StoreRateAndReviewResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreRateAndReviewResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreRateAndReviewResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -5544,14 +5544,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreRateAndReviewResult_get_ExtendedJsonData(py::wrapper::Windows::Services::Store::StoreRateAndReviewResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreRateAndReviewResult", L"ExtendedJsonData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreRateAndReviewResult", L"ExtendedJsonData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedJsonData());
         }
         catch (...)
@@ -5563,14 +5563,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreRateAndReviewResult_get_Status(py::wrapper::Windows::Services::Store::StoreRateAndReviewResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreRateAndReviewResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreRateAndReviewResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -5582,14 +5582,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreRateAndReviewResult_get_WasUpdated(py::wrapper::Windows::Services::Store::StoreRateAndReviewResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreRateAndReviewResult", L"WasUpdated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreRateAndReviewResult", L"WasUpdated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WasUpdated());
         }
         catch (...)
@@ -5670,14 +5670,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreRequestHelper", L"SendRequestAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreRequestHelper", L"SendRequestAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Services::Store::StoreContext>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -5767,14 +5767,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSendRequestResult_get_ExtendedError(py::wrapper::Windows::Services::Store::StoreSendRequestResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSendRequestResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSendRequestResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -5786,14 +5786,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSendRequestResult_get_Response(py::wrapper::Windows::Services::Store::StoreSendRequestResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSendRequestResult", L"Response"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSendRequestResult", L"Response"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Response());
         }
         catch (...)
@@ -5805,14 +5805,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSendRequestResult_get_HttpStatusCode(py::wrapper::Windows::Services::Store::StoreSendRequestResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSendRequestResult", L"HttpStatusCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSendRequestResult", L"HttpStatusCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HttpStatusCode());
         }
         catch (...)
@@ -5900,14 +5900,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreSku", L"GetIsInstalledAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreSku", L"GetIsInstalledAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetIsInstalledAsync());
             }
             catch (...)
@@ -5929,14 +5929,14 @@ namespace py::cpp::Windows::Services::Store
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreSku", L"RequestPurchaseAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreSku", L"RequestPurchaseAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.RequestPurchaseAsync());
             }
             catch (...)
@@ -5947,14 +5947,14 @@ namespace py::cpp::Windows::Services::Store
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreSku", L"RequestPurchaseAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreSku", L"RequestPurchaseAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Services::Store::StorePurchaseProperties>(args, 0);
 
                 return py::convert(self->obj.RequestPurchaseAsync(param0));
@@ -5974,14 +5974,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSku_get_Availabilities(py::wrapper::Windows::Services::Store::StoreSku* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"Availabilities"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"Availabilities"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Availabilities());
         }
         catch (...)
@@ -5993,14 +5993,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSku_get_BundledSkus(py::wrapper::Windows::Services::Store::StoreSku* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"BundledSkus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"BundledSkus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BundledSkus());
         }
         catch (...)
@@ -6012,14 +6012,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSku_get_CollectionData(py::wrapper::Windows::Services::Store::StoreSku* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"CollectionData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"CollectionData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CollectionData());
         }
         catch (...)
@@ -6031,14 +6031,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSku_get_CustomDeveloperData(py::wrapper::Windows::Services::Store::StoreSku* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"CustomDeveloperData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"CustomDeveloperData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CustomDeveloperData());
         }
         catch (...)
@@ -6050,14 +6050,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSku_get_Description(py::wrapper::Windows::Services::Store::StoreSku* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -6069,14 +6069,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSku_get_ExtendedJsonData(py::wrapper::Windows::Services::Store::StoreSku* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"ExtendedJsonData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"ExtendedJsonData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedJsonData());
         }
         catch (...)
@@ -6088,14 +6088,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSku_get_Images(py::wrapper::Windows::Services::Store::StoreSku* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"Images"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"Images"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Images());
         }
         catch (...)
@@ -6107,14 +6107,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSku_get_IsInUserCollection(py::wrapper::Windows::Services::Store::StoreSku* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"IsInUserCollection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"IsInUserCollection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsInUserCollection());
         }
         catch (...)
@@ -6126,14 +6126,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSku_get_IsSubscription(py::wrapper::Windows::Services::Store::StoreSku* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"IsSubscription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"IsSubscription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSubscription());
         }
         catch (...)
@@ -6145,14 +6145,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSku_get_IsTrial(py::wrapper::Windows::Services::Store::StoreSku* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"IsTrial"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"IsTrial"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsTrial());
         }
         catch (...)
@@ -6164,14 +6164,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSku_get_Language(py::wrapper::Windows::Services::Store::StoreSku* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -6183,14 +6183,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSku_get_Price(py::wrapper::Windows::Services::Store::StoreSku* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"Price"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"Price"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Price());
         }
         catch (...)
@@ -6202,14 +6202,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSku_get_StoreId(py::wrapper::Windows::Services::Store::StoreSku* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"StoreId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"StoreId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StoreId());
         }
         catch (...)
@@ -6221,14 +6221,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSku_get_SubscriptionInfo(py::wrapper::Windows::Services::Store::StoreSku* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"SubscriptionInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"SubscriptionInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SubscriptionInfo());
         }
         catch (...)
@@ -6240,14 +6240,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSku_get_Title(py::wrapper::Windows::Services::Store::StoreSku* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -6259,14 +6259,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSku_get_Videos(py::wrapper::Windows::Services::Store::StoreSku* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"Videos"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSku", L"Videos"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Videos());
         }
         catch (...)
@@ -6365,14 +6365,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSubscriptionInfo_get_BillingPeriod(py::wrapper::Windows::Services::Store::StoreSubscriptionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSubscriptionInfo", L"BillingPeriod"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSubscriptionInfo", L"BillingPeriod"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BillingPeriod());
         }
         catch (...)
@@ -6384,14 +6384,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSubscriptionInfo_get_BillingPeriodUnit(py::wrapper::Windows::Services::Store::StoreSubscriptionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSubscriptionInfo", L"BillingPeriodUnit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSubscriptionInfo", L"BillingPeriodUnit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BillingPeriodUnit());
         }
         catch (...)
@@ -6403,14 +6403,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSubscriptionInfo_get_HasTrialPeriod(py::wrapper::Windows::Services::Store::StoreSubscriptionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSubscriptionInfo", L"HasTrialPeriod"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSubscriptionInfo", L"HasTrialPeriod"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasTrialPeriod());
         }
         catch (...)
@@ -6422,14 +6422,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSubscriptionInfo_get_TrialPeriod(py::wrapper::Windows::Services::Store::StoreSubscriptionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSubscriptionInfo", L"TrialPeriod"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSubscriptionInfo", L"TrialPeriod"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrialPeriod());
         }
         catch (...)
@@ -6441,14 +6441,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSubscriptionInfo_get_TrialPeriodUnit(py::wrapper::Windows::Services::Store::StoreSubscriptionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSubscriptionInfo", L"TrialPeriodUnit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreSubscriptionInfo", L"TrialPeriodUnit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrialPeriodUnit());
         }
         catch (...)
@@ -6534,14 +6534,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreUninstallStorePackageResult_get_ExtendedError(py::wrapper::Windows::Services::Store::StoreUninstallStorePackageResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreUninstallStorePackageResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreUninstallStorePackageResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -6553,14 +6553,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreUninstallStorePackageResult_get_Status(py::wrapper::Windows::Services::Store::StoreUninstallStorePackageResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreUninstallStorePackageResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreUninstallStorePackageResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -6643,14 +6643,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreVideo_get_Caption(py::wrapper::Windows::Services::Store::StoreVideo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreVideo", L"Caption"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreVideo", L"Caption"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Caption());
         }
         catch (...)
@@ -6662,14 +6662,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreVideo_get_Height(py::wrapper::Windows::Services::Store::StoreVideo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreVideo", L"Height"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreVideo", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Height());
         }
         catch (...)
@@ -6681,14 +6681,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreVideo_get_PreviewImage(py::wrapper::Windows::Services::Store::StoreVideo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreVideo", L"PreviewImage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreVideo", L"PreviewImage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviewImage());
         }
         catch (...)
@@ -6700,14 +6700,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreVideo_get_Uri(py::wrapper::Windows::Services::Store::StoreVideo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreVideo", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreVideo", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -6719,14 +6719,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreVideo_get_VideoPurposeTag(py::wrapper::Windows::Services::Store::StoreVideo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreVideo", L"VideoPurposeTag"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreVideo", L"VideoPurposeTag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoPurposeTag());
         }
         catch (...)
@@ -6738,14 +6738,14 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreVideo_get_Width(py::wrapper::Windows::Services::Store::StoreVideo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreVideo", L"Width"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Store.StoreVideo", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Width());
         }
         catch (...)

@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Media::Editing
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"Clone", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"Clone", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.Clone());
             }
             catch (...)
@@ -57,14 +57,14 @@ namespace py::cpp::Windows::Media::Editing
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"CreateFromEmbeddedAudioTrack", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"CreateFromEmbeddedAudioTrack", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Editing::EmbeddedAudioTrack>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Editing::BackgroundAudioTrack::CreateFromEmbeddedAudioTrack(param0));
@@ -88,14 +88,14 @@ namespace py::cpp::Windows::Media::Editing
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"CreateFromFileAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"CreateFromFileAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Editing::BackgroundAudioTrack::CreateFromFileAsync(param0));
@@ -119,14 +119,14 @@ namespace py::cpp::Windows::Media::Editing
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"GetAudioEncodingProperties", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"GetAudioEncodingProperties", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAudioEncodingProperties());
             }
             catch (...)
@@ -144,14 +144,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* BackgroundAudioTrack_get_Volume(py::wrapper::Windows::Media::Editing::BackgroundAudioTrack* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"Volume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"Volume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Volume());
         }
         catch (...)
@@ -163,12 +163,6 @@ namespace py::cpp::Windows::Media::Editing
 
     static int BackgroundAudioTrack_put_Volume(py::wrapper::Windows::Media::Editing::BackgroundAudioTrack* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"Volume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -177,6 +171,12 @@ namespace py::cpp::Windows::Media::Editing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"Volume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Volume(param0);
@@ -191,14 +191,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* BackgroundAudioTrack_get_TrimTimeFromStart(py::wrapper::Windows::Media::Editing::BackgroundAudioTrack* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"TrimTimeFromStart"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"TrimTimeFromStart"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrimTimeFromStart());
         }
         catch (...)
@@ -210,12 +210,6 @@ namespace py::cpp::Windows::Media::Editing
 
     static int BackgroundAudioTrack_put_TrimTimeFromStart(py::wrapper::Windows::Media::Editing::BackgroundAudioTrack* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"TrimTimeFromStart"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -224,6 +218,12 @@ namespace py::cpp::Windows::Media::Editing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"TrimTimeFromStart"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.TrimTimeFromStart(param0);
@@ -238,14 +238,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* BackgroundAudioTrack_get_TrimTimeFromEnd(py::wrapper::Windows::Media::Editing::BackgroundAudioTrack* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"TrimTimeFromEnd"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"TrimTimeFromEnd"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrimTimeFromEnd());
         }
         catch (...)
@@ -257,12 +257,6 @@ namespace py::cpp::Windows::Media::Editing
 
     static int BackgroundAudioTrack_put_TrimTimeFromEnd(py::wrapper::Windows::Media::Editing::BackgroundAudioTrack* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"TrimTimeFromEnd"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -271,6 +265,12 @@ namespace py::cpp::Windows::Media::Editing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"TrimTimeFromEnd"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.TrimTimeFromEnd(param0);
@@ -285,14 +285,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* BackgroundAudioTrack_get_Delay(py::wrapper::Windows::Media::Editing::BackgroundAudioTrack* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"Delay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"Delay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Delay());
         }
         catch (...)
@@ -304,12 +304,6 @@ namespace py::cpp::Windows::Media::Editing
 
     static int BackgroundAudioTrack_put_Delay(py::wrapper::Windows::Media::Editing::BackgroundAudioTrack* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"Delay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -318,6 +312,12 @@ namespace py::cpp::Windows::Media::Editing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"Delay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.Delay(param0);
@@ -332,14 +332,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* BackgroundAudioTrack_get_AudioEffectDefinitions(py::wrapper::Windows::Media::Editing::BackgroundAudioTrack* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"AudioEffectDefinitions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"AudioEffectDefinitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioEffectDefinitions());
         }
         catch (...)
@@ -351,14 +351,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* BackgroundAudioTrack_get_OriginalDuration(py::wrapper::Windows::Media::Editing::BackgroundAudioTrack* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"OriginalDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"OriginalDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OriginalDuration());
         }
         catch (...)
@@ -370,14 +370,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* BackgroundAudioTrack_get_TrimmedDuration(py::wrapper::Windows::Media::Editing::BackgroundAudioTrack* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"TrimmedDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"TrimmedDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrimmedDuration());
         }
         catch (...)
@@ -389,14 +389,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* BackgroundAudioTrack_get_UserData(py::wrapper::Windows::Media::Editing::BackgroundAudioTrack* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"UserData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.BackgroundAudioTrack", L"UserData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserData());
         }
         catch (...)
@@ -518,14 +518,14 @@ namespace py::cpp::Windows::Media::Editing
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.EmbeddedAudioTrack", L"GetAudioEncodingProperties", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.EmbeddedAudioTrack", L"GetAudioEncodingProperties", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAudioEncodingProperties());
             }
             catch (...)
@@ -617,14 +617,14 @@ namespace py::cpp::Windows::Media::Editing
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaClip", L"Clone", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaClip", L"Clone", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.Clone());
             }
             catch (...)
@@ -646,14 +646,14 @@ namespace py::cpp::Windows::Media::Editing
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaClip", L"CreateFromColor", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaClip", L"CreateFromColor", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Color>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
@@ -678,14 +678,14 @@ namespace py::cpp::Windows::Media::Editing
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaClip", L"CreateFromFileAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaClip", L"CreateFromFileAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Editing::MediaClip::CreateFromFileAsync(param0));
@@ -709,14 +709,14 @@ namespace py::cpp::Windows::Media::Editing
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaClip", L"CreateFromImageFileAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaClip", L"CreateFromImageFileAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
@@ -741,14 +741,14 @@ namespace py::cpp::Windows::Media::Editing
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaClip", L"CreateFromSurface", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaClip", L"CreateFromSurface", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
@@ -773,14 +773,14 @@ namespace py::cpp::Windows::Media::Editing
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaClip", L"GetVideoEncodingProperties", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaClip", L"GetVideoEncodingProperties", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetVideoEncodingProperties());
             }
             catch (...)
@@ -798,14 +798,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaClip_get_SelectedEmbeddedAudioTrackIndex(py::wrapper::Windows::Media::Editing::MediaClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"SelectedEmbeddedAudioTrackIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"SelectedEmbeddedAudioTrackIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedEmbeddedAudioTrackIndex());
         }
         catch (...)
@@ -817,12 +817,6 @@ namespace py::cpp::Windows::Media::Editing
 
     static int MediaClip_put_SelectedEmbeddedAudioTrackIndex(py::wrapper::Windows::Media::Editing::MediaClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"SelectedEmbeddedAudioTrackIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -831,6 +825,12 @@ namespace py::cpp::Windows::Media::Editing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"SelectedEmbeddedAudioTrackIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.SelectedEmbeddedAudioTrackIndex(param0);
@@ -845,14 +845,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaClip_get_TrimTimeFromEnd(py::wrapper::Windows::Media::Editing::MediaClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"TrimTimeFromEnd"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"TrimTimeFromEnd"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrimTimeFromEnd());
         }
         catch (...)
@@ -864,12 +864,6 @@ namespace py::cpp::Windows::Media::Editing
 
     static int MediaClip_put_TrimTimeFromEnd(py::wrapper::Windows::Media::Editing::MediaClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"TrimTimeFromEnd"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -878,6 +872,12 @@ namespace py::cpp::Windows::Media::Editing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"TrimTimeFromEnd"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.TrimTimeFromEnd(param0);
@@ -892,14 +892,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaClip_get_Volume(py::wrapper::Windows::Media::Editing::MediaClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"Volume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"Volume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Volume());
         }
         catch (...)
@@ -911,12 +911,6 @@ namespace py::cpp::Windows::Media::Editing
 
     static int MediaClip_put_Volume(py::wrapper::Windows::Media::Editing::MediaClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"Volume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -925,6 +919,12 @@ namespace py::cpp::Windows::Media::Editing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"Volume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Volume(param0);
@@ -939,14 +939,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaClip_get_TrimTimeFromStart(py::wrapper::Windows::Media::Editing::MediaClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"TrimTimeFromStart"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"TrimTimeFromStart"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrimTimeFromStart());
         }
         catch (...)
@@ -958,12 +958,6 @@ namespace py::cpp::Windows::Media::Editing
 
     static int MediaClip_put_TrimTimeFromStart(py::wrapper::Windows::Media::Editing::MediaClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"TrimTimeFromStart"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -972,6 +966,12 @@ namespace py::cpp::Windows::Media::Editing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"TrimTimeFromStart"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.TrimTimeFromStart(param0);
@@ -986,14 +986,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaClip_get_EmbeddedAudioTracks(py::wrapper::Windows::Media::Editing::MediaClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"EmbeddedAudioTracks"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"EmbeddedAudioTracks"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmbeddedAudioTracks());
         }
         catch (...)
@@ -1005,14 +1005,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaClip_get_EndTimeInComposition(py::wrapper::Windows::Media::Editing::MediaClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"EndTimeInComposition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"EndTimeInComposition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndTimeInComposition());
         }
         catch (...)
@@ -1024,14 +1024,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaClip_get_OriginalDuration(py::wrapper::Windows::Media::Editing::MediaClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"OriginalDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"OriginalDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OriginalDuration());
         }
         catch (...)
@@ -1043,14 +1043,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaClip_get_StartTimeInComposition(py::wrapper::Windows::Media::Editing::MediaClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"StartTimeInComposition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"StartTimeInComposition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartTimeInComposition());
         }
         catch (...)
@@ -1062,14 +1062,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaClip_get_TrimmedDuration(py::wrapper::Windows::Media::Editing::MediaClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"TrimmedDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"TrimmedDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrimmedDuration());
         }
         catch (...)
@@ -1081,14 +1081,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaClip_get_UserData(py::wrapper::Windows::Media::Editing::MediaClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"UserData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"UserData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserData());
         }
         catch (...)
@@ -1100,14 +1100,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaClip_get_VideoEffectDefinitions(py::wrapper::Windows::Media::Editing::MediaClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"VideoEffectDefinitions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"VideoEffectDefinitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoEffectDefinitions());
         }
         catch (...)
@@ -1119,14 +1119,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaClip_get_AudioEffectDefinitions(py::wrapper::Windows::Media::Editing::MediaClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"AudioEffectDefinitions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaClip", L"AudioEffectDefinitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioEffectDefinitions());
         }
         catch (...)
@@ -1276,14 +1276,14 @@ namespace py::cpp::Windows::Media::Editing
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"Clone", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"Clone", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.Clone());
             }
             catch (...)
@@ -1305,14 +1305,14 @@ namespace py::cpp::Windows::Media::Editing
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"CreateDefaultEncodingProfile", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"CreateDefaultEncodingProfile", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateDefaultEncodingProfile());
             }
             catch (...)
@@ -1334,14 +1334,14 @@ namespace py::cpp::Windows::Media::Editing
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"GenerateMediaStreamSource", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"GenerateMediaStreamSource", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GenerateMediaStreamSource());
             }
             catch (...)
@@ -1352,14 +1352,14 @@ namespace py::cpp::Windows::Media::Editing
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"GenerateMediaStreamSource", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"GenerateMediaStreamSource", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>(args, 0);
 
                 return py::convert(self->obj.GenerateMediaStreamSource(param0));
@@ -1383,14 +1383,14 @@ namespace py::cpp::Windows::Media::Editing
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"GeneratePreviewMediaStreamSource", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"GeneratePreviewMediaStreamSource", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -1415,14 +1415,14 @@ namespace py::cpp::Windows::Media::Editing
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"GetThumbnailAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"GetThumbnailAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -1449,14 +1449,14 @@ namespace py::cpp::Windows::Media::Editing
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"GetThumbnailsAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"GetThumbnailsAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::TimeSpan>>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -1483,14 +1483,14 @@ namespace py::cpp::Windows::Media::Editing
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"LoadAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"LoadAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Editing::MediaComposition::LoadAsync(param0));
@@ -1514,14 +1514,14 @@ namespace py::cpp::Windows::Media::Editing
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"RenderToFileAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"RenderToFileAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert(self->obj.RenderToFileAsync(param0));
@@ -1534,14 +1534,14 @@ namespace py::cpp::Windows::Media::Editing
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"RenderToFileAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"RenderToFileAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Editing::MediaTrimmingPreference>(args, 1);
 
@@ -1555,14 +1555,14 @@ namespace py::cpp::Windows::Media::Editing
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"RenderToFileAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"RenderToFileAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Editing::MediaTrimmingPreference>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>(args, 2);
@@ -1588,14 +1588,14 @@ namespace py::cpp::Windows::Media::Editing
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"SaveAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"SaveAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert(self->obj.SaveAsync(param0));
@@ -1615,14 +1615,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaComposition_get_BackgroundAudioTracks(py::wrapper::Windows::Media::Editing::MediaComposition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaComposition", L"BackgroundAudioTracks"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaComposition", L"BackgroundAudioTracks"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BackgroundAudioTracks());
         }
         catch (...)
@@ -1634,14 +1634,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaComposition_get_Clips(py::wrapper::Windows::Media::Editing::MediaComposition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaComposition", L"Clips"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaComposition", L"Clips"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Clips());
         }
         catch (...)
@@ -1653,14 +1653,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaComposition_get_Duration(py::wrapper::Windows::Media::Editing::MediaComposition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaComposition", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaComposition", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -1672,14 +1672,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaComposition_get_UserData(py::wrapper::Windows::Media::Editing::MediaComposition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaComposition", L"UserData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaComposition", L"UserData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserData());
         }
         catch (...)
@@ -1691,14 +1691,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaComposition_get_OverlayLayers(py::wrapper::Windows::Media::Editing::MediaComposition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaComposition", L"OverlayLayers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaComposition", L"OverlayLayers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OverlayLayers());
         }
         catch (...)
@@ -1863,14 +1863,14 @@ namespace py::cpp::Windows::Media::Editing
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaOverlay", L"Clone", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaOverlay", L"Clone", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.Clone());
             }
             catch (...)
@@ -1888,14 +1888,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaOverlay_get_Position(py::wrapper::Windows::Media::Editing::MediaOverlay* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaOverlay", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaOverlay", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -1907,12 +1907,6 @@ namespace py::cpp::Windows::Media::Editing
 
     static int MediaOverlay_put_Position(py::wrapper::Windows::Media::Editing::MediaOverlay* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaOverlay", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1921,6 +1915,12 @@ namespace py::cpp::Windows::Media::Editing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaOverlay", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
             self->obj.Position(param0);
@@ -1935,14 +1935,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaOverlay_get_Opacity(py::wrapper::Windows::Media::Editing::MediaOverlay* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaOverlay", L"Opacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaOverlay", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Opacity());
         }
         catch (...)
@@ -1954,12 +1954,6 @@ namespace py::cpp::Windows::Media::Editing
 
     static int MediaOverlay_put_Opacity(py::wrapper::Windows::Media::Editing::MediaOverlay* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaOverlay", L"Opacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1968,6 +1962,12 @@ namespace py::cpp::Windows::Media::Editing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaOverlay", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Opacity(param0);
@@ -1982,14 +1982,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaOverlay_get_Delay(py::wrapper::Windows::Media::Editing::MediaOverlay* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaOverlay", L"Delay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaOverlay", L"Delay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Delay());
         }
         catch (...)
@@ -2001,12 +2001,6 @@ namespace py::cpp::Windows::Media::Editing
 
     static int MediaOverlay_put_Delay(py::wrapper::Windows::Media::Editing::MediaOverlay* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaOverlay", L"Delay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2015,6 +2009,12 @@ namespace py::cpp::Windows::Media::Editing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaOverlay", L"Delay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.Delay(param0);
@@ -2029,14 +2029,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaOverlay_get_AudioEnabled(py::wrapper::Windows::Media::Editing::MediaOverlay* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaOverlay", L"AudioEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaOverlay", L"AudioEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioEnabled());
         }
         catch (...)
@@ -2048,12 +2048,6 @@ namespace py::cpp::Windows::Media::Editing
 
     static int MediaOverlay_put_AudioEnabled(py::wrapper::Windows::Media::Editing::MediaOverlay* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaOverlay", L"AudioEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2062,6 +2056,12 @@ namespace py::cpp::Windows::Media::Editing
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaOverlay", L"AudioEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AudioEnabled(param0);
@@ -2076,14 +2076,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaOverlay_get_Clip(py::wrapper::Windows::Media::Editing::MediaOverlay* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaOverlay", L"Clip"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaOverlay", L"Clip"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Clip());
         }
         catch (...)
@@ -2211,14 +2211,14 @@ namespace py::cpp::Windows::Media::Editing
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaOverlayLayer", L"Clone", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaOverlayLayer", L"Clone", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.Clone());
             }
             catch (...)
@@ -2236,14 +2236,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaOverlayLayer_get_CustomCompositorDefinition(py::wrapper::Windows::Media::Editing::MediaOverlayLayer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaOverlayLayer", L"CustomCompositorDefinition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaOverlayLayer", L"CustomCompositorDefinition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CustomCompositorDefinition());
         }
         catch (...)
@@ -2255,14 +2255,14 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaOverlayLayer_get_Overlays(py::wrapper::Windows::Media::Editing::MediaOverlayLayer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaOverlayLayer", L"Overlays"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Editing.MediaOverlayLayer", L"Overlays"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Overlays());
         }
         catch (...)

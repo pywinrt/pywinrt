@@ -49,14 +49,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* EnhancedWaypoint_get_Kind(py::wrapper::Windows::Services::Maps::EnhancedWaypoint* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.EnhancedWaypoint", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.EnhancedWaypoint", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -68,14 +68,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* EnhancedWaypoint_get_Point(py::wrapper::Windows::Services::Maps::EnhancedWaypoint* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.EnhancedWaypoint", L"Point"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.EnhancedWaypoint", L"Point"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Point());
         }
         catch (...)
@@ -158,14 +158,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* ManeuverWarning_get_Kind(py::wrapper::Windows::Services::Maps::ManeuverWarning* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.ManeuverWarning", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.ManeuverWarning", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -177,14 +177,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* ManeuverWarning_get_Severity(py::wrapper::Windows::Services::Maps::ManeuverWarning* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.ManeuverWarning", L"Severity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.ManeuverWarning", L"Severity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Severity());
         }
         catch (...)
@@ -267,14 +267,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapAddress_get_BuildingFloor(py::wrapper::Windows::Services::Maps::MapAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"BuildingFloor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"BuildingFloor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BuildingFloor());
         }
         catch (...)
@@ -286,14 +286,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapAddress_get_BuildingName(py::wrapper::Windows::Services::Maps::MapAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"BuildingName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"BuildingName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BuildingName());
         }
         catch (...)
@@ -305,14 +305,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapAddress_get_BuildingRoom(py::wrapper::Windows::Services::Maps::MapAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"BuildingRoom"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"BuildingRoom"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BuildingRoom());
         }
         catch (...)
@@ -324,14 +324,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapAddress_get_BuildingWing(py::wrapper::Windows::Services::Maps::MapAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"BuildingWing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"BuildingWing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BuildingWing());
         }
         catch (...)
@@ -343,14 +343,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapAddress_get_Continent(py::wrapper::Windows::Services::Maps::MapAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"Continent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"Continent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Continent());
         }
         catch (...)
@@ -362,14 +362,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapAddress_get_Country(py::wrapper::Windows::Services::Maps::MapAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"Country"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"Country"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Country());
         }
         catch (...)
@@ -381,14 +381,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapAddress_get_CountryCode(py::wrapper::Windows::Services::Maps::MapAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"CountryCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"CountryCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CountryCode());
         }
         catch (...)
@@ -400,14 +400,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapAddress_get_District(py::wrapper::Windows::Services::Maps::MapAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"District"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"District"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.District());
         }
         catch (...)
@@ -419,14 +419,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapAddress_get_Neighborhood(py::wrapper::Windows::Services::Maps::MapAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"Neighborhood"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"Neighborhood"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Neighborhood());
         }
         catch (...)
@@ -438,14 +438,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapAddress_get_PostCode(py::wrapper::Windows::Services::Maps::MapAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"PostCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"PostCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PostCode());
         }
         catch (...)
@@ -457,14 +457,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapAddress_get_Region(py::wrapper::Windows::Services::Maps::MapAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"Region"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"Region"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Region());
         }
         catch (...)
@@ -476,14 +476,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapAddress_get_RegionCode(py::wrapper::Windows::Services::Maps::MapAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"RegionCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"RegionCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RegionCode());
         }
         catch (...)
@@ -495,14 +495,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapAddress_get_Street(py::wrapper::Windows::Services::Maps::MapAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"Street"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"Street"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Street());
         }
         catch (...)
@@ -514,14 +514,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapAddress_get_StreetNumber(py::wrapper::Windows::Services::Maps::MapAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"StreetNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"StreetNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StreetNumber());
         }
         catch (...)
@@ -533,14 +533,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapAddress_get_Town(py::wrapper::Windows::Services::Maps::MapAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"Town"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"Town"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Town());
         }
         catch (...)
@@ -552,14 +552,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapAddress_get_FormattedAddress(py::wrapper::Windows::Services::Maps::MapAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"FormattedAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapAddress", L"FormattedAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FormattedAddress());
         }
         catch (...)
@@ -656,14 +656,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapLocation_get_Address(py::wrapper::Windows::Services::Maps::MapLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapLocation", L"Address"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapLocation", L"Address"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Address());
         }
         catch (...)
@@ -675,14 +675,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapLocation_get_Description(py::wrapper::Windows::Services::Maps::MapLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapLocation", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapLocation", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -694,14 +694,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapLocation_get_DisplayName(py::wrapper::Windows::Services::Maps::MapLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapLocation", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapLocation", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -713,14 +713,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapLocation_get_Point(py::wrapper::Windows::Services::Maps::MapLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapLocation", L"Point"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapLocation", L"Point"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Point());
         }
         catch (...)
@@ -801,14 +801,14 @@ namespace py::cpp::Windows::Services::Maps
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapLocationFinder", L"FindLocationsAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapLocationFinder", L"FindLocationsAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 1);
 
@@ -822,14 +822,14 @@ namespace py::cpp::Windows::Services::Maps
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapLocationFinder", L"FindLocationsAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapLocationFinder", L"FindLocationsAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -855,14 +855,14 @@ namespace py::cpp::Windows::Services::Maps
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapLocationFinder", L"FindLocationsAtAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapLocationFinder", L"FindLocationsAtAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
 
                 return py::convert(winrt::Windows::Services::Maps::MapLocationFinder::FindLocationsAtAsync(param0));
@@ -875,14 +875,14 @@ namespace py::cpp::Windows::Services::Maps
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapLocationFinder", L"FindLocationsAtAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapLocationFinder", L"FindLocationsAtAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Services::Maps::MapLocationDesiredAccuracy>(args, 1);
 
@@ -972,14 +972,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapLocationFinderResult_get_Locations(py::wrapper::Windows::Services::Maps::MapLocationFinderResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapLocationFinderResult", L"Locations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapLocationFinderResult", L"Locations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Locations());
         }
         catch (...)
@@ -991,14 +991,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapLocationFinderResult_get_Status(py::wrapper::Windows::Services::Maps::MapLocationFinderResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapLocationFinderResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapLocationFinderResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1077,14 +1077,14 @@ namespace py::cpp::Windows::Services::Maps
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapManager", L"ShowDownloadedMapsUI", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapManager", L"ShowDownloadedMapsUI", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::Services::Maps::MapManager::ShowDownloadedMapsUI();
                 Py_RETURN_NONE;
             }
@@ -1107,14 +1107,14 @@ namespace py::cpp::Windows::Services::Maps
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapManager", L"ShowMapsUpdateUI", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapManager", L"ShowMapsUpdateUI", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::Services::Maps::MapManager::ShowMapsUpdateUI();
                 Py_RETURN_NONE;
             }
@@ -1202,14 +1202,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRoute_get_BoundingBox(py::wrapper::Windows::Services::Maps::MapRoute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRoute", L"BoundingBox"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRoute", L"BoundingBox"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BoundingBox());
         }
         catch (...)
@@ -1221,14 +1221,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRoute_get_EstimatedDuration(py::wrapper::Windows::Services::Maps::MapRoute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRoute", L"EstimatedDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRoute", L"EstimatedDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EstimatedDuration());
         }
         catch (...)
@@ -1240,14 +1240,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRoute_get_IsTrafficBased(py::wrapper::Windows::Services::Maps::MapRoute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRoute", L"IsTrafficBased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRoute", L"IsTrafficBased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsTrafficBased());
         }
         catch (...)
@@ -1259,14 +1259,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRoute_get_Legs(py::wrapper::Windows::Services::Maps::MapRoute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRoute", L"Legs"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRoute", L"Legs"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Legs());
         }
         catch (...)
@@ -1278,14 +1278,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRoute_get_LengthInMeters(py::wrapper::Windows::Services::Maps::MapRoute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRoute", L"LengthInMeters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRoute", L"LengthInMeters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LengthInMeters());
         }
         catch (...)
@@ -1297,14 +1297,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRoute_get_Path(py::wrapper::Windows::Services::Maps::MapRoute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRoute", L"Path"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRoute", L"Path"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Path());
         }
         catch (...)
@@ -1316,14 +1316,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRoute_get_HasBlockedRoads(py::wrapper::Windows::Services::Maps::MapRoute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRoute", L"HasBlockedRoads"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRoute", L"HasBlockedRoads"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasBlockedRoads());
         }
         catch (...)
@@ -1335,14 +1335,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRoute_get_ViolatedRestrictions(py::wrapper::Windows::Services::Maps::MapRoute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRoute", L"ViolatedRestrictions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRoute", L"ViolatedRestrictions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ViolatedRestrictions());
         }
         catch (...)
@@ -1354,14 +1354,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRoute_get_DurationWithoutTraffic(py::wrapper::Windows::Services::Maps::MapRoute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRoute", L"DurationWithoutTraffic"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRoute", L"DurationWithoutTraffic"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DurationWithoutTraffic());
         }
         catch (...)
@@ -1373,14 +1373,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRoute_get_TrafficCongestion(py::wrapper::Windows::Services::Maps::MapRoute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRoute", L"TrafficCongestion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRoute", L"TrafficCongestion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrafficCongestion());
         }
         catch (...)
@@ -1392,14 +1392,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRoute_get_IsScenic(py::wrapper::Windows::Services::Maps::MapRoute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRoute", L"IsScenic"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRoute", L"IsScenic"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsScenic());
         }
         catch (...)
@@ -1513,14 +1513,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteDrivingOptions_get_RouteRestrictions(py::wrapper::Windows::Services::Maps::MapRouteDrivingOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteDrivingOptions", L"RouteRestrictions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteDrivingOptions", L"RouteRestrictions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RouteRestrictions());
         }
         catch (...)
@@ -1532,12 +1532,6 @@ namespace py::cpp::Windows::Services::Maps
 
     static int MapRouteDrivingOptions_put_RouteRestrictions(py::wrapper::Windows::Services::Maps::MapRouteDrivingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteDrivingOptions", L"RouteRestrictions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1546,6 +1540,12 @@ namespace py::cpp::Windows::Services::Maps
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteDrivingOptions", L"RouteRestrictions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Services::Maps::MapRouteRestrictions>(arg);
 
             self->obj.RouteRestrictions(param0);
@@ -1560,14 +1560,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteDrivingOptions_get_RouteOptimization(py::wrapper::Windows::Services::Maps::MapRouteDrivingOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteDrivingOptions", L"RouteOptimization"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteDrivingOptions", L"RouteOptimization"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RouteOptimization());
         }
         catch (...)
@@ -1579,12 +1579,6 @@ namespace py::cpp::Windows::Services::Maps
 
     static int MapRouteDrivingOptions_put_RouteOptimization(py::wrapper::Windows::Services::Maps::MapRouteDrivingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteDrivingOptions", L"RouteOptimization"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1593,6 +1587,12 @@ namespace py::cpp::Windows::Services::Maps
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteDrivingOptions", L"RouteOptimization"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Services::Maps::MapRouteOptimization>(arg);
 
             self->obj.RouteOptimization(param0);
@@ -1607,14 +1607,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteDrivingOptions_get_MaxAlternateRouteCount(py::wrapper::Windows::Services::Maps::MapRouteDrivingOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteDrivingOptions", L"MaxAlternateRouteCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteDrivingOptions", L"MaxAlternateRouteCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxAlternateRouteCount());
         }
         catch (...)
@@ -1626,12 +1626,6 @@ namespace py::cpp::Windows::Services::Maps
 
     static int MapRouteDrivingOptions_put_MaxAlternateRouteCount(py::wrapper::Windows::Services::Maps::MapRouteDrivingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteDrivingOptions", L"MaxAlternateRouteCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1640,6 +1634,12 @@ namespace py::cpp::Windows::Services::Maps
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteDrivingOptions", L"MaxAlternateRouteCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.MaxAlternateRouteCount(param0);
@@ -1654,14 +1654,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteDrivingOptions_get_InitialHeading(py::wrapper::Windows::Services::Maps::MapRouteDrivingOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteDrivingOptions", L"InitialHeading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteDrivingOptions", L"InitialHeading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InitialHeading());
         }
         catch (...)
@@ -1673,12 +1673,6 @@ namespace py::cpp::Windows::Services::Maps
 
     static int MapRouteDrivingOptions_put_InitialHeading(py::wrapper::Windows::Services::Maps::MapRouteDrivingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteDrivingOptions", L"InitialHeading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1687,6 +1681,12 @@ namespace py::cpp::Windows::Services::Maps
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteDrivingOptions", L"InitialHeading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(arg);
 
             self->obj.InitialHeading(param0);
@@ -1701,14 +1701,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteDrivingOptions_get_DepartureTime(py::wrapper::Windows::Services::Maps::MapRouteDrivingOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteDrivingOptions", L"DepartureTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteDrivingOptions", L"DepartureTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DepartureTime());
         }
         catch (...)
@@ -1720,12 +1720,6 @@ namespace py::cpp::Windows::Services::Maps
 
     static int MapRouteDrivingOptions_put_DepartureTime(py::wrapper::Windows::Services::Maps::MapRouteDrivingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteDrivingOptions", L"DepartureTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1734,6 +1728,12 @@ namespace py::cpp::Windows::Services::Maps
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteDrivingOptions", L"DepartureTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             self->obj.DepartureTime(param0);
@@ -1818,14 +1818,14 @@ namespace py::cpp::Windows::Services::Maps
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 1);
 
@@ -1839,14 +1839,14 @@ namespace py::cpp::Windows::Services::Maps
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Services::Maps::MapRouteDrivingOptions>(args, 2);
@@ -1861,14 +1861,14 @@ namespace py::cpp::Windows::Services::Maps
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Services::Maps::MapRouteOptimization>(args, 2);
@@ -1884,14 +1884,14 @@ namespace py::cpp::Windows::Services::Maps
         }
         else if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteAsync", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteAsync", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Services::Maps::MapRouteOptimization>(args, 2);
@@ -1919,14 +1919,14 @@ namespace py::cpp::Windows::Services::Maps
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteFromEnhancedWaypointsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteFromEnhancedWaypointsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Services::Maps::EnhancedWaypoint>>(args, 0);
 
                 return py::convert(winrt::Windows::Services::Maps::MapRouteFinder::GetDrivingRouteFromEnhancedWaypointsAsync(param0));
@@ -1939,14 +1939,14 @@ namespace py::cpp::Windows::Services::Maps
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteFromEnhancedWaypointsAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteFromEnhancedWaypointsAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Services::Maps::EnhancedWaypoint>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Services::Maps::MapRouteDrivingOptions>(args, 1);
 
@@ -1971,14 +1971,14 @@ namespace py::cpp::Windows::Services::Maps
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteFromWaypointsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteFromWaypointsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Geolocation::Geopoint>>(args, 0);
 
                 return py::convert(winrt::Windows::Services::Maps::MapRouteFinder::GetDrivingRouteFromWaypointsAsync(param0));
@@ -1991,14 +1991,14 @@ namespace py::cpp::Windows::Services::Maps
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteFromWaypointsAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteFromWaypointsAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Geolocation::Geopoint>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Services::Maps::MapRouteOptimization>(args, 1);
 
@@ -2012,14 +2012,14 @@ namespace py::cpp::Windows::Services::Maps
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteFromWaypointsAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteFromWaypointsAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Geolocation::Geopoint>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Services::Maps::MapRouteOptimization>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Services::Maps::MapRouteRestrictions>(args, 2);
@@ -2034,14 +2034,14 @@ namespace py::cpp::Windows::Services::Maps
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteFromWaypointsAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteFromWaypointsAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Geolocation::Geopoint>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Services::Maps::MapRouteOptimization>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Services::Maps::MapRouteRestrictions>(args, 2);
@@ -2068,14 +2068,14 @@ namespace py::cpp::Windows::Services::Maps
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetWalkingRouteAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetWalkingRouteAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 1);
 
@@ -2100,14 +2100,14 @@ namespace py::cpp::Windows::Services::Maps
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetWalkingRouteFromWaypointsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetWalkingRouteFromWaypointsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Geolocation::Geopoint>>(args, 0);
 
                 return py::convert(winrt::Windows::Services::Maps::MapRouteFinder::GetWalkingRouteFromWaypointsAsync(param0));
@@ -2199,14 +2199,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteFinderResult_get_Route(py::wrapper::Windows::Services::Maps::MapRouteFinderResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteFinderResult", L"Route"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteFinderResult", L"Route"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Route());
         }
         catch (...)
@@ -2218,14 +2218,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteFinderResult_get_Status(py::wrapper::Windows::Services::Maps::MapRouteFinderResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteFinderResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteFinderResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -2237,14 +2237,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteFinderResult_get_AlternateRoutes(py::wrapper::Windows::Services::Maps::MapRouteFinderResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteFinderResult", L"AlternateRoutes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteFinderResult", L"AlternateRoutes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlternateRoutes());
         }
         catch (...)
@@ -2328,14 +2328,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteLeg_get_BoundingBox(py::wrapper::Windows::Services::Maps::MapRouteLeg* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteLeg", L"BoundingBox"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteLeg", L"BoundingBox"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BoundingBox());
         }
         catch (...)
@@ -2347,14 +2347,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteLeg_get_EstimatedDuration(py::wrapper::Windows::Services::Maps::MapRouteLeg* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteLeg", L"EstimatedDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteLeg", L"EstimatedDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EstimatedDuration());
         }
         catch (...)
@@ -2366,14 +2366,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteLeg_get_LengthInMeters(py::wrapper::Windows::Services::Maps::MapRouteLeg* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteLeg", L"LengthInMeters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteLeg", L"LengthInMeters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LengthInMeters());
         }
         catch (...)
@@ -2385,14 +2385,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteLeg_get_Maneuvers(py::wrapper::Windows::Services::Maps::MapRouteLeg* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteLeg", L"Maneuvers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteLeg", L"Maneuvers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Maneuvers());
         }
         catch (...)
@@ -2404,14 +2404,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteLeg_get_Path(py::wrapper::Windows::Services::Maps::MapRouteLeg* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteLeg", L"Path"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteLeg", L"Path"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Path());
         }
         catch (...)
@@ -2423,14 +2423,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteLeg_get_DurationWithoutTraffic(py::wrapper::Windows::Services::Maps::MapRouteLeg* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteLeg", L"DurationWithoutTraffic"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteLeg", L"DurationWithoutTraffic"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DurationWithoutTraffic());
         }
         catch (...)
@@ -2442,14 +2442,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteLeg_get_TrafficCongestion(py::wrapper::Windows::Services::Maps::MapRouteLeg* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteLeg", L"TrafficCongestion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteLeg", L"TrafficCongestion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrafficCongestion());
         }
         catch (...)
@@ -2537,14 +2537,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteManeuver_get_ExitNumber(py::wrapper::Windows::Services::Maps::MapRouteManeuver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteManeuver", L"ExitNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteManeuver", L"ExitNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExitNumber());
         }
         catch (...)
@@ -2556,14 +2556,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteManeuver_get_InstructionText(py::wrapper::Windows::Services::Maps::MapRouteManeuver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteManeuver", L"InstructionText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteManeuver", L"InstructionText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InstructionText());
         }
         catch (...)
@@ -2575,14 +2575,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteManeuver_get_Kind(py::wrapper::Windows::Services::Maps::MapRouteManeuver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteManeuver", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteManeuver", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -2594,14 +2594,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteManeuver_get_LengthInMeters(py::wrapper::Windows::Services::Maps::MapRouteManeuver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteManeuver", L"LengthInMeters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteManeuver", L"LengthInMeters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LengthInMeters());
         }
         catch (...)
@@ -2613,14 +2613,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteManeuver_get_ManeuverNotices(py::wrapper::Windows::Services::Maps::MapRouteManeuver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteManeuver", L"ManeuverNotices"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteManeuver", L"ManeuverNotices"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ManeuverNotices());
         }
         catch (...)
@@ -2632,14 +2632,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteManeuver_get_StartingPoint(py::wrapper::Windows::Services::Maps::MapRouteManeuver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteManeuver", L"StartingPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteManeuver", L"StartingPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartingPoint());
         }
         catch (...)
@@ -2651,14 +2651,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteManeuver_get_EndHeading(py::wrapper::Windows::Services::Maps::MapRouteManeuver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteManeuver", L"EndHeading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteManeuver", L"EndHeading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndHeading());
         }
         catch (...)
@@ -2670,14 +2670,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteManeuver_get_StartHeading(py::wrapper::Windows::Services::Maps::MapRouteManeuver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteManeuver", L"StartHeading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteManeuver", L"StartHeading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartHeading());
         }
         catch (...)
@@ -2689,14 +2689,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteManeuver_get_StreetName(py::wrapper::Windows::Services::Maps::MapRouteManeuver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteManeuver", L"StreetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteManeuver", L"StreetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StreetName());
         }
         catch (...)
@@ -2708,14 +2708,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteManeuver_get_Warnings(py::wrapper::Windows::Services::Maps::MapRouteManeuver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteManeuver", L"Warnings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapRouteManeuver", L"Warnings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Warnings());
         }
         catch (...)
@@ -2798,14 +2798,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapService_get_ServiceToken(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapService", L"ServiceToken"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapService", L"ServiceToken"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Services::Maps::MapService::ServiceToken());
         }
         catch (...)
@@ -2817,12 +2817,6 @@ namespace py::cpp::Windows::Services::Maps
 
     static int MapService_put_ServiceToken(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapService", L"ServiceToken"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2831,6 +2825,12 @@ namespace py::cpp::Windows::Services::Maps
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapService", L"ServiceToken"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             winrt::Windows::Services::Maps::MapService::ServiceToken(param0);
@@ -2845,14 +2845,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapService_get_WorldViewRegionCode(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapService", L"WorldViewRegionCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapService", L"WorldViewRegionCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Services::Maps::MapService::WorldViewRegionCode());
         }
         catch (...)
@@ -2864,14 +2864,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapService_get_DataAttributions(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapService", L"DataAttributions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapService", L"DataAttributions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Services::Maps::MapService::DataAttributions());
         }
         catch (...)
@@ -2883,14 +2883,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapService_get_DataUsagePreference(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapService", L"DataUsagePreference"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapService", L"DataUsagePreference"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Services::Maps::MapService::DataUsagePreference());
         }
         catch (...)
@@ -2902,12 +2902,6 @@ namespace py::cpp::Windows::Services::Maps
 
     static int MapService_put_DataUsagePreference(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapService", L"DataUsagePreference"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2916,6 +2910,12 @@ namespace py::cpp::Windows::Services::Maps
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapService", L"DataUsagePreference"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Services::Maps::MapServiceDataUsagePreference>(arg);
 
             winrt::Windows::Services::Maps::MapService::DataUsagePreference(param0);
@@ -3005,14 +3005,14 @@ namespace py::cpp::Windows::Services::Maps
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.PlaceInfo", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.PlaceInfo", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
 
                 return py::convert(winrt::Windows::Services::Maps::PlaceInfo::Create(param0));
@@ -3025,14 +3025,14 @@ namespace py::cpp::Windows::Services::Maps
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.PlaceInfo", L"Create", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.PlaceInfo", L"Create", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Services::Maps::PlaceInfoCreateOptions>(args, 1);
 
@@ -3057,14 +3057,14 @@ namespace py::cpp::Windows::Services::Maps
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.PlaceInfo", L"CreateFromAddress", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.PlaceInfo", L"CreateFromAddress", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Services::Maps::PlaceInfo::CreateFromAddress(param0));
@@ -3077,14 +3077,14 @@ namespace py::cpp::Windows::Services::Maps
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.PlaceInfo", L"CreateFromAddress", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.PlaceInfo", L"CreateFromAddress", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -3109,14 +3109,14 @@ namespace py::cpp::Windows::Services::Maps
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.PlaceInfo", L"CreateFromIdentifier", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.PlaceInfo", L"CreateFromIdentifier", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Services::Maps::PlaceInfo::CreateFromIdentifier(param0));
@@ -3129,14 +3129,14 @@ namespace py::cpp::Windows::Services::Maps
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.PlaceInfo", L"CreateFromIdentifier", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.PlaceInfo", L"CreateFromIdentifier", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Services::Maps::PlaceInfoCreateOptions>(args, 2);
@@ -3162,14 +3162,14 @@ namespace py::cpp::Windows::Services::Maps
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.PlaceInfo", L"CreateFromMapLocation", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.PlaceInfo", L"CreateFromMapLocation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Services::Maps::MapLocation>(args, 0);
 
                 return py::convert(winrt::Windows::Services::Maps::PlaceInfo::CreateFromMapLocation(param0));
@@ -3193,14 +3193,14 @@ namespace py::cpp::Windows::Services::Maps
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.PlaceInfo", L"Show", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.PlaceInfo", L"Show", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
                 self->obj.Show(param0);
@@ -3214,14 +3214,14 @@ namespace py::cpp::Windows::Services::Maps
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.PlaceInfo", L"Show", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.PlaceInfo", L"Show", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 1);
 
@@ -3243,14 +3243,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* PlaceInfo_get_DisplayAddress(py::wrapper::Windows::Services::Maps::PlaceInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.PlaceInfo", L"DisplayAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.PlaceInfo", L"DisplayAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayAddress());
         }
         catch (...)
@@ -3262,14 +3262,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* PlaceInfo_get_DisplayName(py::wrapper::Windows::Services::Maps::PlaceInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.PlaceInfo", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.PlaceInfo", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -3281,14 +3281,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* PlaceInfo_get_Geoshape(py::wrapper::Windows::Services::Maps::PlaceInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.PlaceInfo", L"Geoshape"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.PlaceInfo", L"Geoshape"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Geoshape());
         }
         catch (...)
@@ -3300,14 +3300,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* PlaceInfo_get_Identifier(py::wrapper::Windows::Services::Maps::PlaceInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.PlaceInfo", L"Identifier"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.PlaceInfo", L"Identifier"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Identifier());
         }
         catch (...)
@@ -3319,14 +3319,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* PlaceInfo_get_IsShowSupported(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.PlaceInfo", L"IsShowSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.PlaceInfo", L"IsShowSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Services::Maps::PlaceInfo::IsShowSupported());
         }
         catch (...)
@@ -3464,14 +3464,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* PlaceInfoCreateOptions_get_DisplayName(py::wrapper::Windows::Services::Maps::PlaceInfoCreateOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.PlaceInfoCreateOptions", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.PlaceInfoCreateOptions", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -3483,12 +3483,6 @@ namespace py::cpp::Windows::Services::Maps
 
     static int PlaceInfoCreateOptions_put_DisplayName(py::wrapper::Windows::Services::Maps::PlaceInfoCreateOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.PlaceInfoCreateOptions", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3497,6 +3491,12 @@ namespace py::cpp::Windows::Services::Maps
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.PlaceInfoCreateOptions", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayName(param0);
@@ -3511,14 +3511,14 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* PlaceInfoCreateOptions_get_DisplayAddress(py::wrapper::Windows::Services::Maps::PlaceInfoCreateOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.PlaceInfoCreateOptions", L"DisplayAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.PlaceInfoCreateOptions", L"DisplayAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayAddress());
         }
         catch (...)
@@ -3530,12 +3530,6 @@ namespace py::cpp::Windows::Services::Maps
 
     static int PlaceInfoCreateOptions_put_DisplayAddress(py::wrapper::Windows::Services::Maps::PlaceInfoCreateOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.PlaceInfoCreateOptions", L"DisplayAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3544,6 +3538,12 @@ namespace py::cpp::Windows::Services::Maps
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.PlaceInfoCreateOptions", L"DisplayAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayAddress(param0);

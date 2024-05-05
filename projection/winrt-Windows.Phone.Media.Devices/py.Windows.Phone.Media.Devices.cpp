@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Phone::Media::Devices
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Media.Devices.AudioRoutingManager", L"GetAudioEndpoint", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Media.Devices.AudioRoutingManager", L"GetAudioEndpoint", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAudioEndpoint());
             }
             catch (...)
@@ -57,14 +57,14 @@ namespace py::cpp::Windows::Phone::Media::Devices
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Media.Devices.AudioRoutingManager", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Media.Devices.AudioRoutingManager", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Phone::Media::Devices::AudioRoutingManager::GetDefault());
             }
             catch (...)
@@ -86,14 +86,14 @@ namespace py::cpp::Windows::Phone::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Media.Devices.AudioRoutingManager", L"SetAudioEndpoint", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Media.Devices.AudioRoutingManager", L"SetAudioEndpoint", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Phone::Media::Devices::AudioRoutingEndpoint>(args, 0);
 
                 self->obj.SetAudioEndpoint(param0);
@@ -114,14 +114,14 @@ namespace py::cpp::Windows::Phone::Media::Devices
 
     static PyObject* AudioRoutingManager_get_AvailableAudioEndpoints(py::wrapper::Windows::Phone::Media::Devices::AudioRoutingManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Media.Devices.AudioRoutingManager", L"AvailableAudioEndpoints"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Media.Devices.AudioRoutingManager", L"AvailableAudioEndpoints"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AvailableAudioEndpoints());
         }
         catch (...)
@@ -133,14 +133,14 @@ namespace py::cpp::Windows::Phone::Media::Devices
 
     static PyObject* AudioRoutingManager_add_AudioEndpointChanged(py::wrapper::Windows::Phone::Media::Devices::AudioRoutingManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.Media.Devices.AudioRoutingManager", L"AudioEndpointChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.Media.Devices.AudioRoutingManager", L"AudioEndpointChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Media::Devices::AudioRoutingManager, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.AudioEndpointChanged(param0));
@@ -154,14 +154,14 @@ namespace py::cpp::Windows::Phone::Media::Devices
 
     static PyObject* AudioRoutingManager_remove_AudioEndpointChanged(py::wrapper::Windows::Phone::Media::Devices::AudioRoutingManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.Media.Devices.AudioRoutingManager", L"AudioEndpointChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.Media.Devices.AudioRoutingManager", L"AudioEndpointChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AudioEndpointChanged(param0);

@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Fixed
+- Fixed possible crash when checking if API is available at runtime.
+
 ## [v2.0.1] - 2024-04-28
 
 ### Fixed

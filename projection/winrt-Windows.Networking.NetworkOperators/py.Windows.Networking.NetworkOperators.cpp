@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESim", L"DeleteProfileAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESim", L"DeleteProfileAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.DeleteProfileAsync(param0));
@@ -59,14 +59,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESim", L"Discover", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESim", L"Discover", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.Discover());
             }
             catch (...)
@@ -77,14 +77,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESim", L"Discover", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESim", L"Discover", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -109,14 +109,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESim", L"DiscoverAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESim", L"DiscoverAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.DiscoverAsync());
             }
             catch (...)
@@ -127,14 +127,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESim", L"DiscoverAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESim", L"DiscoverAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -159,14 +159,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESim", L"DownloadProfileMetadataAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESim", L"DownloadProfileMetadataAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.DownloadProfileMetadataAsync(param0));
@@ -190,14 +190,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESim", L"GetProfiles", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESim", L"GetProfiles", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetProfiles());
             }
             catch (...)
@@ -219,14 +219,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESim", L"ResetAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESim", L"ResetAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ResetAsync());
             }
             catch (...)
@@ -244,14 +244,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESim_get_AvailableMemoryInBytes(py::wrapper::Windows::Networking::NetworkOperators::ESim* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESim", L"AvailableMemoryInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESim", L"AvailableMemoryInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AvailableMemoryInBytes());
         }
         catch (...)
@@ -263,14 +263,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESim_get_Eid(py::wrapper::Windows::Networking::NetworkOperators::ESim* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESim", L"Eid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESim", L"Eid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Eid());
         }
         catch (...)
@@ -282,14 +282,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESim_get_FirmwareVersion(py::wrapper::Windows::Networking::NetworkOperators::ESim* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESim", L"FirmwareVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESim", L"FirmwareVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirmwareVersion());
         }
         catch (...)
@@ -301,14 +301,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESim_get_MobileBroadbandModemDeviceId(py::wrapper::Windows::Networking::NetworkOperators::ESim* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESim", L"MobileBroadbandModemDeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESim", L"MobileBroadbandModemDeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MobileBroadbandModemDeviceId());
         }
         catch (...)
@@ -320,14 +320,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESim_get_Policy(py::wrapper::Windows::Networking::NetworkOperators::ESim* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESim", L"Policy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESim", L"Policy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Policy());
         }
         catch (...)
@@ -339,14 +339,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESim_get_State(py::wrapper::Windows::Networking::NetworkOperators::ESim* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESim", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESim", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -358,14 +358,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESim_get_SlotIndex(py::wrapper::Windows::Networking::NetworkOperators::ESim* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESim", L"SlotIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESim", L"SlotIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SlotIndex());
         }
         catch (...)
@@ -377,14 +377,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESim_add_ProfileChanged(py::wrapper::Windows::Networking::NetworkOperators::ESim* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESim", L"ProfileChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESim", L"ProfileChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::ESim, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ProfileChanged(param0));
@@ -398,14 +398,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESim_remove_ProfileChanged(py::wrapper::Windows::Networking::NetworkOperators::ESim* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESim", L"ProfileChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESim", L"ProfileChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ProfileChanged(param0);
@@ -504,14 +504,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimAddedEventArgs_get_ESim(py::wrapper::Windows::Networking::NetworkOperators::ESimAddedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimAddedEventArgs", L"ESim"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimAddedEventArgs", L"ESim"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ESim());
         }
         catch (...)
@@ -593,14 +593,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimDiscoverEvent_get_MatchingId(py::wrapper::Windows::Networking::NetworkOperators::ESimDiscoverEvent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimDiscoverEvent", L"MatchingId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimDiscoverEvent", L"MatchingId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MatchingId());
         }
         catch (...)
@@ -612,14 +612,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimDiscoverEvent_get_RspServerAddress(py::wrapper::Windows::Networking::NetworkOperators::ESimDiscoverEvent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimDiscoverEvent", L"RspServerAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimDiscoverEvent", L"RspServerAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RspServerAddress());
         }
         catch (...)
@@ -702,14 +702,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimDiscoverResult_get_Events(py::wrapper::Windows::Networking::NetworkOperators::ESimDiscoverResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimDiscoverResult", L"Events"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimDiscoverResult", L"Events"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Events());
         }
         catch (...)
@@ -721,14 +721,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimDiscoverResult_get_Kind(py::wrapper::Windows::Networking::NetworkOperators::ESimDiscoverResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimDiscoverResult", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimDiscoverResult", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -740,14 +740,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimDiscoverResult_get_ProfileMetadata(py::wrapper::Windows::Networking::NetworkOperators::ESimDiscoverResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimDiscoverResult", L"ProfileMetadata"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimDiscoverResult", L"ProfileMetadata"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProfileMetadata());
         }
         catch (...)
@@ -759,14 +759,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimDiscoverResult_get_Result(py::wrapper::Windows::Networking::NetworkOperators::ESimDiscoverResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimDiscoverResult", L"Result"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimDiscoverResult", L"Result"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Result());
         }
         catch (...)
@@ -851,14 +851,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimDownloadProfileMetadataResult_get_ProfileMetadata(py::wrapper::Windows::Networking::NetworkOperators::ESimDownloadProfileMetadataResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimDownloadProfileMetadataResult", L"ProfileMetadata"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimDownloadProfileMetadataResult", L"ProfileMetadata"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProfileMetadata());
         }
         catch (...)
@@ -870,14 +870,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimDownloadProfileMetadataResult_get_Result(py::wrapper::Windows::Networking::NetworkOperators::ESimDownloadProfileMetadataResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimDownloadProfileMetadataResult", L"Result"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimDownloadProfileMetadataResult", L"Result"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Result());
         }
         catch (...)
@@ -956,14 +956,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESimManager", L"TryCreateESimWatcher", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESimManager", L"TryCreateESimWatcher", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Networking::NetworkOperators::ESimManager::TryCreateESimWatcher());
             }
             catch (...)
@@ -981,14 +981,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimManager_get_ServiceInfo(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimManager", L"ServiceInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimManager", L"ServiceInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::NetworkOperators::ESimManager::ServiceInfo());
         }
         catch (...)
@@ -1000,14 +1000,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimManager_add_ServiceInfoChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimManager", L"ServiceInfoChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimManager", L"ServiceInfoChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Windows::Networking::NetworkOperators::ESimManager::ServiceInfoChanged(param0));
@@ -1021,14 +1021,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimManager_remove_ServiceInfoChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimManager", L"ServiceInfoChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimManager", L"ServiceInfoChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Networking::NetworkOperators::ESimManager::ServiceInfoChanged(param0);
@@ -1114,14 +1114,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimOperationResult_get_Status(py::wrapper::Windows::Networking::NetworkOperators::ESimOperationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimOperationResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimOperationResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1203,14 +1203,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimPolicy_get_ShouldEnableManagingUi(py::wrapper::Windows::Networking::NetworkOperators::ESimPolicy* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimPolicy", L"ShouldEnableManagingUi"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimPolicy", L"ShouldEnableManagingUi"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShouldEnableManagingUi());
         }
         catch (...)
@@ -1296,14 +1296,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESimProfile", L"DisableAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESimProfile", L"DisableAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.DisableAsync());
             }
             catch (...)
@@ -1325,14 +1325,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESimProfile", L"EnableAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESimProfile", L"EnableAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.EnableAsync());
             }
             catch (...)
@@ -1354,14 +1354,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESimProfile", L"SetNicknameAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESimProfile", L"SetNicknameAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SetNicknameAsync(param0));
@@ -1381,14 +1381,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfile_get_Class(py::wrapper::Windows::Networking::NetworkOperators::ESimProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfile", L"Class"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfile", L"Class"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Class());
         }
         catch (...)
@@ -1400,14 +1400,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfile_get_Id(py::wrapper::Windows::Networking::NetworkOperators::ESimProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfile", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfile", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1419,14 +1419,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfile_get_Nickname(py::wrapper::Windows::Networking::NetworkOperators::ESimProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfile", L"Nickname"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfile", L"Nickname"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Nickname());
         }
         catch (...)
@@ -1438,14 +1438,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfile_get_Policy(py::wrapper::Windows::Networking::NetworkOperators::ESimProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfile", L"Policy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfile", L"Policy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Policy());
         }
         catch (...)
@@ -1457,14 +1457,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfile_get_ProviderIcon(py::wrapper::Windows::Networking::NetworkOperators::ESimProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfile", L"ProviderIcon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfile", L"ProviderIcon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderIcon());
         }
         catch (...)
@@ -1476,14 +1476,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfile_get_ProviderId(py::wrapper::Windows::Networking::NetworkOperators::ESimProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfile", L"ProviderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfile", L"ProviderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderId());
         }
         catch (...)
@@ -1495,14 +1495,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfile_get_ProviderName(py::wrapper::Windows::Networking::NetworkOperators::ESimProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfile", L"ProviderName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfile", L"ProviderName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderName());
         }
         catch (...)
@@ -1514,14 +1514,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfile_get_State(py::wrapper::Windows::Networking::NetworkOperators::ESimProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfile", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfile", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -1617,14 +1617,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"ConfirmInstallAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"ConfirmInstallAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ConfirmInstallAsync());
             }
             catch (...)
@@ -1635,14 +1635,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"ConfirmInstallAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"ConfirmInstallAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ConfirmInstallAsync(param0));
@@ -1666,14 +1666,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"DenyInstallAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"DenyInstallAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.DenyInstallAsync());
             }
             catch (...)
@@ -1695,14 +1695,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"PostponeInstallAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"PostponeInstallAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.PostponeInstallAsync());
             }
             catch (...)
@@ -1720,14 +1720,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfileMetadata_get_Id(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileMetadata* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1739,14 +1739,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfileMetadata_get_IsConfirmationCodeRequired(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileMetadata* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"IsConfirmationCodeRequired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"IsConfirmationCodeRequired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsConfirmationCodeRequired());
         }
         catch (...)
@@ -1758,14 +1758,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfileMetadata_get_Policy(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileMetadata* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"Policy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"Policy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Policy());
         }
         catch (...)
@@ -1777,14 +1777,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfileMetadata_get_ProviderIcon(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileMetadata* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"ProviderIcon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"ProviderIcon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderIcon());
         }
         catch (...)
@@ -1796,14 +1796,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfileMetadata_get_ProviderId(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileMetadata* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"ProviderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"ProviderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderId());
         }
         catch (...)
@@ -1815,14 +1815,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfileMetadata_get_ProviderName(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileMetadata* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"ProviderName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"ProviderName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderName());
         }
         catch (...)
@@ -1834,14 +1834,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfileMetadata_get_State(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileMetadata* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -1853,14 +1853,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfileMetadata_add_StateChanged(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileMetadata* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::ESimProfileMetadata, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.StateChanged(param0));
@@ -1874,14 +1874,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfileMetadata_remove_StateChanged(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileMetadata* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimProfileMetadata", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StateChanged(param0);
@@ -1977,14 +1977,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfilePolicy_get_CanDelete(py::wrapper::Windows::Networking::NetworkOperators::ESimProfilePolicy* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfilePolicy", L"CanDelete"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfilePolicy", L"CanDelete"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanDelete());
         }
         catch (...)
@@ -1996,14 +1996,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfilePolicy_get_CanDisable(py::wrapper::Windows::Networking::NetworkOperators::ESimProfilePolicy* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfilePolicy", L"CanDisable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfilePolicy", L"CanDisable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanDisable());
         }
         catch (...)
@@ -2015,14 +2015,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfilePolicy_get_IsManagedByEnterprise(py::wrapper::Windows::Networking::NetworkOperators::ESimProfilePolicy* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfilePolicy", L"IsManagedByEnterprise"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimProfilePolicy", L"IsManagedByEnterprise"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsManagedByEnterprise());
         }
         catch (...)
@@ -2106,14 +2106,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimRemovedEventArgs_get_ESim(py::wrapper::Windows::Networking::NetworkOperators::ESimRemovedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimRemovedEventArgs", L"ESim"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimRemovedEventArgs", L"ESim"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ESim());
         }
         catch (...)
@@ -2195,14 +2195,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimServiceInfo_get_AuthenticationPreference(py::wrapper::Windows::Networking::NetworkOperators::ESimServiceInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimServiceInfo", L"AuthenticationPreference"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimServiceInfo", L"AuthenticationPreference"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AuthenticationPreference());
         }
         catch (...)
@@ -2214,14 +2214,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimServiceInfo_get_IsESimUiEnabled(py::wrapper::Windows::Networking::NetworkOperators::ESimServiceInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimServiceInfo", L"IsESimUiEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimServiceInfo", L"IsESimUiEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsESimUiEnabled());
         }
         catch (...)
@@ -2304,14 +2304,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimUpdatedEventArgs_get_ESim(py::wrapper::Windows::Networking::NetworkOperators::ESimUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimUpdatedEventArgs", L"ESim"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimUpdatedEventArgs", L"ESim"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ESim());
         }
         catch (...)
@@ -2397,14 +2397,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -2427,14 +2427,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -2453,14 +2453,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimWatcher_get_Status(py::wrapper::Windows::Networking::NetworkOperators::ESimWatcher* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -2472,14 +2472,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimWatcher_add_Added(py::wrapper::Windows::Networking::NetworkOperators::ESimWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"Added"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"Added"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::ESimWatcher, winrt::Windows::Networking::NetworkOperators::ESimAddedEventArgs>>(arg);
 
             return py::convert(self->obj.Added(param0));
@@ -2493,14 +2493,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimWatcher_remove_Added(py::wrapper::Windows::Networking::NetworkOperators::ESimWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"Added"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"Added"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Added(param0);
@@ -2515,14 +2515,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimWatcher_add_EnumerationCompleted(py::wrapper::Windows::Networking::NetworkOperators::ESimWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"EnumerationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"EnumerationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::ESimWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.EnumerationCompleted(param0));
@@ -2536,14 +2536,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimWatcher_remove_EnumerationCompleted(py::wrapper::Windows::Networking::NetworkOperators::ESimWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"EnumerationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"EnumerationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.EnumerationCompleted(param0);
@@ -2558,14 +2558,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimWatcher_add_Removed(py::wrapper::Windows::Networking::NetworkOperators::ESimWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"Removed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"Removed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::ESimWatcher, winrt::Windows::Networking::NetworkOperators::ESimRemovedEventArgs>>(arg);
 
             return py::convert(self->obj.Removed(param0));
@@ -2579,14 +2579,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimWatcher_remove_Removed(py::wrapper::Windows::Networking::NetworkOperators::ESimWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"Removed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"Removed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Removed(param0);
@@ -2601,14 +2601,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimWatcher_add_Stopped(py::wrapper::Windows::Networking::NetworkOperators::ESimWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"Stopped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"Stopped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::ESimWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Stopped(param0));
@@ -2622,14 +2622,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimWatcher_remove_Stopped(py::wrapper::Windows::Networking::NetworkOperators::ESimWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"Stopped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"Stopped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Stopped(param0);
@@ -2644,14 +2644,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimWatcher_add_Updated(py::wrapper::Windows::Networking::NetworkOperators::ESimWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"Updated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"Updated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::ESimWatcher, winrt::Windows::Networking::NetworkOperators::ESimUpdatedEventArgs>>(arg);
 
             return py::convert(self->obj.Updated(param0));
@@ -2665,14 +2665,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimWatcher_remove_Updated(py::wrapper::Windows::Networking::NetworkOperators::ESimWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"Updated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.ESimWatcher", L"Updated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Updated(param0);
@@ -2765,14 +2765,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.FdnAccessManager", L"RequestUnlockAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.FdnAccessManager", L"RequestUnlockAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::NetworkOperators::FdnAccessManager::RequestUnlockAsync(param0));
@@ -2864,14 +2864,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationContext", L"AbortAuthentication", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationContext", L"AbortAuthentication", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 self->obj.AbortAuthentication(param0);
@@ -2896,14 +2896,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationContext", L"IssueCredentials", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationContext", L"IssueCredentials", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -2931,14 +2931,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationContext", L"IssueCredentialsAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationContext", L"IssueCredentialsAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -2965,14 +2965,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationContext", L"SkipAuthentication", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationContext", L"SkipAuthentication", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.SkipAuthentication();
                 Py_RETURN_NONE;
             }
@@ -2995,14 +2995,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationContext", L"TriggerAttentionRequired", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationContext", L"TriggerAttentionRequired", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -3028,14 +3028,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationContext", L"TryGetAuthenticationContext", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationContext", L"TryGetAuthenticationContext", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationContext param1 { nullptr };
 
@@ -3068,14 +3068,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* HotspotAuthenticationContext_get_AuthenticationUrl(py::wrapper::Windows::Networking::NetworkOperators::HotspotAuthenticationContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationContext", L"AuthenticationUrl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationContext", L"AuthenticationUrl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AuthenticationUrl());
         }
         catch (...)
@@ -3087,14 +3087,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* HotspotAuthenticationContext_get_NetworkAdapter(py::wrapper::Windows::Networking::NetworkOperators::HotspotAuthenticationContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationContext", L"NetworkAdapter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationContext", L"NetworkAdapter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkAdapter());
         }
         catch (...)
@@ -3106,14 +3106,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* HotspotAuthenticationContext_get_RedirectMessageUrl(py::wrapper::Windows::Networking::NetworkOperators::HotspotAuthenticationContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationContext", L"RedirectMessageUrl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationContext", L"RedirectMessageUrl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RedirectMessageUrl());
         }
         catch (...)
@@ -3125,14 +3125,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* HotspotAuthenticationContext_get_RedirectMessageXml(py::wrapper::Windows::Networking::NetworkOperators::HotspotAuthenticationContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationContext", L"RedirectMessageXml"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationContext", L"RedirectMessageXml"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RedirectMessageXml());
         }
         catch (...)
@@ -3144,14 +3144,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* HotspotAuthenticationContext_get_WirelessNetworkId(py::wrapper::Windows::Networking::NetworkOperators::HotspotAuthenticationContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationContext", L"WirelessNetworkId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationContext", L"WirelessNetworkId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WirelessNetworkId());
         }
         catch (...)
@@ -3268,14 +3268,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* HotspotAuthenticationEventDetails_get_EventToken(py::wrapper::Windows::Networking::NetworkOperators::HotspotAuthenticationEventDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationEventDetails", L"EventToken"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.HotspotAuthenticationEventDetails", L"EventToken"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EventToken());
         }
         catch (...)
@@ -3357,14 +3357,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* HotspotCredentialsAuthenticationResult_get_AuthenticationReplyXml(py::wrapper::Windows::Networking::NetworkOperators::HotspotCredentialsAuthenticationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.HotspotCredentialsAuthenticationResult", L"AuthenticationReplyXml"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.HotspotCredentialsAuthenticationResult", L"AuthenticationReplyXml"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AuthenticationReplyXml());
         }
         catch (...)
@@ -3376,14 +3376,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* HotspotCredentialsAuthenticationResult_get_HasNetworkErrorOccurred(py::wrapper::Windows::Networking::NetworkOperators::HotspotCredentialsAuthenticationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.HotspotCredentialsAuthenticationResult", L"HasNetworkErrorOccurred"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.HotspotCredentialsAuthenticationResult", L"HasNetworkErrorOccurred"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasNetworkErrorOccurred());
         }
         catch (...)
@@ -3395,14 +3395,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* HotspotCredentialsAuthenticationResult_get_LogoffUrl(py::wrapper::Windows::Networking::NetworkOperators::HotspotCredentialsAuthenticationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.HotspotCredentialsAuthenticationResult", L"LogoffUrl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.HotspotCredentialsAuthenticationResult", L"LogoffUrl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LogoffUrl());
         }
         catch (...)
@@ -3414,14 +3414,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* HotspotCredentialsAuthenticationResult_get_ResponseCode(py::wrapper::Windows::Networking::NetworkOperators::HotspotCredentialsAuthenticationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.HotspotCredentialsAuthenticationResult", L"ResponseCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.HotspotCredentialsAuthenticationResult", L"ResponseCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResponseCode());
         }
         catch (...)
@@ -3498,14 +3498,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* KnownCSimFilePaths_get_EFSpn(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownCSimFilePaths", L"EFSpn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownCSimFilePaths", L"EFSpn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::NetworkOperators::KnownCSimFilePaths::EFSpn());
         }
         catch (...)
@@ -3517,14 +3517,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* KnownCSimFilePaths_get_Gid1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownCSimFilePaths", L"Gid1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownCSimFilePaths", L"Gid1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::NetworkOperators::KnownCSimFilePaths::Gid1());
         }
         catch (...)
@@ -3536,14 +3536,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* KnownCSimFilePaths_get_Gid2(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownCSimFilePaths", L"Gid2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownCSimFilePaths", L"Gid2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::NetworkOperators::KnownCSimFilePaths::Gid2());
         }
         catch (...)
@@ -3617,14 +3617,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* KnownRuimFilePaths_get_EFSpn(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownRuimFilePaths", L"EFSpn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownRuimFilePaths", L"EFSpn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::NetworkOperators::KnownRuimFilePaths::EFSpn());
         }
         catch (...)
@@ -3636,14 +3636,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* KnownRuimFilePaths_get_Gid1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownRuimFilePaths", L"Gid1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownRuimFilePaths", L"Gid1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::NetworkOperators::KnownRuimFilePaths::Gid1());
         }
         catch (...)
@@ -3655,14 +3655,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* KnownRuimFilePaths_get_Gid2(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownRuimFilePaths", L"Gid2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownRuimFilePaths", L"Gid2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::NetworkOperators::KnownRuimFilePaths::Gid2());
         }
         catch (...)
@@ -3736,14 +3736,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* KnownSimFilePaths_get_EFOns(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownSimFilePaths", L"EFOns"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownSimFilePaths", L"EFOns"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::NetworkOperators::KnownSimFilePaths::EFOns());
         }
         catch (...)
@@ -3755,14 +3755,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* KnownSimFilePaths_get_EFSpn(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownSimFilePaths", L"EFSpn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownSimFilePaths", L"EFSpn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::NetworkOperators::KnownSimFilePaths::EFSpn());
         }
         catch (...)
@@ -3774,14 +3774,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* KnownSimFilePaths_get_Gid1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownSimFilePaths", L"Gid1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownSimFilePaths", L"Gid1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::NetworkOperators::KnownSimFilePaths::Gid1());
         }
         catch (...)
@@ -3793,14 +3793,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* KnownSimFilePaths_get_Gid2(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownSimFilePaths", L"Gid2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownSimFilePaths", L"Gid2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::NetworkOperators::KnownSimFilePaths::Gid2());
         }
         catch (...)
@@ -3875,14 +3875,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* KnownUSimFilePaths_get_EFOpl(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownUSimFilePaths", L"EFOpl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownUSimFilePaths", L"EFOpl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::NetworkOperators::KnownUSimFilePaths::EFOpl());
         }
         catch (...)
@@ -3894,14 +3894,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* KnownUSimFilePaths_get_EFPnn(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownUSimFilePaths", L"EFPnn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownUSimFilePaths", L"EFPnn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::NetworkOperators::KnownUSimFilePaths::EFPnn());
         }
         catch (...)
@@ -3913,14 +3913,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* KnownUSimFilePaths_get_EFSpn(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownUSimFilePaths", L"EFSpn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownUSimFilePaths", L"EFSpn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::NetworkOperators::KnownUSimFilePaths::EFSpn());
         }
         catch (...)
@@ -3932,14 +3932,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* KnownUSimFilePaths_get_Gid1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownUSimFilePaths", L"Gid1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownUSimFilePaths", L"Gid1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::NetworkOperators::KnownUSimFilePaths::Gid1());
         }
         catch (...)
@@ -3951,14 +3951,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* KnownUSimFilePaths_get_Gid2(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownUSimFilePaths", L"Gid2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.KnownUSimFilePaths", L"Gid2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::NetworkOperators::KnownUSimFilePaths::Gid2());
         }
         catch (...)
@@ -4046,14 +4046,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccount", L"CreateFromNetworkAccountId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccount", L"CreateFromNetworkAccountId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccount::CreateFromNetworkAccountId(param0));
@@ -4077,14 +4077,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccount", L"GetConnectionProfiles", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccount", L"GetConnectionProfiles", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetConnectionProfiles());
             }
             catch (...)
@@ -4102,14 +4102,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccount_get_CurrentDeviceInformation(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccount* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccount", L"CurrentDeviceInformation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccount", L"CurrentDeviceInformation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentDeviceInformation());
         }
         catch (...)
@@ -4121,14 +4121,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccount_get_CurrentNetwork(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccount* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccount", L"CurrentNetwork"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccount", L"CurrentNetwork"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentNetwork());
         }
         catch (...)
@@ -4140,14 +4140,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccount_get_NetworkAccountId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccount* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccount", L"NetworkAccountId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccount", L"NetworkAccountId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkAccountId());
         }
         catch (...)
@@ -4159,14 +4159,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccount_get_ServiceProviderGuid(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccount* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccount", L"ServiceProviderGuid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccount", L"ServiceProviderGuid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceProviderGuid());
         }
         catch (...)
@@ -4178,14 +4178,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccount_get_ServiceProviderName(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccount* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccount", L"ServiceProviderName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccount", L"ServiceProviderName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceProviderName());
         }
         catch (...)
@@ -4197,14 +4197,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccount_get_AccountExperienceUrl(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccount* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccount", L"AccountExperienceUrl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccount", L"AccountExperienceUrl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccountExperienceUrl());
         }
         catch (...)
@@ -4216,14 +4216,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccount_get_AvailableNetworkAccountIds(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccount", L"AvailableNetworkAccountIds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccount", L"AvailableNetworkAccountIds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccount::AvailableNetworkAccountIds());
         }
         catch (...)
@@ -4338,14 +4338,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccountEventArgs_get_NetworkAccountId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountEventArgs", L"NetworkAccountId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountEventArgs", L"NetworkAccountId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkAccountId());
         }
         catch (...)
@@ -4427,14 +4427,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccountUpdatedEventArgs_get_HasDeviceInformationChanged(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountUpdatedEventArgs", L"HasDeviceInformationChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountUpdatedEventArgs", L"HasDeviceInformationChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasDeviceInformationChanged());
         }
         catch (...)
@@ -4446,14 +4446,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccountUpdatedEventArgs_get_HasNetworkChanged(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountUpdatedEventArgs", L"HasNetworkChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountUpdatedEventArgs", L"HasNetworkChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasNetworkChanged());
         }
         catch (...)
@@ -4465,14 +4465,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccountUpdatedEventArgs_get_NetworkAccountId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountUpdatedEventArgs", L"NetworkAccountId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountUpdatedEventArgs", L"NetworkAccountId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkAccountId());
         }
         catch (...)
@@ -4582,14 +4582,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -4612,14 +4612,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -4638,14 +4638,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccountWatcher_get_Status(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -4657,14 +4657,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccountWatcher_add_AccountAdded(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"AccountAdded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"AccountAdded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher, winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountEventArgs>>(arg);
 
             return py::convert(self->obj.AccountAdded(param0));
@@ -4678,14 +4678,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccountWatcher_remove_AccountAdded(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"AccountAdded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"AccountAdded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AccountAdded(param0);
@@ -4700,14 +4700,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccountWatcher_add_AccountRemoved(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"AccountRemoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"AccountRemoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher, winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountEventArgs>>(arg);
 
             return py::convert(self->obj.AccountRemoved(param0));
@@ -4721,14 +4721,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccountWatcher_remove_AccountRemoved(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"AccountRemoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"AccountRemoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AccountRemoved(param0);
@@ -4743,14 +4743,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccountWatcher_add_AccountUpdated(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"AccountUpdated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"AccountUpdated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher, winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountUpdatedEventArgs>>(arg);
 
             return py::convert(self->obj.AccountUpdated(param0));
@@ -4764,14 +4764,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccountWatcher_remove_AccountUpdated(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"AccountUpdated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"AccountUpdated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AccountUpdated(param0);
@@ -4786,14 +4786,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccountWatcher_add_EnumerationCompleted(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"EnumerationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"EnumerationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.EnumerationCompleted(param0));
@@ -4807,14 +4807,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccountWatcher_remove_EnumerationCompleted(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"EnumerationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"EnumerationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.EnumerationCompleted(param0);
@@ -4829,14 +4829,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccountWatcher_add_Stopped(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"Stopped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"Stopped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Stopped(param0));
@@ -4850,14 +4850,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccountWatcher_remove_Stopped(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"Stopped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher", L"Stopped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Stopped(param0);
@@ -4979,14 +4979,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAntennaSar_get_AntennaIndex(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAntennaSar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar", L"AntennaIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar", L"AntennaIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AntennaIndex());
         }
         catch (...)
@@ -4998,14 +4998,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAntennaSar_get_SarBackoffIndex(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAntennaSar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar", L"SarBackoffIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar", L"SarBackoffIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SarBackoffIndex());
         }
         catch (...)
@@ -5088,14 +5088,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellCdma_get_BaseStationId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellCdma* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellCdma", L"BaseStationId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellCdma", L"BaseStationId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseStationId());
         }
         catch (...)
@@ -5107,14 +5107,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellCdma_get_BaseStationLastBroadcastGpsTime(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellCdma* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellCdma", L"BaseStationLastBroadcastGpsTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellCdma", L"BaseStationLastBroadcastGpsTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseStationLastBroadcastGpsTime());
         }
         catch (...)
@@ -5126,14 +5126,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellCdma_get_BaseStationLatitude(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellCdma* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellCdma", L"BaseStationLatitude"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellCdma", L"BaseStationLatitude"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseStationLatitude());
         }
         catch (...)
@@ -5145,14 +5145,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellCdma_get_BaseStationLongitude(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellCdma* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellCdma", L"BaseStationLongitude"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellCdma", L"BaseStationLongitude"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseStationLongitude());
         }
         catch (...)
@@ -5164,14 +5164,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellCdma_get_BaseStationPNCode(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellCdma* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellCdma", L"BaseStationPNCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellCdma", L"BaseStationPNCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseStationPNCode());
         }
         catch (...)
@@ -5183,14 +5183,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellCdma_get_NetworkId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellCdma* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellCdma", L"NetworkId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellCdma", L"NetworkId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkId());
         }
         catch (...)
@@ -5202,14 +5202,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellCdma_get_PilotSignalStrengthInDB(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellCdma* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellCdma", L"PilotSignalStrengthInDB"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellCdma", L"PilotSignalStrengthInDB"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PilotSignalStrengthInDB());
         }
         catch (...)
@@ -5221,14 +5221,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellCdma_get_SystemId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellCdma* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellCdma", L"SystemId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellCdma", L"SystemId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SystemId());
         }
         catch (...)
@@ -5317,14 +5317,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellGsm_get_BaseStationId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellGsm* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellGsm", L"BaseStationId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellGsm", L"BaseStationId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseStationId());
         }
         catch (...)
@@ -5336,14 +5336,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellGsm_get_CellId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellGsm* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellGsm", L"CellId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellGsm", L"CellId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CellId());
         }
         catch (...)
@@ -5355,14 +5355,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellGsm_get_ChannelNumber(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellGsm* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellGsm", L"ChannelNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellGsm", L"ChannelNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChannelNumber());
         }
         catch (...)
@@ -5374,14 +5374,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellGsm_get_LocationAreaCode(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellGsm* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellGsm", L"LocationAreaCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellGsm", L"LocationAreaCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocationAreaCode());
         }
         catch (...)
@@ -5393,14 +5393,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellGsm_get_ProviderId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellGsm* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellGsm", L"ProviderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellGsm", L"ProviderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderId());
         }
         catch (...)
@@ -5412,14 +5412,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellGsm_get_ReceivedSignalStrengthInDBm(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellGsm* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellGsm", L"ReceivedSignalStrengthInDBm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellGsm", L"ReceivedSignalStrengthInDBm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReceivedSignalStrengthInDBm());
         }
         catch (...)
@@ -5431,14 +5431,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellGsm_get_TimingAdvanceInBitPeriods(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellGsm* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellGsm", L"TimingAdvanceInBitPeriods"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellGsm", L"TimingAdvanceInBitPeriods"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimingAdvanceInBitPeriods());
         }
         catch (...)
@@ -5526,14 +5526,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellLte_get_CellId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellLte* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellLte", L"CellId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellLte", L"CellId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CellId());
         }
         catch (...)
@@ -5545,14 +5545,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellLte_get_ChannelNumber(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellLte* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellLte", L"ChannelNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellLte", L"ChannelNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChannelNumber());
         }
         catch (...)
@@ -5564,14 +5564,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellLte_get_PhysicalCellId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellLte* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellLte", L"PhysicalCellId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellLte", L"PhysicalCellId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhysicalCellId());
         }
         catch (...)
@@ -5583,14 +5583,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellLte_get_ProviderId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellLte* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellLte", L"ProviderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellLte", L"ProviderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderId());
         }
         catch (...)
@@ -5602,14 +5602,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellLte_get_ReferenceSignalReceivedPowerInDBm(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellLte* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellLte", L"ReferenceSignalReceivedPowerInDBm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellLte", L"ReferenceSignalReceivedPowerInDBm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReferenceSignalReceivedPowerInDBm());
         }
         catch (...)
@@ -5621,14 +5621,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellLte_get_ReferenceSignalReceivedQualityInDBm(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellLte* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellLte", L"ReferenceSignalReceivedQualityInDBm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellLte", L"ReferenceSignalReceivedQualityInDBm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReferenceSignalReceivedQualityInDBm());
         }
         catch (...)
@@ -5640,14 +5640,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellLte_get_TimingAdvanceInBitPeriods(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellLte* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellLte", L"TimingAdvanceInBitPeriods"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellLte", L"TimingAdvanceInBitPeriods"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimingAdvanceInBitPeriods());
         }
         catch (...)
@@ -5659,14 +5659,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellLte_get_TrackingAreaCode(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellLte* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellLte", L"TrackingAreaCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellLte", L"TrackingAreaCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrackingAreaCode());
         }
         catch (...)
@@ -5755,14 +5755,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellNR_get_CellId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellNR* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellNR", L"CellId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellNR", L"CellId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CellId());
         }
         catch (...)
@@ -5774,14 +5774,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellNR_get_ChannelNumber(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellNR* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellNR", L"ChannelNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellNR", L"ChannelNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChannelNumber());
         }
         catch (...)
@@ -5793,14 +5793,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellNR_get_PhysicalCellId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellNR* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellNR", L"PhysicalCellId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellNR", L"PhysicalCellId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhysicalCellId());
         }
         catch (...)
@@ -5812,14 +5812,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellNR_get_ProviderId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellNR* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellNR", L"ProviderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellNR", L"ProviderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderId());
         }
         catch (...)
@@ -5831,14 +5831,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellNR_get_ReferenceSignalReceivedPowerInDBm(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellNR* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellNR", L"ReferenceSignalReceivedPowerInDBm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellNR", L"ReferenceSignalReceivedPowerInDBm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReferenceSignalReceivedPowerInDBm());
         }
         catch (...)
@@ -5850,14 +5850,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellNR_get_ReferenceSignalReceivedQualityInDBm(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellNR* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellNR", L"ReferenceSignalReceivedQualityInDBm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellNR", L"ReferenceSignalReceivedQualityInDBm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReferenceSignalReceivedQualityInDBm());
         }
         catch (...)
@@ -5869,14 +5869,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellNR_get_SignalToNoiseRatioInDB(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellNR* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellNR", L"SignalToNoiseRatioInDB"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellNR", L"SignalToNoiseRatioInDB"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SignalToNoiseRatioInDB());
         }
         catch (...)
@@ -5888,14 +5888,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellNR_get_TimingAdvanceInNanoseconds(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellNR* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellNR", L"TimingAdvanceInNanoseconds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellNR", L"TimingAdvanceInNanoseconds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimingAdvanceInNanoseconds());
         }
         catch (...)
@@ -5907,14 +5907,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellNR_get_TrackingAreaCode(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellNR* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellNR", L"TrackingAreaCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellNR", L"TrackingAreaCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrackingAreaCode());
         }
         catch (...)
@@ -6004,14 +6004,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellTdscdma_get_CellId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellTdscdma* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma", L"CellId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma", L"CellId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CellId());
         }
         catch (...)
@@ -6023,14 +6023,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellTdscdma_get_CellParameterId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellTdscdma* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma", L"CellParameterId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma", L"CellParameterId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CellParameterId());
         }
         catch (...)
@@ -6042,14 +6042,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellTdscdma_get_ChannelNumber(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellTdscdma* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma", L"ChannelNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma", L"ChannelNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChannelNumber());
         }
         catch (...)
@@ -6061,14 +6061,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellTdscdma_get_LocationAreaCode(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellTdscdma* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma", L"LocationAreaCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma", L"LocationAreaCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocationAreaCode());
         }
         catch (...)
@@ -6080,14 +6080,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellTdscdma_get_PathLossInDB(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellTdscdma* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma", L"PathLossInDB"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma", L"PathLossInDB"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PathLossInDB());
         }
         catch (...)
@@ -6099,14 +6099,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellTdscdma_get_ProviderId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellTdscdma* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma", L"ProviderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma", L"ProviderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderId());
         }
         catch (...)
@@ -6118,14 +6118,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellTdscdma_get_ReceivedSignalCodePowerInDBm(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellTdscdma* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma", L"ReceivedSignalCodePowerInDBm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma", L"ReceivedSignalCodePowerInDBm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReceivedSignalCodePowerInDBm());
         }
         catch (...)
@@ -6137,14 +6137,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellTdscdma_get_TimingAdvanceInBitPeriods(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellTdscdma* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma", L"TimingAdvanceInBitPeriods"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma", L"TimingAdvanceInBitPeriods"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimingAdvanceInBitPeriods());
         }
         catch (...)
@@ -6233,14 +6233,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellUmts_get_CellId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellUmts* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellUmts", L"CellId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellUmts", L"CellId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CellId());
         }
         catch (...)
@@ -6252,14 +6252,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellUmts_get_ChannelNumber(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellUmts* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellUmts", L"ChannelNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellUmts", L"ChannelNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChannelNumber());
         }
         catch (...)
@@ -6271,14 +6271,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellUmts_get_LocationAreaCode(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellUmts* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellUmts", L"LocationAreaCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellUmts", L"LocationAreaCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocationAreaCode());
         }
         catch (...)
@@ -6290,14 +6290,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellUmts_get_PathLossInDB(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellUmts* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellUmts", L"PathLossInDB"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellUmts", L"PathLossInDB"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PathLossInDB());
         }
         catch (...)
@@ -6309,14 +6309,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellUmts_get_PrimaryScramblingCode(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellUmts* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellUmts", L"PrimaryScramblingCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellUmts", L"PrimaryScramblingCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrimaryScramblingCode());
         }
         catch (...)
@@ -6328,14 +6328,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellUmts_get_ProviderId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellUmts* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellUmts", L"ProviderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellUmts", L"ProviderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderId());
         }
         catch (...)
@@ -6347,14 +6347,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellUmts_get_ReceivedSignalCodePowerInDBm(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellUmts* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellUmts", L"ReceivedSignalCodePowerInDBm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellUmts", L"ReceivedSignalCodePowerInDBm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReceivedSignalCodePowerInDBm());
         }
         catch (...)
@@ -6366,14 +6366,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellUmts_get_SignalToNoiseRatioInDB(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellUmts* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellUmts", L"SignalToNoiseRatioInDB"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellUmts", L"SignalToNoiseRatioInDB"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SignalToNoiseRatioInDB());
         }
         catch (...)
@@ -6462,14 +6462,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellsInfo_get_NeighboringCellsCdma(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"NeighboringCellsCdma"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"NeighboringCellsCdma"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NeighboringCellsCdma());
         }
         catch (...)
@@ -6481,14 +6481,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellsInfo_get_NeighboringCellsGsm(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"NeighboringCellsGsm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"NeighboringCellsGsm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NeighboringCellsGsm());
         }
         catch (...)
@@ -6500,14 +6500,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellsInfo_get_NeighboringCellsLte(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"NeighboringCellsLte"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"NeighboringCellsLte"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NeighboringCellsLte());
         }
         catch (...)
@@ -6519,14 +6519,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellsInfo_get_NeighboringCellsTdscdma(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"NeighboringCellsTdscdma"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"NeighboringCellsTdscdma"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NeighboringCellsTdscdma());
         }
         catch (...)
@@ -6538,14 +6538,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellsInfo_get_NeighboringCellsUmts(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"NeighboringCellsUmts"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"NeighboringCellsUmts"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NeighboringCellsUmts());
         }
         catch (...)
@@ -6557,14 +6557,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellsInfo_get_ServingCellsCdma(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"ServingCellsCdma"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"ServingCellsCdma"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServingCellsCdma());
         }
         catch (...)
@@ -6576,14 +6576,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellsInfo_get_ServingCellsGsm(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"ServingCellsGsm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"ServingCellsGsm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServingCellsGsm());
         }
         catch (...)
@@ -6595,14 +6595,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellsInfo_get_ServingCellsLte(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"ServingCellsLte"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"ServingCellsLte"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServingCellsLte());
         }
         catch (...)
@@ -6614,14 +6614,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellsInfo_get_ServingCellsTdscdma(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"ServingCellsTdscdma"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"ServingCellsTdscdma"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServingCellsTdscdma());
         }
         catch (...)
@@ -6633,14 +6633,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellsInfo_get_ServingCellsUmts(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"ServingCellsUmts"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"ServingCellsUmts"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServingCellsUmts());
         }
         catch (...)
@@ -6652,14 +6652,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellsInfo_get_NeighboringCellsNR(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"NeighboringCellsNR"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"NeighboringCellsNR"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NeighboringCellsNR());
         }
         catch (...)
@@ -6671,14 +6671,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCellsInfo_get_ServingCellsNR(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"ServingCellsNR"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo", L"ServingCellsNR"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServingCellsNR());
         }
         catch (...)
@@ -6771,14 +6771,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandCurrentSlotIndexChangedEventArgs_get_CurrentSlotIndex(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCurrentSlotIndexChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCurrentSlotIndexChangedEventArgs", L"CurrentSlotIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandCurrentSlotIndexChangedEventArgs", L"CurrentSlotIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentSlotIndex());
         }
         catch (...)
@@ -6860,14 +6860,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceInformation_get_CellularClass(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"CellularClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"CellularClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CellularClass());
         }
         catch (...)
@@ -6879,14 +6879,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceInformation_get_CurrentRadioState(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"CurrentRadioState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"CurrentRadioState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentRadioState());
         }
         catch (...)
@@ -6898,14 +6898,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceInformation_get_CustomDataClass(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"CustomDataClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"CustomDataClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CustomDataClass());
         }
         catch (...)
@@ -6917,14 +6917,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceInformation_get_DataClasses(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"DataClasses"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"DataClasses"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DataClasses());
         }
         catch (...)
@@ -6936,14 +6936,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceInformation_get_DeviceId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -6955,14 +6955,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceInformation_get_DeviceType(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"DeviceType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"DeviceType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceType());
         }
         catch (...)
@@ -6974,14 +6974,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceInformation_get_FirmwareInformation(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"FirmwareInformation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"FirmwareInformation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirmwareInformation());
         }
         catch (...)
@@ -6993,14 +6993,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceInformation_get_Manufacturer(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"Manufacturer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"Manufacturer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Manufacturer());
         }
         catch (...)
@@ -7012,14 +7012,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceInformation_get_MobileEquipmentId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"MobileEquipmentId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"MobileEquipmentId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MobileEquipmentId());
         }
         catch (...)
@@ -7031,14 +7031,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceInformation_get_Model(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"Model"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"Model"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Model());
         }
         catch (...)
@@ -7050,14 +7050,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceInformation_get_NetworkDeviceStatus(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"NetworkDeviceStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"NetworkDeviceStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkDeviceStatus());
         }
         catch (...)
@@ -7069,14 +7069,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceInformation_get_SimIccId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"SimIccId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"SimIccId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimIccId());
         }
         catch (...)
@@ -7088,14 +7088,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceInformation_get_SubscriberId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"SubscriberId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"SubscriberId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SubscriberId());
         }
         catch (...)
@@ -7107,14 +7107,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceInformation_get_TelephoneNumbers(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"TelephoneNumbers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"TelephoneNumbers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TelephoneNumbers());
         }
         catch (...)
@@ -7126,14 +7126,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceInformation_get_PinManager(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"PinManager"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"PinManager"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PinManager());
         }
         catch (...)
@@ -7145,14 +7145,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceInformation_get_Revision(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"Revision"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"Revision"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Revision());
         }
         catch (...)
@@ -7164,14 +7164,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceInformation_get_SerialNumber(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"SerialNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"SerialNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SerialNumber());
         }
         catch (...)
@@ -7183,14 +7183,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceInformation_get_SimGid1(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"SimGid1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"SimGid1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimGid1());
         }
         catch (...)
@@ -7202,14 +7202,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceInformation_get_SimPnn(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"SimPnn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"SimPnn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimPnn());
         }
         catch (...)
@@ -7221,14 +7221,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceInformation_get_SimSpn(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"SimSpn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"SimSpn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimSpn());
         }
         catch (...)
@@ -7240,14 +7240,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceInformation_get_SlotManager(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"SlotManager"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation", L"SlotManager"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SlotManager());
         }
         catch (...)
@@ -7353,14 +7353,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceService", L"OpenCommandSession", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceService", L"OpenCommandSession", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.OpenCommandSession());
             }
             catch (...)
@@ -7382,14 +7382,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceService", L"OpenDataSession", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceService", L"OpenDataSession", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.OpenDataSession());
             }
             catch (...)
@@ -7407,14 +7407,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceService_get_DeviceServiceId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceService* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceService", L"DeviceServiceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceService", L"DeviceServiceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceServiceId());
         }
         catch (...)
@@ -7426,14 +7426,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceService_get_SupportedCommands(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceService* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceService", L"SupportedCommands"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceService", L"SupportedCommands"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedCommands());
         }
         catch (...)
@@ -7518,14 +7518,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceServiceCommandResult_get_ResponseData(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandResult", L"ResponseData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandResult", L"ResponseData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResponseData());
         }
         catch (...)
@@ -7537,14 +7537,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceServiceCommandResult_get_StatusCode(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandResult", L"StatusCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandResult", L"StatusCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StatusCode());
         }
         catch (...)
@@ -7631,14 +7631,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession", L"CloseSession", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession", L"CloseSession", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.CloseSession();
                 Py_RETURN_NONE;
             }
@@ -7661,14 +7661,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession", L"SendQueryCommandAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession", L"SendQueryCommandAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -7693,14 +7693,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession", L"SendSetCommandAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession", L"SendSetCommandAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -7793,14 +7793,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceServiceDataReceivedEventArgs_get_ReceivedData(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataReceivedEventArgs", L"ReceivedData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataReceivedEventArgs", L"ReceivedData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReceivedData());
         }
         catch (...)
@@ -7886,14 +7886,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataSession", L"CloseSession", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataSession", L"CloseSession", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.CloseSession();
                 Py_RETURN_NONE;
             }
@@ -7916,14 +7916,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataSession", L"WriteDataAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataSession", L"WriteDataAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert(self->obj.WriteDataAsync(param0));
@@ -7943,14 +7943,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceServiceDataSession_add_DataReceived(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataSession", L"DataReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataSession", L"DataReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataSession, winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataReceivedEventArgs>>(arg);
 
             return py::convert(self->obj.DataReceived(param0));
@@ -7964,14 +7964,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceServiceDataSession_remove_DataReceived(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataSession", L"DataReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataSession", L"DataReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DataReceived(param0);
@@ -8059,14 +8059,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceServiceInformation_get_DeviceServiceId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation", L"DeviceServiceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation", L"DeviceServiceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceServiceId());
         }
         catch (...)
@@ -8078,14 +8078,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceServiceInformation_get_IsDataReadSupported(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation", L"IsDataReadSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation", L"IsDataReadSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDataReadSupported());
         }
         catch (...)
@@ -8097,14 +8097,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceServiceInformation_get_IsDataWriteSupported(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation", L"IsDataWriteSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation", L"IsDataWriteSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDataWriteSupported());
         }
         catch (...)
@@ -8188,14 +8188,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceServiceTriggerDetails_get_DeviceId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceTriggerDetails", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceTriggerDetails", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -8207,14 +8207,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceServiceTriggerDetails_get_DeviceServiceId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceTriggerDetails", L"DeviceServiceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceTriggerDetails", L"DeviceServiceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceServiceId());
         }
         catch (...)
@@ -8226,14 +8226,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceServiceTriggerDetails_get_ReceivedData(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceTriggerDetails", L"ReceivedData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceTriggerDetails", L"ReceivedData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReceivedData());
         }
         catch (...)
@@ -8245,14 +8245,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceServiceTriggerDetails_get_EventId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceTriggerDetails", L"EventId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceTriggerDetails", L"EventId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EventId());
         }
         catch (...)
@@ -8341,14 +8341,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"FromId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"FromId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::NetworkOperators::MobileBroadbandModem::FromId(param0));
@@ -8372,14 +8372,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"GetCurrentConfigurationAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"GetCurrentConfigurationAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentConfigurationAsync());
             }
             catch (...)
@@ -8401,14 +8401,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Networking::NetworkOperators::MobileBroadbandModem::GetDefault());
             }
             catch (...)
@@ -8430,14 +8430,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Networking::NetworkOperators::MobileBroadbandModem::GetDeviceSelector());
             }
             catch (...)
@@ -8459,14 +8459,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"GetDeviceService", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"GetDeviceService", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert(self->obj.GetDeviceService(param0));
@@ -8490,14 +8490,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"GetIsPassthroughEnabled", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"GetIsPassthroughEnabled", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.GetIsPassthroughEnabled(param0));
@@ -8521,14 +8521,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"GetIsPassthroughEnabledAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"GetIsPassthroughEnabledAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetIsPassthroughEnabledAsync());
             }
             catch (...)
@@ -8539,14 +8539,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"GetIsPassthroughEnabledAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"GetIsPassthroughEnabledAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.GetIsPassthroughEnabledAsync(param0));
@@ -8570,14 +8570,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"ResetAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"ResetAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ResetAsync());
             }
             catch (...)
@@ -8599,14 +8599,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"SetIsPassthroughEnabled", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"SetIsPassthroughEnabled", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -8631,14 +8631,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"SetIsPassthroughEnabledAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"SetIsPassthroughEnabledAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(self->obj.SetIsPassthroughEnabledAsync(param0));
@@ -8651,14 +8651,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"SetIsPassthroughEnabledAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"SetIsPassthroughEnabledAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -8683,14 +8683,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"TryGetPcoAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"TryGetPcoAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryGetPcoAsync());
             }
             catch (...)
@@ -8708,14 +8708,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModem_get_CurrentAccount(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"CurrentAccount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"CurrentAccount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentAccount());
         }
         catch (...)
@@ -8727,14 +8727,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModem_get_CurrentNetwork(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"CurrentNetwork"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"CurrentNetwork"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentNetwork());
         }
         catch (...)
@@ -8746,14 +8746,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModem_get_DeviceInformation(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"DeviceInformation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"DeviceInformation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceInformation());
         }
         catch (...)
@@ -8765,14 +8765,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModem_get_DeviceServices(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"DeviceServices"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"DeviceServices"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceServices());
         }
         catch (...)
@@ -8784,14 +8784,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModem_get_IsResetSupported(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"IsResetSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"IsResetSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsResetSupported());
         }
         catch (...)
@@ -8803,14 +8803,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModem_get_MaxDeviceServiceCommandSizeInBytes(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"MaxDeviceServiceCommandSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"MaxDeviceServiceCommandSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxDeviceServiceCommandSizeInBytes());
         }
         catch (...)
@@ -8822,14 +8822,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModem_get_MaxDeviceServiceDataSizeInBytes(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"MaxDeviceServiceDataSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"MaxDeviceServiceDataSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxDeviceServiceDataSizeInBytes());
         }
         catch (...)
@@ -8841,14 +8841,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModem_get_IsInEmergencyCallMode(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"IsInEmergencyCallMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"IsInEmergencyCallMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsInEmergencyCallMode());
         }
         catch (...)
@@ -8860,14 +8860,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModem_add_IsInEmergencyCallModeChanged(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"IsInEmergencyCallModeChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"IsInEmergencyCallModeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModem, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.IsInEmergencyCallModeChanged(param0));
@@ -8881,14 +8881,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModem_remove_IsInEmergencyCallModeChanged(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"IsInEmergencyCallModeChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"IsInEmergencyCallModeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.IsInEmergencyCallModeChanged(param0);
@@ -9018,14 +9018,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModemConfiguration_get_HomeProviderId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModemConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModemConfiguration", L"HomeProviderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModemConfiguration", L"HomeProviderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HomeProviderId());
         }
         catch (...)
@@ -9037,14 +9037,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModemConfiguration_get_HomeProviderName(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModemConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModemConfiguration", L"HomeProviderName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModemConfiguration", L"HomeProviderName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HomeProviderName());
         }
         catch (...)
@@ -9056,14 +9056,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModemConfiguration_get_Uicc(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModemConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModemConfiguration", L"Uicc"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModemConfiguration", L"Uicc"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uicc());
         }
         catch (...)
@@ -9075,14 +9075,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModemConfiguration_get_SarManager(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModemConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModemConfiguration", L"SarManager"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModemConfiguration", L"SarManager"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SarManager());
         }
         catch (...)
@@ -9196,14 +9196,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModemIsolation", L"AddAllowedHost", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModemIsolation", L"AddAllowedHost", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
 
                 self->obj.AddAllowedHost(param0);
@@ -9228,14 +9228,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModemIsolation", L"AddAllowedHostRange", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModemIsolation", L"AddAllowedHostRange", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::HostName>(args, 1);
 
@@ -9261,14 +9261,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModemIsolation", L"ApplyConfigurationAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModemIsolation", L"ApplyConfigurationAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ApplyConfigurationAsync());
             }
             catch (...)
@@ -9290,14 +9290,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModemIsolation", L"ClearConfigurationAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModemIsolation", L"ClearConfigurationAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ClearConfigurationAsync());
             }
             catch (...)
@@ -9392,14 +9392,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"GetCellsInfoAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"GetCellsInfoAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCellsInfoAsync());
             }
             catch (...)
@@ -9421,14 +9421,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"GetVoiceCallSupportAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"GetVoiceCallSupportAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetVoiceCallSupportAsync());
             }
             catch (...)
@@ -9450,14 +9450,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"ShowConnectionUI", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"ShowConnectionUI", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ShowConnectionUI();
                 Py_RETURN_NONE;
             }
@@ -9476,14 +9476,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandNetwork_get_AccessPointName(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetwork* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"AccessPointName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"AccessPointName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccessPointName());
         }
         catch (...)
@@ -9495,14 +9495,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandNetwork_get_ActivationNetworkError(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetwork* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"ActivationNetworkError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"ActivationNetworkError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivationNetworkError());
         }
         catch (...)
@@ -9514,14 +9514,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandNetwork_get_NetworkAdapter(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetwork* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"NetworkAdapter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"NetworkAdapter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkAdapter());
         }
         catch (...)
@@ -9533,14 +9533,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandNetwork_get_NetworkRegistrationState(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetwork* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"NetworkRegistrationState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"NetworkRegistrationState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkRegistrationState());
         }
         catch (...)
@@ -9552,14 +9552,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandNetwork_get_PacketAttachNetworkError(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetwork* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"PacketAttachNetworkError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"PacketAttachNetworkError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PacketAttachNetworkError());
         }
         catch (...)
@@ -9571,14 +9571,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandNetwork_get_RegisteredDataClass(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetwork* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"RegisteredDataClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"RegisteredDataClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RegisteredDataClass());
         }
         catch (...)
@@ -9590,14 +9590,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandNetwork_get_RegisteredProviderId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetwork* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"RegisteredProviderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"RegisteredProviderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RegisteredProviderId());
         }
         catch (...)
@@ -9609,14 +9609,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandNetwork_get_RegisteredProviderName(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetwork* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"RegisteredProviderName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"RegisteredProviderName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RegisteredProviderName());
         }
         catch (...)
@@ -9628,14 +9628,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandNetwork_get_RegistrationNetworkError(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetwork* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"RegistrationNetworkError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"RegistrationNetworkError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RegistrationNetworkError());
         }
         catch (...)
@@ -9647,14 +9647,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandNetwork_get_RegistrationUiccApps(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetwork* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"RegistrationUiccApps"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetwork", L"RegistrationUiccApps"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RegistrationUiccApps());
         }
         catch (...)
@@ -9748,14 +9748,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandNetworkRegistrationStateChange_get_DeviceId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChange* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -9767,14 +9767,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandNetworkRegistrationStateChange_get_Network(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChange* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange", L"Network"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange", L"Network"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Network());
         }
         catch (...)
@@ -9857,14 +9857,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandNetworkRegistrationStateChangeTriggerDetails_get_NetworkRegistrationStateChanges(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChangeTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChangeTriggerDetails", L"NetworkRegistrationStateChanges"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChangeTriggerDetails", L"NetworkRegistrationStateChanges"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkRegistrationStateChanges());
         }
         catch (...)
@@ -9946,14 +9946,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPco_get_Data(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPco* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPco", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPco", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -9965,14 +9965,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPco_get_DeviceId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPco* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPco", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPco", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -9984,14 +9984,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPco_get_IsComplete(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPco* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPco", L"IsComplete"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPco", L"IsComplete"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsComplete());
         }
         catch (...)
@@ -10075,14 +10075,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPcoDataChangeTriggerDetails_get_UpdatedData(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPcoDataChangeTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPcoDataChangeTriggerDetails", L"UpdatedData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPcoDataChangeTriggerDetails", L"UpdatedData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UpdatedData());
         }
         catch (...)
@@ -10168,14 +10168,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"ChangeAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"ChangeAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -10200,14 +10200,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"DisableAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"DisableAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.DisableAsync(param0));
@@ -10231,14 +10231,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"EnableAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"EnableAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.EnableAsync(param0));
@@ -10262,14 +10262,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"EnterAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"EnterAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.EnterAsync(param0));
@@ -10293,14 +10293,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"UnblockAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"UnblockAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -10321,14 +10321,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPin_get_AttemptsRemaining(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPin* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"AttemptsRemaining"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"AttemptsRemaining"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttemptsRemaining());
         }
         catch (...)
@@ -10340,14 +10340,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPin_get_Enabled(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPin* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"Enabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"Enabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Enabled());
         }
         catch (...)
@@ -10359,14 +10359,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPin_get_Format(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPin* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"Format"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"Format"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Format());
         }
         catch (...)
@@ -10378,14 +10378,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPin_get_LockState(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPin* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"LockState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"LockState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LockState());
         }
         catch (...)
@@ -10397,14 +10397,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPin_get_MaxLength(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPin* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"MaxLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"MaxLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxLength());
         }
         catch (...)
@@ -10416,14 +10416,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPin_get_MinLength(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPin* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"MinLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"MinLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinLength());
         }
         catch (...)
@@ -10435,14 +10435,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPin_get_Type(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPin* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPin", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -10535,14 +10535,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPinLockStateChange_get_DeviceId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChange* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -10554,14 +10554,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPinLockStateChange_get_PinLockState(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChange* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange", L"PinLockState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange", L"PinLockState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PinLockState());
         }
         catch (...)
@@ -10573,14 +10573,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPinLockStateChange_get_PinType(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChange* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange", L"PinType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange", L"PinType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PinType());
         }
         catch (...)
@@ -10664,14 +10664,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPinLockStateChangeTriggerDetails_get_PinLockStateChanges(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChangeTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChangeTriggerDetails", L"PinLockStateChanges"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChangeTriggerDetails", L"PinLockStateChanges"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PinLockStateChanges());
         }
         catch (...)
@@ -10757,14 +10757,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPinManager", L"GetPin", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPinManager", L"GetPin", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinType>(args, 0);
 
                 return py::convert(self->obj.GetPin(param0));
@@ -10784,14 +10784,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPinManager_get_SupportedPins(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPinManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPinManager", L"SupportedPins"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPinManager", L"SupportedPins"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedPins());
         }
         catch (...)
@@ -10874,14 +10874,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPinOperationResult_get_AttemptsRemaining(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPinOperationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPinOperationResult", L"AttemptsRemaining"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPinOperationResult", L"AttemptsRemaining"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttemptsRemaining());
         }
         catch (...)
@@ -10893,14 +10893,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPinOperationResult_get_IsSuccessful(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPinOperationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPinOperationResult", L"IsSuccessful"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandPinOperationResult", L"IsSuccessful"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSuccessful());
         }
         catch (...)
@@ -10983,14 +10983,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandRadioStateChange_get_DeviceId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChange* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -11002,14 +11002,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandRadioStateChange_get_RadioState(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChange* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange", L"RadioState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange", L"RadioState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RadioState());
         }
         catch (...)
@@ -11092,14 +11092,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandRadioStateChangeTriggerDetails_get_RadioStateChanges(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChangeTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChangeTriggerDetails", L"RadioStateChanges"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChangeTriggerDetails", L"RadioStateChanges"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RadioStateChanges());
         }
         catch (...)
@@ -11185,14 +11185,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"DisableBackoffAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"DisableBackoffAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.DisableBackoffAsync());
             }
             catch (...)
@@ -11214,14 +11214,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"EnableBackoffAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"EnableBackoffAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.EnableBackoffAsync());
             }
             catch (...)
@@ -11243,14 +11243,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"GetIsTransmittingAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"GetIsTransmittingAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetIsTransmittingAsync());
             }
             catch (...)
@@ -11272,14 +11272,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"RevertSarToHardwareControlAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"RevertSarToHardwareControlAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.RevertSarToHardwareControlAsync());
             }
             catch (...)
@@ -11301,14 +11301,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"SetConfigurationAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"SetConfigurationAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAntennaSar>>(args, 0);
 
                 return py::convert(self->obj.SetConfigurationAsync(param0));
@@ -11332,14 +11332,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"SetTransmissionStateChangedHysteresisAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"SetTransmissionStateChangedHysteresisAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
                 return py::convert(self->obj.SetTransmissionStateChangedHysteresisAsync(param0));
@@ -11363,14 +11363,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"StartTransmissionStateMonitoring", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"StartTransmissionStateMonitoring", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.StartTransmissionStateMonitoring();
                 Py_RETURN_NONE;
             }
@@ -11393,14 +11393,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"StopTransmissionStateMonitoring", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"StopTransmissionStateMonitoring", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.StopTransmissionStateMonitoring();
                 Py_RETURN_NONE;
             }
@@ -11419,14 +11419,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSarManager_get_Antennas(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSarManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"Antennas"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"Antennas"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Antennas());
         }
         catch (...)
@@ -11438,14 +11438,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSarManager_get_HysteresisTimerPeriod(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSarManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"HysteresisTimerPeriod"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"HysteresisTimerPeriod"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HysteresisTimerPeriod());
         }
         catch (...)
@@ -11457,14 +11457,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSarManager_get_IsBackoffEnabled(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSarManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"IsBackoffEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"IsBackoffEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsBackoffEnabled());
         }
         catch (...)
@@ -11476,14 +11476,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSarManager_get_IsSarControlledByHardware(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSarManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"IsSarControlledByHardware"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"IsSarControlledByHardware"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSarControlledByHardware());
         }
         catch (...)
@@ -11495,14 +11495,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSarManager_get_IsWiFiHardwareIntegrated(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSarManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"IsWiFiHardwareIntegrated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"IsWiFiHardwareIntegrated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsWiFiHardwareIntegrated());
         }
         catch (...)
@@ -11514,14 +11514,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSarManager_add_TransmissionStateChanged(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSarManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"TransmissionStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"TransmissionStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSarManager, winrt::Windows::Networking::NetworkOperators::MobileBroadbandTransmissionStateChangedEventArgs>>(arg);
 
             return py::convert(self->obj.TransmissionStateChanged(param0));
@@ -11535,14 +11535,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSarManager_remove_TransmissionStateChanged(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSarManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"TransmissionStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSarManager", L"TransmissionStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.TransmissionStateChanged(param0);
@@ -11641,14 +11641,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSlotInfo_get_Index(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo", L"Index"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo", L"Index"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Index());
         }
         catch (...)
@@ -11660,14 +11660,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSlotInfo_get_State(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -11679,14 +11679,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSlotInfo_get_IccId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo", L"IccId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo", L"IccId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IccId());
         }
         catch (...)
@@ -11770,14 +11770,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSlotInfoChangedEventArgs_get_SlotInfo(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfoChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotInfoChangedEventArgs", L"SlotInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotInfoChangedEventArgs", L"SlotInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SlotInfo());
         }
         catch (...)
@@ -11863,14 +11863,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotManager", L"SetCurrentSlot", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotManager", L"SetCurrentSlot", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.SetCurrentSlot(param0));
@@ -11894,14 +11894,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotManager", L"SetCurrentSlotAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotManager", L"SetCurrentSlotAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.SetCurrentSlotAsync(param0));
@@ -11921,14 +11921,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSlotManager_get_CurrentSlotIndex(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSlotManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotManager", L"CurrentSlotIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotManager", L"CurrentSlotIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentSlotIndex());
         }
         catch (...)
@@ -11940,14 +11940,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSlotManager_get_SlotInfos(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSlotManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotManager", L"SlotInfos"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotManager", L"SlotInfos"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SlotInfos());
         }
         catch (...)
@@ -11959,14 +11959,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSlotManager_add_CurrentSlotIndexChanged(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSlotManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotManager", L"CurrentSlotIndexChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotManager", L"CurrentSlotIndexChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotManager, winrt::Windows::Networking::NetworkOperators::MobileBroadbandCurrentSlotIndexChangedEventArgs>>(arg);
 
             return py::convert(self->obj.CurrentSlotIndexChanged(param0));
@@ -11980,14 +11980,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSlotManager_remove_CurrentSlotIndexChanged(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSlotManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotManager", L"CurrentSlotIndexChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotManager", L"CurrentSlotIndexChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CurrentSlotIndexChanged(param0);
@@ -12002,14 +12002,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSlotManager_add_SlotInfoChanged(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSlotManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotManager", L"SlotInfoChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotManager", L"SlotInfoChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotManager, winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfoChangedEventArgs>>(arg);
 
             return py::convert(self->obj.SlotInfoChanged(param0));
@@ -12023,14 +12023,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSlotManager_remove_SlotInfoChanged(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSlotManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotManager", L"SlotInfoChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandSlotManager", L"SlotInfoChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SlotInfoChanged(param0);
@@ -12122,14 +12122,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandTransmissionStateChangedEventArgs_get_IsTransmitting(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandTransmissionStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandTransmissionStateChangedEventArgs", L"IsTransmitting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandTransmissionStateChangedEventArgs", L"IsTransmitting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsTransmitting());
         }
         catch (...)
@@ -12215,14 +12215,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUicc", L"GetUiccAppsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUicc", L"GetUiccAppsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetUiccAppsAsync());
             }
             catch (...)
@@ -12240,14 +12240,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandUicc_get_SimIccId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUicc* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUicc", L"SimIccId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUicc", L"SimIccId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimIccId());
         }
         catch (...)
@@ -12334,14 +12334,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccApp", L"GetRecordDetailsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccApp", L"GetRecordDetailsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<uint32_t>>(args, 0);
 
                 return py::convert(self->obj.GetRecordDetailsAsync(param0));
@@ -12365,14 +12365,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccApp", L"ReadRecordAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccApp", L"ReadRecordAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<uint32_t>>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -12393,14 +12393,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandUiccApp_get_Id(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccApp* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccApp", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccApp", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -12412,14 +12412,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandUiccApp_get_Kind(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccApp* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccApp", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccApp", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -12504,14 +12504,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandUiccAppReadRecordResult_get_Data(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppReadRecordResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccAppReadRecordResult", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccAppReadRecordResult", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -12523,14 +12523,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandUiccAppReadRecordResult_get_Status(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppReadRecordResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccAppReadRecordResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccAppReadRecordResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -12613,14 +12613,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandUiccAppRecordDetailsResult_get_Kind(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppRecordDetailsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccAppRecordDetailsResult", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccAppRecordDetailsResult", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -12632,14 +12632,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandUiccAppRecordDetailsResult_get_ReadAccessCondition(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppRecordDetailsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccAppRecordDetailsResult", L"ReadAccessCondition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccAppRecordDetailsResult", L"ReadAccessCondition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReadAccessCondition());
         }
         catch (...)
@@ -12651,14 +12651,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandUiccAppRecordDetailsResult_get_RecordCount(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppRecordDetailsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccAppRecordDetailsResult", L"RecordCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccAppRecordDetailsResult", L"RecordCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RecordCount());
         }
         catch (...)
@@ -12670,14 +12670,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandUiccAppRecordDetailsResult_get_RecordSize(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppRecordDetailsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccAppRecordDetailsResult", L"RecordSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccAppRecordDetailsResult", L"RecordSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RecordSize());
         }
         catch (...)
@@ -12689,14 +12689,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandUiccAppRecordDetailsResult_get_Status(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppRecordDetailsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccAppRecordDetailsResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccAppRecordDetailsResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -12708,14 +12708,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandUiccAppRecordDetailsResult_get_WriteAccessCondition(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppRecordDetailsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccAppRecordDetailsResult", L"WriteAccessCondition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccAppRecordDetailsResult", L"WriteAccessCondition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WriteAccessCondition());
         }
         catch (...)
@@ -12802,14 +12802,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandUiccAppsResult_get_Status(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccAppsResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccAppsResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -12821,14 +12821,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandUiccAppsResult_get_UiccApps(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccAppsResult", L"UiccApps"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandUiccAppsResult", L"UiccApps"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UiccApps());
         }
         catch (...)
@@ -12911,14 +12911,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorDataUsageTriggerDetails_get_NotificationKind(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorDataUsageTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorDataUsageTriggerDetails", L"NotificationKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorDataUsageTriggerDetails", L"NotificationKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NotificationKind());
         }
         catch (...)
@@ -13004,14 +13004,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails", L"AuthorizeTethering", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails", L"AuthorizeTethering", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -13033,14 +13033,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorNotificationEventDetails_get_EncodingType(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorNotificationEventDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails", L"EncodingType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails", L"EncodingType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EncodingType());
         }
         catch (...)
@@ -13052,14 +13052,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorNotificationEventDetails_get_Message(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorNotificationEventDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Message());
         }
         catch (...)
@@ -13071,14 +13071,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorNotificationEventDetails_get_NetworkAccountId(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorNotificationEventDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails", L"NetworkAccountId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails", L"NetworkAccountId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkAccountId());
         }
         catch (...)
@@ -13090,14 +13090,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorNotificationEventDetails_get_NotificationType(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorNotificationEventDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails", L"NotificationType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails", L"NotificationType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NotificationType());
         }
         catch (...)
@@ -13109,14 +13109,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorNotificationEventDetails_get_RuleId(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorNotificationEventDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails", L"RuleId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails", L"RuleId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RuleId());
         }
         catch (...)
@@ -13128,14 +13128,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorNotificationEventDetails_get_SmsMessage(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorNotificationEventDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails", L"SmsMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails", L"SmsMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SmsMessage());
         }
         catch (...)
@@ -13249,14 +13249,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration", L"IsBandSupported", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration", L"IsBandSupported", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::NetworkOperators::TetheringWiFiBand>(args, 0);
 
                 return py::convert(self->obj.IsBandSupported(param0));
@@ -13280,14 +13280,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration", L"IsBandSupportedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration", L"IsBandSupportedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::NetworkOperators::TetheringWiFiBand>(args, 0);
 
                 return py::convert(self->obj.IsBandSupportedAsync(param0));
@@ -13307,14 +13307,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringAccessPointConfiguration_get_Ssid(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration", L"Ssid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration", L"Ssid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Ssid());
         }
         catch (...)
@@ -13326,12 +13326,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static int NetworkOperatorTetheringAccessPointConfiguration_put_Ssid(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration", L"Ssid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13340,6 +13334,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration", L"Ssid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Ssid(param0);
@@ -13354,14 +13354,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringAccessPointConfiguration_get_Passphrase(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration", L"Passphrase"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration", L"Passphrase"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Passphrase());
         }
         catch (...)
@@ -13373,12 +13373,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static int NetworkOperatorTetheringAccessPointConfiguration_put_Passphrase(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration", L"Passphrase"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13387,6 +13381,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration", L"Passphrase"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Passphrase(param0);
@@ -13401,14 +13401,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringAccessPointConfiguration_get_Band(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration", L"Band"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration", L"Band"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Band());
         }
         catch (...)
@@ -13420,12 +13420,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static int NetworkOperatorTetheringAccessPointConfiguration_put_Band(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration", L"Band"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13434,6 +13428,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration", L"Band"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::NetworkOperators::TetheringWiFiBand>(arg);
 
             self->obj.Band(param0);
@@ -13522,14 +13522,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringClient_get_HostNames(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringClient* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient", L"HostNames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient", L"HostNames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HostNames());
         }
         catch (...)
@@ -13541,14 +13541,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringClient_get_MacAddress(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringClient* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient", L"MacAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient", L"MacAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MacAddress());
         }
         catch (...)
@@ -13635,14 +13635,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"ConfigureAccessPointAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"ConfigureAccessPointAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration>(args, 0);
 
                 return py::convert(self->obj.ConfigureAccessPointAsync(param0));
@@ -13666,14 +13666,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"CreateFromConnectionProfile", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"CreateFromConnectionProfile", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::ConnectionProfile>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager::CreateFromConnectionProfile(param0));
@@ -13686,14 +13686,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"CreateFromConnectionProfile", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"CreateFromConnectionProfile", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::ConnectionProfile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkAdapter>(args, 1);
 
@@ -13718,14 +13718,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"CreateFromNetworkAccountId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"CreateFromNetworkAccountId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager::CreateFromNetworkAccountId(param0));
@@ -13749,14 +13749,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"DisableNoConnectionsTimeout", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"DisableNoConnectionsTimeout", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager::DisableNoConnectionsTimeout();
                 Py_RETURN_NONE;
             }
@@ -13779,14 +13779,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"DisableNoConnectionsTimeoutAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"DisableNoConnectionsTimeoutAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager::DisableNoConnectionsTimeoutAsync());
             }
             catch (...)
@@ -13808,14 +13808,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"EnableNoConnectionsTimeout", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"EnableNoConnectionsTimeout", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager::EnableNoConnectionsTimeout();
                 Py_RETURN_NONE;
             }
@@ -13838,14 +13838,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"EnableNoConnectionsTimeoutAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"EnableNoConnectionsTimeoutAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager::EnableNoConnectionsTimeoutAsync());
             }
             catch (...)
@@ -13867,14 +13867,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"GetCurrentAccessPointConfiguration", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"GetCurrentAccessPointConfiguration", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentAccessPointConfiguration());
             }
             catch (...)
@@ -13896,14 +13896,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"GetTetheringCapability", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"GetTetheringCapability", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager::GetTetheringCapability(param0));
@@ -13927,14 +13927,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"GetTetheringCapabilityFromConnectionProfile", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"GetTetheringCapabilityFromConnectionProfile", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::ConnectionProfile>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager::GetTetheringCapabilityFromConnectionProfile(param0));
@@ -13958,14 +13958,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"GetTetheringClients", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"GetTetheringClients", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetTetheringClients());
             }
             catch (...)
@@ -13987,14 +13987,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"IsNoConnectionsTimeoutEnabled", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"IsNoConnectionsTimeoutEnabled", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager::IsNoConnectionsTimeoutEnabled());
             }
             catch (...)
@@ -14016,14 +14016,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"StartTetheringAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"StartTetheringAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.StartTetheringAsync());
             }
             catch (...)
@@ -14045,14 +14045,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"StopTetheringAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"StopTetheringAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.StopTetheringAsync());
             }
             catch (...)
@@ -14070,14 +14070,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringManager_get_ClientCount(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"ClientCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"ClientCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClientCount());
         }
         catch (...)
@@ -14089,14 +14089,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringManager_get_MaxClientCount(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"MaxClientCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"MaxClientCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxClientCount());
         }
         catch (...)
@@ -14108,14 +14108,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringManager_get_TetheringOperationalState(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"TetheringOperationalState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"TetheringOperationalState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TetheringOperationalState());
         }
         catch (...)
@@ -14238,14 +14238,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringOperationResult_get_AdditionalErrorMessage(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringOperationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringOperationResult", L"AdditionalErrorMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringOperationResult", L"AdditionalErrorMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AdditionalErrorMessage());
         }
         catch (...)
@@ -14257,14 +14257,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringOperationResult_get_Status(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringOperationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringOperationResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringOperationResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -14347,14 +14347,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ProvisionFromXmlDocumentResults_get_AllElementsProvisioned(py::wrapper::Windows::Networking::NetworkOperators::ProvisionFromXmlDocumentResults* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ProvisionFromXmlDocumentResults", L"AllElementsProvisioned"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ProvisionFromXmlDocumentResults", L"AllElementsProvisioned"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllElementsProvisioned());
         }
         catch (...)
@@ -14366,14 +14366,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ProvisionFromXmlDocumentResults_get_ProvisionResultsXml(py::wrapper::Windows::Networking::NetworkOperators::ProvisionFromXmlDocumentResults* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ProvisionFromXmlDocumentResults", L"ProvisionResultsXml"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.ProvisionFromXmlDocumentResults", L"ProvisionResultsXml"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProvisionResultsXml());
         }
         catch (...)
@@ -14460,14 +14460,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ProvisionedProfile", L"UpdateCost", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ProvisionedProfile", L"UpdateCost", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkCostType>(args, 0);
 
                 self->obj.UpdateCost(param0);
@@ -14492,14 +14492,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ProvisionedProfile", L"UpdateUsage", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ProvisionedProfile", L"UpdateUsage", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::NetworkOperators::ProfileUsage>(args, 0);
 
                 self->obj.UpdateUsage(param0);
@@ -14617,14 +14617,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ProvisioningAgent", L"CreateFromNetworkAccountId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ProvisioningAgent", L"CreateFromNetworkAccountId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::NetworkOperators::ProvisioningAgent::CreateFromNetworkAccountId(param0));
@@ -14648,14 +14648,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ProvisioningAgent", L"GetProvisionedProfile", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ProvisioningAgent", L"GetProvisionedProfile", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::NetworkOperators::ProfileMediaType>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -14680,14 +14680,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ProvisioningAgent", L"ProvisionFromXmlDocumentAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ProvisioningAgent", L"ProvisionFromXmlDocumentAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ProvisionFromXmlDocumentAsync(param0));
@@ -14808,14 +14808,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.TetheringEntitlementCheckTriggerDetails", L"AllowTethering", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.TetheringEntitlementCheckTriggerDetails", L"AllowTethering", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.AllowTethering();
                 Py_RETURN_NONE;
             }
@@ -14838,14 +14838,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.TetheringEntitlementCheckTriggerDetails", L"DenyTethering", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.TetheringEntitlementCheckTriggerDetails", L"DenyTethering", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.DenyTethering(param0);
@@ -14866,14 +14866,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* TetheringEntitlementCheckTriggerDetails_get_NetworkAccountId(py::wrapper::Windows::Networking::NetworkOperators::TetheringEntitlementCheckTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.TetheringEntitlementCheckTriggerDetails", L"NetworkAccountId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.TetheringEntitlementCheckTriggerDetails", L"NetworkAccountId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkAccountId());
         }
         catch (...)
@@ -14985,14 +14985,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.UssdMessage", L"GetPayload", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.UssdMessage", L"GetPayload", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetPayload());
             }
             catch (...)
@@ -15014,14 +15014,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.UssdMessage", L"SetPayload", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.UssdMessage", L"SetPayload", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 self->obj.SetPayload(param0);
@@ -15042,14 +15042,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* UssdMessage_get_PayloadAsText(py::wrapper::Windows::Networking::NetworkOperators::UssdMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.UssdMessage", L"PayloadAsText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.UssdMessage", L"PayloadAsText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PayloadAsText());
         }
         catch (...)
@@ -15061,12 +15061,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static int UssdMessage_put_PayloadAsText(py::wrapper::Windows::Networking::NetworkOperators::UssdMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.UssdMessage", L"PayloadAsText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15075,6 +15069,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.UssdMessage", L"PayloadAsText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.PayloadAsText(param0);
@@ -15089,14 +15089,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* UssdMessage_get_DataCodingScheme(py::wrapper::Windows::Networking::NetworkOperators::UssdMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.UssdMessage", L"DataCodingScheme"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.UssdMessage", L"DataCodingScheme"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DataCodingScheme());
         }
         catch (...)
@@ -15108,12 +15108,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static int UssdMessage_put_DataCodingScheme(py::wrapper::Windows::Networking::NetworkOperators::UssdMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.UssdMessage", L"DataCodingScheme"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15122,6 +15116,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.UssdMessage", L"DataCodingScheme"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint8_t>(arg);
 
             self->obj.DataCodingScheme(param0);
@@ -15209,14 +15209,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* UssdReply_get_Message(py::wrapper::Windows::Networking::NetworkOperators::UssdReply* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.UssdReply", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.UssdReply", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Message());
         }
         catch (...)
@@ -15228,14 +15228,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* UssdReply_get_ResultCode(py::wrapper::Windows::Networking::NetworkOperators::UssdReply* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.UssdReply", L"ResultCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.UssdReply", L"ResultCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResultCode());
         }
         catch (...)
@@ -15322,14 +15322,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.UssdSession", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.UssdSession", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -15352,14 +15352,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.UssdSession", L"CreateFromNetworkAccountId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.UssdSession", L"CreateFromNetworkAccountId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::NetworkOperators::UssdSession::CreateFromNetworkAccountId(param0));
@@ -15383,14 +15383,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.UssdSession", L"CreateFromNetworkInterfaceId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.UssdSession", L"CreateFromNetworkInterfaceId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::NetworkOperators::UssdSession::CreateFromNetworkInterfaceId(param0));
@@ -15414,14 +15414,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.UssdSession", L"SendMessageAndGetReplyAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.UssdSession", L"SendMessageAndGetReplyAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::NetworkOperators::UssdMessage>(args, 0);
 
                 return py::convert(self->obj.SendMessageAndGetReplyAsync(param0));

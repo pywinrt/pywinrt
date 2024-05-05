@@ -20,14 +20,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameList", L"FindAllAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameList", L"FindAllAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::FindAllAsync());
             }
             catch (...)
@@ -38,14 +38,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameList", L"FindAllAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameList", L"FindAllAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::FindAllAsync(param0));
@@ -69,14 +69,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameList", L"MergeEntriesAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameList", L"MergeEntriesAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry>(args, 1);
 
@@ -101,14 +101,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameList", L"UnmergeEntryAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameList", L"UnmergeEntryAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry>(args, 0);
 
                 return py::convert(winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::UnmergeEntryAsync(param0));
@@ -128,14 +128,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameList_add_GameAdded(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameList", L"GameAdded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameList", L"GameAdded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListChangedEventHandler>(arg);
 
             return py::convert(winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::GameAdded(param0));
@@ -149,14 +149,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameList_remove_GameAdded(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameList", L"GameAdded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameList", L"GameAdded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::GameAdded(param0);
@@ -171,14 +171,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameList_add_GameRemoved(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameList", L"GameRemoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameList", L"GameRemoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListRemovedEventHandler>(arg);
 
             return py::convert(winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::GameRemoved(param0));
@@ -192,14 +192,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameList_remove_GameRemoved(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameList", L"GameRemoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameList", L"GameRemoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::GameRemoved(param0);
@@ -214,14 +214,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameList_add_GameUpdated(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameList", L"GameUpdated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameList", L"GameUpdated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListChangedEventHandler>(arg);
 
             return py::convert(winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::GameUpdated(param0));
@@ -235,14 +235,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameList_remove_GameUpdated(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameList", L"GameUpdated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameList", L"GameUpdated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::GameUpdated(param0);
@@ -337,14 +337,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"LaunchAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"LaunchAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.LaunchAsync());
             }
             catch (...)
@@ -366,14 +366,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"SetCategoryAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"SetCategoryAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListCategory>(args, 0);
 
                 return py::convert(self->obj.SetCategoryAsync(param0));
@@ -397,14 +397,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"SetLauncherExecutableFileAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"SetLauncherExecutableFileAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert(self->obj.SetLauncherExecutableFileAsync(param0));
@@ -417,14 +417,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"SetLauncherExecutableFileAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"SetLauncherExecutableFileAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -449,14 +449,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"SetTitleIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"SetTitleIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SetTitleIdAsync(param0));
@@ -476,14 +476,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameListEntry_get_Category(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameListEntry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"Category"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"Category"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Category());
         }
         catch (...)
@@ -495,14 +495,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameListEntry_get_DisplayInfo(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameListEntry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"DisplayInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"DisplayInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayInfo());
         }
         catch (...)
@@ -514,14 +514,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameListEntry_get_Properties(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameListEntry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -533,14 +533,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameListEntry_get_GameModeConfiguration(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameListEntry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"GameModeConfiguration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"GameModeConfiguration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GameModeConfiguration());
         }
         catch (...)
@@ -552,14 +552,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameListEntry_get_LaunchParameters(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameListEntry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"LaunchParameters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"LaunchParameters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LaunchParameters());
         }
         catch (...)
@@ -571,14 +571,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameListEntry_get_LaunchableState(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameListEntry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"LaunchableState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"LaunchableState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LaunchableState());
         }
         catch (...)
@@ -590,14 +590,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameListEntry_get_LauncherExecutable(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameListEntry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"LauncherExecutable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"LauncherExecutable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LauncherExecutable());
         }
         catch (...)
@@ -609,14 +609,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameListEntry_get_TitleId(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameListEntry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"TitleId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameListEntry", L"TitleId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TitleId());
         }
         catch (...)
@@ -713,14 +713,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"SaveAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"SaveAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SaveAsync());
             }
             catch (...)
@@ -738,14 +738,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameModeConfiguration_get_PercentGpuTimeAllocatedToGame(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"PercentGpuTimeAllocatedToGame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"PercentGpuTimeAllocatedToGame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PercentGpuTimeAllocatedToGame());
         }
         catch (...)
@@ -757,12 +757,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static int GameModeConfiguration_put_PercentGpuTimeAllocatedToGame(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"PercentGpuTimeAllocatedToGame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -771,6 +765,12 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"PercentGpuTimeAllocatedToGame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             self->obj.PercentGpuTimeAllocatedToGame(param0);
@@ -785,14 +785,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameModeConfiguration_get_PercentGpuMemoryAllocatedToSystemCompositor(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"PercentGpuMemoryAllocatedToSystemCompositor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"PercentGpuMemoryAllocatedToSystemCompositor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PercentGpuMemoryAllocatedToSystemCompositor());
         }
         catch (...)
@@ -804,12 +804,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static int GameModeConfiguration_put_PercentGpuMemoryAllocatedToSystemCompositor(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"PercentGpuMemoryAllocatedToSystemCompositor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -818,6 +812,12 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"PercentGpuMemoryAllocatedToSystemCompositor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             self->obj.PercentGpuMemoryAllocatedToSystemCompositor(param0);
@@ -832,14 +832,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameModeConfiguration_get_PercentGpuMemoryAllocatedToGame(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"PercentGpuMemoryAllocatedToGame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"PercentGpuMemoryAllocatedToGame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PercentGpuMemoryAllocatedToGame());
         }
         catch (...)
@@ -851,12 +851,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static int GameModeConfiguration_put_PercentGpuMemoryAllocatedToGame(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"PercentGpuMemoryAllocatedToGame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -865,6 +859,12 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"PercentGpuMemoryAllocatedToGame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             self->obj.PercentGpuMemoryAllocatedToGame(param0);
@@ -879,14 +879,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameModeConfiguration_get_MaxCpuCount(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"MaxCpuCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"MaxCpuCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxCpuCount());
         }
         catch (...)
@@ -898,12 +898,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static int GameModeConfiguration_put_MaxCpuCount(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"MaxCpuCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -912,6 +906,12 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"MaxCpuCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             self->obj.MaxCpuCount(param0);
@@ -926,14 +926,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameModeConfiguration_get_IsEnabled(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"IsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsEnabled());
         }
         catch (...)
@@ -945,12 +945,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static int GameModeConfiguration_put_IsEnabled(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"IsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -959,6 +953,12 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsEnabled(param0);
@@ -973,14 +973,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameModeConfiguration_get_CpuExclusivityMaskLow(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"CpuExclusivityMaskLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"CpuExclusivityMaskLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CpuExclusivityMaskLow());
         }
         catch (...)
@@ -992,12 +992,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static int GameModeConfiguration_put_CpuExclusivityMaskLow(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"CpuExclusivityMaskLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1006,6 +1000,12 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"CpuExclusivityMaskLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             self->obj.CpuExclusivityMaskLow(param0);
@@ -1020,14 +1020,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameModeConfiguration_get_CpuExclusivityMaskHigh(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"CpuExclusivityMaskHigh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"CpuExclusivityMaskHigh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CpuExclusivityMaskHigh());
         }
         catch (...)
@@ -1039,12 +1039,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static int GameModeConfiguration_put_CpuExclusivityMaskHigh(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"CpuExclusivityMaskHigh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1053,6 +1047,12 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"CpuExclusivityMaskHigh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             self->obj.CpuExclusivityMaskHigh(param0);
@@ -1067,14 +1067,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameModeConfiguration_get_AffinitizeToExclusiveCpus(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"AffinitizeToExclusiveCpus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"AffinitizeToExclusiveCpus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AffinitizeToExclusiveCpus());
         }
         catch (...)
@@ -1086,12 +1086,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static int GameModeConfiguration_put_AffinitizeToExclusiveCpus(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"AffinitizeToExclusiveCpus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1100,6 +1094,12 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"AffinitizeToExclusiveCpus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AffinitizeToExclusiveCpus(param0);
@@ -1114,14 +1114,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameModeConfiguration_get_RelatedProcessNames(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"RelatedProcessNames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration", L"RelatedProcessNames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RelatedProcessNames());
         }
         catch (...)
@@ -1216,14 +1216,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Gaming::Preview::GamesEnumeration::GameModeUserConfiguration::GetDefault());
             }
             catch (...)
@@ -1245,14 +1245,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration", L"SaveAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration", L"SaveAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SaveAsync());
             }
             catch (...)
@@ -1270,14 +1270,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameModeUserConfiguration_get_GamingRelatedProcessNames(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeUserConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration", L"GamingRelatedProcessNames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration", L"GamingRelatedProcessNames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GamingRelatedProcessNames());
         }
         catch (...)
@@ -1390,14 +1390,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.IGameListEntry", L"LaunchAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.IGameListEntry", L"LaunchAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.LaunchAsync());
             }
             catch (...)
@@ -1419,14 +1419,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.IGameListEntry", L"SetCategoryAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Preview.GamesEnumeration.IGameListEntry", L"SetCategoryAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListCategory>(args, 0);
 
                 return py::convert(self->obj.SetCategoryAsync(param0));
@@ -1446,14 +1446,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* IGameListEntry_get_Category(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.IGameListEntry", L"Category"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.IGameListEntry", L"Category"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Category());
         }
         catch (...)
@@ -1465,14 +1465,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* IGameListEntry_get_DisplayInfo(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.IGameListEntry", L"DisplayInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.IGameListEntry", L"DisplayInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayInfo());
         }
         catch (...)
@@ -1484,14 +1484,14 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* IGameListEntry_get_Properties(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.IGameListEntry", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Preview.GamesEnumeration.IGameListEntry", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)

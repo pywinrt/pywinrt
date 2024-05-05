@@ -24,14 +24,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommand_get_CommandName(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommand* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommand", L"CommandName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommand", L"CommandName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CommandName());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommand_get_Properties(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommand* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommand", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommand", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -62,14 +62,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommand_get_SpeechRecognitionResult(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommand* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommand", L"SpeechRecognitionResult"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommand", L"SpeechRecognitionResult"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SpeechRecognitionResult());
         }
         catch (...)
@@ -153,14 +153,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandCompletedEventArgs_get_Reason(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletedEventArgs", L"Reason"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletedEventArgs", L"Reason"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reason());
         }
         catch (...)
@@ -242,14 +242,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandConfirmationResult_get_Confirmed(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandConfirmationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult", L"Confirmed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult", L"Confirmed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Confirmed());
         }
         catch (...)
@@ -353,14 +353,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandContentTile_get_Title(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -372,12 +372,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandContentTile_put_Title(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -386,6 +380,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Title(param0);
@@ -400,14 +400,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandContentTile_get_TextLine3(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"TextLine3"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"TextLine3"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TextLine3());
         }
         catch (...)
@@ -419,12 +419,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandContentTile_put_TextLine3(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"TextLine3"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -433,6 +427,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"TextLine3"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.TextLine3(param0);
@@ -447,14 +447,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandContentTile_get_TextLine2(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"TextLine2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"TextLine2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TextLine2());
         }
         catch (...)
@@ -466,12 +466,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandContentTile_put_TextLine2(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"TextLine2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -480,6 +474,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"TextLine2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.TextLine2(param0);
@@ -494,14 +494,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandContentTile_get_TextLine1(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"TextLine1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"TextLine1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TextLine1());
         }
         catch (...)
@@ -513,12 +513,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandContentTile_put_TextLine1(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"TextLine1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -527,6 +521,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"TextLine1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.TextLine1(param0);
@@ -541,14 +541,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandContentTile_get_Image(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"Image"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"Image"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Image());
         }
         catch (...)
@@ -560,12 +560,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandContentTile_put_Image(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"Image"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -574,6 +568,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"Image"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(arg);
 
             self->obj.Image(param0);
@@ -588,14 +588,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandContentTile_get_ContentTileType(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"ContentTileType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"ContentTileType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentTileType());
         }
         catch (...)
@@ -607,12 +607,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandContentTile_put_ContentTileType(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"ContentTileType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -621,6 +615,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"ContentTileType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTileType>(arg);
 
             self->obj.ContentTileType(param0);
@@ -635,14 +635,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandContentTile_get_AppLaunchArgument(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"AppLaunchArgument"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"AppLaunchArgument"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppLaunchArgument());
         }
         catch (...)
@@ -654,12 +654,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandContentTile_put_AppLaunchArgument(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"AppLaunchArgument"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -668,6 +662,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"AppLaunchArgument"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.AppLaunchArgument(param0);
@@ -682,14 +682,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandContentTile_get_AppContext(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"AppContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"AppContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppContext());
         }
         catch (...)
@@ -701,12 +701,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandContentTile_put_AppContext(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"AppContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -715,6 +709,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile", L"AppContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.AppContext(param0);
@@ -810,14 +810,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition", L"SetPhraseListAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition", L"SetPhraseListAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
@@ -838,14 +838,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandDefinition_get_Language(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -857,14 +857,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandDefinition_get_Name(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -944,14 +944,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager", L"InstallCommandDefinitionsFromStorageFileAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager", L"InstallCommandDefinitionsFromStorageFileAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinitionManager::InstallCommandDefinitionsFromStorageFileAsync(param0));
@@ -971,14 +971,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandDefinitionManager_get_InstalledCommandDefinitions(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager", L"InstalledCommandDefinitions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager", L"InstalledCommandDefinitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinitionManager::InstalledCommandDefinitions());
         }
         catch (...)
@@ -1059,14 +1059,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandDisambiguationResult_get_SelectedItem(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandDisambiguationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult", L"SelectedItem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult", L"SelectedItem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedItem());
         }
         catch (...)
@@ -1152,14 +1152,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"CreateResponse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"CreateResponse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse::CreateResponse(param0));
@@ -1172,14 +1172,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"CreateResponse", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"CreateResponse", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile>>(args, 1);
 
@@ -1204,14 +1204,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"CreateResponseForPrompt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"CreateResponseForPrompt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage>(args, 1);
 
@@ -1225,14 +1225,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"CreateResponseForPrompt", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"CreateResponseForPrompt", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile>>(args, 2);
@@ -1254,14 +1254,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandResponse_get_RepeatMessage(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"RepeatMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"RepeatMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RepeatMessage());
         }
         catch (...)
@@ -1273,12 +1273,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandResponse_put_RepeatMessage(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"RepeatMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1287,6 +1281,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"RepeatMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage>(arg);
 
             self->obj.RepeatMessage(param0);
@@ -1301,14 +1301,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandResponse_get_Message(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Message());
         }
         catch (...)
@@ -1320,12 +1320,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandResponse_put_Message(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1334,6 +1328,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage>(arg);
 
             self->obj.Message(param0);
@@ -1348,14 +1348,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandResponse_get_AppLaunchArgument(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"AppLaunchArgument"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"AppLaunchArgument"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppLaunchArgument());
         }
         catch (...)
@@ -1367,12 +1367,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandResponse_put_AppLaunchArgument(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"AppLaunchArgument"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1381,6 +1375,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"AppLaunchArgument"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.AppLaunchArgument(param0);
@@ -1395,14 +1395,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandResponse_get_VoiceCommandContentTiles(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"VoiceCommandContentTiles"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"VoiceCommandContentTiles"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VoiceCommandContentTiles());
         }
         catch (...)
@@ -1414,14 +1414,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandResponse_get_MaxSupportedVoiceCommandContentTiles(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"MaxSupportedVoiceCommandContentTiles"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"MaxSupportedVoiceCommandContentTiles"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse::MaxSupportedVoiceCommandContentTiles());
         }
         catch (...)
@@ -1538,14 +1538,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection", L"FromAppServiceTriggerDetails", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection", L"FromAppServiceTriggerDetails", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::AppService::AppServiceTriggerDetails>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection::FromAppServiceTriggerDetails(param0));
@@ -1569,14 +1569,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection", L"GetVoiceCommandAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection", L"GetVoiceCommandAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetVoiceCommandAsync());
             }
             catch (...)
@@ -1598,14 +1598,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection", L"ReportFailureAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection", L"ReportFailureAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse>(args, 0);
 
                 return py::convert(self->obj.ReportFailureAsync(param0));
@@ -1629,14 +1629,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection", L"ReportProgressAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection", L"ReportProgressAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse>(args, 0);
 
                 return py::convert(self->obj.ReportProgressAsync(param0));
@@ -1660,14 +1660,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection", L"ReportSuccessAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection", L"ReportSuccessAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse>(args, 0);
 
                 return py::convert(self->obj.ReportSuccessAsync(param0));
@@ -1691,14 +1691,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection", L"RequestAppLaunchAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection", L"RequestAppLaunchAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse>(args, 0);
 
                 return py::convert(self->obj.RequestAppLaunchAsync(param0));
@@ -1722,14 +1722,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection", L"RequestConfirmationAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection", L"RequestConfirmationAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse>(args, 0);
 
                 return py::convert(self->obj.RequestConfirmationAsync(param0));
@@ -1753,14 +1753,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection", L"RequestDisambiguationAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection", L"RequestDisambiguationAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse>(args, 0);
 
                 return py::convert(self->obj.RequestDisambiguationAsync(param0));
@@ -1780,14 +1780,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandServiceConnection_get_Language(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -1799,14 +1799,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandServiceConnection_add_VoiceCommandCompleted(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection", L"VoiceCommandCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection", L"VoiceCommandCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection, winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.VoiceCommandCompleted(param0));
@@ -1820,14 +1820,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandServiceConnection_remove_VoiceCommandCompleted(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection", L"VoiceCommandCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection", L"VoiceCommandCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.VoiceCommandCompleted(param0);
@@ -1969,14 +1969,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandUserMessage_get_SpokenMessage(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage", L"SpokenMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage", L"SpokenMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SpokenMessage());
         }
         catch (...)
@@ -1988,12 +1988,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandUserMessage_put_SpokenMessage(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage", L"SpokenMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2002,6 +1996,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage", L"SpokenMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.SpokenMessage(param0);
@@ -2016,14 +2016,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandUserMessage_get_DisplayMessage(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage", L"DisplayMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage", L"DisplayMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayMessage());
         }
         catch (...)
@@ -2035,12 +2035,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandUserMessage_put_DisplayMessage(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage", L"DisplayMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2049,6 +2043,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage", L"DisplayMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayMessage(param0);

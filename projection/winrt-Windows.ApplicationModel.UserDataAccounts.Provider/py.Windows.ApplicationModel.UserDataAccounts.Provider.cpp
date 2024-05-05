@@ -24,14 +24,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 
     static PyObject* UserDataAccountPartnerAccountInfo_get_AccountKind(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo", L"AccountKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo", L"AccountKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccountKind());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 
     static PyObject* UserDataAccountPartnerAccountInfo_get_DisplayName(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -62,14 +62,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 
     static PyObject* UserDataAccountPartnerAccountInfo_get_Priority(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo", L"Priority"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo", L"Priority"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Priority());
         }
         catch (...)
@@ -157,14 +157,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation", L"ReportCompleted", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation", L"ReportCompleted", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ReportCompleted(param0);
@@ -185,14 +185,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 
     static PyObject* UserDataAccountProviderAddAccountOperation_get_ContentKinds(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderAddAccountOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation", L"ContentKinds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation", L"ContentKinds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentKinds());
         }
         catch (...)
@@ -204,14 +204,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 
     static PyObject* UserDataAccountProviderAddAccountOperation_get_PartnerAccountInfos(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderAddAccountOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation", L"PartnerAccountInfos"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation", L"PartnerAccountInfos"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PartnerAccountInfos());
         }
         catch (...)
@@ -223,14 +223,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 
     static PyObject* UserDataAccountProviderAddAccountOperation_get_Kind(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderAddAccountOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -319,14 +319,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderResolveErrorsOperation", L"ReportCompleted", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderResolveErrorsOperation", L"ReportCompleted", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportCompleted();
                 Py_RETURN_NONE;
             }
@@ -345,14 +345,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 
     static PyObject* UserDataAccountProviderResolveErrorsOperation_get_Kind(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderResolveErrorsOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderResolveErrorsOperation", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderResolveErrorsOperation", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -364,14 +364,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 
     static PyObject* UserDataAccountProviderResolveErrorsOperation_get_UserDataAccountId(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderResolveErrorsOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderResolveErrorsOperation", L"UserDataAccountId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderResolveErrorsOperation", L"UserDataAccountId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserDataAccountId());
         }
         catch (...)
@@ -459,14 +459,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderSettingsOperation", L"ReportCompleted", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderSettingsOperation", L"ReportCompleted", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportCompleted();
                 Py_RETURN_NONE;
             }
@@ -485,14 +485,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 
     static PyObject* UserDataAccountProviderSettingsOperation_get_Kind(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderSettingsOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderSettingsOperation", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderSettingsOperation", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -504,14 +504,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 
     static PyObject* UserDataAccountProviderSettingsOperation_get_UserDataAccountId(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderSettingsOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderSettingsOperation", L"UserDataAccountId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderSettingsOperation", L"UserDataAccountId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserDataAccountId());
         }
         catch (...)
@@ -595,14 +595,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 
     static PyObject* IUserDataAccountProviderOperation_get_Kind(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)

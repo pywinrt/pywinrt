@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     static PyObject* ProviderI2cConnectionSettings_get_SlaveAddress(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings", L"SlaveAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings", L"SlaveAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SlaveAddress());
         }
         catch (...)
@@ -43,12 +43,6 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     static int ProviderI2cConnectionSettings_put_SlaveAddress(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings", L"SlaveAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -57,6 +51,12 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings", L"SlaveAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.SlaveAddress(param0);
@@ -71,14 +71,14 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     static PyObject* ProviderI2cConnectionSettings_get_SharingMode(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings", L"SharingMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings", L"SharingMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SharingMode());
         }
         catch (...)
@@ -90,12 +90,6 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     static int ProviderI2cConnectionSettings_put_SharingMode(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings", L"SharingMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -104,6 +98,12 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings", L"SharingMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::I2c::Provider::ProviderI2cSharingMode>(arg);
 
             self->obj.SharingMode(param0);
@@ -118,14 +118,14 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     static PyObject* ProviderI2cConnectionSettings_get_BusSpeed(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings", L"BusSpeed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings", L"BusSpeed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BusSpeed());
         }
         catch (...)
@@ -137,12 +137,6 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     static int ProviderI2cConnectionSettings_put_BusSpeed(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings", L"BusSpeed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -151,6 +145,12 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings", L"BusSpeed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::I2c::Provider::ProviderI2cBusSpeed>(arg);
 
             self->obj.BusSpeed(param0);
@@ -241,14 +241,14 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.I2c.Provider.II2cControllerProvider", L"GetDeviceProvider", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.I2c.Provider.II2cControllerProvider", L"GetDeviceProvider", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings>(args, 0);
 
                 return py::convert(self->obj.GetDeviceProvider(param0));
@@ -342,14 +342,14 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -372,14 +372,14 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.I2c.Provider.II2cDeviceProvider", L"Read", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.I2c.Provider.II2cDeviceProvider", L"Read", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 0);
 
                 self->obj.Read(param0);
@@ -404,14 +404,14 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.I2c.Provider.II2cDeviceProvider", L"ReadPartial", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.I2c.Provider.II2cDeviceProvider", L"ReadPartial", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 0);
 
                 return py::convert(self->obj.ReadPartial(param0));
@@ -435,14 +435,14 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.I2c.Provider.II2cDeviceProvider", L"Write", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.I2c.Provider.II2cDeviceProvider", L"Write", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 self->obj.Write(param0);
@@ -467,14 +467,14 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.I2c.Provider.II2cDeviceProvider", L"WritePartial", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.I2c.Provider.II2cDeviceProvider", L"WritePartial", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 return py::convert(self->obj.WritePartial(param0));
@@ -498,14 +498,14 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.I2c.Provider.II2cDeviceProvider", L"WriteRead", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.I2c.Provider.II2cDeviceProvider", L"WriteRead", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 1);
 
@@ -531,14 +531,14 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.I2c.Provider.II2cDeviceProvider", L"WriteReadPartial", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.I2c.Provider.II2cDeviceProvider", L"WriteReadPartial", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 1);
 
@@ -559,14 +559,14 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     static PyObject* II2cDeviceProvider_get_DeviceId(py::wrapper::Windows::Devices::I2c::Provider::II2cDeviceProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.I2c.Provider.II2cDeviceProvider", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.I2c.Provider.II2cDeviceProvider", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -680,14 +680,14 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.I2c.Provider.II2cProvider", L"GetControllersAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.I2c.Provider.II2cProvider", L"GetControllersAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetControllersAsync());
             }
             catch (...)

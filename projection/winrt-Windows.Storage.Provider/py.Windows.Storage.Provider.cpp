@@ -20,14 +20,14 @@ namespace py::cpp::Windows::Storage::Provider
 
         if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.CachedFileUpdater", L"SetUpdateInformation", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.CachedFileUpdater", L"SetUpdateInformation", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Provider::ReadActivationMode>(args, 2);
@@ -124,14 +124,14 @@ namespace py::cpp::Windows::Storage::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.CachedFileUpdaterUI", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.CachedFileUpdaterUI", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -149,14 +149,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* CachedFileUpdaterUI_get_Title(py::wrapper::Windows::Storage::Provider::CachedFileUpdaterUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.CachedFileUpdaterUI", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.CachedFileUpdaterUI", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -168,12 +168,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int CachedFileUpdaterUI_put_Title(py::wrapper::Windows::Storage::Provider::CachedFileUpdaterUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.CachedFileUpdaterUI", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -182,6 +176,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.CachedFileUpdaterUI", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Title(param0);
@@ -196,14 +196,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* CachedFileUpdaterUI_get_UIStatus(py::wrapper::Windows::Storage::Provider::CachedFileUpdaterUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.CachedFileUpdaterUI", L"UIStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.CachedFileUpdaterUI", L"UIStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UIStatus());
         }
         catch (...)
@@ -215,14 +215,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* CachedFileUpdaterUI_get_UpdateTarget(py::wrapper::Windows::Storage::Provider::CachedFileUpdaterUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.CachedFileUpdaterUI", L"UpdateTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.CachedFileUpdaterUI", L"UpdateTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UpdateTarget());
         }
         catch (...)
@@ -234,14 +234,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* CachedFileUpdaterUI_get_UpdateRequest(py::wrapper::Windows::Storage::Provider::CachedFileUpdaterUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.CachedFileUpdaterUI", L"UpdateRequest"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.CachedFileUpdaterUI", L"UpdateRequest"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UpdateRequest());
         }
         catch (...)
@@ -253,14 +253,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* CachedFileUpdaterUI_add_FileUpdateRequested(py::wrapper::Windows::Storage::Provider::CachedFileUpdaterUI* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Provider.CachedFileUpdaterUI", L"FileUpdateRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Provider.CachedFileUpdaterUI", L"FileUpdateRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Provider::CachedFileUpdaterUI, winrt::Windows::Storage::Provider::FileUpdateRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.FileUpdateRequested(param0));
@@ -274,14 +274,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* CachedFileUpdaterUI_remove_FileUpdateRequested(py::wrapper::Windows::Storage::Provider::CachedFileUpdaterUI* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Provider.CachedFileUpdaterUI", L"FileUpdateRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Provider.CachedFileUpdaterUI", L"FileUpdateRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FileUpdateRequested(param0);
@@ -296,14 +296,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* CachedFileUpdaterUI_add_UIRequested(py::wrapper::Windows::Storage::Provider::CachedFileUpdaterUI* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Provider.CachedFileUpdaterUI", L"UIRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Provider.CachedFileUpdaterUI", L"UIRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Provider::CachedFileUpdaterUI, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.UIRequested(param0));
@@ -317,14 +317,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* CachedFileUpdaterUI_remove_UIRequested(py::wrapper::Windows::Storage::Provider::CachedFileUpdaterUI* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Provider.CachedFileUpdaterUI", L"UIRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Provider.CachedFileUpdaterUI", L"UIRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.UIRequested(param0);
@@ -421,14 +421,14 @@ namespace py::cpp::Windows::Storage::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.FileUpdateRequest", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.FileUpdateRequest", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -450,14 +450,14 @@ namespace py::cpp::Windows::Storage::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.FileUpdateRequest", L"UpdateLocalFile", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.FileUpdateRequest", L"UpdateLocalFile", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 self->obj.UpdateLocalFile(param0);
@@ -478,14 +478,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* FileUpdateRequest_get_Status(py::wrapper::Windows::Storage::Provider::FileUpdateRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.FileUpdateRequest", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.FileUpdateRequest", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -497,12 +497,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int FileUpdateRequest_put_Status(py::wrapper::Windows::Storage::Provider::FileUpdateRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.FileUpdateRequest", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -511,6 +505,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.FileUpdateRequest", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Provider::FileUpdateStatus>(arg);
 
             self->obj.Status(param0);
@@ -525,14 +525,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* FileUpdateRequest_get_ContentId(py::wrapper::Windows::Storage::Provider::FileUpdateRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.FileUpdateRequest", L"ContentId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.FileUpdateRequest", L"ContentId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentId());
         }
         catch (...)
@@ -544,14 +544,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* FileUpdateRequest_get_File(py::wrapper::Windows::Storage::Provider::FileUpdateRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.FileUpdateRequest", L"File"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.FileUpdateRequest", L"File"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.File());
         }
         catch (...)
@@ -563,14 +563,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* FileUpdateRequest_get_UserInputNeededMessage(py::wrapper::Windows::Storage::Provider::FileUpdateRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.FileUpdateRequest", L"UserInputNeededMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.FileUpdateRequest", L"UserInputNeededMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserInputNeededMessage());
         }
         catch (...)
@@ -582,12 +582,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int FileUpdateRequest_put_UserInputNeededMessage(py::wrapper::Windows::Storage::Provider::FileUpdateRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.FileUpdateRequest", L"UserInputNeededMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -596,6 +590,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.FileUpdateRequest", L"UserInputNeededMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.UserInputNeededMessage(param0);
@@ -689,14 +689,14 @@ namespace py::cpp::Windows::Storage::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.FileUpdateRequestDeferral", L"Complete", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.FileUpdateRequestDeferral", L"Complete", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Complete();
                 Py_RETURN_NONE;
             }
@@ -785,14 +785,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* FileUpdateRequestedEventArgs_get_Request(py::wrapper::Windows::Storage::Provider::FileUpdateRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.FileUpdateRequestedEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.FileUpdateRequestedEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -899,14 +899,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderFileTypeInfo_get_FileExtension(py::wrapper::Windows::Storage::Provider::StorageProviderFileTypeInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderFileTypeInfo", L"FileExtension"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderFileTypeInfo", L"FileExtension"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FileExtension());
         }
         catch (...)
@@ -918,14 +918,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderFileTypeInfo_get_IconResource(py::wrapper::Windows::Storage::Provider::StorageProviderFileTypeInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderFileTypeInfo", L"IconResource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderFileTypeInfo", L"IconResource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IconResource());
         }
         catch (...)
@@ -1030,14 +1030,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderGetContentInfoForPathResult_get_Status(py::wrapper::Windows::Storage::Provider::StorageProviderGetContentInfoForPathResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1049,12 +1049,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderGetContentInfoForPathResult_put_Status(py::wrapper::Windows::Storage::Provider::StorageProviderGetContentInfoForPathResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1063,6 +1057,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderUriSourceStatus>(arg);
 
             self->obj.Status(param0);
@@ -1077,14 +1077,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderGetContentInfoForPathResult_get_ContentUri(py::wrapper::Windows::Storage::Provider::StorageProviderGetContentInfoForPathResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult", L"ContentUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult", L"ContentUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentUri());
         }
         catch (...)
@@ -1096,12 +1096,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderGetContentInfoForPathResult_put_ContentUri(py::wrapper::Windows::Storage::Provider::StorageProviderGetContentInfoForPathResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult", L"ContentUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1110,6 +1104,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult", L"ContentUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ContentUri(param0);
@@ -1124,14 +1124,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderGetContentInfoForPathResult_get_ContentId(py::wrapper::Windows::Storage::Provider::StorageProviderGetContentInfoForPathResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult", L"ContentId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult", L"ContentId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentId());
         }
         catch (...)
@@ -1143,12 +1143,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderGetContentInfoForPathResult_put_ContentId(py::wrapper::Windows::Storage::Provider::StorageProviderGetContentInfoForPathResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult", L"ContentId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1157,6 +1151,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult", L"ContentId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ContentId(param0);
@@ -1265,14 +1265,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderGetPathForContentUriResult_get_Status(py::wrapper::Windows::Storage::Provider::StorageProviderGetPathForContentUriResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderGetPathForContentUriResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderGetPathForContentUriResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1284,12 +1284,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderGetPathForContentUriResult_put_Status(py::wrapper::Windows::Storage::Provider::StorageProviderGetPathForContentUriResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderGetPathForContentUriResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1298,6 +1292,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderGetPathForContentUriResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderUriSourceStatus>(arg);
 
             self->obj.Status(param0);
@@ -1312,14 +1312,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderGetPathForContentUriResult_get_Path(py::wrapper::Windows::Storage::Provider::StorageProviderGetPathForContentUriResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderGetPathForContentUriResult", L"Path"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderGetPathForContentUriResult", L"Path"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Path());
         }
         catch (...)
@@ -1331,12 +1331,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderGetPathForContentUriResult_put_Path(py::wrapper::Windows::Storage::Provider::StorageProviderGetPathForContentUriResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderGetPathForContentUriResult", L"Path"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1345,6 +1339,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderGetPathForContentUriResult", L"Path"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Path(param0);
@@ -1426,14 +1426,14 @@ namespace py::cpp::Windows::Storage::Provider
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.StorageProviderItemProperties", L"SetAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.StorageProviderItemProperties", L"SetAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::Provider::StorageProviderItemProperty>>(args, 1);
 
@@ -1544,14 +1544,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderItemProperty_get_Value(py::wrapper::Windows::Storage::Provider::StorageProviderItemProperty* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderItemProperty", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderItemProperty", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -1563,12 +1563,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderItemProperty_put_Value(py::wrapper::Windows::Storage::Provider::StorageProviderItemProperty* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderItemProperty", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1577,6 +1571,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderItemProperty", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Value(param0);
@@ -1591,14 +1591,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderItemProperty_get_Id(py::wrapper::Windows::Storage::Provider::StorageProviderItemProperty* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderItemProperty", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderItemProperty", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1610,12 +1610,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderItemProperty_put_Id(py::wrapper::Windows::Storage::Provider::StorageProviderItemProperty* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderItemProperty", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1624,6 +1618,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderItemProperty", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Id(param0);
@@ -1638,14 +1638,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderItemProperty_get_IconResource(py::wrapper::Windows::Storage::Provider::StorageProviderItemProperty* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderItemProperty", L"IconResource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderItemProperty", L"IconResource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IconResource());
         }
         catch (...)
@@ -1657,12 +1657,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderItemProperty_put_IconResource(py::wrapper::Windows::Storage::Provider::StorageProviderItemProperty* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderItemProperty", L"IconResource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1671,6 +1665,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderItemProperty", L"IconResource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.IconResource(param0);
@@ -1779,14 +1779,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderItemPropertyDefinition_get_Id(py::wrapper::Windows::Storage::Provider::StorageProviderItemPropertyDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderItemPropertyDefinition", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderItemPropertyDefinition", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1798,12 +1798,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderItemPropertyDefinition_put_Id(py::wrapper::Windows::Storage::Provider::StorageProviderItemPropertyDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderItemPropertyDefinition", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1812,6 +1806,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderItemPropertyDefinition", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Id(param0);
@@ -1826,14 +1826,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderItemPropertyDefinition_get_DisplayNameResource(py::wrapper::Windows::Storage::Provider::StorageProviderItemPropertyDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderItemPropertyDefinition", L"DisplayNameResource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderItemPropertyDefinition", L"DisplayNameResource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayNameResource());
         }
         catch (...)
@@ -1845,12 +1845,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderItemPropertyDefinition_put_DisplayNameResource(py::wrapper::Windows::Storage::Provider::StorageProviderItemPropertyDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderItemPropertyDefinition", L"DisplayNameResource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1859,6 +1853,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderItemPropertyDefinition", L"DisplayNameResource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayNameResource(param0);
@@ -1966,14 +1966,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderKnownFolderEntry_get_Status(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderEntry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderEntry", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderEntry", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1985,12 +1985,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderKnownFolderEntry_put_Status(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderEntry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderEntry", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1999,6 +1993,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderEntry", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncStatus>(arg);
 
             self->obj.Status(param0);
@@ -2013,14 +2013,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderKnownFolderEntry_get_KnownFolderId(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderEntry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderEntry", L"KnownFolderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderEntry", L"KnownFolderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KnownFolderId());
         }
         catch (...)
@@ -2032,12 +2032,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderKnownFolderEntry_put_KnownFolderId(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderEntry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderEntry", L"KnownFolderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2046,6 +2040,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderEntry", L"KnownFolderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::guid>(arg);
 
             self->obj.KnownFolderId(param0);
@@ -2153,14 +2153,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderKnownFolderSyncInfo_get_SyncRequested(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo", L"SyncRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo", L"SyncRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SyncRequested());
         }
         catch (...)
@@ -2172,12 +2172,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderKnownFolderSyncInfo_put_SyncRequested(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo", L"SyncRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2186,6 +2180,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo", L"SyncRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestedHandler>(arg);
 
             self->obj.SyncRequested(param0);
@@ -2200,14 +2200,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderKnownFolderSyncInfo_get_ProviderDisplayName(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo", L"ProviderDisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo", L"ProviderDisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderDisplayName());
         }
         catch (...)
@@ -2219,12 +2219,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderKnownFolderSyncInfo_put_ProviderDisplayName(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo", L"ProviderDisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2233,6 +2227,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo", L"ProviderDisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ProviderDisplayName(param0);
@@ -2247,14 +2247,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderKnownFolderSyncInfo_get_KnownFolderEntries(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo", L"KnownFolderEntries"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo", L"KnownFolderEntries"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KnownFolderEntries());
         }
         catch (...)
@@ -2338,14 +2338,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderKnownFolderSyncRequestArgs_get_KnownFolders(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestArgs", L"KnownFolders"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestArgs", L"KnownFolders"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KnownFolders());
         }
         catch (...)
@@ -2357,14 +2357,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderKnownFolderSyncRequestArgs_get_Source(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestArgs", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestArgs", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -2469,14 +2469,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderMoreInfoUI_get_Message(py::wrapper::Windows::Storage::Provider::StorageProviderMoreInfoUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderMoreInfoUI", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderMoreInfoUI", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Message());
         }
         catch (...)
@@ -2488,12 +2488,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderMoreInfoUI_put_Message(py::wrapper::Windows::Storage::Provider::StorageProviderMoreInfoUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderMoreInfoUI", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2502,6 +2496,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderMoreInfoUI", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Message(param0);
@@ -2516,14 +2516,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderMoreInfoUI_get_Command(py::wrapper::Windows::Storage::Provider::StorageProviderMoreInfoUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderMoreInfoUI", L"Command"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderMoreInfoUI", L"Command"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Command());
         }
         catch (...)
@@ -2535,12 +2535,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderMoreInfoUI_put_Command(py::wrapper::Windows::Storage::Provider::StorageProviderMoreInfoUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderMoreInfoUI", L"Command"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2549,6 +2543,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderMoreInfoUI", L"Command"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Provider::IStorageProviderUICommand>(arg);
 
             self->obj.Command(param0);
@@ -2656,14 +2656,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderQuotaUI_get_QuotaUsedLabel(py::wrapper::Windows::Storage::Provider::StorageProviderQuotaUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderQuotaUI", L"QuotaUsedLabel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderQuotaUI", L"QuotaUsedLabel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.QuotaUsedLabel());
         }
         catch (...)
@@ -2675,12 +2675,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderQuotaUI_put_QuotaUsedLabel(py::wrapper::Windows::Storage::Provider::StorageProviderQuotaUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderQuotaUI", L"QuotaUsedLabel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2689,6 +2683,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderQuotaUI", L"QuotaUsedLabel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.QuotaUsedLabel(param0);
@@ -2703,14 +2703,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderQuotaUI_get_QuotaUsedInBytes(py::wrapper::Windows::Storage::Provider::StorageProviderQuotaUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderQuotaUI", L"QuotaUsedInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderQuotaUI", L"QuotaUsedInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.QuotaUsedInBytes());
         }
         catch (...)
@@ -2722,12 +2722,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderQuotaUI_put_QuotaUsedInBytes(py::wrapper::Windows::Storage::Provider::StorageProviderQuotaUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderQuotaUI", L"QuotaUsedInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2736,6 +2730,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderQuotaUI", L"QuotaUsedInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint64_t>(arg);
 
             self->obj.QuotaUsedInBytes(param0);
@@ -2750,14 +2750,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderQuotaUI_get_QuotaUsedColor(py::wrapper::Windows::Storage::Provider::StorageProviderQuotaUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderQuotaUI", L"QuotaUsedColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderQuotaUI", L"QuotaUsedColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.QuotaUsedColor());
         }
         catch (...)
@@ -2769,12 +2769,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderQuotaUI_put_QuotaUsedColor(py::wrapper::Windows::Storage::Provider::StorageProviderQuotaUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderQuotaUI", L"QuotaUsedColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2783,6 +2777,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderQuotaUI", L"QuotaUsedColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.QuotaUsedColor(param0);
@@ -2797,14 +2797,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderQuotaUI_get_QuotaTotalInBytes(py::wrapper::Windows::Storage::Provider::StorageProviderQuotaUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderQuotaUI", L"QuotaTotalInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderQuotaUI", L"QuotaTotalInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.QuotaTotalInBytes());
         }
         catch (...)
@@ -2816,12 +2816,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderQuotaUI_put_QuotaTotalInBytes(py::wrapper::Windows::Storage::Provider::StorageProviderQuotaUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderQuotaUI", L"QuotaTotalInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2830,6 +2824,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderQuotaUI", L"QuotaTotalInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint64_t>(arg);
 
             self->obj.QuotaTotalInBytes(param0);
@@ -2939,14 +2939,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderStatusUI_get_SyncStatusCommand(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"SyncStatusCommand"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"SyncStatusCommand"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SyncStatusCommand());
         }
         catch (...)
@@ -2958,12 +2958,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderStatusUI_put_SyncStatusCommand(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"SyncStatusCommand"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2972,6 +2966,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"SyncStatusCommand"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Provider::IStorageProviderUICommand>(arg);
 
             self->obj.SyncStatusCommand(param0);
@@ -2986,14 +2986,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderStatusUI_get_QuotaUI(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"QuotaUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"QuotaUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.QuotaUI());
         }
         catch (...)
@@ -3005,12 +3005,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderStatusUI_put_QuotaUI(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"QuotaUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3019,6 +3013,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"QuotaUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderQuotaUI>(arg);
 
             self->obj.QuotaUI(param0);
@@ -3033,14 +3033,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderStatusUI_get_ProviderStateLabel(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"ProviderStateLabel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"ProviderStateLabel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderStateLabel());
         }
         catch (...)
@@ -3052,12 +3052,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderStatusUI_put_ProviderStateLabel(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"ProviderStateLabel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3066,6 +3060,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"ProviderStateLabel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ProviderStateLabel(param0);
@@ -3080,14 +3080,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderStatusUI_get_ProviderStateIcon(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"ProviderStateIcon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"ProviderStateIcon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderStateIcon());
         }
         catch (...)
@@ -3099,12 +3099,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderStatusUI_put_ProviderStateIcon(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"ProviderStateIcon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3113,6 +3107,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"ProviderStateIcon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.ProviderStateIcon(param0);
@@ -3127,14 +3127,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderStatusUI_get_ProviderState(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"ProviderState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"ProviderState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderState());
         }
         catch (...)
@@ -3146,12 +3146,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderStatusUI_put_ProviderState(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"ProviderState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3160,6 +3154,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"ProviderState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderState>(arg);
 
             self->obj.ProviderState(param0);
@@ -3174,14 +3174,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderStatusUI_get_ProviderSecondaryCommands(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"ProviderSecondaryCommands"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"ProviderSecondaryCommands"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderSecondaryCommands());
         }
         catch (...)
@@ -3193,12 +3193,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderStatusUI_put_ProviderSecondaryCommands(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"ProviderSecondaryCommands"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3207,6 +3201,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"ProviderSecondaryCommands"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Storage::Provider::IStorageProviderUICommand>>(arg);
 
             self->obj.ProviderSecondaryCommands(param0);
@@ -3221,14 +3221,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderStatusUI_get_ProviderPrimaryCommand(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"ProviderPrimaryCommand"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"ProviderPrimaryCommand"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderPrimaryCommand());
         }
         catch (...)
@@ -3240,12 +3240,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderStatusUI_put_ProviderPrimaryCommand(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"ProviderPrimaryCommand"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3254,6 +3248,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"ProviderPrimaryCommand"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Provider::IStorageProviderUICommand>(arg);
 
             self->obj.ProviderPrimaryCommand(param0);
@@ -3268,14 +3268,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderStatusUI_get_MoreInfoUI(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"MoreInfoUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"MoreInfoUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MoreInfoUI());
         }
         catch (...)
@@ -3287,12 +3287,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderStatusUI_put_MoreInfoUI(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"MoreInfoUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3301,6 +3295,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderStatusUI", L"MoreInfoUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderMoreInfoUI>(arg);
 
             self->obj.MoreInfoUI(param0);
@@ -3414,14 +3414,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderSyncRootInfo_get_Version(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"Version"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"Version"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Version());
         }
         catch (...)
@@ -3433,12 +3433,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_Version(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"Version"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3447,6 +3441,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"Version"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Version(param0);
@@ -3461,14 +3461,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderSyncRootInfo_get_ShowSiblingsAsGroup(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"ShowSiblingsAsGroup"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"ShowSiblingsAsGroup"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShowSiblingsAsGroup());
         }
         catch (...)
@@ -3480,12 +3480,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_ShowSiblingsAsGroup(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"ShowSiblingsAsGroup"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3494,6 +3488,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"ShowSiblingsAsGroup"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ShowSiblingsAsGroup(param0);
@@ -3508,14 +3508,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderSyncRootInfo_get_RecycleBinUri(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"RecycleBinUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"RecycleBinUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RecycleBinUri());
         }
         catch (...)
@@ -3527,12 +3527,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_RecycleBinUri(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"RecycleBinUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3541,6 +3535,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"RecycleBinUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.RecycleBinUri(param0);
@@ -3555,14 +3555,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderSyncRootInfo_get_ProtectionMode(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"ProtectionMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"ProtectionMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProtectionMode());
         }
         catch (...)
@@ -3574,12 +3574,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_ProtectionMode(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"ProtectionMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3588,6 +3582,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"ProtectionMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderProtectionMode>(arg);
 
             self->obj.ProtectionMode(param0);
@@ -3602,14 +3602,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderSyncRootInfo_get_PopulationPolicy(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"PopulationPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"PopulationPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PopulationPolicy());
         }
         catch (...)
@@ -3621,12 +3621,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_PopulationPolicy(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"PopulationPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3635,6 +3629,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"PopulationPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderPopulationPolicy>(arg);
 
             self->obj.PopulationPolicy(param0);
@@ -3649,14 +3649,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderSyncRootInfo_get_Path(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"Path"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"Path"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Path());
         }
         catch (...)
@@ -3668,12 +3668,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_Path(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"Path"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3682,6 +3676,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"Path"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(arg);
 
             self->obj.Path(param0);
@@ -3696,14 +3696,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderSyncRootInfo_get_InSyncPolicy(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"InSyncPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"InSyncPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InSyncPolicy());
         }
         catch (...)
@@ -3715,12 +3715,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_InSyncPolicy(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"InSyncPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3729,6 +3723,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"InSyncPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderInSyncPolicy>(arg);
 
             self->obj.InSyncPolicy(param0);
@@ -3743,14 +3743,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderSyncRootInfo_get_Id(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -3762,12 +3762,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_Id(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3776,6 +3770,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Id(param0);
@@ -3790,14 +3790,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderSyncRootInfo_get_IconResource(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"IconResource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"IconResource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IconResource());
         }
         catch (...)
@@ -3809,12 +3809,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_IconResource(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"IconResource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3823,6 +3817,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"IconResource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.IconResource(param0);
@@ -3837,14 +3837,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderSyncRootInfo_get_HydrationPolicyModifier(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"HydrationPolicyModifier"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"HydrationPolicyModifier"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HydrationPolicyModifier());
         }
         catch (...)
@@ -3856,12 +3856,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_HydrationPolicyModifier(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"HydrationPolicyModifier"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3870,6 +3864,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"HydrationPolicyModifier"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderHydrationPolicyModifier>(arg);
 
             self->obj.HydrationPolicyModifier(param0);
@@ -3884,14 +3884,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderSyncRootInfo_get_HydrationPolicy(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"HydrationPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"HydrationPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HydrationPolicy());
         }
         catch (...)
@@ -3903,12 +3903,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_HydrationPolicy(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"HydrationPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3917,6 +3911,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"HydrationPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderHydrationPolicy>(arg);
 
             self->obj.HydrationPolicy(param0);
@@ -3931,14 +3931,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderSyncRootInfo_get_HardlinkPolicy(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"HardlinkPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"HardlinkPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HardlinkPolicy());
         }
         catch (...)
@@ -3950,12 +3950,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_HardlinkPolicy(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"HardlinkPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3964,6 +3958,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"HardlinkPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderHardlinkPolicy>(arg);
 
             self->obj.HardlinkPolicy(param0);
@@ -3978,14 +3978,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderSyncRootInfo_get_DisplayNameResource(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"DisplayNameResource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"DisplayNameResource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayNameResource());
         }
         catch (...)
@@ -3997,12 +3997,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_DisplayNameResource(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"DisplayNameResource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4011,6 +4005,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"DisplayNameResource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayNameResource(param0);
@@ -4025,14 +4025,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderSyncRootInfo_get_Context(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"Context"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"Context"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Context());
         }
         catch (...)
@@ -4044,12 +4044,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_Context(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"Context"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4058,6 +4052,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"Context"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             self->obj.Context(param0);
@@ -4072,14 +4072,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderSyncRootInfo_get_AllowPinning(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"AllowPinning"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"AllowPinning"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowPinning());
         }
         catch (...)
@@ -4091,12 +4091,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_AllowPinning(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"AllowPinning"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4105,6 +4099,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"AllowPinning"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowPinning(param0);
@@ -4119,14 +4119,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderSyncRootInfo_get_StorageProviderItemPropertyDefinitions(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"StorageProviderItemPropertyDefinitions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"StorageProviderItemPropertyDefinitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StorageProviderItemPropertyDefinitions());
         }
         catch (...)
@@ -4138,14 +4138,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderSyncRootInfo_get_ProviderId(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"ProviderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"ProviderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderId());
         }
         catch (...)
@@ -4157,12 +4157,6 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_ProviderId(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"ProviderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4171,6 +4165,12 @@ namespace py::cpp::Windows::Storage::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"ProviderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::guid>(arg);
 
             self->obj.ProviderId(param0);
@@ -4185,14 +4185,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* StorageProviderSyncRootInfo_get_FallbackFileTypeInfo(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"FallbackFileTypeInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSyncRootInfo", L"FallbackFileTypeInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FallbackFileTypeInfo());
         }
         catch (...)
@@ -4287,14 +4287,14 @@ namespace py::cpp::Windows::Storage::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.StorageProviderSyncRootManager", L"GetCurrentSyncRoots", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.StorageProviderSyncRootManager", L"GetCurrentSyncRoots", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Storage::Provider::StorageProviderSyncRootManager::GetCurrentSyncRoots());
             }
             catch (...)
@@ -4316,14 +4316,14 @@ namespace py::cpp::Windows::Storage::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.StorageProviderSyncRootManager", L"GetSyncRootInformationForFolder", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.StorageProviderSyncRootManager", L"GetSyncRootInformationForFolder", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
 
                 return py::convert(winrt::Windows::Storage::Provider::StorageProviderSyncRootManager::GetSyncRootInformationForFolder(param0));
@@ -4347,14 +4347,14 @@ namespace py::cpp::Windows::Storage::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.StorageProviderSyncRootManager", L"GetSyncRootInformationForId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.StorageProviderSyncRootManager", L"GetSyncRootInformationForId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Storage::Provider::StorageProviderSyncRootManager::GetSyncRootInformationForId(param0));
@@ -4378,14 +4378,14 @@ namespace py::cpp::Windows::Storage::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.StorageProviderSyncRootManager", L"IsSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.StorageProviderSyncRootManager", L"IsSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Storage::Provider::StorageProviderSyncRootManager::IsSupported());
             }
             catch (...)
@@ -4407,14 +4407,14 @@ namespace py::cpp::Windows::Storage::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.StorageProviderSyncRootManager", L"Register", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.StorageProviderSyncRootManager", L"Register", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderSyncRootInfo>(args, 0);
 
                 winrt::Windows::Storage::Provider::StorageProviderSyncRootManager::Register(param0);
@@ -4439,14 +4439,14 @@ namespace py::cpp::Windows::Storage::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.StorageProviderSyncRootManager", L"Unregister", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.StorageProviderSyncRootManager", L"Unregister", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 winrt::Windows::Storage::Provider::StorageProviderSyncRootManager::Unregister(param0);
@@ -4544,14 +4544,14 @@ namespace py::cpp::Windows::Storage::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderItemPropertySource", L"GetItemProperties", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderItemPropertySource", L"GetItemProperties", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetItemProperties(param0));
@@ -4645,14 +4645,14 @@ namespace py::cpp::Windows::Storage::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSource", L"GetKnownFolderSyncInfo", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSource", L"GetKnownFolderSyncInfo", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetKnownFolderSyncInfo());
             }
             catch (...)
@@ -4670,14 +4670,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* IStorageProviderKnownFolderSyncInfoSource_add_KnownFolderSyncInfoChanged(py::wrapper::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSource", L"KnownFolderSyncInfoChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSource", L"KnownFolderSyncInfoChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.KnownFolderSyncInfoChanged(param0));
@@ -4691,14 +4691,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* IStorageProviderKnownFolderSyncInfoSource_remove_KnownFolderSyncInfoChanged(py::wrapper::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSource", L"KnownFolderSyncInfoChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSource", L"KnownFolderSyncInfoChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.KnownFolderSyncInfoChanged(param0);
@@ -4789,14 +4789,14 @@ namespace py::cpp::Windows::Storage::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSourceFactory", L"GetKnownFolderSyncInfoSource", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSourceFactory", L"GetKnownFolderSyncInfoSource", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetKnownFolderSyncInfoSource());
             }
             catch (...)
@@ -4888,14 +4888,14 @@ namespace py::cpp::Windows::Storage::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderPropertyCapabilities", L"IsPropertySupported", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderPropertyCapabilities", L"IsPropertySupported", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.IsPropertySupported(param0));
@@ -4989,14 +4989,14 @@ namespace py::cpp::Windows::Storage::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderStatusUISource", L"GetStatusUI", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderStatusUISource", L"GetStatusUI", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetStatusUI());
             }
             catch (...)
@@ -5014,14 +5014,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* IStorageProviderStatusUISource_add_StatusUIChanged(py::wrapper::Windows::Storage::Provider::IStorageProviderStatusUISource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Provider.IStorageProviderStatusUISource", L"StatusUIChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Provider.IStorageProviderStatusUISource", L"StatusUIChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Provider::IStorageProviderStatusUISource, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.StatusUIChanged(param0));
@@ -5035,14 +5035,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* IStorageProviderStatusUISource_remove_StatusUIChanged(py::wrapper::Windows::Storage::Provider::IStorageProviderStatusUISource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Provider.IStorageProviderStatusUISource", L"StatusUIChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Provider.IStorageProviderStatusUISource", L"StatusUIChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StatusUIChanged(param0);
@@ -5133,14 +5133,14 @@ namespace py::cpp::Windows::Storage::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderStatusUISourceFactory", L"GetStatusUISource", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderStatusUISourceFactory", L"GetStatusUISource", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetStatusUISource(param0));
@@ -5234,14 +5234,14 @@ namespace py::cpp::Windows::Storage::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderUICommand", L"Invoke", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderUICommand", L"Invoke", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Invoke();
                 Py_RETURN_NONE;
             }
@@ -5260,14 +5260,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* IStorageProviderUICommand_get_Description(py::wrapper::Windows::Storage::Provider::IStorageProviderUICommand* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.IStorageProviderUICommand", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.IStorageProviderUICommand", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -5279,14 +5279,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* IStorageProviderUICommand_get_Icon(py::wrapper::Windows::Storage::Provider::IStorageProviderUICommand* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.IStorageProviderUICommand", L"Icon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.IStorageProviderUICommand", L"Icon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Icon());
         }
         catch (...)
@@ -5298,14 +5298,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* IStorageProviderUICommand_get_Label(py::wrapper::Windows::Storage::Provider::IStorageProviderUICommand* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.IStorageProviderUICommand", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.IStorageProviderUICommand", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Label());
         }
         catch (...)
@@ -5317,14 +5317,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* IStorageProviderUICommand_get_State(py::wrapper::Windows::Storage::Provider::IStorageProviderUICommand* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.IStorageProviderUICommand", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.IStorageProviderUICommand", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -5414,14 +5414,14 @@ namespace py::cpp::Windows::Storage::Provider
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderUriSource", L"GetContentInfoForPath", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderUriSource", L"GetContentInfoForPath", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderGetContentInfoForPathResult>(args, 1);
 
@@ -5447,14 +5447,14 @@ namespace py::cpp::Windows::Storage::Provider
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderUriSource", L"GetPathForContentUri", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderUriSource", L"GetPathForContentUri", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderGetPathForContentUriResult>(args, 1);
 

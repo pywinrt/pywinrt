@@ -20,14 +20,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.Provisioning.ContactPartnerProvisioningManager", L"AssociateNetworkAccountAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.Provisioning.ContactPartnerProvisioningManager", L"AssociateNetworkAccountAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Phone::PersonalInformation::ContactStore>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -53,14 +53,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.Provisioning.ContactPartnerProvisioningManager", L"AssociateSocialNetworkAccountAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.Provisioning.ContactPartnerProvisioningManager", L"AssociateSocialNetworkAccountAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Phone::PersonalInformation::ContactStore>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -86,14 +86,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.Provisioning.ContactPartnerProvisioningManager", L"ImportVcardToSystemAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.Provisioning.ContactPartnerProvisioningManager", L"ImportVcardToSystemAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
                 return py::convert(winrt::Windows::Phone::PersonalInformation::Provisioning::ContactPartnerProvisioningManager::ImportVcardToSystemAsync(param0));
@@ -179,14 +179,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
 
         if (arg_count == 7)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.Provisioning.MessagePartnerProvisioningManager", L"ImportMmsToSystemAsync", 7))
-            {
-                py::set_arg_count_version_error(7);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.Provisioning.MessagePartnerProvisioningManager", L"ImportMmsToSystemAsync", 7))
+                {
+                    py::set_arg_count_version_error(7);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -216,14 +216,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
 
         if (arg_count == 6)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.Provisioning.MessagePartnerProvisioningManager", L"ImportSmsToSystemAsync", 6))
-            {
-                py::set_arg_count_version_error(6);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.Provisioning.MessagePartnerProvisioningManager", L"ImportSmsToSystemAsync", 6))
+                {
+                    py::set_arg_count_version_error(6);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);

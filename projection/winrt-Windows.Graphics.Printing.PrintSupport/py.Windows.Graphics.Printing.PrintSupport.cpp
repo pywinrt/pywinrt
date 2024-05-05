@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -54,14 +54,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportExtensionSession_get_Printer(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession", L"Printer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession", L"Printer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Printer());
         }
         catch (...)
@@ -73,14 +73,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportExtensionSession_add_PrintDeviceCapabilitiesChanged(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession", L"PrintDeviceCapabilitiesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession", L"PrintDeviceCapabilitiesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs>>(arg);
 
             return py::convert(self->obj.PrintDeviceCapabilitiesChanged(param0));
@@ -94,14 +94,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportExtensionSession_remove_PrintDeviceCapabilitiesChanged(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession", L"PrintDeviceCapabilitiesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession", L"PrintDeviceCapabilitiesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PrintDeviceCapabilitiesChanged(param0);
@@ -116,14 +116,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportExtensionSession_add_PrintTicketValidationRequested(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession", L"PrintTicketValidationRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession", L"PrintTicketValidationRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.PrintTicketValidationRequested(param0));
@@ -137,14 +137,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportExtensionSession_remove_PrintTicketValidationRequested(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession", L"PrintTicketValidationRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession", L"PrintTicketValidationRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PrintTicketValidationRequested(param0);
@@ -159,14 +159,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportExtensionSession_add_PrinterSelected(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession", L"PrinterSelected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession", L"PrinterSelected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs>>(arg);
 
             return py::convert(self->obj.PrinterSelected(param0));
@@ -180,14 +180,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportExtensionSession_remove_PrinterSelected(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession", L"PrinterSelected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession", L"PrinterSelected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PrinterSelected(param0);
@@ -279,14 +279,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportExtensionTriggerDetails_get_Session(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionTriggerDetails", L"Session"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionTriggerDetails", L"Session"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Session());
         }
         catch (...)
@@ -372,14 +372,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs", L"GetCurrentPrintDeviceCapabilities", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs", L"GetCurrentPrintDeviceCapabilities", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentPrintDeviceCapabilities());
             }
             catch (...)
@@ -401,14 +401,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs", L"GetCurrentPrintDeviceResources", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs", L"GetCurrentPrintDeviceResources", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentPrintDeviceResources());
             }
             catch (...)
@@ -430,14 +430,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -459,14 +459,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs", L"SetPrintDeviceCapabilitiesUpdatePolicy", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs", L"SetPrintDeviceCapabilitiesUpdatePolicy", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy>(args, 0);
 
                 self->obj.SetPrintDeviceCapabilitiesUpdatePolicy(param0);
@@ -491,14 +491,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs", L"SetSupportedPdlPassthroughContentTypes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs", L"SetSupportedPdlPassthroughContentTypes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 self->obj.SetSupportedPdlPassthroughContentTypes(param0);
@@ -523,14 +523,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs", L"UpdatePrintDeviceCapabilities", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs", L"UpdatePrintDeviceCapabilities", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(args, 0);
 
                 self->obj.UpdatePrintDeviceCapabilities(param0);
@@ -555,14 +555,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs", L"UpdatePrintDeviceResources", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs", L"UpdatePrintDeviceResources", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(args, 0);
 
                 self->obj.UpdatePrintDeviceResources(param0);
@@ -583,14 +583,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportPrintDeviceCapabilitiesChangedEventArgs_get_ResourceLanguage(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs", L"ResourceLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs", L"ResourceLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceLanguage());
         }
         catch (...)
@@ -683,14 +683,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy", L"CreatePeriodicRefresh", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy", L"CreatePeriodicRefresh", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
                 return py::convert(winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy::CreatePeriodicRefresh(param0));
@@ -714,14 +714,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy", L"CreatePrintJobRefresh", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy", L"CreatePrintJobRefresh", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy::CreatePrintJobRefresh(param0));
@@ -859,14 +859,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportPrintTicketElement_get_NamespaceUri(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement", L"NamespaceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement", L"NamespaceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NamespaceUri());
         }
         catch (...)
@@ -878,12 +878,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static int PrintSupportPrintTicketElement_put_NamespaceUri(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement", L"NamespaceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -892,6 +886,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement", L"NamespaceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NamespaceUri(param0);
@@ -906,14 +906,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportPrintTicketElement_get_LocalName(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement", L"LocalName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement", L"LocalName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalName());
         }
         catch (...)
@@ -925,12 +925,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static int PrintSupportPrintTicketElement_put_LocalName(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement", L"LocalName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -939,6 +933,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement", L"LocalName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.LocalName(param0);
@@ -1028,14 +1028,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1057,14 +1057,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs", L"SetPrintTicketValidationStatus", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs", L"SetPrintTicketValidationStatus", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintSupport::WorkflowPrintTicketValidationStatus>(args, 0);
 
                 self->obj.SetPrintTicketValidationStatus(param0);
@@ -1085,14 +1085,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportPrintTicketValidationRequestedEventArgs_get_PrintTicket(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs", L"PrintTicket"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs", L"PrintTicket"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrintTicket());
         }
         catch (...)
@@ -1180,14 +1180,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1209,14 +1209,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs", L"SetAdaptiveCard", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs", L"SetAdaptiveCard", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Shell::IAdaptiveCard>(args, 0);
 
                 self->obj.SetAdaptiveCard(param0);
@@ -1241,14 +1241,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs", L"SetAdditionalFeatures", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs", L"SetAdditionalFeatures", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement>>(args, 0);
 
                 self->obj.SetAdditionalFeatures(param0);
@@ -1273,14 +1273,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs", L"SetAdditionalParameters", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs", L"SetAdditionalParameters", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement>>(args, 0);
 
                 self->obj.SetAdditionalParameters(param0);
@@ -1301,14 +1301,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportPrinterSelectedEventArgs_get_PrintTicket(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs", L"PrintTicket"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs", L"PrintTicket"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrintTicket());
         }
         catch (...)
@@ -1320,12 +1320,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static int PrintSupportPrinterSelectedEventArgs_put_PrintTicket(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs", L"PrintTicket"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1334,6 +1328,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs", L"PrintTicket"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket>(arg);
 
             self->obj.PrintTicket(param0);
@@ -1348,14 +1348,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportPrinterSelectedEventArgs_get_AllowedAdditionalFeaturesAndParametersCount(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs", L"AllowedAdditionalFeaturesAndParametersCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs", L"AllowedAdditionalFeaturesAndParametersCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowedAdditionalFeaturesAndParametersCount());
         }
         catch (...)
@@ -1367,14 +1367,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportPrinterSelectedEventArgs_get_SourceAppInfo(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs", L"SourceAppInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs", L"SourceAppInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceAppInfo());
         }
         catch (...)
@@ -1462,14 +1462,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportSessionInfo_get_Printer(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportSessionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSessionInfo", L"Printer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSessionInfo", L"Printer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Printer());
         }
         catch (...)
@@ -1481,14 +1481,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportSessionInfo_get_SourceAppInfo(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportSessionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSessionInfo", L"SourceAppInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSessionInfo", L"SourceAppInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceAppInfo());
         }
         catch (...)
@@ -1575,14 +1575,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1600,14 +1600,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportSettingsActivatedEventArgs_get_Kind(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -1619,14 +1619,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportSettingsActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -1638,14 +1638,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportSettingsActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -1657,14 +1657,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportSettingsActivatedEventArgs_get_User(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -1676,14 +1676,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportSettingsActivatedEventArgs_get_Session(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs", L"Session"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs", L"Session"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Session());
         }
         catch (...)
@@ -1774,14 +1774,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsUISession", L"UpdatePrintTicket", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsUISession", L"UpdatePrintTicket", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket>(args, 0);
 
                 self->obj.UpdatePrintTicket(param0);
@@ -1802,14 +1802,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportSettingsUISession_get_DocumentTitle(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsUISession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsUISession", L"DocumentTitle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsUISession", L"DocumentTitle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentTitle());
         }
         catch (...)
@@ -1821,14 +1821,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportSettingsUISession_get_LaunchKind(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsUISession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsUISession", L"LaunchKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsUISession", L"LaunchKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LaunchKind());
         }
         catch (...)
@@ -1840,14 +1840,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportSettingsUISession_get_SessionInfo(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsUISession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsUISession", L"SessionInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsUISession", L"SessionInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SessionInfo());
         }
         catch (...)
@@ -1859,14 +1859,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportSettingsUISession_get_SessionPrintTicket(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsUISession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsUISession", L"SessionPrintTicket"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsUISession", L"SessionPrintTicket"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SessionPrintTicket());
         }
         catch (...)

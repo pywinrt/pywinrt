@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlContentLoadingEventArgs_get_Uri(py::wrapper::Windows::Web::UI::WebViewControlContentLoadingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlContentLoadingEventArgs", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlContentLoadingEventArgs", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -113,14 +113,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlDOMContentLoadedEventArgs_get_Uri(py::wrapper::Windows::Web::UI::WebViewControlDOMContentLoadedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -206,14 +206,14 @@ namespace py::cpp::Windows::Web::UI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.WebViewControlDeferredPermissionRequest", L"Allow", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.WebViewControlDeferredPermissionRequest", L"Allow", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Allow();
                 Py_RETURN_NONE;
             }
@@ -236,14 +236,14 @@ namespace py::cpp::Windows::Web::UI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.WebViewControlDeferredPermissionRequest", L"Deny", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.WebViewControlDeferredPermissionRequest", L"Deny", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Deny();
                 Py_RETURN_NONE;
             }
@@ -262,14 +262,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlDeferredPermissionRequest_get_Id(py::wrapper::Windows::Web::UI::WebViewControlDeferredPermissionRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlDeferredPermissionRequest", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlDeferredPermissionRequest", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -281,14 +281,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlDeferredPermissionRequest_get_PermissionType(py::wrapper::Windows::Web::UI::WebViewControlDeferredPermissionRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlDeferredPermissionRequest", L"PermissionType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlDeferredPermissionRequest", L"PermissionType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PermissionType());
         }
         catch (...)
@@ -300,14 +300,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlDeferredPermissionRequest_get_Uri(py::wrapper::Windows::Web::UI::WebViewControlDeferredPermissionRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlDeferredPermissionRequest", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlDeferredPermissionRequest", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -393,14 +393,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlLongRunningScriptDetectedEventArgs_get_StopPageScriptExecution(py::wrapper::Windows::Web::UI::WebViewControlLongRunningScriptDetectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs", L"StopPageScriptExecution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs", L"StopPageScriptExecution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StopPageScriptExecution());
         }
         catch (...)
@@ -412,12 +412,6 @@ namespace py::cpp::Windows::Web::UI
 
     static int WebViewControlLongRunningScriptDetectedEventArgs_put_StopPageScriptExecution(py::wrapper::Windows::Web::UI::WebViewControlLongRunningScriptDetectedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs", L"StopPageScriptExecution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -426,6 +420,12 @@ namespace py::cpp::Windows::Web::UI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs", L"StopPageScriptExecution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.StopPageScriptExecution(param0);
@@ -440,14 +440,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlLongRunningScriptDetectedEventArgs_get_ExecutionTime(py::wrapper::Windows::Web::UI::WebViewControlLongRunningScriptDetectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs", L"ExecutionTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs", L"ExecutionTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExecutionTime());
         }
         catch (...)
@@ -530,14 +530,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlNavigationCompletedEventArgs_get_IsSuccess(py::wrapper::Windows::Web::UI::WebViewControlNavigationCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNavigationCompletedEventArgs", L"IsSuccess"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNavigationCompletedEventArgs", L"IsSuccess"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSuccess());
         }
         catch (...)
@@ -549,14 +549,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlNavigationCompletedEventArgs_get_Uri(py::wrapper::Windows::Web::UI::WebViewControlNavigationCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNavigationCompletedEventArgs", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNavigationCompletedEventArgs", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -568,14 +568,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlNavigationCompletedEventArgs_get_WebErrorStatus(py::wrapper::Windows::Web::UI::WebViewControlNavigationCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNavigationCompletedEventArgs", L"WebErrorStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNavigationCompletedEventArgs", L"WebErrorStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WebErrorStatus());
         }
         catch (...)
@@ -659,14 +659,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlNavigationStartingEventArgs_get_Cancel(py::wrapper::Windows::Web::UI::WebViewControlNavigationStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNavigationStartingEventArgs", L"Cancel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNavigationStartingEventArgs", L"Cancel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Cancel());
         }
         catch (...)
@@ -678,12 +678,6 @@ namespace py::cpp::Windows::Web::UI
 
     static int WebViewControlNavigationStartingEventArgs_put_Cancel(py::wrapper::Windows::Web::UI::WebViewControlNavigationStartingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNavigationStartingEventArgs", L"Cancel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -692,6 +686,12 @@ namespace py::cpp::Windows::Web::UI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNavigationStartingEventArgs", L"Cancel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Cancel(param0);
@@ -706,14 +706,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlNavigationStartingEventArgs_get_Uri(py::wrapper::Windows::Web::UI::WebViewControlNavigationStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNavigationStartingEventArgs", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNavigationStartingEventArgs", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -800,14 +800,14 @@ namespace py::cpp::Windows::Web::UI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -825,14 +825,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlNewWindowRequestedEventArgs_get_Handled(py::wrapper::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -844,12 +844,6 @@ namespace py::cpp::Windows::Web::UI
 
     static int WebViewControlNewWindowRequestedEventArgs_put_Handled(py::wrapper::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -858,6 +852,12 @@ namespace py::cpp::Windows::Web::UI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -872,14 +872,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlNewWindowRequestedEventArgs_get_Referrer(py::wrapper::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs", L"Referrer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs", L"Referrer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Referrer());
         }
         catch (...)
@@ -891,14 +891,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlNewWindowRequestedEventArgs_get_Uri(py::wrapper::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -910,14 +910,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlNewWindowRequestedEventArgs_get_NewWindow(py::wrapper::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs", L"NewWindow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs", L"NewWindow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NewWindow());
         }
         catch (...)
@@ -929,12 +929,6 @@ namespace py::cpp::Windows::Web::UI
 
     static int WebViewControlNewWindowRequestedEventArgs_put_NewWindow(py::wrapper::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs", L"NewWindow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -943,6 +937,12 @@ namespace py::cpp::Windows::Web::UI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs", L"NewWindow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Web::UI::IWebViewControl>(arg);
 
             self->obj.NewWindow(param0);
@@ -1035,14 +1035,14 @@ namespace py::cpp::Windows::Web::UI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.WebViewControlPermissionRequest", L"Allow", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.WebViewControlPermissionRequest", L"Allow", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Allow();
                 Py_RETURN_NONE;
             }
@@ -1065,14 +1065,14 @@ namespace py::cpp::Windows::Web::UI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.WebViewControlPermissionRequest", L"Defer", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.WebViewControlPermissionRequest", L"Defer", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Defer();
                 Py_RETURN_NONE;
             }
@@ -1095,14 +1095,14 @@ namespace py::cpp::Windows::Web::UI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.WebViewControlPermissionRequest", L"Deny", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.WebViewControlPermissionRequest", L"Deny", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Deny();
                 Py_RETURN_NONE;
             }
@@ -1121,14 +1121,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlPermissionRequest_get_Id(py::wrapper::Windows::Web::UI::WebViewControlPermissionRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlPermissionRequest", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlPermissionRequest", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1140,14 +1140,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlPermissionRequest_get_PermissionType(py::wrapper::Windows::Web::UI::WebViewControlPermissionRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlPermissionRequest", L"PermissionType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlPermissionRequest", L"PermissionType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PermissionType());
         }
         catch (...)
@@ -1159,14 +1159,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlPermissionRequest_get_State(py::wrapper::Windows::Web::UI::WebViewControlPermissionRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlPermissionRequest", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlPermissionRequest", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -1178,14 +1178,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlPermissionRequest_get_Uri(py::wrapper::Windows::Web::UI::WebViewControlPermissionRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlPermissionRequest", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlPermissionRequest", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -1273,14 +1273,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlPermissionRequestedEventArgs_get_PermissionRequest(py::wrapper::Windows::Web::UI::WebViewControlPermissionRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlPermissionRequestedEventArgs", L"PermissionRequest"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlPermissionRequestedEventArgs", L"PermissionRequest"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PermissionRequest());
         }
         catch (...)
@@ -1362,14 +1362,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlScriptNotifyEventArgs_get_Uri(py::wrapper::Windows::Web::UI::WebViewControlScriptNotifyEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlScriptNotifyEventArgs", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlScriptNotifyEventArgs", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -1381,14 +1381,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlScriptNotifyEventArgs_get_Value(py::wrapper::Windows::Web::UI::WebViewControlScriptNotifyEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlScriptNotifyEventArgs", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlScriptNotifyEventArgs", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -1471,14 +1471,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlSettings_get_IsScriptNotifyAllowed(py::wrapper::Windows::Web::UI::WebViewControlSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlSettings", L"IsScriptNotifyAllowed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlSettings", L"IsScriptNotifyAllowed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsScriptNotifyAllowed());
         }
         catch (...)
@@ -1490,12 +1490,6 @@ namespace py::cpp::Windows::Web::UI
 
     static int WebViewControlSettings_put_IsScriptNotifyAllowed(py::wrapper::Windows::Web::UI::WebViewControlSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlSettings", L"IsScriptNotifyAllowed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1504,6 +1498,12 @@ namespace py::cpp::Windows::Web::UI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlSettings", L"IsScriptNotifyAllowed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsScriptNotifyAllowed(param0);
@@ -1518,14 +1518,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlSettings_get_IsJavaScriptEnabled(py::wrapper::Windows::Web::UI::WebViewControlSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlSettings", L"IsJavaScriptEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlSettings", L"IsJavaScriptEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsJavaScriptEnabled());
         }
         catch (...)
@@ -1537,12 +1537,6 @@ namespace py::cpp::Windows::Web::UI
 
     static int WebViewControlSettings_put_IsJavaScriptEnabled(py::wrapper::Windows::Web::UI::WebViewControlSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlSettings", L"IsJavaScriptEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1551,6 +1545,12 @@ namespace py::cpp::Windows::Web::UI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlSettings", L"IsJavaScriptEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsJavaScriptEnabled(param0);
@@ -1565,14 +1565,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlSettings_get_IsIndexedDBEnabled(py::wrapper::Windows::Web::UI::WebViewControlSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlSettings", L"IsIndexedDBEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlSettings", L"IsIndexedDBEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsIndexedDBEnabled());
         }
         catch (...)
@@ -1584,12 +1584,6 @@ namespace py::cpp::Windows::Web::UI
 
     static int WebViewControlSettings_put_IsIndexedDBEnabled(py::wrapper::Windows::Web::UI::WebViewControlSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlSettings", L"IsIndexedDBEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1598,6 +1592,12 @@ namespace py::cpp::Windows::Web::UI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlSettings", L"IsIndexedDBEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsIndexedDBEnabled(param0);
@@ -1684,14 +1684,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlUnsupportedUriSchemeIdentifiedEventArgs_get_Handled(py::wrapper::Windows::Web::UI::WebViewControlUnsupportedUriSchemeIdentifiedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -1703,12 +1703,6 @@ namespace py::cpp::Windows::Web::UI
 
     static int WebViewControlUnsupportedUriSchemeIdentifiedEventArgs_put_Handled(py::wrapper::Windows::Web::UI::WebViewControlUnsupportedUriSchemeIdentifiedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1717,6 +1711,12 @@ namespace py::cpp::Windows::Web::UI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -1731,14 +1731,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlUnsupportedUriSchemeIdentifiedEventArgs_get_Uri(py::wrapper::Windows::Web::UI::WebViewControlUnsupportedUriSchemeIdentifiedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -1821,14 +1821,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlUnviewableContentIdentifiedEventArgs_get_MediaType(py::wrapper::Windows::Web::UI::WebViewControlUnviewableContentIdentifiedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs", L"MediaType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs", L"MediaType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MediaType());
         }
         catch (...)
@@ -1840,14 +1840,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlUnviewableContentIdentifiedEventArgs_get_Referrer(py::wrapper::Windows::Web::UI::WebViewControlUnviewableContentIdentifiedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs", L"Referrer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs", L"Referrer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Referrer());
         }
         catch (...)
@@ -1859,14 +1859,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlUnviewableContentIdentifiedEventArgs_get_Uri(py::wrapper::Windows::Web::UI::WebViewControlUnviewableContentIdentifiedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -1954,14 +1954,14 @@ namespace py::cpp::Windows::Web::UI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1979,14 +1979,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlWebResourceRequestedEventArgs_get_Response(py::wrapper::Windows::Web::UI::WebViewControlWebResourceRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs", L"Response"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs", L"Response"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Response());
         }
         catch (...)
@@ -1998,12 +1998,6 @@ namespace py::cpp::Windows::Web::UI
 
     static int WebViewControlWebResourceRequestedEventArgs_put_Response(py::wrapper::Windows::Web::UI::WebViewControlWebResourceRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs", L"Response"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2012,6 +2006,12 @@ namespace py::cpp::Windows::Web::UI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs", L"Response"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpResponseMessage>(arg);
 
             self->obj.Response(param0);
@@ -2026,14 +2026,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* WebViewControlWebResourceRequestedEventArgs_get_Request(py::wrapper::Windows::Web::UI::WebViewControlWebResourceRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -2121,14 +2121,14 @@ namespace py::cpp::Windows::Web::UI
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"BuildLocalStreamUri", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"BuildLocalStreamUri", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -2153,14 +2153,14 @@ namespace py::cpp::Windows::Web::UI
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"CapturePreviewToStreamAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"CapturePreviewToStreamAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
                 return py::convert(self->obj.CapturePreviewToStreamAsync(param0));
@@ -2184,14 +2184,14 @@ namespace py::cpp::Windows::Web::UI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"CaptureSelectedContentToDataPackageAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"CaptureSelectedContentToDataPackageAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CaptureSelectedContentToDataPackageAsync());
             }
             catch (...)
@@ -2213,14 +2213,14 @@ namespace py::cpp::Windows::Web::UI
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"GetDeferredPermissionRequestById", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"GetDeferredPermissionRequestById", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 winrt::Windows::Web::UI::WebViewControlDeferredPermissionRequest param1 { nullptr };
 
@@ -2252,14 +2252,14 @@ namespace py::cpp::Windows::Web::UI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"GoBack", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"GoBack", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.GoBack();
                 Py_RETURN_NONE;
             }
@@ -2282,14 +2282,14 @@ namespace py::cpp::Windows::Web::UI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"GoForward", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"GoForward", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.GoForward();
                 Py_RETURN_NONE;
             }
@@ -2312,14 +2312,14 @@ namespace py::cpp::Windows::Web::UI
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"InvokeScriptAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"InvokeScriptAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
@@ -2344,14 +2344,14 @@ namespace py::cpp::Windows::Web::UI
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"Navigate", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"Navigate", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 self->obj.Navigate(param0);
@@ -2376,14 +2376,14 @@ namespace py::cpp::Windows::Web::UI
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"NavigateToLocalStreamUri", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"NavigateToLocalStreamUri", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::IUriToStreamResolver>(args, 1);
 
@@ -2409,14 +2409,14 @@ namespace py::cpp::Windows::Web::UI
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"NavigateToString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"NavigateToString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.NavigateToString(param0);
@@ -2441,14 +2441,14 @@ namespace py::cpp::Windows::Web::UI
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"NavigateWithHttpRequestMessage", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"NavigateWithHttpRequestMessage", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpRequestMessage>(args, 0);
 
                 self->obj.NavigateWithHttpRequestMessage(param0);
@@ -2473,14 +2473,14 @@ namespace py::cpp::Windows::Web::UI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"Refresh", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"Refresh", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Refresh();
                 Py_RETURN_NONE;
             }
@@ -2503,14 +2503,14 @@ namespace py::cpp::Windows::Web::UI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -2529,14 +2529,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_get_CanGoBack(py::wrapper::Windows::Web::UI::IWebViewControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.IWebViewControl", L"CanGoBack"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.IWebViewControl", L"CanGoBack"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanGoBack());
         }
         catch (...)
@@ -2548,14 +2548,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_get_CanGoForward(py::wrapper::Windows::Web::UI::IWebViewControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.IWebViewControl", L"CanGoForward"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.IWebViewControl", L"CanGoForward"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanGoForward());
         }
         catch (...)
@@ -2567,14 +2567,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_get_ContainsFullScreenElement(py::wrapper::Windows::Web::UI::IWebViewControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.IWebViewControl", L"ContainsFullScreenElement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.IWebViewControl", L"ContainsFullScreenElement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContainsFullScreenElement());
         }
         catch (...)
@@ -2586,14 +2586,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_get_DefaultBackgroundColor(py::wrapper::Windows::Web::UI::IWebViewControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.IWebViewControl", L"DefaultBackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.IWebViewControl", L"DefaultBackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultBackgroundColor());
         }
         catch (...)
@@ -2605,12 +2605,6 @@ namespace py::cpp::Windows::Web::UI
 
     static int IWebViewControl_put_DefaultBackgroundColor(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.IWebViewControl", L"DefaultBackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2619,6 +2613,12 @@ namespace py::cpp::Windows::Web::UI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.IWebViewControl", L"DefaultBackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.DefaultBackgroundColor(param0);
@@ -2633,14 +2633,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_get_DeferredPermissionRequests(py::wrapper::Windows::Web::UI::IWebViewControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.IWebViewControl", L"DeferredPermissionRequests"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.IWebViewControl", L"DeferredPermissionRequests"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeferredPermissionRequests());
         }
         catch (...)
@@ -2652,14 +2652,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_get_DocumentTitle(py::wrapper::Windows::Web::UI::IWebViewControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.IWebViewControl", L"DocumentTitle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.IWebViewControl", L"DocumentTitle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentTitle());
         }
         catch (...)
@@ -2671,14 +2671,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_get_Settings(py::wrapper::Windows::Web::UI::IWebViewControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.IWebViewControl", L"Settings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.IWebViewControl", L"Settings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Settings());
         }
         catch (...)
@@ -2690,14 +2690,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_get_Source(py::wrapper::Windows::Web::UI::IWebViewControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.IWebViewControl", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.IWebViewControl", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -2709,12 +2709,6 @@ namespace py::cpp::Windows::Web::UI
 
     static int IWebViewControl_put_Source(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.IWebViewControl", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2723,6 +2717,12 @@ namespace py::cpp::Windows::Web::UI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.UI.IWebViewControl", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.Source(param0);
@@ -2737,14 +2737,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_add_ContainsFullScreenElementChanged(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"ContainsFullScreenElementChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"ContainsFullScreenElementChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ContainsFullScreenElementChanged(param0));
@@ -2758,14 +2758,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_remove_ContainsFullScreenElementChanged(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"ContainsFullScreenElementChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"ContainsFullScreenElementChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ContainsFullScreenElementChanged(param0);
@@ -2780,14 +2780,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_add_ContentLoading(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"ContentLoading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"ContentLoading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlContentLoadingEventArgs>>(arg);
 
             return py::convert(self->obj.ContentLoading(param0));
@@ -2801,14 +2801,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_remove_ContentLoading(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"ContentLoading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"ContentLoading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ContentLoading(param0);
@@ -2823,14 +2823,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_add_DOMContentLoaded(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"DOMContentLoaded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"DOMContentLoaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlDOMContentLoadedEventArgs>>(arg);
 
             return py::convert(self->obj.DOMContentLoaded(param0));
@@ -2844,14 +2844,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_remove_DOMContentLoaded(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"DOMContentLoaded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"DOMContentLoaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DOMContentLoaded(param0);
@@ -2866,14 +2866,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_add_FrameContentLoading(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"FrameContentLoading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"FrameContentLoading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlContentLoadingEventArgs>>(arg);
 
             return py::convert(self->obj.FrameContentLoading(param0));
@@ -2887,14 +2887,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_remove_FrameContentLoading(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"FrameContentLoading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"FrameContentLoading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FrameContentLoading(param0);
@@ -2909,14 +2909,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_add_FrameDOMContentLoaded(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"FrameDOMContentLoaded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"FrameDOMContentLoaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlDOMContentLoadedEventArgs>>(arg);
 
             return py::convert(self->obj.FrameDOMContentLoaded(param0));
@@ -2930,14 +2930,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_remove_FrameDOMContentLoaded(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"FrameDOMContentLoaded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"FrameDOMContentLoaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FrameDOMContentLoaded(param0);
@@ -2952,14 +2952,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_add_FrameNavigationCompleted(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"FrameNavigationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"FrameNavigationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlNavigationCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.FrameNavigationCompleted(param0));
@@ -2973,14 +2973,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_remove_FrameNavigationCompleted(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"FrameNavigationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"FrameNavigationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FrameNavigationCompleted(param0);
@@ -2995,14 +2995,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_add_FrameNavigationStarting(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"FrameNavigationStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"FrameNavigationStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlNavigationStartingEventArgs>>(arg);
 
             return py::convert(self->obj.FrameNavigationStarting(param0));
@@ -3016,14 +3016,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_remove_FrameNavigationStarting(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"FrameNavigationStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"FrameNavigationStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FrameNavigationStarting(param0);
@@ -3038,14 +3038,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_add_LongRunningScriptDetected(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"LongRunningScriptDetected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"LongRunningScriptDetected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlLongRunningScriptDetectedEventArgs>>(arg);
 
             return py::convert(self->obj.LongRunningScriptDetected(param0));
@@ -3059,14 +3059,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_remove_LongRunningScriptDetected(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"LongRunningScriptDetected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"LongRunningScriptDetected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.LongRunningScriptDetected(param0);
@@ -3081,14 +3081,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_add_NavigationCompleted(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"NavigationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"NavigationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlNavigationCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.NavigationCompleted(param0));
@@ -3102,14 +3102,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_remove_NavigationCompleted(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"NavigationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"NavigationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.NavigationCompleted(param0);
@@ -3124,14 +3124,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_add_NavigationStarting(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"NavigationStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"NavigationStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlNavigationStartingEventArgs>>(arg);
 
             return py::convert(self->obj.NavigationStarting(param0));
@@ -3145,14 +3145,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_remove_NavigationStarting(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"NavigationStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"NavigationStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.NavigationStarting(param0);
@@ -3167,14 +3167,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_add_NewWindowRequested(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"NewWindowRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"NewWindowRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.NewWindowRequested(param0));
@@ -3188,14 +3188,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_remove_NewWindowRequested(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"NewWindowRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"NewWindowRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.NewWindowRequested(param0);
@@ -3210,14 +3210,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_add_PermissionRequested(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"PermissionRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"PermissionRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlPermissionRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.PermissionRequested(param0));
@@ -3231,14 +3231,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_remove_PermissionRequested(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"PermissionRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"PermissionRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PermissionRequested(param0);
@@ -3253,14 +3253,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_add_ScriptNotify(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"ScriptNotify"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"ScriptNotify"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlScriptNotifyEventArgs>>(arg);
 
             return py::convert(self->obj.ScriptNotify(param0));
@@ -3274,14 +3274,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_remove_ScriptNotify(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"ScriptNotify"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"ScriptNotify"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ScriptNotify(param0);
@@ -3296,14 +3296,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_add_UnsafeContentWarningDisplaying(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"UnsafeContentWarningDisplaying"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"UnsafeContentWarningDisplaying"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.UnsafeContentWarningDisplaying(param0));
@@ -3317,14 +3317,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_remove_UnsafeContentWarningDisplaying(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"UnsafeContentWarningDisplaying"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"UnsafeContentWarningDisplaying"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.UnsafeContentWarningDisplaying(param0);
@@ -3339,14 +3339,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_add_UnsupportedUriSchemeIdentified(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"UnsupportedUriSchemeIdentified"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"UnsupportedUriSchemeIdentified"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlUnsupportedUriSchemeIdentifiedEventArgs>>(arg);
 
             return py::convert(self->obj.UnsupportedUriSchemeIdentified(param0));
@@ -3360,14 +3360,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_remove_UnsupportedUriSchemeIdentified(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"UnsupportedUriSchemeIdentified"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"UnsupportedUriSchemeIdentified"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.UnsupportedUriSchemeIdentified(param0);
@@ -3382,14 +3382,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_add_UnviewableContentIdentified(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"UnviewableContentIdentified"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"UnviewableContentIdentified"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlUnviewableContentIdentifiedEventArgs>>(arg);
 
             return py::convert(self->obj.UnviewableContentIdentified(param0));
@@ -3403,14 +3403,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_remove_UnviewableContentIdentified(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"UnviewableContentIdentified"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"UnviewableContentIdentified"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.UnviewableContentIdentified(param0);
@@ -3425,14 +3425,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_add_WebResourceRequested(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"WebResourceRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"WebResourceRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlWebResourceRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.WebResourceRequested(param0));
@@ -3446,14 +3446,14 @@ namespace py::cpp::Windows::Web::UI
 
     static PyObject* IWebViewControl_remove_WebResourceRequested(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"WebResourceRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.UI.IWebViewControl", L"WebResourceRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.WebResourceRequested(param0);
@@ -3596,14 +3596,14 @@ namespace py::cpp::Windows::Web::UI
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl2", L"AddInitializeScript", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.UI.IWebViewControl2", L"AddInitializeScript", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.AddInitializeScript(param0);

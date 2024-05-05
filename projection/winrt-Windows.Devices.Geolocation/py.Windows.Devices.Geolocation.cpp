@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* CivicAddress_get_City(py::wrapper::Windows::Devices::Geolocation::CivicAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.CivicAddress", L"City"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.CivicAddress", L"City"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.City());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* CivicAddress_get_Country(py::wrapper::Windows::Devices::Geolocation::CivicAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.CivicAddress", L"Country"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.CivicAddress", L"Country"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Country());
         }
         catch (...)
@@ -62,14 +62,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* CivicAddress_get_PostalCode(py::wrapper::Windows::Devices::Geolocation::CivicAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.CivicAddress", L"PostalCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.CivicAddress", L"PostalCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PostalCode());
         }
         catch (...)
@@ -81,14 +81,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* CivicAddress_get_State(py::wrapper::Windows::Devices::Geolocation::CivicAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.CivicAddress", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.CivicAddress", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -100,14 +100,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* CivicAddress_get_Timestamp(py::wrapper::Windows::Devices::Geolocation::CivicAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.CivicAddress", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.CivicAddress", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -257,14 +257,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.GeoboundingBox", L"TryCompute", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.GeoboundingBox", L"TryCompute", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Geolocation::BasicGeoposition>>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Geolocation::GeoboundingBox::TryCompute(param0));
@@ -277,14 +277,14 @@ namespace py::cpp::Windows::Devices::Geolocation
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.GeoboundingBox", L"TryCompute", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.GeoboundingBox", L"TryCompute", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Geolocation::BasicGeoposition>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::AltitudeReferenceSystem>(args, 1);
 
@@ -298,14 +298,14 @@ namespace py::cpp::Windows::Devices::Geolocation
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.GeoboundingBox", L"TryCompute", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.GeoboundingBox", L"TryCompute", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Geolocation::BasicGeoposition>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::AltitudeReferenceSystem>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -327,14 +327,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeoboundingBox_get_Center(py::wrapper::Windows::Devices::Geolocation::GeoboundingBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeoboundingBox", L"Center"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeoboundingBox", L"Center"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Center());
         }
         catch (...)
@@ -346,14 +346,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeoboundingBox_get_MaxAltitude(py::wrapper::Windows::Devices::Geolocation::GeoboundingBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeoboundingBox", L"MaxAltitude"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeoboundingBox", L"MaxAltitude"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxAltitude());
         }
         catch (...)
@@ -365,14 +365,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeoboundingBox_get_MinAltitude(py::wrapper::Windows::Devices::Geolocation::GeoboundingBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeoboundingBox", L"MinAltitude"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeoboundingBox", L"MinAltitude"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinAltitude());
         }
         catch (...)
@@ -384,14 +384,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeoboundingBox_get_NorthwestCorner(py::wrapper::Windows::Devices::Geolocation::GeoboundingBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeoboundingBox", L"NorthwestCorner"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeoboundingBox", L"NorthwestCorner"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NorthwestCorner());
         }
         catch (...)
@@ -403,14 +403,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeoboundingBox_get_SoutheastCorner(py::wrapper::Windows::Devices::Geolocation::GeoboundingBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeoboundingBox", L"SoutheastCorner"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeoboundingBox", L"SoutheastCorner"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SoutheastCorner());
         }
         catch (...)
@@ -422,14 +422,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeoboundingBox_get_AltitudeReferenceSystem(py::wrapper::Windows::Devices::Geolocation::GeoboundingBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeoboundingBox", L"AltitudeReferenceSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeoboundingBox", L"AltitudeReferenceSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AltitudeReferenceSystem());
         }
         catch (...)
@@ -441,14 +441,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeoboundingBox_get_GeoshapeType(py::wrapper::Windows::Devices::Geolocation::GeoboundingBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeoboundingBox", L"GeoshapeType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeoboundingBox", L"GeoshapeType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GeoshapeType());
         }
         catch (...)
@@ -460,14 +460,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeoboundingBox_get_SpatialReferenceId(py::wrapper::Windows::Devices::Geolocation::GeoboundingBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeoboundingBox", L"SpatialReferenceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeoboundingBox", L"SpatialReferenceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SpatialReferenceId());
         }
         catch (...)
@@ -642,14 +642,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geocircle_get_Center(py::wrapper::Windows::Devices::Geolocation::Geocircle* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocircle", L"Center"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocircle", L"Center"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Center());
         }
         catch (...)
@@ -661,14 +661,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geocircle_get_Radius(py::wrapper::Windows::Devices::Geolocation::Geocircle* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocircle", L"Radius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocircle", L"Radius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Radius());
         }
         catch (...)
@@ -680,14 +680,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geocircle_get_AltitudeReferenceSystem(py::wrapper::Windows::Devices::Geolocation::Geocircle* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocircle", L"AltitudeReferenceSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocircle", L"AltitudeReferenceSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AltitudeReferenceSystem());
         }
         catch (...)
@@ -699,14 +699,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geocircle_get_GeoshapeType(py::wrapper::Windows::Devices::Geolocation::Geocircle* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocircle", L"GeoshapeType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocircle", L"GeoshapeType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GeoshapeType());
         }
         catch (...)
@@ -718,14 +718,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geocircle_get_SpatialReferenceId(py::wrapper::Windows::Devices::Geolocation::Geocircle* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocircle", L"SpatialReferenceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocircle", L"SpatialReferenceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SpatialReferenceId());
         }
         catch (...)
@@ -811,14 +811,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geocoordinate_get_Accuracy(py::wrapper::Windows::Devices::Geolocation::Geocoordinate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"Accuracy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"Accuracy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Accuracy());
         }
         catch (...)
@@ -830,14 +830,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geocoordinate_get_Altitude(py::wrapper::Windows::Devices::Geolocation::Geocoordinate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"Altitude"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"Altitude"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Altitude());
         }
         catch (...)
@@ -849,14 +849,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geocoordinate_get_AltitudeAccuracy(py::wrapper::Windows::Devices::Geolocation::Geocoordinate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"AltitudeAccuracy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"AltitudeAccuracy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AltitudeAccuracy());
         }
         catch (...)
@@ -868,14 +868,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geocoordinate_get_Heading(py::wrapper::Windows::Devices::Geolocation::Geocoordinate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"Heading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"Heading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Heading());
         }
         catch (...)
@@ -887,14 +887,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geocoordinate_get_Latitude(py::wrapper::Windows::Devices::Geolocation::Geocoordinate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"Latitude"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"Latitude"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Latitude());
         }
         catch (...)
@@ -906,14 +906,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geocoordinate_get_Longitude(py::wrapper::Windows::Devices::Geolocation::Geocoordinate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"Longitude"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"Longitude"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Longitude());
         }
         catch (...)
@@ -925,14 +925,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geocoordinate_get_Speed(py::wrapper::Windows::Devices::Geolocation::Geocoordinate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"Speed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"Speed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Speed());
         }
         catch (...)
@@ -944,14 +944,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geocoordinate_get_Timestamp(py::wrapper::Windows::Devices::Geolocation::Geocoordinate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -963,14 +963,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geocoordinate_get_Point(py::wrapper::Windows::Devices::Geolocation::Geocoordinate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"Point"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"Point"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Point());
         }
         catch (...)
@@ -982,14 +982,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geocoordinate_get_PositionSource(py::wrapper::Windows::Devices::Geolocation::Geocoordinate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"PositionSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"PositionSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PositionSource());
         }
         catch (...)
@@ -1001,14 +1001,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geocoordinate_get_SatelliteData(py::wrapper::Windows::Devices::Geolocation::Geocoordinate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"SatelliteData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"SatelliteData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SatelliteData());
         }
         catch (...)
@@ -1020,14 +1020,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geocoordinate_get_PositionSourceTimestamp(py::wrapper::Windows::Devices::Geolocation::Geocoordinate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"PositionSourceTimestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"PositionSourceTimestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PositionSourceTimestamp());
         }
         catch (...)
@@ -1039,14 +1039,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geocoordinate_get_IsRemoteSource(py::wrapper::Windows::Devices::Geolocation::Geocoordinate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"IsRemoteSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geocoordinate", L"IsRemoteSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRemoteSource());
         }
         catch (...)
@@ -1140,14 +1140,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeocoordinateSatelliteData_get_HorizontalDilutionOfPrecision(py::wrapper::Windows::Devices::Geolocation::GeocoordinateSatelliteData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeocoordinateSatelliteData", L"HorizontalDilutionOfPrecision"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeocoordinateSatelliteData", L"HorizontalDilutionOfPrecision"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HorizontalDilutionOfPrecision());
         }
         catch (...)
@@ -1159,14 +1159,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeocoordinateSatelliteData_get_PositionDilutionOfPrecision(py::wrapper::Windows::Devices::Geolocation::GeocoordinateSatelliteData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeocoordinateSatelliteData", L"PositionDilutionOfPrecision"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeocoordinateSatelliteData", L"PositionDilutionOfPrecision"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PositionDilutionOfPrecision());
         }
         catch (...)
@@ -1178,14 +1178,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeocoordinateSatelliteData_get_VerticalDilutionOfPrecision(py::wrapper::Windows::Devices::Geolocation::GeocoordinateSatelliteData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeocoordinateSatelliteData", L"VerticalDilutionOfPrecision"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeocoordinateSatelliteData", L"VerticalDilutionOfPrecision"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VerticalDilutionOfPrecision());
         }
         catch (...)
@@ -1197,14 +1197,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeocoordinateSatelliteData_get_GeometricDilutionOfPrecision(py::wrapper::Windows::Devices::Geolocation::GeocoordinateSatelliteData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeocoordinateSatelliteData", L"GeometricDilutionOfPrecision"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeocoordinateSatelliteData", L"GeometricDilutionOfPrecision"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GeometricDilutionOfPrecision());
         }
         catch (...)
@@ -1216,14 +1216,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeocoordinateSatelliteData_get_TimeDilutionOfPrecision(py::wrapper::Windows::Devices::Geolocation::GeocoordinateSatelliteData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeocoordinateSatelliteData", L"TimeDilutionOfPrecision"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeocoordinateSatelliteData", L"TimeDilutionOfPrecision"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimeDilutionOfPrecision());
         }
         catch (...)
@@ -1335,14 +1335,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.Geolocator", L"AllowFallbackToConsentlessPositions", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.Geolocator", L"AllowFallbackToConsentlessPositions", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.AllowFallbackToConsentlessPositions();
                 Py_RETURN_NONE;
             }
@@ -1365,14 +1365,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.Geolocator", L"GetGeopositionAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.Geolocator", L"GetGeopositionAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetGeopositionAsync());
             }
             catch (...)
@@ -1383,14 +1383,14 @@ namespace py::cpp::Windows::Devices::Geolocation
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.Geolocator", L"GetGeopositionAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.Geolocator", L"GetGeopositionAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
@@ -1415,14 +1415,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.Geolocator", L"GetGeopositionHistoryAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.Geolocator", L"GetGeopositionHistoryAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Geolocation::Geolocator::GetGeopositionHistoryAsync(param0));
@@ -1435,14 +1435,14 @@ namespace py::cpp::Windows::Devices::Geolocation
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.Geolocator", L"GetGeopositionHistoryAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.Geolocator", L"GetGeopositionHistoryAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
@@ -1467,14 +1467,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.Geolocator", L"RequestAccessAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.Geolocator", L"RequestAccessAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Geolocation::Geolocator::RequestAccessAsync());
             }
             catch (...)
@@ -1492,14 +1492,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geolocator_get_ReportInterval(py::wrapper::Windows::Devices::Geolocation::Geolocator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"ReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"ReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportInterval());
         }
         catch (...)
@@ -1511,12 +1511,6 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static int Geolocator_put_ReportInterval(py::wrapper::Windows::Devices::Geolocation::Geolocator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"ReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1525,6 +1519,12 @@ namespace py::cpp::Windows::Devices::Geolocation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"ReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ReportInterval(param0);
@@ -1539,14 +1539,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geolocator_get_MovementThreshold(py::wrapper::Windows::Devices::Geolocation::Geolocator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"MovementThreshold"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"MovementThreshold"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MovementThreshold());
         }
         catch (...)
@@ -1558,12 +1558,6 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static int Geolocator_put_MovementThreshold(py::wrapper::Windows::Devices::Geolocation::Geolocator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"MovementThreshold"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1572,6 +1566,12 @@ namespace py::cpp::Windows::Devices::Geolocation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"MovementThreshold"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.MovementThreshold(param0);
@@ -1586,14 +1586,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geolocator_get_DesiredAccuracy(py::wrapper::Windows::Devices::Geolocation::Geolocator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"DesiredAccuracy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"DesiredAccuracy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DesiredAccuracy());
         }
         catch (...)
@@ -1605,12 +1605,6 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static int Geolocator_put_DesiredAccuracy(py::wrapper::Windows::Devices::Geolocation::Geolocator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"DesiredAccuracy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1619,6 +1613,12 @@ namespace py::cpp::Windows::Devices::Geolocation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"DesiredAccuracy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::PositionAccuracy>(arg);
 
             self->obj.DesiredAccuracy(param0);
@@ -1633,14 +1633,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geolocator_get_LocationStatus(py::wrapper::Windows::Devices::Geolocation::Geolocator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"LocationStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"LocationStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocationStatus());
         }
         catch (...)
@@ -1652,14 +1652,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geolocator_get_DesiredAccuracyInMeters(py::wrapper::Windows::Devices::Geolocation::Geolocator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"DesiredAccuracyInMeters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"DesiredAccuracyInMeters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DesiredAccuracyInMeters());
         }
         catch (...)
@@ -1671,12 +1671,6 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static int Geolocator_put_DesiredAccuracyInMeters(py::wrapper::Windows::Devices::Geolocation::Geolocator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"DesiredAccuracyInMeters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1685,6 +1679,12 @@ namespace py::cpp::Windows::Devices::Geolocation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"DesiredAccuracyInMeters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
             self->obj.DesiredAccuracyInMeters(param0);
@@ -1699,14 +1699,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geolocator_get_DefaultGeoposition(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"DefaultGeoposition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"DefaultGeoposition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Geolocation::Geolocator::DefaultGeoposition());
         }
         catch (...)
@@ -1718,12 +1718,6 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static int Geolocator_put_DefaultGeoposition(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"DefaultGeoposition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1732,6 +1726,12 @@ namespace py::cpp::Windows::Devices::Geolocation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"DefaultGeoposition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Geolocation::BasicGeoposition>>(arg);
 
             winrt::Windows::Devices::Geolocation::Geolocator::DefaultGeoposition(param0);
@@ -1746,14 +1746,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geolocator_get_IsDefaultGeopositionRecommended(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"IsDefaultGeopositionRecommended"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geolocator", L"IsDefaultGeopositionRecommended"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Geolocation::Geolocator::IsDefaultGeopositionRecommended());
         }
         catch (...)
@@ -1765,14 +1765,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geolocator_add_PositionChanged(py::wrapper::Windows::Devices::Geolocation::Geolocator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.Geolocator", L"PositionChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.Geolocator", L"PositionChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Geolocation::Geolocator, winrt::Windows::Devices::Geolocation::PositionChangedEventArgs>>(arg);
 
             return py::convert(self->obj.PositionChanged(param0));
@@ -1786,14 +1786,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geolocator_remove_PositionChanged(py::wrapper::Windows::Devices::Geolocation::Geolocator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.Geolocator", L"PositionChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.Geolocator", L"PositionChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PositionChanged(param0);
@@ -1808,14 +1808,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geolocator_add_StatusChanged(py::wrapper::Windows::Devices::Geolocation::Geolocator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.Geolocator", L"StatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.Geolocator", L"StatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Geolocation::Geolocator, winrt::Windows::Devices::Geolocation::StatusChangedEventArgs>>(arg);
 
             return py::convert(self->obj.StatusChanged(param0));
@@ -1829,14 +1829,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geolocator_remove_StatusChanged(py::wrapper::Windows::Devices::Geolocation::Geolocator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.Geolocator", L"StatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.Geolocator", L"StatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StatusChanged(param0);
@@ -2017,14 +2017,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geopath_get_Positions(py::wrapper::Windows::Devices::Geolocation::Geopath* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geopath", L"Positions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geopath", L"Positions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Positions());
         }
         catch (...)
@@ -2036,14 +2036,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geopath_get_AltitudeReferenceSystem(py::wrapper::Windows::Devices::Geolocation::Geopath* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geopath", L"AltitudeReferenceSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geopath", L"AltitudeReferenceSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AltitudeReferenceSystem());
         }
         catch (...)
@@ -2055,14 +2055,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geopath_get_GeoshapeType(py::wrapper::Windows::Devices::Geolocation::Geopath* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geopath", L"GeoshapeType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geopath", L"GeoshapeType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GeoshapeType());
         }
         catch (...)
@@ -2074,14 +2074,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geopath_get_SpatialReferenceId(py::wrapper::Windows::Devices::Geolocation::Geopath* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geopath", L"SpatialReferenceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geopath", L"SpatialReferenceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SpatialReferenceId());
         }
         catch (...)
@@ -2223,14 +2223,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geopoint_get_Position(py::wrapper::Windows::Devices::Geolocation::Geopoint* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geopoint", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geopoint", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -2242,14 +2242,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geopoint_get_AltitudeReferenceSystem(py::wrapper::Windows::Devices::Geolocation::Geopoint* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geopoint", L"AltitudeReferenceSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geopoint", L"AltitudeReferenceSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AltitudeReferenceSystem());
         }
         catch (...)
@@ -2261,14 +2261,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geopoint_get_GeoshapeType(py::wrapper::Windows::Devices::Geolocation::Geopoint* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geopoint", L"GeoshapeType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geopoint", L"GeoshapeType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GeoshapeType());
         }
         catch (...)
@@ -2280,14 +2280,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geopoint_get_SpatialReferenceId(py::wrapper::Windows::Devices::Geolocation::Geopoint* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geopoint", L"SpatialReferenceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geopoint", L"SpatialReferenceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SpatialReferenceId());
         }
         catch (...)
@@ -2372,14 +2372,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geoposition_get_CivicAddress(py::wrapper::Windows::Devices::Geolocation::Geoposition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geoposition", L"CivicAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geoposition", L"CivicAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CivicAddress());
         }
         catch (...)
@@ -2391,14 +2391,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geoposition_get_Coordinate(py::wrapper::Windows::Devices::Geolocation::Geoposition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geoposition", L"Coordinate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geoposition", L"Coordinate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Coordinate());
         }
         catch (...)
@@ -2410,14 +2410,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geoposition_get_VenueData(py::wrapper::Windows::Devices::Geolocation::Geoposition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geoposition", L"VenueData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geoposition", L"VenueData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VenueData());
         }
         catch (...)
@@ -2501,14 +2501,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geovisit_get_Position(py::wrapper::Windows::Devices::Geolocation::Geovisit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geovisit", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geovisit", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -2520,14 +2520,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geovisit_get_StateChange(py::wrapper::Windows::Devices::Geolocation::Geovisit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geovisit", L"StateChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geovisit", L"StateChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StateChange());
         }
         catch (...)
@@ -2539,14 +2539,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geovisit_get_Timestamp(py::wrapper::Windows::Devices::Geolocation::Geovisit* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geovisit", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geovisit", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -2656,14 +2656,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.GeovisitMonitor", L"GetLastReportAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.GeovisitMonitor", L"GetLastReportAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Geolocation::GeovisitMonitor::GetLastReportAsync());
             }
             catch (...)
@@ -2685,14 +2685,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.GeovisitMonitor", L"Start", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.GeovisitMonitor", L"Start", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::VisitMonitoringScope>(args, 0);
 
                 self->obj.Start(param0);
@@ -2717,14 +2717,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.GeovisitMonitor", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.GeovisitMonitor", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -2743,14 +2743,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeovisitMonitor_get_MonitoringScope(py::wrapper::Windows::Devices::Geolocation::GeovisitMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeovisitMonitor", L"MonitoringScope"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeovisitMonitor", L"MonitoringScope"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MonitoringScope());
         }
         catch (...)
@@ -2762,14 +2762,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeovisitMonitor_add_VisitStateChanged(py::wrapper::Windows::Devices::Geolocation::GeovisitMonitor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.GeovisitMonitor", L"VisitStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.GeovisitMonitor", L"VisitStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Geolocation::GeovisitMonitor, winrt::Windows::Devices::Geolocation::GeovisitStateChangedEventArgs>>(arg);
 
             return py::convert(self->obj.VisitStateChanged(param0));
@@ -2783,14 +2783,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeovisitMonitor_remove_VisitStateChanged(py::wrapper::Windows::Devices::Geolocation::GeovisitMonitor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.GeovisitMonitor", L"VisitStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.GeovisitMonitor", L"VisitStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.VisitStateChanged(param0);
@@ -2905,14 +2905,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeovisitStateChangedEventArgs_get_Visit(py::wrapper::Windows::Devices::Geolocation::GeovisitStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeovisitStateChangedEventArgs", L"Visit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.GeovisitStateChangedEventArgs", L"Visit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Visit());
         }
         catch (...)
@@ -2998,14 +2998,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.GeovisitTriggerDetails", L"ReadReports", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.GeovisitTriggerDetails", L"ReadReports", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReadReports());
             }
             catch (...)
@@ -3093,14 +3093,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* PositionChangedEventArgs_get_Position(py::wrapper::Windows::Devices::Geolocation::PositionChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.PositionChangedEventArgs", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.PositionChangedEventArgs", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -3182,14 +3182,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* StatusChangedEventArgs_get_Status(py::wrapper::Windows::Devices::Geolocation::StatusChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.StatusChangedEventArgs", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.StatusChangedEventArgs", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -3271,14 +3271,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* VenueData_get_Id(py::wrapper::Windows::Devices::Geolocation::VenueData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.VenueData", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.VenueData", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -3290,14 +3290,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* VenueData_get_Level(py::wrapper::Windows::Devices::Geolocation::VenueData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.VenueData", L"Level"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.VenueData", L"Level"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Level());
         }
         catch (...)
@@ -3380,14 +3380,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* IGeoshape_get_AltitudeReferenceSystem(py::wrapper::Windows::Devices::Geolocation::IGeoshape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.IGeoshape", L"AltitudeReferenceSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.IGeoshape", L"AltitudeReferenceSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AltitudeReferenceSystem());
         }
         catch (...)
@@ -3399,14 +3399,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* IGeoshape_get_GeoshapeType(py::wrapper::Windows::Devices::Geolocation::IGeoshape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.IGeoshape", L"GeoshapeType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.IGeoshape", L"GeoshapeType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GeoshapeType());
         }
         catch (...)
@@ -3418,14 +3418,14 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* IGeoshape_get_SpatialReferenceId(py::wrapper::Windows::Devices::Geolocation::IGeoshape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.IGeoshape", L"SpatialReferenceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.IGeoshape", L"SpatialReferenceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SpatialReferenceId());
         }
         catch (...)

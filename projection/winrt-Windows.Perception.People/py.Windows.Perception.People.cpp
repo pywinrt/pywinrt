@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Perception::People
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.People.EyesPose", L"IsSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.People.EyesPose", L"IsSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Perception::People::EyesPose::IsSupported());
             }
             catch (...)
@@ -57,14 +57,14 @@ namespace py::cpp::Windows::Perception::People
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.People.EyesPose", L"RequestAccessAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.People.EyesPose", L"RequestAccessAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Perception::People::EyesPose::RequestAccessAsync());
             }
             catch (...)
@@ -82,14 +82,14 @@ namespace py::cpp::Windows::Perception::People
 
     static PyObject* EyesPose_get_Gaze(py::wrapper::Windows::Perception::People::EyesPose* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.EyesPose", L"Gaze"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.EyesPose", L"Gaze"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Gaze());
         }
         catch (...)
@@ -101,14 +101,14 @@ namespace py::cpp::Windows::Perception::People
 
     static PyObject* EyesPose_get_IsCalibrationValid(py::wrapper::Windows::Perception::People::EyesPose* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.EyesPose", L"IsCalibrationValid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.EyesPose", L"IsCalibrationValid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCalibrationValid());
         }
         catch (...)
@@ -120,14 +120,14 @@ namespace py::cpp::Windows::Perception::People
 
     static PyObject* EyesPose_get_UpdateTimestamp(py::wrapper::Windows::Perception::People::EyesPose* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.EyesPose", L"UpdateTimestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.EyesPose", L"UpdateTimestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UpdateTimestamp());
         }
         catch (...)
@@ -242,14 +242,14 @@ namespace py::cpp::Windows::Perception::People
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.People.HandMeshObserver", L"GetTriangleIndices", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.People.HandMeshObserver", L"GetTriangleIndices", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint16_t, true>>(args, 0);
 
                 self->obj.GetTriangleIndices(param0);
@@ -274,14 +274,14 @@ namespace py::cpp::Windows::Perception::People
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.People.HandMeshObserver", L"GetVertexStateForPose", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.People.HandMeshObserver", L"GetVertexStateForPose", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::People::HandPose>(args, 0);
 
                 return py::convert(self->obj.GetVertexStateForPose(param0));
@@ -301,14 +301,14 @@ namespace py::cpp::Windows::Perception::People
 
     static PyObject* HandMeshObserver_get_ModelId(py::wrapper::Windows::Perception::People::HandMeshObserver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.HandMeshObserver", L"ModelId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.HandMeshObserver", L"ModelId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ModelId());
         }
         catch (...)
@@ -320,14 +320,14 @@ namespace py::cpp::Windows::Perception::People
 
     static PyObject* HandMeshObserver_get_NeutralPose(py::wrapper::Windows::Perception::People::HandMeshObserver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.HandMeshObserver", L"NeutralPose"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.HandMeshObserver", L"NeutralPose"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NeutralPose());
         }
         catch (...)
@@ -339,14 +339,14 @@ namespace py::cpp::Windows::Perception::People
 
     static PyObject* HandMeshObserver_get_NeutralPoseVersion(py::wrapper::Windows::Perception::People::HandMeshObserver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.HandMeshObserver", L"NeutralPoseVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.HandMeshObserver", L"NeutralPoseVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NeutralPoseVersion());
         }
         catch (...)
@@ -358,14 +358,14 @@ namespace py::cpp::Windows::Perception::People
 
     static PyObject* HandMeshObserver_get_Source(py::wrapper::Windows::Perception::People::HandMeshObserver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.HandMeshObserver", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.HandMeshObserver", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -377,14 +377,14 @@ namespace py::cpp::Windows::Perception::People
 
     static PyObject* HandMeshObserver_get_TriangleIndexCount(py::wrapper::Windows::Perception::People::HandMeshObserver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.HandMeshObserver", L"TriangleIndexCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.HandMeshObserver", L"TriangleIndexCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TriangleIndexCount());
         }
         catch (...)
@@ -396,14 +396,14 @@ namespace py::cpp::Windows::Perception::People
 
     static PyObject* HandMeshObserver_get_VertexCount(py::wrapper::Windows::Perception::People::HandMeshObserver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.HandMeshObserver", L"VertexCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.HandMeshObserver", L"VertexCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VertexCount());
         }
         catch (...)
@@ -496,14 +496,14 @@ namespace py::cpp::Windows::Perception::People
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.People.HandMeshVertexState", L"GetVertices", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.People.HandMeshVertexState", L"GetVertices", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Perception::People::HandMeshVertex, true>>(args, 0);
 
                 self->obj.GetVertices(param0);
@@ -524,14 +524,14 @@ namespace py::cpp::Windows::Perception::People
 
     static PyObject* HandMeshVertexState_get_CoordinateSystem(py::wrapper::Windows::Perception::People::HandMeshVertexState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.HandMeshVertexState", L"CoordinateSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.HandMeshVertexState", L"CoordinateSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CoordinateSystem());
         }
         catch (...)
@@ -543,14 +543,14 @@ namespace py::cpp::Windows::Perception::People
 
     static PyObject* HandMeshVertexState_get_UpdateTimestamp(py::wrapper::Windows::Perception::People::HandMeshVertexState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.HandMeshVertexState", L"UpdateTimestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.HandMeshVertexState", L"UpdateTimestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UpdateTimestamp());
         }
         catch (...)
@@ -638,14 +638,14 @@ namespace py::cpp::Windows::Perception::People
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.People.HandPose", L"GetRelativeJoint", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.People.HandPose", L"GetRelativeJoint", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::People::HandJointKind>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Perception::People::HandJointKind>(args, 1);
 
@@ -670,14 +670,14 @@ namespace py::cpp::Windows::Perception::People
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.People.HandPose", L"GetRelativeJoints", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.People.HandPose", L"GetRelativeJoints", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Perception::People::HandJointKind, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Perception::People::HandJointKind, false>>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<winrt::Windows::Perception::People::JointPose, true>>(args, 2);
@@ -704,14 +704,14 @@ namespace py::cpp::Windows::Perception::People
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.People.HandPose", L"TryGetJoint", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.People.HandPose", L"TryGetJoint", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Perception::People::HandJointKind>(args, 1);
                 winrt::Windows::Perception::People::JointPose param2 {  };
@@ -749,14 +749,14 @@ namespace py::cpp::Windows::Perception::People
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.People.HandPose", L"TryGetJoints", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.People.HandPose", L"TryGetJoints", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Perception::People::HandJointKind, false>>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<winrt::Windows::Perception::People::JointPose, true>>(args, 2);
@@ -851,14 +851,14 @@ namespace py::cpp::Windows::Perception::People
 
     static PyObject* HeadPose_get_ForwardDirection(py::wrapper::Windows::Perception::People::HeadPose* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.HeadPose", L"ForwardDirection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.HeadPose", L"ForwardDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ForwardDirection());
         }
         catch (...)
@@ -870,14 +870,14 @@ namespace py::cpp::Windows::Perception::People
 
     static PyObject* HeadPose_get_Position(py::wrapper::Windows::Perception::People::HeadPose* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.HeadPose", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.HeadPose", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -889,14 +889,14 @@ namespace py::cpp::Windows::Perception::People
 
     static PyObject* HeadPose_get_UpDirection(py::wrapper::Windows::Perception::People::HeadPose* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.HeadPose", L"UpDirection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.People.HeadPose", L"UpDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UpDirection());
         }
         catch (...)

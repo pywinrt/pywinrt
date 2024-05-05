@@ -16,14 +16,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* KnownRemoteSystemCapabilities_get_AppService(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.KnownRemoteSystemCapabilities", L"AppService"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.KnownRemoteSystemCapabilities", L"AppService"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::RemoteSystems::KnownRemoteSystemCapabilities::AppService());
         }
         catch (...)
@@ -35,14 +35,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* KnownRemoteSystemCapabilities_get_LaunchUri(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.KnownRemoteSystemCapabilities", L"LaunchUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.KnownRemoteSystemCapabilities", L"LaunchUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::RemoteSystems::KnownRemoteSystemCapabilities::LaunchUri());
         }
         catch (...)
@@ -54,14 +54,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* KnownRemoteSystemCapabilities_get_RemoteSession(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.KnownRemoteSystemCapabilities", L"RemoteSession"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.KnownRemoteSystemCapabilities", L"RemoteSession"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::RemoteSystems::KnownRemoteSystemCapabilities::RemoteSession());
         }
         catch (...)
@@ -73,14 +73,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* KnownRemoteSystemCapabilities_get_SpatialEntity(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.KnownRemoteSystemCapabilities", L"SpatialEntity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.KnownRemoteSystemCapabilities", L"SpatialEntity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::RemoteSystems::KnownRemoteSystemCapabilities::SpatialEntity());
         }
         catch (...)
@@ -167,14 +167,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"CreateWatcher", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"CreateWatcher", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystem::CreateWatcher());
             }
             catch (...)
@@ -185,14 +185,14 @@ namespace py::cpp::Windows::System::RemoteSystems
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"CreateWatcher", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"CreateWatcher", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::System::RemoteSystems::IRemoteSystemFilter>>(args, 0);
 
                 return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystem::CreateWatcher(param0));
@@ -216,14 +216,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"CreateWatcherForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"CreateWatcherForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystem::CreateWatcherForUser(param0));
@@ -236,14 +236,14 @@ namespace py::cpp::Windows::System::RemoteSystems
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"CreateWatcherForUser", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"CreateWatcherForUser", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::System::RemoteSystems::IRemoteSystemFilter>>(args, 1);
 
@@ -268,14 +268,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"FindByHostNameAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"FindByHostNameAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
 
                 return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystem::FindByHostNameAsync(param0));
@@ -299,14 +299,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"GetCapabilitySupportedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"GetCapabilitySupportedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetCapabilitySupportedAsync(param0));
@@ -330,14 +330,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"IsAuthorizationKindEnabled", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"IsAuthorizationKindEnabled", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::RemoteSystems::RemoteSystemAuthorizationKind>(args, 0);
 
                 return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystem::IsAuthorizationKindEnabled(param0));
@@ -361,14 +361,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"RequestAccessAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"RequestAccessAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystem::RequestAccessAsync());
             }
             catch (...)
@@ -386,14 +386,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystem_get_DisplayName(py::wrapper::Windows::System::RemoteSystems::RemoteSystem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -405,14 +405,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystem_get_Id(py::wrapper::Windows::System::RemoteSystems::RemoteSystem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -424,14 +424,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystem_get_IsAvailableByProximity(py::wrapper::Windows::System::RemoteSystems::RemoteSystem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"IsAvailableByProximity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"IsAvailableByProximity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAvailableByProximity());
         }
         catch (...)
@@ -443,14 +443,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystem_get_Kind(py::wrapper::Windows::System::RemoteSystems::RemoteSystem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -462,14 +462,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystem_get_Status(py::wrapper::Windows::System::RemoteSystems::RemoteSystem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -481,14 +481,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystem_get_IsAvailableBySpatialProximity(py::wrapper::Windows::System::RemoteSystems::RemoteSystem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"IsAvailableBySpatialProximity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"IsAvailableBySpatialProximity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAvailableBySpatialProximity());
         }
         catch (...)
@@ -500,14 +500,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystem_get_ManufacturerDisplayName(py::wrapper::Windows::System::RemoteSystems::RemoteSystem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"ManufacturerDisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"ManufacturerDisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ManufacturerDisplayName());
         }
         catch (...)
@@ -519,14 +519,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystem_get_ModelDisplayName(py::wrapper::Windows::System::RemoteSystems::RemoteSystem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"ModelDisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"ModelDisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ModelDisplayName());
         }
         catch (...)
@@ -538,14 +538,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystem_get_Platform(py::wrapper::Windows::System::RemoteSystems::RemoteSystem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"Platform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"Platform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Platform());
         }
         catch (...)
@@ -557,14 +557,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystem_get_Apps(py::wrapper::Windows::System::RemoteSystems::RemoteSystem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"Apps"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"Apps"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Apps());
         }
         catch (...)
@@ -576,14 +576,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystem_get_User(py::wrapper::Windows::System::RemoteSystems::RemoteSystem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystem", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -706,14 +706,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemAddedEventArgs_get_RemoteSystem(py::wrapper::Windows::System::RemoteSystems::RemoteSystemAddedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemAddedEventArgs", L"RemoteSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemAddedEventArgs", L"RemoteSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoteSystem());
         }
         catch (...)
@@ -795,14 +795,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemApp_get_Attributes(py::wrapper::Windows::System::RemoteSystems::RemoteSystemApp* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemApp", L"Attributes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemApp", L"Attributes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Attributes());
         }
         catch (...)
@@ -814,14 +814,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemApp_get_DisplayName(py::wrapper::Windows::System::RemoteSystems::RemoteSystemApp* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemApp", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemApp", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -833,14 +833,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemApp_get_Id(py::wrapper::Windows::System::RemoteSystems::RemoteSystemApp* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemApp", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemApp", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -852,14 +852,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemApp_get_IsAvailableByProximity(py::wrapper::Windows::System::RemoteSystems::RemoteSystemApp* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemApp", L"IsAvailableByProximity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemApp", L"IsAvailableByProximity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAvailableByProximity());
         }
         catch (...)
@@ -871,14 +871,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemApp_get_IsAvailableBySpatialProximity(py::wrapper::Windows::System::RemoteSystems::RemoteSystemApp* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemApp", L"IsAvailableBySpatialProximity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemApp", L"IsAvailableBySpatialProximity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAvailableBySpatialProximity());
         }
         catch (...)
@@ -890,14 +890,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemApp_get_ConnectionToken(py::wrapper::Windows::System::RemoteSystems::RemoteSystemApp* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemApp", L"ConnectionToken"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemApp", L"ConnectionToken"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionToken());
         }
         catch (...)
@@ -909,14 +909,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemApp_get_User(py::wrapper::Windows::System::RemoteSystems::RemoteSystemApp* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemApp", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemApp", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -1008,14 +1008,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemAppRegistration", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemAppRegistration", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemAppRegistration::GetDefault());
             }
             catch (...)
@@ -1037,14 +1037,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemAppRegistration", L"GetForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemAppRegistration", L"GetForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemAppRegistration::GetForUser(param0));
@@ -1068,14 +1068,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemAppRegistration", L"SaveAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemAppRegistration", L"SaveAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SaveAsync());
             }
             catch (...)
@@ -1093,14 +1093,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemAppRegistration_get_Attributes(py::wrapper::Windows::System::RemoteSystems::RemoteSystemAppRegistration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemAppRegistration", L"Attributes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemAppRegistration", L"Attributes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Attributes());
         }
         catch (...)
@@ -1112,14 +1112,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemAppRegistration_get_User(py::wrapper::Windows::System::RemoteSystems::RemoteSystemAppRegistration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemAppRegistration", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemAppRegistration", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -1254,14 +1254,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemAuthorizationKindFilter_get_RemoteSystemAuthorizationKind(py::wrapper::Windows::System::RemoteSystems::RemoteSystemAuthorizationKindFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemAuthorizationKindFilter", L"RemoteSystemAuthorizationKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemAuthorizationKindFilter", L"RemoteSystemAuthorizationKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoteSystemAuthorizationKind());
         }
         catch (...)
@@ -1347,14 +1347,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemConnectionInfo", L"TryCreateFromAppServiceConnection", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemConnectionInfo", L"TryCreateFromAppServiceConnection", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::AppService::AppServiceConnection>(args, 0);
 
                 return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemConnectionInfo::TryCreateFromAppServiceConnection(param0));
@@ -1374,14 +1374,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemConnectionInfo_get_IsProximal(py::wrapper::Windows::System::RemoteSystems::RemoteSystemConnectionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemConnectionInfo", L"IsProximal"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemConnectionInfo", L"IsProximal"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsProximal());
         }
         catch (...)
@@ -1517,14 +1517,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemConnectionRequest", L"CreateForApp", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemConnectionRequest", L"CreateForApp", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::RemoteSystems::RemoteSystemApp>(args, 0);
 
                 return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest::CreateForApp(param0));
@@ -1548,14 +1548,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemConnectionRequest", L"CreateFromConnectionToken", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemConnectionRequest", L"CreateFromConnectionToken", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest::CreateFromConnectionToken(param0));
@@ -1579,14 +1579,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemConnectionRequest", L"CreateFromConnectionTokenForUser", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemConnectionRequest", L"CreateFromConnectionTokenForUser", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1607,14 +1607,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemConnectionRequest_get_RemoteSystem(py::wrapper::Windows::System::RemoteSystems::RemoteSystemConnectionRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemConnectionRequest", L"RemoteSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemConnectionRequest", L"RemoteSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoteSystem());
         }
         catch (...)
@@ -1626,14 +1626,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemConnectionRequest_get_RemoteSystemApp(py::wrapper::Windows::System::RemoteSystems::RemoteSystemConnectionRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemConnectionRequest", L"RemoteSystemApp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemConnectionRequest", L"RemoteSystemApp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoteSystemApp());
         }
         catch (...)
@@ -1645,14 +1645,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemConnectionRequest_get_ConnectionToken(py::wrapper::Windows::System::RemoteSystems::RemoteSystemConnectionRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemConnectionRequest", L"ConnectionToken"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemConnectionRequest", L"ConnectionToken"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionToken());
         }
         catch (...)
@@ -1788,14 +1788,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemDiscoveryTypeFilter_get_RemoteSystemDiscoveryType(py::wrapper::Windows::System::RemoteSystems::RemoteSystemDiscoveryTypeFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemDiscoveryTypeFilter", L"RemoteSystemDiscoveryType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemDiscoveryTypeFilter", L"RemoteSystemDiscoveryType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoteSystemDiscoveryType());
         }
         catch (...)
@@ -1970,14 +1970,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemKindFilter_get_RemoteSystemKinds(py::wrapper::Windows::System::RemoteSystems::RemoteSystemKindFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemKindFilter", L"RemoteSystemKinds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemKindFilter", L"RemoteSystemKinds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoteSystemKinds());
         }
         catch (...)
@@ -2051,14 +2051,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemKinds_get_Desktop(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemKinds", L"Desktop"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemKinds", L"Desktop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Desktop());
         }
         catch (...)
@@ -2070,14 +2070,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemKinds_get_Holographic(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemKinds", L"Holographic"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemKinds", L"Holographic"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Holographic());
         }
         catch (...)
@@ -2089,14 +2089,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemKinds_get_Hub(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemKinds", L"Hub"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemKinds", L"Hub"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Hub());
         }
         catch (...)
@@ -2108,14 +2108,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemKinds_get_Phone(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemKinds", L"Phone"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemKinds", L"Phone"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Phone());
         }
         catch (...)
@@ -2127,14 +2127,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemKinds_get_Xbox(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemKinds", L"Xbox"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemKinds", L"Xbox"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Xbox());
         }
         catch (...)
@@ -2146,14 +2146,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemKinds_get_Iot(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemKinds", L"Iot"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemKinds", L"Iot"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Iot());
         }
         catch (...)
@@ -2165,14 +2165,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemKinds_get_Laptop(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemKinds", L"Laptop"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemKinds", L"Laptop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Laptop());
         }
         catch (...)
@@ -2184,14 +2184,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemKinds_get_Tablet(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemKinds", L"Tablet"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemKinds", L"Tablet"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Tablet());
         }
         catch (...)
@@ -2278,14 +2278,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemRemovedEventArgs_get_RemoteSystemId(py::wrapper::Windows::System::RemoteSystems::RemoteSystemRemovedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemRemovedEventArgs", L"RemoteSystemId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemRemovedEventArgs", L"RemoteSystemId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoteSystemId());
         }
         catch (...)
@@ -2371,14 +2371,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSession", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSession", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -2401,14 +2401,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSession", L"CreateParticipantWatcher", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSession", L"CreateParticipantWatcher", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateParticipantWatcher());
             }
             catch (...)
@@ -2430,14 +2430,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSession", L"CreateWatcher", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSession", L"CreateWatcher", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemSession::CreateWatcher());
             }
             catch (...)
@@ -2459,14 +2459,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSession", L"SendInvitationAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSession", L"SendInvitationAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::RemoteSystems::RemoteSystem>(args, 0);
 
                 return py::convert(self->obj.SendInvitationAsync(param0));
@@ -2486,14 +2486,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSession_get_ControllerDisplayName(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSession", L"ControllerDisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSession", L"ControllerDisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ControllerDisplayName());
         }
         catch (...)
@@ -2505,14 +2505,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSession_get_DisplayName(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSession", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSession", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -2524,14 +2524,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSession_get_Id(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSession", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSession", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -2543,14 +2543,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSession_add_Disconnected(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSession", L"Disconnected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSession", L"Disconnected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSession, winrt::Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedEventArgs>>(arg);
 
             return py::convert(self->obj.Disconnected(param0));
@@ -2564,14 +2564,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSession_remove_Disconnected(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSession", L"Disconnected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSession", L"Disconnected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Disconnected(param0);
@@ -2710,14 +2710,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionAddedEventArgs_get_SessionInfo(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionAddedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionAddedEventArgs", L"SessionInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionAddedEventArgs", L"SessionInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SessionInfo());
         }
         catch (...)
@@ -2843,14 +2843,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionController", L"CreateSessionAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionController", L"CreateSessionAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateSessionAsync());
             }
             catch (...)
@@ -2872,14 +2872,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionController", L"RemoveParticipantAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionController", L"RemoveParticipantAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant>(args, 0);
 
                 return py::convert(self->obj.RemoveParticipantAsync(param0));
@@ -2899,14 +2899,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionController_add_JoinRequested(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionController", L"JoinRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionController", L"JoinRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionController, winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.JoinRequested(param0));
@@ -2920,14 +2920,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionController_remove_JoinRequested(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionController", L"JoinRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionController", L"JoinRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.JoinRequested(param0);
@@ -3015,14 +3015,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionCreationResult_get_Session(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionCreationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionCreationResult", L"Session"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionCreationResult", L"Session"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Session());
         }
         catch (...)
@@ -3034,14 +3034,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionCreationResult_get_Status(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionCreationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionCreationResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionCreationResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -3124,14 +3124,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionDisconnectedEventArgs_get_Reason(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionDisconnectedEventArgs", L"Reason"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionDisconnectedEventArgs", L"Reason"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reason());
         }
         catch (...)
@@ -3217,14 +3217,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionInfo", L"JoinAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionInfo", L"JoinAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.JoinAsync());
             }
             catch (...)
@@ -3242,14 +3242,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionInfo_get_ControllerDisplayName(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionInfo", L"ControllerDisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionInfo", L"ControllerDisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ControllerDisplayName());
         }
         catch (...)
@@ -3261,14 +3261,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionInfo_get_DisplayName(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionInfo", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionInfo", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -3352,14 +3352,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionInvitation_get_Sender(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionInvitation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionInvitation", L"Sender"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionInvitation", L"Sender"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Sender());
         }
         catch (...)
@@ -3371,14 +3371,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionInvitation_get_SessionInfo(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionInvitation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionInvitation", L"SessionInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionInvitation", L"SessionInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SessionInfo());
         }
         catch (...)
@@ -3483,14 +3483,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionInvitationListener_add_InvitationReceived(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionInvitationListener* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionInvitationListener", L"InvitationReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionInvitationListener", L"InvitationReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitationListener, winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitationReceivedEventArgs>>(arg);
 
             return py::convert(self->obj.InvitationReceived(param0));
@@ -3504,14 +3504,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionInvitationListener_remove_InvitationReceived(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionInvitationListener* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionInvitationListener", L"InvitationReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionInvitationListener", L"InvitationReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.InvitationReceived(param0);
@@ -3597,14 +3597,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionInvitationReceivedEventArgs_get_Invitation(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionInvitationReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionInvitationReceivedEventArgs", L"Invitation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionInvitationReceivedEventArgs", L"Invitation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Invitation());
         }
         catch (...)
@@ -3690,14 +3690,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionJoinRequest", L"Accept", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionJoinRequest", L"Accept", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Accept();
                 Py_RETURN_NONE;
             }
@@ -3716,14 +3716,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionJoinRequest_get_Participant(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionJoinRequest", L"Participant"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionJoinRequest", L"Participant"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Participant());
         }
         catch (...)
@@ -3810,14 +3810,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionJoinRequestedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionJoinRequestedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -3835,14 +3835,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionJoinRequestedEventArgs_get_JoinRequest(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionJoinRequestedEventArgs", L"JoinRequest"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionJoinRequestedEventArgs", L"JoinRequest"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.JoinRequest());
         }
         catch (...)
@@ -3925,14 +3925,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionJoinResult_get_Session(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionJoinResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionJoinResult", L"Session"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionJoinResult", L"Session"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Session());
         }
         catch (...)
@@ -3944,14 +3944,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionJoinResult_get_Status(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionJoinResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionJoinResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionJoinResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -4080,14 +4080,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel", L"BroadcastValueSetAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel", L"BroadcastValueSetAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 0);
 
                 return py::convert(self->obj.BroadcastValueSetAsync(param0));
@@ -4111,14 +4111,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel", L"SendValueSetAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel", L"SendValueSetAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant>(args, 1);
 
@@ -4143,14 +4143,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel", L"SendValueSetToParticipantsAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel", L"SendValueSetToParticipantsAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant>>(args, 1);
 
@@ -4171,14 +4171,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionMessageChannel_get_Session(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel", L"Session"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel", L"Session"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Session());
         }
         catch (...)
@@ -4190,14 +4190,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionMessageChannel_add_ValueSetReceived(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel", L"ValueSetReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel", L"ValueSetReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel, winrt::Windows::System::RemoteSystems::RemoteSystemSessionValueSetReceivedEventArgs>>(arg);
 
             return py::convert(self->obj.ValueSetReceived(param0));
@@ -4211,14 +4211,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionMessageChannel_remove_ValueSetReceived(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel", L"ValueSetReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel", L"ValueSetReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ValueSetReceived(param0);
@@ -4330,14 +4330,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionOptions_get_IsInviteOnly(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionOptions", L"IsInviteOnly"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionOptions", L"IsInviteOnly"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsInviteOnly());
         }
         catch (...)
@@ -4349,12 +4349,6 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static int RemoteSystemSessionOptions_put_IsInviteOnly(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionOptions", L"IsInviteOnly"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4363,6 +4357,12 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionOptions", L"IsInviteOnly"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsInviteOnly(param0);
@@ -4451,14 +4451,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipant", L"GetHostNames", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipant", L"GetHostNames", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetHostNames());
             }
             catch (...)
@@ -4476,14 +4476,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionParticipant_get_RemoteSystem(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionParticipant* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipant", L"RemoteSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipant", L"RemoteSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoteSystem());
         }
         catch (...)
@@ -4566,14 +4566,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionParticipantAddedEventArgs_get_Participant(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionParticipantAddedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipantAddedEventArgs", L"Participant"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipantAddedEventArgs", L"Participant"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Participant());
         }
         catch (...)
@@ -4655,14 +4655,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionParticipantRemovedEventArgs_get_Participant(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionParticipantRemovedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipantRemovedEventArgs", L"Participant"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipantRemovedEventArgs", L"Participant"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Participant());
         }
         catch (...)
@@ -4748,14 +4748,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -4778,14 +4778,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -4804,14 +4804,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionParticipantWatcher_get_Status(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -4823,14 +4823,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionParticipantWatcher_add_Added(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher", L"Added"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher", L"Added"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantAddedEventArgs>>(arg);
 
             return py::convert(self->obj.Added(param0));
@@ -4844,14 +4844,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionParticipantWatcher_remove_Added(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher", L"Added"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher", L"Added"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Added(param0);
@@ -4866,14 +4866,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionParticipantWatcher_add_EnumerationCompleted(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher", L"EnumerationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher", L"EnumerationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.EnumerationCompleted(param0));
@@ -4887,14 +4887,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionParticipantWatcher_remove_EnumerationCompleted(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher", L"EnumerationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher", L"EnumerationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.EnumerationCompleted(param0);
@@ -4909,14 +4909,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionParticipantWatcher_add_Removed(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher", L"Removed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher", L"Removed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantRemovedEventArgs>>(arg);
 
             return py::convert(self->obj.Removed(param0));
@@ -4930,14 +4930,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionParticipantWatcher_remove_Removed(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher", L"Removed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher", L"Removed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Removed(param0);
@@ -5030,14 +5030,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionRemovedEventArgs_get_SessionInfo(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionRemovedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionRemovedEventArgs", L"SessionInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionRemovedEventArgs", L"SessionInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SessionInfo());
         }
         catch (...)
@@ -5119,14 +5119,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionUpdatedEventArgs_get_SessionInfo(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionUpdatedEventArgs", L"SessionInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionUpdatedEventArgs", L"SessionInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SessionInfo());
         }
         catch (...)
@@ -5208,14 +5208,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionValueSetReceivedEventArgs_get_Message(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionValueSetReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionValueSetReceivedEventArgs", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionValueSetReceivedEventArgs", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Message());
         }
         catch (...)
@@ -5227,14 +5227,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionValueSetReceivedEventArgs_get_Sender(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionValueSetReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionValueSetReceivedEventArgs", L"Sender"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionValueSetReceivedEventArgs", L"Sender"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Sender());
         }
         catch (...)
@@ -5321,14 +5321,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionWatcher", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionWatcher", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -5351,14 +5351,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionWatcher", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionWatcher", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -5377,14 +5377,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionWatcher_get_Status(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionWatcher* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionWatcher", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionWatcher", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -5396,14 +5396,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionWatcher_add_Added(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionWatcher", L"Added"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionWatcher", L"Added"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionAddedEventArgs>>(arg);
 
             return py::convert(self->obj.Added(param0));
@@ -5417,14 +5417,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionWatcher_remove_Added(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionWatcher", L"Added"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionWatcher", L"Added"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Added(param0);
@@ -5439,14 +5439,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionWatcher_add_Removed(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionWatcher", L"Removed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionWatcher", L"Removed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionRemovedEventArgs>>(arg);
 
             return py::convert(self->obj.Removed(param0));
@@ -5460,14 +5460,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionWatcher_remove_Removed(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionWatcher", L"Removed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionWatcher", L"Removed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Removed(param0);
@@ -5482,14 +5482,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionWatcher_add_Updated(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionWatcher", L"Updated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionWatcher", L"Updated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionUpdatedEventArgs>>(arg);
 
             return py::convert(self->obj.Updated(param0));
@@ -5503,14 +5503,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionWatcher_remove_Updated(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionWatcher", L"Updated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemSessionWatcher", L"Updated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Updated(param0);
@@ -5627,14 +5627,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemStatusTypeFilter_get_RemoteSystemStatusType(py::wrapper::Windows::System::RemoteSystems::RemoteSystemStatusTypeFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemStatusTypeFilter", L"RemoteSystemStatusType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemStatusTypeFilter", L"RemoteSystemStatusType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoteSystemStatusType());
         }
         catch (...)
@@ -5716,14 +5716,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemUpdatedEventArgs_get_RemoteSystem(py::wrapper::Windows::System::RemoteSystems::RemoteSystemUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemUpdatedEventArgs", L"RemoteSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemUpdatedEventArgs", L"RemoteSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoteSystem());
         }
         catch (...)
@@ -5809,14 +5809,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -5839,14 +5839,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -5865,14 +5865,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemWatcher_get_User(py::wrapper::Windows::System::RemoteSystems::RemoteSystemWatcher* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -5884,14 +5884,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemWatcher_add_RemoteSystemAdded(py::wrapper::Windows::System::RemoteSystems::RemoteSystemWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"RemoteSystemAdded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"RemoteSystemAdded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemAddedEventArgs>>(arg);
 
             return py::convert(self->obj.RemoteSystemAdded(param0));
@@ -5905,14 +5905,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemWatcher_remove_RemoteSystemAdded(py::wrapper::Windows::System::RemoteSystems::RemoteSystemWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"RemoteSystemAdded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"RemoteSystemAdded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.RemoteSystemAdded(param0);
@@ -5927,14 +5927,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemWatcher_add_RemoteSystemRemoved(py::wrapper::Windows::System::RemoteSystems::RemoteSystemWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"RemoteSystemRemoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"RemoteSystemRemoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemRemovedEventArgs>>(arg);
 
             return py::convert(self->obj.RemoteSystemRemoved(param0));
@@ -5948,14 +5948,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemWatcher_remove_RemoteSystemRemoved(py::wrapper::Windows::System::RemoteSystems::RemoteSystemWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"RemoteSystemRemoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"RemoteSystemRemoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.RemoteSystemRemoved(param0);
@@ -5970,14 +5970,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemWatcher_add_RemoteSystemUpdated(py::wrapper::Windows::System::RemoteSystems::RemoteSystemWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"RemoteSystemUpdated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"RemoteSystemUpdated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemUpdatedEventArgs>>(arg);
 
             return py::convert(self->obj.RemoteSystemUpdated(param0));
@@ -5991,14 +5991,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemWatcher_remove_RemoteSystemUpdated(py::wrapper::Windows::System::RemoteSystems::RemoteSystemWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"RemoteSystemUpdated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"RemoteSystemUpdated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.RemoteSystemUpdated(param0);
@@ -6013,14 +6013,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemWatcher_add_EnumerationCompleted(py::wrapper::Windows::System::RemoteSystems::RemoteSystemWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"EnumerationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"EnumerationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemEnumerationCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.EnumerationCompleted(param0));
@@ -6034,14 +6034,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemWatcher_remove_EnumerationCompleted(py::wrapper::Windows::System::RemoteSystems::RemoteSystemWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"EnumerationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"EnumerationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.EnumerationCompleted(param0);
@@ -6056,14 +6056,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemWatcher_add_ErrorOccurred(py::wrapper::Windows::System::RemoteSystems::RemoteSystemWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"ErrorOccurred"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"ErrorOccurred"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemWatcherErrorOccurredEventArgs>>(arg);
 
             return py::convert(self->obj.ErrorOccurred(param0));
@@ -6077,14 +6077,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemWatcher_remove_ErrorOccurred(py::wrapper::Windows::System::RemoteSystems::RemoteSystemWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"ErrorOccurred"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcher", L"ErrorOccurred"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ErrorOccurred(param0);
@@ -6181,14 +6181,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemWatcherErrorOccurredEventArgs_get_Error(py::wrapper::Windows::System::RemoteSystems::RemoteSystemWatcherErrorOccurredEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcherErrorOccurredEventArgs", L"Error"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemWatcherErrorOccurredEventArgs", L"Error"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Error());
         }
         catch (...)
@@ -6294,14 +6294,14 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemWebAccountFilter_get_Account(py::wrapper::Windows::System::RemoteSystems::RemoteSystemWebAccountFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemWebAccountFilter", L"Account"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteSystems.RemoteSystemWebAccountFilter", L"Account"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Account());
         }
         catch (...)

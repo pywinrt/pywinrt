@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -54,14 +54,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowBackgroundSession_get_Status(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -73,14 +73,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowBackgroundSession_add_SetupRequested(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession", L"SetupRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession", L"SetupRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSession, winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSetupRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.SetupRequested(param0));
@@ -94,14 +94,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowBackgroundSession_remove_SetupRequested(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession", L"SetupRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession", L"SetupRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SetupRequested(param0);
@@ -116,14 +116,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowBackgroundSession_add_Submitted(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession", L"Submitted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession", L"Submitted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSession, winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedEventArgs>>(arg);
 
             return py::convert(self->obj.Submitted(param0));
@@ -137,14 +137,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowBackgroundSession_remove_Submitted(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession", L"Submitted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession", L"Submitted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Submitted(param0);
@@ -238,14 +238,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSetupRequestedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSetupRequestedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -267,14 +267,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSetupRequestedEventArgs", L"GetUserPrintTicketAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSetupRequestedEventArgs", L"GetUserPrintTicketAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetUserPrintTicketAsync());
             }
             catch (...)
@@ -296,14 +296,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSetupRequestedEventArgs", L"SetRequiresUI", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSetupRequestedEventArgs", L"SetRequiresUI", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.SetRequiresUI();
                 Py_RETURN_NONE;
             }
@@ -322,14 +322,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowBackgroundSetupRequestedEventArgs_get_Configuration(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSetupRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSetupRequestedEventArgs", L"Configuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSetupRequestedEventArgs", L"Configuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Configuration());
         }
         catch (...)
@@ -418,14 +418,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration", L"AbortPrintFlow", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration", L"AbortPrintFlow", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobAbortReason>(args, 0);
 
                 self->obj.AbortPrintFlow(param0);
@@ -446,14 +446,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowConfiguration_get_JobTitle(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration", L"JobTitle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration", L"JobTitle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.JobTitle());
         }
         catch (...)
@@ -465,14 +465,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowConfiguration_get_SessionId(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration", L"SessionId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration", L"SessionId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SessionId());
         }
         catch (...)
@@ -484,14 +484,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowConfiguration_get_SourceAppDisplayName(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration", L"SourceAppDisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration", L"SourceAppDisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceAppDisplayName());
         }
         catch (...)
@@ -580,14 +580,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -606,14 +606,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowForegroundSession_get_Status(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -625,14 +625,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowForegroundSession_add_SetupRequested(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession", L"SetupRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession", L"SetupRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSession, winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSetupRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.SetupRequested(param0));
@@ -646,14 +646,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowForegroundSession_remove_SetupRequested(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession", L"SetupRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession", L"SetupRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SetupRequested(param0);
@@ -668,14 +668,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowForegroundSession_add_XpsDataAvailable(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession", L"XpsDataAvailable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession", L"XpsDataAvailable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSession, winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowXpsDataAvailableEventArgs>>(arg);
 
             return py::convert(self->obj.XpsDataAvailable(param0));
@@ -689,14 +689,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowForegroundSession_remove_XpsDataAvailable(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession", L"XpsDataAvailable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession", L"XpsDataAvailable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.XpsDataAvailable(param0);
@@ -790,14 +790,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSetupRequestedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSetupRequestedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -819,14 +819,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSetupRequestedEventArgs", L"GetUserPrintTicketAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSetupRequestedEventArgs", L"GetUserPrintTicketAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetUserPrintTicketAsync());
             }
             catch (...)
@@ -844,14 +844,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowForegroundSetupRequestedEventArgs_get_Configuration(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSetupRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSetupRequestedEventArgs", L"Configuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSetupRequestedEventArgs", L"Configuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Configuration());
         }
         catch (...)
@@ -935,14 +935,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobActivatedEventArgs_get_Kind(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -954,14 +954,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -973,14 +973,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -992,14 +992,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobActivatedEventArgs_get_User(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -1011,14 +1011,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobActivatedEventArgs_get_Session(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobActivatedEventArgs", L"Session"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobActivatedEventArgs", L"Session"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Session());
         }
         catch (...)
@@ -1108,14 +1108,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -1134,14 +1134,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobBackgroundSession_get_Status(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1153,14 +1153,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobBackgroundSession_add_JobStarting(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession", L"JobStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession", L"JobStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession, winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobStartingEventArgs>>(arg);
 
             return py::convert(self->obj.JobStarting(param0));
@@ -1174,14 +1174,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobBackgroundSession_remove_JobStarting(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession", L"JobStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession", L"JobStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.JobStarting(param0);
@@ -1196,14 +1196,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobBackgroundSession_add_PdlModificationRequested(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession", L"PdlModificationRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession", L"PdlModificationRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession, winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlModificationRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.PdlModificationRequested(param0));
@@ -1217,14 +1217,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobBackgroundSession_remove_PdlModificationRequested(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession", L"PdlModificationRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession", L"PdlModificationRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PdlModificationRequested(param0);
@@ -1318,14 +1318,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobNotificationEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobNotificationEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1343,14 +1343,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobNotificationEventArgs_get_Configuration(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobNotificationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobNotificationEventArgs", L"Configuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobNotificationEventArgs", L"Configuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Configuration());
         }
         catch (...)
@@ -1362,14 +1362,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobNotificationEventArgs_get_PrinterJob(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobNotificationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobNotificationEventArgs", L"PrinterJob"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobNotificationEventArgs", L"PrinterJob"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrinterJob());
         }
         catch (...)
@@ -1457,14 +1457,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1486,14 +1486,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs", L"SetSkipSystemRendering", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs", L"SetSkipSystemRendering", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.SetSkipSystemRendering();
                 Py_RETURN_NONE;
             }
@@ -1512,14 +1512,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobStartingEventArgs_get_Configuration(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs", L"Configuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs", L"Configuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Configuration());
         }
         catch (...)
@@ -1531,14 +1531,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobStartingEventArgs_get_Printer(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs", L"Printer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs", L"Printer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Printer());
         }
         catch (...)
@@ -1623,14 +1623,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobTriggerDetails_get_PrintWorkflowJobSession(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobTriggerDetails", L"PrintWorkflowJobSession"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobTriggerDetails", L"PrintWorkflowJobSession"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrintWorkflowJobSession());
         }
         catch (...)
@@ -1716,14 +1716,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -1742,14 +1742,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobUISession_get_Status(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobUISession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1761,14 +1761,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobUISession_add_JobNotification(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobUISession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession", L"JobNotification"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession", L"JobNotification"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobUISession, winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobNotificationEventArgs>>(arg);
 
             return py::convert(self->obj.JobNotification(param0));
@@ -1782,14 +1782,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobUISession_remove_JobNotification(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobUISession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession", L"JobNotification"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession", L"JobNotification"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.JobNotification(param0);
@@ -1804,14 +1804,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobUISession_add_PdlDataAvailable(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobUISession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession", L"PdlDataAvailable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession", L"PdlDataAvailable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobUISession, winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlDataAvailableEventArgs>>(arg);
 
             return py::convert(self->obj.PdlDataAvailable(param0));
@@ -1825,14 +1825,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobUISession_remove_PdlDataAvailable(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobUISession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession", L"PdlDataAvailable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession", L"PdlDataAvailable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PdlDataAvailable(param0);
@@ -2088,14 +2088,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlConverter", L"ConvertPdlAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlConverter", L"ConvertPdlAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 2);
@@ -2110,14 +2110,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlConverter", L"ConvertPdlAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlConverter", L"ConvertPdlAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 2);
@@ -2214,14 +2214,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlDataAvailableEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlDataAvailableEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -2239,14 +2239,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPdlDataAvailableEventArgs_get_Configuration(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlDataAvailableEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlDataAvailableEventArgs", L"Configuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlDataAvailableEventArgs", L"Configuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Configuration());
         }
         catch (...)
@@ -2258,14 +2258,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPdlDataAvailableEventArgs_get_PrinterJob(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlDataAvailableEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlDataAvailableEventArgs", L"PrinterJob"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlDataAvailableEventArgs", L"PrinterJob"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrinterJob());
         }
         catch (...)
@@ -2277,14 +2277,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPdlDataAvailableEventArgs_get_SourceContent(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlDataAvailableEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlDataAvailableEventArgs", L"SourceContent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlDataAvailableEventArgs", L"SourceContent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceContent());
         }
         catch (...)
@@ -2373,14 +2373,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs", L"CreateJobOnPrinter", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs", L"CreateJobOnPrinter", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CreateJobOnPrinter(param0));
@@ -2404,14 +2404,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs", L"CreateJobOnPrinterWithAttributes", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs", L"CreateJobOnPrinterWithAttributes", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Devices::Printers::IppAttributeValue>>>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -2425,14 +2425,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         }
         else if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs", L"CreateJobOnPrinterWithAttributes", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs", L"CreateJobOnPrinterWithAttributes", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Devices::Printers::IppAttributeValue>>>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Devices::Printers::IppAttributeValue>>>(args, 2);
@@ -2460,14 +2460,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs", L"CreateJobOnPrinterWithAttributesBuffer", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs", L"CreateJobOnPrinterWithAttributesBuffer", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -2481,14 +2481,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         }
         else if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs", L"CreateJobOnPrinterWithAttributesBuffer", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs", L"CreateJobOnPrinterWithAttributesBuffer", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 2);
@@ -2516,14 +2516,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -2545,14 +2545,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs", L"GetPdlConverter", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs", L"GetPdlConverter", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlConversionType>(args, 0);
 
                 return py::convert(self->obj.GetPdlConverter(param0));
@@ -2572,14 +2572,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPdlModificationRequestedEventArgs_get_Configuration(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlModificationRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs", L"Configuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs", L"Configuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Configuration());
         }
         catch (...)
@@ -2591,14 +2591,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPdlModificationRequestedEventArgs_get_PrinterJob(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlModificationRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs", L"PrinterJob"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs", L"PrinterJob"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrinterJob());
         }
         catch (...)
@@ -2610,14 +2610,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPdlModificationRequestedEventArgs_get_SourceContent(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlModificationRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs", L"SourceContent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs", L"SourceContent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceContent());
         }
         catch (...)
@@ -2629,14 +2629,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPdlModificationRequestedEventArgs_get_UILauncher(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlModificationRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs", L"UILauncher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs", L"UILauncher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UILauncher());
         }
         catch (...)
@@ -2730,14 +2730,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlSourceContent", L"GetContentFileAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlSourceContent", L"GetContentFileAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetContentFileAsync());
             }
             catch (...)
@@ -2759,14 +2759,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlSourceContent", L"GetInputStream", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlSourceContent", L"GetInputStream", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetInputStream());
             }
             catch (...)
@@ -2784,14 +2784,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPdlSourceContent_get_ContentType(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlSourceContent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlSourceContent", L"ContentType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlSourceContent", L"ContentType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentType());
         }
         catch (...)
@@ -2879,14 +2879,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlTargetStream", L"CompleteStreamSubmission", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlTargetStream", L"CompleteStreamSubmission", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedStatus>(args, 0);
 
                 self->obj.CompleteStreamSubmission(param0);
@@ -2911,14 +2911,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlTargetStream", L"GetOutputStream", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlTargetStream", L"GetOutputStream", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetOutputStream());
             }
             catch (...)
@@ -3011,14 +3011,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob", L"GetJobAttributes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob", L"GetJobAttributes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(self->obj.GetJobAttributes(param0));
@@ -3042,14 +3042,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob", L"GetJobAttributesAsBuffer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob", L"GetJobAttributesAsBuffer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(self->obj.GetJobAttributesAsBuffer(param0));
@@ -3073,14 +3073,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob", L"GetJobPrintTicket", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob", L"GetJobPrintTicket", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetJobPrintTicket());
             }
             catch (...)
@@ -3102,14 +3102,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob", L"GetJobStatus", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob", L"GetJobStatus", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetJobStatus());
             }
             catch (...)
@@ -3131,14 +3131,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob", L"SetJobAttributes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob", L"SetJobAttributes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Devices::Printers::IppAttributeValue>>>(args, 0);
 
                 return py::convert(self->obj.SetJobAttributes(param0));
@@ -3162,14 +3162,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob", L"SetJobAttributesFromBuffer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob", L"SetJobAttributesFromBuffer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert(self->obj.SetJobAttributesFromBuffer(param0));
@@ -3189,14 +3189,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPrinterJob_get_JobId(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJob* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob", L"JobId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob", L"JobId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.JobId());
         }
         catch (...)
@@ -3208,14 +3208,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPrinterJob_get_Printer(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJob* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob", L"Printer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob", L"Printer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Printer());
         }
         catch (...)
@@ -3308,14 +3308,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowSourceContent", L"GetJobPrintTicketAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowSourceContent", L"GetJobPrintTicketAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetJobPrintTicketAsync());
             }
             catch (...)
@@ -3337,14 +3337,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowSourceContent", L"GetSourceSpoolDataAsStreamContent", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowSourceContent", L"GetSourceSpoolDataAsStreamContent", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetSourceSpoolDataAsStreamContent());
             }
             catch (...)
@@ -3366,14 +3366,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowSourceContent", L"GetSourceSpoolDataAsXpsObjectModel", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowSourceContent", L"GetSourceSpoolDataAsXpsObjectModel", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetSourceSpoolDataAsXpsObjectModel());
             }
             catch (...)
@@ -3467,14 +3467,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowSpoolStreamContent", L"GetInputStream", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowSpoolStreamContent", L"GetInputStream", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetInputStream());
             }
             catch (...)
@@ -3566,14 +3566,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowStreamTarget", L"GetOutputStream", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowStreamTarget", L"GetOutputStream", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetOutputStream());
             }
             catch (...)
@@ -3665,14 +3665,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -3694,14 +3694,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedEventArgs", L"GetTarget", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedEventArgs", L"GetTarget", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket>(args, 0);
 
                 return py::convert(self->obj.GetTarget(param0));
@@ -3721,14 +3721,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowSubmittedEventArgs_get_Operation(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedEventArgs", L"Operation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedEventArgs", L"Operation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Operation());
         }
         catch (...)
@@ -3816,14 +3816,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedOperation", L"Complete", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedOperation", L"Complete", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedStatus>(args, 0);
 
                 self->obj.Complete(param0);
@@ -3844,14 +3844,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowSubmittedOperation_get_Configuration(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedOperation", L"Configuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedOperation", L"Configuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Configuration());
         }
         catch (...)
@@ -3863,14 +3863,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowSubmittedOperation_get_XpsContent(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedOperation", L"XpsContent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedOperation", L"XpsContent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XpsContent());
         }
         catch (...)
@@ -3954,14 +3954,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowTarget_get_TargetAsStream(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowTarget", L"TargetAsStream"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowTarget", L"TargetAsStream"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetAsStream());
         }
         catch (...)
@@ -3973,14 +3973,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowTarget_get_TargetAsXpsObjectModelPackage(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowTarget", L"TargetAsXpsObjectModelPackage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowTarget", L"TargetAsXpsObjectModelPackage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetAsXpsObjectModelPackage());
         }
         catch (...)
@@ -4063,14 +4063,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowTriggerDetails_get_PrintWorkflowSession(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowTriggerDetails", L"PrintWorkflowSession"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowTriggerDetails", L"PrintWorkflowSession"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrintWorkflowSession());
         }
         catch (...)
@@ -4152,14 +4152,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowUIActivatedEventArgs_get_Kind(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowUIActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowUIActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowUIActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -4171,14 +4171,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowUIActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowUIActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowUIActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowUIActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -4190,14 +4190,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowUIActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowUIActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowUIActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowUIActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -4209,14 +4209,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowUIActivatedEventArgs_get_User(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowUIActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowUIActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowUIActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -4228,14 +4228,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowUIActivatedEventArgs_get_PrintWorkflowSession(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowUIActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowUIActivatedEventArgs", L"PrintWorkflowSession"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowUIActivatedEventArgs", L"PrintWorkflowSession"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrintWorkflowSession());
         }
         catch (...)
@@ -4325,14 +4325,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowUILauncher", L"IsUILaunchEnabled", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowUILauncher", L"IsUILaunchEnabled", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.IsUILaunchEnabled());
             }
             catch (...)
@@ -4354,14 +4354,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowUILauncher", L"LaunchAndCompleteUIAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowUILauncher", L"LaunchAndCompleteUIAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.LaunchAndCompleteUIAsync());
             }
             catch (...)
@@ -4454,14 +4454,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowXpsDataAvailableEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowXpsDataAvailableEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -4479,14 +4479,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowXpsDataAvailableEventArgs_get_Operation(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowXpsDataAvailableEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowXpsDataAvailableEventArgs", L"Operation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.Workflow.PrintWorkflowXpsDataAvailableEventArgs", L"Operation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Operation());
         }
         catch (...)

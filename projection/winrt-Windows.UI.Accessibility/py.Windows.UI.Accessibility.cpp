@@ -24,14 +24,14 @@ namespace py::cpp::Windows::UI::Accessibility
 
     static PyObject* ScreenReaderPositionChangedEventArgs_get_IsReadingText(py::wrapper::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs", L"IsReadingText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs", L"IsReadingText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsReadingText());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::UI::Accessibility
 
     static PyObject* ScreenReaderPositionChangedEventArgs_get_ScreenPositionInRawPixels(py::wrapper::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs", L"ScreenPositionInRawPixels"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs", L"ScreenPositionInRawPixels"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ScreenPositionInRawPixels());
         }
         catch (...)
@@ -155,14 +155,14 @@ namespace py::cpp::Windows::UI::Accessibility
 
     static PyObject* ScreenReaderService_get_CurrentScreenReaderPosition(py::wrapper::Windows::UI::Accessibility::ScreenReaderService* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Accessibility.ScreenReaderService", L"CurrentScreenReaderPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Accessibility.ScreenReaderService", L"CurrentScreenReaderPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentScreenReaderPosition());
         }
         catch (...)
@@ -174,14 +174,14 @@ namespace py::cpp::Windows::UI::Accessibility
 
     static PyObject* ScreenReaderService_add_ScreenReaderPositionChanged(py::wrapper::Windows::UI::Accessibility::ScreenReaderService* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Accessibility.ScreenReaderService", L"ScreenReaderPositionChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Accessibility.ScreenReaderService", L"ScreenReaderPositionChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Accessibility::ScreenReaderService, winrt::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs>>(arg);
 
             return py::convert(self->obj.ScreenReaderPositionChanged(param0));
@@ -195,14 +195,14 @@ namespace py::cpp::Windows::UI::Accessibility
 
     static PyObject* ScreenReaderService_remove_ScreenReaderPositionChanged(py::wrapper::Windows::UI::Accessibility::ScreenReaderService* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Accessibility.ScreenReaderService", L"ScreenReaderPositionChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Accessibility.ScreenReaderService", L"ScreenReaderPositionChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ScreenReaderPositionChanged(param0);

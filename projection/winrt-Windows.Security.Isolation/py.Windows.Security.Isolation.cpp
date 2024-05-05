@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"ChangePriority", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"ChangePriority", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority>(args, 0);
 
                 self->obj.ChangePriority(param0);
@@ -60,14 +60,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"CreateAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"CreateAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironment::CreateAsync(param0));
@@ -80,14 +80,14 @@ namespace py::cpp::Windows::Security::Isolation
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"CreateAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"CreateAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters>(args, 1);
 
@@ -112,14 +112,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"FindByOwnerId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"FindByOwnerId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironment::FindByOwnerId(param0));
@@ -143,14 +143,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"GetById", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"GetById", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironment::GetById(param0));
@@ -174,14 +174,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"GetUserInfo", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"GetUserInfo", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetUserInfo());
             }
             catch (...)
@@ -203,14 +203,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"LaunchFileWithUIAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"LaunchFileWithUIAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -225,14 +225,14 @@ namespace py::cpp::Windows::Security::Isolation
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"LaunchFileWithUIAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"LaunchFileWithUIAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -259,14 +259,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"PostMessageToReceiverAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"PostMessageToReceiverAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::IInspectable>>(args, 1);
 
@@ -280,14 +280,14 @@ namespace py::cpp::Windows::Security::Isolation
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"PostMessageToReceiverAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"PostMessageToReceiverAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::IInspectable>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters>(args, 2);
@@ -313,14 +313,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"RegisterMessageReceiver", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"RegisterMessageReceiver", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Isolation::MessageReceivedCallback>(args, 1);
 
@@ -346,14 +346,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"ShareFileAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"ShareFileAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileRequestOptions>(args, 1);
 
@@ -367,14 +367,14 @@ namespace py::cpp::Windows::Security::Isolation
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"ShareFileAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"ShareFileAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileRequestOptions>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters>(args, 2);
@@ -400,14 +400,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"ShareFolderAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"ShareFolderAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderRequestOptions>(args, 1);
 
@@ -421,14 +421,14 @@ namespace py::cpp::Windows::Security::Isolation
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"ShareFolderAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"ShareFolderAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderRequestOptions>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters>(args, 2);
@@ -454,14 +454,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"StartProcessSilentlyAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"StartProcessSilentlyAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentActivator>(args, 2);
@@ -476,14 +476,14 @@ namespace py::cpp::Windows::Security::Isolation
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"StartProcessSilentlyAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"StartProcessSilentlyAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentActivator>(args, 2);
@@ -510,14 +510,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"TerminateAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"TerminateAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TerminateAsync());
             }
             catch (...)
@@ -528,14 +528,14 @@ namespace py::cpp::Windows::Security::Isolation
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"TerminateAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"TerminateAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters>(args, 0);
 
                 return py::convert(self->obj.TerminateAsync(param0));
@@ -559,14 +559,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"UnregisterMessageReceiver", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"UnregisterMessageReceiver", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 self->obj.UnregisterMessageReceiver(param0);
@@ -587,14 +587,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironment_get_Id(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -718,14 +718,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult", L"ChangeCreationPriority", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult", L"ChangeCreationPriority", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority>(args, 0);
 
                 self->obj.ChangeCreationPriority(param0);
@@ -746,14 +746,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentCreateResult_get_Environment(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult", L"Environment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult", L"Environment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Environment());
         }
         catch (...)
@@ -765,14 +765,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentCreateResult_get_ExtendedError(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -784,14 +784,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentCreateResult_get_Status(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -880,14 +880,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentFile", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentFile", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -906,14 +906,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentFile_get_HostPath(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentFile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentFile", L"HostPath"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentFile", L"HostPath"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HostPath());
         }
         catch (...)
@@ -925,14 +925,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentFile_get_Id(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentFile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentFile", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentFile", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -944,14 +944,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentFile_get_GuestPath(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentFile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentFile", L"GuestPath"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentFile", L"GuestPath"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GuestPath());
         }
         catch (...)
@@ -963,14 +963,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentFile_get_IsReadOnly(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentFile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentFile", L"IsReadOnly"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentFile", L"IsReadOnly"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsReadOnly());
         }
         catch (...)
@@ -1048,14 +1048,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentHost_get_HostErrors(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentHost", L"HostErrors"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentHost", L"HostErrors"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentHost::HostErrors());
         }
         catch (...)
@@ -1067,14 +1067,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentHost_get_IsReady(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentHost", L"IsReady"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentHost", L"IsReady"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentHost::IsReady());
         }
         catch (...)
@@ -1155,14 +1155,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentLaunchFileResult_get_ExtendedError(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentLaunchFileResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -1174,14 +1174,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentLaunchFileResult_get_File(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentLaunchFileResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult", L"File"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult", L"File"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.File());
         }
         catch (...)
@@ -1193,14 +1193,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentLaunchFileResult_get_Status(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentLaunchFileResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1310,14 +1310,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"ShareHostFolderForUntrustedItems", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"ShareHostFolderForUntrustedItems", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1339,14 +1339,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentOptions_get_PersistUserProfile(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"PersistUserProfile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"PersistUserProfile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PersistUserProfile());
         }
         catch (...)
@@ -1358,12 +1358,6 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentOptions_put_PersistUserProfile(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"PersistUserProfile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1372,6 +1366,12 @@ namespace py::cpp::Windows::Security::Isolation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"PersistUserProfile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.PersistUserProfile(param0);
@@ -1386,14 +1386,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentOptions_get_EnvironmentOwnerId(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"EnvironmentOwnerId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"EnvironmentOwnerId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EnvironmentOwnerId());
         }
         catch (...)
@@ -1405,12 +1405,6 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentOptions_put_EnvironmentOwnerId(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"EnvironmentOwnerId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1419,6 +1413,12 @@ namespace py::cpp::Windows::Security::Isolation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"EnvironmentOwnerId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.EnvironmentOwnerId(param0);
@@ -1433,14 +1433,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentOptions_get_ClipboardCopyPasteDirections(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"ClipboardCopyPasteDirections"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"ClipboardCopyPasteDirections"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClipboardCopyPasteDirections());
         }
         catch (...)
@@ -1452,12 +1452,6 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentOptions_put_ClipboardCopyPasteDirections(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"ClipboardCopyPasteDirections"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1466,6 +1460,12 @@ namespace py::cpp::Windows::Security::Isolation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"ClipboardCopyPasteDirections"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentClipboardCopyPasteDirections>(arg);
 
             self->obj.ClipboardCopyPasteDirections(param0);
@@ -1480,14 +1480,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentOptions_get_AvailablePrinters(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AvailablePrinters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AvailablePrinters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AvailablePrinters());
         }
         catch (...)
@@ -1499,12 +1499,6 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentOptions_put_AvailablePrinters(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AvailablePrinters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1513,6 +1507,12 @@ namespace py::cpp::Windows::Security::Isolation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AvailablePrinters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAvailablePrinters>(arg);
 
             self->obj.AvailablePrinters(param0);
@@ -1527,14 +1527,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentOptions_get_AllowedClipboardFormats(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AllowedClipboardFormats"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AllowedClipboardFormats"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowedClipboardFormats());
         }
         catch (...)
@@ -1546,12 +1546,6 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentOptions_put_AllowedClipboardFormats(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AllowedClipboardFormats"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1560,6 +1554,12 @@ namespace py::cpp::Windows::Security::Isolation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AllowedClipboardFormats"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats>(arg);
 
             self->obj.AllowedClipboardFormats(param0);
@@ -1574,14 +1574,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentOptions_get_AllowGraphicsHardwareAcceleration(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AllowGraphicsHardwareAcceleration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AllowGraphicsHardwareAcceleration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowGraphicsHardwareAcceleration());
         }
         catch (...)
@@ -1593,12 +1593,6 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentOptions_put_AllowGraphicsHardwareAcceleration(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AllowGraphicsHardwareAcceleration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1607,6 +1601,12 @@ namespace py::cpp::Windows::Security::Isolation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AllowGraphicsHardwareAcceleration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowGraphicsHardwareAcceleration(param0);
@@ -1621,14 +1621,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentOptions_get_AllowCameraAndMicrophoneAccess(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AllowCameraAndMicrophoneAccess"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AllowCameraAndMicrophoneAccess"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowCameraAndMicrophoneAccess());
         }
         catch (...)
@@ -1640,12 +1640,6 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentOptions_put_AllowCameraAndMicrophoneAccess(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AllowCameraAndMicrophoneAccess"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1654,6 +1648,12 @@ namespace py::cpp::Windows::Security::Isolation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AllowCameraAndMicrophoneAccess"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowCameraAndMicrophoneAccess(param0);
@@ -1668,14 +1668,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentOptions_get_SharedFolderNameInEnvironment(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"SharedFolderNameInEnvironment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"SharedFolderNameInEnvironment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SharedFolderNameInEnvironment());
         }
         catch (...)
@@ -1687,14 +1687,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentOptions_get_SharedHostFolderPath(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"SharedHostFolderPath"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"SharedHostFolderPath"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SharedHostFolderPath());
         }
         catch (...)
@@ -1706,14 +1706,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentOptions_get_WindowAnnotationOverride(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"WindowAnnotationOverride"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"WindowAnnotationOverride"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WindowAnnotationOverride());
         }
         catch (...)
@@ -1725,12 +1725,6 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentOptions_put_WindowAnnotationOverride(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"WindowAnnotationOverride"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1739,6 +1733,12 @@ namespace py::cpp::Windows::Security::Isolation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"WindowAnnotationOverride"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.WindowAnnotationOverride(param0);
@@ -1753,14 +1753,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentOptions_get_CreationPriority(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"CreationPriority"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"CreationPriority"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CreationPriority());
         }
         catch (...)
@@ -1772,12 +1772,6 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentOptions_put_CreationPriority(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"CreationPriority"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1786,6 +1780,12 @@ namespace py::cpp::Windows::Security::Isolation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"CreationPriority"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority>(arg);
 
             self->obj.CreationPriority(param0);
@@ -1800,14 +1800,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentOptions_get_AllowedClipboardFormatsToHost(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AllowedClipboardFormatsToHost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AllowedClipboardFormatsToHost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowedClipboardFormatsToHost());
         }
         catch (...)
@@ -1819,12 +1819,6 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentOptions_put_AllowedClipboardFormatsToHost(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AllowedClipboardFormatsToHost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1833,6 +1827,12 @@ namespace py::cpp::Windows::Security::Isolation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AllowedClipboardFormatsToHost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats>(arg);
 
             self->obj.AllowedClipboardFormatsToHost(param0);
@@ -1847,14 +1847,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentOptions_get_AllowedClipboardFormatsToEnvironment(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AllowedClipboardFormatsToEnvironment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AllowedClipboardFormatsToEnvironment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowedClipboardFormatsToEnvironment());
         }
         catch (...)
@@ -1866,12 +1866,6 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentOptions_put_AllowedClipboardFormatsToEnvironment(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AllowedClipboardFormatsToEnvironment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1880,6 +1874,12 @@ namespace py::cpp::Windows::Security::Isolation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions", L"AllowedClipboardFormatsToEnvironment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats>(arg);
 
             self->obj.AllowedClipboardFormatsToEnvironment(param0);
@@ -1973,14 +1973,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistration", L"Register", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistration", L"Register", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationData>(args, 1);
 
@@ -2005,14 +2005,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistration", L"Unregister", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistration", L"Unregister", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistration::Unregister(param0);
@@ -2124,14 +2124,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentOwnerRegistrationData_get_ActivationFileExtensions(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData", L"ActivationFileExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData", L"ActivationFileExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivationFileExtensions());
         }
         catch (...)
@@ -2143,14 +2143,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentOwnerRegistrationData_get_ProcessesRunnableAsSystem(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData", L"ProcessesRunnableAsSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData", L"ProcessesRunnableAsSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProcessesRunnableAsSystem());
         }
         catch (...)
@@ -2162,14 +2162,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentOwnerRegistrationData_get_ProcessesRunnableAsUser(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData", L"ProcessesRunnableAsUser"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData", L"ProcessesRunnableAsUser"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProcessesRunnableAsUser());
         }
         catch (...)
@@ -2181,14 +2181,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentOwnerRegistrationData_get_ShareableFolders(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData", L"ShareableFolders"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData", L"ShareableFolders"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShareableFolders());
         }
         catch (...)
@@ -2273,14 +2273,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentOwnerRegistrationResult_get_ExtendedError(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -2292,14 +2292,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentOwnerRegistrationResult_get_Status(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -2382,14 +2382,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentPostMessageResult_get_ExtendedError(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentPostMessageResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -2401,14 +2401,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentPostMessageResult_get_Status(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentPostMessageResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -2495,14 +2495,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess", L"WaitForExit", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess", L"WaitForExit", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.WaitForExit();
                 Py_RETURN_NONE;
             }
@@ -2525,14 +2525,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess", L"WaitForExitAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess", L"WaitForExitAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.WaitForExitAsync());
             }
             catch (...)
@@ -2554,14 +2554,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess", L"WaitForExitWithTimeout", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess", L"WaitForExitWithTimeout", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.WaitForExitWithTimeout(param0);
@@ -2582,14 +2582,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentProcess_get_ExitCode(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentProcess* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess", L"ExitCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess", L"ExitCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExitCode());
         }
         catch (...)
@@ -2601,14 +2601,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentProcess_get_State(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentProcess* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -2716,14 +2716,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentShareFileRequestOptions_get_AllowWrite(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileRequestOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions", L"AllowWrite"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions", L"AllowWrite"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowWrite());
         }
         catch (...)
@@ -2735,12 +2735,6 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentShareFileRequestOptions_put_AllowWrite(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileRequestOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions", L"AllowWrite"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2749,6 +2743,12 @@ namespace py::cpp::Windows::Security::Isolation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions", L"AllowWrite"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowWrite(param0);
@@ -2833,14 +2833,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentShareFileResult_get_ExtendedError(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -2852,14 +2852,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentShareFileResult_get_File(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult", L"File"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult", L"File"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.File());
         }
         catch (...)
@@ -2871,14 +2871,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentShareFileResult_get_Status(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -2984,14 +2984,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentShareFolderRequestOptions_get_AllowWrite(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderRequestOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions", L"AllowWrite"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions", L"AllowWrite"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowWrite());
         }
         catch (...)
@@ -3003,12 +3003,6 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentShareFolderRequestOptions_put_AllowWrite(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderRequestOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions", L"AllowWrite"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3017,6 +3011,12 @@ namespace py::cpp::Windows::Security::Isolation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions", L"AllowWrite"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowWrite(param0);
@@ -3101,14 +3101,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentShareFolderResult_get_ExtendedError(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -3120,14 +3120,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentShareFolderResult_get_Status(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -3210,14 +3210,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentStartProcessResult_get_ExtendedError(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentStartProcessResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -3229,14 +3229,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentStartProcessResult_get_Process(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentStartProcessResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult", L"Process"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult", L"Process"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Process());
         }
         catch (...)
@@ -3248,14 +3248,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentStartProcessResult_get_Status(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentStartProcessResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -3361,14 +3361,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentTelemetryParameters_get_CorrelationId(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters", L"CorrelationId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters", L"CorrelationId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CorrelationId());
         }
         catch (...)
@@ -3380,12 +3380,6 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentTelemetryParameters_put_CorrelationId(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters", L"CorrelationId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3394,6 +3388,12 @@ namespace py::cpp::Windows::Security::Isolation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters", L"CorrelationId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::guid>(arg);
 
             self->obj.CorrelationId(param0);
@@ -3482,14 +3482,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo", L"TryWaitForSignInAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo", L"TryWaitForSignInAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryWaitForSignInAsync());
             }
             catch (...)
@@ -3511,14 +3511,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo", L"TryWaitForSignInWithProgressAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo", L"TryWaitForSignInWithProgressAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryWaitForSignInWithProgressAsync());
             }
             catch (...)
@@ -3536,14 +3536,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentUserInfo_get_EnvironmentUserName(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentUserInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo", L"EnvironmentUserName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo", L"EnvironmentUserName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EnvironmentUserName());
         }
         catch (...)
@@ -3555,14 +3555,14 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentUserInfo_get_EnvironmentUserSid(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentUserInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo", L"EnvironmentUserSid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo", L"EnvironmentUserSid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EnvironmentUserSid());
         }
         catch (...)
@@ -3643,14 +3643,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsHostMessenger", L"GetFileId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsHostMessenger", L"GetFileId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Isolation::IsolatedWindowsHostMessenger::GetFileId(param0));
@@ -3674,14 +3674,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsHostMessenger", L"PostMessageToReceiver", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsHostMessenger", L"PostMessageToReceiver", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::IInspectable>>(args, 1);
 
@@ -3707,14 +3707,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsHostMessenger", L"RegisterHostMessageReceiver", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsHostMessenger", L"RegisterHostMessageReceiver", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Isolation::HostMessageReceivedCallback>(args, 1);
 
@@ -3740,14 +3740,14 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsHostMessenger", L"UnregisterHostMessageReceiver", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsHostMessenger", L"UnregisterHostMessageReceiver", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 winrt::Windows::Security::Isolation::IsolatedWindowsHostMessenger::UnregisterHostMessageReceiver(param0);

@@ -28,14 +28,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings", L"GetCurrentSettings", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings", L"GetCurrentSettings", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings::GetCurrentSettings());
             }
             catch (...)
@@ -53,14 +53,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* DeliveryOptimizationSettings_get_DownloadMode(py::wrapper::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings", L"DownloadMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings", L"DownloadMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DownloadMode());
         }
         catch (...)
@@ -72,14 +72,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* DeliveryOptimizationSettings_get_DownloadModeSource(py::wrapper::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings", L"DownloadModeSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings", L"DownloadModeSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DownloadModeSource());
         }
         catch (...)
@@ -184,14 +184,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"FilterUnsupportedSystemFeaturesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"FilterUnsupportedSystemFeaturesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Store::Preview::StoreSystemFeature>>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration::FilterUnsupportedSystemFeaturesAsync(param0));
@@ -215,14 +215,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"GetEnterpriseStoreWebAccountId", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"GetEnterpriseStoreWebAccountId", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration::GetEnterpriseStoreWebAccountId());
             }
             catch (...)
@@ -244,14 +244,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"GetEnterpriseStoreWebAccountIdForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"GetEnterpriseStoreWebAccountIdForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration::GetEnterpriseStoreWebAccountIdForUser(param0));
@@ -275,14 +275,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"GetPurchasePromptingPolicyForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"GetPurchasePromptingPolicyForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration::GetPurchasePromptingPolicyForUser(param0));
@@ -306,14 +306,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"GetStoreLogDataAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"GetStoreLogDataAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::StoreLogOptions>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration::GetStoreLogDataAsync(param0));
@@ -337,14 +337,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"GetStoreWebAccountId", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"GetStoreWebAccountId", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration::GetStoreWebAccountId());
             }
             catch (...)
@@ -366,14 +366,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"GetStoreWebAccountIdForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"GetStoreWebAccountIdForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration::GetStoreWebAccountIdForUser(param0));
@@ -397,14 +397,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"HasStoreWebAccount", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"HasStoreWebAccount", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration::HasStoreWebAccount());
             }
             catch (...)
@@ -426,14 +426,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"HasStoreWebAccountForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"HasStoreWebAccountForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration::HasStoreWebAccountForUser(param0));
@@ -457,14 +457,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"IsPinToDesktopSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"IsPinToDesktopSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration::IsPinToDesktopSupported());
             }
             catch (...)
@@ -486,14 +486,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"IsPinToStartSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"IsPinToStartSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration::IsPinToStartSupported());
             }
             catch (...)
@@ -515,14 +515,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"IsPinToTaskbarSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"IsPinToTaskbarSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration::IsPinToTaskbarSupported());
             }
             catch (...)
@@ -544,14 +544,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"IsStoreWebAccountId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"IsStoreWebAccountId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration::IsStoreWebAccountId(param0));
@@ -575,14 +575,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"IsStoreWebAccountIdForUser", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"IsStoreWebAccountIdForUser", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -607,14 +607,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"PinToDesktop", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"PinToDesktop", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration::PinToDesktop(param0);
@@ -639,14 +639,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"PinToDesktopForUser", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"PinToDesktopForUser", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -672,14 +672,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"SetEnterpriseStoreWebAccountId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"SetEnterpriseStoreWebAccountId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration::SetEnterpriseStoreWebAccountId(param0);
@@ -704,14 +704,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"SetEnterpriseStoreWebAccountIdForUser", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"SetEnterpriseStoreWebAccountIdForUser", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -737,14 +737,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"SetMobileOperatorConfiguration", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"SetMobileOperatorConfiguration", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -771,14 +771,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"SetPurchasePromptingPolicyForUser", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"SetPurchasePromptingPolicyForUser", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(args, 1);
 
@@ -804,14 +804,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"SetStoreWebAccountId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"SetStoreWebAccountId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration::SetStoreWebAccountId(param0);
@@ -836,14 +836,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"SetStoreWebAccountIdForUser", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"SetStoreWebAccountIdForUser", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -869,14 +869,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"SetSystemConfiguration", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"SetSystemConfiguration", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 2);
@@ -904,14 +904,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"ShouldRestrictToEnterpriseStoreOnly", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"ShouldRestrictToEnterpriseStoreOnly", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration::ShouldRestrictToEnterpriseStoreOnly());
             }
             catch (...)
@@ -933,14 +933,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"ShouldRestrictToEnterpriseStoreOnlyForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"ShouldRestrictToEnterpriseStoreOnlyForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration::ShouldRestrictToEnterpriseStoreOnlyForUser(param0));
@@ -960,14 +960,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_get_HardwareManufacturerInfo(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"HardwareManufacturerInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"HardwareManufacturerInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration::HardwareManufacturerInfo());
         }
         catch (...)
@@ -979,14 +979,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_get_PurchasePromptingPolicy(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"PurchasePromptingPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"PurchasePromptingPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration::PurchasePromptingPolicy());
         }
         catch (...)
@@ -998,12 +998,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static int StoreConfiguration_put_PurchasePromptingPolicy(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"PurchasePromptingPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1012,6 +1006,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"PurchasePromptingPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
             winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration::PurchasePromptingPolicy(param0);
@@ -1120,14 +1120,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreHardwareManufacturerInfo_get_HardwareManufacturerId(py::wrapper::Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo", L"HardwareManufacturerId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo", L"HardwareManufacturerId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HardwareManufacturerId());
         }
         catch (...)
@@ -1139,14 +1139,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreHardwareManufacturerInfo_get_ManufacturerName(py::wrapper::Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo", L"ManufacturerName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo", L"ManufacturerName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ManufacturerName());
         }
         catch (...)
@@ -1158,14 +1158,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreHardwareManufacturerInfo_get_ModelName(py::wrapper::Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo", L"ModelName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo", L"ModelName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ModelName());
         }
         catch (...)
@@ -1177,14 +1177,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreHardwareManufacturerInfo_get_StoreContentModifierId(py::wrapper::Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo", L"StoreContentModifierId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo", L"StoreContentModifierId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StoreContentModifierId());
         }
         catch (...)
@@ -1265,14 +1265,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StorePreview", L"LoadAddOnProductInfosAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StorePreview", L"LoadAddOnProductInfosAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::Store::Preview::StorePreview::LoadAddOnProductInfosAsync());
             }
             catch (...)
@@ -1294,14 +1294,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StorePreview", L"RequestProductPurchaseByProductIdAndSkuIdAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StorePreview", L"RequestProductPurchaseByProductIdAndSkuIdAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1391,14 +1391,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StorePreviewProductInfo_get_Description(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -1410,14 +1410,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StorePreviewProductInfo_get_ProductId(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo", L"ProductId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo", L"ProductId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProductId());
         }
         catch (...)
@@ -1429,14 +1429,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StorePreviewProductInfo_get_ProductType(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo", L"ProductType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo", L"ProductType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProductType());
         }
         catch (...)
@@ -1448,14 +1448,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StorePreviewProductInfo_get_SkuInfoList(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo", L"SkuInfoList"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo", L"SkuInfoList"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SkuInfoList());
         }
         catch (...)
@@ -1467,14 +1467,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StorePreviewProductInfo_get_Title(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -1560,14 +1560,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StorePreviewPurchaseResults_get_ProductPurchaseStatus(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults", L"ProductPurchaseStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults", L"ProductPurchaseStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProductPurchaseStatus());
         }
         catch (...)
@@ -1649,14 +1649,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StorePreviewSkuInfo_get_CurrencyCode(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo", L"CurrencyCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo", L"CurrencyCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrencyCode());
         }
         catch (...)
@@ -1668,14 +1668,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StorePreviewSkuInfo_get_CustomDeveloperData(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo", L"CustomDeveloperData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo", L"CustomDeveloperData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CustomDeveloperData());
         }
         catch (...)
@@ -1687,14 +1687,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StorePreviewSkuInfo_get_Description(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -1706,14 +1706,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StorePreviewSkuInfo_get_ExtendedData(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo", L"ExtendedData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo", L"ExtendedData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedData());
         }
         catch (...)
@@ -1725,14 +1725,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StorePreviewSkuInfo_get_FormattedListPrice(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo", L"FormattedListPrice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo", L"FormattedListPrice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FormattedListPrice());
         }
         catch (...)
@@ -1744,14 +1744,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StorePreviewSkuInfo_get_ProductId(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo", L"ProductId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo", L"ProductId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProductId());
         }
         catch (...)
@@ -1763,14 +1763,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StorePreviewSkuInfo_get_SkuId(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo", L"SkuId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo", L"SkuId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SkuId());
         }
         catch (...)
@@ -1782,14 +1782,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StorePreviewSkuInfo_get_SkuType(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo", L"SkuType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo", L"SkuType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SkuType());
         }
         catch (...)
@@ -1801,14 +1801,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StorePreviewSkuInfo_get_Title(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -1894,14 +1894,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper", L"RequestTokenWithUIElementHostingAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper", L"RequestTokenWithUIElementHostingAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 1);
 
@@ -1915,14 +1915,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper", L"RequestTokenWithUIElementHostingAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper", L"RequestTokenWithUIElementHostingAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 2);

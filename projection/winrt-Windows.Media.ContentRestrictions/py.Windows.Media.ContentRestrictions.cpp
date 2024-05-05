@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static PyObject* ContentRestrictionsBrowsePolicy_get_GeographicRegion(py::wrapper::Windows::Media::ContentRestrictions::ContentRestrictionsBrowsePolicy* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.ContentRestrictionsBrowsePolicy", L"GeographicRegion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.ContentRestrictionsBrowsePolicy", L"GeographicRegion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GeographicRegion());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static PyObject* ContentRestrictionsBrowsePolicy_get_MaxBrowsableAgeRating(py::wrapper::Windows::Media::ContentRestrictions::ContentRestrictionsBrowsePolicy* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.ContentRestrictionsBrowsePolicy", L"MaxBrowsableAgeRating"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.ContentRestrictionsBrowsePolicy", L"MaxBrowsableAgeRating"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxBrowsableAgeRating());
         }
         catch (...)
@@ -62,14 +62,14 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static PyObject* ContentRestrictionsBrowsePolicy_get_PreferredAgeRating(py::wrapper::Windows::Media::ContentRestrictions::ContentRestrictionsBrowsePolicy* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.ContentRestrictionsBrowsePolicy", L"PreferredAgeRating"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.ContentRestrictionsBrowsePolicy", L"PreferredAgeRating"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreferredAgeRating());
         }
         catch (...)
@@ -179,14 +179,14 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static PyObject* RatedContentDescription_get_Title(py::wrapper::Windows::Media::ContentRestrictions::RatedContentDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.RatedContentDescription", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.RatedContentDescription", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -198,12 +198,6 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static int RatedContentDescription_put_Title(py::wrapper::Windows::Media::ContentRestrictions::RatedContentDescription* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.RatedContentDescription", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -212,6 +206,12 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.RatedContentDescription", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Title(param0);
@@ -226,14 +226,14 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static PyObject* RatedContentDescription_get_Ratings(py::wrapper::Windows::Media::ContentRestrictions::RatedContentDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.RatedContentDescription", L"Ratings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.RatedContentDescription", L"Ratings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Ratings());
         }
         catch (...)
@@ -245,12 +245,6 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static int RatedContentDescription_put_Ratings(py::wrapper::Windows::Media::ContentRestrictions::RatedContentDescription* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.RatedContentDescription", L"Ratings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -259,6 +253,12 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.RatedContentDescription", L"Ratings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::hstring>>(arg);
 
             self->obj.Ratings(param0);
@@ -273,14 +273,14 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static PyObject* RatedContentDescription_get_Image(py::wrapper::Windows::Media::ContentRestrictions::RatedContentDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.RatedContentDescription", L"Image"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.RatedContentDescription", L"Image"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Image());
         }
         catch (...)
@@ -292,12 +292,6 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static int RatedContentDescription_put_Image(py::wrapper::Windows::Media::ContentRestrictions::RatedContentDescription* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.RatedContentDescription", L"Image"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -306,6 +300,12 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.RatedContentDescription", L"Image"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
             self->obj.Image(param0);
@@ -320,14 +320,14 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static PyObject* RatedContentDescription_get_Id(py::wrapper::Windows::Media::ContentRestrictions::RatedContentDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.RatedContentDescription", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.RatedContentDescription", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -339,12 +339,6 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static int RatedContentDescription_put_Id(py::wrapper::Windows::Media::ContentRestrictions::RatedContentDescription* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.RatedContentDescription", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -353,6 +347,12 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.RatedContentDescription", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Id(param0);
@@ -367,14 +367,14 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static PyObject* RatedContentDescription_get_Category(py::wrapper::Windows::Media::ContentRestrictions::RatedContentDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.RatedContentDescription", L"Category"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.RatedContentDescription", L"Category"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Category());
         }
         catch (...)
@@ -386,12 +386,6 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static int RatedContentDescription_put_Category(py::wrapper::Windows::Media::ContentRestrictions::RatedContentDescription* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.RatedContentDescription", L"Category"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -400,6 +394,12 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.ContentRestrictions.RatedContentDescription", L"Category"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::ContentRestrictions::RatedContentCategory>(arg);
 
             self->obj.Category(param0);
@@ -529,14 +529,14 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.ContentRestrictions.RatedContentRestrictions", L"GetBrowsePolicyAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.ContentRestrictions.RatedContentRestrictions", L"GetBrowsePolicyAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetBrowsePolicyAsync());
             }
             catch (...)
@@ -558,14 +558,14 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.ContentRestrictions.RatedContentRestrictions", L"GetRestrictionLevelAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.ContentRestrictions.RatedContentRestrictions", L"GetRestrictionLevelAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::ContentRestrictions::RatedContentDescription>(args, 0);
 
                 return py::convert(self->obj.GetRestrictionLevelAsync(param0));
@@ -589,14 +589,14 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.ContentRestrictions.RatedContentRestrictions", L"RequestContentAccessAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.ContentRestrictions.RatedContentRestrictions", L"RequestContentAccessAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::ContentRestrictions::RatedContentDescription>(args, 0);
 
                 return py::convert(self->obj.RequestContentAccessAsync(param0));
@@ -616,14 +616,14 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static PyObject* RatedContentRestrictions_add_RestrictionsChanged(py::wrapper::Windows::Media::ContentRestrictions::RatedContentRestrictions* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.ContentRestrictions.RatedContentRestrictions", L"RestrictionsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.ContentRestrictions.RatedContentRestrictions", L"RestrictionsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.RestrictionsChanged(param0));
@@ -637,14 +637,14 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static PyObject* RatedContentRestrictions_remove_RestrictionsChanged(py::wrapper::Windows::Media::ContentRestrictions::RatedContentRestrictions* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.ContentRestrictions.RatedContentRestrictions", L"RestrictionsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.ContentRestrictions.RatedContentRestrictions", L"RestrictionsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.RestrictionsChanged(param0);

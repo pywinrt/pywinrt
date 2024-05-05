@@ -28,14 +28,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"Cancel", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"Cancel", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Cancel();
                 Py_RETURN_NONE;
             }
@@ -47,14 +47,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"Cancel", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"Cancel", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Cancel(param0);
@@ -79,14 +79,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"GetCurrentStatus", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"GetCurrentStatus", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentStatus());
             }
             catch (...)
@@ -108,14 +108,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"Pause", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"Pause", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Pause();
                 Py_RETURN_NONE;
             }
@@ -127,14 +127,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"Pause", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"Pause", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Pause(param0);
@@ -159,14 +159,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"Restart", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"Restart", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Restart();
                 Py_RETURN_NONE;
             }
@@ -178,14 +178,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"Restart", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"Restart", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Restart(param0);
@@ -206,14 +206,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallItem_get_InstallType(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"InstallType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"InstallType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InstallType());
         }
         catch (...)
@@ -225,14 +225,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallItem_get_IsUserInitiated(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"IsUserInitiated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"IsUserInitiated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsUserInitiated());
         }
         catch (...)
@@ -244,14 +244,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallItem_get_PackageFamilyName(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"PackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"PackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PackageFamilyName());
         }
         catch (...)
@@ -263,14 +263,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallItem_get_ProductId(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"ProductId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"ProductId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProductId());
         }
         catch (...)
@@ -282,14 +282,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallItem_get_Children(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"Children"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"Children"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Children());
         }
         catch (...)
@@ -301,14 +301,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallItem_get_ItemOperationsMightAffectOtherItems(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"ItemOperationsMightAffectOtherItems"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"ItemOperationsMightAffectOtherItems"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ItemOperationsMightAffectOtherItems());
         }
         catch (...)
@@ -320,14 +320,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallItem_get_LaunchAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"LaunchAfterInstall"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"LaunchAfterInstall"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LaunchAfterInstall());
         }
         catch (...)
@@ -339,12 +339,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallItem_put_LaunchAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"LaunchAfterInstall"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -353,6 +347,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"LaunchAfterInstall"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.LaunchAfterInstall(param0);
@@ -367,14 +367,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallItem_get_PinToTaskbarAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"PinToTaskbarAfterInstall"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"PinToTaskbarAfterInstall"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PinToTaskbarAfterInstall());
         }
         catch (...)
@@ -386,12 +386,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallItem_put_PinToTaskbarAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"PinToTaskbarAfterInstall"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -400,6 +394,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"PinToTaskbarAfterInstall"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.PinToTaskbarAfterInstall(param0);
@@ -414,14 +414,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallItem_get_PinToStartAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"PinToStartAfterInstall"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"PinToStartAfterInstall"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PinToStartAfterInstall());
         }
         catch (...)
@@ -433,12 +433,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallItem_put_PinToStartAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"PinToStartAfterInstall"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -447,6 +441,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"PinToStartAfterInstall"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.PinToStartAfterInstall(param0);
@@ -461,14 +461,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallItem_get_PinToDesktopAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"PinToDesktopAfterInstall"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"PinToDesktopAfterInstall"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PinToDesktopAfterInstall());
         }
         catch (...)
@@ -480,12 +480,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallItem_put_PinToDesktopAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"PinToDesktopAfterInstall"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -494,6 +488,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"PinToDesktopAfterInstall"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.PinToDesktopAfterInstall(param0);
@@ -508,14 +508,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallItem_get_InstallInProgressToastNotificationMode(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"InstallInProgressToastNotificationMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"InstallInProgressToastNotificationMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InstallInProgressToastNotificationMode());
         }
         catch (...)
@@ -527,12 +527,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallItem_put_InstallInProgressToastNotificationMode(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"InstallInProgressToastNotificationMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -541,6 +535,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"InstallInProgressToastNotificationMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallationToastNotificationMode>(arg);
 
             self->obj.InstallInProgressToastNotificationMode(param0);
@@ -555,14 +555,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallItem_get_CompletedInstallToastNotificationMode(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"CompletedInstallToastNotificationMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"CompletedInstallToastNotificationMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CompletedInstallToastNotificationMode());
         }
         catch (...)
@@ -574,12 +574,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallItem_put_CompletedInstallToastNotificationMode(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"CompletedInstallToastNotificationMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -588,6 +582,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"CompletedInstallToastNotificationMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallationToastNotificationMode>(arg);
 
             self->obj.CompletedInstallToastNotificationMode(param0);
@@ -602,14 +602,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallItem_add_Completed(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Completed(param0));
@@ -623,14 +623,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallItem_remove_Completed(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Completed(param0);
@@ -645,14 +645,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallItem_add_StatusChanged(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"StatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"StatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.StatusChanged(param0));
@@ -666,14 +666,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallItem_remove_StatusChanged(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"StatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem", L"StatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StatusChanged(param0);
@@ -803,14 +803,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"Cancel", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"Cancel", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Cancel(param0);
@@ -824,14 +824,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"Cancel", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"Cancel", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -857,14 +857,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"GetFreeDeviceEntitlementAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"GetFreeDeviceEntitlementAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -890,14 +890,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"GetFreeUserEntitlementAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"GetFreeUserEntitlementAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -923,14 +923,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"GetFreeUserEntitlementForUserAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"GetFreeUserEntitlementForUserAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -957,14 +957,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"GetIsAppAllowedToInstallAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"GetIsAppAllowedToInstallAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetIsAppAllowedToInstallAsync(param0));
@@ -977,14 +977,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"GetIsAppAllowedToInstallAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"GetIsAppAllowedToInstallAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1011,14 +1011,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"GetIsAppAllowedToInstallForUserAsync", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"GetIsAppAllowedToInstallForUserAsync", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1046,14 +1046,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"GetIsApplicableAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"GetIsApplicableAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1078,14 +1078,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"GetIsApplicableForUserAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"GetIsApplicableForUserAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1111,14 +1111,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"GetIsPackageIdentityAllowedToInstallAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"GetIsPackageIdentityAllowedToInstallAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1144,14 +1144,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"GetIsPackageIdentityAllowedToInstallForUserAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"GetIsPackageIdentityAllowedToInstallForUserAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1178,14 +1178,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"IsStoreBlockedByPolicyAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"IsStoreBlockedByPolicyAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1210,14 +1210,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"MoveToFrontOfDownloadQueue", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"MoveToFrontOfDownloadQueue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1243,14 +1243,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"Pause", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"Pause", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Pause(param0);
@@ -1264,14 +1264,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"Pause", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"Pause", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1297,14 +1297,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"Restart", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"Restart", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Restart(param0);
@@ -1318,14 +1318,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"Restart", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"Restart", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1351,14 +1351,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForAllUpdatesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForAllUpdatesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SearchForAllUpdatesAsync());
             }
             catch (...)
@@ -1369,14 +1369,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForAllUpdatesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForAllUpdatesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SearchForAllUpdatesAsync(param0));
@@ -1389,14 +1389,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForAllUpdatesAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForAllUpdatesAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions>(args, 2);
@@ -1422,14 +1422,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForAllUpdatesForUserAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForAllUpdatesForUserAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1443,14 +1443,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForAllUpdatesForUserAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForAllUpdatesForUserAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1477,14 +1477,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForUpdatesAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForUpdatesAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1498,14 +1498,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForUpdatesAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForUpdatesAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1521,14 +1521,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         }
         else if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForUpdatesAsync", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForUpdatesAsync", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1556,14 +1556,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForUpdatesForUserAsync", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForUpdatesForUserAsync", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1580,14 +1580,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         }
         else if (arg_count == 6)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForUpdatesForUserAsync", 6))
-            {
-                py::set_arg_count_version_error(6);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForUpdatesForUserAsync", 6))
+                {
+                    py::set_arg_count_version_error(6);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1616,14 +1616,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"StartAppInstallAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"StartAppInstallAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -1639,14 +1639,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         }
         else if (arg_count == 7)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"StartAppInstallAsync", 7))
-            {
-                py::set_arg_count_version_error(7);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"StartAppInstallAsync", 7))
+                {
+                    py::set_arg_count_version_error(7);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -1676,14 +1676,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"StartProductInstallAsync", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"StartProductInstallAsync", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1700,14 +1700,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         }
         else if (arg_count == 8)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"StartProductInstallAsync", 8))
-            {
-                py::set_arg_count_version_error(8);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"StartProductInstallAsync", 8))
+                {
+                    py::set_arg_count_version_error(8);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1738,14 +1738,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 6)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"StartProductInstallForUserAsync", 6))
-            {
-                py::set_arg_count_version_error(6);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"StartProductInstallForUserAsync", 6))
+                {
+                    py::set_arg_count_version_error(6);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1763,14 +1763,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         }
         else if (arg_count == 9)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"StartProductInstallForUserAsync", 9))
-            {
-                py::set_arg_count_version_error(9);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"StartProductInstallForUserAsync", 9))
+                {
+                    py::set_arg_count_version_error(9);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1802,14 +1802,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"UpdateAppByPackageFamilyNameAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"UpdateAppByPackageFamilyNameAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.UpdateAppByPackageFamilyNameAsync(param0));
@@ -1822,14 +1822,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"UpdateAppByPackageFamilyNameAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"UpdateAppByPackageFamilyNameAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1854,14 +1854,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"UpdateAppByPackageFamilyNameForUserAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"UpdateAppByPackageFamilyNameForUserAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1883,14 +1883,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_get_AutoUpdateSetting(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"AutoUpdateSetting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"AutoUpdateSetting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AutoUpdateSetting());
         }
         catch (...)
@@ -1902,12 +1902,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallManager_put_AutoUpdateSetting(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"AutoUpdateSetting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1916,6 +1910,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"AutoUpdateSetting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AutoUpdateSetting>(arg);
 
             self->obj.AutoUpdateSetting(param0);
@@ -1930,14 +1930,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_get_AcquisitionIdentity(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"AcquisitionIdentity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"AcquisitionIdentity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AcquisitionIdentity());
         }
         catch (...)
@@ -1949,12 +1949,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallManager_put_AcquisitionIdentity(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"AcquisitionIdentity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1963,6 +1957,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"AcquisitionIdentity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.AcquisitionIdentity(param0);
@@ -1977,14 +1977,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_get_AppInstallItems(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"AppInstallItems"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"AppInstallItems"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppInstallItems());
         }
         catch (...)
@@ -1996,14 +1996,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_get_AppInstallItemsWithGroupSupport(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"AppInstallItemsWithGroupSupport"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"AppInstallItemsWithGroupSupport"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppInstallItemsWithGroupSupport());
         }
         catch (...)
@@ -2015,14 +2015,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_get_CanInstallForAllUsers(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"CanInstallForAllUsers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"CanInstallForAllUsers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanInstallForAllUsers());
         }
         catch (...)
@@ -2034,14 +2034,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_add_ItemCompleted(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"ItemCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"ItemCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager, winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManagerItemEventArgs>>(arg);
 
             return py::convert(self->obj.ItemCompleted(param0));
@@ -2055,14 +2055,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_remove_ItemCompleted(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"ItemCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"ItemCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ItemCompleted(param0);
@@ -2077,14 +2077,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_add_ItemStatusChanged(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"ItemStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"ItemStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager, winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManagerItemEventArgs>>(arg);
 
             return py::convert(self->obj.ItemStatusChanged(param0));
@@ -2098,14 +2098,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_remove_ItemStatusChanged(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"ItemStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"ItemStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ItemStatusChanged(param0);
@@ -2221,14 +2221,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManagerItemEventArgs_get_Item(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManagerItemEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManagerItemEventArgs", L"Item"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManagerItemEventArgs", L"Item"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Item());
         }
         catch (...)
@@ -2332,14 +2332,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallOptions_get_TargetVolume(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"TargetVolume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"TargetVolume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetVolume());
         }
         catch (...)
@@ -2351,12 +2351,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_TargetVolume(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"TargetVolume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2365,6 +2359,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"TargetVolume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(arg);
 
             self->obj.TargetVolume(param0);
@@ -2379,14 +2379,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallOptions_get_Repair(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"Repair"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"Repair"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Repair());
         }
         catch (...)
@@ -2398,12 +2398,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_Repair(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"Repair"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2412,6 +2406,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"Repair"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Repair(param0);
@@ -2426,14 +2426,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallOptions_get_LaunchAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"LaunchAfterInstall"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"LaunchAfterInstall"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LaunchAfterInstall());
         }
         catch (...)
@@ -2445,12 +2445,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_LaunchAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"LaunchAfterInstall"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2459,6 +2453,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"LaunchAfterInstall"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.LaunchAfterInstall(param0);
@@ -2473,14 +2473,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallOptions_get_ForceUseOfNonRemovableStorage(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"ForceUseOfNonRemovableStorage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"ForceUseOfNonRemovableStorage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ForceUseOfNonRemovableStorage());
         }
         catch (...)
@@ -2492,12 +2492,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_ForceUseOfNonRemovableStorage(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"ForceUseOfNonRemovableStorage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2506,6 +2500,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"ForceUseOfNonRemovableStorage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ForceUseOfNonRemovableStorage(param0);
@@ -2520,14 +2520,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallOptions_get_CatalogId(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"CatalogId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"CatalogId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CatalogId());
         }
         catch (...)
@@ -2539,12 +2539,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_CatalogId(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"CatalogId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2553,6 +2547,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"CatalogId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.CatalogId(param0);
@@ -2567,14 +2567,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallOptions_get_AllowForcedAppRestart(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"AllowForcedAppRestart"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"AllowForcedAppRestart"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowForcedAppRestart());
         }
         catch (...)
@@ -2586,12 +2586,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_AllowForcedAppRestart(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"AllowForcedAppRestart"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2600,6 +2594,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"AllowForcedAppRestart"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowForcedAppRestart(param0);
@@ -2614,14 +2614,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallOptions_get_StageButDoNotInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"StageButDoNotInstall"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"StageButDoNotInstall"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StageButDoNotInstall());
         }
         catch (...)
@@ -2633,12 +2633,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_StageButDoNotInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"StageButDoNotInstall"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2647,6 +2641,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"StageButDoNotInstall"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.StageButDoNotInstall(param0);
@@ -2661,14 +2661,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallOptions_get_PinToTaskbarAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"PinToTaskbarAfterInstall"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"PinToTaskbarAfterInstall"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PinToTaskbarAfterInstall());
         }
         catch (...)
@@ -2680,12 +2680,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_PinToTaskbarAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"PinToTaskbarAfterInstall"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2694,6 +2688,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"PinToTaskbarAfterInstall"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.PinToTaskbarAfterInstall(param0);
@@ -2708,14 +2708,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallOptions_get_PinToStartAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"PinToStartAfterInstall"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"PinToStartAfterInstall"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PinToStartAfterInstall());
         }
         catch (...)
@@ -2727,12 +2727,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_PinToStartAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"PinToStartAfterInstall"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2741,6 +2735,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"PinToStartAfterInstall"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.PinToStartAfterInstall(param0);
@@ -2755,14 +2755,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallOptions_get_PinToDesktopAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"PinToDesktopAfterInstall"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"PinToDesktopAfterInstall"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PinToDesktopAfterInstall());
         }
         catch (...)
@@ -2774,12 +2774,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_PinToDesktopAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"PinToDesktopAfterInstall"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2788,6 +2782,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"PinToDesktopAfterInstall"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.PinToDesktopAfterInstall(param0);
@@ -2802,14 +2802,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallOptions_get_InstallInProgressToastNotificationMode(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"InstallInProgressToastNotificationMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"InstallInProgressToastNotificationMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InstallInProgressToastNotificationMode());
         }
         catch (...)
@@ -2821,12 +2821,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_InstallInProgressToastNotificationMode(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"InstallInProgressToastNotificationMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2835,6 +2829,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"InstallInProgressToastNotificationMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallationToastNotificationMode>(arg);
 
             self->obj.InstallInProgressToastNotificationMode(param0);
@@ -2849,14 +2849,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallOptions_get_InstallForAllUsers(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"InstallForAllUsers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"InstallForAllUsers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InstallForAllUsers());
         }
         catch (...)
@@ -2868,12 +2868,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_InstallForAllUsers(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"InstallForAllUsers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2882,6 +2876,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"InstallForAllUsers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.InstallForAllUsers(param0);
@@ -2896,14 +2896,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallOptions_get_ExtendedCampaignId(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"ExtendedCampaignId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"ExtendedCampaignId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedCampaignId());
         }
         catch (...)
@@ -2915,12 +2915,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_ExtendedCampaignId(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"ExtendedCampaignId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2929,6 +2923,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"ExtendedCampaignId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ExtendedCampaignId(param0);
@@ -2943,14 +2943,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallOptions_get_CompletedInstallToastNotificationMode(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"CompletedInstallToastNotificationMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"CompletedInstallToastNotificationMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CompletedInstallToastNotificationMode());
         }
         catch (...)
@@ -2962,12 +2962,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_CompletedInstallToastNotificationMode(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"CompletedInstallToastNotificationMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2976,6 +2970,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"CompletedInstallToastNotificationMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallationToastNotificationMode>(arg);
 
             self->obj.CompletedInstallToastNotificationMode(param0);
@@ -2990,14 +2990,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallOptions_get_CampaignId(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"CampaignId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"CampaignId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CampaignId());
         }
         catch (...)
@@ -3009,12 +3009,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_CampaignId(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"CampaignId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3023,6 +3017,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions", L"CampaignId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.CampaignId(param0);
@@ -3121,14 +3121,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallStatus_get_BytesDownloaded(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus", L"BytesDownloaded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus", L"BytesDownloaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BytesDownloaded());
         }
         catch (...)
@@ -3140,14 +3140,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallStatus_get_DownloadSizeInBytes(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus", L"DownloadSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus", L"DownloadSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DownloadSizeInBytes());
         }
         catch (...)
@@ -3159,14 +3159,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallStatus_get_ErrorCode(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus", L"ErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus", L"ErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorCode());
         }
         catch (...)
@@ -3178,14 +3178,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallStatus_get_InstallState(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus", L"InstallState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus", L"InstallState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InstallState());
         }
         catch (...)
@@ -3197,14 +3197,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallStatus_get_PercentComplete(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus", L"PercentComplete"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus", L"PercentComplete"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PercentComplete());
         }
         catch (...)
@@ -3216,14 +3216,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallStatus_get_ReadyForLaunch(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus", L"ReadyForLaunch"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus", L"ReadyForLaunch"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReadyForLaunch());
         }
         catch (...)
@@ -3235,14 +3235,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallStatus_get_User(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -3254,14 +3254,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallStatus_get_IsStaged(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus", L"IsStaged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus", L"IsStaged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsStaged());
         }
         catch (...)
@@ -3372,14 +3372,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppUpdateOptions_get_CatalogId(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions", L"CatalogId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions", L"CatalogId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CatalogId());
         }
         catch (...)
@@ -3391,12 +3391,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppUpdateOptions_put_CatalogId(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions", L"CatalogId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3405,6 +3399,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions", L"CatalogId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.CatalogId(param0);
@@ -3419,14 +3419,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppUpdateOptions_get_AllowForcedAppRestart(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions", L"AllowForcedAppRestart"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions", L"AllowForcedAppRestart"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowForcedAppRestart());
         }
         catch (...)
@@ -3438,12 +3438,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppUpdateOptions_put_AllowForcedAppRestart(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions", L"AllowForcedAppRestart"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3452,6 +3446,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions", L"AllowForcedAppRestart"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowForcedAppRestart(param0);
@@ -3466,14 +3466,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppUpdateOptions_get_AutomaticallyDownloadAndInstallUpdateIfFound(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions", L"AutomaticallyDownloadAndInstallUpdateIfFound"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions", L"AutomaticallyDownloadAndInstallUpdateIfFound"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AutomaticallyDownloadAndInstallUpdateIfFound());
         }
         catch (...)
@@ -3485,12 +3485,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppUpdateOptions_put_AutomaticallyDownloadAndInstallUpdateIfFound(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions", L"AutomaticallyDownloadAndInstallUpdateIfFound"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3499,6 +3493,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions", L"AutomaticallyDownloadAndInstallUpdateIfFound"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AutomaticallyDownloadAndInstallUpdateIfFound(param0);
@@ -3585,14 +3585,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* GetEntitlementResult_get_Status(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)

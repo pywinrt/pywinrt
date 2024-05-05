@@ -48,14 +48,14 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
     static PyObject* SysStorageProviderEventReceivedEventArgs_get_Json(py::wrapper::Windows::System::Implementation::FileExplorer::SysStorageProviderEventReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs", L"Json"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs", L"Json"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Json());
         }
         catch (...)
@@ -137,14 +137,14 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
     static PyObject* ISysStorageProviderEventSource_add_EventReceived(py::wrapper::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource", L"EventReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource", L"EventReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource, winrt::Windows::System::Implementation::FileExplorer::SysStorageProviderEventReceivedEventArgs>>(arg);
 
             return py::convert(self->obj.EventReceived(param0));
@@ -158,14 +158,14 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
     static PyObject* ISysStorageProviderEventSource_remove_EventReceived(py::wrapper::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource", L"EventReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource", L"EventReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.EventReceived(param0);
@@ -255,14 +255,14 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Implementation.FileExplorer.ISysStorageProviderHandlerFactory", L"GetEventSource", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Implementation.FileExplorer.ISysStorageProviderHandlerFactory", L"GetEventSource", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -287,14 +287,14 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Implementation.FileExplorer.ISysStorageProviderHandlerFactory", L"GetHttpRequestProvider", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Implementation.FileExplorer.ISysStorageProviderHandlerFactory", L"GetHttpRequestProvider", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetHttpRequestProvider(param0));
@@ -389,14 +389,14 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Implementation.FileExplorer.ISysStorageProviderHttpRequestProvider", L"SendRequestAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Implementation.FileExplorer.ISysStorageProviderHttpRequestProvider", L"SendRequestAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpRequestMessage>(args, 0);
 
                 return py::convert(self->obj.SendRequestAsync(param0));

@@ -46,14 +46,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiActiveSensingMessage_get_RawData(py::wrapper::Windows::Devices::Midi::MidiActiveSensingMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiActiveSensingMessage", L"RawData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiActiveSensingMessage", L"RawData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawData());
         }
         catch (...)
@@ -65,14 +65,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiActiveSensingMessage_get_Timestamp(py::wrapper::Windows::Devices::Midi::MidiActiveSensingMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiActiveSensingMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiActiveSensingMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -84,14 +84,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiActiveSensingMessage_get_Type(py::wrapper::Windows::Devices::Midi::MidiActiveSensingMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiActiveSensingMessage", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiActiveSensingMessage", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -200,14 +200,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiChannelPressureMessage_get_Channel(py::wrapper::Windows::Devices::Midi::MidiChannelPressureMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiChannelPressureMessage", L"Channel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiChannelPressureMessage", L"Channel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Channel());
         }
         catch (...)
@@ -219,14 +219,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiChannelPressureMessage_get_Pressure(py::wrapper::Windows::Devices::Midi::MidiChannelPressureMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiChannelPressureMessage", L"Pressure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiChannelPressureMessage", L"Pressure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Pressure());
         }
         catch (...)
@@ -238,14 +238,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiChannelPressureMessage_get_RawData(py::wrapper::Windows::Devices::Midi::MidiChannelPressureMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiChannelPressureMessage", L"RawData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiChannelPressureMessage", L"RawData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawData());
         }
         catch (...)
@@ -257,14 +257,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiChannelPressureMessage_get_Timestamp(py::wrapper::Windows::Devices::Midi::MidiChannelPressureMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiChannelPressureMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiChannelPressureMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -276,14 +276,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiChannelPressureMessage_get_Type(py::wrapper::Windows::Devices::Midi::MidiChannelPressureMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiChannelPressureMessage", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiChannelPressureMessage", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -391,14 +391,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiContinueMessage_get_RawData(py::wrapper::Windows::Devices::Midi::MidiContinueMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiContinueMessage", L"RawData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiContinueMessage", L"RawData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawData());
         }
         catch (...)
@@ -410,14 +410,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiContinueMessage_get_Timestamp(py::wrapper::Windows::Devices::Midi::MidiContinueMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiContinueMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiContinueMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -429,14 +429,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiContinueMessage_get_Type(py::wrapper::Windows::Devices::Midi::MidiContinueMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiContinueMessage", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiContinueMessage", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -546,14 +546,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiControlChangeMessage_get_Channel(py::wrapper::Windows::Devices::Midi::MidiControlChangeMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiControlChangeMessage", L"Channel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiControlChangeMessage", L"Channel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Channel());
         }
         catch (...)
@@ -565,14 +565,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiControlChangeMessage_get_ControlValue(py::wrapper::Windows::Devices::Midi::MidiControlChangeMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiControlChangeMessage", L"ControlValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiControlChangeMessage", L"ControlValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ControlValue());
         }
         catch (...)
@@ -584,14 +584,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiControlChangeMessage_get_Controller(py::wrapper::Windows::Devices::Midi::MidiControlChangeMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiControlChangeMessage", L"Controller"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiControlChangeMessage", L"Controller"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Controller());
         }
         catch (...)
@@ -603,14 +603,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiControlChangeMessage_get_RawData(py::wrapper::Windows::Devices::Midi::MidiControlChangeMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiControlChangeMessage", L"RawData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiControlChangeMessage", L"RawData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawData());
         }
         catch (...)
@@ -622,14 +622,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiControlChangeMessage_get_Timestamp(py::wrapper::Windows::Devices::Midi::MidiControlChangeMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiControlChangeMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiControlChangeMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -641,14 +641,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiControlChangeMessage_get_Type(py::wrapper::Windows::Devices::Midi::MidiControlChangeMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiControlChangeMessage", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiControlChangeMessage", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -739,14 +739,14 @@ namespace py::cpp::Windows::Devices::Midi
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiInPort", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiInPort", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -769,14 +769,14 @@ namespace py::cpp::Windows::Devices::Midi
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiInPort", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiInPort", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Midi::MidiInPort::FromIdAsync(param0));
@@ -800,14 +800,14 @@ namespace py::cpp::Windows::Devices::Midi
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiInPort", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiInPort", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Midi::MidiInPort::GetDeviceSelector());
             }
             catch (...)
@@ -825,14 +825,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiInPort_get_DeviceId(py::wrapper::Windows::Devices::Midi::MidiInPort* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiInPort", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiInPort", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -844,14 +844,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiInPort_add_MessageReceived(py::wrapper::Windows::Devices::Midi::MidiInPort* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Midi.MidiInPort", L"MessageReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Midi.MidiInPort", L"MessageReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Midi::MidiInPort, winrt::Windows::Devices::Midi::MidiMessageReceivedEventArgs>>(arg);
 
             return py::convert(self->obj.MessageReceived(param0));
@@ -865,14 +865,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiInPort_remove_MessageReceived(py::wrapper::Windows::Devices::Midi::MidiInPort* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Midi.MidiInPort", L"MessageReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Midi.MidiInPort", L"MessageReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.MessageReceived(param0);
@@ -1008,14 +1008,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiMessageReceivedEventArgs_get_Message(py::wrapper::Windows::Devices::Midi::MidiMessageReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiMessageReceivedEventArgs", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiMessageReceivedEventArgs", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Message());
         }
         catch (...)
@@ -1123,14 +1123,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiNoteOffMessage_get_RawData(py::wrapper::Windows::Devices::Midi::MidiNoteOffMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOffMessage", L"RawData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOffMessage", L"RawData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawData());
         }
         catch (...)
@@ -1142,14 +1142,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiNoteOffMessage_get_Timestamp(py::wrapper::Windows::Devices::Midi::MidiNoteOffMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOffMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOffMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -1161,14 +1161,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiNoteOffMessage_get_Type(py::wrapper::Windows::Devices::Midi::MidiNoteOffMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOffMessage", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOffMessage", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -1180,14 +1180,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiNoteOffMessage_get_Channel(py::wrapper::Windows::Devices::Midi::MidiNoteOffMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOffMessage", L"Channel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOffMessage", L"Channel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Channel());
         }
         catch (...)
@@ -1199,14 +1199,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiNoteOffMessage_get_Note(py::wrapper::Windows::Devices::Midi::MidiNoteOffMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOffMessage", L"Note"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOffMessage", L"Note"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Note());
         }
         catch (...)
@@ -1218,14 +1218,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiNoteOffMessage_get_Velocity(py::wrapper::Windows::Devices::Midi::MidiNoteOffMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOffMessage", L"Velocity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOffMessage", L"Velocity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Velocity());
         }
         catch (...)
@@ -1338,14 +1338,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiNoteOnMessage_get_RawData(py::wrapper::Windows::Devices::Midi::MidiNoteOnMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOnMessage", L"RawData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOnMessage", L"RawData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawData());
         }
         catch (...)
@@ -1357,14 +1357,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiNoteOnMessage_get_Timestamp(py::wrapper::Windows::Devices::Midi::MidiNoteOnMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOnMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOnMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -1376,14 +1376,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiNoteOnMessage_get_Type(py::wrapper::Windows::Devices::Midi::MidiNoteOnMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOnMessage", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOnMessage", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -1395,14 +1395,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiNoteOnMessage_get_Channel(py::wrapper::Windows::Devices::Midi::MidiNoteOnMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOnMessage", L"Channel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOnMessage", L"Channel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Channel());
         }
         catch (...)
@@ -1414,14 +1414,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiNoteOnMessage_get_Note(py::wrapper::Windows::Devices::Midi::MidiNoteOnMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOnMessage", L"Note"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOnMessage", L"Note"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Note());
         }
         catch (...)
@@ -1433,14 +1433,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiNoteOnMessage_get_Velocity(py::wrapper::Windows::Devices::Midi::MidiNoteOnMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOnMessage", L"Velocity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiNoteOnMessage", L"Velocity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Velocity());
         }
         catch (...)
@@ -1531,14 +1531,14 @@ namespace py::cpp::Windows::Devices::Midi
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiOutPort", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiOutPort", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -1561,14 +1561,14 @@ namespace py::cpp::Windows::Devices::Midi
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiOutPort", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiOutPort", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Midi::MidiOutPort::FromIdAsync(param0));
@@ -1592,14 +1592,14 @@ namespace py::cpp::Windows::Devices::Midi
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiOutPort", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiOutPort", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Midi::MidiOutPort::GetDeviceSelector());
             }
             catch (...)
@@ -1621,14 +1621,14 @@ namespace py::cpp::Windows::Devices::Midi
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiOutPort", L"SendBuffer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiOutPort", L"SendBuffer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 self->obj.SendBuffer(param0);
@@ -1653,14 +1653,14 @@ namespace py::cpp::Windows::Devices::Midi
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiOutPort", L"SendMessage", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiOutPort", L"SendMessage", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Midi::IMidiMessage>(args, 0);
 
                 self->obj.SendMessage(param0);
@@ -1681,14 +1681,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiOutPort_get_DeviceId(py::wrapper::Windows::Devices::Midi::MidiOutPort* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiOutPort", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiOutPort", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -1846,14 +1846,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiPitchBendChangeMessage_get_RawData(py::wrapper::Windows::Devices::Midi::MidiPitchBendChangeMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiPitchBendChangeMessage", L"RawData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiPitchBendChangeMessage", L"RawData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawData());
         }
         catch (...)
@@ -1865,14 +1865,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiPitchBendChangeMessage_get_Timestamp(py::wrapper::Windows::Devices::Midi::MidiPitchBendChangeMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiPitchBendChangeMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiPitchBendChangeMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -1884,14 +1884,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiPitchBendChangeMessage_get_Type(py::wrapper::Windows::Devices::Midi::MidiPitchBendChangeMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiPitchBendChangeMessage", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiPitchBendChangeMessage", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -1903,14 +1903,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiPitchBendChangeMessage_get_Bend(py::wrapper::Windows::Devices::Midi::MidiPitchBendChangeMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiPitchBendChangeMessage", L"Bend"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiPitchBendChangeMessage", L"Bend"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bend());
         }
         catch (...)
@@ -1922,14 +1922,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiPitchBendChangeMessage_get_Channel(py::wrapper::Windows::Devices::Midi::MidiPitchBendChangeMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiPitchBendChangeMessage", L"Channel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiPitchBendChangeMessage", L"Channel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Channel());
         }
         catch (...)
@@ -2041,14 +2041,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiPolyphonicKeyPressureMessage_get_RawData(py::wrapper::Windows::Devices::Midi::MidiPolyphonicKeyPressureMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage", L"RawData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage", L"RawData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawData());
         }
         catch (...)
@@ -2060,14 +2060,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiPolyphonicKeyPressureMessage_get_Timestamp(py::wrapper::Windows::Devices::Midi::MidiPolyphonicKeyPressureMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -2079,14 +2079,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiPolyphonicKeyPressureMessage_get_Type(py::wrapper::Windows::Devices::Midi::MidiPolyphonicKeyPressureMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -2098,14 +2098,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiPolyphonicKeyPressureMessage_get_Channel(py::wrapper::Windows::Devices::Midi::MidiPolyphonicKeyPressureMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage", L"Channel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage", L"Channel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Channel());
         }
         catch (...)
@@ -2117,14 +2117,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiPolyphonicKeyPressureMessage_get_Note(py::wrapper::Windows::Devices::Midi::MidiPolyphonicKeyPressureMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage", L"Note"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage", L"Note"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Note());
         }
         catch (...)
@@ -2136,14 +2136,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiPolyphonicKeyPressureMessage_get_Pressure(py::wrapper::Windows::Devices::Midi::MidiPolyphonicKeyPressureMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage", L"Pressure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage", L"Pressure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Pressure());
         }
         catch (...)
@@ -2255,14 +2255,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiProgramChangeMessage_get_RawData(py::wrapper::Windows::Devices::Midi::MidiProgramChangeMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiProgramChangeMessage", L"RawData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiProgramChangeMessage", L"RawData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawData());
         }
         catch (...)
@@ -2274,14 +2274,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiProgramChangeMessage_get_Timestamp(py::wrapper::Windows::Devices::Midi::MidiProgramChangeMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiProgramChangeMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiProgramChangeMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -2293,14 +2293,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiProgramChangeMessage_get_Type(py::wrapper::Windows::Devices::Midi::MidiProgramChangeMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiProgramChangeMessage", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiProgramChangeMessage", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -2312,14 +2312,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiProgramChangeMessage_get_Channel(py::wrapper::Windows::Devices::Midi::MidiProgramChangeMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiProgramChangeMessage", L"Channel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiProgramChangeMessage", L"Channel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Channel());
         }
         catch (...)
@@ -2331,14 +2331,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiProgramChangeMessage_get_Program(py::wrapper::Windows::Devices::Midi::MidiProgramChangeMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiProgramChangeMessage", L"Program"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiProgramChangeMessage", L"Program"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Program());
         }
         catch (...)
@@ -2448,14 +2448,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiSongPositionPointerMessage_get_RawData(py::wrapper::Windows::Devices::Midi::MidiSongPositionPointerMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSongPositionPointerMessage", L"RawData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSongPositionPointerMessage", L"RawData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawData());
         }
         catch (...)
@@ -2467,14 +2467,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiSongPositionPointerMessage_get_Timestamp(py::wrapper::Windows::Devices::Midi::MidiSongPositionPointerMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSongPositionPointerMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSongPositionPointerMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -2486,14 +2486,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiSongPositionPointerMessage_get_Type(py::wrapper::Windows::Devices::Midi::MidiSongPositionPointerMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSongPositionPointerMessage", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSongPositionPointerMessage", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -2505,14 +2505,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiSongPositionPointerMessage_get_Beats(py::wrapper::Windows::Devices::Midi::MidiSongPositionPointerMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSongPositionPointerMessage", L"Beats"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSongPositionPointerMessage", L"Beats"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Beats());
         }
         catch (...)
@@ -2621,14 +2621,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiSongSelectMessage_get_RawData(py::wrapper::Windows::Devices::Midi::MidiSongSelectMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSongSelectMessage", L"RawData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSongSelectMessage", L"RawData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawData());
         }
         catch (...)
@@ -2640,14 +2640,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiSongSelectMessage_get_Timestamp(py::wrapper::Windows::Devices::Midi::MidiSongSelectMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSongSelectMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSongSelectMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -2659,14 +2659,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiSongSelectMessage_get_Type(py::wrapper::Windows::Devices::Midi::MidiSongSelectMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSongSelectMessage", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSongSelectMessage", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -2678,14 +2678,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiSongSelectMessage_get_Song(py::wrapper::Windows::Devices::Midi::MidiSongSelectMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSongSelectMessage", L"Song"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSongSelectMessage", L"Song"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Song());
         }
         catch (...)
@@ -2792,14 +2792,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiStartMessage_get_RawData(py::wrapper::Windows::Devices::Midi::MidiStartMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiStartMessage", L"RawData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiStartMessage", L"RawData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawData());
         }
         catch (...)
@@ -2811,14 +2811,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiStartMessage_get_Timestamp(py::wrapper::Windows::Devices::Midi::MidiStartMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiStartMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiStartMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -2830,14 +2830,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiStartMessage_get_Type(py::wrapper::Windows::Devices::Midi::MidiStartMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiStartMessage", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiStartMessage", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -2943,14 +2943,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiStopMessage_get_RawData(py::wrapper::Windows::Devices::Midi::MidiStopMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiStopMessage", L"RawData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiStopMessage", L"RawData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawData());
         }
         catch (...)
@@ -2962,14 +2962,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiStopMessage_get_Timestamp(py::wrapper::Windows::Devices::Midi::MidiStopMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiStopMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiStopMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -2981,14 +2981,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiStopMessage_get_Type(py::wrapper::Windows::Devices::Midi::MidiStopMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiStopMessage", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiStopMessage", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -3076,14 +3076,14 @@ namespace py::cpp::Windows::Devices::Midi
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiSynthesizer", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiSynthesizer", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -3106,14 +3106,14 @@ namespace py::cpp::Windows::Devices::Midi
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiSynthesizer", L"CreateAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiSynthesizer", L"CreateAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Midi::MidiSynthesizer::CreateAsync());
             }
             catch (...)
@@ -3124,14 +3124,14 @@ namespace py::cpp::Windows::Devices::Midi
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiSynthesizer", L"CreateAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiSynthesizer", L"CreateAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Midi::MidiSynthesizer::CreateAsync(param0));
@@ -3155,14 +3155,14 @@ namespace py::cpp::Windows::Devices::Midi
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiSynthesizer", L"IsSynthesizer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiSynthesizer", L"IsSynthesizer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Midi::MidiSynthesizer::IsSynthesizer(param0));
@@ -3186,14 +3186,14 @@ namespace py::cpp::Windows::Devices::Midi
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiSynthesizer", L"SendBuffer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiSynthesizer", L"SendBuffer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 self->obj.SendBuffer(param0);
@@ -3218,14 +3218,14 @@ namespace py::cpp::Windows::Devices::Midi
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiSynthesizer", L"SendMessage", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.MidiSynthesizer", L"SendMessage", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Midi::IMidiMessage>(args, 0);
 
                 self->obj.SendMessage(param0);
@@ -3246,14 +3246,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiSynthesizer_get_DeviceId(py::wrapper::Windows::Devices::Midi::MidiSynthesizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSynthesizer", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSynthesizer", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -3265,14 +3265,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiSynthesizer_get_Volume(py::wrapper::Windows::Devices::Midi::MidiSynthesizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSynthesizer", L"Volume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSynthesizer", L"Volume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Volume());
         }
         catch (...)
@@ -3284,12 +3284,6 @@ namespace py::cpp::Windows::Devices::Midi
 
     static int MidiSynthesizer_put_Volume(py::wrapper::Windows::Devices::Midi::MidiSynthesizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSynthesizer", L"Volume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3298,6 +3292,12 @@ namespace py::cpp::Windows::Devices::Midi
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSynthesizer", L"Volume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Volume(param0);
@@ -3312,14 +3312,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiSynthesizer_get_AudioDevice(py::wrapper::Windows::Devices::Midi::MidiSynthesizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSynthesizer", L"AudioDevice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSynthesizer", L"AudioDevice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioDevice());
         }
         catch (...)
@@ -3478,14 +3478,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiSystemExclusiveMessage_get_RawData(py::wrapper::Windows::Devices::Midi::MidiSystemExclusiveMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSystemExclusiveMessage", L"RawData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSystemExclusiveMessage", L"RawData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawData());
         }
         catch (...)
@@ -3497,14 +3497,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiSystemExclusiveMessage_get_Timestamp(py::wrapper::Windows::Devices::Midi::MidiSystemExclusiveMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSystemExclusiveMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSystemExclusiveMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -3516,14 +3516,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiSystemExclusiveMessage_get_Type(py::wrapper::Windows::Devices::Midi::MidiSystemExclusiveMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSystemExclusiveMessage", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSystemExclusiveMessage", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -3629,14 +3629,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiSystemResetMessage_get_RawData(py::wrapper::Windows::Devices::Midi::MidiSystemResetMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSystemResetMessage", L"RawData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSystemResetMessage", L"RawData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawData());
         }
         catch (...)
@@ -3648,14 +3648,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiSystemResetMessage_get_Timestamp(py::wrapper::Windows::Devices::Midi::MidiSystemResetMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSystemResetMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSystemResetMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -3667,14 +3667,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiSystemResetMessage_get_Type(py::wrapper::Windows::Devices::Midi::MidiSystemResetMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSystemResetMessage", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiSystemResetMessage", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -3783,14 +3783,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiTimeCodeMessage_get_RawData(py::wrapper::Windows::Devices::Midi::MidiTimeCodeMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiTimeCodeMessage", L"RawData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiTimeCodeMessage", L"RawData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawData());
         }
         catch (...)
@@ -3802,14 +3802,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiTimeCodeMessage_get_Timestamp(py::wrapper::Windows::Devices::Midi::MidiTimeCodeMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiTimeCodeMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiTimeCodeMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -3821,14 +3821,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiTimeCodeMessage_get_Type(py::wrapper::Windows::Devices::Midi::MidiTimeCodeMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiTimeCodeMessage", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiTimeCodeMessage", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -3840,14 +3840,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiTimeCodeMessage_get_FrameType(py::wrapper::Windows::Devices::Midi::MidiTimeCodeMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiTimeCodeMessage", L"FrameType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiTimeCodeMessage", L"FrameType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameType());
         }
         catch (...)
@@ -3859,14 +3859,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiTimeCodeMessage_get_Values(py::wrapper::Windows::Devices::Midi::MidiTimeCodeMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiTimeCodeMessage", L"Values"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiTimeCodeMessage", L"Values"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Values());
         }
         catch (...)
@@ -3974,14 +3974,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiTimingClockMessage_get_RawData(py::wrapper::Windows::Devices::Midi::MidiTimingClockMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiTimingClockMessage", L"RawData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiTimingClockMessage", L"RawData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawData());
         }
         catch (...)
@@ -3993,14 +3993,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiTimingClockMessage_get_Timestamp(py::wrapper::Windows::Devices::Midi::MidiTimingClockMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiTimingClockMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiTimingClockMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -4012,14 +4012,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiTimingClockMessage_get_Type(py::wrapper::Windows::Devices::Midi::MidiTimingClockMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiTimingClockMessage", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiTimingClockMessage", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -4125,14 +4125,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiTuneRequestMessage_get_RawData(py::wrapper::Windows::Devices::Midi::MidiTuneRequestMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiTuneRequestMessage", L"RawData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiTuneRequestMessage", L"RawData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawData());
         }
         catch (...)
@@ -4144,14 +4144,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiTuneRequestMessage_get_Timestamp(py::wrapper::Windows::Devices::Midi::MidiTuneRequestMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiTuneRequestMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiTuneRequestMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -4163,14 +4163,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiTuneRequestMessage_get_Type(py::wrapper::Windows::Devices::Midi::MidiTuneRequestMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiTuneRequestMessage", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.MidiTuneRequestMessage", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -4254,14 +4254,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* IMidiMessage_get_RawData(py::wrapper::Windows::Devices::Midi::IMidiMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.IMidiMessage", L"RawData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.IMidiMessage", L"RawData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawData());
         }
         catch (...)
@@ -4273,14 +4273,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* IMidiMessage_get_Timestamp(py::wrapper::Windows::Devices::Midi::IMidiMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.IMidiMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.IMidiMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -4292,14 +4292,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* IMidiMessage_get_Type(py::wrapper::Windows::Devices::Midi::IMidiMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.IMidiMessage", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.IMidiMessage", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -4387,14 +4387,14 @@ namespace py::cpp::Windows::Devices::Midi
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -4417,14 +4417,14 @@ namespace py::cpp::Windows::Devices::Midi
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.IMidiOutPort", L"SendBuffer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.IMidiOutPort", L"SendBuffer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 self->obj.SendBuffer(param0);
@@ -4449,14 +4449,14 @@ namespace py::cpp::Windows::Devices::Midi
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.IMidiOutPort", L"SendMessage", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Midi.IMidiOutPort", L"SendMessage", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Midi::IMidiMessage>(args, 0);
 
                 self->obj.SendMessage(param0);
@@ -4477,14 +4477,14 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* IMidiOutPort_get_DeviceId(py::wrapper::Windows::Devices::Midi::IMidiOutPort* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.IMidiOutPort", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Midi.IMidiOutPort", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)

@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.Core.HdmiDisplayInformation", L"GetCurrentDisplayMode", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.Core.HdmiDisplayInformation", L"GetCurrentDisplayMode", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentDisplayMode());
             }
             catch (...)
@@ -57,14 +57,14 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.Core.HdmiDisplayInformation", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.Core.HdmiDisplayInformation", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Graphics::Display::Core::HdmiDisplayInformation::GetForCurrentView());
             }
             catch (...)
@@ -86,14 +86,14 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.Core.HdmiDisplayInformation", L"GetSupportedDisplayModes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.Core.HdmiDisplayInformation", L"GetSupportedDisplayModes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetSupportedDisplayModes());
             }
             catch (...)
@@ -115,14 +115,14 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.Core.HdmiDisplayInformation", L"RequestSetCurrentDisplayModeAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.Core.HdmiDisplayInformation", L"RequestSetCurrentDisplayModeAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Display::Core::HdmiDisplayMode>(args, 0);
 
                 return py::convert(self->obj.RequestSetCurrentDisplayModeAsync(param0));
@@ -135,14 +135,14 @@ namespace py::cpp::Windows::Graphics::Display::Core
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.Core.HdmiDisplayInformation", L"RequestSetCurrentDisplayModeAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.Core.HdmiDisplayInformation", L"RequestSetCurrentDisplayModeAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Display::Core::HdmiDisplayMode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdrOption>(args, 1);
 
@@ -156,14 +156,14 @@ namespace py::cpp::Windows::Graphics::Display::Core
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.Core.HdmiDisplayInformation", L"RequestSetCurrentDisplayModeAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.Core.HdmiDisplayInformation", L"RequestSetCurrentDisplayModeAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Display::Core::HdmiDisplayMode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdrOption>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata>(args, 2);
@@ -189,14 +189,14 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.Core.HdmiDisplayInformation", L"SetDefaultDisplayModeAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.Core.HdmiDisplayInformation", L"SetDefaultDisplayModeAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SetDefaultDisplayModeAsync());
             }
             catch (...)
@@ -214,14 +214,14 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyObject* HdmiDisplayInformation_add_DisplayModesChanged(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayInformation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.Core.HdmiDisplayInformation", L"DisplayModesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.Core.HdmiDisplayInformation", L"DisplayModesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::Core::HdmiDisplayInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.DisplayModesChanged(param0));
@@ -235,14 +235,14 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyObject* HdmiDisplayInformation_remove_DisplayModesChanged(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayInformation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.Core.HdmiDisplayInformation", L"DisplayModesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.Core.HdmiDisplayInformation", L"DisplayModesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DisplayModesChanged(param0);
@@ -362,14 +362,14 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"IsEqual", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"IsEqual", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Display::Core::HdmiDisplayMode>(args, 0);
 
                 return py::convert(self->obj.IsEqual(param0));
@@ -389,14 +389,14 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyObject* HdmiDisplayMode_get_BitsPerPixel(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayMode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"BitsPerPixel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"BitsPerPixel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitsPerPixel());
         }
         catch (...)
@@ -408,14 +408,14 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyObject* HdmiDisplayMode_get_ColorSpace(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayMode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"ColorSpace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"ColorSpace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ColorSpace());
         }
         catch (...)
@@ -427,14 +427,14 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyObject* HdmiDisplayMode_get_Is2086MetadataSupported(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayMode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"Is2086MetadataSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"Is2086MetadataSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Is2086MetadataSupported());
         }
         catch (...)
@@ -446,14 +446,14 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyObject* HdmiDisplayMode_get_IsSdrLuminanceSupported(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayMode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"IsSdrLuminanceSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"IsSdrLuminanceSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSdrLuminanceSupported());
         }
         catch (...)
@@ -465,14 +465,14 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyObject* HdmiDisplayMode_get_IsSmpte2084Supported(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayMode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"IsSmpte2084Supported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"IsSmpte2084Supported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSmpte2084Supported());
         }
         catch (...)
@@ -484,14 +484,14 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyObject* HdmiDisplayMode_get_PixelEncoding(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayMode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"PixelEncoding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"PixelEncoding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelEncoding());
         }
         catch (...)
@@ -503,14 +503,14 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyObject* HdmiDisplayMode_get_RefreshRate(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayMode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"RefreshRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"RefreshRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RefreshRate());
         }
         catch (...)
@@ -522,14 +522,14 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyObject* HdmiDisplayMode_get_ResolutionHeightInRawPixels(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayMode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"ResolutionHeightInRawPixels"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"ResolutionHeightInRawPixels"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolutionHeightInRawPixels());
         }
         catch (...)
@@ -541,14 +541,14 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyObject* HdmiDisplayMode_get_ResolutionWidthInRawPixels(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayMode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"ResolutionWidthInRawPixels"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"ResolutionWidthInRawPixels"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolutionWidthInRawPixels());
         }
         catch (...)
@@ -560,14 +560,14 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyObject* HdmiDisplayMode_get_StereoEnabled(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayMode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"StereoEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"StereoEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StereoEnabled());
         }
         catch (...)
@@ -579,14 +579,14 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyObject* HdmiDisplayMode_get_IsDolbyVisionLowLatencySupported(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayMode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"IsDolbyVisionLowLatencySupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.Core.HdmiDisplayMode", L"IsDolbyVisionLowLatencySupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDolbyVisionLowLatencySupported());
         }
         catch (...)

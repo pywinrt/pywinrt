@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest", L"ReportCompletedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest", L"ReportCompletedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportCompletedAsync());
             }
             catch (...)
@@ -57,14 +57,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest", L"ReportFailedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest", L"ReportFailedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportFailedAsync());
             }
             catch (...)
@@ -75,14 +75,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest", L"ReportFailedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest", L"ReportFailedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.ReportFailedAsync(param0));
@@ -95,14 +95,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest", L"ReportFailedAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest", L"ReportFailedAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -198,14 +198,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -223,14 +223,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerDisableScannerRequestEventArgs_get_Request(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -317,14 +317,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest", L"ReportCompletedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest", L"ReportCompletedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportCompletedAsync());
             }
             catch (...)
@@ -346,14 +346,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest", L"ReportFailedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest", L"ReportFailedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportFailedAsync());
             }
             catch (...)
@@ -364,14 +364,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest", L"ReportFailedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest", L"ReportFailedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.ReportFailedAsync(param0));
@@ -384,14 +384,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest", L"ReportFailedAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest", L"ReportFailedAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -487,14 +487,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -512,14 +512,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerEnableScannerRequestEventArgs_get_Request(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -606,14 +606,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -636,14 +636,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader", L"StartAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader", L"StartAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.StartAsync());
             }
             catch (...)
@@ -665,14 +665,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader", L"StopAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader", L"StopAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.StopAsync());
             }
             catch (...)
@@ -694,14 +694,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader", L"TryAcquireLatestFrameAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader", L"TryAcquireLatestFrameAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryAcquireLatestFrameAsync());
             }
             catch (...)
@@ -719,14 +719,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerFrameReader_get_Connection(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader", L"Connection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader", L"Connection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Connection());
         }
         catch (...)
@@ -738,14 +738,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerFrameReader_add_FrameArrived(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader", L"FrameArrived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader", L"FrameArrived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader, winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReaderFrameArrivedEventArgs>>(arg);
 
             return py::convert(self->obj.FrameArrived(param0));
@@ -759,14 +759,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerFrameReader_remove_FrameArrived(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader", L"FrameArrived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader", L"FrameArrived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FrameArrived(param0);
@@ -882,14 +882,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReaderFrameArrivedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReaderFrameArrivedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -981,14 +981,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest", L"ReportCompletedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest", L"ReportCompletedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::BarcodeSymbologyAttributes>(args, 0);
 
                 return py::convert(self->obj.ReportCompletedAsync(param0));
@@ -1012,14 +1012,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest", L"ReportFailedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest", L"ReportFailedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportFailedAsync());
             }
             catch (...)
@@ -1030,14 +1030,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest", L"ReportFailedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest", L"ReportFailedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.ReportFailedAsync(param0));
@@ -1050,14 +1050,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest", L"ReportFailedAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest", L"ReportFailedAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1078,14 +1078,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerGetSymbologyAttributesRequest_get_Symbology(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest", L"Symbology"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest", L"Symbology"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Symbology());
         }
         catch (...)
@@ -1173,14 +1173,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1198,14 +1198,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerGetSymbologyAttributesRequestEventArgs_get_Request(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -1292,14 +1292,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest", L"ReportCompletedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest", L"ReportCompletedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportCompletedAsync());
             }
             catch (...)
@@ -1321,14 +1321,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest", L"ReportFailedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest", L"ReportFailedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportFailedAsync());
             }
             catch (...)
@@ -1339,14 +1339,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest", L"ReportFailedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest", L"ReportFailedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.ReportFailedAsync(param0));
@@ -1359,14 +1359,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest", L"ReportFailedAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest", L"ReportFailedAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1462,14 +1462,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1487,14 +1487,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerHideVideoPreviewRequestEventArgs_get_Request(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -1581,14 +1581,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -1611,14 +1611,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"CreateFrameReaderAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"CreateFrameReaderAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateFrameReaderAsync());
             }
             catch (...)
@@ -1629,14 +1629,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"CreateFrameReaderAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"CreateFrameReaderAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
 
                 return py::convert(self->obj.CreateFrameReaderAsync(param0));
@@ -1649,14 +1649,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"CreateFrameReaderAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"CreateFrameReaderAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapSize>(args, 1);
 
@@ -1681,14 +1681,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"ReportErrorAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"ReportErrorAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::UnifiedPosErrorData>(args, 0);
 
                 return py::convert(self->obj.ReportErrorAsync(param0));
@@ -1701,14 +1701,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"ReportErrorAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"ReportErrorAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::UnifiedPosErrorData>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::PointOfService::BarcodeScannerReport>(args, 2);
@@ -1734,14 +1734,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"ReportScannedDataAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"ReportScannedDataAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::BarcodeScannerReport>(args, 0);
 
                 return py::convert(self->obj.ReportScannedDataAsync(param0));
@@ -1765,14 +1765,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"ReportTriggerStateAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"ReportTriggerStateAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerTriggerState>(args, 0);
 
                 return py::convert(self->obj.ReportTriggerStateAsync(param0));
@@ -1796,14 +1796,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -1822,14 +1822,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_get_Version(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"Version"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"Version"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Version());
         }
         catch (...)
@@ -1841,12 +1841,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static int BarcodeScannerProviderConnection_put_Version(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"Version"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1855,6 +1849,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"Version"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Version(param0);
@@ -1869,14 +1869,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_get_Name(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -1888,12 +1888,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static int BarcodeScannerProviderConnection_put_Name(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1902,6 +1896,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Name(param0);
@@ -1916,14 +1916,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_get_CompanyName(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"CompanyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"CompanyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CompanyName());
         }
         catch (...)
@@ -1935,12 +1935,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static int BarcodeScannerProviderConnection_put_CompanyName(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"CompanyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1949,6 +1943,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"CompanyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.CompanyName(param0);
@@ -1963,14 +1963,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_get_Id(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1982,14 +1982,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_get_SupportedSymbologies(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"SupportedSymbologies"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"SupportedSymbologies"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedSymbologies());
         }
         catch (...)
@@ -2001,14 +2001,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_get_VideoDeviceId(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"VideoDeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"VideoDeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoDeviceId());
         }
         catch (...)
@@ -2020,14 +2020,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_add_DisableScannerRequested(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"DisableScannerRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"DisableScannerRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequestEventArgs>>(arg);
 
             return py::convert(self->obj.DisableScannerRequested(param0));
@@ -2041,14 +2041,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_remove_DisableScannerRequested(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"DisableScannerRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"DisableScannerRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DisableScannerRequested(param0);
@@ -2063,14 +2063,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_add_EnableScannerRequested(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"EnableScannerRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"EnableScannerRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequestEventArgs>>(arg);
 
             return py::convert(self->obj.EnableScannerRequested(param0));
@@ -2084,14 +2084,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_remove_EnableScannerRequested(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"EnableScannerRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"EnableScannerRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.EnableScannerRequested(param0);
@@ -2106,14 +2106,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_add_GetBarcodeSymbologyAttributesRequested(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"GetBarcodeSymbologyAttributesRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"GetBarcodeSymbologyAttributesRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequestEventArgs>>(arg);
 
             return py::convert(self->obj.GetBarcodeSymbologyAttributesRequested(param0));
@@ -2127,14 +2127,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_remove_GetBarcodeSymbologyAttributesRequested(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"GetBarcodeSymbologyAttributesRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"GetBarcodeSymbologyAttributesRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.GetBarcodeSymbologyAttributesRequested(param0);
@@ -2149,14 +2149,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_add_HideVideoPreviewRequested(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"HideVideoPreviewRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"HideVideoPreviewRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequestEventArgs>>(arg);
 
             return py::convert(self->obj.HideVideoPreviewRequested(param0));
@@ -2170,14 +2170,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_remove_HideVideoPreviewRequested(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"HideVideoPreviewRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"HideVideoPreviewRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.HideVideoPreviewRequested(param0);
@@ -2192,14 +2192,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_add_SetActiveSymbologiesRequested(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"SetActiveSymbologiesRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"SetActiveSymbologiesRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequestEventArgs>>(arg);
 
             return py::convert(self->obj.SetActiveSymbologiesRequested(param0));
@@ -2213,14 +2213,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_remove_SetActiveSymbologiesRequested(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"SetActiveSymbologiesRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"SetActiveSymbologiesRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SetActiveSymbologiesRequested(param0);
@@ -2235,14 +2235,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_add_SetBarcodeSymbologyAttributesRequested(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"SetBarcodeSymbologyAttributesRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"SetBarcodeSymbologyAttributesRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequestEventArgs>>(arg);
 
             return py::convert(self->obj.SetBarcodeSymbologyAttributesRequested(param0));
@@ -2256,14 +2256,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_remove_SetBarcodeSymbologyAttributesRequested(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"SetBarcodeSymbologyAttributesRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"SetBarcodeSymbologyAttributesRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SetBarcodeSymbologyAttributesRequested(param0);
@@ -2278,14 +2278,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_add_StartSoftwareTriggerRequested(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"StartSoftwareTriggerRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"StartSoftwareTriggerRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequestEventArgs>>(arg);
 
             return py::convert(self->obj.StartSoftwareTriggerRequested(param0));
@@ -2299,14 +2299,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_remove_StartSoftwareTriggerRequested(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"StartSoftwareTriggerRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"StartSoftwareTriggerRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StartSoftwareTriggerRequested(param0);
@@ -2321,14 +2321,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_add_StopSoftwareTriggerRequested(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"StopSoftwareTriggerRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"StopSoftwareTriggerRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequestEventArgs>>(arg);
 
             return py::convert(self->obj.StopSoftwareTriggerRequested(param0));
@@ -2342,14 +2342,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_remove_StopSoftwareTriggerRequested(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"StopSoftwareTriggerRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"StopSoftwareTriggerRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StopSoftwareTriggerRequested(param0);
@@ -2482,14 +2482,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderTriggerDetails_get_Connection(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderTriggerDetails", L"Connection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderTriggerDetails", L"Connection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Connection());
         }
         catch (...)
@@ -2575,14 +2575,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest", L"ReportCompletedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest", L"ReportCompletedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportCompletedAsync());
             }
             catch (...)
@@ -2604,14 +2604,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest", L"ReportFailedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest", L"ReportFailedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportFailedAsync());
             }
             catch (...)
@@ -2622,14 +2622,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest", L"ReportFailedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest", L"ReportFailedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.ReportFailedAsync(param0));
@@ -2642,14 +2642,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest", L"ReportFailedAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest", L"ReportFailedAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -2670,14 +2670,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerSetActiveSymbologiesRequest_get_Symbologies(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest", L"Symbologies"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest", L"Symbologies"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Symbologies());
         }
         catch (...)
@@ -2765,14 +2765,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -2790,14 +2790,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerSetActiveSymbologiesRequestEventArgs_get_Request(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -2884,14 +2884,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest", L"ReportCompletedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest", L"ReportCompletedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportCompletedAsync());
             }
             catch (...)
@@ -2913,14 +2913,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest", L"ReportFailedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest", L"ReportFailedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportFailedAsync());
             }
             catch (...)
@@ -2931,14 +2931,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest", L"ReportFailedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest", L"ReportFailedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.ReportFailedAsync(param0));
@@ -2951,14 +2951,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest", L"ReportFailedAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest", L"ReportFailedAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -2979,14 +2979,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerSetSymbologyAttributesRequest_get_Attributes(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest", L"Attributes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest", L"Attributes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Attributes());
         }
         catch (...)
@@ -2998,14 +2998,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerSetSymbologyAttributesRequest_get_Symbology(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest", L"Symbology"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest", L"Symbology"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Symbology());
         }
         catch (...)
@@ -3094,14 +3094,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -3119,14 +3119,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerSetSymbologyAttributesRequestEventArgs_get_Request(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -3213,14 +3213,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest", L"ReportCompletedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest", L"ReportCompletedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportCompletedAsync());
             }
             catch (...)
@@ -3242,14 +3242,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest", L"ReportFailedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest", L"ReportFailedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportFailedAsync());
             }
             catch (...)
@@ -3260,14 +3260,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest", L"ReportFailedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest", L"ReportFailedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.ReportFailedAsync(param0));
@@ -3280,14 +3280,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest", L"ReportFailedAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest", L"ReportFailedAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -3383,14 +3383,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -3408,14 +3408,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerStartSoftwareTriggerRequestEventArgs_get_Request(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -3502,14 +3502,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest", L"ReportCompletedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest", L"ReportCompletedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportCompletedAsync());
             }
             catch (...)
@@ -3531,14 +3531,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest", L"ReportFailedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest", L"ReportFailedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportFailedAsync());
             }
             catch (...)
@@ -3549,14 +3549,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest", L"ReportFailedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest", L"ReportFailedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.ReportFailedAsync(param0));
@@ -3569,14 +3569,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest", L"ReportFailedAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest", L"ReportFailedAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -3672,14 +3672,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -3697,14 +3697,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerStopSoftwareTriggerRequestEventArgs_get_Request(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -3791,14 +3791,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -3817,14 +3817,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerVideoFrame_get_Format(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame", L"Format"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame", L"Format"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Format());
         }
         catch (...)
@@ -3836,14 +3836,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerVideoFrame_get_Height(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame", L"Height"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Height());
         }
         catch (...)
@@ -3855,14 +3855,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerVideoFrame_get_PixelData(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame", L"PixelData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame", L"PixelData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelData());
         }
         catch (...)
@@ -3874,14 +3874,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerVideoFrame_get_Width(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame", L"Width"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Width());
         }
         catch (...)
@@ -4014,14 +4014,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder", L"CreateAttributes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder", L"CreateAttributes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateAttributes());
             }
             catch (...)
@@ -4039,14 +4039,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeSymbologyAttributesBuilder_get_IsDecodeLengthSupported(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeSymbologyAttributesBuilder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder", L"IsDecodeLengthSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder", L"IsDecodeLengthSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDecodeLengthSupported());
         }
         catch (...)
@@ -4058,12 +4058,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static int BarcodeSymbologyAttributesBuilder_put_IsDecodeLengthSupported(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeSymbologyAttributesBuilder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder", L"IsDecodeLengthSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4072,6 +4066,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder", L"IsDecodeLengthSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsDecodeLengthSupported(param0);
@@ -4086,14 +4086,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeSymbologyAttributesBuilder_get_IsCheckDigitValidationSupported(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeSymbologyAttributesBuilder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder", L"IsCheckDigitValidationSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder", L"IsCheckDigitValidationSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCheckDigitValidationSupported());
         }
         catch (...)
@@ -4105,12 +4105,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static int BarcodeSymbologyAttributesBuilder_put_IsCheckDigitValidationSupported(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeSymbologyAttributesBuilder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder", L"IsCheckDigitValidationSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4119,6 +4113,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder", L"IsCheckDigitValidationSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsCheckDigitValidationSupported(param0);
@@ -4133,14 +4133,14 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeSymbologyAttributesBuilder_get_IsCheckDigitTransmissionSupported(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeSymbologyAttributesBuilder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder", L"IsCheckDigitTransmissionSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder", L"IsCheckDigitTransmissionSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCheckDigitTransmissionSupported());
         }
         catch (...)
@@ -4152,12 +4152,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static int BarcodeSymbologyAttributesBuilder_put_IsCheckDigitTransmissionSupported(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeSymbologyAttributesBuilder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder", L"IsCheckDigitTransmissionSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4166,6 +4160,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder", L"IsCheckDigitTransmissionSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsCheckDigitTransmissionSupported(param0);

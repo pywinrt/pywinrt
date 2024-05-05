@@ -16,14 +16,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* KnownSimpleHapticsControllerWaveforms_get_BuzzContinuous(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"BuzzContinuous"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"BuzzContinuous"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::BuzzContinuous());
         }
         catch (...)
@@ -35,14 +35,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* KnownSimpleHapticsControllerWaveforms_get_Click(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"Click"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"Click"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::Click());
         }
         catch (...)
@@ -54,14 +54,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* KnownSimpleHapticsControllerWaveforms_get_Press(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"Press"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"Press"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::Press());
         }
         catch (...)
@@ -73,14 +73,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* KnownSimpleHapticsControllerWaveforms_get_Release(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"Release"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"Release"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::Release());
         }
         catch (...)
@@ -92,14 +92,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* KnownSimpleHapticsControllerWaveforms_get_RumbleContinuous(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"RumbleContinuous"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"RumbleContinuous"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::RumbleContinuous());
         }
         catch (...)
@@ -111,14 +111,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* KnownSimpleHapticsControllerWaveforms_get_BrushContinuous(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"BrushContinuous"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"BrushContinuous"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::BrushContinuous());
         }
         catch (...)
@@ -130,14 +130,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* KnownSimpleHapticsControllerWaveforms_get_ChiselMarkerContinuous(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"ChiselMarkerContinuous"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"ChiselMarkerContinuous"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::ChiselMarkerContinuous());
         }
         catch (...)
@@ -149,14 +149,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* KnownSimpleHapticsControllerWaveforms_get_EraserContinuous(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"EraserContinuous"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"EraserContinuous"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::EraserContinuous());
         }
         catch (...)
@@ -168,14 +168,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* KnownSimpleHapticsControllerWaveforms_get_Error(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"Error"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"Error"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::Error());
         }
         catch (...)
@@ -187,14 +187,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* KnownSimpleHapticsControllerWaveforms_get_GalaxyPenContinuous(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"GalaxyPenContinuous"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"GalaxyPenContinuous"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::GalaxyPenContinuous());
         }
         catch (...)
@@ -206,14 +206,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* KnownSimpleHapticsControllerWaveforms_get_Hover(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"Hover"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"Hover"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::Hover());
         }
         catch (...)
@@ -225,14 +225,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* KnownSimpleHapticsControllerWaveforms_get_InkContinuous(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"InkContinuous"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"InkContinuous"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::InkContinuous());
         }
         catch (...)
@@ -244,14 +244,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* KnownSimpleHapticsControllerWaveforms_get_MarkerContinuous(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"MarkerContinuous"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"MarkerContinuous"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::MarkerContinuous());
         }
         catch (...)
@@ -263,14 +263,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* KnownSimpleHapticsControllerWaveforms_get_PencilContinuous(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"PencilContinuous"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"PencilContinuous"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::PencilContinuous());
         }
         catch (...)
@@ -282,14 +282,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* KnownSimpleHapticsControllerWaveforms_get_Success(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"Success"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms", L"Success"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms::Success());
         }
         catch (...)
@@ -387,14 +387,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"SendHapticFeedback", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"SendHapticFeedback", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback>(args, 0);
 
                 self->obj.SendHapticFeedback(param0);
@@ -408,14 +408,14 @@ namespace py::cpp::Windows::Devices::Haptics
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"SendHapticFeedback", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"SendHapticFeedback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
@@ -441,14 +441,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"SendHapticFeedbackForDuration", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"SendHapticFeedbackForDuration", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 2);
@@ -475,14 +475,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"SendHapticFeedbackForPlayCount", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"SendHapticFeedbackForPlayCount", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -510,14 +510,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"StopFeedback", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"StopFeedback", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.StopFeedback();
                 Py_RETURN_NONE;
             }
@@ -536,14 +536,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* SimpleHapticsController_get_Id(py::wrapper::Windows::Devices::Haptics::SimpleHapticsController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -555,14 +555,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* SimpleHapticsController_get_IsIntensitySupported(py::wrapper::Windows::Devices::Haptics::SimpleHapticsController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"IsIntensitySupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"IsIntensitySupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsIntensitySupported());
         }
         catch (...)
@@ -574,14 +574,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* SimpleHapticsController_get_IsPlayCountSupported(py::wrapper::Windows::Devices::Haptics::SimpleHapticsController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"IsPlayCountSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"IsPlayCountSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPlayCountSupported());
         }
         catch (...)
@@ -593,14 +593,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* SimpleHapticsController_get_IsPlayDurationSupported(py::wrapper::Windows::Devices::Haptics::SimpleHapticsController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"IsPlayDurationSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"IsPlayDurationSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPlayDurationSupported());
         }
         catch (...)
@@ -612,14 +612,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* SimpleHapticsController_get_IsReplayPauseIntervalSupported(py::wrapper::Windows::Devices::Haptics::SimpleHapticsController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"IsReplayPauseIntervalSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"IsReplayPauseIntervalSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsReplayPauseIntervalSupported());
         }
         catch (...)
@@ -631,14 +631,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* SimpleHapticsController_get_SupportedFeedback(py::wrapper::Windows::Devices::Haptics::SimpleHapticsController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"SupportedFeedback"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"SupportedFeedback"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedFeedback());
         }
         catch (...)
@@ -729,14 +729,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* SimpleHapticsControllerFeedback_get_Duration(py::wrapper::Windows::Devices::Haptics::SimpleHapticsControllerFeedback* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.SimpleHapticsControllerFeedback", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.SimpleHapticsControllerFeedback", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -748,14 +748,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* SimpleHapticsControllerFeedback_get_Waveform(py::wrapper::Windows::Devices::Haptics::SimpleHapticsControllerFeedback* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.SimpleHapticsControllerFeedback", L"Waveform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.SimpleHapticsControllerFeedback", L"Waveform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Waveform());
         }
         catch (...)
@@ -842,14 +842,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Haptics.VibrationDevice", L"FindAllAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Haptics.VibrationDevice", L"FindAllAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Haptics::VibrationDevice::FindAllAsync());
             }
             catch (...)
@@ -871,14 +871,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Haptics.VibrationDevice", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Haptics.VibrationDevice", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Haptics::VibrationDevice::FromIdAsync(param0));
@@ -902,14 +902,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Haptics.VibrationDevice", L"GetDefaultAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Haptics.VibrationDevice", L"GetDefaultAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Haptics::VibrationDevice::GetDefaultAsync());
             }
             catch (...)
@@ -931,14 +931,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Haptics.VibrationDevice", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Haptics.VibrationDevice", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Haptics::VibrationDevice::GetDeviceSelector());
             }
             catch (...)
@@ -960,14 +960,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Haptics.VibrationDevice", L"RequestAccessAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Haptics.VibrationDevice", L"RequestAccessAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Haptics::VibrationDevice::RequestAccessAsync());
             }
             catch (...)
@@ -985,14 +985,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* VibrationDevice_get_Id(py::wrapper::Windows::Devices::Haptics::VibrationDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.VibrationDevice", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.VibrationDevice", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1004,14 +1004,14 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* VibrationDevice_get_SimpleHapticsController(py::wrapper::Windows::Devices::Haptics::VibrationDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.VibrationDevice", L"SimpleHapticsController"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Haptics.VibrationDevice", L"SimpleHapticsController"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimpleHapticsController());
         }
         catch (...)

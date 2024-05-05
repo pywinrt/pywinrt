@@ -24,14 +24,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* AcceleratorKeyEventArgs_get_EventType(py::wrapper::Windows::UI::Core::AcceleratorKeyEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AcceleratorKeyEventArgs", L"EventType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AcceleratorKeyEventArgs", L"EventType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EventType());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* AcceleratorKeyEventArgs_get_KeyStatus(py::wrapper::Windows::UI::Core::AcceleratorKeyEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AcceleratorKeyEventArgs", L"KeyStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AcceleratorKeyEventArgs", L"KeyStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyStatus());
         }
         catch (...)
@@ -62,14 +62,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* AcceleratorKeyEventArgs_get_VirtualKey(py::wrapper::Windows::UI::Core::AcceleratorKeyEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AcceleratorKeyEventArgs", L"VirtualKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AcceleratorKeyEventArgs", L"VirtualKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VirtualKey());
         }
         catch (...)
@@ -81,14 +81,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* AcceleratorKeyEventArgs_get_DeviceId(py::wrapper::Windows::UI::Core::AcceleratorKeyEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AcceleratorKeyEventArgs", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AcceleratorKeyEventArgs", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -100,14 +100,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* AcceleratorKeyEventArgs_get_Handled(py::wrapper::Windows::UI::Core::AcceleratorKeyEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AcceleratorKeyEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AcceleratorKeyEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -119,12 +119,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int AcceleratorKeyEventArgs_put_Handled(py::wrapper::Windows::UI::Core::AcceleratorKeyEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AcceleratorKeyEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -133,6 +127,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AcceleratorKeyEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -221,14 +221,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* AutomationProviderRequestedEventArgs_get_AutomationProvider(py::wrapper::Windows::UI::Core::AutomationProviderRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AutomationProviderRequestedEventArgs", L"AutomationProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AutomationProviderRequestedEventArgs", L"AutomationProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AutomationProvider());
         }
         catch (...)
@@ -240,12 +240,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int AutomationProviderRequestedEventArgs_put_AutomationProvider(py::wrapper::Windows::UI::Core::AutomationProviderRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AutomationProviderRequestedEventArgs", L"AutomationProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -254,6 +248,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AutomationProviderRequestedEventArgs", L"AutomationProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.AutomationProvider(param0);
@@ -268,14 +268,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* AutomationProviderRequestedEventArgs_get_Handled(py::wrapper::Windows::UI::Core::AutomationProviderRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AutomationProviderRequestedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AutomationProviderRequestedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -287,12 +287,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int AutomationProviderRequestedEventArgs_put_Handled(py::wrapper::Windows::UI::Core::AutomationProviderRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AutomationProviderRequestedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -301,6 +295,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AutomationProviderRequestedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -386,14 +386,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* BackRequestedEventArgs_get_Handled(py::wrapper::Windows::UI::Core::BackRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.BackRequestedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.BackRequestedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -405,12 +405,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int BackRequestedEventArgs_put_Handled(py::wrapper::Windows::UI::Core::BackRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.BackRequestedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -419,6 +413,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.BackRequestedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -503,14 +503,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CharacterReceivedEventArgs_get_KeyCode(py::wrapper::Windows::UI::Core::CharacterReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CharacterReceivedEventArgs", L"KeyCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CharacterReceivedEventArgs", L"KeyCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyCode());
         }
         catch (...)
@@ -522,14 +522,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CharacterReceivedEventArgs_get_KeyStatus(py::wrapper::Windows::UI::Core::CharacterReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CharacterReceivedEventArgs", L"KeyStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CharacterReceivedEventArgs", L"KeyStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyStatus());
         }
         catch (...)
@@ -541,14 +541,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CharacterReceivedEventArgs_get_Handled(py::wrapper::Windows::UI::Core::CharacterReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CharacterReceivedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CharacterReceivedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -560,12 +560,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int CharacterReceivedEventArgs_put_Handled(py::wrapper::Windows::UI::Core::CharacterReceivedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CharacterReceivedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -574,6 +568,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CharacterReceivedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -660,14 +660,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ClosestInteractiveBoundsRequestedEventArgs_get_ClosestInteractiveBounds(py::wrapper::Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs", L"ClosestInteractiveBounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs", L"ClosestInteractiveBounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClosestInteractiveBounds());
         }
         catch (...)
@@ -679,12 +679,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int ClosestInteractiveBoundsRequestedEventArgs_put_ClosestInteractiveBounds(py::wrapper::Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs", L"ClosestInteractiveBounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -693,6 +687,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs", L"ClosestInteractiveBounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
             self->obj.ClosestInteractiveBounds(param0);
@@ -707,14 +707,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ClosestInteractiveBoundsRequestedEventArgs_get_PointerPosition(py::wrapper::Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs", L"PointerPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs", L"PointerPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerPosition());
         }
         catch (...)
@@ -726,14 +726,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ClosestInteractiveBoundsRequestedEventArgs_get_SearchBounds(py::wrapper::Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs", L"SearchBounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs", L"SearchBounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SearchBounds());
         }
         catch (...)
@@ -817,14 +817,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreAcceleratorKeys_add_AcceleratorKeyActivated(py::wrapper::Windows::UI::Core::CoreAcceleratorKeys* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreAcceleratorKeys", L"AcceleratorKeyActivated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreAcceleratorKeys", L"AcceleratorKeyActivated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreDispatcher, winrt::Windows::UI::Core::AcceleratorKeyEventArgs>>(arg);
 
             return py::convert(self->obj.AcceleratorKeyActivated(param0));
@@ -838,14 +838,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreAcceleratorKeys_remove_AcceleratorKeyActivated(py::wrapper::Windows::UI::Core::CoreAcceleratorKeys* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreAcceleratorKeys", L"AcceleratorKeyActivated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreAcceleratorKeys", L"AcceleratorKeyActivated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AcceleratorKeyActivated(param0);
@@ -935,14 +935,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreComponentInputSource", L"GetCurrentKeyEventDeviceId", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreComponentInputSource", L"GetCurrentKeyEventDeviceId", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentKeyEventDeviceId());
             }
             catch (...)
@@ -964,14 +964,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreComponentInputSource", L"GetCurrentKeyState", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreComponentInputSource", L"GetCurrentKeyState", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::VirtualKey>(args, 0);
 
                 return py::convert(self->obj.GetCurrentKeyState(param0));
@@ -995,14 +995,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreComponentInputSource", L"ReleasePointerCapture", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreComponentInputSource", L"ReleasePointerCapture", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReleasePointerCapture();
                 Py_RETURN_NONE;
             }
@@ -1025,14 +1025,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreComponentInputSource", L"SetPointerCapture", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreComponentInputSource", L"SetPointerCapture", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.SetPointerCapture();
                 Py_RETURN_NONE;
             }
@@ -1051,14 +1051,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_get_HasFocus(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreComponentInputSource", L"HasFocus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreComponentInputSource", L"HasFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasFocus());
         }
         catch (...)
@@ -1070,14 +1070,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_get_IsInputEnabled(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreComponentInputSource", L"IsInputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreComponentInputSource", L"IsInputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsInputEnabled());
         }
         catch (...)
@@ -1089,12 +1089,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreComponentInputSource_put_IsInputEnabled(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreComponentInputSource", L"IsInputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1103,6 +1097,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreComponentInputSource", L"IsInputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsInputEnabled(param0);
@@ -1117,14 +1117,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_get_Dispatcher(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreComponentInputSource", L"Dispatcher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreComponentInputSource", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Dispatcher());
         }
         catch (...)
@@ -1136,14 +1136,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_get_PointerCursor(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerCursor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerCursor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerCursor());
         }
         catch (...)
@@ -1155,12 +1155,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreComponentInputSource_put_PointerCursor(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerCursor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1169,6 +1163,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerCursor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreCursor>(arg);
 
             self->obj.PointerCursor(param0);
@@ -1183,14 +1183,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_get_HasCapture(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreComponentInputSource", L"HasCapture"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreComponentInputSource", L"HasCapture"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasCapture());
         }
         catch (...)
@@ -1202,14 +1202,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_get_PointerPosition(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerPosition());
         }
         catch (...)
@@ -1221,14 +1221,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_get_DispatcherQueue(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreComponentInputSource", L"DispatcherQueue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreComponentInputSource", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DispatcherQueue());
         }
         catch (...)
@@ -1240,14 +1240,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_add_InputEnabled(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"InputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"InputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::InputEnabledEventArgs>>(arg);
 
             return py::convert(self->obj.InputEnabled(param0));
@@ -1261,14 +1261,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_remove_InputEnabled(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"InputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"InputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.InputEnabled(param0);
@@ -1283,14 +1283,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_add_PointerCaptureLost(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerCaptureLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerCaptureLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerCaptureLost(param0));
@@ -1304,14 +1304,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_remove_PointerCaptureLost(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerCaptureLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerCaptureLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerCaptureLost(param0);
@@ -1326,14 +1326,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_add_PointerEntered(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerEntered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerEntered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerEntered(param0));
@@ -1347,14 +1347,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_remove_PointerEntered(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerEntered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerEntered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerEntered(param0);
@@ -1369,14 +1369,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_add_PointerExited(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerExited"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerExited"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerExited(param0));
@@ -1390,14 +1390,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_remove_PointerExited(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerExited"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerExited"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerExited(param0);
@@ -1412,14 +1412,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_add_PointerMoved(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerMoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerMoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerMoved(param0));
@@ -1433,14 +1433,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_remove_PointerMoved(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerMoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerMoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerMoved(param0);
@@ -1455,14 +1455,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_add_PointerPressed(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerPressed(param0));
@@ -1476,14 +1476,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_remove_PointerPressed(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerPressed(param0);
@@ -1498,14 +1498,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_add_PointerReleased(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerReleased(param0));
@@ -1519,14 +1519,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_remove_PointerReleased(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerReleased(param0);
@@ -1541,14 +1541,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_add_PointerWheelChanged(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerWheelChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerWheelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerWheelChanged(param0));
@@ -1562,14 +1562,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_remove_PointerWheelChanged(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerWheelChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"PointerWheelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerWheelChanged(param0);
@@ -1584,14 +1584,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_add_CharacterReceived(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"CharacterReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"CharacterReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::CharacterReceivedEventArgs>>(arg);
 
             return py::convert(self->obj.CharacterReceived(param0));
@@ -1605,14 +1605,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_remove_CharacterReceived(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"CharacterReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"CharacterReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CharacterReceived(param0);
@@ -1627,14 +1627,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_add_KeyDown(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"KeyDown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"KeyDown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::KeyEventArgs>>(arg);
 
             return py::convert(self->obj.KeyDown(param0));
@@ -1648,14 +1648,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_remove_KeyDown(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"KeyDown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"KeyDown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.KeyDown(param0);
@@ -1670,14 +1670,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_add_KeyUp(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"KeyUp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"KeyUp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::KeyEventArgs>>(arg);
 
             return py::convert(self->obj.KeyUp(param0));
@@ -1691,14 +1691,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_remove_KeyUp(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"KeyUp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"KeyUp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.KeyUp(param0);
@@ -1713,14 +1713,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_add_GotFocus(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"GotFocus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"GotFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::CoreWindowEventArgs>>(arg);
 
             return py::convert(self->obj.GotFocus(param0));
@@ -1734,14 +1734,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_remove_GotFocus(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"GotFocus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"GotFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.GotFocus(param0);
@@ -1756,14 +1756,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_add_LostFocus(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"LostFocus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"LostFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::CoreWindowEventArgs>>(arg);
 
             return py::convert(self->obj.LostFocus(param0));
@@ -1777,14 +1777,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_remove_LostFocus(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"LostFocus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"LostFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.LostFocus(param0);
@@ -1799,14 +1799,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_add_TouchHitTesting(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"TouchHitTesting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"TouchHitTesting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::TouchHitTestingEventArgs>>(arg);
 
             return py::convert(self->obj.TouchHitTesting(param0));
@@ -1820,14 +1820,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_remove_TouchHitTesting(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"TouchHitTesting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"TouchHitTesting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.TouchHitTesting(param0);
@@ -1842,14 +1842,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_add_ClosestInteractiveBoundsRequested(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"ClosestInteractiveBoundsRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"ClosestInteractiveBoundsRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreComponentInputSource, winrt::Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.ClosestInteractiveBoundsRequested(param0));
@@ -1863,14 +1863,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_remove_ClosestInteractiveBoundsRequested(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"ClosestInteractiveBoundsRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreComponentInputSource", L"ClosestInteractiveBoundsRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ClosestInteractiveBoundsRequested(param0);
@@ -2020,14 +2020,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreCursor_get_Id(py::wrapper::Windows::UI::Core::CoreCursor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreCursor", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreCursor", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -2039,14 +2039,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreCursor_get_Type(py::wrapper::Windows::UI::Core::CoreCursor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreCursor", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreCursor", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -2133,14 +2133,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreDispatcher", L"ProcessEvents", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreDispatcher", L"ProcessEvents", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreProcessEventsOption>(args, 0);
 
                 self->obj.ProcessEvents(param0);
@@ -2165,14 +2165,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreDispatcher", L"RunAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreDispatcher", L"RunAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreDispatcherPriority>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Core::DispatchedHandler>(args, 1);
 
@@ -2197,14 +2197,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreDispatcher", L"RunIdleAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreDispatcher", L"RunIdleAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Core::IdleDispatchedHandler>(args, 0);
 
                 return py::convert(self->obj.RunIdleAsync(param0));
@@ -2228,14 +2228,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreDispatcher", L"ShouldYield", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreDispatcher", L"ShouldYield", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ShouldYield());
             }
             catch (...)
@@ -2246,14 +2246,14 @@ namespace py::cpp::Windows::UI::Core
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreDispatcher", L"ShouldYield", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreDispatcher", L"ShouldYield", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreDispatcherPriority>(args, 0);
 
                 return py::convert(self->obj.ShouldYield(param0));
@@ -2277,14 +2277,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreDispatcher", L"StopProcessEvents", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreDispatcher", L"StopProcessEvents", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.StopProcessEvents();
                 Py_RETURN_NONE;
             }
@@ -2307,14 +2307,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreDispatcher", L"TryRunAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreDispatcher", L"TryRunAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreDispatcherPriority>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Core::DispatchedHandler>(args, 1);
 
@@ -2339,14 +2339,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreDispatcher", L"TryRunIdleAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreDispatcher", L"TryRunIdleAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Core::IdleDispatchedHandler>(args, 0);
 
                 return py::convert(self->obj.TryRunIdleAsync(param0));
@@ -2366,14 +2366,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreDispatcher_get_HasThreadAccess(py::wrapper::Windows::UI::Core::CoreDispatcher* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreDispatcher", L"HasThreadAccess"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreDispatcher", L"HasThreadAccess"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasThreadAccess());
         }
         catch (...)
@@ -2385,14 +2385,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreDispatcher_get_CurrentPriority(py::wrapper::Windows::UI::Core::CoreDispatcher* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreDispatcher", L"CurrentPriority"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreDispatcher", L"CurrentPriority"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentPriority());
         }
         catch (...)
@@ -2404,12 +2404,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreDispatcher_put_CurrentPriority(py::wrapper::Windows::UI::Core::CoreDispatcher* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreDispatcher", L"CurrentPriority"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2418,6 +2412,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreDispatcher", L"CurrentPriority"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreDispatcherPriority>(arg);
 
             self->obj.CurrentPriority(param0);
@@ -2432,14 +2432,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreDispatcher_add_AcceleratorKeyActivated(py::wrapper::Windows::UI::Core::CoreDispatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreDispatcher", L"AcceleratorKeyActivated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreDispatcher", L"AcceleratorKeyActivated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreDispatcher, winrt::Windows::UI::Core::AcceleratorKeyEventArgs>>(arg);
 
             return py::convert(self->obj.AcceleratorKeyActivated(param0));
@@ -2453,14 +2453,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreDispatcher_remove_AcceleratorKeyActivated(py::wrapper::Windows::UI::Core::CoreDispatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreDispatcher", L"AcceleratorKeyActivated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreDispatcher", L"AcceleratorKeyActivated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AcceleratorKeyActivated(param0);
@@ -2559,14 +2559,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"ReleasePointerCapture", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"ReleasePointerCapture", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReleasePointerCapture();
                 Py_RETURN_NONE;
             }
@@ -2589,14 +2589,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"SetPointerCapture", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"SetPointerCapture", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.SetPointerCapture();
                 Py_RETURN_NONE;
             }
@@ -2615,14 +2615,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_get_IsInputEnabled(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"IsInputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"IsInputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsInputEnabled());
         }
         catch (...)
@@ -2634,12 +2634,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreIndependentInputSource_put_IsInputEnabled(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"IsInputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2648,6 +2642,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"IsInputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsInputEnabled(param0);
@@ -2662,14 +2662,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_get_Dispatcher(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"Dispatcher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Dispatcher());
         }
         catch (...)
@@ -2681,14 +2681,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_get_PointerCursor(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerCursor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerCursor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerCursor());
         }
         catch (...)
@@ -2700,12 +2700,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreIndependentInputSource_put_PointerCursor(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerCursor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2714,6 +2708,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerCursor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreCursor>(arg);
 
             self->obj.PointerCursor(param0);
@@ -2728,14 +2728,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_get_HasCapture(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"HasCapture"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"HasCapture"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasCapture());
         }
         catch (...)
@@ -2747,14 +2747,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_get_PointerPosition(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerPosition());
         }
         catch (...)
@@ -2766,14 +2766,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_get_DispatcherQueue(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"DispatcherQueue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DispatcherQueue());
         }
         catch (...)
@@ -2785,14 +2785,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_add_InputEnabled(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"InputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"InputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::InputEnabledEventArgs>>(arg);
 
             return py::convert(self->obj.InputEnabled(param0));
@@ -2806,14 +2806,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_remove_InputEnabled(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"InputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"InputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.InputEnabled(param0);
@@ -2828,14 +2828,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_add_PointerCaptureLost(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerCaptureLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerCaptureLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerCaptureLost(param0));
@@ -2849,14 +2849,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_remove_PointerCaptureLost(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerCaptureLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerCaptureLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerCaptureLost(param0);
@@ -2871,14 +2871,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_add_PointerEntered(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerEntered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerEntered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerEntered(param0));
@@ -2892,14 +2892,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_remove_PointerEntered(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerEntered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerEntered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerEntered(param0);
@@ -2914,14 +2914,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_add_PointerExited(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerExited"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerExited"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerExited(param0));
@@ -2935,14 +2935,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_remove_PointerExited(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerExited"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerExited"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerExited(param0);
@@ -2957,14 +2957,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_add_PointerMoved(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerMoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerMoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerMoved(param0));
@@ -2978,14 +2978,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_remove_PointerMoved(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerMoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerMoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerMoved(param0);
@@ -3000,14 +3000,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_add_PointerPressed(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerPressed(param0));
@@ -3021,14 +3021,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_remove_PointerPressed(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerPressed(param0);
@@ -3043,14 +3043,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_add_PointerReleased(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerReleased(param0));
@@ -3064,14 +3064,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_remove_PointerReleased(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerReleased(param0);
@@ -3086,14 +3086,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_add_PointerWheelChanged(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerWheelChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerWheelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerWheelChanged(param0));
@@ -3107,14 +3107,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_remove_PointerWheelChanged(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerWheelChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerWheelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerWheelChanged(param0);
@@ -3129,14 +3129,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_add_PointerRoutedAway(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerRoutedAway"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerRoutedAway"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::ICorePointerRedirector, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerRoutedAway(param0));
@@ -3150,14 +3150,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_remove_PointerRoutedAway(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerRoutedAway"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerRoutedAway"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerRoutedAway(param0);
@@ -3172,14 +3172,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_add_PointerRoutedReleased(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerRoutedReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerRoutedReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::ICorePointerRedirector, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerRoutedReleased(param0));
@@ -3193,14 +3193,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_remove_PointerRoutedReleased(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerRoutedReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerRoutedReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerRoutedReleased(param0);
@@ -3215,14 +3215,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_add_PointerRoutedTo(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerRoutedTo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerRoutedTo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::ICorePointerRedirector, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerRoutedTo(param0));
@@ -3236,14 +3236,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_remove_PointerRoutedTo(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerRoutedTo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreIndependentInputSource", L"PointerRoutedTo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerRoutedTo(param0);
@@ -3361,14 +3361,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreIndependentInputSourceController", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreIndependentInputSourceController", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -3391,14 +3391,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreIndependentInputSourceController", L"CreateForIVisualElement", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreIndependentInputSourceController", L"CreateForIVisualElement", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::IVisualElement>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Core::CoreIndependentInputSourceController::CreateForIVisualElement(param0));
@@ -3422,14 +3422,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreIndependentInputSourceController", L"CreateForVisual", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreIndependentInputSourceController", L"CreateForVisual", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Visual>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Core::CoreIndependentInputSourceController::CreateForVisual(param0));
@@ -3453,14 +3453,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreIndependentInputSourceController", L"SetControlledInput", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreIndependentInputSourceController", L"SetControlledInput", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreInputDeviceTypes>(args, 0);
 
                 self->obj.SetControlledInput(param0);
@@ -3474,14 +3474,14 @@ namespace py::cpp::Windows::UI::Core
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreIndependentInputSourceController", L"SetControlledInput", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreIndependentInputSourceController", L"SetControlledInput", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreInputDeviceTypes>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Core::CoreIndependentInputFilters>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Core::CoreIndependentInputFilters>(args, 2);
@@ -3504,14 +3504,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSourceController_get_IsTransparentForUncontrolledInput(py::wrapper::Windows::UI::Core::CoreIndependentInputSourceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSourceController", L"IsTransparentForUncontrolledInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSourceController", L"IsTransparentForUncontrolledInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsTransparentForUncontrolledInput());
         }
         catch (...)
@@ -3523,12 +3523,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreIndependentInputSourceController_put_IsTransparentForUncontrolledInput(py::wrapper::Windows::UI::Core::CoreIndependentInputSourceController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSourceController", L"IsTransparentForUncontrolledInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3537,6 +3531,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSourceController", L"IsTransparentForUncontrolledInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsTransparentForUncontrolledInput(param0);
@@ -3551,14 +3551,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSourceController_get_IsPalmRejectionEnabled(py::wrapper::Windows::UI::Core::CoreIndependentInputSourceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSourceController", L"IsPalmRejectionEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSourceController", L"IsPalmRejectionEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPalmRejectionEnabled());
         }
         catch (...)
@@ -3570,12 +3570,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreIndependentInputSourceController_put_IsPalmRejectionEnabled(py::wrapper::Windows::UI::Core::CoreIndependentInputSourceController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSourceController", L"IsPalmRejectionEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3584,6 +3578,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSourceController", L"IsPalmRejectionEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsPalmRejectionEnabled(param0);
@@ -3598,14 +3598,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSourceController_get_Source(py::wrapper::Windows::UI::Core::CoreIndependentInputSourceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSourceController", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreIndependentInputSourceController", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -3743,14 +3743,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindow", L"Activate", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindow", L"Activate", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Activate();
                 Py_RETURN_NONE;
             }
@@ -3773,14 +3773,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindow", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindow", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -3803,14 +3803,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindow", L"GetAsyncKeyState", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindow", L"GetAsyncKeyState", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::VirtualKey>(args, 0);
 
                 return py::convert(self->obj.GetAsyncKeyState(param0));
@@ -3834,14 +3834,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindow", L"GetCurrentKeyEventDeviceId", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindow", L"GetCurrentKeyEventDeviceId", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentKeyEventDeviceId());
             }
             catch (...)
@@ -3863,14 +3863,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindow", L"GetForCurrentThread", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindow", L"GetForCurrentThread", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::Core::CoreWindow::GetForCurrentThread());
             }
             catch (...)
@@ -3892,14 +3892,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindow", L"GetKeyState", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindow", L"GetKeyState", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::VirtualKey>(args, 0);
 
                 return py::convert(self->obj.GetKeyState(param0));
@@ -3923,14 +3923,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindow", L"ReleasePointerCapture", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindow", L"ReleasePointerCapture", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReleasePointerCapture();
                 Py_RETURN_NONE;
             }
@@ -3953,14 +3953,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindow", L"SetPointerCapture", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindow", L"SetPointerCapture", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.SetPointerCapture();
                 Py_RETURN_NONE;
             }
@@ -3979,14 +3979,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_get_PointerPosition(py::wrapper::Windows::UI::Core::CoreWindow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"PointerPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"PointerPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerPosition());
         }
         catch (...)
@@ -3998,12 +3998,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindow_put_PointerPosition(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"PointerPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4012,6 +4006,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"PointerPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             self->obj.PointerPosition(param0);
@@ -4026,14 +4026,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_get_PointerCursor(py::wrapper::Windows::UI::Core::CoreWindow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"PointerCursor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"PointerCursor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerCursor());
         }
         catch (...)
@@ -4045,12 +4045,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindow_put_PointerCursor(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"PointerCursor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4059,6 +4053,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"PointerCursor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreCursor>(arg);
 
             self->obj.PointerCursor(param0);
@@ -4073,14 +4073,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_get_FlowDirection(py::wrapper::Windows::UI::Core::CoreWindow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"FlowDirection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"FlowDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FlowDirection());
         }
         catch (...)
@@ -4092,12 +4092,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindow_put_FlowDirection(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"FlowDirection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4106,6 +4100,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"FlowDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreWindowFlowDirection>(arg);
 
             self->obj.FlowDirection(param0);
@@ -4120,14 +4120,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_get_IsInputEnabled(py::wrapper::Windows::UI::Core::CoreWindow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"IsInputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"IsInputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsInputEnabled());
         }
         catch (...)
@@ -4139,12 +4139,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindow_put_IsInputEnabled(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"IsInputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4153,6 +4147,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"IsInputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsInputEnabled(param0);
@@ -4167,14 +4167,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_get_Dispatcher(py::wrapper::Windows::UI::Core::CoreWindow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"Dispatcher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Dispatcher());
         }
         catch (...)
@@ -4186,14 +4186,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_get_AutomationHostProvider(py::wrapper::Windows::UI::Core::CoreWindow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"AutomationHostProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"AutomationHostProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AutomationHostProvider());
         }
         catch (...)
@@ -4205,14 +4205,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_get_Bounds(py::wrapper::Windows::UI::Core::CoreWindow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"Bounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"Bounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bounds());
         }
         catch (...)
@@ -4224,14 +4224,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_get_CustomProperties(py::wrapper::Windows::UI::Core::CoreWindow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"CustomProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"CustomProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CustomProperties());
         }
         catch (...)
@@ -4243,14 +4243,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_get_Visible(py::wrapper::Windows::UI::Core::CoreWindow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"Visible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"Visible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Visible());
         }
         catch (...)
@@ -4262,14 +4262,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_get_ActivationMode(py::wrapper::Windows::UI::Core::CoreWindow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"ActivationMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"ActivationMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivationMode());
         }
         catch (...)
@@ -4281,14 +4281,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_get_DispatcherQueue(py::wrapper::Windows::UI::Core::CoreWindow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"DispatcherQueue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DispatcherQueue());
         }
         catch (...)
@@ -4300,14 +4300,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_get_UIContext(py::wrapper::Windows::UI::Core::CoreWindow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"UIContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindow", L"UIContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UIContext());
         }
         catch (...)
@@ -4319,14 +4319,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_add_Activated(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"Activated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"Activated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::WindowActivatedEventArgs>>(arg);
 
             return py::convert(self->obj.Activated(param0));
@@ -4340,14 +4340,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_remove_Activated(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"Activated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"Activated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Activated(param0);
@@ -4362,14 +4362,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_add_AutomationProviderRequested(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"AutomationProviderRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"AutomationProviderRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::AutomationProviderRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.AutomationProviderRequested(param0));
@@ -4383,14 +4383,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_remove_AutomationProviderRequested(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"AutomationProviderRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"AutomationProviderRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AutomationProviderRequested(param0);
@@ -4405,14 +4405,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_add_CharacterReceived(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"CharacterReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"CharacterReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::CharacterReceivedEventArgs>>(arg);
 
             return py::convert(self->obj.CharacterReceived(param0));
@@ -4426,14 +4426,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_remove_CharacterReceived(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"CharacterReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"CharacterReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CharacterReceived(param0);
@@ -4448,14 +4448,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_add_Closed(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::CoreWindowEventArgs>>(arg);
 
             return py::convert(self->obj.Closed(param0));
@@ -4469,14 +4469,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_remove_Closed(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Closed(param0);
@@ -4491,14 +4491,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_add_InputEnabled(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"InputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"InputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::InputEnabledEventArgs>>(arg);
 
             return py::convert(self->obj.InputEnabled(param0));
@@ -4512,14 +4512,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_remove_InputEnabled(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"InputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"InputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.InputEnabled(param0);
@@ -4534,14 +4534,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_add_KeyDown(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"KeyDown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"KeyDown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::KeyEventArgs>>(arg);
 
             return py::convert(self->obj.KeyDown(param0));
@@ -4555,14 +4555,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_remove_KeyDown(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"KeyDown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"KeyDown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.KeyDown(param0);
@@ -4577,14 +4577,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_add_KeyUp(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"KeyUp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"KeyUp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::KeyEventArgs>>(arg);
 
             return py::convert(self->obj.KeyUp(param0));
@@ -4598,14 +4598,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_remove_KeyUp(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"KeyUp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"KeyUp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.KeyUp(param0);
@@ -4620,14 +4620,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_add_PointerCaptureLost(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerCaptureLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerCaptureLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerCaptureLost(param0));
@@ -4641,14 +4641,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_remove_PointerCaptureLost(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerCaptureLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerCaptureLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerCaptureLost(param0);
@@ -4663,14 +4663,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_add_PointerEntered(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerEntered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerEntered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerEntered(param0));
@@ -4684,14 +4684,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_remove_PointerEntered(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerEntered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerEntered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerEntered(param0);
@@ -4706,14 +4706,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_add_PointerExited(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerExited"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerExited"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerExited(param0));
@@ -4727,14 +4727,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_remove_PointerExited(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerExited"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerExited"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerExited(param0);
@@ -4749,14 +4749,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_add_PointerMoved(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerMoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerMoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerMoved(param0));
@@ -4770,14 +4770,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_remove_PointerMoved(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerMoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerMoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerMoved(param0);
@@ -4792,14 +4792,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_add_PointerPressed(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerPressed(param0));
@@ -4813,14 +4813,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_remove_PointerPressed(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerPressed(param0);
@@ -4835,14 +4835,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_add_PointerReleased(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerReleased(param0));
@@ -4856,14 +4856,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_remove_PointerReleased(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerReleased(param0);
@@ -4878,14 +4878,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_add_PointerWheelChanged(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerWheelChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerWheelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerWheelChanged(param0));
@@ -4899,14 +4899,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_remove_PointerWheelChanged(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerWheelChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerWheelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerWheelChanged(param0);
@@ -4921,14 +4921,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_add_SizeChanged(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"SizeChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"SizeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::WindowSizeChangedEventArgs>>(arg);
 
             return py::convert(self->obj.SizeChanged(param0));
@@ -4942,14 +4942,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_remove_SizeChanged(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"SizeChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"SizeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SizeChanged(param0);
@@ -4964,14 +4964,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_add_TouchHitTesting(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"TouchHitTesting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"TouchHitTesting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::TouchHitTestingEventArgs>>(arg);
 
             return py::convert(self->obj.TouchHitTesting(param0));
@@ -4985,14 +4985,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_remove_TouchHitTesting(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"TouchHitTesting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"TouchHitTesting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.TouchHitTesting(param0);
@@ -5007,14 +5007,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_add_VisibilityChanged(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"VisibilityChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"VisibilityChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::VisibilityChangedEventArgs>>(arg);
 
             return py::convert(self->obj.VisibilityChanged(param0));
@@ -5028,14 +5028,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_remove_VisibilityChanged(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"VisibilityChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"VisibilityChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.VisibilityChanged(param0);
@@ -5050,14 +5050,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_add_PointerRoutedAway(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerRoutedAway"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerRoutedAway"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::ICorePointerRedirector, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerRoutedAway(param0));
@@ -5071,14 +5071,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_remove_PointerRoutedAway(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerRoutedAway"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerRoutedAway"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerRoutedAway(param0);
@@ -5093,14 +5093,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_add_PointerRoutedReleased(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerRoutedReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerRoutedReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::ICorePointerRedirector, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerRoutedReleased(param0));
@@ -5114,14 +5114,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_remove_PointerRoutedReleased(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerRoutedReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerRoutedReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerRoutedReleased(param0);
@@ -5136,14 +5136,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_add_PointerRoutedTo(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerRoutedTo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerRoutedTo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::ICorePointerRedirector, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerRoutedTo(param0));
@@ -5157,14 +5157,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_remove_PointerRoutedTo(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerRoutedTo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"PointerRoutedTo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerRoutedTo(param0);
@@ -5179,14 +5179,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_add_ClosestInteractiveBoundsRequested(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"ClosestInteractiveBoundsRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"ClosestInteractiveBoundsRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.ClosestInteractiveBoundsRequested(param0));
@@ -5200,14 +5200,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_remove_ClosestInteractiveBoundsRequested(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"ClosestInteractiveBoundsRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"ClosestInteractiveBoundsRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ClosestInteractiveBoundsRequested(param0);
@@ -5222,14 +5222,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_add_ResizeCompleted(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"ResizeCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"ResizeCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ResizeCompleted(param0));
@@ -5243,14 +5243,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_remove_ResizeCompleted(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"ResizeCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"ResizeCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ResizeCompleted(param0);
@@ -5265,14 +5265,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_add_ResizeStarted(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"ResizeStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"ResizeStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ResizeStarted(param0));
@@ -5286,14 +5286,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_remove_ResizeStarted(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"ResizeStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindow", L"ResizeStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ResizeStarted(param0);
@@ -5509,14 +5509,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindowDialog", L"ShowAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindowDialog", L"ShowAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ShowAsync());
             }
             catch (...)
@@ -5534,14 +5534,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowDialog_get_Title(py::wrapper::Windows::UI::Core::CoreWindowDialog* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -5553,12 +5553,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindowDialog_put_Title(py::wrapper::Windows::UI::Core::CoreWindowDialog* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5567,6 +5561,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Title(param0);
@@ -5581,14 +5581,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowDialog_get_IsInteractionDelayed(py::wrapper::Windows::UI::Core::CoreWindowDialog* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"IsInteractionDelayed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"IsInteractionDelayed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsInteractionDelayed());
         }
         catch (...)
@@ -5600,12 +5600,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindowDialog_put_IsInteractionDelayed(py::wrapper::Windows::UI::Core::CoreWindowDialog* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"IsInteractionDelayed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5614,6 +5608,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"IsInteractionDelayed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.IsInteractionDelayed(param0);
@@ -5628,14 +5628,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowDialog_get_DefaultCommandIndex(py::wrapper::Windows::UI::Core::CoreWindowDialog* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"DefaultCommandIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"DefaultCommandIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultCommandIndex());
         }
         catch (...)
@@ -5647,12 +5647,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindowDialog_put_DefaultCommandIndex(py::wrapper::Windows::UI::Core::CoreWindowDialog* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"DefaultCommandIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5661,6 +5655,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"DefaultCommandIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.DefaultCommandIndex(param0);
@@ -5675,14 +5675,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowDialog_get_CancelCommandIndex(py::wrapper::Windows::UI::Core::CoreWindowDialog* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"CancelCommandIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"CancelCommandIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CancelCommandIndex());
         }
         catch (...)
@@ -5694,12 +5694,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindowDialog_put_CancelCommandIndex(py::wrapper::Windows::UI::Core::CoreWindowDialog* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"CancelCommandIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5708,6 +5702,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"CancelCommandIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.CancelCommandIndex(param0);
@@ -5722,14 +5722,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowDialog_get_BackButtonCommand(py::wrapper::Windows::UI::Core::CoreWindowDialog* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"BackButtonCommand"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"BackButtonCommand"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BackButtonCommand());
         }
         catch (...)
@@ -5741,12 +5741,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindowDialog_put_BackButtonCommand(py::wrapper::Windows::UI::Core::CoreWindowDialog* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"BackButtonCommand"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5755,6 +5749,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"BackButtonCommand"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Popups::UICommandInvokedHandler>(arg);
 
             self->obj.BackButtonCommand(param0);
@@ -5769,14 +5769,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowDialog_get_Commands(py::wrapper::Windows::UI::Core::CoreWindowDialog* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"Commands"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"Commands"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Commands());
         }
         catch (...)
@@ -5788,14 +5788,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowDialog_get_MaxSize(py::wrapper::Windows::UI::Core::CoreWindowDialog* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"MaxSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"MaxSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxSize());
         }
         catch (...)
@@ -5807,14 +5807,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowDialog_get_MinSize(py::wrapper::Windows::UI::Core::CoreWindowDialog* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"MinSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowDialog", L"MinSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinSize());
         }
         catch (...)
@@ -5826,14 +5826,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowDialog_add_Showing(py::wrapper::Windows::UI::Core::CoreWindowDialog* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindowDialog", L"Showing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindowDialog", L"Showing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::CoreWindowPopupShowingEventArgs>>(arg);
 
             return py::convert(self->obj.Showing(param0));
@@ -5847,14 +5847,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowDialog_remove_Showing(py::wrapper::Windows::UI::Core::CoreWindowDialog* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindowDialog", L"Showing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindowDialog", L"Showing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Showing(param0);
@@ -5949,14 +5949,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowEventArgs_get_Handled(py::wrapper::Windows::UI::Core::CoreWindowEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -5968,12 +5968,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindowEventArgs_put_Handled(py::wrapper::Windows::UI::Core::CoreWindowEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5982,6 +5976,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -6110,14 +6110,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindowFlyout", L"ShowAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindowFlyout", L"ShowAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ShowAsync());
             }
             catch (...)
@@ -6135,14 +6135,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowFlyout_get_Title(py::wrapper::Windows::UI::Core::CoreWindowFlyout* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowFlyout", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowFlyout", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -6154,12 +6154,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindowFlyout_put_Title(py::wrapper::Windows::UI::Core::CoreWindowFlyout* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowFlyout", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6168,6 +6162,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowFlyout", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Title(param0);
@@ -6182,14 +6182,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowFlyout_get_IsInteractionDelayed(py::wrapper::Windows::UI::Core::CoreWindowFlyout* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowFlyout", L"IsInteractionDelayed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowFlyout", L"IsInteractionDelayed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsInteractionDelayed());
         }
         catch (...)
@@ -6201,12 +6201,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindowFlyout_put_IsInteractionDelayed(py::wrapper::Windows::UI::Core::CoreWindowFlyout* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowFlyout", L"IsInteractionDelayed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6215,6 +6209,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowFlyout", L"IsInteractionDelayed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.IsInteractionDelayed(param0);
@@ -6229,14 +6229,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowFlyout_get_DefaultCommandIndex(py::wrapper::Windows::UI::Core::CoreWindowFlyout* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowFlyout", L"DefaultCommandIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowFlyout", L"DefaultCommandIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultCommandIndex());
         }
         catch (...)
@@ -6248,12 +6248,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindowFlyout_put_DefaultCommandIndex(py::wrapper::Windows::UI::Core::CoreWindowFlyout* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowFlyout", L"DefaultCommandIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6262,6 +6256,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowFlyout", L"DefaultCommandIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.DefaultCommandIndex(param0);
@@ -6276,14 +6276,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowFlyout_get_BackButtonCommand(py::wrapper::Windows::UI::Core::CoreWindowFlyout* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowFlyout", L"BackButtonCommand"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowFlyout", L"BackButtonCommand"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BackButtonCommand());
         }
         catch (...)
@@ -6295,12 +6295,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindowFlyout_put_BackButtonCommand(py::wrapper::Windows::UI::Core::CoreWindowFlyout* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowFlyout", L"BackButtonCommand"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6309,6 +6303,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowFlyout", L"BackButtonCommand"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Popups::UICommandInvokedHandler>(arg);
 
             self->obj.BackButtonCommand(param0);
@@ -6323,14 +6323,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowFlyout_get_Commands(py::wrapper::Windows::UI::Core::CoreWindowFlyout* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowFlyout", L"Commands"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowFlyout", L"Commands"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Commands());
         }
         catch (...)
@@ -6342,14 +6342,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowFlyout_get_MaxSize(py::wrapper::Windows::UI::Core::CoreWindowFlyout* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowFlyout", L"MaxSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowFlyout", L"MaxSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxSize());
         }
         catch (...)
@@ -6361,14 +6361,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowFlyout_get_MinSize(py::wrapper::Windows::UI::Core::CoreWindowFlyout* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowFlyout", L"MinSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowFlyout", L"MinSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinSize());
         }
         catch (...)
@@ -6380,14 +6380,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowFlyout_add_Showing(py::wrapper::Windows::UI::Core::CoreWindowFlyout* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindowFlyout", L"Showing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindowFlyout", L"Showing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::CoreWindowPopupShowingEventArgs>>(arg);
 
             return py::convert(self->obj.Showing(param0));
@@ -6401,14 +6401,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowFlyout_remove_Showing(py::wrapper::Windows::UI::Core::CoreWindowFlyout* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindowFlyout", L"Showing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.CoreWindowFlyout", L"Showing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Showing(param0);
@@ -6506,14 +6506,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindowPopupShowingEventArgs", L"SetDesiredSize", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindowPopupShowingEventArgs", L"SetDesiredSize", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
 
                 self->obj.SetDesiredSize(param0);
@@ -6608,14 +6608,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindowResizeManager", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindowResizeManager", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::Core::CoreWindowResizeManager::GetForCurrentView());
             }
             catch (...)
@@ -6637,14 +6637,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindowResizeManager", L"NotifyLayoutCompleted", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.CoreWindowResizeManager", L"NotifyLayoutCompleted", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.NotifyLayoutCompleted();
                 Py_RETURN_NONE;
             }
@@ -6663,14 +6663,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowResizeManager_get_ShouldWaitForLayoutCompletion(py::wrapper::Windows::UI::Core::CoreWindowResizeManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowResizeManager", L"ShouldWaitForLayoutCompletion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowResizeManager", L"ShouldWaitForLayoutCompletion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShouldWaitForLayoutCompletion());
         }
         catch (...)
@@ -6682,12 +6682,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindowResizeManager_put_ShouldWaitForLayoutCompletion(py::wrapper::Windows::UI::Core::CoreWindowResizeManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowResizeManager", L"ShouldWaitForLayoutCompletion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6696,6 +6690,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.CoreWindowResizeManager", L"ShouldWaitForLayoutCompletion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ShouldWaitForLayoutCompletion(param0);
@@ -6807,14 +6807,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* IdleDispatchedHandlerArgs_get_IsDispatcherIdle(py::wrapper::Windows::UI::Core::IdleDispatchedHandlerArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.IdleDispatchedHandlerArgs", L"IsDispatcherIdle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.IdleDispatchedHandlerArgs", L"IsDispatcherIdle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDispatcherIdle());
         }
         catch (...)
@@ -6896,14 +6896,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* InputEnabledEventArgs_get_Handled(py::wrapper::Windows::UI::Core::InputEnabledEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.InputEnabledEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.InputEnabledEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -6915,12 +6915,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int InputEnabledEventArgs_put_Handled(py::wrapper::Windows::UI::Core::InputEnabledEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.InputEnabledEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6929,6 +6923,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.InputEnabledEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -6943,14 +6943,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* InputEnabledEventArgs_get_InputEnabled(py::wrapper::Windows::UI::Core::InputEnabledEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.InputEnabledEventArgs", L"InputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.InputEnabledEventArgs", L"InputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InputEnabled());
         }
         catch (...)
@@ -7033,14 +7033,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* KeyEventArgs_get_Handled(py::wrapper::Windows::UI::Core::KeyEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.KeyEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.KeyEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -7052,12 +7052,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int KeyEventArgs_put_Handled(py::wrapper::Windows::UI::Core::KeyEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.KeyEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7066,6 +7060,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.KeyEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -7080,14 +7080,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* KeyEventArgs_get_KeyStatus(py::wrapper::Windows::UI::Core::KeyEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.KeyEventArgs", L"KeyStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.KeyEventArgs", L"KeyStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyStatus());
         }
         catch (...)
@@ -7099,14 +7099,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* KeyEventArgs_get_VirtualKey(py::wrapper::Windows::UI::Core::KeyEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.KeyEventArgs", L"VirtualKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.KeyEventArgs", L"VirtualKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VirtualKey());
         }
         catch (...)
@@ -7118,14 +7118,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* KeyEventArgs_get_DeviceId(py::wrapper::Windows::UI::Core::KeyEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.KeyEventArgs", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.KeyEventArgs", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -7214,14 +7214,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.PointerEventArgs", L"GetIntermediatePoints", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.PointerEventArgs", L"GetIntermediatePoints", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetIntermediatePoints());
             }
             catch (...)
@@ -7239,14 +7239,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* PointerEventArgs_get_Handled(py::wrapper::Windows::UI::Core::PointerEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.PointerEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.PointerEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -7258,12 +7258,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int PointerEventArgs_put_Handled(py::wrapper::Windows::UI::Core::PointerEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.PointerEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7272,6 +7266,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.PointerEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -7286,14 +7286,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* PointerEventArgs_get_CurrentPoint(py::wrapper::Windows::UI::Core::PointerEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.PointerEventArgs", L"CurrentPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.PointerEventArgs", L"CurrentPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentPoint());
         }
         catch (...)
@@ -7305,14 +7305,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* PointerEventArgs_get_KeyModifiers(py::wrapper::Windows::UI::Core::PointerEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.PointerEventArgs", L"KeyModifiers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.PointerEventArgs", L"KeyModifiers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyModifiers());
         }
         catch (...)
@@ -7401,14 +7401,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.SystemNavigationManager", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.SystemNavigationManager", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::Core::SystemNavigationManager::GetForCurrentView());
             }
             catch (...)
@@ -7426,14 +7426,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* SystemNavigationManager_get_AppViewBackButtonVisibility(py::wrapper::Windows::UI::Core::SystemNavigationManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.SystemNavigationManager", L"AppViewBackButtonVisibility"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.SystemNavigationManager", L"AppViewBackButtonVisibility"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppViewBackButtonVisibility());
         }
         catch (...)
@@ -7445,12 +7445,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int SystemNavigationManager_put_AppViewBackButtonVisibility(py::wrapper::Windows::UI::Core::SystemNavigationManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.SystemNavigationManager", L"AppViewBackButtonVisibility"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7459,6 +7453,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.SystemNavigationManager", L"AppViewBackButtonVisibility"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Core::AppViewBackButtonVisibility>(arg);
 
             self->obj.AppViewBackButtonVisibility(param0);
@@ -7473,14 +7473,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* SystemNavigationManager_add_BackRequested(py::wrapper::Windows::UI::Core::SystemNavigationManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.SystemNavigationManager", L"BackRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.SystemNavigationManager", L"BackRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::UI::Core::BackRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.BackRequested(param0));
@@ -7494,14 +7494,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* SystemNavigationManager_remove_BackRequested(py::wrapper::Windows::UI::Core::SystemNavigationManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.SystemNavigationManager", L"BackRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.SystemNavigationManager", L"BackRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.BackRequested(param0);
@@ -7618,14 +7618,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.TouchHitTestingEventArgs", L"EvaluateProximity", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.TouchHitTestingEventArgs", L"EvaluateProximity", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
                 return py::convert(self->obj.EvaluateProximity(param0));
@@ -7645,14 +7645,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* TouchHitTestingEventArgs_get_Handled(py::wrapper::Windows::UI::Core::TouchHitTestingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.TouchHitTestingEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.TouchHitTestingEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -7664,12 +7664,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int TouchHitTestingEventArgs_put_Handled(py::wrapper::Windows::UI::Core::TouchHitTestingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.TouchHitTestingEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7678,6 +7672,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.TouchHitTestingEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -7692,14 +7692,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* TouchHitTestingEventArgs_get_ProximityEvaluation(py::wrapper::Windows::UI::Core::TouchHitTestingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.TouchHitTestingEventArgs", L"ProximityEvaluation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.TouchHitTestingEventArgs", L"ProximityEvaluation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProximityEvaluation());
         }
         catch (...)
@@ -7711,12 +7711,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int TouchHitTestingEventArgs_put_ProximityEvaluation(py::wrapper::Windows::UI::Core::TouchHitTestingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.TouchHitTestingEventArgs", L"ProximityEvaluation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7725,6 +7719,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.TouchHitTestingEventArgs", L"ProximityEvaluation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreProximityEvaluation>(arg);
 
             self->obj.ProximityEvaluation(param0);
@@ -7739,14 +7739,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* TouchHitTestingEventArgs_get_BoundingBox(py::wrapper::Windows::UI::Core::TouchHitTestingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.TouchHitTestingEventArgs", L"BoundingBox"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.TouchHitTestingEventArgs", L"BoundingBox"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BoundingBox());
         }
         catch (...)
@@ -7758,14 +7758,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* TouchHitTestingEventArgs_get_Point(py::wrapper::Windows::UI::Core::TouchHitTestingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.TouchHitTestingEventArgs", L"Point"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.TouchHitTestingEventArgs", L"Point"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Point());
         }
         catch (...)
@@ -7851,14 +7851,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* VisibilityChangedEventArgs_get_Handled(py::wrapper::Windows::UI::Core::VisibilityChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.VisibilityChangedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.VisibilityChangedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -7870,12 +7870,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int VisibilityChangedEventArgs_put_Handled(py::wrapper::Windows::UI::Core::VisibilityChangedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.VisibilityChangedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7884,6 +7878,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.VisibilityChangedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -7898,14 +7898,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* VisibilityChangedEventArgs_get_Visible(py::wrapper::Windows::UI::Core::VisibilityChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.VisibilityChangedEventArgs", L"Visible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.VisibilityChangedEventArgs", L"Visible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Visible());
         }
         catch (...)
@@ -7988,14 +7988,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* WindowActivatedEventArgs_get_Handled(py::wrapper::Windows::UI::Core::WindowActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.WindowActivatedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.WindowActivatedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -8007,12 +8007,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int WindowActivatedEventArgs_put_Handled(py::wrapper::Windows::UI::Core::WindowActivatedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.WindowActivatedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8021,6 +8015,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.WindowActivatedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -8035,14 +8035,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* WindowActivatedEventArgs_get_WindowActivationState(py::wrapper::Windows::UI::Core::WindowActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.WindowActivatedEventArgs", L"WindowActivationState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.WindowActivatedEventArgs", L"WindowActivationState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WindowActivationState());
         }
         catch (...)
@@ -8125,14 +8125,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* WindowSizeChangedEventArgs_get_Handled(py::wrapper::Windows::UI::Core::WindowSizeChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.WindowSizeChangedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.WindowSizeChangedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -8144,12 +8144,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int WindowSizeChangedEventArgs_put_Handled(py::wrapper::Windows::UI::Core::WindowSizeChangedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.WindowSizeChangedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8158,6 +8152,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.WindowSizeChangedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -8172,14 +8172,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* WindowSizeChangedEventArgs_get_Size(py::wrapper::Windows::UI::Core::WindowSizeChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.WindowSizeChangedEventArgs", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.WindowSizeChangedEventArgs", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -8262,14 +8262,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreAcceleratorKeys_add_AcceleratorKeyActivated(py::wrapper::Windows::UI::Core::ICoreAcceleratorKeys* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreAcceleratorKeys", L"AcceleratorKeyActivated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreAcceleratorKeys", L"AcceleratorKeyActivated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreDispatcher, winrt::Windows::UI::Core::AcceleratorKeyEventArgs>>(arg);
 
             return py::convert(self->obj.AcceleratorKeyActivated(param0));
@@ -8283,14 +8283,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreAcceleratorKeys_remove_AcceleratorKeyActivated(py::wrapper::Windows::UI::Core::ICoreAcceleratorKeys* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreAcceleratorKeys", L"AcceleratorKeyActivated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreAcceleratorKeys", L"AcceleratorKeyActivated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AcceleratorKeyActivated(param0);
@@ -8376,14 +8376,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreInputSourceBase_get_Dispatcher(py::wrapper::Windows::UI::Core::ICoreInputSourceBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreInputSourceBase", L"Dispatcher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreInputSourceBase", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Dispatcher());
         }
         catch (...)
@@ -8395,14 +8395,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreInputSourceBase_get_IsInputEnabled(py::wrapper::Windows::UI::Core::ICoreInputSourceBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreInputSourceBase", L"IsInputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreInputSourceBase", L"IsInputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsInputEnabled());
         }
         catch (...)
@@ -8414,12 +8414,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int ICoreInputSourceBase_put_IsInputEnabled(py::wrapper::Windows::UI::Core::ICoreInputSourceBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreInputSourceBase", L"IsInputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8428,6 +8422,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreInputSourceBase", L"IsInputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsInputEnabled(param0);
@@ -8442,14 +8442,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreInputSourceBase_add_InputEnabled(py::wrapper::Windows::UI::Core::ICoreInputSourceBase* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreInputSourceBase", L"InputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreInputSourceBase", L"InputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::InputEnabledEventArgs>>(arg);
 
             return py::convert(self->obj.InputEnabled(param0));
@@ -8463,14 +8463,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreInputSourceBase_remove_InputEnabled(py::wrapper::Windows::UI::Core::ICoreInputSourceBase* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreInputSourceBase", L"InputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreInputSourceBase", L"InputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.InputEnabled(param0);
@@ -8562,14 +8562,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.ICorePointerInputSource", L"ReleasePointerCapture", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.ICorePointerInputSource", L"ReleasePointerCapture", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReleasePointerCapture();
                 Py_RETURN_NONE;
             }
@@ -8592,14 +8592,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.ICorePointerInputSource", L"SetPointerCapture", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.ICorePointerInputSource", L"SetPointerCapture", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.SetPointerCapture();
                 Py_RETURN_NONE;
             }
@@ -8618,14 +8618,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource_get_HasCapture(py::wrapper::Windows::UI::Core::ICorePointerInputSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICorePointerInputSource", L"HasCapture"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICorePointerInputSource", L"HasCapture"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasCapture());
         }
         catch (...)
@@ -8637,14 +8637,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource_get_PointerCursor(py::wrapper::Windows::UI::Core::ICorePointerInputSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerCursor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerCursor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerCursor());
         }
         catch (...)
@@ -8656,12 +8656,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int ICorePointerInputSource_put_PointerCursor(py::wrapper::Windows::UI::Core::ICorePointerInputSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerCursor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8670,6 +8664,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerCursor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreCursor>(arg);
 
             self->obj.PointerCursor(param0);
@@ -8684,14 +8684,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource_get_PointerPosition(py::wrapper::Windows::UI::Core::ICorePointerInputSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerPosition());
         }
         catch (...)
@@ -8703,14 +8703,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource_add_PointerCaptureLost(py::wrapper::Windows::UI::Core::ICorePointerInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerCaptureLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerCaptureLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerCaptureLost(param0));
@@ -8724,14 +8724,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource_remove_PointerCaptureLost(py::wrapper::Windows::UI::Core::ICorePointerInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerCaptureLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerCaptureLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerCaptureLost(param0);
@@ -8746,14 +8746,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource_add_PointerEntered(py::wrapper::Windows::UI::Core::ICorePointerInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerEntered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerEntered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerEntered(param0));
@@ -8767,14 +8767,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource_remove_PointerEntered(py::wrapper::Windows::UI::Core::ICorePointerInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerEntered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerEntered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerEntered(param0);
@@ -8789,14 +8789,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource_add_PointerExited(py::wrapper::Windows::UI::Core::ICorePointerInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerExited"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerExited"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerExited(param0));
@@ -8810,14 +8810,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource_remove_PointerExited(py::wrapper::Windows::UI::Core::ICorePointerInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerExited"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerExited"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerExited(param0);
@@ -8832,14 +8832,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource_add_PointerMoved(py::wrapper::Windows::UI::Core::ICorePointerInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerMoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerMoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerMoved(param0));
@@ -8853,14 +8853,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource_remove_PointerMoved(py::wrapper::Windows::UI::Core::ICorePointerInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerMoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerMoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerMoved(param0);
@@ -8875,14 +8875,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource_add_PointerPressed(py::wrapper::Windows::UI::Core::ICorePointerInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerPressed(param0));
@@ -8896,14 +8896,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource_remove_PointerPressed(py::wrapper::Windows::UI::Core::ICorePointerInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerPressed(param0);
@@ -8918,14 +8918,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource_add_PointerReleased(py::wrapper::Windows::UI::Core::ICorePointerInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerReleased(param0));
@@ -8939,14 +8939,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource_remove_PointerReleased(py::wrapper::Windows::UI::Core::ICorePointerInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerReleased(param0);
@@ -8961,14 +8961,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource_add_PointerWheelChanged(py::wrapper::Windows::UI::Core::ICorePointerInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerWheelChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerWheelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerWheelChanged(param0));
@@ -8982,14 +8982,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource_remove_PointerWheelChanged(py::wrapper::Windows::UI::Core::ICorePointerInputSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerWheelChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerWheelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerWheelChanged(param0);
@@ -9096,14 +9096,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.ICorePointerInputSource", L"ReleasePointerCapture", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.ICorePointerInputSource", L"ReleasePointerCapture", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReleasePointerCapture();
                 Py_RETURN_NONE;
             }
@@ -9126,14 +9126,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.ICorePointerInputSource", L"SetPointerCapture", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.ICorePointerInputSource", L"SetPointerCapture", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.SetPointerCapture();
                 Py_RETURN_NONE;
             }
@@ -9152,14 +9152,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource2_get_DispatcherQueue(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICorePointerInputSource2", L"DispatcherQueue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICorePointerInputSource2", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DispatcherQueue());
         }
         catch (...)
@@ -9171,14 +9171,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource2_get_HasCapture(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICorePointerInputSource", L"HasCapture"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICorePointerInputSource", L"HasCapture"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasCapture());
         }
         catch (...)
@@ -9190,14 +9190,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource2_get_PointerCursor(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerCursor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerCursor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerCursor());
         }
         catch (...)
@@ -9209,12 +9209,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int ICorePointerInputSource2_put_PointerCursor(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerCursor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9223,6 +9217,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerCursor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreCursor>(arg);
 
             self->obj.PointerCursor(param0);
@@ -9237,14 +9237,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource2_get_PointerPosition(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerPosition());
         }
         catch (...)
@@ -9256,14 +9256,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource2_add_PointerCaptureLost(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerCaptureLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerCaptureLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerCaptureLost(param0));
@@ -9277,14 +9277,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource2_remove_PointerCaptureLost(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerCaptureLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerCaptureLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerCaptureLost(param0);
@@ -9299,14 +9299,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource2_add_PointerEntered(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerEntered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerEntered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerEntered(param0));
@@ -9320,14 +9320,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource2_remove_PointerEntered(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerEntered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerEntered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerEntered(param0);
@@ -9342,14 +9342,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource2_add_PointerExited(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerExited"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerExited"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerExited(param0));
@@ -9363,14 +9363,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource2_remove_PointerExited(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerExited"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerExited"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerExited(param0);
@@ -9385,14 +9385,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource2_add_PointerMoved(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerMoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerMoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerMoved(param0));
@@ -9406,14 +9406,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource2_remove_PointerMoved(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerMoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerMoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerMoved(param0);
@@ -9428,14 +9428,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource2_add_PointerPressed(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerPressed(param0));
@@ -9449,14 +9449,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource2_remove_PointerPressed(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerPressed(param0);
@@ -9471,14 +9471,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource2_add_PointerReleased(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerReleased(param0));
@@ -9492,14 +9492,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource2_remove_PointerReleased(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerReleased(param0);
@@ -9514,14 +9514,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource2_add_PointerWheelChanged(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerWheelChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerWheelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerWheelChanged(param0));
@@ -9535,14 +9535,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource2_remove_PointerWheelChanged(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerWheelChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerInputSource", L"PointerWheelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerWheelChanged(param0);
@@ -9646,14 +9646,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerRedirector_add_PointerRoutedAway(py::wrapper::Windows::UI::Core::ICorePointerRedirector* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerRedirector", L"PointerRoutedAway"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerRedirector", L"PointerRoutedAway"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::ICorePointerRedirector, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerRoutedAway(param0));
@@ -9667,14 +9667,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerRedirector_remove_PointerRoutedAway(py::wrapper::Windows::UI::Core::ICorePointerRedirector* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerRedirector", L"PointerRoutedAway"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerRedirector", L"PointerRoutedAway"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerRoutedAway(param0);
@@ -9689,14 +9689,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerRedirector_add_PointerRoutedReleased(py::wrapper::Windows::UI::Core::ICorePointerRedirector* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerRedirector", L"PointerRoutedReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerRedirector", L"PointerRoutedReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::ICorePointerRedirector, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerRoutedReleased(param0));
@@ -9710,14 +9710,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerRedirector_remove_PointerRoutedReleased(py::wrapper::Windows::UI::Core::ICorePointerRedirector* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerRedirector", L"PointerRoutedReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerRedirector", L"PointerRoutedReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerRoutedReleased(param0);
@@ -9732,14 +9732,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerRedirector_add_PointerRoutedTo(py::wrapper::Windows::UI::Core::ICorePointerRedirector* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerRedirector", L"PointerRoutedTo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerRedirector", L"PointerRoutedTo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::ICorePointerRedirector, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerRoutedTo(param0));
@@ -9753,14 +9753,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerRedirector_remove_PointerRoutedTo(py::wrapper::Windows::UI::Core::ICorePointerRedirector* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerRedirector", L"PointerRoutedTo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICorePointerRedirector", L"PointerRoutedTo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerRoutedTo(param0);
@@ -9854,14 +9854,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.ICoreWindow", L"Activate", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.ICoreWindow", L"Activate", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Activate();
                 Py_RETURN_NONE;
             }
@@ -9884,14 +9884,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.ICoreWindow", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.ICoreWindow", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -9914,14 +9914,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.ICoreWindow", L"GetAsyncKeyState", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.ICoreWindow", L"GetAsyncKeyState", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::VirtualKey>(args, 0);
 
                 return py::convert(self->obj.GetAsyncKeyState(param0));
@@ -9945,14 +9945,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.ICoreWindow", L"GetKeyState", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.ICoreWindow", L"GetKeyState", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::VirtualKey>(args, 0);
 
                 return py::convert(self->obj.GetKeyState(param0));
@@ -9976,14 +9976,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.ICoreWindow", L"ReleasePointerCapture", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.ICoreWindow", L"ReleasePointerCapture", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReleasePointerCapture();
                 Py_RETURN_NONE;
             }
@@ -10006,14 +10006,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.ICoreWindow", L"SetPointerCapture", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.ICoreWindow", L"SetPointerCapture", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.SetPointerCapture();
                 Py_RETURN_NONE;
             }
@@ -10032,14 +10032,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_get_AutomationHostProvider(py::wrapper::Windows::UI::Core::ICoreWindow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"AutomationHostProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"AutomationHostProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AutomationHostProvider());
         }
         catch (...)
@@ -10051,14 +10051,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_get_Bounds(py::wrapper::Windows::UI::Core::ICoreWindow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"Bounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"Bounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bounds());
         }
         catch (...)
@@ -10070,14 +10070,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_get_CustomProperties(py::wrapper::Windows::UI::Core::ICoreWindow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"CustomProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"CustomProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CustomProperties());
         }
         catch (...)
@@ -10089,14 +10089,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_get_Dispatcher(py::wrapper::Windows::UI::Core::ICoreWindow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"Dispatcher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Dispatcher());
         }
         catch (...)
@@ -10108,14 +10108,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_get_FlowDirection(py::wrapper::Windows::UI::Core::ICoreWindow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"FlowDirection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"FlowDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FlowDirection());
         }
         catch (...)
@@ -10127,12 +10127,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int ICoreWindow_put_FlowDirection(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"FlowDirection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10141,6 +10135,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"FlowDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreWindowFlowDirection>(arg);
 
             self->obj.FlowDirection(param0);
@@ -10155,14 +10155,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_get_IsInputEnabled(py::wrapper::Windows::UI::Core::ICoreWindow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"IsInputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"IsInputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsInputEnabled());
         }
         catch (...)
@@ -10174,12 +10174,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int ICoreWindow_put_IsInputEnabled(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"IsInputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10188,6 +10182,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"IsInputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsInputEnabled(param0);
@@ -10202,14 +10202,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_get_PointerCursor(py::wrapper::Windows::UI::Core::ICoreWindow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"PointerCursor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"PointerCursor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerCursor());
         }
         catch (...)
@@ -10221,12 +10221,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int ICoreWindow_put_PointerCursor(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"PointerCursor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10235,6 +10229,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"PointerCursor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreCursor>(arg);
 
             self->obj.PointerCursor(param0);
@@ -10249,14 +10249,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_get_PointerPosition(py::wrapper::Windows::UI::Core::ICoreWindow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"PointerPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"PointerPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerPosition());
         }
         catch (...)
@@ -10268,14 +10268,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_get_Visible(py::wrapper::Windows::UI::Core::ICoreWindow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"Visible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindow", L"Visible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Visible());
         }
         catch (...)
@@ -10287,14 +10287,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_add_Activated(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"Activated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"Activated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::WindowActivatedEventArgs>>(arg);
 
             return py::convert(self->obj.Activated(param0));
@@ -10308,14 +10308,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_remove_Activated(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"Activated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"Activated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Activated(param0);
@@ -10330,14 +10330,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_add_AutomationProviderRequested(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"AutomationProviderRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"AutomationProviderRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::AutomationProviderRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.AutomationProviderRequested(param0));
@@ -10351,14 +10351,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_remove_AutomationProviderRequested(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"AutomationProviderRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"AutomationProviderRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AutomationProviderRequested(param0);
@@ -10373,14 +10373,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_add_CharacterReceived(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"CharacterReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"CharacterReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::CharacterReceivedEventArgs>>(arg);
 
             return py::convert(self->obj.CharacterReceived(param0));
@@ -10394,14 +10394,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_remove_CharacterReceived(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"CharacterReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"CharacterReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CharacterReceived(param0);
@@ -10416,14 +10416,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_add_Closed(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::CoreWindowEventArgs>>(arg);
 
             return py::convert(self->obj.Closed(param0));
@@ -10437,14 +10437,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_remove_Closed(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Closed(param0);
@@ -10459,14 +10459,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_add_InputEnabled(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"InputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"InputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::InputEnabledEventArgs>>(arg);
 
             return py::convert(self->obj.InputEnabled(param0));
@@ -10480,14 +10480,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_remove_InputEnabled(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"InputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"InputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.InputEnabled(param0);
@@ -10502,14 +10502,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_add_KeyDown(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"KeyDown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"KeyDown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::KeyEventArgs>>(arg);
 
             return py::convert(self->obj.KeyDown(param0));
@@ -10523,14 +10523,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_remove_KeyDown(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"KeyDown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"KeyDown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.KeyDown(param0);
@@ -10545,14 +10545,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_add_KeyUp(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"KeyUp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"KeyUp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::KeyEventArgs>>(arg);
 
             return py::convert(self->obj.KeyUp(param0));
@@ -10566,14 +10566,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_remove_KeyUp(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"KeyUp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"KeyUp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.KeyUp(param0);
@@ -10588,14 +10588,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_add_PointerCaptureLost(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerCaptureLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerCaptureLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerCaptureLost(param0));
@@ -10609,14 +10609,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_remove_PointerCaptureLost(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerCaptureLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerCaptureLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerCaptureLost(param0);
@@ -10631,14 +10631,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_add_PointerEntered(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerEntered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerEntered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerEntered(param0));
@@ -10652,14 +10652,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_remove_PointerEntered(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerEntered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerEntered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerEntered(param0);
@@ -10674,14 +10674,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_add_PointerExited(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerExited"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerExited"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerExited(param0));
@@ -10695,14 +10695,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_remove_PointerExited(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerExited"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerExited"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerExited(param0);
@@ -10717,14 +10717,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_add_PointerMoved(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerMoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerMoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerMoved(param0));
@@ -10738,14 +10738,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_remove_PointerMoved(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerMoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerMoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerMoved(param0);
@@ -10760,14 +10760,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_add_PointerPressed(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerPressed(param0));
@@ -10781,14 +10781,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_remove_PointerPressed(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerPressed(param0);
@@ -10803,14 +10803,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_add_PointerReleased(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerReleased(param0));
@@ -10824,14 +10824,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_remove_PointerReleased(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerReleased(param0);
@@ -10846,14 +10846,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_add_PointerWheelChanged(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerWheelChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerWheelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerWheelChanged(param0));
@@ -10867,14 +10867,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_remove_PointerWheelChanged(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerWheelChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"PointerWheelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerWheelChanged(param0);
@@ -10889,14 +10889,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_add_SizeChanged(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"SizeChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"SizeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::WindowSizeChangedEventArgs>>(arg);
 
             return py::convert(self->obj.SizeChanged(param0));
@@ -10910,14 +10910,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_remove_SizeChanged(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"SizeChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"SizeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SizeChanged(param0);
@@ -10932,14 +10932,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_add_TouchHitTesting(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"TouchHitTesting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"TouchHitTesting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::TouchHitTestingEventArgs>>(arg);
 
             return py::convert(self->obj.TouchHitTesting(param0));
@@ -10953,14 +10953,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_remove_TouchHitTesting(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"TouchHitTesting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"TouchHitTesting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.TouchHitTesting(param0);
@@ -10975,14 +10975,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_add_VisibilityChanged(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"VisibilityChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"VisibilityChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Core::CoreWindow, winrt::Windows::UI::Core::VisibilityChangedEventArgs>>(arg);
 
             return py::convert(self->obj.VisibilityChanged(param0));
@@ -10996,14 +10996,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_remove_VisibilityChanged(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"VisibilityChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Core.ICoreWindow", L"VisibilityChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.VisibilityChanged(param0);
@@ -11136,14 +11136,14 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindowEventArgs_get_Handled(py::wrapper::Windows::UI::Core::ICoreWindowEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindowEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindowEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -11155,12 +11155,6 @@ namespace py::cpp::Windows::UI::Core
 
     static int ICoreWindowEventArgs_put_Handled(py::wrapper::Windows::UI::Core::ICoreWindowEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindowEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11169,6 +11163,12 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.ICoreWindowEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -11257,14 +11257,14 @@ namespace py::cpp::Windows::UI::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.IInitializeWithCoreWindow", L"Initialize", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.IInitializeWithCoreWindow", L"Initialize", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreWindow>(args, 0);
 
                 self->obj.Initialize(param0);

@@ -28,14 +28,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextCompositionCompletedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextCompositionCompletedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -53,14 +53,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextCompositionCompletedEventArgs_get_CompositionSegments(py::wrapper::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextCompositionCompletedEventArgs", L"CompositionSegments"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextCompositionCompletedEventArgs", L"CompositionSegments"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CompositionSegments());
         }
         catch (...)
@@ -72,14 +72,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextCompositionCompletedEventArgs_get_IsCanceled(py::wrapper::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextCompositionCompletedEventArgs", L"IsCanceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextCompositionCompletedEventArgs", L"IsCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCanceled());
         }
         catch (...)
@@ -163,14 +163,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextCompositionSegment_get_PreconversionString(py::wrapper::Windows::UI::Text::Core::CoreTextCompositionSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextCompositionSegment", L"PreconversionString"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextCompositionSegment", L"PreconversionString"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreconversionString());
         }
         catch (...)
@@ -182,14 +182,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextCompositionSegment_get_Range(py::wrapper::Windows::UI::Text::Core::CoreTextCompositionSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextCompositionSegment", L"Range"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextCompositionSegment", L"Range"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Range());
         }
         catch (...)
@@ -276,14 +276,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextCompositionStartedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextCompositionStartedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -301,14 +301,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextCompositionStartedEventArgs_get_IsCanceled(py::wrapper::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextCompositionStartedEventArgs", L"IsCanceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextCompositionStartedEventArgs", L"IsCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCanceled());
         }
         catch (...)
@@ -395,14 +395,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"NotifyFocusEnter", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"NotifyFocusEnter", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.NotifyFocusEnter();
                 Py_RETURN_NONE;
             }
@@ -425,14 +425,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"NotifyFocusLeave", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"NotifyFocusLeave", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.NotifyFocusLeave();
                 Py_RETURN_NONE;
             }
@@ -455,14 +455,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"NotifyLayoutChanged", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"NotifyLayoutChanged", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.NotifyLayoutChanged();
                 Py_RETURN_NONE;
             }
@@ -485,14 +485,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"NotifySelectionChanged", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"NotifySelectionChanged", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::Core::CoreTextRange>(args, 0);
 
                 self->obj.NotifySelectionChanged(param0);
@@ -517,14 +517,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"NotifyTextChanged", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"NotifyTextChanged", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::Core::CoreTextRange>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Text::Core::CoreTextRange>(args, 2);
@@ -547,14 +547,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_get_Name(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -566,12 +566,6 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextEditContext_put_Name(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -580,6 +574,12 @@ namespace py::cpp::Windows::UI::Text::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Name(param0);
@@ -594,14 +594,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_get_IsReadOnly(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"IsReadOnly"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"IsReadOnly"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsReadOnly());
         }
         catch (...)
@@ -613,12 +613,6 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextEditContext_put_IsReadOnly(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"IsReadOnly"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -627,6 +621,12 @@ namespace py::cpp::Windows::UI::Text::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"IsReadOnly"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsReadOnly(param0);
@@ -641,14 +641,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_get_InputScope(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"InputScope"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"InputScope"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InputScope());
         }
         catch (...)
@@ -660,12 +660,6 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextEditContext_put_InputScope(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"InputScope"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -674,6 +668,12 @@ namespace py::cpp::Windows::UI::Text::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"InputScope"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Text::Core::CoreTextInputScope>(arg);
 
             self->obj.InputScope(param0);
@@ -688,14 +688,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_get_InputPaneDisplayPolicy(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"InputPaneDisplayPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"InputPaneDisplayPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InputPaneDisplayPolicy());
         }
         catch (...)
@@ -707,12 +707,6 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextEditContext_put_InputPaneDisplayPolicy(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"InputPaneDisplayPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -721,6 +715,12 @@ namespace py::cpp::Windows::UI::Text::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"InputPaneDisplayPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Text::Core::CoreTextInputPaneDisplayPolicy>(arg);
 
             self->obj.InputPaneDisplayPolicy(param0);
@@ -735,14 +735,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_add_CompositionCompleted(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"CompositionCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"CompositionCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.CompositionCompleted(param0));
@@ -756,14 +756,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_remove_CompositionCompleted(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"CompositionCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"CompositionCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CompositionCompleted(param0);
@@ -778,14 +778,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_add_CompositionStarted(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"CompositionStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"CompositionStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs>>(arg);
 
             return py::convert(self->obj.CompositionStarted(param0));
@@ -799,14 +799,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_remove_CompositionStarted(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"CompositionStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"CompositionStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CompositionStarted(param0);
@@ -821,14 +821,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_add_FocusRemoved(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"FocusRemoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"FocusRemoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.FocusRemoved(param0));
@@ -842,14 +842,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_remove_FocusRemoved(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"FocusRemoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"FocusRemoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FocusRemoved(param0);
@@ -864,14 +864,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_add_FormatUpdating(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"FormatUpdating"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"FormatUpdating"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs>>(arg);
 
             return py::convert(self->obj.FormatUpdating(param0));
@@ -885,14 +885,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_remove_FormatUpdating(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"FormatUpdating"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"FormatUpdating"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FormatUpdating(param0);
@@ -907,14 +907,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_add_LayoutRequested(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"LayoutRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"LayoutRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.LayoutRequested(param0));
@@ -928,14 +928,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_remove_LayoutRequested(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"LayoutRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"LayoutRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.LayoutRequested(param0);
@@ -950,14 +950,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_add_SelectionRequested(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"SelectionRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"SelectionRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.SelectionRequested(param0));
@@ -971,14 +971,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_remove_SelectionRequested(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"SelectionRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"SelectionRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SelectionRequested(param0);
@@ -993,14 +993,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_add_SelectionUpdating(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"SelectionUpdating"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"SelectionUpdating"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs>>(arg);
 
             return py::convert(self->obj.SelectionUpdating(param0));
@@ -1014,14 +1014,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_remove_SelectionUpdating(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"SelectionUpdating"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"SelectionUpdating"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SelectionUpdating(param0);
@@ -1036,14 +1036,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_add_TextRequested(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"TextRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"TextRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextTextRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.TextRequested(param0));
@@ -1057,14 +1057,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_remove_TextRequested(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"TextRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"TextRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.TextRequested(param0);
@@ -1079,14 +1079,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_add_TextUpdating(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"TextUpdating"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"TextUpdating"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs>>(arg);
 
             return py::convert(self->obj.TextUpdating(param0));
@@ -1100,14 +1100,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_remove_TextUpdating(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"TextUpdating"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"TextUpdating"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.TextUpdating(param0);
@@ -1122,14 +1122,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_add_NotifyFocusLeaveCompleted(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"NotifyFocusLeaveCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"NotifyFocusLeaveCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.NotifyFocusLeaveCompleted(param0));
@@ -1143,14 +1143,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_remove_NotifyFocusLeaveCompleted(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"NotifyFocusLeaveCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextEditContext", L"NotifyFocusLeaveCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.NotifyFocusLeaveCompleted(param0);
@@ -1267,14 +1267,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1292,14 +1292,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextFormatUpdatingEventArgs_get_Result(py::wrapper::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs", L"Result"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs", L"Result"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Result());
         }
         catch (...)
@@ -1311,12 +1311,6 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextFormatUpdatingEventArgs_put_Result(py::wrapper::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs", L"Result"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1325,6 +1319,12 @@ namespace py::cpp::Windows::UI::Text::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs", L"Result"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingResult>(arg);
 
             self->obj.Result(param0);
@@ -1339,14 +1339,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextFormatUpdatingEventArgs_get_BackgroundColor(py::wrapper::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs", L"BackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs", L"BackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BackgroundColor());
         }
         catch (...)
@@ -1358,14 +1358,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextFormatUpdatingEventArgs_get_IsCanceled(py::wrapper::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs", L"IsCanceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs", L"IsCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCanceled());
         }
         catch (...)
@@ -1377,14 +1377,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextFormatUpdatingEventArgs_get_Range(py::wrapper::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs", L"Range"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs", L"Range"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Range());
         }
         catch (...)
@@ -1396,14 +1396,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextFormatUpdatingEventArgs_get_Reason(py::wrapper::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs", L"Reason"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs", L"Reason"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reason());
         }
         catch (...)
@@ -1415,14 +1415,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextFormatUpdatingEventArgs_get_TextColor(py::wrapper::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs", L"TextColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs", L"TextColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TextColor());
         }
         catch (...)
@@ -1434,14 +1434,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextFormatUpdatingEventArgs_get_UnderlineColor(py::wrapper::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs", L"UnderlineColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs", L"UnderlineColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UnderlineColor());
         }
         catch (...)
@@ -1453,14 +1453,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextFormatUpdatingEventArgs_get_UnderlineType(py::wrapper::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs", L"UnderlineType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs", L"UnderlineType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UnderlineType());
         }
         catch (...)
@@ -1550,14 +1550,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextLayoutBounds_get_TextBounds(py::wrapper::Windows::UI::Text::Core::CoreTextLayoutBounds* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextLayoutBounds", L"TextBounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextLayoutBounds", L"TextBounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TextBounds());
         }
         catch (...)
@@ -1569,12 +1569,6 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextLayoutBounds_put_TextBounds(py::wrapper::Windows::UI::Text::Core::CoreTextLayoutBounds* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextLayoutBounds", L"TextBounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1583,6 +1577,12 @@ namespace py::cpp::Windows::UI::Text::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextLayoutBounds", L"TextBounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
             self->obj.TextBounds(param0);
@@ -1597,14 +1597,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextLayoutBounds_get_ControlBounds(py::wrapper::Windows::UI::Text::Core::CoreTextLayoutBounds* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextLayoutBounds", L"ControlBounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextLayoutBounds", L"ControlBounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ControlBounds());
         }
         catch (...)
@@ -1616,12 +1616,6 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextLayoutBounds_put_ControlBounds(py::wrapper::Windows::UI::Text::Core::CoreTextLayoutBounds* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextLayoutBounds", L"ControlBounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1630,6 +1624,12 @@ namespace py::cpp::Windows::UI::Text::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextLayoutBounds", L"ControlBounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
             self->obj.ControlBounds(param0);
@@ -1719,14 +1719,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextLayoutRequest", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextLayoutRequest", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1744,14 +1744,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextLayoutRequest_get_IsCanceled(py::wrapper::Windows::UI::Text::Core::CoreTextLayoutRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextLayoutRequest", L"IsCanceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextLayoutRequest", L"IsCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCanceled());
         }
         catch (...)
@@ -1763,14 +1763,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextLayoutRequest_get_LayoutBounds(py::wrapper::Windows::UI::Text::Core::CoreTextLayoutRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextLayoutRequest", L"LayoutBounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextLayoutRequest", L"LayoutBounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LayoutBounds());
         }
         catch (...)
@@ -1782,14 +1782,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextLayoutRequest_get_Range(py::wrapper::Windows::UI::Text::Core::CoreTextLayoutRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextLayoutRequest", L"Range"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextLayoutRequest", L"Range"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Range());
         }
         catch (...)
@@ -1801,14 +1801,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextLayoutRequest_get_LayoutBoundsVisualPixels(py::wrapper::Windows::UI::Text::Core::CoreTextLayoutRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextLayoutRequest", L"LayoutBoundsVisualPixels"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextLayoutRequest", L"LayoutBoundsVisualPixels"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LayoutBoundsVisualPixels());
         }
         catch (...)
@@ -1894,14 +1894,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextLayoutRequestedEventArgs_get_Request(py::wrapper::Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextLayoutRequestedEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextLayoutRequestedEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -1987,14 +1987,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextSelectionRequest", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextSelectionRequest", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -2012,14 +2012,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextSelectionRequest_get_Selection(py::wrapper::Windows::UI::Text::Core::CoreTextSelectionRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextSelectionRequest", L"Selection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextSelectionRequest", L"Selection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Selection());
         }
         catch (...)
@@ -2031,12 +2031,6 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextSelectionRequest_put_Selection(py::wrapper::Windows::UI::Text::Core::CoreTextSelectionRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextSelectionRequest", L"Selection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2045,6 +2039,12 @@ namespace py::cpp::Windows::UI::Text::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextSelectionRequest", L"Selection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Text::Core::CoreTextRange>(arg);
 
             self->obj.Selection(param0);
@@ -2059,14 +2059,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextSelectionRequest_get_IsCanceled(py::wrapper::Windows::UI::Text::Core::CoreTextSelectionRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextSelectionRequest", L"IsCanceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextSelectionRequest", L"IsCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCanceled());
         }
         catch (...)
@@ -2150,14 +2150,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextSelectionRequestedEventArgs_get_Request(py::wrapper::Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextSelectionRequestedEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextSelectionRequestedEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -2243,14 +2243,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -2268,14 +2268,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextSelectionUpdatingEventArgs_get_Result(py::wrapper::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs", L"Result"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs", L"Result"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Result());
         }
         catch (...)
@@ -2287,12 +2287,6 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextSelectionUpdatingEventArgs_put_Result(py::wrapper::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs", L"Result"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2301,6 +2295,12 @@ namespace py::cpp::Windows::UI::Text::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs", L"Result"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingResult>(arg);
 
             self->obj.Result(param0);
@@ -2315,14 +2315,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextSelectionUpdatingEventArgs_get_IsCanceled(py::wrapper::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs", L"IsCanceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs", L"IsCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCanceled());
         }
         catch (...)
@@ -2334,14 +2334,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextSelectionUpdatingEventArgs_get_Selection(py::wrapper::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs", L"Selection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs", L"Selection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Selection());
         }
         catch (...)
@@ -2418,14 +2418,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextServicesConstants_get_HiddenCharacter(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextServicesConstants", L"HiddenCharacter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextServicesConstants", L"HiddenCharacter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Text::Core::CoreTextServicesConstants::HiddenCharacter());
         }
         catch (...)
@@ -2509,14 +2509,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextServicesManager", L"CreateEditContext", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextServicesManager", L"CreateEditContext", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateEditContext());
             }
             catch (...)
@@ -2538,14 +2538,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextServicesManager", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextServicesManager", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::Text::Core::CoreTextServicesManager::GetForCurrentView());
             }
             catch (...)
@@ -2563,14 +2563,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextServicesManager_get_InputLanguage(py::wrapper::Windows::UI::Text::Core::CoreTextServicesManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextServicesManager", L"InputLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextServicesManager", L"InputLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InputLanguage());
         }
         catch (...)
@@ -2582,14 +2582,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextServicesManager_add_InputLanguageChanged(py::wrapper::Windows::UI::Text::Core::CoreTextServicesManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextServicesManager", L"InputLanguageChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextServicesManager", L"InputLanguageChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextServicesManager, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.InputLanguageChanged(param0));
@@ -2603,14 +2603,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextServicesManager_remove_InputLanguageChanged(py::wrapper::Windows::UI::Text::Core::CoreTextServicesManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextServicesManager", L"InputLanguageChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Text.Core.CoreTextServicesManager", L"InputLanguageChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.InputLanguageChanged(param0);
@@ -2728,14 +2728,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextTextRequest", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextTextRequest", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -2753,14 +2753,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextTextRequest_get_Text(py::wrapper::Windows::UI::Text::Core::CoreTextTextRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextRequest", L"Text"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextRequest", L"Text"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Text());
         }
         catch (...)
@@ -2772,12 +2772,6 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextTextRequest_put_Text(py::wrapper::Windows::UI::Text::Core::CoreTextTextRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextRequest", L"Text"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2786,6 +2780,12 @@ namespace py::cpp::Windows::UI::Text::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextRequest", L"Text"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Text(param0);
@@ -2800,14 +2800,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextTextRequest_get_IsCanceled(py::wrapper::Windows::UI::Text::Core::CoreTextTextRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextRequest", L"IsCanceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextRequest", L"IsCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCanceled());
         }
         catch (...)
@@ -2819,14 +2819,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextTextRequest_get_Range(py::wrapper::Windows::UI::Text::Core::CoreTextTextRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextRequest", L"Range"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextRequest", L"Range"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Range());
         }
         catch (...)
@@ -2911,14 +2911,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextTextRequestedEventArgs_get_Request(py::wrapper::Windows::UI::Text::Core::CoreTextTextRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextRequestedEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextRequestedEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -3004,14 +3004,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -3029,14 +3029,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextTextUpdatingEventArgs_get_Result(py::wrapper::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs", L"Result"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs", L"Result"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Result());
         }
         catch (...)
@@ -3048,12 +3048,6 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextTextUpdatingEventArgs_put_Result(py::wrapper::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs", L"Result"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3062,6 +3056,12 @@ namespace py::cpp::Windows::UI::Text::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs", L"Result"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Text::Core::CoreTextTextUpdatingResult>(arg);
 
             self->obj.Result(param0);
@@ -3076,14 +3076,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextTextUpdatingEventArgs_get_InputLanguage(py::wrapper::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs", L"InputLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs", L"InputLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InputLanguage());
         }
         catch (...)
@@ -3095,14 +3095,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextTextUpdatingEventArgs_get_IsCanceled(py::wrapper::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs", L"IsCanceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs", L"IsCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCanceled());
         }
         catch (...)
@@ -3114,14 +3114,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextTextUpdatingEventArgs_get_NewSelection(py::wrapper::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs", L"NewSelection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs", L"NewSelection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NewSelection());
         }
         catch (...)
@@ -3133,14 +3133,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextTextUpdatingEventArgs_get_Range(py::wrapper::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs", L"Range"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs", L"Range"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Range());
         }
         catch (...)
@@ -3152,14 +3152,14 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextTextUpdatingEventArgs_get_Text(py::wrapper::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs", L"Text"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs", L"Text"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Text());
         }
         catch (...)

@@ -20,14 +20,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.AdaptiveCardBuilder", L"CreateAdaptiveCardFromJson", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.AdaptiveCardBuilder", L"CreateAdaptiveCardFromJson", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Shell::AdaptiveCardBuilder::CreateAdaptiveCardFromJson(param0));
@@ -119,14 +119,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.FocusSession", L"End", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.FocusSession", L"End", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.End();
                 Py_RETURN_NONE;
             }
@@ -145,14 +145,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* FocusSession_get_Id(py::wrapper::Windows::UI::Shell::FocusSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.FocusSession", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.FocusSession", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -239,14 +239,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.FocusSessionManager", L"DeactivateFocus", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.FocusSessionManager", L"DeactivateFocus", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.DeactivateFocus();
                 Py_RETURN_NONE;
             }
@@ -269,14 +269,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.FocusSessionManager", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.FocusSessionManager", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::Shell::FocusSessionManager::GetDefault());
             }
             catch (...)
@@ -298,14 +298,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.FocusSessionManager", L"GetSession", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.FocusSessionManager", L"GetSession", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetSession(param0));
@@ -329,14 +329,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.FocusSessionManager", L"TryStartFocusSession", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.FocusSessionManager", L"TryStartFocusSession", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryStartFocusSession());
             }
             catch (...)
@@ -347,14 +347,14 @@ namespace py::cpp::Windows::UI::Shell
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.FocusSessionManager", L"TryStartFocusSession", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.FocusSessionManager", L"TryStartFocusSession", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
 
                 return py::convert(self->obj.TryStartFocusSession(param0));
@@ -374,14 +374,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* FocusSessionManager_get_IsFocusActive(py::wrapper::Windows::UI::Shell::FocusSessionManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.FocusSessionManager", L"IsFocusActive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.FocusSessionManager", L"IsFocusActive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsFocusActive());
         }
         catch (...)
@@ -393,14 +393,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* FocusSessionManager_get_IsSupported(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.FocusSessionManager", L"IsSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.FocusSessionManager", L"IsSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Shell::FocusSessionManager::IsSupported());
         }
         catch (...)
@@ -412,14 +412,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* FocusSessionManager_add_IsFocusActiveChanged(py::wrapper::Windows::UI::Shell::FocusSessionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.FocusSessionManager", L"IsFocusActiveChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.FocusSessionManager", L"IsFocusActiveChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Shell::FocusSessionManager, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.IsFocusActiveChanged(param0));
@@ -433,14 +433,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* FocusSessionManager_remove_IsFocusActiveChanged(py::wrapper::Windows::UI::Shell::FocusSessionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.FocusSessionManager", L"IsFocusActiveChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.FocusSessionManager", L"IsFocusActiveChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.IsFocusActiveChanged(param0);
@@ -583,14 +583,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.SecurityAppManager", L"Register", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.SecurityAppManager", L"Register", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Shell::SecurityAppKind>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 2);
@@ -617,14 +617,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.SecurityAppManager", L"Unregister", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.SecurityAppManager", L"Unregister", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Shell::SecurityAppKind>(args, 0);
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
 
@@ -650,14 +650,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.SecurityAppManager", L"UpdateState", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.SecurityAppManager", L"UpdateState", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Shell::SecurityAppKind>(args, 0);
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Shell::SecurityAppState>(args, 2);
@@ -754,14 +754,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* ShareWindowCommandEventArgs_get_Command(py::wrapper::Windows::UI::Shell::ShareWindowCommandEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.ShareWindowCommandEventArgs", L"Command"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.ShareWindowCommandEventArgs", L"Command"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Command());
         }
         catch (...)
@@ -773,12 +773,6 @@ namespace py::cpp::Windows::UI::Shell
 
     static int ShareWindowCommandEventArgs_put_Command(py::wrapper::Windows::UI::Shell::ShareWindowCommandEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.ShareWindowCommandEventArgs", L"Command"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -787,6 +781,12 @@ namespace py::cpp::Windows::UI::Shell
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.ShareWindowCommandEventArgs", L"Command"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Shell::ShareWindowCommand>(arg);
 
             self->obj.Command(param0);
@@ -801,14 +801,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* ShareWindowCommandEventArgs_get_WindowId(py::wrapper::Windows::UI::Shell::ShareWindowCommandEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.ShareWindowCommandEventArgs", L"WindowId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.ShareWindowCommandEventArgs", L"WindowId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WindowId());
         }
         catch (...)
@@ -895,14 +895,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.ShareWindowCommandSource", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.ShareWindowCommandSource", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::Shell::ShareWindowCommandSource::GetForCurrentView());
             }
             catch (...)
@@ -924,14 +924,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.ShareWindowCommandSource", L"ReportCommandChanged", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.ShareWindowCommandSource", L"ReportCommandChanged", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportCommandChanged();
                 Py_RETURN_NONE;
             }
@@ -954,14 +954,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.ShareWindowCommandSource", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.ShareWindowCommandSource", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -984,14 +984,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.ShareWindowCommandSource", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.ShareWindowCommandSource", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -1010,14 +1010,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* ShareWindowCommandSource_add_CommandInvoked(py::wrapper::Windows::UI::Shell::ShareWindowCommandSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.ShareWindowCommandSource", L"CommandInvoked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.ShareWindowCommandSource", L"CommandInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Shell::ShareWindowCommandSource, winrt::Windows::UI::Shell::ShareWindowCommandEventArgs>>(arg);
 
             return py::convert(self->obj.CommandInvoked(param0));
@@ -1031,14 +1031,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* ShareWindowCommandSource_remove_CommandInvoked(py::wrapper::Windows::UI::Shell::ShareWindowCommandSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.ShareWindowCommandSource", L"CommandInvoked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.ShareWindowCommandSource", L"CommandInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CommandInvoked(param0);
@@ -1053,14 +1053,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* ShareWindowCommandSource_add_CommandRequested(py::wrapper::Windows::UI::Shell::ShareWindowCommandSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.ShareWindowCommandSource", L"CommandRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.ShareWindowCommandSource", L"CommandRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Shell::ShareWindowCommandSource, winrt::Windows::UI::Shell::ShareWindowCommandEventArgs>>(arg);
 
             return py::convert(self->obj.CommandRequested(param0));
@@ -1074,14 +1074,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* ShareWindowCommandSource_remove_CommandRequested(py::wrapper::Windows::UI::Shell::ShareWindowCommandSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.ShareWindowCommandSource", L"CommandRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.ShareWindowCommandSource", L"CommandRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CommandRequested(param0);
@@ -1202,14 +1202,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.TaskbarManager", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.TaskbarManager", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::Shell::TaskbarManager::GetDefault());
             }
             catch (...)
@@ -1231,14 +1231,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.TaskbarManager", L"IsAppListEntryPinnedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.TaskbarManager", L"IsAppListEntryPinnedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Core::AppListEntry>(args, 0);
 
                 return py::convert(self->obj.IsAppListEntryPinnedAsync(param0));
@@ -1262,14 +1262,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.TaskbarManager", L"IsCurrentAppPinnedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.TaskbarManager", L"IsCurrentAppPinnedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.IsCurrentAppPinnedAsync());
             }
             catch (...)
@@ -1291,14 +1291,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.TaskbarManager", L"IsSecondaryTilePinnedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.TaskbarManager", L"IsSecondaryTilePinnedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.IsSecondaryTilePinnedAsync(param0));
@@ -1322,14 +1322,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.TaskbarManager", L"RequestPinAppListEntryAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.TaskbarManager", L"RequestPinAppListEntryAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Core::AppListEntry>(args, 0);
 
                 return py::convert(self->obj.RequestPinAppListEntryAsync(param0));
@@ -1353,14 +1353,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.TaskbarManager", L"RequestPinCurrentAppAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.TaskbarManager", L"RequestPinCurrentAppAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.RequestPinCurrentAppAsync());
             }
             catch (...)
@@ -1382,14 +1382,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.TaskbarManager", L"RequestPinSecondaryTileAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.TaskbarManager", L"RequestPinSecondaryTileAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::StartScreen::SecondaryTile>(args, 0);
 
                 return py::convert(self->obj.RequestPinSecondaryTileAsync(param0));
@@ -1413,14 +1413,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.TaskbarManager", L"TryUnpinSecondaryTileAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.TaskbarManager", L"TryUnpinSecondaryTileAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TryUnpinSecondaryTileAsync(param0));
@@ -1440,14 +1440,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* TaskbarManager_get_IsPinningAllowed(py::wrapper::Windows::UI::Shell::TaskbarManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.TaskbarManager", L"IsPinningAllowed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.TaskbarManager", L"IsPinningAllowed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPinningAllowed());
         }
         catch (...)
@@ -1459,14 +1459,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* TaskbarManager_get_IsSupported(py::wrapper::Windows::UI::Shell::TaskbarManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.TaskbarManager", L"IsSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.TaskbarManager", L"IsSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSupported());
         }
         catch (...)
@@ -1608,14 +1608,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTab", L"ReportThumbnailAvailable", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTab", L"ReportThumbnailAvailable", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportThumbnailAvailable();
                 Py_RETURN_NONE;
             }
@@ -1634,14 +1634,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTab_get_TreatAsSecondaryTileId(py::wrapper::Windows::UI::Shell::WindowTab* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTab", L"TreatAsSecondaryTileId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTab", L"TreatAsSecondaryTileId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TreatAsSecondaryTileId());
         }
         catch (...)
@@ -1653,12 +1653,6 @@ namespace py::cpp::Windows::UI::Shell
 
     static int WindowTab_put_TreatAsSecondaryTileId(py::wrapper::Windows::UI::Shell::WindowTab* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTab", L"TreatAsSecondaryTileId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1667,6 +1661,12 @@ namespace py::cpp::Windows::UI::Shell
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTab", L"TreatAsSecondaryTileId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.TreatAsSecondaryTileId(param0);
@@ -1681,14 +1681,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTab_get_Title(py::wrapper::Windows::UI::Shell::WindowTab* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTab", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTab", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -1700,12 +1700,6 @@ namespace py::cpp::Windows::UI::Shell
 
     static int WindowTab_put_Title(py::wrapper::Windows::UI::Shell::WindowTab* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTab", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1714,6 +1708,12 @@ namespace py::cpp::Windows::UI::Shell
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTab", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Title(param0);
@@ -1728,14 +1728,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTab_get_Tag(py::wrapper::Windows::UI::Shell::WindowTab* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTab", L"Tag"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTab", L"Tag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Tag());
         }
         catch (...)
@@ -1747,12 +1747,6 @@ namespace py::cpp::Windows::UI::Shell
 
     static int WindowTab_put_Tag(py::wrapper::Windows::UI::Shell::WindowTab* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTab", L"Tag"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1761,6 +1755,12 @@ namespace py::cpp::Windows::UI::Shell
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTab", L"Tag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.Tag(param0);
@@ -1775,14 +1775,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTab_get_Icon(py::wrapper::Windows::UI::Shell::WindowTab* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTab", L"Icon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTab", L"Icon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Icon());
         }
         catch (...)
@@ -1794,12 +1794,6 @@ namespace py::cpp::Windows::UI::Shell
 
     static int WindowTab_put_Icon(py::wrapper::Windows::UI::Shell::WindowTab* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTab", L"Icon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1808,6 +1802,12 @@ namespace py::cpp::Windows::UI::Shell
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTab", L"Icon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Shell::WindowTabIcon>(arg);
 
             self->obj.Icon(param0);
@@ -1822,14 +1822,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTab_get_Group(py::wrapper::Windows::UI::Shell::WindowTab* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTab", L"Group"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTab", L"Group"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Group());
         }
         catch (...)
@@ -1841,12 +1841,6 @@ namespace py::cpp::Windows::UI::Shell
 
     static int WindowTab_put_Group(py::wrapper::Windows::UI::Shell::WindowTab* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTab", L"Group"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1855,6 +1849,12 @@ namespace py::cpp::Windows::UI::Shell
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTab", L"Group"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Shell::WindowTabGroup>(arg);
 
             self->obj.Group(param0);
@@ -1944,14 +1944,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabCloseRequestedEventArgs_get_Tab(py::wrapper::Windows::UI::Shell::WindowTabCloseRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabCloseRequestedEventArgs", L"Tab"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabCloseRequestedEventArgs", L"Tab"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Tab());
         }
         catch (...)
@@ -2037,14 +2037,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Shell::WindowTab>(args, 0);
 
                 self->obj.Append(param0);
@@ -2069,14 +2069,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -2099,14 +2099,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -2128,14 +2128,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -2159,14 +2159,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Shell::WindowTab, true>>(args, 1);
 
@@ -2191,14 +2191,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -2220,14 +2220,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Shell::WindowTab>(args, 0);
                 uint32_t param1 {  };
 
@@ -2264,14 +2264,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Shell::WindowTab>(args, 1);
 
@@ -2297,14 +2297,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"MoveTab", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"MoveTab", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Shell::WindowTab>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -2330,14 +2330,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -2362,14 +2362,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -2392,14 +2392,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Shell::WindowTab, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -2424,14 +2424,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Shell::WindowTab>(args, 1);
 
@@ -2453,14 +2453,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabCollection_get_Size(py::wrapper::Windows::UI::Shell::WindowTabCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -2706,14 +2706,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabGroup_get_Title(py::wrapper::Windows::UI::Shell::WindowTabGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabGroup", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabGroup", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -2725,12 +2725,6 @@ namespace py::cpp::Windows::UI::Shell
 
     static int WindowTabGroup_put_Title(py::wrapper::Windows::UI::Shell::WindowTabGroup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabGroup", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2739,6 +2733,12 @@ namespace py::cpp::Windows::UI::Shell
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabGroup", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Title(param0);
@@ -2753,14 +2753,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabGroup_get_Icon(py::wrapper::Windows::UI::Shell::WindowTabGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabGroup", L"Icon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabGroup", L"Icon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Icon());
         }
         catch (...)
@@ -2772,12 +2772,6 @@ namespace py::cpp::Windows::UI::Shell
 
     static int WindowTabGroup_put_Icon(py::wrapper::Windows::UI::Shell::WindowTabGroup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabGroup", L"Icon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2786,6 +2780,12 @@ namespace py::cpp::Windows::UI::Shell
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabGroup", L"Icon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Shell::WindowTabIcon>(arg);
 
             self->obj.Icon(param0);
@@ -2875,14 +2875,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabIcon", L"CreateFromFontGlyph", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabIcon", L"CreateFromFontGlyph", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -2896,14 +2896,14 @@ namespace py::cpp::Windows::UI::Shell
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabIcon", L"CreateFromFontGlyph", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabIcon", L"CreateFromFontGlyph", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 2);
@@ -2929,14 +2929,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabIcon", L"CreateFromImage", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabIcon", L"CreateFromImage", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Shell::WindowTabIcon::CreateFromImage(param0));
@@ -3056,14 +3056,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabManager", L"GetForWindow", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabManager", L"GetForWindow", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowId>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Shell::WindowTabManager::GetForWindow(param0));
@@ -3087,14 +3087,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabManager", L"IsSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabManager", L"IsSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::Shell::WindowTabManager::IsSupported());
             }
             catch (...)
@@ -3116,14 +3116,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabManager", L"IsTabTearOutSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabManager", L"IsTabTearOutSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::Shell::WindowTabManager::IsTabTearOutSupported());
             }
             catch (...)
@@ -3145,14 +3145,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabManager", L"SetActiveTab", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabManager", L"SetActiveTab", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Shell::WindowTab>(args, 0);
 
                 self->obj.SetActiveTab(param0);
@@ -3173,14 +3173,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabManager_get_Tabs(py::wrapper::Windows::UI::Shell::WindowTabManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabManager", L"Tabs"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabManager", L"Tabs"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Tabs());
         }
         catch (...)
@@ -3192,14 +3192,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabManager_add_TabCloseRequested(py::wrapper::Windows::UI::Shell::WindowTabManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.WindowTabManager", L"TabCloseRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.WindowTabManager", L"TabCloseRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Shell::WindowTabManager, winrt::Windows::UI::Shell::WindowTabCloseRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.TabCloseRequested(param0));
@@ -3213,14 +3213,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabManager_remove_TabCloseRequested(py::wrapper::Windows::UI::Shell::WindowTabManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.WindowTabManager", L"TabCloseRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.WindowTabManager", L"TabCloseRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.TabCloseRequested(param0);
@@ -3235,14 +3235,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabManager_add_TabSwitchRequested(py::wrapper::Windows::UI::Shell::WindowTabManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.WindowTabManager", L"TabSwitchRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.WindowTabManager", L"TabSwitchRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Shell::WindowTabManager, winrt::Windows::UI::Shell::WindowTabSwitchRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.TabSwitchRequested(param0));
@@ -3256,14 +3256,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabManager_remove_TabSwitchRequested(py::wrapper::Windows::UI::Shell::WindowTabManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.WindowTabManager", L"TabSwitchRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.WindowTabManager", L"TabSwitchRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.TabSwitchRequested(param0);
@@ -3278,14 +3278,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabManager_add_TabTearOutRequested(py::wrapper::Windows::UI::Shell::WindowTabManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.WindowTabManager", L"TabTearOutRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.WindowTabManager", L"TabTearOutRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Shell::WindowTabManager, winrt::Windows::UI::Shell::WindowTabTearOutRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.TabTearOutRequested(param0));
@@ -3299,14 +3299,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabManager_remove_TabTearOutRequested(py::wrapper::Windows::UI::Shell::WindowTabManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.WindowTabManager", L"TabTearOutRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.WindowTabManager", L"TabTearOutRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.TabTearOutRequested(param0);
@@ -3321,14 +3321,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabManager_add_TabThumbnailRequested(py::wrapper::Windows::UI::Shell::WindowTabManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.WindowTabManager", L"TabThumbnailRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.WindowTabManager", L"TabThumbnailRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Shell::WindowTabManager, winrt::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.TabThumbnailRequested(param0));
@@ -3342,14 +3342,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabManager_remove_TabThumbnailRequested(py::wrapper::Windows::UI::Shell::WindowTabManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.WindowTabManager", L"TabThumbnailRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Shell.WindowTabManager", L"TabThumbnailRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.TabThumbnailRequested(param0);
@@ -3471,14 +3471,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabSwitchRequestedEventArgs_get_Tab(py::wrapper::Windows::UI::Shell::WindowTabSwitchRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabSwitchRequestedEventArgs", L"Tab"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabSwitchRequestedEventArgs", L"Tab"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Tab());
         }
         catch (...)
@@ -3564,14 +3564,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabTearOutRequestedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabTearOutRequestedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -3589,14 +3589,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabTearOutRequestedEventArgs_get_WindowId(py::wrapper::Windows::UI::Shell::WindowTabTearOutRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabTearOutRequestedEventArgs", L"WindowId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabTearOutRequestedEventArgs", L"WindowId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WindowId());
         }
         catch (...)
@@ -3608,12 +3608,6 @@ namespace py::cpp::Windows::UI::Shell
 
     static int WindowTabTearOutRequestedEventArgs_put_WindowId(py::wrapper::Windows::UI::Shell::WindowTabTearOutRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabTearOutRequestedEventArgs", L"WindowId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3622,6 +3616,12 @@ namespace py::cpp::Windows::UI::Shell
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabTearOutRequestedEventArgs", L"WindowId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint64_t>(arg);
 
             self->obj.WindowId(param0);
@@ -3636,14 +3636,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabTearOutRequestedEventArgs_get_Tab(py::wrapper::Windows::UI::Shell::WindowTabTearOutRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabTearOutRequestedEventArgs", L"Tab"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabTearOutRequestedEventArgs", L"Tab"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Tab());
         }
         catch (...)
@@ -3731,14 +3731,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -3756,14 +3756,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabThumbnailRequestedEventArgs_get_Image(py::wrapper::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs", L"Image"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs", L"Image"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Image());
         }
         catch (...)
@@ -3775,12 +3775,6 @@ namespace py::cpp::Windows::UI::Shell
 
     static int WindowTabThumbnailRequestedEventArgs_put_Image(py::wrapper::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs", L"Image"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3789,6 +3783,12 @@ namespace py::cpp::Windows::UI::Shell
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs", L"Image"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
             self->obj.Image(param0);
@@ -3803,14 +3803,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabThumbnailRequestedEventArgs_get_IsCompositedOnWindow(py::wrapper::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs", L"IsCompositedOnWindow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs", L"IsCompositedOnWindow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCompositedOnWindow());
         }
         catch (...)
@@ -3822,14 +3822,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabThumbnailRequestedEventArgs_get_RequestedSize(py::wrapper::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs", L"RequestedSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs", L"RequestedSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestedSize());
         }
         catch (...)
@@ -3841,14 +3841,14 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabThumbnailRequestedEventArgs_get_Tab(py::wrapper::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs", L"Tab"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs", L"Tab"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Tab());
         }
         catch (...)
@@ -3938,14 +3938,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.IAdaptiveCard", L"ToJson", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.IAdaptiveCard", L"ToJson", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToJson());
             }
             catch (...)
@@ -4037,14 +4037,14 @@ namespace py::cpp::Windows::UI::Shell
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.IAdaptiveCardBuilderStatics", L"CreateAdaptiveCardFromJson", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Shell.IAdaptiveCardBuilderStatics", L"CreateAdaptiveCardFromJson", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CreateAdaptiveCardFromJson(param0));

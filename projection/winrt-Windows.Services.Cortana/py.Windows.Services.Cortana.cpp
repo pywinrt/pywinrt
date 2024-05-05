@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Services::Cortana
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaActionableInsights", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaActionableInsights", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Services::Cortana::CortanaActionableInsights::GetDefault());
             }
             catch (...)
@@ -57,14 +57,14 @@ namespace py::cpp::Windows::Services::Cortana
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaActionableInsights", L"GetForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaActionableInsights", L"GetForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::Services::Cortana::CortanaActionableInsights::GetForUser(param0));
@@ -88,14 +88,14 @@ namespace py::cpp::Windows::Services::Cortana
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaActionableInsights", L"IsAvailableAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaActionableInsights", L"IsAvailableAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.IsAvailableAsync());
             }
             catch (...)
@@ -117,14 +117,14 @@ namespace py::cpp::Windows::Services::Cortana
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaActionableInsights", L"ShowInsightsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaActionableInsights", L"ShowInsightsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DataPackage>(args, 0);
 
                 return py::convert(self->obj.ShowInsightsAsync(param0));
@@ -137,14 +137,14 @@ namespace py::cpp::Windows::Services::Cortana
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaActionableInsights", L"ShowInsightsAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaActionableInsights", L"ShowInsightsAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DataPackage>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Services::Cortana::CortanaActionableInsightsOptions>(args, 1);
 
@@ -169,14 +169,14 @@ namespace py::cpp::Windows::Services::Cortana
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaActionableInsights", L"ShowInsightsForImageAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaActionableInsights", L"ShowInsightsForImageAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
 
                 return py::convert(self->obj.ShowInsightsForImageAsync(param0));
@@ -189,14 +189,14 @@ namespace py::cpp::Windows::Services::Cortana
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaActionableInsights", L"ShowInsightsForImageAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaActionableInsights", L"ShowInsightsForImageAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Services::Cortana::CortanaActionableInsightsOptions>(args, 1);
 
@@ -221,14 +221,14 @@ namespace py::cpp::Windows::Services::Cortana
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaActionableInsights", L"ShowInsightsForTextAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaActionableInsights", L"ShowInsightsForTextAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ShowInsightsForTextAsync(param0));
@@ -241,14 +241,14 @@ namespace py::cpp::Windows::Services::Cortana
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaActionableInsights", L"ShowInsightsForTextAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaActionableInsights", L"ShowInsightsForTextAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Services::Cortana::CortanaActionableInsightsOptions>(args, 1);
 
@@ -269,14 +269,14 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyObject* CortanaActionableInsights_get_User(py::wrapper::Windows::Services::Cortana::CortanaActionableInsights* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Cortana.CortanaActionableInsights", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Cortana.CortanaActionableInsights", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -411,14 +411,14 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyObject* CortanaActionableInsightsOptions_get_SurroundingText(py::wrapper::Windows::Services::Cortana::CortanaActionableInsightsOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Cortana.CortanaActionableInsightsOptions", L"SurroundingText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Cortana.CortanaActionableInsightsOptions", L"SurroundingText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SurroundingText());
         }
         catch (...)
@@ -430,12 +430,6 @@ namespace py::cpp::Windows::Services::Cortana
 
     static int CortanaActionableInsightsOptions_put_SurroundingText(py::wrapper::Windows::Services::Cortana::CortanaActionableInsightsOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Cortana.CortanaActionableInsightsOptions", L"SurroundingText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -444,6 +438,12 @@ namespace py::cpp::Windows::Services::Cortana
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Cortana.CortanaActionableInsightsOptions", L"SurroundingText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.SurroundingText(param0);
@@ -458,14 +458,14 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyObject* CortanaActionableInsightsOptions_get_ContentSourceWebLink(py::wrapper::Windows::Services::Cortana::CortanaActionableInsightsOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Cortana.CortanaActionableInsightsOptions", L"ContentSourceWebLink"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Cortana.CortanaActionableInsightsOptions", L"ContentSourceWebLink"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentSourceWebLink());
         }
         catch (...)
@@ -477,12 +477,6 @@ namespace py::cpp::Windows::Services::Cortana
 
     static int CortanaActionableInsightsOptions_put_ContentSourceWebLink(py::wrapper::Windows::Services::Cortana::CortanaActionableInsightsOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Cortana.CortanaActionableInsightsOptions", L"ContentSourceWebLink"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -491,6 +485,12 @@ namespace py::cpp::Windows::Services::Cortana
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Cortana.CortanaActionableInsightsOptions", L"ContentSourceWebLink"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.ContentSourceWebLink(param0);
@@ -580,14 +580,14 @@ namespace py::cpp::Windows::Services::Cortana
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaPermissionsManager", L"ArePermissionsGrantedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaPermissionsManager", L"ArePermissionsGrantedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Services::Cortana::CortanaPermission>>(args, 0);
 
                 return py::convert(self->obj.ArePermissionsGrantedAsync(param0));
@@ -611,14 +611,14 @@ namespace py::cpp::Windows::Services::Cortana
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaPermissionsManager", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaPermissionsManager", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Services::Cortana::CortanaPermissionsManager::GetDefault());
             }
             catch (...)
@@ -640,14 +640,14 @@ namespace py::cpp::Windows::Services::Cortana
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaPermissionsManager", L"GrantPermissionsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaPermissionsManager", L"GrantPermissionsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Services::Cortana::CortanaPermission>>(args, 0);
 
                 return py::convert(self->obj.GrantPermissionsAsync(param0));
@@ -671,14 +671,14 @@ namespace py::cpp::Windows::Services::Cortana
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaPermissionsManager", L"IsSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaPermissionsManager", L"IsSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.IsSupported());
             }
             catch (...)
@@ -700,14 +700,14 @@ namespace py::cpp::Windows::Services::Cortana
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaPermissionsManager", L"RevokePermissionsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaPermissionsManager", L"RevokePermissionsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Services::Cortana::CortanaPermission>>(args, 0);
 
                 return py::convert(self->obj.RevokePermissionsAsync(param0));
@@ -830,14 +830,14 @@ namespace py::cpp::Windows::Services::Cortana
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaSettings", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaSettings", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Services::Cortana::CortanaSettings::GetDefault());
             }
             catch (...)
@@ -859,14 +859,14 @@ namespace py::cpp::Windows::Services::Cortana
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaSettings", L"IsSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaSettings", L"IsSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Services::Cortana::CortanaSettings::IsSupported());
             }
             catch (...)
@@ -884,14 +884,14 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyObject* CortanaSettings_get_IsVoiceActivationEnabled(py::wrapper::Windows::Services::Cortana::CortanaSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Cortana.CortanaSettings", L"IsVoiceActivationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Cortana.CortanaSettings", L"IsVoiceActivationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsVoiceActivationEnabled());
         }
         catch (...)
@@ -903,12 +903,6 @@ namespace py::cpp::Windows::Services::Cortana
 
     static int CortanaSettings_put_IsVoiceActivationEnabled(py::wrapper::Windows::Services::Cortana::CortanaSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Cortana.CortanaSettings", L"IsVoiceActivationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -917,6 +911,12 @@ namespace py::cpp::Windows::Services::Cortana
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Cortana.CortanaSettings", L"IsVoiceActivationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsVoiceActivationEnabled(param0);
@@ -931,14 +931,14 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyObject* CortanaSettings_get_HasUserConsentToVoiceActivation(py::wrapper::Windows::Services::Cortana::CortanaSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Cortana.CortanaSettings", L"HasUserConsentToVoiceActivation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Cortana.CortanaSettings", L"HasUserConsentToVoiceActivation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasUserConsentToVoiceActivation());
         }
         catch (...)

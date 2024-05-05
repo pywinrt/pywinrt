@@ -46,14 +46,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static PyObject* PhoneCallOrigin_get_Location(py::wrapper::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin", L"Location"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin", L"Location"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Location());
         }
         catch (...)
@@ -65,12 +65,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static int PhoneCallOrigin_put_Location(py::wrapper::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin", L"Location"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -79,6 +73,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin", L"Location"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Location(param0);
@@ -93,14 +93,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static PyObject* PhoneCallOrigin_get_CategoryDescription(py::wrapper::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin", L"CategoryDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin", L"CategoryDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CategoryDescription());
         }
         catch (...)
@@ -112,12 +112,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static int PhoneCallOrigin_put_CategoryDescription(py::wrapper::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin", L"CategoryDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -126,6 +120,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin", L"CategoryDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.CategoryDescription(param0);
@@ -140,14 +140,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static PyObject* PhoneCallOrigin_get_Category(py::wrapper::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin", L"Category"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin", L"Category"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Category());
         }
         catch (...)
@@ -159,12 +159,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static int PhoneCallOrigin_put_Category(py::wrapper::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin", L"Category"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -173,6 +167,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin", L"Category"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Category(param0);
@@ -187,14 +187,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static PyObject* PhoneCallOrigin_get_DisplayName(py::wrapper::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -206,12 +206,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static int PhoneCallOrigin_put_DisplayName(py::wrapper::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -220,6 +214,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayName(param0);
@@ -234,14 +234,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static PyObject* PhoneCallOrigin_get_DisplayPicture(py::wrapper::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin", L"DisplayPicture"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin", L"DisplayPicture"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayPicture());
         }
         catch (...)
@@ -253,12 +253,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static int PhoneCallOrigin_put_DisplayPicture(py::wrapper::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin", L"DisplayPicture"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -267,6 +261,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin", L"DisplayPicture"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(arg);
 
             self->obj.DisplayPicture(param0);
@@ -351,14 +351,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager", L"RequestSetAsActiveCallOriginAppAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager", L"RequestSetAsActiveCallOriginAppAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager::RequestSetAsActiveCallOriginAppAsync());
             }
             catch (...)
@@ -380,14 +380,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager", L"SetCallOrigin", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager", L"SetCallOrigin", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin>(args, 1);
 
@@ -413,14 +413,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager", L"ShowPhoneCallOriginSettingsUI", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager", L"ShowPhoneCallOriginSettingsUI", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager::ShowPhoneCallOriginSettingsUI();
                 Py_RETURN_NONE;
             }
@@ -439,14 +439,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static PyObject* PhoneCallOriginManager_get_IsCurrentAppActiveCallOriginApp(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager", L"IsCurrentAppActiveCallOriginApp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager", L"IsCurrentAppActiveCallOriginApp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager::IsCurrentAppActiveCallOriginApp());
         }
         catch (...)
@@ -458,14 +458,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static PyObject* PhoneCallOriginManager_get_IsSupported(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager", L"IsSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager", L"IsSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager::IsSupported());
         }
         catch (...)

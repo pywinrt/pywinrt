@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.DeleteSmsMessageOperation", L"Cancel", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.DeleteSmsMessageOperation", L"Cancel", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Cancel();
                 Py_RETURN_NONE;
             }
@@ -58,14 +58,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.DeleteSmsMessageOperation", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.DeleteSmsMessageOperation", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -88,14 +88,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.DeleteSmsMessageOperation", L"GetResults", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.DeleteSmsMessageOperation", L"GetResults", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.GetResults();
                 Py_RETURN_NONE;
             }
@@ -114,14 +114,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* DeleteSmsMessageOperation_get_ErrorCode(py::wrapper::Windows::Devices::Sms::DeleteSmsMessageOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.DeleteSmsMessageOperation", L"ErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.DeleteSmsMessageOperation", L"ErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorCode());
         }
         catch (...)
@@ -133,14 +133,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* DeleteSmsMessageOperation_get_Id(py::wrapper::Windows::Devices::Sms::DeleteSmsMessageOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.DeleteSmsMessageOperation", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.DeleteSmsMessageOperation", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -152,14 +152,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* DeleteSmsMessageOperation_get_Status(py::wrapper::Windows::Devices::Sms::DeleteSmsMessageOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.DeleteSmsMessageOperation", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.DeleteSmsMessageOperation", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -171,14 +171,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* DeleteSmsMessageOperation_get_Completed(py::wrapper::Windows::Devices::Sms::DeleteSmsMessageOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.DeleteSmsMessageOperation", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.DeleteSmsMessageOperation", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Completed());
         }
         catch (...)
@@ -190,12 +190,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int DeleteSmsMessageOperation_put_Completed(py::wrapper::Windows::Devices::Sms::DeleteSmsMessageOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.DeleteSmsMessageOperation", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -204,6 +198,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.DeleteSmsMessageOperation", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::AsyncActionCompletedHandler>(arg);
 
             self->obj.Completed(param0);
@@ -304,14 +304,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.DeleteSmsMessagesOperation", L"Cancel", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.DeleteSmsMessagesOperation", L"Cancel", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Cancel();
                 Py_RETURN_NONE;
             }
@@ -334,14 +334,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.DeleteSmsMessagesOperation", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.DeleteSmsMessagesOperation", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -364,14 +364,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.DeleteSmsMessagesOperation", L"GetResults", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.DeleteSmsMessagesOperation", L"GetResults", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.GetResults();
                 Py_RETURN_NONE;
             }
@@ -390,14 +390,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* DeleteSmsMessagesOperation_get_ErrorCode(py::wrapper::Windows::Devices::Sms::DeleteSmsMessagesOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.DeleteSmsMessagesOperation", L"ErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.DeleteSmsMessagesOperation", L"ErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorCode());
         }
         catch (...)
@@ -409,14 +409,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* DeleteSmsMessagesOperation_get_Id(py::wrapper::Windows::Devices::Sms::DeleteSmsMessagesOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.DeleteSmsMessagesOperation", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.DeleteSmsMessagesOperation", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -428,14 +428,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* DeleteSmsMessagesOperation_get_Status(py::wrapper::Windows::Devices::Sms::DeleteSmsMessagesOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.DeleteSmsMessagesOperation", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.DeleteSmsMessagesOperation", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -447,14 +447,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* DeleteSmsMessagesOperation_get_Completed(py::wrapper::Windows::Devices::Sms::DeleteSmsMessagesOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.DeleteSmsMessagesOperation", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.DeleteSmsMessagesOperation", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Completed());
         }
         catch (...)
@@ -466,12 +466,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int DeleteSmsMessagesOperation_put_Completed(py::wrapper::Windows::Devices::Sms::DeleteSmsMessagesOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.DeleteSmsMessagesOperation", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -480,6 +474,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.DeleteSmsMessagesOperation", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::AsyncActionCompletedHandler>(arg);
 
             self->obj.Completed(param0);
@@ -580,14 +580,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.GetSmsDeviceOperation", L"Cancel", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.GetSmsDeviceOperation", L"Cancel", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Cancel();
                 Py_RETURN_NONE;
             }
@@ -610,14 +610,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.GetSmsDeviceOperation", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.GetSmsDeviceOperation", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -640,14 +640,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.GetSmsDeviceOperation", L"GetResults", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.GetSmsDeviceOperation", L"GetResults", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetResults());
             }
             catch (...)
@@ -665,14 +665,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* GetSmsDeviceOperation_get_ErrorCode(py::wrapper::Windows::Devices::Sms::GetSmsDeviceOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsDeviceOperation", L"ErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsDeviceOperation", L"ErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorCode());
         }
         catch (...)
@@ -684,14 +684,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* GetSmsDeviceOperation_get_Id(py::wrapper::Windows::Devices::Sms::GetSmsDeviceOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsDeviceOperation", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsDeviceOperation", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -703,14 +703,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* GetSmsDeviceOperation_get_Status(py::wrapper::Windows::Devices::Sms::GetSmsDeviceOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsDeviceOperation", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsDeviceOperation", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -722,14 +722,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* GetSmsDeviceOperation_get_Completed(py::wrapper::Windows::Devices::Sms::GetSmsDeviceOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsDeviceOperation", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsDeviceOperation", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Completed());
         }
         catch (...)
@@ -741,12 +741,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int GetSmsDeviceOperation_put_Completed(py::wrapper::Windows::Devices::Sms::GetSmsDeviceOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsDeviceOperation", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -755,6 +749,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsDeviceOperation", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::AsyncOperationCompletedHandler<winrt::Windows::Devices::Sms::SmsDevice>>(arg);
 
             self->obj.Completed(param0);
@@ -855,14 +855,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.GetSmsMessageOperation", L"Cancel", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.GetSmsMessageOperation", L"Cancel", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Cancel();
                 Py_RETURN_NONE;
             }
@@ -885,14 +885,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.GetSmsMessageOperation", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.GetSmsMessageOperation", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -915,14 +915,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.GetSmsMessageOperation", L"GetResults", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.GetSmsMessageOperation", L"GetResults", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetResults());
             }
             catch (...)
@@ -940,14 +940,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* GetSmsMessageOperation_get_ErrorCode(py::wrapper::Windows::Devices::Sms::GetSmsMessageOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessageOperation", L"ErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessageOperation", L"ErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorCode());
         }
         catch (...)
@@ -959,14 +959,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* GetSmsMessageOperation_get_Id(py::wrapper::Windows::Devices::Sms::GetSmsMessageOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessageOperation", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessageOperation", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -978,14 +978,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* GetSmsMessageOperation_get_Status(py::wrapper::Windows::Devices::Sms::GetSmsMessageOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessageOperation", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessageOperation", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -997,14 +997,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* GetSmsMessageOperation_get_Completed(py::wrapper::Windows::Devices::Sms::GetSmsMessageOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessageOperation", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessageOperation", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Completed());
         }
         catch (...)
@@ -1016,12 +1016,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int GetSmsMessageOperation_put_Completed(py::wrapper::Windows::Devices::Sms::GetSmsMessageOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessageOperation", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1030,6 +1024,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessageOperation", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::AsyncOperationCompletedHandler<winrt::Windows::Devices::Sms::ISmsMessage>>(arg);
 
             self->obj.Completed(param0);
@@ -1130,14 +1130,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.GetSmsMessagesOperation", L"Cancel", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.GetSmsMessagesOperation", L"Cancel", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Cancel();
                 Py_RETURN_NONE;
             }
@@ -1160,14 +1160,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.GetSmsMessagesOperation", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.GetSmsMessagesOperation", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -1190,14 +1190,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.GetSmsMessagesOperation", L"GetResults", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.GetSmsMessagesOperation", L"GetResults", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetResults());
             }
             catch (...)
@@ -1215,14 +1215,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* GetSmsMessagesOperation_get_ErrorCode(py::wrapper::Windows::Devices::Sms::GetSmsMessagesOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessagesOperation", L"ErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessagesOperation", L"ErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorCode());
         }
         catch (...)
@@ -1234,14 +1234,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* GetSmsMessagesOperation_get_Id(py::wrapper::Windows::Devices::Sms::GetSmsMessagesOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessagesOperation", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessagesOperation", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1253,14 +1253,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* GetSmsMessagesOperation_get_Status(py::wrapper::Windows::Devices::Sms::GetSmsMessagesOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessagesOperation", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessagesOperation", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1272,14 +1272,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* GetSmsMessagesOperation_get_Progress(py::wrapper::Windows::Devices::Sms::GetSmsMessagesOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessagesOperation", L"Progress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessagesOperation", L"Progress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Progress());
         }
         catch (...)
@@ -1291,12 +1291,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int GetSmsMessagesOperation_put_Progress(py::wrapper::Windows::Devices::Sms::GetSmsMessagesOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessagesOperation", L"Progress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1305,6 +1299,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessagesOperation", L"Progress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::AsyncOperationProgressHandler<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Sms::ISmsMessage>, int32_t>>(arg);
 
             self->obj.Progress(param0);
@@ -1319,14 +1319,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* GetSmsMessagesOperation_get_Completed(py::wrapper::Windows::Devices::Sms::GetSmsMessagesOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessagesOperation", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessagesOperation", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Completed());
         }
         catch (...)
@@ -1338,12 +1338,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int GetSmsMessagesOperation_put_Completed(py::wrapper::Windows::Devices::Sms::GetSmsMessagesOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessagesOperation", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1352,6 +1346,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.GetSmsMessagesOperation", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::AsyncOperationWithProgressCompletedHandler<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Sms::ISmsMessage>, int32_t>>(arg);
 
             self->obj.Completed(param0);
@@ -1453,14 +1453,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SendSmsMessageOperation", L"Cancel", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SendSmsMessageOperation", L"Cancel", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Cancel();
                 Py_RETURN_NONE;
             }
@@ -1483,14 +1483,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SendSmsMessageOperation", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SendSmsMessageOperation", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -1513,14 +1513,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SendSmsMessageOperation", L"GetResults", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SendSmsMessageOperation", L"GetResults", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.GetResults();
                 Py_RETURN_NONE;
             }
@@ -1539,14 +1539,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SendSmsMessageOperation_get_ErrorCode(py::wrapper::Windows::Devices::Sms::SendSmsMessageOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SendSmsMessageOperation", L"ErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SendSmsMessageOperation", L"ErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorCode());
         }
         catch (...)
@@ -1558,14 +1558,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SendSmsMessageOperation_get_Id(py::wrapper::Windows::Devices::Sms::SendSmsMessageOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SendSmsMessageOperation", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SendSmsMessageOperation", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1577,14 +1577,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SendSmsMessageOperation_get_Status(py::wrapper::Windows::Devices::Sms::SendSmsMessageOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SendSmsMessageOperation", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SendSmsMessageOperation", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1596,14 +1596,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SendSmsMessageOperation_get_Completed(py::wrapper::Windows::Devices::Sms::SendSmsMessageOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SendSmsMessageOperation", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SendSmsMessageOperation", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Completed());
         }
         catch (...)
@@ -1615,12 +1615,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SendSmsMessageOperation_put_Completed(py::wrapper::Windows::Devices::Sms::SendSmsMessageOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SendSmsMessageOperation", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1629,6 +1623,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SendSmsMessageOperation", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::AsyncActionCompletedHandler>(arg);
 
             self->obj.Completed(param0);
@@ -1747,14 +1747,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsAppMessage_get_ProtocolId(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"ProtocolId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"ProtocolId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProtocolId());
         }
         catch (...)
@@ -1766,12 +1766,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsAppMessage_put_ProtocolId(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"ProtocolId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1780,6 +1774,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"ProtocolId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.ProtocolId(param0);
@@ -1794,14 +1794,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsAppMessage_get_PortNumber(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"PortNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"PortNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PortNumber());
         }
         catch (...)
@@ -1813,12 +1813,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsAppMessage_put_PortNumber(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"PortNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1827,6 +1821,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"PortNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.PortNumber(param0);
@@ -1841,14 +1841,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsAppMessage_get_IsDeliveryNotificationEnabled(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"IsDeliveryNotificationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"IsDeliveryNotificationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDeliveryNotificationEnabled());
         }
         catch (...)
@@ -1860,12 +1860,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsAppMessage_put_IsDeliveryNotificationEnabled(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"IsDeliveryNotificationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1874,6 +1868,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"IsDeliveryNotificationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsDeliveryNotificationEnabled(param0);
@@ -1888,14 +1888,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsAppMessage_get_RetryAttemptCount(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"RetryAttemptCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"RetryAttemptCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RetryAttemptCount());
         }
         catch (...)
@@ -1907,12 +1907,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsAppMessage_put_RetryAttemptCount(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"RetryAttemptCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1921,6 +1915,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"RetryAttemptCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.RetryAttemptCount(param0);
@@ -1935,14 +1935,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsAppMessage_get_Encoding(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"Encoding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"Encoding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Encoding());
         }
         catch (...)
@@ -1954,12 +1954,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsAppMessage_put_Encoding(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"Encoding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1968,6 +1962,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"Encoding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsEncoding>(arg);
 
             self->obj.Encoding(param0);
@@ -1982,14 +1982,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsAppMessage_get_Body(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"Body"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"Body"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Body());
         }
         catch (...)
@@ -2001,12 +2001,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsAppMessage_put_Body(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"Body"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2015,6 +2009,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"Body"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Body(param0);
@@ -2029,14 +2029,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsAppMessage_get_CallbackNumber(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"CallbackNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"CallbackNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallbackNumber());
         }
         catch (...)
@@ -2048,12 +2048,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsAppMessage_put_CallbackNumber(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"CallbackNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2062,6 +2056,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"CallbackNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.CallbackNumber(param0);
@@ -2076,14 +2076,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsAppMessage_get_BinaryBody(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"BinaryBody"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"BinaryBody"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BinaryBody());
         }
         catch (...)
@@ -2095,12 +2095,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsAppMessage_put_BinaryBody(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"BinaryBody"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2109,6 +2103,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"BinaryBody"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             self->obj.BinaryBody(param0);
@@ -2123,14 +2123,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsAppMessage_get_To(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"To"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"To"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.To());
         }
         catch (...)
@@ -2142,12 +2142,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsAppMessage_put_To(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"To"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2156,6 +2150,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"To"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.To(param0);
@@ -2170,14 +2170,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsAppMessage_get_TeleserviceId(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"TeleserviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"TeleserviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TeleserviceId());
         }
         catch (...)
@@ -2189,12 +2189,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsAppMessage_put_TeleserviceId(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"TeleserviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2203,6 +2197,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"TeleserviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.TeleserviceId(param0);
@@ -2217,14 +2217,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsAppMessage_get_From(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"From"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"From"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.From());
         }
         catch (...)
@@ -2236,14 +2236,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsAppMessage_get_Timestamp(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -2255,14 +2255,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsAppMessage_get_CellularClass(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"CellularClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"CellularClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CellularClass());
         }
         catch (...)
@@ -2274,14 +2274,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsAppMessage_get_DeviceId(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -2293,14 +2293,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsAppMessage_get_MessageClass(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"MessageClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"MessageClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageClass());
         }
         catch (...)
@@ -2312,14 +2312,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsAppMessage_get_MessageType(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"MessageType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"MessageType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageType());
         }
         catch (...)
@@ -2331,14 +2331,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsAppMessage_get_SimIccId(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"SimIccId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsAppMessage", L"SimIccId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimIccId());
         }
         catch (...)
@@ -2462,14 +2462,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsBinaryMessage", L"GetData", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsBinaryMessage", L"GetData", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetData());
             }
             catch (...)
@@ -2491,14 +2491,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsBinaryMessage", L"SetData", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsBinaryMessage", L"SetData", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 self->obj.SetData(param0);
@@ -2519,14 +2519,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsBinaryMessage_get_Format(py::wrapper::Windows::Devices::Sms::SmsBinaryMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBinaryMessage", L"Format"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBinaryMessage", L"Format"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Format());
         }
         catch (...)
@@ -2538,12 +2538,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsBinaryMessage_put_Format(py::wrapper::Windows::Devices::Sms::SmsBinaryMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBinaryMessage", L"Format"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2552,6 +2546,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBinaryMessage", L"Format"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsDataFormat>(arg);
 
             self->obj.Format(param0);
@@ -2566,14 +2566,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsBinaryMessage_get_Id(py::wrapper::Windows::Devices::Sms::SmsBinaryMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBinaryMessage", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBinaryMessage", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -2585,14 +2585,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsBinaryMessage_get_MessageClass(py::wrapper::Windows::Devices::Sms::SmsBinaryMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBinaryMessage", L"MessageClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBinaryMessage", L"MessageClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageClass());
         }
         catch (...)
@@ -2678,14 +2678,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsBroadcastMessage_get_Body(py::wrapper::Windows::Devices::Sms::SmsBroadcastMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"Body"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"Body"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Body());
         }
         catch (...)
@@ -2697,14 +2697,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsBroadcastMessage_get_BroadcastType(py::wrapper::Windows::Devices::Sms::SmsBroadcastMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"BroadcastType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"BroadcastType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BroadcastType());
         }
         catch (...)
@@ -2716,14 +2716,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsBroadcastMessage_get_Channel(py::wrapper::Windows::Devices::Sms::SmsBroadcastMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"Channel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"Channel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Channel());
         }
         catch (...)
@@ -2735,14 +2735,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsBroadcastMessage_get_GeographicalScope(py::wrapper::Windows::Devices::Sms::SmsBroadcastMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"GeographicalScope"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"GeographicalScope"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GeographicalScope());
         }
         catch (...)
@@ -2754,14 +2754,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsBroadcastMessage_get_IsEmergencyAlert(py::wrapper::Windows::Devices::Sms::SmsBroadcastMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"IsEmergencyAlert"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"IsEmergencyAlert"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsEmergencyAlert());
         }
         catch (...)
@@ -2773,14 +2773,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsBroadcastMessage_get_IsUserPopupRequested(py::wrapper::Windows::Devices::Sms::SmsBroadcastMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"IsUserPopupRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"IsUserPopupRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsUserPopupRequested());
         }
         catch (...)
@@ -2792,14 +2792,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsBroadcastMessage_get_MessageCode(py::wrapper::Windows::Devices::Sms::SmsBroadcastMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"MessageCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"MessageCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageCode());
         }
         catch (...)
@@ -2811,14 +2811,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsBroadcastMessage_get_Timestamp(py::wrapper::Windows::Devices::Sms::SmsBroadcastMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -2830,14 +2830,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsBroadcastMessage_get_To(py::wrapper::Windows::Devices::Sms::SmsBroadcastMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"To"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"To"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.To());
         }
         catch (...)
@@ -2849,14 +2849,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsBroadcastMessage_get_UpdateNumber(py::wrapper::Windows::Devices::Sms::SmsBroadcastMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"UpdateNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"UpdateNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UpdateNumber());
         }
         catch (...)
@@ -2868,14 +2868,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsBroadcastMessage_get_CellularClass(py::wrapper::Windows::Devices::Sms::SmsBroadcastMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"CellularClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"CellularClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CellularClass());
         }
         catch (...)
@@ -2887,14 +2887,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsBroadcastMessage_get_DeviceId(py::wrapper::Windows::Devices::Sms::SmsBroadcastMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -2906,14 +2906,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsBroadcastMessage_get_MessageClass(py::wrapper::Windows::Devices::Sms::SmsBroadcastMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"MessageClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"MessageClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageClass());
         }
         catch (...)
@@ -2925,14 +2925,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsBroadcastMessage_get_MessageType(py::wrapper::Windows::Devices::Sms::SmsBroadcastMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"MessageType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"MessageType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageType());
         }
         catch (...)
@@ -2944,14 +2944,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsBroadcastMessage_get_SimIccId(py::wrapper::Windows::Devices::Sms::SmsBroadcastMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"SimIccId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsBroadcastMessage", L"SimIccId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimIccId());
         }
         catch (...)
@@ -3051,14 +3051,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice", L"CalculateLength", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice", L"CalculateLength", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsTextMessage>(args, 0);
 
                 return py::convert(self->obj.CalculateLength(param0));
@@ -3082,14 +3082,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sms::SmsDevice::FromIdAsync(param0));
@@ -3113,14 +3113,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice", L"FromNetworkAccountIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice", L"FromNetworkAccountIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sms::SmsDevice::FromNetworkAccountIdAsync(param0));
@@ -3144,14 +3144,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice", L"GetDefaultAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice", L"GetDefaultAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sms::SmsDevice::GetDefaultAsync());
             }
             catch (...)
@@ -3173,14 +3173,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sms::SmsDevice::GetDeviceSelector());
             }
             catch (...)
@@ -3202,14 +3202,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice", L"SendMessageAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice", L"SendMessageAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::ISmsMessage>(args, 0);
 
                 return py::convert(self->obj.SendMessageAsync(param0));
@@ -3229,14 +3229,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice_get_AccountPhoneNumber(py::wrapper::Windows::Devices::Sms::SmsDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDevice", L"AccountPhoneNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDevice", L"AccountPhoneNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccountPhoneNumber());
         }
         catch (...)
@@ -3248,14 +3248,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice_get_CellularClass(py::wrapper::Windows::Devices::Sms::SmsDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDevice", L"CellularClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDevice", L"CellularClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CellularClass());
         }
         catch (...)
@@ -3267,14 +3267,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice_get_DeviceStatus(py::wrapper::Windows::Devices::Sms::SmsDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDevice", L"DeviceStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDevice", L"DeviceStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceStatus());
         }
         catch (...)
@@ -3286,14 +3286,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice_get_MessageStore(py::wrapper::Windows::Devices::Sms::SmsDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDevice", L"MessageStore"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDevice", L"MessageStore"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageStore());
         }
         catch (...)
@@ -3305,14 +3305,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice_add_SmsDeviceStatusChanged(py::wrapper::Windows::Devices::Sms::SmsDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.SmsDevice", L"SmsDeviceStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.SmsDevice", L"SmsDeviceStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsDeviceStatusChangedEventHandler>(arg);
 
             return py::convert(self->obj.SmsDeviceStatusChanged(param0));
@@ -3326,14 +3326,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice_remove_SmsDeviceStatusChanged(py::wrapper::Windows::Devices::Sms::SmsDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.SmsDevice", L"SmsDeviceStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.SmsDevice", L"SmsDeviceStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SmsDeviceStatusChanged(param0);
@@ -3348,14 +3348,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice_add_SmsMessageReceived(py::wrapper::Windows::Devices::Sms::SmsDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.SmsDevice", L"SmsMessageReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.SmsDevice", L"SmsMessageReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsMessageReceivedEventHandler>(arg);
 
             return py::convert(self->obj.SmsMessageReceived(param0));
@@ -3369,14 +3369,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice_remove_SmsMessageReceived(py::wrapper::Windows::Devices::Sms::SmsDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.SmsDevice", L"SmsMessageReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.SmsDevice", L"SmsMessageReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SmsMessageReceived(param0);
@@ -3503,14 +3503,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice2", L"CalculateLength", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice2", L"CalculateLength", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::ISmsMessageBase>(args, 0);
 
                 return py::convert(self->obj.CalculateLength(param0));
@@ -3534,14 +3534,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice2", L"FromId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice2", L"FromId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sms::SmsDevice2::FromId(param0));
@@ -3565,14 +3565,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice2", L"FromParentId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice2", L"FromParentId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sms::SmsDevice2::FromParentId(param0));
@@ -3596,14 +3596,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice2", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice2", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sms::SmsDevice2::GetDefault());
             }
             catch (...)
@@ -3625,14 +3625,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice2", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice2", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sms::SmsDevice2::GetDeviceSelector());
             }
             catch (...)
@@ -3654,14 +3654,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice2", L"SendMessageAndGetResultAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDevice2", L"SendMessageAndGetResultAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::ISmsMessageBase>(args, 0);
 
                 return py::convert(self->obj.SendMessageAndGetResultAsync(param0));
@@ -3681,14 +3681,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice2_get_SmscAddress(py::wrapper::Windows::Devices::Sms::SmsDevice2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDevice2", L"SmscAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDevice2", L"SmscAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SmscAddress());
         }
         catch (...)
@@ -3700,12 +3700,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsDevice2_put_SmscAddress(py::wrapper::Windows::Devices::Sms::SmsDevice2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDevice2", L"SmscAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3714,6 +3708,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDevice2", L"SmscAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.SmscAddress(param0);
@@ -3728,14 +3728,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice2_get_AccountPhoneNumber(py::wrapper::Windows::Devices::Sms::SmsDevice2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDevice2", L"AccountPhoneNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDevice2", L"AccountPhoneNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccountPhoneNumber());
         }
         catch (...)
@@ -3747,14 +3747,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice2_get_CellularClass(py::wrapper::Windows::Devices::Sms::SmsDevice2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDevice2", L"CellularClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDevice2", L"CellularClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CellularClass());
         }
         catch (...)
@@ -3766,14 +3766,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice2_get_DeviceId(py::wrapper::Windows::Devices::Sms::SmsDevice2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDevice2", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDevice2", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -3785,14 +3785,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice2_get_DeviceStatus(py::wrapper::Windows::Devices::Sms::SmsDevice2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDevice2", L"DeviceStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDevice2", L"DeviceStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceStatus());
         }
         catch (...)
@@ -3804,14 +3804,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice2_get_ParentDeviceId(py::wrapper::Windows::Devices::Sms::SmsDevice2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDevice2", L"ParentDeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDevice2", L"ParentDeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentDeviceId());
         }
         catch (...)
@@ -3823,14 +3823,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice2_add_DeviceStatusChanged(py::wrapper::Windows::Devices::Sms::SmsDevice2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.SmsDevice2", L"DeviceStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.SmsDevice2", L"DeviceStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sms::SmsDevice2, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.DeviceStatusChanged(param0));
@@ -3844,14 +3844,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice2_remove_DeviceStatusChanged(py::wrapper::Windows::Devices::Sms::SmsDevice2* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.SmsDevice2", L"DeviceStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.SmsDevice2", L"DeviceStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DeviceStatusChanged(param0);
@@ -3978,14 +3978,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDeviceMessageStore", L"DeleteMessageAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDeviceMessageStore", L"DeleteMessageAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.DeleteMessageAsync(param0));
@@ -4009,14 +4009,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDeviceMessageStore", L"DeleteMessagesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDeviceMessageStore", L"DeleteMessagesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsMessageFilter>(args, 0);
 
                 return py::convert(self->obj.DeleteMessagesAsync(param0));
@@ -4040,14 +4040,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDeviceMessageStore", L"GetMessageAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDeviceMessageStore", L"GetMessageAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetMessageAsync(param0));
@@ -4071,14 +4071,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDeviceMessageStore", L"GetMessagesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsDeviceMessageStore", L"GetMessagesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsMessageFilter>(args, 0);
 
                 return py::convert(self->obj.GetMessagesAsync(param0));
@@ -4098,14 +4098,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDeviceMessageStore_get_MaxMessages(py::wrapper::Windows::Devices::Sms::SmsDeviceMessageStore* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDeviceMessageStore", L"MaxMessages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsDeviceMessageStore", L"MaxMessages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxMessages());
         }
         catch (...)
@@ -4215,14 +4215,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsFilterRule_get_CellularClass(py::wrapper::Windows::Devices::Sms::SmsFilterRule* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"CellularClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"CellularClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CellularClass());
         }
         catch (...)
@@ -4234,12 +4234,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsFilterRule_put_CellularClass(py::wrapper::Windows::Devices::Sms::SmsFilterRule* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"CellularClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4248,6 +4242,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"CellularClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Sms::CellularClass>(arg);
 
             self->obj.CellularClass(param0);
@@ -4262,14 +4262,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsFilterRule_get_BroadcastChannels(py::wrapper::Windows::Devices::Sms::SmsFilterRule* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"BroadcastChannels"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"BroadcastChannels"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BroadcastChannels());
         }
         catch (...)
@@ -4281,14 +4281,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsFilterRule_get_BroadcastTypes(py::wrapper::Windows::Devices::Sms::SmsFilterRule* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"BroadcastTypes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"BroadcastTypes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BroadcastTypes());
         }
         catch (...)
@@ -4300,14 +4300,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsFilterRule_get_DeviceIds(py::wrapper::Windows::Devices::Sms::SmsFilterRule* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"DeviceIds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"DeviceIds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceIds());
         }
         catch (...)
@@ -4319,14 +4319,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsFilterRule_get_ImsiPrefixes(py::wrapper::Windows::Devices::Sms::SmsFilterRule* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"ImsiPrefixes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"ImsiPrefixes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ImsiPrefixes());
         }
         catch (...)
@@ -4338,14 +4338,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsFilterRule_get_MessageType(py::wrapper::Windows::Devices::Sms::SmsFilterRule* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"MessageType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"MessageType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageType());
         }
         catch (...)
@@ -4357,14 +4357,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsFilterRule_get_PortNumbers(py::wrapper::Windows::Devices::Sms::SmsFilterRule* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"PortNumbers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"PortNumbers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PortNumbers());
         }
         catch (...)
@@ -4376,14 +4376,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsFilterRule_get_ProtocolIds(py::wrapper::Windows::Devices::Sms::SmsFilterRule* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"ProtocolIds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"ProtocolIds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProtocolIds());
         }
         catch (...)
@@ -4395,14 +4395,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsFilterRule_get_SenderNumbers(py::wrapper::Windows::Devices::Sms::SmsFilterRule* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"SenderNumbers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"SenderNumbers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SenderNumbers());
         }
         catch (...)
@@ -4414,14 +4414,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsFilterRule_get_TeleserviceIds(py::wrapper::Windows::Devices::Sms::SmsFilterRule* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"TeleserviceIds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"TeleserviceIds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TeleserviceIds());
         }
         catch (...)
@@ -4433,14 +4433,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsFilterRule_get_TextMessagePrefixes(py::wrapper::Windows::Devices::Sms::SmsFilterRule* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"TextMessagePrefixes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"TextMessagePrefixes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TextMessagePrefixes());
         }
         catch (...)
@@ -4452,14 +4452,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsFilterRule_get_WapApplicationIds(py::wrapper::Windows::Devices::Sms::SmsFilterRule* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"WapApplicationIds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"WapApplicationIds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WapApplicationIds());
         }
         catch (...)
@@ -4471,14 +4471,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsFilterRule_get_WapContentTypes(py::wrapper::Windows::Devices::Sms::SmsFilterRule* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"WapContentTypes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRule", L"WapContentTypes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WapContentTypes());
         }
         catch (...)
@@ -4596,14 +4596,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsFilterRules_get_ActionType(py::wrapper::Windows::Devices::Sms::SmsFilterRules* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRules", L"ActionType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRules", L"ActionType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActionType());
         }
         catch (...)
@@ -4615,14 +4615,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsFilterRules_get_Rules(py::wrapper::Windows::Devices::Sms::SmsFilterRules* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRules", L"Rules"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsFilterRules", L"Rules"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Rules());
         }
         catch (...)
@@ -4705,14 +4705,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsMessageReceivedEventArgs_get_BinaryMessage(py::wrapper::Windows::Devices::Sms::SmsMessageReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsMessageReceivedEventArgs", L"BinaryMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsMessageReceivedEventArgs", L"BinaryMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BinaryMessage());
         }
         catch (...)
@@ -4724,14 +4724,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsMessageReceivedEventArgs_get_TextMessage(py::wrapper::Windows::Devices::Sms::SmsMessageReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsMessageReceivedEventArgs", L"TextMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsMessageReceivedEventArgs", L"TextMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TextMessage());
         }
         catch (...)
@@ -4818,14 +4818,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsMessageReceivedTriggerDetails", L"Accept", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsMessageReceivedTriggerDetails", L"Accept", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Accept();
                 Py_RETURN_NONE;
             }
@@ -4848,14 +4848,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsMessageReceivedTriggerDetails", L"Drop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsMessageReceivedTriggerDetails", L"Drop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Drop();
                 Py_RETURN_NONE;
             }
@@ -4874,14 +4874,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsMessageReceivedTriggerDetails_get_AppMessage(py::wrapper::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsMessageReceivedTriggerDetails", L"AppMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsMessageReceivedTriggerDetails", L"AppMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppMessage());
         }
         catch (...)
@@ -4893,14 +4893,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsMessageReceivedTriggerDetails_get_BroadcastMessage(py::wrapper::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsMessageReceivedTriggerDetails", L"BroadcastMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsMessageReceivedTriggerDetails", L"BroadcastMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BroadcastMessage());
         }
         catch (...)
@@ -4912,14 +4912,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsMessageReceivedTriggerDetails_get_MessageType(py::wrapper::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsMessageReceivedTriggerDetails", L"MessageType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsMessageReceivedTriggerDetails", L"MessageType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageType());
         }
         catch (...)
@@ -4931,14 +4931,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsMessageReceivedTriggerDetails_get_StatusMessage(py::wrapper::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsMessageReceivedTriggerDetails", L"StatusMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsMessageReceivedTriggerDetails", L"StatusMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StatusMessage());
         }
         catch (...)
@@ -4950,14 +4950,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsMessageReceivedTriggerDetails_get_TextMessage(py::wrapper::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsMessageReceivedTriggerDetails", L"TextMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsMessageReceivedTriggerDetails", L"TextMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TextMessage());
         }
         catch (...)
@@ -4969,14 +4969,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsMessageReceivedTriggerDetails_get_VoicemailMessage(py::wrapper::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsMessageReceivedTriggerDetails", L"VoicemailMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsMessageReceivedTriggerDetails", L"VoicemailMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VoicemailMessage());
         }
         catch (...)
@@ -4988,14 +4988,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsMessageReceivedTriggerDetails_get_WapMessage(py::wrapper::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsMessageReceivedTriggerDetails", L"WapMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsMessageReceivedTriggerDetails", L"WapMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WapMessage());
         }
         catch (...)
@@ -5089,14 +5089,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsMessageRegistration", L"Register", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsMessageRegistration", L"Register", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Sms::SmsFilterRules>(args, 1);
 
@@ -5121,14 +5121,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsMessageRegistration", L"Unregister", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsMessageRegistration", L"Unregister", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Unregister();
                 Py_RETURN_NONE;
             }
@@ -5147,14 +5147,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsMessageRegistration_get_Id(py::wrapper::Windows::Devices::Sms::SmsMessageRegistration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsMessageRegistration", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsMessageRegistration", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -5166,14 +5166,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsMessageRegistration_get_AllRegistrations(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsMessageRegistration", L"AllRegistrations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsMessageRegistration", L"AllRegistrations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Sms::SmsMessageRegistration::AllRegistrations());
         }
         catch (...)
@@ -5185,14 +5185,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsMessageRegistration_add_MessageReceived(py::wrapper::Windows::Devices::Sms::SmsMessageRegistration* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.SmsMessageRegistration", L"MessageReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.SmsMessageRegistration", L"MessageReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sms::SmsMessageRegistration, winrt::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails>>(arg);
 
             return py::convert(self->obj.MessageReceived(param0));
@@ -5206,14 +5206,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsMessageRegistration_remove_MessageReceived(py::wrapper::Windows::Devices::Sms::SmsMessageRegistration* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.SmsMessageRegistration", L"MessageReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.SmsMessageRegistration", L"MessageReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.MessageReceived(param0);
@@ -5328,14 +5328,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsReceivedEventDetails_get_DeviceId(py::wrapper::Windows::Devices::Sms::SmsReceivedEventDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsReceivedEventDetails", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsReceivedEventDetails", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -5347,14 +5347,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsReceivedEventDetails_get_MessageIndex(py::wrapper::Windows::Devices::Sms::SmsReceivedEventDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsReceivedEventDetails", L"MessageIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsReceivedEventDetails", L"MessageIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageIndex());
         }
         catch (...)
@@ -5366,14 +5366,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsReceivedEventDetails_get_BinaryMessage(py::wrapper::Windows::Devices::Sms::SmsReceivedEventDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsReceivedEventDetails", L"BinaryMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsReceivedEventDetails", L"BinaryMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BinaryMessage());
         }
         catch (...)
@@ -5385,14 +5385,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsReceivedEventDetails_get_MessageClass(py::wrapper::Windows::Devices::Sms::SmsReceivedEventDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsReceivedEventDetails", L"MessageClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsReceivedEventDetails", L"MessageClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageClass());
         }
         catch (...)
@@ -5477,14 +5477,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsSendMessageResult_get_CellularClass(py::wrapper::Windows::Devices::Sms::SmsSendMessageResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsSendMessageResult", L"CellularClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsSendMessageResult", L"CellularClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CellularClass());
         }
         catch (...)
@@ -5496,14 +5496,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsSendMessageResult_get_IsErrorTransient(py::wrapper::Windows::Devices::Sms::SmsSendMessageResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsSendMessageResult", L"IsErrorTransient"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsSendMessageResult", L"IsErrorTransient"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsErrorTransient());
         }
         catch (...)
@@ -5515,14 +5515,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsSendMessageResult_get_IsSuccessful(py::wrapper::Windows::Devices::Sms::SmsSendMessageResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsSendMessageResult", L"IsSuccessful"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsSendMessageResult", L"IsSuccessful"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSuccessful());
         }
         catch (...)
@@ -5534,14 +5534,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsSendMessageResult_get_MessageReferenceNumbers(py::wrapper::Windows::Devices::Sms::SmsSendMessageResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsSendMessageResult", L"MessageReferenceNumbers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsSendMessageResult", L"MessageReferenceNumbers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageReferenceNumbers());
         }
         catch (...)
@@ -5553,14 +5553,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsSendMessageResult_get_ModemErrorCode(py::wrapper::Windows::Devices::Sms::SmsSendMessageResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsSendMessageResult", L"ModemErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsSendMessageResult", L"ModemErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ModemErrorCode());
         }
         catch (...)
@@ -5572,14 +5572,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsSendMessageResult_get_NetworkCauseCode(py::wrapper::Windows::Devices::Sms::SmsSendMessageResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsSendMessageResult", L"NetworkCauseCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsSendMessageResult", L"NetworkCauseCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkCauseCode());
         }
         catch (...)
@@ -5591,14 +5591,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsSendMessageResult_get_TransportFailureCause(py::wrapper::Windows::Devices::Sms::SmsSendMessageResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsSendMessageResult", L"TransportFailureCause"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsSendMessageResult", L"TransportFailureCause"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TransportFailureCause());
         }
         catch (...)
@@ -5686,14 +5686,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsStatusMessage_get_CellularClass(py::wrapper::Windows::Devices::Sms::SmsStatusMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"CellularClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"CellularClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CellularClass());
         }
         catch (...)
@@ -5705,14 +5705,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsStatusMessage_get_DeviceId(py::wrapper::Windows::Devices::Sms::SmsStatusMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -5724,14 +5724,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsStatusMessage_get_MessageClass(py::wrapper::Windows::Devices::Sms::SmsStatusMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"MessageClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"MessageClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageClass());
         }
         catch (...)
@@ -5743,14 +5743,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsStatusMessage_get_MessageType(py::wrapper::Windows::Devices::Sms::SmsStatusMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"MessageType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"MessageType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageType());
         }
         catch (...)
@@ -5762,14 +5762,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsStatusMessage_get_SimIccId(py::wrapper::Windows::Devices::Sms::SmsStatusMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"SimIccId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"SimIccId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimIccId());
         }
         catch (...)
@@ -5781,14 +5781,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsStatusMessage_get_Status(py::wrapper::Windows::Devices::Sms::SmsStatusMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -5800,14 +5800,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsStatusMessage_get_Body(py::wrapper::Windows::Devices::Sms::SmsStatusMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"Body"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"Body"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Body());
         }
         catch (...)
@@ -5819,14 +5819,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsStatusMessage_get_DischargeTime(py::wrapper::Windows::Devices::Sms::SmsStatusMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"DischargeTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"DischargeTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DischargeTime());
         }
         catch (...)
@@ -5838,14 +5838,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsStatusMessage_get_From(py::wrapper::Windows::Devices::Sms::SmsStatusMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"From"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"From"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.From());
         }
         catch (...)
@@ -5857,14 +5857,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsStatusMessage_get_MessageReferenceNumber(py::wrapper::Windows::Devices::Sms::SmsStatusMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"MessageReferenceNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"MessageReferenceNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageReferenceNumber());
         }
         catch (...)
@@ -5876,14 +5876,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsStatusMessage_get_ServiceCenterTimestamp(py::wrapper::Windows::Devices::Sms::SmsStatusMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"ServiceCenterTimestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"ServiceCenterTimestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceCenterTimestamp());
         }
         catch (...)
@@ -5895,14 +5895,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsStatusMessage_get_To(py::wrapper::Windows::Devices::Sms::SmsStatusMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"To"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsStatusMessage", L"To"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.To());
         }
         catch (...)
@@ -6021,14 +6021,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsTextMessage", L"FromBinaryData", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsTextMessage", L"FromBinaryData", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsDataFormat>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
@@ -6053,14 +6053,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsTextMessage", L"FromBinaryMessage", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsTextMessage", L"FromBinaryMessage", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsBinaryMessage>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sms::SmsTextMessage::FromBinaryMessage(param0));
@@ -6084,14 +6084,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsTextMessage", L"ToBinaryMessages", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.SmsTextMessage", L"ToBinaryMessages", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsDataFormat>(args, 0);
 
                 return py::convert(self->obj.ToBinaryMessages(param0));
@@ -6111,14 +6111,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage_get_Id(py::wrapper::Windows::Devices::Sms::SmsTextMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -6130,14 +6130,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage_get_MessageClass(py::wrapper::Windows::Devices::Sms::SmsTextMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"MessageClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"MessageClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageClass());
         }
         catch (...)
@@ -6149,14 +6149,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage_get_To(py::wrapper::Windows::Devices::Sms::SmsTextMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"To"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"To"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.To());
         }
         catch (...)
@@ -6168,12 +6168,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsTextMessage_put_To(py::wrapper::Windows::Devices::Sms::SmsTextMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"To"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6182,6 +6176,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"To"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.To(param0);
@@ -6196,14 +6196,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage_get_From(py::wrapper::Windows::Devices::Sms::SmsTextMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"From"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"From"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.From());
         }
         catch (...)
@@ -6215,12 +6215,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsTextMessage_put_From(py::wrapper::Windows::Devices::Sms::SmsTextMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"From"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6229,6 +6223,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"From"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.From(param0);
@@ -6243,14 +6243,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage_get_Encoding(py::wrapper::Windows::Devices::Sms::SmsTextMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"Encoding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"Encoding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Encoding());
         }
         catch (...)
@@ -6262,12 +6262,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsTextMessage_put_Encoding(py::wrapper::Windows::Devices::Sms::SmsTextMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"Encoding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6276,6 +6270,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"Encoding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsEncoding>(arg);
 
             self->obj.Encoding(param0);
@@ -6290,14 +6290,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage_get_Body(py::wrapper::Windows::Devices::Sms::SmsTextMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"Body"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"Body"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Body());
         }
         catch (...)
@@ -6309,12 +6309,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsTextMessage_put_Body(py::wrapper::Windows::Devices::Sms::SmsTextMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"Body"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6323,6 +6317,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"Body"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Body(param0);
@@ -6337,14 +6337,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage_get_PartCount(py::wrapper::Windows::Devices::Sms::SmsTextMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"PartCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"PartCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PartCount());
         }
         catch (...)
@@ -6356,14 +6356,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage_get_PartNumber(py::wrapper::Windows::Devices::Sms::SmsTextMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"PartNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"PartNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PartNumber());
         }
         catch (...)
@@ -6375,14 +6375,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage_get_PartReferenceId(py::wrapper::Windows::Devices::Sms::SmsTextMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"PartReferenceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"PartReferenceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PartReferenceId());
         }
         catch (...)
@@ -6394,14 +6394,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage_get_Timestamp(py::wrapper::Windows::Devices::Sms::SmsTextMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -6542,14 +6542,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage2_get_MessageType(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"MessageType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"MessageType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageType());
         }
         catch (...)
@@ -6561,14 +6561,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage2_get_DeviceId(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -6580,14 +6580,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage2_get_CellularClass(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"CellularClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"CellularClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CellularClass());
         }
         catch (...)
@@ -6599,14 +6599,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage2_get_MessageClass(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"MessageClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"MessageClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageClass());
         }
         catch (...)
@@ -6618,14 +6618,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage2_get_SimIccId(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"SimIccId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"SimIccId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimIccId());
         }
         catch (...)
@@ -6637,14 +6637,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage2_get_RetryAttemptCount(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"RetryAttemptCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"RetryAttemptCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RetryAttemptCount());
         }
         catch (...)
@@ -6656,12 +6656,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsTextMessage2_put_RetryAttemptCount(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"RetryAttemptCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6670,6 +6664,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"RetryAttemptCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.RetryAttemptCount(param0);
@@ -6684,14 +6684,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage2_get_To(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"To"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"To"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.To());
         }
         catch (...)
@@ -6703,12 +6703,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsTextMessage2_put_To(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"To"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6717,6 +6711,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"To"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.To(param0);
@@ -6731,14 +6731,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage2_get_IsDeliveryNotificationEnabled(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"IsDeliveryNotificationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"IsDeliveryNotificationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDeliveryNotificationEnabled());
         }
         catch (...)
@@ -6750,12 +6750,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsTextMessage2_put_IsDeliveryNotificationEnabled(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"IsDeliveryNotificationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6764,6 +6758,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"IsDeliveryNotificationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsDeliveryNotificationEnabled(param0);
@@ -6778,14 +6778,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage2_get_Encoding(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"Encoding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"Encoding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Encoding());
         }
         catch (...)
@@ -6797,12 +6797,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsTextMessage2_put_Encoding(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"Encoding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6811,6 +6805,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"Encoding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsEncoding>(arg);
 
             self->obj.Encoding(param0);
@@ -6825,14 +6825,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage2_get_CallbackNumber(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"CallbackNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"CallbackNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallbackNumber());
         }
         catch (...)
@@ -6844,12 +6844,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsTextMessage2_put_CallbackNumber(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"CallbackNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6858,6 +6852,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"CallbackNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.CallbackNumber(param0);
@@ -6872,14 +6872,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage2_get_Body(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"Body"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"Body"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Body());
         }
         catch (...)
@@ -6891,12 +6891,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsTextMessage2_put_Body(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"Body"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6905,6 +6899,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"Body"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Body(param0);
@@ -6919,14 +6919,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage2_get_ProtocolId(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"ProtocolId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"ProtocolId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProtocolId());
         }
         catch (...)
@@ -6938,14 +6938,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage2_get_From(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"From"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"From"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.From());
         }
         catch (...)
@@ -6957,14 +6957,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage2_get_Timestamp(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -6976,14 +6976,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage2_get_TeleserviceId(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"TeleserviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsTextMessage2", L"TeleserviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TeleserviceId());
         }
         catch (...)
@@ -7079,14 +7079,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsVoicemailMessage_get_CellularClass(py::wrapper::Windows::Devices::Sms::SmsVoicemailMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsVoicemailMessage", L"CellularClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsVoicemailMessage", L"CellularClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CellularClass());
         }
         catch (...)
@@ -7098,14 +7098,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsVoicemailMessage_get_DeviceId(py::wrapper::Windows::Devices::Sms::SmsVoicemailMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsVoicemailMessage", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsVoicemailMessage", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -7117,14 +7117,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsVoicemailMessage_get_MessageClass(py::wrapper::Windows::Devices::Sms::SmsVoicemailMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsVoicemailMessage", L"MessageClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsVoicemailMessage", L"MessageClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageClass());
         }
         catch (...)
@@ -7136,14 +7136,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsVoicemailMessage_get_MessageType(py::wrapper::Windows::Devices::Sms::SmsVoicemailMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsVoicemailMessage", L"MessageType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsVoicemailMessage", L"MessageType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageType());
         }
         catch (...)
@@ -7155,14 +7155,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsVoicemailMessage_get_SimIccId(py::wrapper::Windows::Devices::Sms::SmsVoicemailMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsVoicemailMessage", L"SimIccId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsVoicemailMessage", L"SimIccId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimIccId());
         }
         catch (...)
@@ -7174,14 +7174,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsVoicemailMessage_get_Body(py::wrapper::Windows::Devices::Sms::SmsVoicemailMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsVoicemailMessage", L"Body"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsVoicemailMessage", L"Body"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Body());
         }
         catch (...)
@@ -7193,14 +7193,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsVoicemailMessage_get_MessageCount(py::wrapper::Windows::Devices::Sms::SmsVoicemailMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsVoicemailMessage", L"MessageCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsVoicemailMessage", L"MessageCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageCount());
         }
         catch (...)
@@ -7212,14 +7212,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsVoicemailMessage_get_Timestamp(py::wrapper::Windows::Devices::Sms::SmsVoicemailMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsVoicemailMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsVoicemailMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -7231,14 +7231,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsVoicemailMessage_get_To(py::wrapper::Windows::Devices::Sms::SmsVoicemailMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsVoicemailMessage", L"To"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsVoicemailMessage", L"To"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.To());
         }
         catch (...)
@@ -7328,14 +7328,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsWapMessage_get_CellularClass(py::wrapper::Windows::Devices::Sms::SmsWapMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"CellularClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"CellularClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CellularClass());
         }
         catch (...)
@@ -7347,14 +7347,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsWapMessage_get_DeviceId(py::wrapper::Windows::Devices::Sms::SmsWapMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -7366,14 +7366,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsWapMessage_get_MessageClass(py::wrapper::Windows::Devices::Sms::SmsWapMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"MessageClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"MessageClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageClass());
         }
         catch (...)
@@ -7385,14 +7385,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsWapMessage_get_MessageType(py::wrapper::Windows::Devices::Sms::SmsWapMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"MessageType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"MessageType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageType());
         }
         catch (...)
@@ -7404,14 +7404,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsWapMessage_get_SimIccId(py::wrapper::Windows::Devices::Sms::SmsWapMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"SimIccId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"SimIccId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimIccId());
         }
         catch (...)
@@ -7423,14 +7423,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsWapMessage_get_Timestamp(py::wrapper::Windows::Devices::Sms::SmsWapMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -7442,14 +7442,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsWapMessage_get_ApplicationId(py::wrapper::Windows::Devices::Sms::SmsWapMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"ApplicationId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"ApplicationId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ApplicationId());
         }
         catch (...)
@@ -7461,14 +7461,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsWapMessage_get_BinaryBody(py::wrapper::Windows::Devices::Sms::SmsWapMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"BinaryBody"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"BinaryBody"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BinaryBody());
         }
         catch (...)
@@ -7480,14 +7480,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsWapMessage_get_ContentType(py::wrapper::Windows::Devices::Sms::SmsWapMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"ContentType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"ContentType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentType());
         }
         catch (...)
@@ -7499,14 +7499,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsWapMessage_get_From(py::wrapper::Windows::Devices::Sms::SmsWapMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"From"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"From"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.From());
         }
         catch (...)
@@ -7518,14 +7518,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsWapMessage_get_Headers(py::wrapper::Windows::Devices::Sms::SmsWapMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"Headers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"Headers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Headers());
         }
         catch (...)
@@ -7537,14 +7537,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsWapMessage_get_To(py::wrapper::Windows::Devices::Sms::SmsWapMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"To"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.SmsWapMessage", L"To"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.To());
         }
         catch (...)
@@ -7641,14 +7641,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.ISmsBinaryMessage", L"GetData", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.ISmsBinaryMessage", L"GetData", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetData());
             }
             catch (...)
@@ -7670,14 +7670,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.ISmsBinaryMessage", L"SetData", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.ISmsBinaryMessage", L"SetData", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 self->obj.SetData(param0);
@@ -7698,14 +7698,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsBinaryMessage_get_Format(py::wrapper::Windows::Devices::Sms::ISmsBinaryMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsBinaryMessage", L"Format"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsBinaryMessage", L"Format"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Format());
         }
         catch (...)
@@ -7717,12 +7717,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int ISmsBinaryMessage_put_Format(py::wrapper::Windows::Devices::Sms::ISmsBinaryMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsBinaryMessage", L"Format"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7731,6 +7725,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsBinaryMessage", L"Format"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsDataFormat>(arg);
 
             self->obj.Format(param0);
@@ -7745,14 +7745,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsBinaryMessage_get_Id(py::wrapper::Windows::Devices::Sms::ISmsBinaryMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsMessage", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsMessage", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -7764,14 +7764,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsBinaryMessage_get_MessageClass(py::wrapper::Windows::Devices::Sms::ISmsBinaryMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsMessage", L"MessageClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsMessage", L"MessageClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageClass());
         }
         catch (...)
@@ -7861,14 +7861,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.ISmsDevice", L"CalculateLength", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.ISmsDevice", L"CalculateLength", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsTextMessage>(args, 0);
 
                 return py::convert(self->obj.CalculateLength(param0));
@@ -7892,14 +7892,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.ISmsDevice", L"SendMessageAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.ISmsDevice", L"SendMessageAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::ISmsMessage>(args, 0);
 
                 return py::convert(self->obj.SendMessageAsync(param0));
@@ -7919,14 +7919,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsDevice_get_AccountPhoneNumber(py::wrapper::Windows::Devices::Sms::ISmsDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsDevice", L"AccountPhoneNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsDevice", L"AccountPhoneNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccountPhoneNumber());
         }
         catch (...)
@@ -7938,14 +7938,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsDevice_get_CellularClass(py::wrapper::Windows::Devices::Sms::ISmsDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsDevice", L"CellularClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsDevice", L"CellularClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CellularClass());
         }
         catch (...)
@@ -7957,14 +7957,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsDevice_get_DeviceStatus(py::wrapper::Windows::Devices::Sms::ISmsDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsDevice", L"DeviceStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsDevice", L"DeviceStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceStatus());
         }
         catch (...)
@@ -7976,14 +7976,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsDevice_get_MessageStore(py::wrapper::Windows::Devices::Sms::ISmsDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsDevice", L"MessageStore"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsDevice", L"MessageStore"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageStore());
         }
         catch (...)
@@ -7995,14 +7995,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsDevice_add_SmsDeviceStatusChanged(py::wrapper::Windows::Devices::Sms::ISmsDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.ISmsDevice", L"SmsDeviceStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.ISmsDevice", L"SmsDeviceStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsDeviceStatusChangedEventHandler>(arg);
 
             return py::convert(self->obj.SmsDeviceStatusChanged(param0));
@@ -8016,14 +8016,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsDevice_remove_SmsDeviceStatusChanged(py::wrapper::Windows::Devices::Sms::ISmsDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.ISmsDevice", L"SmsDeviceStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.ISmsDevice", L"SmsDeviceStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SmsDeviceStatusChanged(param0);
@@ -8038,14 +8038,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsDevice_add_SmsMessageReceived(py::wrapper::Windows::Devices::Sms::ISmsDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.ISmsDevice", L"SmsMessageReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.ISmsDevice", L"SmsMessageReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsMessageReceivedEventHandler>(arg);
 
             return py::convert(self->obj.SmsMessageReceived(param0));
@@ -8059,14 +8059,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsDevice_remove_SmsMessageReceived(py::wrapper::Windows::Devices::Sms::ISmsDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.ISmsDevice", L"SmsMessageReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sms.ISmsDevice", L"SmsMessageReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SmsMessageReceived(param0);
@@ -8160,14 +8160,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsMessage_get_Id(py::wrapper::Windows::Devices::Sms::ISmsMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsMessage", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsMessage", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -8179,14 +8179,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsMessage_get_MessageClass(py::wrapper::Windows::Devices::Sms::ISmsMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsMessage", L"MessageClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsMessage", L"MessageClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageClass());
         }
         catch (...)
@@ -8269,14 +8269,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsMessageBase_get_CellularClass(py::wrapper::Windows::Devices::Sms::ISmsMessageBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsMessageBase", L"CellularClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsMessageBase", L"CellularClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CellularClass());
         }
         catch (...)
@@ -8288,14 +8288,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsMessageBase_get_DeviceId(py::wrapper::Windows::Devices::Sms::ISmsMessageBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsMessageBase", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsMessageBase", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -8307,14 +8307,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsMessageBase_get_MessageClass(py::wrapper::Windows::Devices::Sms::ISmsMessageBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsMessageBase", L"MessageClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsMessageBase", L"MessageClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageClass());
         }
         catch (...)
@@ -8326,14 +8326,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsMessageBase_get_MessageType(py::wrapper::Windows::Devices::Sms::ISmsMessageBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsMessageBase", L"MessageType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsMessageBase", L"MessageType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageType());
         }
         catch (...)
@@ -8345,14 +8345,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsMessageBase_get_SimIccId(py::wrapper::Windows::Devices::Sms::ISmsMessageBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsMessageBase", L"SimIccId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsMessageBase", L"SimIccId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimIccId());
         }
         catch (...)
@@ -8442,14 +8442,14 @@ namespace py::cpp::Windows::Devices::Sms
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"ToBinaryMessages", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"ToBinaryMessages", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsDataFormat>(args, 0);
 
                 return py::convert(self->obj.ToBinaryMessages(param0));
@@ -8469,14 +8469,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsTextMessage_get_Body(py::wrapper::Windows::Devices::Sms::ISmsTextMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"Body"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"Body"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Body());
         }
         catch (...)
@@ -8488,12 +8488,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int ISmsTextMessage_put_Body(py::wrapper::Windows::Devices::Sms::ISmsTextMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"Body"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8502,6 +8496,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"Body"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Body(param0);
@@ -8516,14 +8516,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsTextMessage_get_Encoding(py::wrapper::Windows::Devices::Sms::ISmsTextMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"Encoding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"Encoding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Encoding());
         }
         catch (...)
@@ -8535,12 +8535,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int ISmsTextMessage_put_Encoding(py::wrapper::Windows::Devices::Sms::ISmsTextMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"Encoding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8549,6 +8543,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"Encoding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsEncoding>(arg);
 
             self->obj.Encoding(param0);
@@ -8563,14 +8563,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsTextMessage_get_From(py::wrapper::Windows::Devices::Sms::ISmsTextMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"From"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"From"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.From());
         }
         catch (...)
@@ -8582,12 +8582,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int ISmsTextMessage_put_From(py::wrapper::Windows::Devices::Sms::ISmsTextMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"From"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8596,6 +8590,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"From"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.From(param0);
@@ -8610,14 +8610,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsTextMessage_get_PartCount(py::wrapper::Windows::Devices::Sms::ISmsTextMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"PartCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"PartCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PartCount());
         }
         catch (...)
@@ -8629,14 +8629,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsTextMessage_get_PartNumber(py::wrapper::Windows::Devices::Sms::ISmsTextMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"PartNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"PartNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PartNumber());
         }
         catch (...)
@@ -8648,14 +8648,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsTextMessage_get_PartReferenceId(py::wrapper::Windows::Devices::Sms::ISmsTextMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"PartReferenceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"PartReferenceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PartReferenceId());
         }
         catch (...)
@@ -8667,14 +8667,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsTextMessage_get_Timestamp(py::wrapper::Windows::Devices::Sms::ISmsTextMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -8686,14 +8686,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsTextMessage_get_To(py::wrapper::Windows::Devices::Sms::ISmsTextMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"To"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"To"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.To());
         }
         catch (...)
@@ -8705,12 +8705,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int ISmsTextMessage_put_To(py::wrapper::Windows::Devices::Sms::ISmsTextMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"To"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8719,6 +8713,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsTextMessage", L"To"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.To(param0);
@@ -8733,14 +8733,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsTextMessage_get_Id(py::wrapper::Windows::Devices::Sms::ISmsTextMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsMessage", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsMessage", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -8752,14 +8752,14 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsTextMessage_get_MessageClass(py::wrapper::Windows::Devices::Sms::ISmsTextMessage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsMessage", L"MessageClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sms.ISmsMessage", L"MessageClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MessageClass());
         }
         catch (...)

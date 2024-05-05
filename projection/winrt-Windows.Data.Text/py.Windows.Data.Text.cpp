@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* AlternateWordForm_get_AlternateText(py::wrapper::Windows::Data::Text::AlternateWordForm* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.AlternateWordForm", L"AlternateText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.AlternateWordForm", L"AlternateText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlternateText());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* AlternateWordForm_get_NormalizationFormat(py::wrapper::Windows::Data::Text::AlternateWordForm* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.AlternateWordForm", L"NormalizationFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.AlternateWordForm", L"NormalizationFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NormalizationFormat());
         }
         catch (...)
@@ -62,14 +62,14 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* AlternateWordForm_get_SourceTextSegment(py::wrapper::Windows::Data::Text::AlternateWordForm* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.AlternateWordForm", L"SourceTextSegment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.AlternateWordForm", L"SourceTextSegment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceTextSegment());
         }
         catch (...)
@@ -153,14 +153,14 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* SelectableWordSegment_get_SourceTextSegment(py::wrapper::Windows::Data::Text::SelectableWordSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.SelectableWordSegment", L"SourceTextSegment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.SelectableWordSegment", L"SourceTextSegment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceTextSegment());
         }
         catch (...)
@@ -172,14 +172,14 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* SelectableWordSegment_get_Text(py::wrapper::Windows::Data::Text::SelectableWordSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.SelectableWordSegment", L"Text"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.SelectableWordSegment", L"Text"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Text());
         }
         catch (...)
@@ -290,14 +290,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.SelectableWordsSegmenter", L"GetTokenAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.SelectableWordsSegmenter", L"GetTokenAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -322,14 +322,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.SelectableWordsSegmenter", L"GetTokens", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.SelectableWordsSegmenter", L"GetTokens", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetTokens(param0));
@@ -353,14 +353,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.SelectableWordsSegmenter", L"Tokenize", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.SelectableWordsSegmenter", L"Tokenize", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Data::Text::SelectableWordSegmentsTokenizingHandler>(args, 2);
@@ -383,14 +383,14 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* SelectableWordsSegmenter_get_ResolvedLanguage(py::wrapper::Windows::Data::Text::SelectableWordsSegmenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.SelectableWordsSegmenter", L"ResolvedLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.SelectableWordsSegmenter", L"ResolvedLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolvedLanguage());
         }
         catch (...)
@@ -519,14 +519,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.SemanticTextQuery", L"Find", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.SemanticTextQuery", L"Find", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.Find(param0));
@@ -550,14 +550,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.SemanticTextQuery", L"FindInProperty", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.SemanticTextQuery", L"FindInProperty", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -677,14 +677,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.TextConversionGenerator", L"GetCandidatesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.TextConversionGenerator", L"GetCandidatesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetCandidatesAsync(param0));
@@ -697,14 +697,14 @@ namespace py::cpp::Windows::Data::Text
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.TextConversionGenerator", L"GetCandidatesAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.TextConversionGenerator", L"GetCandidatesAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -725,14 +725,14 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* TextConversionGenerator_get_LanguageAvailableButNotInstalled(py::wrapper::Windows::Data::Text::TextConversionGenerator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.TextConversionGenerator", L"LanguageAvailableButNotInstalled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.TextConversionGenerator", L"LanguageAvailableButNotInstalled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LanguageAvailableButNotInstalled());
         }
         catch (...)
@@ -744,14 +744,14 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* TextConversionGenerator_get_ResolvedLanguage(py::wrapper::Windows::Data::Text::TextConversionGenerator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.TextConversionGenerator", L"ResolvedLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.TextConversionGenerator", L"ResolvedLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolvedLanguage());
         }
         catch (...)
@@ -835,14 +835,14 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* TextPhoneme_get_DisplayText(py::wrapper::Windows::Data::Text::TextPhoneme* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.TextPhoneme", L"DisplayText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.TextPhoneme", L"DisplayText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayText());
         }
         catch (...)
@@ -854,14 +854,14 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* TextPhoneme_get_ReadingText(py::wrapper::Windows::Data::Text::TextPhoneme* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.TextPhoneme", L"ReadingText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.TextPhoneme", L"ReadingText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReadingText());
         }
         catch (...)
@@ -972,14 +972,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.TextPredictionGenerator", L"GetCandidatesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.TextPredictionGenerator", L"GetCandidatesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetCandidatesAsync(param0));
@@ -992,14 +992,14 @@ namespace py::cpp::Windows::Data::Text
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.TextPredictionGenerator", L"GetCandidatesAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.TextPredictionGenerator", L"GetCandidatesAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -1013,14 +1013,14 @@ namespace py::cpp::Windows::Data::Text
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.TextPredictionGenerator", L"GetCandidatesAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.TextPredictionGenerator", L"GetCandidatesAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Data::Text::TextPredictionOptions>(args, 2);
@@ -1047,14 +1047,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.TextPredictionGenerator", L"GetNextWordCandidatesAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.TextPredictionGenerator", L"GetNextWordCandidatesAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
@@ -1075,14 +1075,14 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* TextPredictionGenerator_get_LanguageAvailableButNotInstalled(py::wrapper::Windows::Data::Text::TextPredictionGenerator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.TextPredictionGenerator", L"LanguageAvailableButNotInstalled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.TextPredictionGenerator", L"LanguageAvailableButNotInstalled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LanguageAvailableButNotInstalled());
         }
         catch (...)
@@ -1094,14 +1094,14 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* TextPredictionGenerator_get_ResolvedLanguage(py::wrapper::Windows::Data::Text::TextPredictionGenerator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.TextPredictionGenerator", L"ResolvedLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.TextPredictionGenerator", L"ResolvedLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolvedLanguage());
         }
         catch (...)
@@ -1113,14 +1113,14 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* TextPredictionGenerator_get_InputScope(py::wrapper::Windows::Data::Text::TextPredictionGenerator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.TextPredictionGenerator", L"InputScope"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.TextPredictionGenerator", L"InputScope"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InputScope());
         }
         catch (...)
@@ -1132,12 +1132,6 @@ namespace py::cpp::Windows::Data::Text
 
     static int TextPredictionGenerator_put_InputScope(py::wrapper::Windows::Data::Text::TextPredictionGenerator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.TextPredictionGenerator", L"InputScope"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1146,6 +1140,12 @@ namespace py::cpp::Windows::Data::Text
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.TextPredictionGenerator", L"InputScope"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Text::Core::CoreTextInputScope>(arg);
 
             self->obj.InputScope(param0);
@@ -1262,14 +1262,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.TextReverseConversionGenerator", L"ConvertBackAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.TextReverseConversionGenerator", L"ConvertBackAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ConvertBackAsync(param0));
@@ -1293,14 +1293,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.TextReverseConversionGenerator", L"GetPhonemesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.TextReverseConversionGenerator", L"GetPhonemesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetPhonemesAsync(param0));
@@ -1320,14 +1320,14 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* TextReverseConversionGenerator_get_LanguageAvailableButNotInstalled(py::wrapper::Windows::Data::Text::TextReverseConversionGenerator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.TextReverseConversionGenerator", L"LanguageAvailableButNotInstalled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.TextReverseConversionGenerator", L"LanguageAvailableButNotInstalled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LanguageAvailableButNotInstalled());
         }
         catch (...)
@@ -1339,14 +1339,14 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* TextReverseConversionGenerator_get_ResolvedLanguage(py::wrapper::Windows::Data::Text::TextReverseConversionGenerator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.TextReverseConversionGenerator", L"ResolvedLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.TextReverseConversionGenerator", L"ResolvedLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolvedLanguage());
         }
         catch (...)
@@ -1427,14 +1427,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"GetCodepointFromSurrogatePair", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"GetCodepointFromSurrogatePair", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -1459,14 +1459,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"GetGeneralCategory", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"GetGeneralCategory", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::GetGeneralCategory(param0));
@@ -1490,14 +1490,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"GetNumericType", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"GetNumericType", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::GetNumericType(param0));
@@ -1521,14 +1521,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"GetSurrogatePairFromCodepoint", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"GetSurrogatePairFromCodepoint", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 char16_t param1 {  };
                 char16_t param2 {  };
@@ -1566,14 +1566,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsAlphabetic", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsAlphabetic", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsAlphabetic(param0));
@@ -1597,14 +1597,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsCased", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsCased", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsCased(param0));
@@ -1628,14 +1628,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsGraphemeBase", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsGraphemeBase", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsGraphemeBase(param0));
@@ -1659,14 +1659,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsGraphemeExtend", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsGraphemeExtend", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsGraphemeExtend(param0));
@@ -1690,14 +1690,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsHighSurrogate", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsHighSurrogate", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsHighSurrogate(param0));
@@ -1721,14 +1721,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsIdContinue", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsIdContinue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsIdContinue(param0));
@@ -1752,14 +1752,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsIdStart", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsIdStart", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsIdStart(param0));
@@ -1783,14 +1783,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsLowSurrogate", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsLowSurrogate", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsLowSurrogate(param0));
@@ -1814,14 +1814,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsLowercase", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsLowercase", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsLowercase(param0));
@@ -1845,14 +1845,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsNoncharacter", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsNoncharacter", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsNoncharacter(param0));
@@ -1876,14 +1876,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsSupplementary", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsSupplementary", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsSupplementary(param0));
@@ -1907,14 +1907,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsUppercase", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsUppercase", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsUppercase(param0));
@@ -1938,14 +1938,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsWhitespace", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.UnicodeCharacters", L"IsWhitespace", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Data::Text::UnicodeCharacters::IsWhitespace(param0));
@@ -2049,14 +2049,14 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* WordSegment_get_AlternateForms(py::wrapper::Windows::Data::Text::WordSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.WordSegment", L"AlternateForms"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.WordSegment", L"AlternateForms"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlternateForms());
         }
         catch (...)
@@ -2068,14 +2068,14 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* WordSegment_get_SourceTextSegment(py::wrapper::Windows::Data::Text::WordSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.WordSegment", L"SourceTextSegment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.WordSegment", L"SourceTextSegment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceTextSegment());
         }
         catch (...)
@@ -2087,14 +2087,14 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* WordSegment_get_Text(py::wrapper::Windows::Data::Text::WordSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.WordSegment", L"Text"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.WordSegment", L"Text"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Text());
         }
         catch (...)
@@ -2206,14 +2206,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.WordsSegmenter", L"GetTokenAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.WordsSegmenter", L"GetTokenAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -2238,14 +2238,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.WordsSegmenter", L"GetTokens", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.WordsSegmenter", L"GetTokens", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetTokens(param0));
@@ -2269,14 +2269,14 @@ namespace py::cpp::Windows::Data::Text
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.WordsSegmenter", L"Tokenize", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Text.WordsSegmenter", L"Tokenize", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Data::Text::WordSegmentsTokenizingHandler>(args, 2);
@@ -2299,14 +2299,14 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* WordsSegmenter_get_ResolvedLanguage(py::wrapper::Windows::Data::Text::WordsSegmenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.WordsSegmenter", L"ResolvedLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Text.WordsSegmenter", L"ResolvedLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolvedLanguage());
         }
         catch (...)

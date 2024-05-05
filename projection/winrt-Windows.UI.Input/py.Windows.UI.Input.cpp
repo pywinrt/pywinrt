@@ -28,14 +28,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.AttachableInputObject", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.AttachableInputObject", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -145,14 +145,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* CrossSlidingEventArgs_get_CrossSlidingState(py::wrapper::Windows::UI::Input::CrossSlidingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.CrossSlidingEventArgs", L"CrossSlidingState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.CrossSlidingEventArgs", L"CrossSlidingState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CrossSlidingState());
         }
         catch (...)
@@ -164,14 +164,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* CrossSlidingEventArgs_get_PointerDeviceType(py::wrapper::Windows::UI::Input::CrossSlidingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.CrossSlidingEventArgs", L"PointerDeviceType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.CrossSlidingEventArgs", L"PointerDeviceType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerDeviceType());
         }
         catch (...)
@@ -183,14 +183,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* CrossSlidingEventArgs_get_Position(py::wrapper::Windows::UI::Input::CrossSlidingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.CrossSlidingEventArgs", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.CrossSlidingEventArgs", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -202,14 +202,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* CrossSlidingEventArgs_get_ContactCount(py::wrapper::Windows::UI::Input::CrossSlidingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.CrossSlidingEventArgs", L"ContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.CrossSlidingEventArgs", L"ContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactCount());
         }
         catch (...)
@@ -294,14 +294,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* DraggingEventArgs_get_DraggingState(py::wrapper::Windows::UI::Input::DraggingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.DraggingEventArgs", L"DraggingState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.DraggingEventArgs", L"DraggingState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DraggingState());
         }
         catch (...)
@@ -313,14 +313,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* DraggingEventArgs_get_PointerDeviceType(py::wrapper::Windows::UI::Input::DraggingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.DraggingEventArgs", L"PointerDeviceType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.DraggingEventArgs", L"PointerDeviceType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerDeviceType());
         }
         catch (...)
@@ -332,14 +332,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* DraggingEventArgs_get_Position(py::wrapper::Windows::UI::Input::DraggingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.DraggingEventArgs", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.DraggingEventArgs", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -351,14 +351,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* DraggingEventArgs_get_ContactCount(py::wrapper::Windows::UI::Input::DraggingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.DraggingEventArgs", L"ContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.DraggingEventArgs", L"ContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactCount());
         }
         catch (...)
@@ -447,14 +447,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.EdgeGesture", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.EdgeGesture", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::Input::EdgeGesture::GetForCurrentView());
             }
             catch (...)
@@ -472,14 +472,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* EdgeGesture_add_Canceled(py::wrapper::Windows::UI::Input::EdgeGesture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.EdgeGesture", L"Canceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.EdgeGesture", L"Canceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::EdgeGesture, winrt::Windows::UI::Input::EdgeGestureEventArgs>>(arg);
 
             return py::convert(self->obj.Canceled(param0));
@@ -493,14 +493,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* EdgeGesture_remove_Canceled(py::wrapper::Windows::UI::Input::EdgeGesture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.EdgeGesture", L"Canceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.EdgeGesture", L"Canceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Canceled(param0);
@@ -515,14 +515,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* EdgeGesture_add_Completed(py::wrapper::Windows::UI::Input::EdgeGesture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.EdgeGesture", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.EdgeGesture", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::EdgeGesture, winrt::Windows::UI::Input::EdgeGestureEventArgs>>(arg);
 
             return py::convert(self->obj.Completed(param0));
@@ -536,14 +536,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* EdgeGesture_remove_Completed(py::wrapper::Windows::UI::Input::EdgeGesture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.EdgeGesture", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.EdgeGesture", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Completed(param0);
@@ -558,14 +558,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* EdgeGesture_add_Starting(py::wrapper::Windows::UI::Input::EdgeGesture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.EdgeGesture", L"Starting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.EdgeGesture", L"Starting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::EdgeGesture, winrt::Windows::UI::Input::EdgeGestureEventArgs>>(arg);
 
             return py::convert(self->obj.Starting(param0));
@@ -579,14 +579,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* EdgeGesture_remove_Starting(py::wrapper::Windows::UI::Input::EdgeGesture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.EdgeGesture", L"Starting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.EdgeGesture", L"Starting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Starting(param0);
@@ -702,14 +702,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* EdgeGestureEventArgs_get_Kind(py::wrapper::Windows::UI::Input::EdgeGestureEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.EdgeGestureEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.EdgeGestureEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -817,14 +817,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.GestureRecognizer", L"CanBeDoubleTap", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.GestureRecognizer", L"CanBeDoubleTap", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::PointerPoint>(args, 0);
 
                 return py::convert(self->obj.CanBeDoubleTap(param0));
@@ -848,14 +848,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.GestureRecognizer", L"CompleteGesture", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.GestureRecognizer", L"CompleteGesture", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.CompleteGesture();
                 Py_RETURN_NONE;
             }
@@ -878,14 +878,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.GestureRecognizer", L"ProcessDownEvent", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.GestureRecognizer", L"ProcessDownEvent", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::PointerPoint>(args, 0);
 
                 self->obj.ProcessDownEvent(param0);
@@ -910,14 +910,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.GestureRecognizer", L"ProcessInertia", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.GestureRecognizer", L"ProcessInertia", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ProcessInertia();
                 Py_RETURN_NONE;
             }
@@ -940,14 +940,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.GestureRecognizer", L"ProcessMouseWheelEvent", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.GestureRecognizer", L"ProcessMouseWheelEvent", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::PointerPoint>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -974,14 +974,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.GestureRecognizer", L"ProcessMoveEvents", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.GestureRecognizer", L"ProcessMoveEvents", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::Input::PointerPoint>>(args, 0);
 
                 self->obj.ProcessMoveEvents(param0);
@@ -1006,14 +1006,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.GestureRecognizer", L"ProcessUpEvent", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.GestureRecognizer", L"ProcessUpEvent", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::PointerPoint>(args, 0);
 
                 self->obj.ProcessUpEvent(param0);
@@ -1034,14 +1034,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_ShowGestureFeedback(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"ShowGestureFeedback"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"ShowGestureFeedback"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShowGestureFeedback());
         }
         catch (...)
@@ -1053,12 +1053,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int GestureRecognizer_put_ShowGestureFeedback(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"ShowGestureFeedback"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1067,6 +1061,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"ShowGestureFeedback"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ShowGestureFeedback(param0);
@@ -1081,14 +1081,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_PivotRadius(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"PivotRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"PivotRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PivotRadius());
         }
         catch (...)
@@ -1100,12 +1100,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int GestureRecognizer_put_PivotRadius(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"PivotRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1114,6 +1108,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"PivotRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.PivotRadius(param0);
@@ -1128,14 +1128,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_PivotCenter(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"PivotCenter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"PivotCenter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PivotCenter());
         }
         catch (...)
@@ -1147,12 +1147,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int GestureRecognizer_put_PivotCenter(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"PivotCenter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1161,6 +1155,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"PivotCenter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             self->obj.PivotCenter(param0);
@@ -1175,14 +1175,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_ManipulationExact(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"ManipulationExact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"ManipulationExact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ManipulationExact());
         }
         catch (...)
@@ -1194,12 +1194,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int GestureRecognizer_put_ManipulationExact(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"ManipulationExact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1208,6 +1202,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"ManipulationExact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ManipulationExact(param0);
@@ -1222,14 +1222,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_InertiaTranslationDisplacement(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaTranslationDisplacement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaTranslationDisplacement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InertiaTranslationDisplacement());
         }
         catch (...)
@@ -1241,12 +1241,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int GestureRecognizer_put_InertiaTranslationDisplacement(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaTranslationDisplacement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1255,6 +1249,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaTranslationDisplacement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.InertiaTranslationDisplacement(param0);
@@ -1269,14 +1269,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_InertiaTranslationDeceleration(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaTranslationDeceleration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaTranslationDeceleration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InertiaTranslationDeceleration());
         }
         catch (...)
@@ -1288,12 +1288,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int GestureRecognizer_put_InertiaTranslationDeceleration(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaTranslationDeceleration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1302,6 +1296,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaTranslationDeceleration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.InertiaTranslationDeceleration(param0);
@@ -1316,14 +1316,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_InertiaRotationDeceleration(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaRotationDeceleration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaRotationDeceleration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InertiaRotationDeceleration());
         }
         catch (...)
@@ -1335,12 +1335,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int GestureRecognizer_put_InertiaRotationDeceleration(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaRotationDeceleration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1349,6 +1343,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaRotationDeceleration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.InertiaRotationDeceleration(param0);
@@ -1363,14 +1363,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_InertiaRotationAngle(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaRotationAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaRotationAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InertiaRotationAngle());
         }
         catch (...)
@@ -1382,12 +1382,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int GestureRecognizer_put_InertiaRotationAngle(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaRotationAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1396,6 +1390,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaRotationAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.InertiaRotationAngle(param0);
@@ -1410,14 +1410,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_InertiaExpansionDeceleration(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaExpansionDeceleration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaExpansionDeceleration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InertiaExpansionDeceleration());
         }
         catch (...)
@@ -1429,12 +1429,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int GestureRecognizer_put_InertiaExpansionDeceleration(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaExpansionDeceleration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1443,6 +1437,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaExpansionDeceleration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.InertiaExpansionDeceleration(param0);
@@ -1457,14 +1457,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_InertiaExpansion(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaExpansion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaExpansion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InertiaExpansion());
         }
         catch (...)
@@ -1476,12 +1476,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int GestureRecognizer_put_InertiaExpansion(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaExpansion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1490,6 +1484,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"InertiaExpansion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.InertiaExpansion(param0);
@@ -1504,14 +1504,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_GestureSettings(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"GestureSettings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"GestureSettings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GestureSettings());
         }
         catch (...)
@@ -1523,12 +1523,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int GestureRecognizer_put_GestureSettings(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"GestureSettings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1537,6 +1531,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"GestureSettings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Input::GestureSettings>(arg);
 
             self->obj.GestureSettings(param0);
@@ -1551,14 +1551,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_CrossSlideThresholds(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"CrossSlideThresholds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"CrossSlideThresholds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CrossSlideThresholds());
         }
         catch (...)
@@ -1570,12 +1570,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int GestureRecognizer_put_CrossSlideThresholds(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"CrossSlideThresholds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1584,6 +1578,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"CrossSlideThresholds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Input::CrossSlideThresholds>(arg);
 
             self->obj.CrossSlideThresholds(param0);
@@ -1598,14 +1598,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_CrossSlideHorizontally(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"CrossSlideHorizontally"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"CrossSlideHorizontally"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CrossSlideHorizontally());
         }
         catch (...)
@@ -1617,12 +1617,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int GestureRecognizer_put_CrossSlideHorizontally(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"CrossSlideHorizontally"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1631,6 +1625,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"CrossSlideHorizontally"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.CrossSlideHorizontally(param0);
@@ -1645,14 +1645,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_CrossSlideExact(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"CrossSlideExact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"CrossSlideExact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CrossSlideExact());
         }
         catch (...)
@@ -1664,12 +1664,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int GestureRecognizer_put_CrossSlideExact(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"CrossSlideExact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1678,6 +1672,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"CrossSlideExact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.CrossSlideExact(param0);
@@ -1692,14 +1692,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_AutoProcessInertia(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"AutoProcessInertia"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"AutoProcessInertia"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AutoProcessInertia());
         }
         catch (...)
@@ -1711,12 +1711,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int GestureRecognizer_put_AutoProcessInertia(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"AutoProcessInertia"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1725,6 +1719,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"AutoProcessInertia"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AutoProcessInertia(param0);
@@ -1739,14 +1739,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_IsActive(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"IsActive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"IsActive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsActive());
         }
         catch (...)
@@ -1758,14 +1758,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_IsInertial(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"IsInertial"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"IsInertial"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsInertial());
         }
         catch (...)
@@ -1777,14 +1777,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_MouseWheelParameters(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"MouseWheelParameters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"MouseWheelParameters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MouseWheelParameters());
         }
         catch (...)
@@ -1796,14 +1796,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_TranslationMinContactCount(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"TranslationMinContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"TranslationMinContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TranslationMinContactCount());
         }
         catch (...)
@@ -1815,12 +1815,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int GestureRecognizer_put_TranslationMinContactCount(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"TranslationMinContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1829,6 +1823,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"TranslationMinContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.TranslationMinContactCount(param0);
@@ -1843,14 +1843,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_TranslationMaxContactCount(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"TranslationMaxContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"TranslationMaxContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TranslationMaxContactCount());
         }
         catch (...)
@@ -1862,12 +1862,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int GestureRecognizer_put_TranslationMaxContactCount(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"TranslationMaxContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1876,6 +1870,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"TranslationMaxContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.TranslationMaxContactCount(param0);
@@ -1890,14 +1890,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_TapMinContactCount(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"TapMinContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"TapMinContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TapMinContactCount());
         }
         catch (...)
@@ -1909,12 +1909,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int GestureRecognizer_put_TapMinContactCount(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"TapMinContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1923,6 +1917,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"TapMinContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.TapMinContactCount(param0);
@@ -1937,14 +1937,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_TapMaxContactCount(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"TapMaxContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"TapMaxContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TapMaxContactCount());
         }
         catch (...)
@@ -1956,12 +1956,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int GestureRecognizer_put_TapMaxContactCount(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"TapMaxContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1970,6 +1964,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"TapMaxContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.TapMaxContactCount(param0);
@@ -1984,14 +1984,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_HoldStartDelay(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"HoldStartDelay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"HoldStartDelay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HoldStartDelay());
         }
         catch (...)
@@ -2003,12 +2003,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int GestureRecognizer_put_HoldStartDelay(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"HoldStartDelay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2017,6 +2011,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"HoldStartDelay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.HoldStartDelay(param0);
@@ -2031,14 +2031,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_HoldRadius(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"HoldRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"HoldRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HoldRadius());
         }
         catch (...)
@@ -2050,12 +2050,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int GestureRecognizer_put_HoldRadius(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"HoldRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2064,6 +2058,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"HoldRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.HoldRadius(param0);
@@ -2078,14 +2078,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_HoldMinContactCount(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"HoldMinContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"HoldMinContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HoldMinContactCount());
         }
         catch (...)
@@ -2097,12 +2097,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int GestureRecognizer_put_HoldMinContactCount(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"HoldMinContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2111,6 +2105,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"HoldMinContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.HoldMinContactCount(param0);
@@ -2125,14 +2125,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_get_HoldMaxContactCount(py::wrapper::Windows::UI::Input::GestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"HoldMaxContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"HoldMaxContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HoldMaxContactCount());
         }
         catch (...)
@@ -2144,12 +2144,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int GestureRecognizer_put_HoldMaxContactCount(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"HoldMaxContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2158,6 +2152,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.GestureRecognizer", L"HoldMaxContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.HoldMaxContactCount(param0);
@@ -2172,14 +2172,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_add_CrossSliding(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"CrossSliding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"CrossSliding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::CrossSlidingEventArgs>>(arg);
 
             return py::convert(self->obj.CrossSliding(param0));
@@ -2193,14 +2193,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_remove_CrossSliding(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"CrossSliding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"CrossSliding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CrossSliding(param0);
@@ -2215,14 +2215,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_add_Dragging(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"Dragging"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"Dragging"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::DraggingEventArgs>>(arg);
 
             return py::convert(self->obj.Dragging(param0));
@@ -2236,14 +2236,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_remove_Dragging(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"Dragging"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"Dragging"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Dragging(param0);
@@ -2258,14 +2258,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_add_Holding(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"Holding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"Holding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::HoldingEventArgs>>(arg);
 
             return py::convert(self->obj.Holding(param0));
@@ -2279,14 +2279,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_remove_Holding(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"Holding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"Holding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Holding(param0);
@@ -2301,14 +2301,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_add_ManipulationCompleted(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"ManipulationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"ManipulationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::ManipulationCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.ManipulationCompleted(param0));
@@ -2322,14 +2322,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_remove_ManipulationCompleted(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"ManipulationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"ManipulationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ManipulationCompleted(param0);
@@ -2344,14 +2344,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_add_ManipulationInertiaStarting(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"ManipulationInertiaStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"ManipulationInertiaStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::ManipulationInertiaStartingEventArgs>>(arg);
 
             return py::convert(self->obj.ManipulationInertiaStarting(param0));
@@ -2365,14 +2365,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_remove_ManipulationInertiaStarting(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"ManipulationInertiaStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"ManipulationInertiaStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ManipulationInertiaStarting(param0);
@@ -2387,14 +2387,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_add_ManipulationStarted(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"ManipulationStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"ManipulationStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::ManipulationStartedEventArgs>>(arg);
 
             return py::convert(self->obj.ManipulationStarted(param0));
@@ -2408,14 +2408,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_remove_ManipulationStarted(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"ManipulationStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"ManipulationStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ManipulationStarted(param0);
@@ -2430,14 +2430,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_add_ManipulationUpdated(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"ManipulationUpdated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"ManipulationUpdated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::ManipulationUpdatedEventArgs>>(arg);
 
             return py::convert(self->obj.ManipulationUpdated(param0));
@@ -2451,14 +2451,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_remove_ManipulationUpdated(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"ManipulationUpdated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"ManipulationUpdated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ManipulationUpdated(param0);
@@ -2473,14 +2473,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_add_RightTapped(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"RightTapped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"RightTapped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::RightTappedEventArgs>>(arg);
 
             return py::convert(self->obj.RightTapped(param0));
@@ -2494,14 +2494,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_remove_RightTapped(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"RightTapped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"RightTapped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.RightTapped(param0);
@@ -2516,14 +2516,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_add_Tapped(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"Tapped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"Tapped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::TappedEventArgs>>(arg);
 
             return py::convert(self->obj.Tapped(param0));
@@ -2537,14 +2537,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_remove_Tapped(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"Tapped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.GestureRecognizer", L"Tapped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Tapped(param0);
@@ -2679,14 +2679,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* HoldingEventArgs_get_HoldingState(py::wrapper::Windows::UI::Input::HoldingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.HoldingEventArgs", L"HoldingState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.HoldingEventArgs", L"HoldingState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HoldingState());
         }
         catch (...)
@@ -2698,14 +2698,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* HoldingEventArgs_get_PointerDeviceType(py::wrapper::Windows::UI::Input::HoldingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.HoldingEventArgs", L"PointerDeviceType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.HoldingEventArgs", L"PointerDeviceType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerDeviceType());
         }
         catch (...)
@@ -2717,14 +2717,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* HoldingEventArgs_get_Position(py::wrapper::Windows::UI::Input::HoldingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.HoldingEventArgs", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.HoldingEventArgs", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -2736,14 +2736,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* HoldingEventArgs_get_ContactCount(py::wrapper::Windows::UI::Input::HoldingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.HoldingEventArgs", L"ContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.HoldingEventArgs", L"ContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactCount());
         }
         catch (...)
@@ -2755,14 +2755,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* HoldingEventArgs_get_CurrentContactCount(py::wrapper::Windows::UI::Input::HoldingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.HoldingEventArgs", L"CurrentContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.HoldingEventArgs", L"CurrentContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentContactCount());
         }
         catch (...)
@@ -2848,14 +2848,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* InputActivationListener_get_State(py::wrapper::Windows::UI::Input::InputActivationListener* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.InputActivationListener", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.InputActivationListener", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -2867,14 +2867,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* InputActivationListener_add_InputActivationChanged(py::wrapper::Windows::UI::Input::InputActivationListener* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.InputActivationListener", L"InputActivationChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.InputActivationListener", L"InputActivationChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::InputActivationListener, winrt::Windows::UI::Input::InputActivationListenerActivationChangedEventArgs>>(arg);
 
             return py::convert(self->obj.InputActivationChanged(param0));
@@ -2888,14 +2888,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* InputActivationListener_remove_InputActivationChanged(py::wrapper::Windows::UI::Input::InputActivationListener* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.InputActivationListener", L"InputActivationChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.InputActivationListener", L"InputActivationChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.InputActivationChanged(param0);
@@ -2982,14 +2982,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* InputActivationListenerActivationChangedEventArgs_get_State(py::wrapper::Windows::UI::Input::InputActivationListenerActivationChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.InputActivationListenerActivationChangedEventArgs", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.InputActivationListenerActivationChangedEventArgs", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -3075,14 +3075,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.KeyboardDeliveryInterceptor", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.KeyboardDeliveryInterceptor", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::Input::KeyboardDeliveryInterceptor::GetForCurrentView());
             }
             catch (...)
@@ -3100,14 +3100,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* KeyboardDeliveryInterceptor_get_IsInterceptionEnabledWhenInForeground(py::wrapper::Windows::UI::Input::KeyboardDeliveryInterceptor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.KeyboardDeliveryInterceptor", L"IsInterceptionEnabledWhenInForeground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.KeyboardDeliveryInterceptor", L"IsInterceptionEnabledWhenInForeground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsInterceptionEnabledWhenInForeground());
         }
         catch (...)
@@ -3119,12 +3119,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int KeyboardDeliveryInterceptor_put_IsInterceptionEnabledWhenInForeground(py::wrapper::Windows::UI::Input::KeyboardDeliveryInterceptor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.KeyboardDeliveryInterceptor", L"IsInterceptionEnabledWhenInForeground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3133,6 +3127,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.KeyboardDeliveryInterceptor", L"IsInterceptionEnabledWhenInForeground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsInterceptionEnabledWhenInForeground(param0);
@@ -3147,14 +3147,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* KeyboardDeliveryInterceptor_add_KeyDown(py::wrapper::Windows::UI::Input::KeyboardDeliveryInterceptor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.KeyboardDeliveryInterceptor", L"KeyDown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.KeyboardDeliveryInterceptor", L"KeyDown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::KeyboardDeliveryInterceptor, winrt::Windows::UI::Core::KeyEventArgs>>(arg);
 
             return py::convert(self->obj.KeyDown(param0));
@@ -3168,14 +3168,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* KeyboardDeliveryInterceptor_remove_KeyDown(py::wrapper::Windows::UI::Input::KeyboardDeliveryInterceptor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.KeyboardDeliveryInterceptor", L"KeyDown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.KeyboardDeliveryInterceptor", L"KeyDown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.KeyDown(param0);
@@ -3190,14 +3190,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* KeyboardDeliveryInterceptor_add_KeyUp(py::wrapper::Windows::UI::Input::KeyboardDeliveryInterceptor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.KeyboardDeliveryInterceptor", L"KeyUp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.KeyboardDeliveryInterceptor", L"KeyUp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::KeyboardDeliveryInterceptor, winrt::Windows::UI::Core::KeyEventArgs>>(arg);
 
             return py::convert(self->obj.KeyUp(param0));
@@ -3211,14 +3211,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* KeyboardDeliveryInterceptor_remove_KeyUp(py::wrapper::Windows::UI::Input::KeyboardDeliveryInterceptor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.KeyboardDeliveryInterceptor", L"KeyUp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.KeyboardDeliveryInterceptor", L"KeyUp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.KeyUp(param0);
@@ -3333,14 +3333,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* ManipulationCompletedEventArgs_get_Cumulative(py::wrapper::Windows::UI::Input::ManipulationCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationCompletedEventArgs", L"Cumulative"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationCompletedEventArgs", L"Cumulative"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Cumulative());
         }
         catch (...)
@@ -3352,14 +3352,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* ManipulationCompletedEventArgs_get_PointerDeviceType(py::wrapper::Windows::UI::Input::ManipulationCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationCompletedEventArgs", L"PointerDeviceType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationCompletedEventArgs", L"PointerDeviceType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerDeviceType());
         }
         catch (...)
@@ -3371,14 +3371,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* ManipulationCompletedEventArgs_get_Position(py::wrapper::Windows::UI::Input::ManipulationCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationCompletedEventArgs", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationCompletedEventArgs", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -3390,14 +3390,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* ManipulationCompletedEventArgs_get_Velocities(py::wrapper::Windows::UI::Input::ManipulationCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationCompletedEventArgs", L"Velocities"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationCompletedEventArgs", L"Velocities"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Velocities());
         }
         catch (...)
@@ -3409,14 +3409,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* ManipulationCompletedEventArgs_get_ContactCount(py::wrapper::Windows::UI::Input::ManipulationCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationCompletedEventArgs", L"ContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationCompletedEventArgs", L"ContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactCount());
         }
         catch (...)
@@ -3428,14 +3428,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* ManipulationCompletedEventArgs_get_CurrentContactCount(py::wrapper::Windows::UI::Input::ManipulationCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationCompletedEventArgs", L"CurrentContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationCompletedEventArgs", L"CurrentContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentContactCount());
         }
         catch (...)
@@ -3522,14 +3522,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* ManipulationInertiaStartingEventArgs_get_Cumulative(py::wrapper::Windows::UI::Input::ManipulationInertiaStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationInertiaStartingEventArgs", L"Cumulative"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationInertiaStartingEventArgs", L"Cumulative"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Cumulative());
         }
         catch (...)
@@ -3541,14 +3541,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* ManipulationInertiaStartingEventArgs_get_Delta(py::wrapper::Windows::UI::Input::ManipulationInertiaStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationInertiaStartingEventArgs", L"Delta"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationInertiaStartingEventArgs", L"Delta"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Delta());
         }
         catch (...)
@@ -3560,14 +3560,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* ManipulationInertiaStartingEventArgs_get_PointerDeviceType(py::wrapper::Windows::UI::Input::ManipulationInertiaStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationInertiaStartingEventArgs", L"PointerDeviceType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationInertiaStartingEventArgs", L"PointerDeviceType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerDeviceType());
         }
         catch (...)
@@ -3579,14 +3579,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* ManipulationInertiaStartingEventArgs_get_Position(py::wrapper::Windows::UI::Input::ManipulationInertiaStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationInertiaStartingEventArgs", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationInertiaStartingEventArgs", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -3598,14 +3598,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* ManipulationInertiaStartingEventArgs_get_Velocities(py::wrapper::Windows::UI::Input::ManipulationInertiaStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationInertiaStartingEventArgs", L"Velocities"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationInertiaStartingEventArgs", L"Velocities"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Velocities());
         }
         catch (...)
@@ -3617,14 +3617,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* ManipulationInertiaStartingEventArgs_get_ContactCount(py::wrapper::Windows::UI::Input::ManipulationInertiaStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationInertiaStartingEventArgs", L"ContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationInertiaStartingEventArgs", L"ContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactCount());
         }
         catch (...)
@@ -3711,14 +3711,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* ManipulationStartedEventArgs_get_Cumulative(py::wrapper::Windows::UI::Input::ManipulationStartedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationStartedEventArgs", L"Cumulative"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationStartedEventArgs", L"Cumulative"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Cumulative());
         }
         catch (...)
@@ -3730,14 +3730,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* ManipulationStartedEventArgs_get_PointerDeviceType(py::wrapper::Windows::UI::Input::ManipulationStartedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationStartedEventArgs", L"PointerDeviceType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationStartedEventArgs", L"PointerDeviceType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerDeviceType());
         }
         catch (...)
@@ -3749,14 +3749,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* ManipulationStartedEventArgs_get_Position(py::wrapper::Windows::UI::Input::ManipulationStartedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationStartedEventArgs", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationStartedEventArgs", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -3768,14 +3768,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* ManipulationStartedEventArgs_get_ContactCount(py::wrapper::Windows::UI::Input::ManipulationStartedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationStartedEventArgs", L"ContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationStartedEventArgs", L"ContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactCount());
         }
         catch (...)
@@ -3860,14 +3860,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* ManipulationUpdatedEventArgs_get_Cumulative(py::wrapper::Windows::UI::Input::ManipulationUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationUpdatedEventArgs", L"Cumulative"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationUpdatedEventArgs", L"Cumulative"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Cumulative());
         }
         catch (...)
@@ -3879,14 +3879,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* ManipulationUpdatedEventArgs_get_Delta(py::wrapper::Windows::UI::Input::ManipulationUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationUpdatedEventArgs", L"Delta"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationUpdatedEventArgs", L"Delta"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Delta());
         }
         catch (...)
@@ -3898,14 +3898,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* ManipulationUpdatedEventArgs_get_PointerDeviceType(py::wrapper::Windows::UI::Input::ManipulationUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationUpdatedEventArgs", L"PointerDeviceType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationUpdatedEventArgs", L"PointerDeviceType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerDeviceType());
         }
         catch (...)
@@ -3917,14 +3917,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* ManipulationUpdatedEventArgs_get_Position(py::wrapper::Windows::UI::Input::ManipulationUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationUpdatedEventArgs", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationUpdatedEventArgs", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -3936,14 +3936,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* ManipulationUpdatedEventArgs_get_Velocities(py::wrapper::Windows::UI::Input::ManipulationUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationUpdatedEventArgs", L"Velocities"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationUpdatedEventArgs", L"Velocities"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Velocities());
         }
         catch (...)
@@ -3955,14 +3955,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* ManipulationUpdatedEventArgs_get_ContactCount(py::wrapper::Windows::UI::Input::ManipulationUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationUpdatedEventArgs", L"ContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationUpdatedEventArgs", L"ContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactCount());
         }
         catch (...)
@@ -3974,14 +3974,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* ManipulationUpdatedEventArgs_get_CurrentContactCount(py::wrapper::Windows::UI::Input::ManipulationUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationUpdatedEventArgs", L"CurrentContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.ManipulationUpdatedEventArgs", L"CurrentContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentContactCount());
         }
         catch (...)
@@ -4069,14 +4069,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* MouseWheelParameters_get_PageTranslation(py::wrapper::Windows::UI::Input::MouseWheelParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.MouseWheelParameters", L"PageTranslation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.MouseWheelParameters", L"PageTranslation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageTranslation());
         }
         catch (...)
@@ -4088,12 +4088,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int MouseWheelParameters_put_PageTranslation(py::wrapper::Windows::UI::Input::MouseWheelParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.MouseWheelParameters", L"PageTranslation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4102,6 +4096,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.MouseWheelParameters", L"PageTranslation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             self->obj.PageTranslation(param0);
@@ -4116,14 +4116,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* MouseWheelParameters_get_DeltaScale(py::wrapper::Windows::UI::Input::MouseWheelParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.MouseWheelParameters", L"DeltaScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.MouseWheelParameters", L"DeltaScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeltaScale());
         }
         catch (...)
@@ -4135,12 +4135,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int MouseWheelParameters_put_DeltaScale(py::wrapper::Windows::UI::Input::MouseWheelParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.MouseWheelParameters", L"DeltaScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4149,6 +4143,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.MouseWheelParameters", L"DeltaScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.DeltaScale(param0);
@@ -4163,14 +4163,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* MouseWheelParameters_get_DeltaRotationAngle(py::wrapper::Windows::UI::Input::MouseWheelParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.MouseWheelParameters", L"DeltaRotationAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.MouseWheelParameters", L"DeltaRotationAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeltaRotationAngle());
         }
         catch (...)
@@ -4182,12 +4182,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int MouseWheelParameters_put_DeltaRotationAngle(py::wrapper::Windows::UI::Input::MouseWheelParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.MouseWheelParameters", L"DeltaRotationAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4196,6 +4190,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.MouseWheelParameters", L"DeltaRotationAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.DeltaRotationAngle(param0);
@@ -4210,14 +4210,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* MouseWheelParameters_get_CharTranslation(py::wrapper::Windows::UI::Input::MouseWheelParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.MouseWheelParameters", L"CharTranslation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.MouseWheelParameters", L"CharTranslation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CharTranslation());
         }
         catch (...)
@@ -4229,12 +4229,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int MouseWheelParameters_put_CharTranslation(py::wrapper::Windows::UI::Input::MouseWheelParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.MouseWheelParameters", L"CharTranslation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4243,6 +4237,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.MouseWheelParameters", L"CharTranslation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             self->obj.CharTranslation(param0);
@@ -4334,14 +4334,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.PointerPoint", L"GetCurrentPoint", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.PointerPoint", L"GetCurrentPoint", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Input::PointerPoint::GetCurrentPoint(param0));
@@ -4354,14 +4354,14 @@ namespace py::cpp::Windows::UI::Input
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.PointerPoint", L"GetCurrentPoint", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.PointerPoint", L"GetCurrentPoint", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Input::IPointerPointTransform>(args, 1);
 
@@ -4386,14 +4386,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.PointerPoint", L"GetIntermediatePoints", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.PointerPoint", L"GetIntermediatePoints", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Input::PointerPoint::GetIntermediatePoints(param0));
@@ -4406,14 +4406,14 @@ namespace py::cpp::Windows::UI::Input
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.PointerPoint", L"GetIntermediatePoints", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.PointerPoint", L"GetIntermediatePoints", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Input::IPointerPointTransform>(args, 1);
 
@@ -4434,14 +4434,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPoint_get_FrameId(py::wrapper::Windows::UI::Input::PointerPoint* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPoint", L"FrameId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPoint", L"FrameId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameId());
         }
         catch (...)
@@ -4453,14 +4453,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPoint_get_IsInContact(py::wrapper::Windows::UI::Input::PointerPoint* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPoint", L"IsInContact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPoint", L"IsInContact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsInContact());
         }
         catch (...)
@@ -4472,14 +4472,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPoint_get_PointerDevice(py::wrapper::Windows::UI::Input::PointerPoint* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPoint", L"PointerDevice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPoint", L"PointerDevice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerDevice());
         }
         catch (...)
@@ -4491,14 +4491,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPoint_get_PointerId(py::wrapper::Windows::UI::Input::PointerPoint* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPoint", L"PointerId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPoint", L"PointerId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerId());
         }
         catch (...)
@@ -4510,14 +4510,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPoint_get_Position(py::wrapper::Windows::UI::Input::PointerPoint* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPoint", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPoint", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -4529,14 +4529,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPoint_get_Properties(py::wrapper::Windows::UI::Input::PointerPoint* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPoint", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPoint", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -4548,14 +4548,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPoint_get_RawPosition(py::wrapper::Windows::UI::Input::PointerPoint* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPoint", L"RawPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPoint", L"RawPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawPosition());
         }
         catch (...)
@@ -4567,14 +4567,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPoint_get_Timestamp(py::wrapper::Windows::UI::Input::PointerPoint* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPoint", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPoint", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -4694,14 +4694,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.PointerPointProperties", L"GetUsageValue", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.PointerPointProperties", L"GetUsageValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -4726,14 +4726,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.PointerPointProperties", L"HasUsage", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.PointerPointProperties", L"HasUsage", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -4754,14 +4754,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_get_ContactRect(py::wrapper::Windows::UI::Input::PointerPointProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"ContactRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"ContactRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactRect());
         }
         catch (...)
@@ -4773,14 +4773,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_get_ContactRectRaw(py::wrapper::Windows::UI::Input::PointerPointProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"ContactRectRaw"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"ContactRectRaw"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactRectRaw());
         }
         catch (...)
@@ -4792,14 +4792,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_get_IsBarrelButtonPressed(py::wrapper::Windows::UI::Input::PointerPointProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsBarrelButtonPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsBarrelButtonPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsBarrelButtonPressed());
         }
         catch (...)
@@ -4811,14 +4811,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_get_IsCanceled(py::wrapper::Windows::UI::Input::PointerPointProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsCanceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCanceled());
         }
         catch (...)
@@ -4830,14 +4830,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_get_IsEraser(py::wrapper::Windows::UI::Input::PointerPointProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsEraser"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsEraser"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsEraser());
         }
         catch (...)
@@ -4849,14 +4849,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_get_IsHorizontalMouseWheel(py::wrapper::Windows::UI::Input::PointerPointProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsHorizontalMouseWheel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsHorizontalMouseWheel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsHorizontalMouseWheel());
         }
         catch (...)
@@ -4868,14 +4868,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_get_IsInRange(py::wrapper::Windows::UI::Input::PointerPointProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsInRange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsInRange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsInRange());
         }
         catch (...)
@@ -4887,14 +4887,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_get_IsInverted(py::wrapper::Windows::UI::Input::PointerPointProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsInverted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsInverted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsInverted());
         }
         catch (...)
@@ -4906,14 +4906,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_get_IsLeftButtonPressed(py::wrapper::Windows::UI::Input::PointerPointProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsLeftButtonPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsLeftButtonPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsLeftButtonPressed());
         }
         catch (...)
@@ -4925,14 +4925,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_get_IsMiddleButtonPressed(py::wrapper::Windows::UI::Input::PointerPointProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsMiddleButtonPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsMiddleButtonPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsMiddleButtonPressed());
         }
         catch (...)
@@ -4944,14 +4944,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_get_IsPrimary(py::wrapper::Windows::UI::Input::PointerPointProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsPrimary"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsPrimary"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPrimary());
         }
         catch (...)
@@ -4963,14 +4963,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_get_IsRightButtonPressed(py::wrapper::Windows::UI::Input::PointerPointProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsRightButtonPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsRightButtonPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRightButtonPressed());
         }
         catch (...)
@@ -4982,14 +4982,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_get_IsXButton1Pressed(py::wrapper::Windows::UI::Input::PointerPointProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsXButton1Pressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsXButton1Pressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsXButton1Pressed());
         }
         catch (...)
@@ -5001,14 +5001,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_get_IsXButton2Pressed(py::wrapper::Windows::UI::Input::PointerPointProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsXButton2Pressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"IsXButton2Pressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsXButton2Pressed());
         }
         catch (...)
@@ -5020,14 +5020,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_get_MouseWheelDelta(py::wrapper::Windows::UI::Input::PointerPointProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"MouseWheelDelta"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"MouseWheelDelta"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MouseWheelDelta());
         }
         catch (...)
@@ -5039,14 +5039,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_get_Orientation(py::wrapper::Windows::UI::Input::PointerPointProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Orientation());
         }
         catch (...)
@@ -5058,14 +5058,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_get_PointerUpdateKind(py::wrapper::Windows::UI::Input::PointerPointProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"PointerUpdateKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"PointerUpdateKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerUpdateKind());
         }
         catch (...)
@@ -5077,14 +5077,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_get_Pressure(py::wrapper::Windows::UI::Input::PointerPointProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"Pressure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"Pressure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Pressure());
         }
         catch (...)
@@ -5096,14 +5096,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_get_TouchConfidence(py::wrapper::Windows::UI::Input::PointerPointProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"TouchConfidence"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"TouchConfidence"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TouchConfidence());
         }
         catch (...)
@@ -5115,14 +5115,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_get_Twist(py::wrapper::Windows::UI::Input::PointerPointProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"Twist"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"Twist"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Twist());
         }
         catch (...)
@@ -5134,14 +5134,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_get_XTilt(py::wrapper::Windows::UI::Input::PointerPointProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"XTilt"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"XTilt"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XTilt());
         }
         catch (...)
@@ -5153,14 +5153,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_get_YTilt(py::wrapper::Windows::UI::Input::PointerPointProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"YTilt"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"YTilt"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.YTilt());
         }
         catch (...)
@@ -5172,14 +5172,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_get_ZDistance(py::wrapper::Windows::UI::Input::PointerPointProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"ZDistance"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPointProperties", L"ZDistance"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ZDistance());
         }
         catch (...)
@@ -5289,14 +5289,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.PointerVisualizationSettings", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.PointerVisualizationSettings", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::Input::PointerVisualizationSettings::GetForCurrentView());
             }
             catch (...)
@@ -5314,14 +5314,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerVisualizationSettings_get_IsContactFeedbackEnabled(py::wrapper::Windows::UI::Input::PointerVisualizationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerVisualizationSettings", L"IsContactFeedbackEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerVisualizationSettings", L"IsContactFeedbackEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsContactFeedbackEnabled());
         }
         catch (...)
@@ -5333,12 +5333,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int PointerVisualizationSettings_put_IsContactFeedbackEnabled(py::wrapper::Windows::UI::Input::PointerVisualizationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerVisualizationSettings", L"IsContactFeedbackEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5347,6 +5341,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerVisualizationSettings", L"IsContactFeedbackEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsContactFeedbackEnabled(param0);
@@ -5361,14 +5361,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerVisualizationSettings_get_IsBarrelButtonFeedbackEnabled(py::wrapper::Windows::UI::Input::PointerVisualizationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerVisualizationSettings", L"IsBarrelButtonFeedbackEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerVisualizationSettings", L"IsBarrelButtonFeedbackEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsBarrelButtonFeedbackEnabled());
         }
         catch (...)
@@ -5380,12 +5380,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int PointerVisualizationSettings_put_IsBarrelButtonFeedbackEnabled(py::wrapper::Windows::UI::Input::PointerVisualizationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerVisualizationSettings", L"IsBarrelButtonFeedbackEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5394,6 +5388,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerVisualizationSettings", L"IsBarrelButtonFeedbackEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsBarrelButtonFeedbackEnabled(param0);
@@ -5509,14 +5509,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialController", L"CreateForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialController", L"CreateForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::Input::RadialController::CreateForCurrentView());
             }
             catch (...)
@@ -5538,14 +5538,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialController", L"IsSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialController", L"IsSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::Input::RadialController::IsSupported());
             }
             catch (...)
@@ -5563,14 +5563,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_get_UseAutomaticHapticFeedback(py::wrapper::Windows::UI::Input::RadialController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialController", L"UseAutomaticHapticFeedback"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialController", L"UseAutomaticHapticFeedback"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UseAutomaticHapticFeedback());
         }
         catch (...)
@@ -5582,12 +5582,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int RadialController_put_UseAutomaticHapticFeedback(py::wrapper::Windows::UI::Input::RadialController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialController", L"UseAutomaticHapticFeedback"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5596,6 +5590,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialController", L"UseAutomaticHapticFeedback"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.UseAutomaticHapticFeedback(param0);
@@ -5610,14 +5610,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_get_RotationResolutionInDegrees(py::wrapper::Windows::UI::Input::RadialController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialController", L"RotationResolutionInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialController", L"RotationResolutionInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotationResolutionInDegrees());
         }
         catch (...)
@@ -5629,12 +5629,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int RadialController_put_RotationResolutionInDegrees(py::wrapper::Windows::UI::Input::RadialController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialController", L"RotationResolutionInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5643,6 +5637,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialController", L"RotationResolutionInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.RotationResolutionInDegrees(param0);
@@ -5657,14 +5657,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_get_Menu(py::wrapper::Windows::UI::Input::RadialController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialController", L"Menu"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialController", L"Menu"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Menu());
         }
         catch (...)
@@ -5676,14 +5676,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_add_ButtonClicked(py::wrapper::Windows::UI::Input::RadialController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ButtonClicked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ButtonClicked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerButtonClickedEventArgs>>(arg);
 
             return py::convert(self->obj.ButtonClicked(param0));
@@ -5697,14 +5697,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_remove_ButtonClicked(py::wrapper::Windows::UI::Input::RadialController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ButtonClicked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ButtonClicked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ButtonClicked(param0);
@@ -5719,14 +5719,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_add_ControlAcquired(py::wrapper::Windows::UI::Input::RadialController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ControlAcquired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ControlAcquired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerControlAcquiredEventArgs>>(arg);
 
             return py::convert(self->obj.ControlAcquired(param0));
@@ -5740,14 +5740,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_remove_ControlAcquired(py::wrapper::Windows::UI::Input::RadialController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ControlAcquired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ControlAcquired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ControlAcquired(param0);
@@ -5762,14 +5762,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_add_ControlLost(py::wrapper::Windows::UI::Input::RadialController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ControlLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ControlLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ControlLost(param0));
@@ -5783,14 +5783,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_remove_ControlLost(py::wrapper::Windows::UI::Input::RadialController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ControlLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ControlLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ControlLost(param0);
@@ -5805,14 +5805,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_add_RotationChanged(py::wrapper::Windows::UI::Input::RadialController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"RotationChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"RotationChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerRotationChangedEventArgs>>(arg);
 
             return py::convert(self->obj.RotationChanged(param0));
@@ -5826,14 +5826,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_remove_RotationChanged(py::wrapper::Windows::UI::Input::RadialController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"RotationChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"RotationChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.RotationChanged(param0);
@@ -5848,14 +5848,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_add_ScreenContactContinued(py::wrapper::Windows::UI::Input::RadialController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ScreenContactContinued"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ScreenContactContinued"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs>>(arg);
 
             return py::convert(self->obj.ScreenContactContinued(param0));
@@ -5869,14 +5869,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_remove_ScreenContactContinued(py::wrapper::Windows::UI::Input::RadialController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ScreenContactContinued"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ScreenContactContinued"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ScreenContactContinued(param0);
@@ -5891,14 +5891,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_add_ScreenContactEnded(py::wrapper::Windows::UI::Input::RadialController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ScreenContactEnded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ScreenContactEnded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ScreenContactEnded(param0));
@@ -5912,14 +5912,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_remove_ScreenContactEnded(py::wrapper::Windows::UI::Input::RadialController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ScreenContactEnded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ScreenContactEnded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ScreenContactEnded(param0);
@@ -5934,14 +5934,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_add_ScreenContactStarted(py::wrapper::Windows::UI::Input::RadialController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ScreenContactStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ScreenContactStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerScreenContactStartedEventArgs>>(arg);
 
             return py::convert(self->obj.ScreenContactStarted(param0));
@@ -5955,14 +5955,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_remove_ScreenContactStarted(py::wrapper::Windows::UI::Input::RadialController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ScreenContactStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ScreenContactStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ScreenContactStarted(param0);
@@ -5977,14 +5977,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_add_ButtonHolding(py::wrapper::Windows::UI::Input::RadialController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ButtonHolding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ButtonHolding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerButtonHoldingEventArgs>>(arg);
 
             return py::convert(self->obj.ButtonHolding(param0));
@@ -5998,14 +5998,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_remove_ButtonHolding(py::wrapper::Windows::UI::Input::RadialController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ButtonHolding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ButtonHolding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ButtonHolding(param0);
@@ -6020,14 +6020,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_add_ButtonPressed(py::wrapper::Windows::UI::Input::RadialController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ButtonPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ButtonPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerButtonPressedEventArgs>>(arg);
 
             return py::convert(self->obj.ButtonPressed(param0));
@@ -6041,14 +6041,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_remove_ButtonPressed(py::wrapper::Windows::UI::Input::RadialController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ButtonPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ButtonPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ButtonPressed(param0);
@@ -6063,14 +6063,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_add_ButtonReleased(py::wrapper::Windows::UI::Input::RadialController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ButtonReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ButtonReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerButtonReleasedEventArgs>>(arg);
 
             return py::convert(self->obj.ButtonReleased(param0));
@@ -6084,14 +6084,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_remove_ButtonReleased(py::wrapper::Windows::UI::Input::RadialController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ButtonReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialController", L"ButtonReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ButtonReleased(param0);
@@ -6225,14 +6225,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerButtonClickedEventArgs_get_Contact(py::wrapper::Windows::UI::Input::RadialControllerButtonClickedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerButtonClickedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerButtonClickedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -6244,14 +6244,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerButtonClickedEventArgs_get_SimpleHapticsController(py::wrapper::Windows::UI::Input::RadialControllerButtonClickedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerButtonClickedEventArgs", L"SimpleHapticsController"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerButtonClickedEventArgs", L"SimpleHapticsController"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimpleHapticsController());
         }
         catch (...)
@@ -6334,14 +6334,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerButtonHoldingEventArgs_get_Contact(py::wrapper::Windows::UI::Input::RadialControllerButtonHoldingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerButtonHoldingEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerButtonHoldingEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -6353,14 +6353,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerButtonHoldingEventArgs_get_SimpleHapticsController(py::wrapper::Windows::UI::Input::RadialControllerButtonHoldingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerButtonHoldingEventArgs", L"SimpleHapticsController"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerButtonHoldingEventArgs", L"SimpleHapticsController"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimpleHapticsController());
         }
         catch (...)
@@ -6443,14 +6443,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerButtonPressedEventArgs_get_Contact(py::wrapper::Windows::UI::Input::RadialControllerButtonPressedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerButtonPressedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerButtonPressedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -6462,14 +6462,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerButtonPressedEventArgs_get_SimpleHapticsController(py::wrapper::Windows::UI::Input::RadialControllerButtonPressedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerButtonPressedEventArgs", L"SimpleHapticsController"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerButtonPressedEventArgs", L"SimpleHapticsController"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimpleHapticsController());
         }
         catch (...)
@@ -6552,14 +6552,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerButtonReleasedEventArgs_get_Contact(py::wrapper::Windows::UI::Input::RadialControllerButtonReleasedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerButtonReleasedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerButtonReleasedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -6571,14 +6571,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerButtonReleasedEventArgs_get_SimpleHapticsController(py::wrapper::Windows::UI::Input::RadialControllerButtonReleasedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerButtonReleasedEventArgs", L"SimpleHapticsController"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerButtonReleasedEventArgs", L"SimpleHapticsController"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimpleHapticsController());
         }
         catch (...)
@@ -6665,14 +6665,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::Input::RadialControllerConfiguration::GetForCurrentView());
             }
             catch (...)
@@ -6694,14 +6694,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"ResetToDefaultMenuItems", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"ResetToDefaultMenuItems", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ResetToDefaultMenuItems();
                 Py_RETURN_NONE;
             }
@@ -6724,14 +6724,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"SetDefaultMenuItems", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"SetDefaultMenuItems", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Input::RadialControllerSystemMenuItemKind>>(args, 0);
 
                 self->obj.SetDefaultMenuItems(param0);
@@ -6756,14 +6756,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"TrySelectDefaultMenuItem", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"TrySelectDefaultMenuItem", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::RadialControllerSystemMenuItemKind>(args, 0);
 
                 return py::convert(self->obj.TrySelectDefaultMenuItem(param0));
@@ -6783,14 +6783,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerConfiguration_get_IsMenuSuppressed(py::wrapper::Windows::UI::Input::RadialControllerConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"IsMenuSuppressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"IsMenuSuppressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsMenuSuppressed());
         }
         catch (...)
@@ -6802,12 +6802,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int RadialControllerConfiguration_put_IsMenuSuppressed(py::wrapper::Windows::UI::Input::RadialControllerConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"IsMenuSuppressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6816,6 +6810,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"IsMenuSuppressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsMenuSuppressed(param0);
@@ -6830,14 +6830,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerConfiguration_get_ActiveControllerWhenMenuIsSuppressed(py::wrapper::Windows::UI::Input::RadialControllerConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"ActiveControllerWhenMenuIsSuppressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"ActiveControllerWhenMenuIsSuppressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActiveControllerWhenMenuIsSuppressed());
         }
         catch (...)
@@ -6849,12 +6849,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int RadialControllerConfiguration_put_ActiveControllerWhenMenuIsSuppressed(py::wrapper::Windows::UI::Input::RadialControllerConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"ActiveControllerWhenMenuIsSuppressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6863,6 +6857,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"ActiveControllerWhenMenuIsSuppressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Input::RadialController>(arg);
 
             self->obj.ActiveControllerWhenMenuIsSuppressed(param0);
@@ -6877,14 +6877,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerConfiguration_get_IsAppControllerEnabled(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"IsAppControllerEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"IsAppControllerEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Input::RadialControllerConfiguration::IsAppControllerEnabled());
         }
         catch (...)
@@ -6896,12 +6896,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int RadialControllerConfiguration_put_IsAppControllerEnabled(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"IsAppControllerEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6910,6 +6904,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"IsAppControllerEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             winrt::Windows::UI::Input::RadialControllerConfiguration::IsAppControllerEnabled(param0);
@@ -6924,14 +6924,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerConfiguration_get_AppController(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"AppController"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"AppController"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Input::RadialControllerConfiguration::AppController());
         }
         catch (...)
@@ -6943,12 +6943,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int RadialControllerConfiguration_put_AppController(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"AppController"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6957,6 +6951,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"AppController"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Input::RadialController>(arg);
 
             winrt::Windows::UI::Input::RadialControllerConfiguration::AppController(param0);
@@ -7073,14 +7073,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerControlAcquiredEventArgs_get_Contact(py::wrapper::Windows::UI::Input::RadialControllerControlAcquiredEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerControlAcquiredEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerControlAcquiredEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -7092,14 +7092,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerControlAcquiredEventArgs_get_IsButtonPressed(py::wrapper::Windows::UI::Input::RadialControllerControlAcquiredEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerControlAcquiredEventArgs", L"IsButtonPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerControlAcquiredEventArgs", L"IsButtonPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsButtonPressed());
         }
         catch (...)
@@ -7111,14 +7111,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerControlAcquiredEventArgs_get_SimpleHapticsController(py::wrapper::Windows::UI::Input::RadialControllerControlAcquiredEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerControlAcquiredEventArgs", L"SimpleHapticsController"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerControlAcquiredEventArgs", L"SimpleHapticsController"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimpleHapticsController());
         }
         catch (...)
@@ -7206,14 +7206,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialControllerMenu", L"GetSelectedMenuItem", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialControllerMenu", L"GetSelectedMenuItem", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetSelectedMenuItem());
             }
             catch (...)
@@ -7235,14 +7235,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialControllerMenu", L"SelectMenuItem", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialControllerMenu", L"SelectMenuItem", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::RadialControllerMenuItem>(args, 0);
 
                 self->obj.SelectMenuItem(param0);
@@ -7267,14 +7267,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialControllerMenu", L"TrySelectPreviouslySelectedMenuItem", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialControllerMenu", L"TrySelectPreviouslySelectedMenuItem", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TrySelectPreviouslySelectedMenuItem());
             }
             catch (...)
@@ -7292,14 +7292,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerMenu_get_IsEnabled(py::wrapper::Windows::UI::Input::RadialControllerMenu* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerMenu", L"IsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerMenu", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsEnabled());
         }
         catch (...)
@@ -7311,12 +7311,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int RadialControllerMenu_put_IsEnabled(py::wrapper::Windows::UI::Input::RadialControllerMenu* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerMenu", L"IsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7325,6 +7319,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerMenu", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsEnabled(param0);
@@ -7339,14 +7339,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerMenu_get_Items(py::wrapper::Windows::UI::Input::RadialControllerMenu* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerMenu", L"Items"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerMenu", L"Items"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Items());
         }
         catch (...)
@@ -7436,14 +7436,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialControllerMenuItem", L"CreateFromFontGlyph", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialControllerMenuItem", L"CreateFromFontGlyph", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -7458,14 +7458,14 @@ namespace py::cpp::Windows::UI::Input
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialControllerMenuItem", L"CreateFromFontGlyph", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialControllerMenuItem", L"CreateFromFontGlyph", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -7492,14 +7492,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialControllerMenuItem", L"CreateFromIcon", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialControllerMenuItem", L"CreateFromIcon", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::RandomAccessStreamReference>(args, 1);
 
@@ -7524,14 +7524,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialControllerMenuItem", L"CreateFromKnownIcon", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.RadialControllerMenuItem", L"CreateFromKnownIcon", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Input::RadialControllerMenuKnownIcon>(args, 1);
 
@@ -7552,14 +7552,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerMenuItem_get_Tag(py::wrapper::Windows::UI::Input::RadialControllerMenuItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerMenuItem", L"Tag"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerMenuItem", L"Tag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Tag());
         }
         catch (...)
@@ -7571,12 +7571,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int RadialControllerMenuItem_put_Tag(py::wrapper::Windows::UI::Input::RadialControllerMenuItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerMenuItem", L"Tag"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7585,6 +7579,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerMenuItem", L"Tag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.Tag(param0);
@@ -7599,14 +7599,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerMenuItem_get_DisplayText(py::wrapper::Windows::UI::Input::RadialControllerMenuItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerMenuItem", L"DisplayText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerMenuItem", L"DisplayText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayText());
         }
         catch (...)
@@ -7618,14 +7618,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerMenuItem_add_Invoked(py::wrapper::Windows::UI::Input::RadialControllerMenuItem* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialControllerMenuItem", L"Invoked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialControllerMenuItem", L"Invoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialControllerMenuItem, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Invoked(param0));
@@ -7639,14 +7639,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerMenuItem_remove_Invoked(py::wrapper::Windows::UI::Input::RadialControllerMenuItem* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialControllerMenuItem", L"Invoked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.RadialControllerMenuItem", L"Invoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Invoked(param0);
@@ -7762,14 +7762,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerRotationChangedEventArgs_get_Contact(py::wrapper::Windows::UI::Input::RadialControllerRotationChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerRotationChangedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerRotationChangedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -7781,14 +7781,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerRotationChangedEventArgs_get_RotationDeltaInDegrees(py::wrapper::Windows::UI::Input::RadialControllerRotationChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerRotationChangedEventArgs", L"RotationDeltaInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerRotationChangedEventArgs", L"RotationDeltaInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotationDeltaInDegrees());
         }
         catch (...)
@@ -7800,14 +7800,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerRotationChangedEventArgs_get_IsButtonPressed(py::wrapper::Windows::UI::Input::RadialControllerRotationChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerRotationChangedEventArgs", L"IsButtonPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerRotationChangedEventArgs", L"IsButtonPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsButtonPressed());
         }
         catch (...)
@@ -7819,14 +7819,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerRotationChangedEventArgs_get_SimpleHapticsController(py::wrapper::Windows::UI::Input::RadialControllerRotationChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerRotationChangedEventArgs", L"SimpleHapticsController"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerRotationChangedEventArgs", L"SimpleHapticsController"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimpleHapticsController());
         }
         catch (...)
@@ -7911,14 +7911,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerScreenContact_get_Bounds(py::wrapper::Windows::UI::Input::RadialControllerScreenContact* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerScreenContact", L"Bounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerScreenContact", L"Bounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bounds());
         }
         catch (...)
@@ -7930,14 +7930,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerScreenContact_get_Position(py::wrapper::Windows::UI::Input::RadialControllerScreenContact* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerScreenContact", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerScreenContact", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -8020,14 +8020,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerScreenContactContinuedEventArgs_get_Contact(py::wrapper::Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -8039,14 +8039,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerScreenContactContinuedEventArgs_get_IsButtonPressed(py::wrapper::Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs", L"IsButtonPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs", L"IsButtonPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsButtonPressed());
         }
         catch (...)
@@ -8058,14 +8058,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerScreenContactContinuedEventArgs_get_SimpleHapticsController(py::wrapper::Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs", L"SimpleHapticsController"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs", L"SimpleHapticsController"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimpleHapticsController());
         }
         catch (...)
@@ -8149,14 +8149,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerScreenContactEndedEventArgs_get_IsButtonPressed(py::wrapper::Windows::UI::Input::RadialControllerScreenContactEndedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerScreenContactEndedEventArgs", L"IsButtonPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerScreenContactEndedEventArgs", L"IsButtonPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsButtonPressed());
         }
         catch (...)
@@ -8168,14 +8168,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerScreenContactEndedEventArgs_get_SimpleHapticsController(py::wrapper::Windows::UI::Input::RadialControllerScreenContactEndedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerScreenContactEndedEventArgs", L"SimpleHapticsController"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerScreenContactEndedEventArgs", L"SimpleHapticsController"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimpleHapticsController());
         }
         catch (...)
@@ -8258,14 +8258,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerScreenContactStartedEventArgs_get_Contact(py::wrapper::Windows::UI::Input::RadialControllerScreenContactStartedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerScreenContactStartedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerScreenContactStartedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -8277,14 +8277,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerScreenContactStartedEventArgs_get_IsButtonPressed(py::wrapper::Windows::UI::Input::RadialControllerScreenContactStartedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerScreenContactStartedEventArgs", L"IsButtonPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerScreenContactStartedEventArgs", L"IsButtonPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsButtonPressed());
         }
         catch (...)
@@ -8296,14 +8296,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerScreenContactStartedEventArgs_get_SimpleHapticsController(py::wrapper::Windows::UI::Input::RadialControllerScreenContactStartedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerScreenContactStartedEventArgs", L"SimpleHapticsController"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerScreenContactStartedEventArgs", L"SimpleHapticsController"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimpleHapticsController());
         }
         catch (...)
@@ -8387,14 +8387,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RightTappedEventArgs_get_PointerDeviceType(py::wrapper::Windows::UI::Input::RightTappedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RightTappedEventArgs", L"PointerDeviceType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RightTappedEventArgs", L"PointerDeviceType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerDeviceType());
         }
         catch (...)
@@ -8406,14 +8406,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RightTappedEventArgs_get_Position(py::wrapper::Windows::UI::Input::RightTappedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RightTappedEventArgs", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RightTappedEventArgs", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -8425,14 +8425,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RightTappedEventArgs_get_ContactCount(py::wrapper::Windows::UI::Input::RightTappedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RightTappedEventArgs", L"ContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RightTappedEventArgs", L"ContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactCount());
         }
         catch (...)
@@ -8520,14 +8520,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.SystemButtonEventController", L"CreateForDispatcherQueue", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.SystemButtonEventController", L"CreateForDispatcherQueue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::DispatcherQueue>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Input::SystemButtonEventController::CreateForDispatcherQueue(param0));
@@ -8547,14 +8547,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* SystemButtonEventController_add_SystemFunctionButtonPressed(py::wrapper::Windows::UI::Input::SystemButtonEventController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.SystemButtonEventController", L"SystemFunctionButtonPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.SystemButtonEventController", L"SystemFunctionButtonPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::SystemButtonEventController, winrt::Windows::UI::Input::SystemFunctionButtonEventArgs>>(arg);
 
             return py::convert(self->obj.SystemFunctionButtonPressed(param0));
@@ -8568,14 +8568,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* SystemButtonEventController_remove_SystemFunctionButtonPressed(py::wrapper::Windows::UI::Input::SystemButtonEventController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.SystemButtonEventController", L"SystemFunctionButtonPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.SystemButtonEventController", L"SystemFunctionButtonPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SystemFunctionButtonPressed(param0);
@@ -8590,14 +8590,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* SystemButtonEventController_add_SystemFunctionButtonReleased(py::wrapper::Windows::UI::Input::SystemButtonEventController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.SystemButtonEventController", L"SystemFunctionButtonReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.SystemButtonEventController", L"SystemFunctionButtonReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::SystemButtonEventController, winrt::Windows::UI::Input::SystemFunctionButtonEventArgs>>(arg);
 
             return py::convert(self->obj.SystemFunctionButtonReleased(param0));
@@ -8611,14 +8611,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* SystemButtonEventController_remove_SystemFunctionButtonReleased(py::wrapper::Windows::UI::Input::SystemButtonEventController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.SystemButtonEventController", L"SystemFunctionButtonReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.SystemButtonEventController", L"SystemFunctionButtonReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SystemFunctionButtonReleased(param0);
@@ -8633,14 +8633,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* SystemButtonEventController_add_SystemFunctionLockChanged(py::wrapper::Windows::UI::Input::SystemButtonEventController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.SystemButtonEventController", L"SystemFunctionLockChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.SystemButtonEventController", L"SystemFunctionLockChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::SystemButtonEventController, winrt::Windows::UI::Input::SystemFunctionLockChangedEventArgs>>(arg);
 
             return py::convert(self->obj.SystemFunctionLockChanged(param0));
@@ -8654,14 +8654,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* SystemButtonEventController_remove_SystemFunctionLockChanged(py::wrapper::Windows::UI::Input::SystemButtonEventController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.SystemButtonEventController", L"SystemFunctionLockChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.SystemButtonEventController", L"SystemFunctionLockChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SystemFunctionLockChanged(param0);
@@ -8676,14 +8676,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* SystemButtonEventController_add_SystemFunctionLockIndicatorChanged(py::wrapper::Windows::UI::Input::SystemButtonEventController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.SystemButtonEventController", L"SystemFunctionLockIndicatorChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.SystemButtonEventController", L"SystemFunctionLockIndicatorChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::SystemButtonEventController, winrt::Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs>>(arg);
 
             return py::convert(self->obj.SystemFunctionLockIndicatorChanged(param0));
@@ -8697,14 +8697,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* SystemButtonEventController_remove_SystemFunctionLockIndicatorChanged(py::wrapper::Windows::UI::Input::SystemButtonEventController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.SystemButtonEventController", L"SystemFunctionLockIndicatorChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.SystemButtonEventController", L"SystemFunctionLockIndicatorChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SystemFunctionLockIndicatorChanged(param0);
@@ -8822,14 +8822,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* SystemFunctionButtonEventArgs_get_Handled(py::wrapper::Windows::UI::Input::SystemFunctionButtonEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.SystemFunctionButtonEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.SystemFunctionButtonEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -8841,12 +8841,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int SystemFunctionButtonEventArgs_put_Handled(py::wrapper::Windows::UI::Input::SystemFunctionButtonEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.SystemFunctionButtonEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8855,6 +8849,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.SystemFunctionButtonEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -8869,14 +8869,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* SystemFunctionButtonEventArgs_get_Timestamp(py::wrapper::Windows::UI::Input::SystemFunctionButtonEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.SystemFunctionButtonEventArgs", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.SystemFunctionButtonEventArgs", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -8959,14 +8959,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* SystemFunctionLockChangedEventArgs_get_Handled(py::wrapper::Windows::UI::Input::SystemFunctionLockChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.SystemFunctionLockChangedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.SystemFunctionLockChangedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -8978,12 +8978,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int SystemFunctionLockChangedEventArgs_put_Handled(py::wrapper::Windows::UI::Input::SystemFunctionLockChangedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.SystemFunctionLockChangedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8992,6 +8986,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.SystemFunctionLockChangedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -9006,14 +9006,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* SystemFunctionLockChangedEventArgs_get_IsLocked(py::wrapper::Windows::UI::Input::SystemFunctionLockChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.SystemFunctionLockChangedEventArgs", L"IsLocked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.SystemFunctionLockChangedEventArgs", L"IsLocked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsLocked());
         }
         catch (...)
@@ -9025,14 +9025,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* SystemFunctionLockChangedEventArgs_get_Timestamp(py::wrapper::Windows::UI::Input::SystemFunctionLockChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.SystemFunctionLockChangedEventArgs", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.SystemFunctionLockChangedEventArgs", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -9116,14 +9116,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* SystemFunctionLockIndicatorChangedEventArgs_get_Handled(py::wrapper::Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -9135,12 +9135,6 @@ namespace py::cpp::Windows::UI::Input
 
     static int SystemFunctionLockIndicatorChangedEventArgs_put_Handled(py::wrapper::Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9149,6 +9143,12 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -9163,14 +9163,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* SystemFunctionLockIndicatorChangedEventArgs_get_IsIndicatorOn(py::wrapper::Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs", L"IsIndicatorOn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs", L"IsIndicatorOn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsIndicatorOn());
         }
         catch (...)
@@ -9182,14 +9182,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* SystemFunctionLockIndicatorChangedEventArgs_get_Timestamp(py::wrapper::Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -9273,14 +9273,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* TappedEventArgs_get_PointerDeviceType(py::wrapper::Windows::UI::Input::TappedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.TappedEventArgs", L"PointerDeviceType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.TappedEventArgs", L"PointerDeviceType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerDeviceType());
         }
         catch (...)
@@ -9292,14 +9292,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* TappedEventArgs_get_Position(py::wrapper::Windows::UI::Input::TappedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.TappedEventArgs", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.TappedEventArgs", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -9311,14 +9311,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* TappedEventArgs_get_TapCount(py::wrapper::Windows::UI::Input::TappedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.TappedEventArgs", L"TapCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.TappedEventArgs", L"TapCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TapCount());
         }
         catch (...)
@@ -9330,14 +9330,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* TappedEventArgs_get_ContactCount(py::wrapper::Windows::UI::Input::TappedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.TappedEventArgs", L"ContactCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.TappedEventArgs", L"ContactCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactCount());
         }
         catch (...)
@@ -9426,14 +9426,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.IPointerPointTransform", L"TransformBounds", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.IPointerPointTransform", L"TransformBounds", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
                 return py::convert(self->obj.TransformBounds(param0));
@@ -9457,14 +9457,14 @@ namespace py::cpp::Windows::UI::Input
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.IPointerPointTransform", L"TryTransform", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.IPointerPointTransform", L"TryTransform", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 winrt::Windows::Foundation::Point param1 {  };
 
@@ -9497,14 +9497,14 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* IPointerPointTransform_get_Inverse(py::wrapper::Windows::UI::Input::IPointerPointTransform* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.IPointerPointTransform", L"Inverse"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.IPointerPointTransform", L"Inverse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Inverse());
         }
         catch (...)

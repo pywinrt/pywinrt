@@ -20,14 +20,14 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", L"IsBlockedNumberAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", L"IsBlockedNumberAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager::IsBlockedNumberAsync(param0));
@@ -51,14 +51,14 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", L"ShowBlockNumbersUI", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", L"ShowBlockNumbersUI", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager::ShowBlockNumbersUI(param0));
@@ -82,14 +82,14 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", L"ShowBlockedCallsUI", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", L"ShowBlockedCallsUI", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager::ShowBlockedCallsUI();
                 Py_RETURN_NONE;
             }
@@ -112,14 +112,14 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", L"ShowBlockedMessagesUI", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", L"ShowBlockedMessagesUI", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager::ShowBlockedMessagesUI();
                 Py_RETURN_NONE;
             }
@@ -142,14 +142,14 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", L"ShowUnblockNumbersUI", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", L"ShowUnblockNumbersUI", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager::ShowUnblockNumbersUI(param0));
@@ -169,14 +169,14 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
     static PyObject* CommunicationBlockingAccessManager_get_IsBlockingActive(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", L"IsBlockingActive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", L"IsBlockingActive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager::IsBlockingActive());
         }
         catch (...)
@@ -257,14 +257,14 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager", L"RequestSetAsActiveBlockingAppAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager", L"RequestSetAsActiveBlockingAppAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAppManager::RequestSetAsActiveBlockingAppAsync());
             }
             catch (...)
@@ -286,14 +286,14 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager", L"ShowCommunicationBlockingSettingsUI", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager", L"ShowCommunicationBlockingSettingsUI", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAppManager::ShowCommunicationBlockingSettingsUI();
                 Py_RETURN_NONE;
             }
@@ -312,14 +312,14 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
     static PyObject* CommunicationBlockingAppManager_get_IsCurrentAppActiveBlockingApp(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager", L"IsCurrentAppActiveBlockingApp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager", L"IsCurrentAppActiveBlockingApp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAppManager::IsCurrentAppActiveBlockingApp());
         }
         catch (...)

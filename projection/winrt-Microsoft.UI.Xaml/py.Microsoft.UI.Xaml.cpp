@@ -46,14 +46,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* AdaptiveTrigger_get_MinWindowWidth(py::wrapper::Microsoft::UI::Xaml::AdaptiveTrigger* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.AdaptiveTrigger", L"MinWindowWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.AdaptiveTrigger", L"MinWindowWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinWindowWidth());
         }
         catch (...)
@@ -65,12 +65,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int AdaptiveTrigger_put_MinWindowWidth(py::wrapper::Microsoft::UI::Xaml::AdaptiveTrigger* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.AdaptiveTrigger", L"MinWindowWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -79,6 +73,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.AdaptiveTrigger", L"MinWindowWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.MinWindowWidth(param0);
@@ -93,14 +93,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* AdaptiveTrigger_get_MinWindowHeight(py::wrapper::Microsoft::UI::Xaml::AdaptiveTrigger* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.AdaptiveTrigger", L"MinWindowHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.AdaptiveTrigger", L"MinWindowHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinWindowHeight());
         }
         catch (...)
@@ -112,12 +112,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int AdaptiveTrigger_put_MinWindowHeight(py::wrapper::Microsoft::UI::Xaml::AdaptiveTrigger* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.AdaptiveTrigger", L"MinWindowHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -126,6 +120,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.AdaptiveTrigger", L"MinWindowHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.MinWindowHeight(param0);
@@ -140,14 +140,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* AdaptiveTrigger_get_MinWindowHeightProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.AdaptiveTrigger", L"MinWindowHeightProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.AdaptiveTrigger", L"MinWindowHeightProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::AdaptiveTrigger::MinWindowHeightProperty());
         }
         catch (...)
@@ -159,14 +159,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* AdaptiveTrigger_get_MinWindowWidthProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.AdaptiveTrigger", L"MinWindowWidthProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.AdaptiveTrigger", L"MinWindowWidthProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::AdaptiveTrigger::MinWindowWidthProperty());
         }
         catch (...)
@@ -302,14 +302,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Application", L"Exit", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Application", L"Exit", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Exit();
                 Py_RETURN_NONE;
             }
@@ -332,14 +332,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Application", L"LoadComponent", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Application", L"LoadComponent", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
 
@@ -354,14 +354,14 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Application", L"LoadComponent", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Application", L"LoadComponent", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::ComponentResourceLocation>(args, 2);
@@ -388,14 +388,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Application", L"Start", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Application", L"Start", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::ApplicationInitializationCallback>(args, 0);
 
                 winrt::Microsoft::UI::Xaml::Application::Start(param0);
@@ -416,14 +416,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Application_get_Resources(py::wrapper::Microsoft::UI::Xaml::Application* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"Resources"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"Resources"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Resources());
         }
         catch (...)
@@ -435,12 +435,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Application_put_Resources(py::wrapper::Microsoft::UI::Xaml::Application* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"Resources"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -449,6 +443,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"Resources"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::ResourceDictionary>(arg);
 
             self->obj.Resources(param0);
@@ -463,14 +463,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Application_get_RequestedTheme(py::wrapper::Microsoft::UI::Xaml::Application* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"RequestedTheme"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"RequestedTheme"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestedTheme());
         }
         catch (...)
@@ -482,12 +482,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Application_put_RequestedTheme(py::wrapper::Microsoft::UI::Xaml::Application* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"RequestedTheme"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -496,6 +490,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"RequestedTheme"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::ApplicationTheme>(arg);
 
             self->obj.RequestedTheme(param0);
@@ -510,14 +510,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Application_get_HighContrastAdjustment(py::wrapper::Microsoft::UI::Xaml::Application* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"HighContrastAdjustment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"HighContrastAdjustment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HighContrastAdjustment());
         }
         catch (...)
@@ -529,12 +529,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Application_put_HighContrastAdjustment(py::wrapper::Microsoft::UI::Xaml::Application* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"HighContrastAdjustment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -543,6 +537,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"HighContrastAdjustment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::ApplicationHighContrastAdjustment>(arg);
 
             self->obj.HighContrastAdjustment(param0);
@@ -557,14 +557,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Application_get_FocusVisualKind(py::wrapper::Microsoft::UI::Xaml::Application* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"FocusVisualKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"FocusVisualKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FocusVisualKind());
         }
         catch (...)
@@ -576,12 +576,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Application_put_FocusVisualKind(py::wrapper::Microsoft::UI::Xaml::Application* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"FocusVisualKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -590,6 +584,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"FocusVisualKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FocusVisualKind>(arg);
 
             self->obj.FocusVisualKind(param0);
@@ -604,14 +604,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Application_get_DebugSettings(py::wrapper::Microsoft::UI::Xaml::Application* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"DebugSettings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"DebugSettings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DebugSettings());
         }
         catch (...)
@@ -623,14 +623,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Application_get_DispatcherShutdownMode(py::wrapper::Microsoft::UI::Xaml::Application* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"DispatcherShutdownMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"DispatcherShutdownMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DispatcherShutdownMode());
         }
         catch (...)
@@ -642,12 +642,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Application_put_DispatcherShutdownMode(py::wrapper::Microsoft::UI::Xaml::Application* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"DispatcherShutdownMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -656,6 +650,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"DispatcherShutdownMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DispatcherShutdownMode>(arg);
 
             self->obj.DispatcherShutdownMode(param0);
@@ -670,14 +670,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Application_get_Current(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"Current"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"Current"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::Application::Current());
         }
         catch (...)
@@ -689,14 +689,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Application_add_UnhandledException(py::wrapper::Microsoft::UI::Xaml::Application* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Application", L"UnhandledException"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Application", L"UnhandledException"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UnhandledExceptionEventHandler>(arg);
 
             return py::convert(self->obj.UnhandledException(param0));
@@ -710,14 +710,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Application_remove_UnhandledException(py::wrapper::Microsoft::UI::Xaml::Application* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Application", L"UnhandledException"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Application", L"UnhandledException"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.UnhandledException(param0);
@@ -732,14 +732,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Application_add_ResourceManagerRequested(py::wrapper::Microsoft::UI::Xaml::Application* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Application", L"ResourceManagerRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Application", L"ResourceManagerRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Microsoft::UI::Xaml::ResourceManagerRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.ResourceManagerRequested(param0));
@@ -753,14 +753,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Application_remove_ResourceManagerRequested(py::wrapper::Microsoft::UI::Xaml::Application* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Application", L"ResourceManagerRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Application", L"ResourceManagerRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ResourceManagerRequested(param0);
@@ -952,14 +952,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* BindingFailedEventArgs_get_Message(py::wrapper::Microsoft::UI::Xaml::BindingFailedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BindingFailedEventArgs", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BindingFailedEventArgs", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Message());
         }
         catch (...)
@@ -1063,14 +1063,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* BringIntoViewOptions_get_VerticalOffset(py::wrapper::Microsoft::UI::Xaml::BringIntoViewOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"VerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"VerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VerticalOffset());
         }
         catch (...)
@@ -1082,12 +1082,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewOptions_put_VerticalOffset(py::wrapper::Microsoft::UI::Xaml::BringIntoViewOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"VerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1096,6 +1090,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"VerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.VerticalOffset(param0);
@@ -1110,14 +1110,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* BringIntoViewOptions_get_VerticalAlignmentRatio(py::wrapper::Microsoft::UI::Xaml::BringIntoViewOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"VerticalAlignmentRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"VerticalAlignmentRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VerticalAlignmentRatio());
         }
         catch (...)
@@ -1129,12 +1129,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewOptions_put_VerticalAlignmentRatio(py::wrapper::Microsoft::UI::Xaml::BringIntoViewOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"VerticalAlignmentRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1143,6 +1137,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"VerticalAlignmentRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.VerticalAlignmentRatio(param0);
@@ -1157,14 +1157,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* BringIntoViewOptions_get_TargetRect(py::wrapper::Microsoft::UI::Xaml::BringIntoViewOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"TargetRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"TargetRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetRect());
         }
         catch (...)
@@ -1176,12 +1176,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewOptions_put_TargetRect(py::wrapper::Microsoft::UI::Xaml::BringIntoViewOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"TargetRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1190,6 +1184,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"TargetRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Rect>>(arg);
 
             self->obj.TargetRect(param0);
@@ -1204,14 +1204,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* BringIntoViewOptions_get_HorizontalOffset(py::wrapper::Microsoft::UI::Xaml::BringIntoViewOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"HorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"HorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HorizontalOffset());
         }
         catch (...)
@@ -1223,12 +1223,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewOptions_put_HorizontalOffset(py::wrapper::Microsoft::UI::Xaml::BringIntoViewOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"HorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1237,6 +1231,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"HorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.HorizontalOffset(param0);
@@ -1251,14 +1251,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* BringIntoViewOptions_get_HorizontalAlignmentRatio(py::wrapper::Microsoft::UI::Xaml::BringIntoViewOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"HorizontalAlignmentRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"HorizontalAlignmentRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HorizontalAlignmentRatio());
         }
         catch (...)
@@ -1270,12 +1270,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewOptions_put_HorizontalAlignmentRatio(py::wrapper::Microsoft::UI::Xaml::BringIntoViewOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"HorizontalAlignmentRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1284,6 +1278,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"HorizontalAlignmentRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.HorizontalAlignmentRatio(param0);
@@ -1298,14 +1298,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* BringIntoViewOptions_get_AnimationDesired(py::wrapper::Microsoft::UI::Xaml::BringIntoViewOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"AnimationDesired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"AnimationDesired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AnimationDesired());
         }
         catch (...)
@@ -1317,12 +1317,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewOptions_put_AnimationDesired(py::wrapper::Microsoft::UI::Xaml::BringIntoViewOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"AnimationDesired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1331,6 +1325,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewOptions", L"AnimationDesired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AnimationDesired(param0);
@@ -1420,14 +1420,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* BringIntoViewRequestedEventArgs_get_VerticalOffset(py::wrapper::Microsoft::UI::Xaml::BringIntoViewRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"VerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"VerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VerticalOffset());
         }
         catch (...)
@@ -1439,12 +1439,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewRequestedEventArgs_put_VerticalOffset(py::wrapper::Microsoft::UI::Xaml::BringIntoViewRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"VerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1453,6 +1447,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"VerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.VerticalOffset(param0);
@@ -1467,14 +1467,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* BringIntoViewRequestedEventArgs_get_TargetRect(py::wrapper::Microsoft::UI::Xaml::BringIntoViewRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"TargetRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"TargetRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetRect());
         }
         catch (...)
@@ -1486,12 +1486,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewRequestedEventArgs_put_TargetRect(py::wrapper::Microsoft::UI::Xaml::BringIntoViewRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"TargetRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1500,6 +1494,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"TargetRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
             self->obj.TargetRect(param0);
@@ -1514,14 +1514,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* BringIntoViewRequestedEventArgs_get_TargetElement(py::wrapper::Microsoft::UI::Xaml::BringIntoViewRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"TargetElement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"TargetElement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetElement());
         }
         catch (...)
@@ -1533,12 +1533,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewRequestedEventArgs_put_TargetElement(py::wrapper::Microsoft::UI::Xaml::BringIntoViewRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"TargetElement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1547,6 +1541,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"TargetElement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(arg);
 
             self->obj.TargetElement(param0);
@@ -1561,14 +1561,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* BringIntoViewRequestedEventArgs_get_HorizontalOffset(py::wrapper::Microsoft::UI::Xaml::BringIntoViewRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"HorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"HorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HorizontalOffset());
         }
         catch (...)
@@ -1580,12 +1580,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewRequestedEventArgs_put_HorizontalOffset(py::wrapper::Microsoft::UI::Xaml::BringIntoViewRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"HorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1594,6 +1588,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"HorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.HorizontalOffset(param0);
@@ -1608,14 +1608,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* BringIntoViewRequestedEventArgs_get_Handled(py::wrapper::Microsoft::UI::Xaml::BringIntoViewRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -1627,12 +1627,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewRequestedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::BringIntoViewRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1641,6 +1635,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -1655,14 +1655,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* BringIntoViewRequestedEventArgs_get_AnimationDesired(py::wrapper::Microsoft::UI::Xaml::BringIntoViewRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"AnimationDesired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"AnimationDesired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AnimationDesired());
         }
         catch (...)
@@ -1674,12 +1674,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewRequestedEventArgs_put_AnimationDesired(py::wrapper::Microsoft::UI::Xaml::BringIntoViewRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"AnimationDesired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1688,6 +1682,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"AnimationDesired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AnimationDesired(param0);
@@ -1702,14 +1702,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* BringIntoViewRequestedEventArgs_get_HorizontalAlignmentRatio(py::wrapper::Microsoft::UI::Xaml::BringIntoViewRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"HorizontalAlignmentRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"HorizontalAlignmentRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HorizontalAlignmentRatio());
         }
         catch (...)
@@ -1721,14 +1721,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* BringIntoViewRequestedEventArgs_get_VerticalAlignmentRatio(py::wrapper::Microsoft::UI::Xaml::BringIntoViewRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"VerticalAlignmentRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs", L"VerticalAlignmentRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VerticalAlignmentRatio());
         }
         catch (...)
@@ -1839,14 +1839,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* BrushTransition_get_Duration(py::wrapper::Microsoft::UI::Xaml::BrushTransition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BrushTransition", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BrushTransition", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -1858,12 +1858,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BrushTransition_put_Duration(py::wrapper::Microsoft::UI::Xaml::BrushTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BrushTransition", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1872,6 +1866,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.BrushTransition", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.Duration(param0);
@@ -1978,14 +1978,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_ListMedium(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ListMedium"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ListMedium"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ListMedium());
         }
         catch (...)
@@ -1997,12 +1997,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ListMedium(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ListMedium"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2011,6 +2005,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ListMedium"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.ListMedium(param0);
@@ -2025,14 +2025,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_ListLow(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ListLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ListLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ListLow());
         }
         catch (...)
@@ -2044,12 +2044,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ListLow(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ListLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2058,6 +2052,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ListLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.ListLow(param0);
@@ -2072,14 +2072,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_ErrorText(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ErrorText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ErrorText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorText());
         }
         catch (...)
@@ -2091,12 +2091,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ErrorText(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ErrorText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2105,6 +2099,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ErrorText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.ErrorText(param0);
@@ -2119,14 +2119,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_ChromeWhite(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeWhite"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeWhite"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChromeWhite());
         }
         catch (...)
@@ -2138,12 +2138,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeWhite(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeWhite"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2152,6 +2146,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeWhite"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.ChromeWhite(param0);
@@ -2166,14 +2166,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_ChromeMediumLow(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeMediumLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeMediumLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChromeMediumLow());
         }
         catch (...)
@@ -2185,12 +2185,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeMediumLow(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeMediumLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2199,6 +2193,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeMediumLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.ChromeMediumLow(param0);
@@ -2213,14 +2213,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_ChromeMedium(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeMedium"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeMedium"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChromeMedium());
         }
         catch (...)
@@ -2232,12 +2232,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeMedium(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeMedium"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2246,6 +2240,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeMedium"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.ChromeMedium(param0);
@@ -2260,14 +2260,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_ChromeLow(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChromeLow());
         }
         catch (...)
@@ -2279,12 +2279,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeLow(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2293,6 +2287,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.ChromeLow(param0);
@@ -2307,14 +2307,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_ChromeHigh(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeHigh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeHigh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChromeHigh());
         }
         catch (...)
@@ -2326,12 +2326,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeHigh(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeHigh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2340,6 +2334,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeHigh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.ChromeHigh(param0);
@@ -2354,14 +2354,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_ChromeGray(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeGray"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeGray"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChromeGray());
         }
         catch (...)
@@ -2373,12 +2373,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeGray(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeGray"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2387,6 +2381,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeGray"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.ChromeGray(param0);
@@ -2401,14 +2401,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_ChromeDisabledLow(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeDisabledLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeDisabledLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChromeDisabledLow());
         }
         catch (...)
@@ -2420,12 +2420,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeDisabledLow(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeDisabledLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2434,6 +2428,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeDisabledLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.ChromeDisabledLow(param0);
@@ -2448,14 +2448,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_ChromeDisabledHigh(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeDisabledHigh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeDisabledHigh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChromeDisabledHigh());
         }
         catch (...)
@@ -2467,12 +2467,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeDisabledHigh(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeDisabledHigh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2481,6 +2475,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeDisabledHigh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.ChromeDisabledHigh(param0);
@@ -2495,14 +2495,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_ChromeBlackMediumLow(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeBlackMediumLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeBlackMediumLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChromeBlackMediumLow());
         }
         catch (...)
@@ -2514,12 +2514,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeBlackMediumLow(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeBlackMediumLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2528,6 +2522,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeBlackMediumLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.ChromeBlackMediumLow(param0);
@@ -2542,14 +2542,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_ChromeBlackMedium(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeBlackMedium"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeBlackMedium"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChromeBlackMedium());
         }
         catch (...)
@@ -2561,12 +2561,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeBlackMedium(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeBlackMedium"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2575,6 +2569,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeBlackMedium"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.ChromeBlackMedium(param0);
@@ -2589,14 +2589,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_ChromeBlackLow(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeBlackLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeBlackLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChromeBlackLow());
         }
         catch (...)
@@ -2608,12 +2608,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeBlackLow(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeBlackLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2622,6 +2616,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeBlackLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.ChromeBlackLow(param0);
@@ -2636,14 +2636,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_ChromeBlackHigh(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeBlackHigh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeBlackHigh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChromeBlackHigh());
         }
         catch (...)
@@ -2655,12 +2655,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeBlackHigh(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeBlackHigh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2669,6 +2663,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeBlackHigh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.ChromeBlackHigh(param0);
@@ -2683,14 +2683,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_ChromeAltLow(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeAltLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeAltLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChromeAltLow());
         }
         catch (...)
@@ -2702,12 +2702,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeAltLow(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeAltLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2716,6 +2710,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"ChromeAltLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.ChromeAltLow(param0);
@@ -2730,14 +2730,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_BaseMediumLow(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"BaseMediumLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"BaseMediumLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseMediumLow());
         }
         catch (...)
@@ -2749,12 +2749,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_BaseMediumLow(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"BaseMediumLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2763,6 +2757,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"BaseMediumLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.BaseMediumLow(param0);
@@ -2777,14 +2777,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_BaseMediumHigh(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"BaseMediumHigh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"BaseMediumHigh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseMediumHigh());
         }
         catch (...)
@@ -2796,12 +2796,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_BaseMediumHigh(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"BaseMediumHigh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2810,6 +2804,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"BaseMediumHigh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.BaseMediumHigh(param0);
@@ -2824,14 +2824,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_BaseMedium(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"BaseMedium"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"BaseMedium"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseMedium());
         }
         catch (...)
@@ -2843,12 +2843,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_BaseMedium(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"BaseMedium"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2857,6 +2851,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"BaseMedium"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.BaseMedium(param0);
@@ -2871,14 +2871,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_BaseLow(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"BaseLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"BaseLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseLow());
         }
         catch (...)
@@ -2890,12 +2890,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_BaseLow(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"BaseLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2904,6 +2898,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"BaseLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.BaseLow(param0);
@@ -2918,14 +2918,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_BaseHigh(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"BaseHigh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"BaseHigh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseHigh());
         }
         catch (...)
@@ -2937,12 +2937,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_BaseHigh(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"BaseHigh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2951,6 +2945,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"BaseHigh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.BaseHigh(param0);
@@ -2965,14 +2965,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_AltMediumLow(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"AltMediumLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"AltMediumLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AltMediumLow());
         }
         catch (...)
@@ -2984,12 +2984,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_AltMediumLow(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"AltMediumLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2998,6 +2992,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"AltMediumLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.AltMediumLow(param0);
@@ -3012,14 +3012,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_AltMediumHigh(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"AltMediumHigh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"AltMediumHigh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AltMediumHigh());
         }
         catch (...)
@@ -3031,12 +3031,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_AltMediumHigh(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"AltMediumHigh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3045,6 +3039,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"AltMediumHigh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.AltMediumHigh(param0);
@@ -3059,14 +3059,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_AltMedium(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"AltMedium"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"AltMedium"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AltMedium());
         }
         catch (...)
@@ -3078,12 +3078,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_AltMedium(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"AltMedium"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3092,6 +3086,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"AltMedium"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.AltMedium(param0);
@@ -3106,14 +3106,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_AltLow(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"AltLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"AltLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AltLow());
         }
         catch (...)
@@ -3125,12 +3125,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_AltLow(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"AltLow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3139,6 +3133,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"AltLow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.AltLow(param0);
@@ -3153,14 +3153,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_AltHigh(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"AltHigh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"AltHigh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AltHigh());
         }
         catch (...)
@@ -3172,12 +3172,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_AltHigh(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"AltHigh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3186,6 +3180,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"AltHigh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.AltHigh(param0);
@@ -3200,14 +3200,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ColorPaletteResources_get_Accent(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"Accent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"Accent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Accent());
         }
         catch (...)
@@ -3219,12 +3219,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_Accent(py::wrapper::Microsoft::UI::Xaml::ColorPaletteResources* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"Accent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3233,6 +3227,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ColorPaletteResources", L"Accent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.Accent(param0);
@@ -3347,14 +3347,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.CornerRadiusHelper", L"FromRadii", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.CornerRadiusHelper", L"FromRadii", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<double>(args, 2);
@@ -3381,14 +3381,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.CornerRadiusHelper", L"FromUniformRadius", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.CornerRadiusHelper", L"FromUniformRadius", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::CornerRadiusHelper::FromUniformRadius(param0));
@@ -3504,14 +3504,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DataContextChangedEventArgs_get_Handled(py::wrapper::Microsoft::UI::Xaml::DataContextChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DataContextChangedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DataContextChangedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -3523,12 +3523,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DataContextChangedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::DataContextChangedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DataContextChangedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3537,6 +3531,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DataContextChangedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -3551,14 +3551,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DataContextChangedEventArgs_get_NewValue(py::wrapper::Microsoft::UI::Xaml::DataContextChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DataContextChangedEventArgs", L"NewValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DataContextChangedEventArgs", L"NewValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NewValue());
         }
         catch (...)
@@ -3667,14 +3667,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DataTemplate", L"GetElement", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DataTemplate", L"GetElement", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::ElementFactoryGetArgs>(args, 0);
 
                 return py::convert(self->obj.GetElement(param0));
@@ -3698,14 +3698,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DataTemplate", L"GetExtensionInstance", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DataTemplate", L"GetExtensionInstance", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FrameworkElement>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::DataTemplate::GetExtensionInstance(param0));
@@ -3729,14 +3729,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DataTemplate", L"LoadContent", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DataTemplate", L"LoadContent", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.LoadContent());
             }
             catch (...)
@@ -3758,14 +3758,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DataTemplate", L"RecycleElement", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DataTemplate", L"RecycleElement", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::ElementFactoryRecycleArgs>(args, 0);
 
                 self->obj.RecycleElement(param0);
@@ -3790,14 +3790,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DataTemplate", L"SetExtensionInstance", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DataTemplate", L"SetExtensionInstance", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FrameworkElement>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::IDataTemplateExtension>(args, 1);
 
@@ -3819,14 +3819,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DataTemplate_get_ExtensionInstanceProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DataTemplate", L"ExtensionInstanceProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DataTemplate", L"ExtensionInstanceProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::DataTemplate::ExtensionInstanceProperty());
         }
         catch (...)
@@ -3975,14 +3975,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DataTemplateKey_get_DataType(py::wrapper::Microsoft::UI::Xaml::DataTemplateKey* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DataTemplateKey", L"DataType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DataTemplateKey", L"DataType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DataType());
         }
         catch (...)
@@ -3994,12 +3994,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DataTemplateKey_put_DataType(py::wrapper::Microsoft::UI::Xaml::DataTemplateKey* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DataTemplateKey", L"DataType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4008,6 +4002,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DataTemplateKey", L"DataType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.DataType(param0);
@@ -4092,14 +4092,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DebugSettings_get_IsTextPerformanceVisualizationEnabled(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"IsTextPerformanceVisualizationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"IsTextPerformanceVisualizationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsTextPerformanceVisualizationEnabled());
         }
         catch (...)
@@ -4111,12 +4111,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DebugSettings_put_IsTextPerformanceVisualizationEnabled(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"IsTextPerformanceVisualizationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4125,6 +4119,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"IsTextPerformanceVisualizationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsTextPerformanceVisualizationEnabled(param0);
@@ -4139,14 +4139,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DebugSettings_get_IsBindingTracingEnabled(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"IsBindingTracingEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"IsBindingTracingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsBindingTracingEnabled());
         }
         catch (...)
@@ -4158,12 +4158,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DebugSettings_put_IsBindingTracingEnabled(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"IsBindingTracingEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4172,6 +4166,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"IsBindingTracingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsBindingTracingEnabled(param0);
@@ -4186,14 +4186,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DebugSettings_get_FailFastOnErrors(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"FailFastOnErrors"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"FailFastOnErrors"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FailFastOnErrors());
         }
         catch (...)
@@ -4205,12 +4205,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DebugSettings_put_FailFastOnErrors(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"FailFastOnErrors"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4219,6 +4213,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"FailFastOnErrors"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.FailFastOnErrors(param0);
@@ -4233,14 +4233,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DebugSettings_get_EnableFrameRateCounter(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"EnableFrameRateCounter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"EnableFrameRateCounter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EnableFrameRateCounter());
         }
         catch (...)
@@ -4252,12 +4252,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DebugSettings_put_EnableFrameRateCounter(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"EnableFrameRateCounter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4266,6 +4260,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"EnableFrameRateCounter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.EnableFrameRateCounter(param0);
@@ -4280,14 +4280,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DebugSettings_get_IsXamlResourceReferenceTracingEnabled(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"IsXamlResourceReferenceTracingEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"IsXamlResourceReferenceTracingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsXamlResourceReferenceTracingEnabled());
         }
         catch (...)
@@ -4299,12 +4299,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DebugSettings_put_IsXamlResourceReferenceTracingEnabled(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"IsXamlResourceReferenceTracingEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4313,6 +4307,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"IsXamlResourceReferenceTracingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsXamlResourceReferenceTracingEnabled(param0);
@@ -4327,14 +4327,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DebugSettings_get_LayoutCycleTracingLevel(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"LayoutCycleTracingLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"LayoutCycleTracingLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LayoutCycleTracingLevel());
         }
         catch (...)
@@ -4346,12 +4346,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DebugSettings_put_LayoutCycleTracingLevel(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"LayoutCycleTracingLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4360,6 +4354,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"LayoutCycleTracingLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::LayoutCycleTracingLevel>(arg);
 
             self->obj.LayoutCycleTracingLevel(param0);
@@ -4374,14 +4374,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DebugSettings_get_LayoutCycleDebugBreakLevel(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"LayoutCycleDebugBreakLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"LayoutCycleDebugBreakLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LayoutCycleDebugBreakLevel());
         }
         catch (...)
@@ -4393,12 +4393,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DebugSettings_put_LayoutCycleDebugBreakLevel(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"LayoutCycleDebugBreakLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4407,6 +4401,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"LayoutCycleDebugBreakLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::LayoutCycleDebugBreakLevel>(arg);
 
             self->obj.LayoutCycleDebugBreakLevel(param0);
@@ -4421,14 +4421,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DebugSettings_add_BindingFailed(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.DebugSettings", L"BindingFailed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.DebugSettings", L"BindingFailed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::BindingFailedEventHandler>(arg);
 
             return py::convert(self->obj.BindingFailed(param0));
@@ -4442,14 +4442,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DebugSettings_remove_BindingFailed(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.DebugSettings", L"BindingFailed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.DebugSettings", L"BindingFailed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.BindingFailed(param0);
@@ -4464,14 +4464,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DebugSettings_add_XamlResourceReferenceFailed(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.DebugSettings", L"XamlResourceReferenceFailed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.DebugSettings", L"XamlResourceReferenceFailed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::DebugSettings, winrt::Microsoft::UI::Xaml::XamlResourceReferenceFailedEventArgs>>(arg);
 
             return py::convert(self->obj.XamlResourceReferenceFailed(param0));
@@ -4485,14 +4485,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DebugSettings_remove_XamlResourceReferenceFailed(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.DebugSettings", L"XamlResourceReferenceFailed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.DebugSettings", L"XamlResourceReferenceFailed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.XamlResourceReferenceFailed(param0);
@@ -4591,14 +4591,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"ClearValue", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
 
                 self->obj.ClearValue(param0);
@@ -4623,14 +4623,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
 
                 return py::convert(self->obj.GetAnimationBaseValue(param0));
@@ -4654,14 +4654,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"GetValue", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
 
                 return py::convert(self->obj.GetValue(param0));
@@ -4685,14 +4685,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
 
                 return py::convert(self->obj.ReadLocalValue(param0));
@@ -4716,14 +4716,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
 
@@ -4748,14 +4748,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"SetValue", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -4781,14 +4781,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
                 auto param1 = py::convert_to<int64_t>(args, 1);
 
@@ -4810,14 +4810,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DependencyObject_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::DependencyObject* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Dispatcher());
         }
         catch (...)
@@ -4829,14 +4829,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DependencyObject_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::DependencyObject* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DispatcherQueue());
         }
         catch (...)
@@ -4952,14 +4952,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
                 self->obj.Append(param0);
@@ -4984,14 +4984,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -5014,14 +5014,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -5043,14 +5043,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -5074,14 +5074,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::DependencyObject, true>>(args, 1);
 
@@ -5106,14 +5106,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -5135,14 +5135,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 uint32_t param1 {  };
 
@@ -5179,14 +5179,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 1);
 
@@ -5212,14 +5212,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -5244,14 +5244,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -5274,14 +5274,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::DependencyObject, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -5306,14 +5306,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 1);
 
@@ -5335,14 +5335,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DependencyObjectCollection_get_Size(py::wrapper::Microsoft::UI::Xaml::DependencyObjectCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -5354,14 +5354,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DependencyObjectCollection_add_VectorChanged(py::wrapper::Microsoft::UI::Xaml::DependencyObjectCollection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"VectorChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"VectorChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::VectorChangedEventHandler<winrt::Microsoft::UI::Xaml::DependencyObject>>(arg);
 
             return py::convert(self->obj.VectorChanged(param0));
@@ -5375,14 +5375,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DependencyObjectCollection_remove_VectorChanged(py::wrapper::Microsoft::UI::Xaml::DependencyObjectCollection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"VectorChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.DependencyObjectCollection", L"VectorChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.VectorChanged(param0);
@@ -5614,14 +5614,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyProperty", L"GetMetadata", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyProperty", L"GetMetadata", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 0);
 
                 return py::convert(self->obj.GetMetadata(param0));
@@ -5645,14 +5645,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyProperty", L"Register", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyProperty", L"Register", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 2);
@@ -5679,14 +5679,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyProperty", L"RegisterAttached", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyProperty", L"RegisterAttached", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 2);
@@ -5709,14 +5709,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DependencyProperty_get_UnsetValue(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyProperty", L"UnsetValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyProperty", L"UnsetValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::DependencyProperty::UnsetValue());
         }
         catch (...)
@@ -5826,14 +5826,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DependencyPropertyChangedEventArgs_get_NewValue(py::wrapper::Microsoft::UI::Xaml::DependencyPropertyChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs", L"NewValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs", L"NewValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NewValue());
         }
         catch (...)
@@ -5845,14 +5845,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DependencyPropertyChangedEventArgs_get_OldValue(py::wrapper::Microsoft::UI::Xaml::DependencyPropertyChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs", L"OldValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs", L"OldValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OldValue());
         }
         catch (...)
@@ -5864,14 +5864,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DependencyPropertyChangedEventArgs_get_Property(py::wrapper::Microsoft::UI::Xaml::DependencyPropertyChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs", L"Property"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs", L"Property"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Property());
         }
         catch (...)
@@ -5981,14 +5981,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DispatcherTimer", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DispatcherTimer", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -6011,14 +6011,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DispatcherTimer", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DispatcherTimer", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -6037,14 +6037,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DispatcherTimer_get_Interval(py::wrapper::Microsoft::UI::Xaml::DispatcherTimer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DispatcherTimer", L"Interval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DispatcherTimer", L"Interval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Interval());
         }
         catch (...)
@@ -6056,12 +6056,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DispatcherTimer_put_Interval(py::wrapper::Microsoft::UI::Xaml::DispatcherTimer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DispatcherTimer", L"Interval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6070,6 +6064,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DispatcherTimer", L"Interval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.Interval(param0);
@@ -6084,14 +6084,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DispatcherTimer_get_IsEnabled(py::wrapper::Microsoft::UI::Xaml::DispatcherTimer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DispatcherTimer", L"IsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DispatcherTimer", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsEnabled());
         }
         catch (...)
@@ -6103,14 +6103,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DispatcherTimer_add_Tick(py::wrapper::Microsoft::UI::Xaml::DispatcherTimer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.DispatcherTimer", L"Tick"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.DispatcherTimer", L"Tick"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Tick(param0));
@@ -6124,14 +6124,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DispatcherTimer_remove_Tick(py::wrapper::Microsoft::UI::Xaml::DispatcherTimer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.DispatcherTimer", L"Tick"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.DispatcherTimer", L"Tick"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Tick(param0);
@@ -6225,14 +6225,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -6254,14 +6254,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"GetPosition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"GetPosition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
 
                 return py::convert(self->obj.GetPosition(param0));
@@ -6281,14 +6281,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DragEventArgs_get_Handled(py::wrapper::Microsoft::UI::Xaml::DragEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -6300,12 +6300,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DragEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::DragEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6314,6 +6308,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -6328,14 +6328,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DragEventArgs_get_Data(py::wrapper::Microsoft::UI::Xaml::DragEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -6347,12 +6347,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DragEventArgs_put_Data(py::wrapper::Microsoft::UI::Xaml::DragEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6361,6 +6355,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DataPackage>(arg);
 
             self->obj.Data(param0);
@@ -6375,14 +6375,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DragEventArgs_get_AcceptedOperation(py::wrapper::Microsoft::UI::Xaml::DragEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"AcceptedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"AcceptedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AcceptedOperation());
         }
         catch (...)
@@ -6394,12 +6394,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DragEventArgs_put_AcceptedOperation(py::wrapper::Microsoft::UI::Xaml::DragEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"AcceptedOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6408,6 +6402,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"AcceptedOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DataPackageOperation>(arg);
 
             self->obj.AcceptedOperation(param0);
@@ -6422,14 +6422,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DragEventArgs_get_AllowedOperations(py::wrapper::Microsoft::UI::Xaml::DragEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"AllowedOperations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"AllowedOperations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowedOperations());
         }
         catch (...)
@@ -6441,14 +6441,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DragEventArgs_get_DataView(py::wrapper::Microsoft::UI::Xaml::DragEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"DataView"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"DataView"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DataView());
         }
         catch (...)
@@ -6460,14 +6460,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DragEventArgs_get_DragUIOverride(py::wrapper::Microsoft::UI::Xaml::DragEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"DragUIOverride"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"DragUIOverride"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DragUIOverride());
         }
         catch (...)
@@ -6479,14 +6479,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DragEventArgs_get_Modifiers(py::wrapper::Microsoft::UI::Xaml::DragEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"Modifiers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragEventArgs", L"Modifiers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Modifiers());
         }
         catch (...)
@@ -6580,14 +6580,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragOperationDeferral", L"Complete", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragOperationDeferral", L"Complete", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Complete();
                 Py_RETURN_NONE;
             }
@@ -6680,14 +6680,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragStartingEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragStartingEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -6709,14 +6709,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragStartingEventArgs", L"GetPosition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragStartingEventArgs", L"GetPosition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
 
                 return py::convert(self->obj.GetPosition(param0));
@@ -6736,14 +6736,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DragStartingEventArgs_get_Cancel(py::wrapper::Microsoft::UI::Xaml::DragStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragStartingEventArgs", L"Cancel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragStartingEventArgs", L"Cancel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Cancel());
         }
         catch (...)
@@ -6755,12 +6755,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DragStartingEventArgs_put_Cancel(py::wrapper::Microsoft::UI::Xaml::DragStartingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragStartingEventArgs", L"Cancel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6769,6 +6763,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragStartingEventArgs", L"Cancel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Cancel(param0);
@@ -6783,14 +6783,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DragStartingEventArgs_get_AllowedOperations(py::wrapper::Microsoft::UI::Xaml::DragStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragStartingEventArgs", L"AllowedOperations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragStartingEventArgs", L"AllowedOperations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowedOperations());
         }
         catch (...)
@@ -6802,12 +6802,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DragStartingEventArgs_put_AllowedOperations(py::wrapper::Microsoft::UI::Xaml::DragStartingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragStartingEventArgs", L"AllowedOperations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6816,6 +6810,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragStartingEventArgs", L"AllowedOperations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DataPackageOperation>(arg);
 
             self->obj.AllowedOperations(param0);
@@ -6830,14 +6830,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DragStartingEventArgs_get_Data(py::wrapper::Microsoft::UI::Xaml::DragStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragStartingEventArgs", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragStartingEventArgs", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -6849,14 +6849,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DragStartingEventArgs_get_DragUI(py::wrapper::Microsoft::UI::Xaml::DragStartingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragStartingEventArgs", L"DragUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragStartingEventArgs", L"DragUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DragUI());
         }
         catch (...)
@@ -6947,14 +6947,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragUI", L"SetContentFromBitmapImage", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragUI", L"SetContentFromBitmapImage", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Imaging::BitmapImage>(args, 0);
 
                 self->obj.SetContentFromBitmapImage(param0);
@@ -6968,14 +6968,14 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragUI", L"SetContentFromBitmapImage", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragUI", L"SetContentFromBitmapImage", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Imaging::BitmapImage>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
@@ -7001,14 +7001,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragUI", L"SetContentFromDataPackage", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragUI", L"SetContentFromDataPackage", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.SetContentFromDataPackage();
                 Py_RETURN_NONE;
             }
@@ -7031,14 +7031,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragUI", L"SetContentFromSoftwareBitmap", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragUI", L"SetContentFromSoftwareBitmap", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
                 self->obj.SetContentFromSoftwareBitmap(param0);
@@ -7052,14 +7052,14 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragUI", L"SetContentFromSoftwareBitmap", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragUI", L"SetContentFromSoftwareBitmap", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
@@ -7157,14 +7157,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -7187,14 +7187,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"SetContentFromBitmapImage", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"SetContentFromBitmapImage", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Imaging::BitmapImage>(args, 0);
 
                 self->obj.SetContentFromBitmapImage(param0);
@@ -7208,14 +7208,14 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"SetContentFromBitmapImage", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"SetContentFromBitmapImage", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Imaging::BitmapImage>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
@@ -7241,14 +7241,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"SetContentFromSoftwareBitmap", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"SetContentFromSoftwareBitmap", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
                 self->obj.SetContentFromSoftwareBitmap(param0);
@@ -7262,14 +7262,14 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"SetContentFromSoftwareBitmap", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"SetContentFromSoftwareBitmap", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
@@ -7291,14 +7291,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DragUIOverride_get_IsGlyphVisible(py::wrapper::Microsoft::UI::Xaml::DragUIOverride* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"IsGlyphVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"IsGlyphVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsGlyphVisible());
         }
         catch (...)
@@ -7310,12 +7310,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DragUIOverride_put_IsGlyphVisible(py::wrapper::Microsoft::UI::Xaml::DragUIOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"IsGlyphVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7324,6 +7318,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"IsGlyphVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsGlyphVisible(param0);
@@ -7338,14 +7338,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DragUIOverride_get_IsContentVisible(py::wrapper::Microsoft::UI::Xaml::DragUIOverride* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"IsContentVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"IsContentVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsContentVisible());
         }
         catch (...)
@@ -7357,12 +7357,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DragUIOverride_put_IsContentVisible(py::wrapper::Microsoft::UI::Xaml::DragUIOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"IsContentVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7371,6 +7365,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"IsContentVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsContentVisible(param0);
@@ -7385,14 +7385,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DragUIOverride_get_IsCaptionVisible(py::wrapper::Microsoft::UI::Xaml::DragUIOverride* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"IsCaptionVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"IsCaptionVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCaptionVisible());
         }
         catch (...)
@@ -7404,12 +7404,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DragUIOverride_put_IsCaptionVisible(py::wrapper::Microsoft::UI::Xaml::DragUIOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"IsCaptionVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7418,6 +7412,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"IsCaptionVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsCaptionVisible(param0);
@@ -7432,14 +7432,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DragUIOverride_get_Caption(py::wrapper::Microsoft::UI::Xaml::DragUIOverride* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"Caption"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"Caption"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Caption());
         }
         catch (...)
@@ -7451,12 +7451,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DragUIOverride_put_Caption(py::wrapper::Microsoft::UI::Xaml::DragUIOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"Caption"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7465,6 +7459,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DragUIOverride", L"Caption"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Caption(param0);
@@ -7555,14 +7555,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DropCompletedEventArgs_get_DropResult(py::wrapper::Microsoft::UI::Xaml::DropCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DropCompletedEventArgs", L"DropResult"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DropCompletedEventArgs", L"DropResult"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DropResult());
         }
         catch (...)
@@ -7648,14 +7648,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DurationHelper", L"Add", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DurationHelper", L"Add", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Duration>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Duration>(args, 1);
 
@@ -7680,14 +7680,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DurationHelper", L"Compare", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DurationHelper", L"Compare", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Duration>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Duration>(args, 1);
 
@@ -7712,14 +7712,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DurationHelper", L"Equals", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DurationHelper", L"Equals", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Duration>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Duration>(args, 1);
 
@@ -7744,14 +7744,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DurationHelper", L"FromTimeSpan", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DurationHelper", L"FromTimeSpan", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::DurationHelper::FromTimeSpan(param0));
@@ -7775,14 +7775,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DurationHelper", L"GetHasTimeSpan", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DurationHelper", L"GetHasTimeSpan", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Duration>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::DurationHelper::GetHasTimeSpan(param0));
@@ -7806,14 +7806,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DurationHelper", L"Subtract", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DurationHelper", L"Subtract", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Duration>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Duration>(args, 1);
 
@@ -7834,14 +7834,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DurationHelper_get_Automatic(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DurationHelper", L"Automatic"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DurationHelper", L"Automatic"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::DurationHelper::Automatic());
         }
         catch (...)
@@ -7853,14 +7853,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* DurationHelper_get_Forever(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DurationHelper", L"Forever"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DurationHelper", L"Forever"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::DurationHelper::Forever());
         }
         catch (...)
@@ -7974,14 +7974,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* EffectiveViewportChangedEventArgs_get_BringIntoViewDistanceX(py::wrapper::Microsoft::UI::Xaml::EffectiveViewportChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.EffectiveViewportChangedEventArgs", L"BringIntoViewDistanceX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.EffectiveViewportChangedEventArgs", L"BringIntoViewDistanceX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BringIntoViewDistanceX());
         }
         catch (...)
@@ -7993,14 +7993,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* EffectiveViewportChangedEventArgs_get_BringIntoViewDistanceY(py::wrapper::Microsoft::UI::Xaml::EffectiveViewportChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.EffectiveViewportChangedEventArgs", L"BringIntoViewDistanceY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.EffectiveViewportChangedEventArgs", L"BringIntoViewDistanceY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BringIntoViewDistanceY());
         }
         catch (...)
@@ -8012,14 +8012,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* EffectiveViewportChangedEventArgs_get_EffectiveViewport(py::wrapper::Microsoft::UI::Xaml::EffectiveViewportChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.EffectiveViewportChangedEventArgs", L"EffectiveViewport"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.EffectiveViewportChangedEventArgs", L"EffectiveViewport"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EffectiveViewport());
         }
         catch (...)
@@ -8031,14 +8031,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* EffectiveViewportChangedEventArgs_get_MaxViewport(py::wrapper::Microsoft::UI::Xaml::EffectiveViewportChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.EffectiveViewportChangedEventArgs", L"MaxViewport"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.EffectiveViewportChangedEventArgs", L"MaxViewport"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxViewport());
         }
         catch (...)
@@ -8145,14 +8145,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ElementFactoryGetArgs_get_Parent(py::wrapper::Microsoft::UI::Xaml::ElementFactoryGetArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementFactoryGetArgs", L"Parent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementFactoryGetArgs", L"Parent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parent());
         }
         catch (...)
@@ -8164,12 +8164,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ElementFactoryGetArgs_put_Parent(py::wrapper::Microsoft::UI::Xaml::ElementFactoryGetArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementFactoryGetArgs", L"Parent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8178,6 +8172,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementFactoryGetArgs", L"Parent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(arg);
 
             self->obj.Parent(param0);
@@ -8192,14 +8192,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ElementFactoryGetArgs_get_Data(py::wrapper::Microsoft::UI::Xaml::ElementFactoryGetArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementFactoryGetArgs", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementFactoryGetArgs", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -8211,12 +8211,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ElementFactoryGetArgs_put_Data(py::wrapper::Microsoft::UI::Xaml::ElementFactoryGetArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementFactoryGetArgs", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8225,6 +8219,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementFactoryGetArgs", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.Data(param0);
@@ -8332,14 +8332,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ElementFactoryRecycleArgs_get_Parent(py::wrapper::Microsoft::UI::Xaml::ElementFactoryRecycleArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementFactoryRecycleArgs", L"Parent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementFactoryRecycleArgs", L"Parent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parent());
         }
         catch (...)
@@ -8351,12 +8351,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ElementFactoryRecycleArgs_put_Parent(py::wrapper::Microsoft::UI::Xaml::ElementFactoryRecycleArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementFactoryRecycleArgs", L"Parent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8365,6 +8359,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementFactoryRecycleArgs", L"Parent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(arg);
 
             self->obj.Parent(param0);
@@ -8379,14 +8379,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ElementFactoryRecycleArgs_get_Element(py::wrapper::Microsoft::UI::Xaml::ElementFactoryRecycleArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementFactoryRecycleArgs", L"Element"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementFactoryRecycleArgs", L"Element"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Element());
         }
         catch (...)
@@ -8398,12 +8398,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ElementFactoryRecycleArgs_put_Element(py::wrapper::Microsoft::UI::Xaml::ElementFactoryRecycleArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementFactoryRecycleArgs", L"Element"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8412,6 +8406,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementFactoryRecycleArgs", L"Element"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(arg);
 
             self->obj.Element(param0);
@@ -8501,14 +8501,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.ElementSoundPlayer", L"Play", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.ElementSoundPlayer", L"Play", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::ElementSoundKind>(args, 0);
 
                 winrt::Microsoft::UI::Xaml::ElementSoundPlayer::Play(param0);
@@ -8529,14 +8529,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ElementSoundPlayer_get_Volume(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementSoundPlayer", L"Volume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementSoundPlayer", L"Volume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::ElementSoundPlayer::Volume());
         }
         catch (...)
@@ -8548,12 +8548,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ElementSoundPlayer_put_Volume(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementSoundPlayer", L"Volume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8562,6 +8556,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementSoundPlayer", L"Volume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             winrt::Microsoft::UI::Xaml::ElementSoundPlayer::Volume(param0);
@@ -8576,14 +8576,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ElementSoundPlayer_get_State(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementSoundPlayer", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementSoundPlayer", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::ElementSoundPlayer::State());
         }
         catch (...)
@@ -8595,12 +8595,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ElementSoundPlayer_put_State(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementSoundPlayer", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8609,6 +8603,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementSoundPlayer", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::ElementSoundPlayerState>(arg);
 
             winrt::Microsoft::UI::Xaml::ElementSoundPlayer::State(param0);
@@ -8623,14 +8623,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ElementSoundPlayer_get_SpatialAudioMode(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementSoundPlayer", L"SpatialAudioMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementSoundPlayer", L"SpatialAudioMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::ElementSoundPlayer::SpatialAudioMode());
         }
         catch (...)
@@ -8642,12 +8642,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ElementSoundPlayer_put_SpatialAudioMode(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementSoundPlayer", L"SpatialAudioMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8656,6 +8650,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ElementSoundPlayer", L"SpatialAudioMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::ElementSpatialAudioMode>(arg);
 
             winrt::Microsoft::UI::Xaml::ElementSoundPlayer::SpatialAudioMode(param0);
@@ -8790,14 +8790,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* EventTrigger_get_RoutedEvent(py::wrapper::Microsoft::UI::Xaml::EventTrigger* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.EventTrigger", L"RoutedEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.EventTrigger", L"RoutedEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RoutedEvent());
         }
         catch (...)
@@ -8809,12 +8809,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int EventTrigger_put_RoutedEvent(py::wrapper::Microsoft::UI::Xaml::EventTrigger* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.EventTrigger", L"RoutedEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8823,6 +8817,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.EventTrigger", L"RoutedEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEvent>(arg);
 
             self->obj.RoutedEvent(param0);
@@ -8837,14 +8837,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* EventTrigger_get_Actions(py::wrapper::Microsoft::UI::Xaml::EventTrigger* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.EventTrigger", L"Actions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.EventTrigger", L"Actions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Actions());
         }
         catch (...)
@@ -8927,14 +8927,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ExceptionRoutedEventArgs_get_ErrorMessage(py::wrapper::Microsoft::UI::Xaml::ExceptionRoutedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ExceptionRoutedEventArgs", L"ErrorMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ExceptionRoutedEventArgs", L"ErrorMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorMessage());
         }
         catch (...)
@@ -9020,14 +9020,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"DeferTree", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"DeferTree", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
                 winrt::Microsoft::UI::Xaml::FrameworkElement::DeferTree(param0);
@@ -9052,14 +9052,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FindName", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FindName", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.FindName(param0));
@@ -9083,14 +9083,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"GetBindingExpression", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"GetBindingExpression", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
 
                 return py::convert(self->obj.GetBindingExpression(param0));
@@ -9114,14 +9114,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"SetBinding", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"SetBinding", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Data::BindingBase>(args, 1);
 
@@ -9143,14 +9143,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_Width(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Width"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Width());
         }
         catch (...)
@@ -9162,12 +9162,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_Width(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Width"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9176,6 +9170,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Width(param0);
@@ -9190,14 +9190,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_VerticalAlignment(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"VerticalAlignment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"VerticalAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VerticalAlignment());
         }
         catch (...)
@@ -9209,12 +9209,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_VerticalAlignment(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"VerticalAlignment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9223,6 +9217,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"VerticalAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::VerticalAlignment>(arg);
 
             self->obj.VerticalAlignment(param0);
@@ -9237,14 +9237,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_Tag(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Tag"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Tag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Tag());
         }
         catch (...)
@@ -9256,12 +9256,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_Tag(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Tag"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9270,6 +9264,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Tag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.Tag(param0);
@@ -9284,14 +9284,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_Style(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Style"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Style"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Style());
         }
         catch (...)
@@ -9303,12 +9303,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_Style(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Style"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9317,6 +9311,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Style"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Style>(arg);
 
             self->obj.Style(param0);
@@ -9331,14 +9331,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_Resources(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Resources"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Resources"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Resources());
         }
         catch (...)
@@ -9350,12 +9350,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_Resources(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Resources"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9364,6 +9358,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Resources"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::ResourceDictionary>(arg);
 
             self->obj.Resources(param0);
@@ -9378,14 +9378,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_RequestedTheme(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"RequestedTheme"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"RequestedTheme"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestedTheme());
         }
         catch (...)
@@ -9397,12 +9397,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_RequestedTheme(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"RequestedTheme"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9411,6 +9405,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"RequestedTheme"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::ElementTheme>(arg);
 
             self->obj.RequestedTheme(param0);
@@ -9425,14 +9425,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_Name(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -9444,12 +9444,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_Name(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9458,6 +9452,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Name(param0);
@@ -9472,14 +9472,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_MinWidth(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MinWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MinWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinWidth());
         }
         catch (...)
@@ -9491,12 +9491,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_MinWidth(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MinWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9505,6 +9499,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MinWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.MinWidth(param0);
@@ -9519,14 +9519,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_MinHeight(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MinHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MinHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinHeight());
         }
         catch (...)
@@ -9538,12 +9538,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_MinHeight(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MinHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9552,6 +9546,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MinHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.MinHeight(param0);
@@ -9566,14 +9566,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_MaxWidth(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MaxWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MaxWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxWidth());
         }
         catch (...)
@@ -9585,12 +9585,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_MaxWidth(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MaxWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9599,6 +9593,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MaxWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.MaxWidth(param0);
@@ -9613,14 +9613,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_MaxHeight(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MaxHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MaxHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxHeight());
         }
         catch (...)
@@ -9632,12 +9632,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_MaxHeight(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MaxHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9646,6 +9640,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MaxHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.MaxHeight(param0);
@@ -9660,14 +9660,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_Margin(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Margin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Margin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Margin());
         }
         catch (...)
@@ -9679,12 +9679,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_Margin(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Margin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9693,6 +9687,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Margin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Thickness>(arg);
 
             self->obj.Margin(param0);
@@ -9707,14 +9707,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_Language(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -9726,12 +9726,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_Language(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9740,6 +9734,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Language(param0);
@@ -9754,14 +9754,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_HorizontalAlignment(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"HorizontalAlignment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"HorizontalAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HorizontalAlignment());
         }
         catch (...)
@@ -9773,12 +9773,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_HorizontalAlignment(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"HorizontalAlignment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9787,6 +9781,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"HorizontalAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::HorizontalAlignment>(arg);
 
             self->obj.HorizontalAlignment(param0);
@@ -9801,14 +9801,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_Height(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Height"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Height());
         }
         catch (...)
@@ -9820,12 +9820,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_Height(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Height"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9834,6 +9828,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Height(param0);
@@ -9848,14 +9848,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_FocusVisualSecondaryThickness(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualSecondaryThickness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualSecondaryThickness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FocusVisualSecondaryThickness());
         }
         catch (...)
@@ -9867,12 +9867,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_FocusVisualSecondaryThickness(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualSecondaryThickness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9881,6 +9875,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualSecondaryThickness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Thickness>(arg);
 
             self->obj.FocusVisualSecondaryThickness(param0);
@@ -9895,14 +9895,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_FocusVisualSecondaryBrush(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualSecondaryBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualSecondaryBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FocusVisualSecondaryBrush());
         }
         catch (...)
@@ -9914,12 +9914,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_FocusVisualSecondaryBrush(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualSecondaryBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9928,6 +9922,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualSecondaryBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             self->obj.FocusVisualSecondaryBrush(param0);
@@ -9942,14 +9942,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_FocusVisualPrimaryThickness(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualPrimaryThickness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualPrimaryThickness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FocusVisualPrimaryThickness());
         }
         catch (...)
@@ -9961,12 +9961,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_FocusVisualPrimaryThickness(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualPrimaryThickness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9975,6 +9969,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualPrimaryThickness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Thickness>(arg);
 
             self->obj.FocusVisualPrimaryThickness(param0);
@@ -9989,14 +9989,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_FocusVisualPrimaryBrush(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualPrimaryBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualPrimaryBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FocusVisualPrimaryBrush());
         }
         catch (...)
@@ -10008,12 +10008,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_FocusVisualPrimaryBrush(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualPrimaryBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10022,6 +10016,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualPrimaryBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
             self->obj.FocusVisualPrimaryBrush(param0);
@@ -10036,14 +10036,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_FocusVisualMargin(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualMargin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FocusVisualMargin());
         }
         catch (...)
@@ -10055,12 +10055,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_FocusVisualMargin(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualMargin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10069,6 +10063,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Thickness>(arg);
 
             self->obj.FocusVisualMargin(param0);
@@ -10083,14 +10083,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_FlowDirection(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FlowDirection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FlowDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FlowDirection());
         }
         catch (...)
@@ -10102,12 +10102,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_FlowDirection(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FlowDirection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10116,6 +10110,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FlowDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FlowDirection>(arg);
 
             self->obj.FlowDirection(param0);
@@ -10130,14 +10130,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_DataContext(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"DataContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"DataContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DataContext());
         }
         catch (...)
@@ -10149,12 +10149,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_DataContext(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"DataContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10163,6 +10157,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"DataContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.DataContext(param0);
@@ -10177,14 +10177,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_AllowFocusWhenDisabled(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"AllowFocusWhenDisabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"AllowFocusWhenDisabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowFocusWhenDisabled());
         }
         catch (...)
@@ -10196,12 +10196,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_AllowFocusWhenDisabled(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"AllowFocusWhenDisabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10210,6 +10204,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"AllowFocusWhenDisabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowFocusWhenDisabled(param0);
@@ -10224,14 +10224,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_AllowFocusOnInteraction(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"AllowFocusOnInteraction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"AllowFocusOnInteraction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowFocusOnInteraction());
         }
         catch (...)
@@ -10243,12 +10243,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_AllowFocusOnInteraction(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"AllowFocusOnInteraction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10257,6 +10251,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"AllowFocusOnInteraction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowFocusOnInteraction(param0);
@@ -10271,14 +10271,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_ActualHeight(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"ActualHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"ActualHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActualHeight());
         }
         catch (...)
@@ -10290,14 +10290,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_ActualTheme(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"ActualTheme"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"ActualTheme"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActualTheme());
         }
         catch (...)
@@ -10309,14 +10309,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_ActualWidth(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"ActualWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"ActualWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActualWidth());
         }
         catch (...)
@@ -10328,14 +10328,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_BaseUri(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseUri());
         }
         catch (...)
@@ -10347,14 +10347,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_IsLoaded(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"IsLoaded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"IsLoaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsLoaded());
         }
         catch (...)
@@ -10366,14 +10366,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_Parent(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Parent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Parent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parent());
         }
         catch (...)
@@ -10385,14 +10385,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_Triggers(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Triggers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Triggers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Triggers());
         }
         catch (...)
@@ -10404,14 +10404,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_ActualHeightProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"ActualHeightProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"ActualHeightProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::ActualHeightProperty());
         }
         catch (...)
@@ -10423,14 +10423,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_ActualThemeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"ActualThemeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"ActualThemeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::ActualThemeProperty());
         }
         catch (...)
@@ -10442,14 +10442,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_ActualWidthProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"ActualWidthProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"ActualWidthProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::ActualWidthProperty());
         }
         catch (...)
@@ -10461,14 +10461,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_AllowFocusOnInteractionProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"AllowFocusOnInteractionProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"AllowFocusOnInteractionProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::AllowFocusOnInteractionProperty());
         }
         catch (...)
@@ -10480,14 +10480,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_AllowFocusWhenDisabledProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"AllowFocusWhenDisabledProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"AllowFocusWhenDisabledProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::AllowFocusWhenDisabledProperty());
         }
         catch (...)
@@ -10499,14 +10499,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_DataContextProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"DataContextProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"DataContextProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::DataContextProperty());
         }
         catch (...)
@@ -10518,14 +10518,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_FlowDirectionProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FlowDirectionProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FlowDirectionProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::FlowDirectionProperty());
         }
         catch (...)
@@ -10537,14 +10537,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_FocusVisualMarginProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualMarginProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualMarginProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::FocusVisualMarginProperty());
         }
         catch (...)
@@ -10556,14 +10556,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_FocusVisualPrimaryBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualPrimaryBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualPrimaryBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::FocusVisualPrimaryBrushProperty());
         }
         catch (...)
@@ -10575,14 +10575,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_FocusVisualPrimaryThicknessProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualPrimaryThicknessProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualPrimaryThicknessProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::FocusVisualPrimaryThicknessProperty());
         }
         catch (...)
@@ -10594,14 +10594,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_FocusVisualSecondaryBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualSecondaryBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualSecondaryBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::FocusVisualSecondaryBrushProperty());
         }
         catch (...)
@@ -10613,14 +10613,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_FocusVisualSecondaryThicknessProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualSecondaryThicknessProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FocusVisualSecondaryThicknessProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::FocusVisualSecondaryThicknessProperty());
         }
         catch (...)
@@ -10632,14 +10632,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_HeightProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"HeightProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"HeightProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::HeightProperty());
         }
         catch (...)
@@ -10651,14 +10651,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_HorizontalAlignmentProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"HorizontalAlignmentProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"HorizontalAlignmentProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::HorizontalAlignmentProperty());
         }
         catch (...)
@@ -10670,14 +10670,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_LanguageProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"LanguageProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"LanguageProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::LanguageProperty());
         }
         catch (...)
@@ -10689,14 +10689,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_MarginProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MarginProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MarginProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::MarginProperty());
         }
         catch (...)
@@ -10708,14 +10708,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_MaxHeightProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MaxHeightProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MaxHeightProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::MaxHeightProperty());
         }
         catch (...)
@@ -10727,14 +10727,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_MaxWidthProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MaxWidthProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MaxWidthProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::MaxWidthProperty());
         }
         catch (...)
@@ -10746,14 +10746,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_MinHeightProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MinHeightProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MinHeightProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::MinHeightProperty());
         }
         catch (...)
@@ -10765,14 +10765,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_MinWidthProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MinWidthProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MinWidthProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::MinWidthProperty());
         }
         catch (...)
@@ -10784,14 +10784,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_NameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"NameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"NameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::NameProperty());
         }
         catch (...)
@@ -10803,14 +10803,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_RequestedThemeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"RequestedThemeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"RequestedThemeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::RequestedThemeProperty());
         }
         catch (...)
@@ -10822,14 +10822,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_StyleProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"StyleProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"StyleProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::StyleProperty());
         }
         catch (...)
@@ -10841,14 +10841,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_TagProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"TagProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"TagProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::TagProperty());
         }
         catch (...)
@@ -10860,14 +10860,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_VerticalAlignmentProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"VerticalAlignmentProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"VerticalAlignmentProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::VerticalAlignmentProperty());
         }
         catch (...)
@@ -10879,14 +10879,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_get_WidthProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"WidthProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"WidthProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::FrameworkElement::WidthProperty());
         }
         catch (...)
@@ -10898,14 +10898,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_add_ActualThemeChanged(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"ActualThemeChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"ActualThemeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ActualThemeChanged(param0));
@@ -10919,14 +10919,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_remove_ActualThemeChanged(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"ActualThemeChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"ActualThemeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ActualThemeChanged(param0);
@@ -10941,14 +10941,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_add_DataContextChanged(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"DataContextChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"DataContextChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::DataContextChangedEventArgs>>(arg);
 
             return py::convert(self->obj.DataContextChanged(param0));
@@ -10962,14 +10962,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_remove_DataContextChanged(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"DataContextChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"DataContextChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DataContextChanged(param0);
@@ -10984,14 +10984,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_add_EffectiveViewportChanged(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"EffectiveViewportChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"EffectiveViewportChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::EffectiveViewportChangedEventArgs>>(arg);
 
             return py::convert(self->obj.EffectiveViewportChanged(param0));
@@ -11005,14 +11005,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_remove_EffectiveViewportChanged(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"EffectiveViewportChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"EffectiveViewportChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.EffectiveViewportChanged(param0);
@@ -11027,14 +11027,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_add_LayoutUpdated(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"LayoutUpdated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"LayoutUpdated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.LayoutUpdated(param0));
@@ -11048,14 +11048,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_remove_LayoutUpdated(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"LayoutUpdated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"LayoutUpdated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.LayoutUpdated(param0);
@@ -11070,14 +11070,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_add_Loaded(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Loaded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Loaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEventHandler>(arg);
 
             return py::convert(self->obj.Loaded(param0));
@@ -11091,14 +11091,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_remove_Loaded(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Loaded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Loaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Loaded(param0);
@@ -11113,14 +11113,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_add_Loading(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Loading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Loading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Loading(param0));
@@ -11134,14 +11134,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_remove_Loading(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Loading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Loading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Loading(param0);
@@ -11156,14 +11156,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_add_SizeChanged(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"SizeChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"SizeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::SizeChangedEventHandler>(arg);
 
             return py::convert(self->obj.SizeChanged(param0));
@@ -11177,14 +11177,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_remove_SizeChanged(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"SizeChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"SizeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SizeChanged(param0);
@@ -11199,14 +11199,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_add_Unloaded(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Unloaded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Unloaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEventHandler>(arg);
 
             return py::convert(self->obj.Unloaded(param0));
@@ -11220,14 +11220,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* FrameworkElement_remove_Unloaded(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Unloaded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"Unloaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Unloaded(param0);
@@ -11508,14 +11508,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkView", L"Initialize", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkView", L"Initialize", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Core::CoreApplicationView>(args, 0);
 
                 self->obj.Initialize(param0);
@@ -11540,14 +11540,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkView", L"Load", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkView", L"Load", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Load(param0);
@@ -11572,14 +11572,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkView", L"Run", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkView", L"Run", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Run();
                 Py_RETURN_NONE;
             }
@@ -11602,14 +11602,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkView", L"SetWindow", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkView", L"SetWindow", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreWindow>(args, 0);
 
                 self->obj.SetWindow(param0);
@@ -11634,14 +11634,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkView", L"Uninitialize", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkView", L"Uninitialize", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Uninitialize();
                 Py_RETURN_NONE;
             }
@@ -11760,14 +11760,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkViewSource", L"CreateView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkViewSource", L"CreateView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateView());
             }
             catch (...)
@@ -11859,14 +11859,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.GridLengthHelper", L"Equals", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.GridLengthHelper", L"Equals", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::GridLength>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::GridLength>(args, 1);
 
@@ -11891,14 +11891,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.GridLengthHelper", L"FromPixels", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.GridLengthHelper", L"FromPixels", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::GridLengthHelper::FromPixels(param0));
@@ -11922,14 +11922,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.GridLengthHelper", L"FromValueAndType", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.GridLengthHelper", L"FromValueAndType", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::GridUnitType>(args, 1);
 
@@ -11954,14 +11954,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.GridLengthHelper", L"GetIsAbsolute", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.GridLengthHelper", L"GetIsAbsolute", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::GridLength>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::GridLengthHelper::GetIsAbsolute(param0));
@@ -11985,14 +11985,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.GridLengthHelper", L"GetIsAuto", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.GridLengthHelper", L"GetIsAuto", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::GridLength>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::GridLengthHelper::GetIsAuto(param0));
@@ -12016,14 +12016,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.GridLengthHelper", L"GetIsStar", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.GridLengthHelper", L"GetIsStar", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::GridLength>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::GridLengthHelper::GetIsStar(param0));
@@ -12043,14 +12043,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* GridLengthHelper_get_Auto(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.GridLengthHelper", L"Auto"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.GridLengthHelper", L"Auto"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::GridLengthHelper::Auto());
         }
         catch (...)
@@ -12163,14 +12163,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* LaunchActivatedEventArgs_get_Arguments(py::wrapper::Microsoft::UI::Xaml::LaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.LaunchActivatedEventArgs", L"Arguments"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.LaunchActivatedEventArgs", L"Arguments"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Arguments());
         }
         catch (...)
@@ -12182,14 +12182,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* LaunchActivatedEventArgs_get_UWPLaunchActivatedEventArgs(py::wrapper::Microsoft::UI::Xaml::LaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.LaunchActivatedEventArgs", L"UWPLaunchActivatedEventArgs"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.LaunchActivatedEventArgs", L"UWPLaunchActivatedEventArgs"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UWPLaunchActivatedEventArgs());
         }
         catch (...)
@@ -12272,14 +12272,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* MediaFailedRoutedEventArgs_get_ErrorTrace(py::wrapper::Microsoft::UI::Xaml::MediaFailedRoutedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.MediaFailedRoutedEventArgs", L"ErrorTrace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.MediaFailedRoutedEventArgs", L"ErrorTrace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorTrace());
         }
         catch (...)
@@ -12365,14 +12365,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.PointHelper", L"FromCoordinates", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.PointHelper", L"FromCoordinates", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
 
@@ -12532,14 +12532,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.PropertyMetadata", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.PropertyMetadata", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::PropertyMetadata::Create(param0));
@@ -12552,14 +12552,14 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.PropertyMetadata", L"Create", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.PropertyMetadata", L"Create", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::PropertyChangedCallback>(args, 1);
 
@@ -12580,14 +12580,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* PropertyMetadata_get_CreateDefaultValueCallback(py::wrapper::Microsoft::UI::Xaml::PropertyMetadata* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.PropertyMetadata", L"CreateDefaultValueCallback"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.PropertyMetadata", L"CreateDefaultValueCallback"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CreateDefaultValueCallback());
         }
         catch (...)
@@ -12599,14 +12599,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* PropertyMetadata_get_DefaultValue(py::wrapper::Microsoft::UI::Xaml::PropertyMetadata* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.PropertyMetadata", L"DefaultValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.PropertyMetadata", L"DefaultValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultValue());
         }
         catch (...)
@@ -12739,14 +12739,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* PropertyPath_get_Path(py::wrapper::Microsoft::UI::Xaml::PropertyPath* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.PropertyPath", L"Path"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.PropertyPath", L"Path"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Path());
         }
         catch (...)
@@ -12832,14 +12832,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"Contains", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"Contains", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
@@ -12864,14 +12864,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"Equals", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"Equals", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
@@ -12896,14 +12896,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"FromCoordinatesAndDimensions", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"FromCoordinatesAndDimensions", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
                 auto param2 = py::convert_to<float>(args, 2);
@@ -12930,14 +12930,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"FromLocationAndSize", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"FromLocationAndSize", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Size>(args, 1);
 
@@ -12962,14 +12962,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"FromPoints", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"FromPoints", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
@@ -12994,14 +12994,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"GetBottom", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"GetBottom", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::RectHelper::GetBottom(param0));
@@ -13025,14 +13025,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"GetIsEmpty", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"GetIsEmpty", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::RectHelper::GetIsEmpty(param0));
@@ -13056,14 +13056,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"GetLeft", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"GetLeft", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::RectHelper::GetLeft(param0));
@@ -13087,14 +13087,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"GetRight", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"GetRight", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::RectHelper::GetRight(param0));
@@ -13118,14 +13118,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"GetTop", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"GetTop", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::RectHelper::GetTop(param0));
@@ -13149,14 +13149,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"Intersect", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"Intersect", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
@@ -13181,14 +13181,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"Union", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"Union", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
@@ -13209,14 +13209,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* RectHelper_get_Empty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.RectHelper", L"Empty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.RectHelper", L"Empty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::RectHelper::Empty());
         }
         catch (...)
@@ -13361,14 +13361,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -13391,14 +13391,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -13420,14 +13420,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -13449,14 +13449,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"HasKey", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"HasKey", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 return py::convert(self->obj.HasKey(param0));
@@ -13480,14 +13480,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"Insert", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"Insert", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -13512,14 +13512,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"Lookup", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"Lookup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 return py::convert(self->obj.Lookup(param0));
@@ -13543,14 +13543,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"Remove", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"Remove", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 self->obj.Remove(param0);
@@ -13571,14 +13571,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ResourceDictionary_get_Source(py::wrapper::Microsoft::UI::Xaml::ResourceDictionary* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -13590,12 +13590,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ResourceDictionary_put_Source(py::wrapper::Microsoft::UI::Xaml::ResourceDictionary* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13604,6 +13598,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.Source(param0);
@@ -13618,14 +13618,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ResourceDictionary_get_MergedDictionaries(py::wrapper::Microsoft::UI::Xaml::ResourceDictionary* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"MergedDictionaries"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"MergedDictionaries"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MergedDictionaries());
         }
         catch (...)
@@ -13637,14 +13637,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ResourceDictionary_get_ThemeDictionaries(py::wrapper::Microsoft::UI::Xaml::ResourceDictionary* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"ThemeDictionaries"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"ThemeDictionaries"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ThemeDictionaries());
         }
         catch (...)
@@ -13656,14 +13656,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ResourceDictionary_get_Size(py::wrapper::Microsoft::UI::Xaml::ResourceDictionary* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ResourceDictionary", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -13861,14 +13861,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ResourceManagerRequestedEventArgs_get_CustomResourceManager(py::wrapper::Microsoft::UI::Xaml::ResourceManagerRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ResourceManagerRequestedEventArgs", L"CustomResourceManager"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ResourceManagerRequestedEventArgs", L"CustomResourceManager"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CustomResourceManager());
         }
         catch (...)
@@ -13880,12 +13880,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ResourceManagerRequestedEventArgs_put_CustomResourceManager(py::wrapper::Microsoft::UI::Xaml::ResourceManagerRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ResourceManagerRequestedEventArgs", L"CustomResourceManager"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13894,6 +13888,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ResourceManagerRequestedEventArgs", L"CustomResourceManager"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceManager>(arg);
 
             self->obj.CustomResourceManager(param0);
@@ -14069,14 +14069,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* RoutedEventArgs_get_OriginalSource(py::wrapper::Microsoft::UI::Xaml::RoutedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.RoutedEventArgs", L"OriginalSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.RoutedEventArgs", L"OriginalSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OriginalSource());
         }
         catch (...)
@@ -14180,14 +14180,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* ScalarTransition_get_Duration(py::wrapper::Microsoft::UI::Xaml::ScalarTransition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ScalarTransition", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ScalarTransition", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -14199,12 +14199,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ScalarTransition_put_Duration(py::wrapper::Microsoft::UI::Xaml::ScalarTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ScalarTransition", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14213,6 +14207,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.ScalarTransition", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.Duration(param0);
@@ -14335,14 +14335,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Setter_get_Value(py::wrapper::Microsoft::UI::Xaml::Setter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Setter", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Setter", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -14354,12 +14354,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Setter_put_Value(py::wrapper::Microsoft::UI::Xaml::Setter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Setter", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14368,6 +14362,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Setter", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.Value(param0);
@@ -14382,14 +14382,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Setter_get_Target(py::wrapper::Microsoft::UI::Xaml::Setter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Setter", L"Target"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Setter", L"Target"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Target());
         }
         catch (...)
@@ -14401,12 +14401,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Setter_put_Target(py::wrapper::Microsoft::UI::Xaml::Setter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Setter", L"Target"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14415,6 +14409,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Setter", L"Target"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::TargetPropertyPath>(arg);
 
             self->obj.Target(param0);
@@ -14429,14 +14429,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Setter_get_Property(py::wrapper::Microsoft::UI::Xaml::Setter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Setter", L"Property"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Setter", L"Property"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Property());
         }
         catch (...)
@@ -14448,12 +14448,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Setter_put_Property(py::wrapper::Microsoft::UI::Xaml::Setter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Setter", L"Property"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14462,6 +14456,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Setter", L"Property"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(arg);
 
             self->obj.Property(param0);
@@ -14548,14 +14548,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* SetterBase_get_IsSealed(py::wrapper::Microsoft::UI::Xaml::SetterBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.SetterBase", L"IsSealed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.SetterBase", L"IsSealed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSealed());
         }
         catch (...)
@@ -14663,14 +14663,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::SetterBase>(args, 0);
 
                 self->obj.Append(param0);
@@ -14695,14 +14695,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -14725,14 +14725,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -14754,14 +14754,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -14785,14 +14785,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::SetterBase, true>>(args, 1);
 
@@ -14817,14 +14817,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -14846,14 +14846,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::SetterBase>(args, 0);
                 uint32_t param1 {  };
 
@@ -14890,14 +14890,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::SetterBase>(args, 1);
 
@@ -14923,14 +14923,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -14955,14 +14955,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -14985,14 +14985,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::SetterBase, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -15017,14 +15017,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::SetterBase>(args, 1);
 
@@ -15046,14 +15046,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* SetterBaseCollection_get_IsSealed(py::wrapper::Microsoft::UI::Xaml::SetterBaseCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"IsSealed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"IsSealed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSealed());
         }
         catch (...)
@@ -15065,14 +15065,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* SetterBaseCollection_get_Size(py::wrapper::Microsoft::UI::Xaml::SetterBaseCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.SetterBaseCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -15296,14 +15296,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* SizeChangedEventArgs_get_NewSize(py::wrapper::Microsoft::UI::Xaml::SizeChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.SizeChangedEventArgs", L"NewSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.SizeChangedEventArgs", L"NewSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NewSize());
         }
         catch (...)
@@ -15315,14 +15315,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* SizeChangedEventArgs_get_PreviousSize(py::wrapper::Microsoft::UI::Xaml::SizeChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.SizeChangedEventArgs", L"PreviousSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.SizeChangedEventArgs", L"PreviousSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousSize());
         }
         catch (...)
@@ -15409,14 +15409,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SizeHelper", L"Equals", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SizeHelper", L"Equals", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Size>(args, 1);
 
@@ -15441,14 +15441,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SizeHelper", L"FromDimensions", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SizeHelper", L"FromDimensions", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
 
@@ -15473,14 +15473,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SizeHelper", L"GetIsEmpty", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.SizeHelper", L"GetIsEmpty", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::SizeHelper::GetIsEmpty(param0));
@@ -15500,14 +15500,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* SizeHelper_get_Empty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.SizeHelper", L"Empty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.SizeHelper", L"Empty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::SizeHelper::Empty());
         }
         catch (...)
@@ -15639,14 +15639,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* StateTrigger_get_IsActive(py::wrapper::Microsoft::UI::Xaml::StateTrigger* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.StateTrigger", L"IsActive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.StateTrigger", L"IsActive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsActive());
         }
         catch (...)
@@ -15658,12 +15658,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int StateTrigger_put_IsActive(py::wrapper::Microsoft::UI::Xaml::StateTrigger* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.StateTrigger", L"IsActive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15672,6 +15666,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.StateTrigger", L"IsActive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsActive(param0);
@@ -15686,14 +15686,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* StateTrigger_get_IsActiveProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.StateTrigger", L"IsActiveProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.StateTrigger", L"IsActiveProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::StateTrigger::IsActiveProperty());
         }
         catch (...)
@@ -15911,14 +15911,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Style", L"Seal", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Style", L"Seal", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Seal();
                 Py_RETURN_NONE;
             }
@@ -15937,14 +15937,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Style_get_TargetType(py::wrapper::Microsoft::UI::Xaml::Style* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Style", L"TargetType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Style", L"TargetType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetType());
         }
         catch (...)
@@ -15956,12 +15956,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Style_put_TargetType(py::wrapper::Microsoft::UI::Xaml::Style* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Style", L"TargetType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15970,6 +15964,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Style", L"TargetType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(arg);
 
             self->obj.TargetType(param0);
@@ -15984,14 +15984,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Style_get_BasedOn(py::wrapper::Microsoft::UI::Xaml::Style* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Style", L"BasedOn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Style", L"BasedOn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BasedOn());
         }
         catch (...)
@@ -16003,12 +16003,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Style_put_BasedOn(py::wrapper::Microsoft::UI::Xaml::Style* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Style", L"BasedOn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16017,6 +16011,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Style", L"BasedOn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Style>(arg);
 
             self->obj.BasedOn(param0);
@@ -16031,14 +16031,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Style_get_IsSealed(py::wrapper::Microsoft::UI::Xaml::Style* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Style", L"IsSealed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Style", L"IsSealed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSealed());
         }
         catch (...)
@@ -16050,14 +16050,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Style_get_Setters(py::wrapper::Microsoft::UI::Xaml::Style* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Style", L"Setters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Style", L"Setters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Setters());
         }
         catch (...)
@@ -16180,14 +16180,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* TargetPropertyPath_get_Target(py::wrapper::Microsoft::UI::Xaml::TargetPropertyPath* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.TargetPropertyPath", L"Target"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.TargetPropertyPath", L"Target"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Target());
         }
         catch (...)
@@ -16199,12 +16199,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int TargetPropertyPath_put_Target(py::wrapper::Microsoft::UI::Xaml::TargetPropertyPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.TargetPropertyPath", L"Target"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16213,6 +16207,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.TargetPropertyPath", L"Target"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.Target(param0);
@@ -16227,14 +16227,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* TargetPropertyPath_get_Path(py::wrapper::Microsoft::UI::Xaml::TargetPropertyPath* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.TargetPropertyPath", L"Path"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.TargetPropertyPath", L"Path"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Path());
         }
         catch (...)
@@ -16246,12 +16246,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int TargetPropertyPath_put_Path(py::wrapper::Microsoft::UI::Xaml::TargetPropertyPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.TargetPropertyPath", L"Path"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16260,6 +16254,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.TargetPropertyPath", L"Path"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::PropertyPath>(arg);
 
             self->obj.Path(param0);
@@ -16349,14 +16349,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.ThicknessHelper", L"FromLengths", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.ThicknessHelper", L"FromLengths", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<double>(args, 2);
@@ -16383,14 +16383,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.ThicknessHelper", L"FromUniformLength", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.ThicknessHelper", L"FromUniformLength", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::ThicknessHelper::FromUniformLength(param0));
@@ -16601,14 +16601,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::TriggerAction>(args, 0);
 
                 self->obj.Append(param0);
@@ -16633,14 +16633,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -16663,14 +16663,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -16692,14 +16692,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -16723,14 +16723,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::TriggerAction, true>>(args, 1);
 
@@ -16755,14 +16755,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -16784,14 +16784,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::TriggerAction>(args, 0);
                 uint32_t param1 {  };
 
@@ -16828,14 +16828,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::TriggerAction>(args, 1);
 
@@ -16861,14 +16861,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -16893,14 +16893,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -16923,14 +16923,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::TriggerAction, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -16955,14 +16955,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::TriggerAction>(args, 1);
 
@@ -16984,14 +16984,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* TriggerActionCollection_get_Size(py::wrapper::Microsoft::UI::Xaml::TriggerActionCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.TriggerActionCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -17287,14 +17287,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::TriggerBase>(args, 0);
 
                 self->obj.Append(param0);
@@ -17319,14 +17319,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -17349,14 +17349,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -17378,14 +17378,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -17409,14 +17409,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::TriggerBase, true>>(args, 1);
 
@@ -17441,14 +17441,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -17470,14 +17470,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::TriggerBase>(args, 0);
                 uint32_t param1 {  };
 
@@ -17514,14 +17514,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::TriggerBase>(args, 1);
 
@@ -17547,14 +17547,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -17579,14 +17579,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -17609,14 +17609,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::TriggerBase, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -17641,14 +17641,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::TriggerBase>(args, 1);
 
@@ -17670,14 +17670,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* TriggerCollection_get_Size(py::wrapper::Microsoft::UI::Xaml::TriggerCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.TriggerCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -17904,14 +17904,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"AddHandler", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"AddHandler", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEvent>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -17938,14 +17938,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Arrange", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Arrange", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
                 self->obj.Arrange(param0);
@@ -17970,14 +17970,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"CancelDirectManipulations", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"CancelDirectManipulations", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CancelDirectManipulations());
             }
             catch (...)
@@ -17999,14 +17999,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"CapturePointer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"CapturePointer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::Pointer>(args, 0);
 
                 return py::convert(self->obj.CapturePointer(param0));
@@ -18030,14 +18030,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Focus", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Focus", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FocusState>(args, 0);
 
                 return py::convert(self->obj.Focus(param0));
@@ -18061,14 +18061,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"GetVisualInternal", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"GetVisualInternal", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetVisualInternal());
             }
             catch (...)
@@ -18090,14 +18090,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"InvalidateArrange", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"InvalidateArrange", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.InvalidateArrange();
                 Py_RETURN_NONE;
             }
@@ -18120,14 +18120,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"InvalidateMeasure", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"InvalidateMeasure", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.InvalidateMeasure();
                 Py_RETURN_NONE;
             }
@@ -18150,14 +18150,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Measure", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Measure", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
 
                 self->obj.Measure(param0);
@@ -18182,14 +18182,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"PopulatePropertyInfo", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationPropertyInfo>(args, 1);
 
@@ -18215,14 +18215,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"RegisterAsScrollPort", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"RegisterAsScrollPort", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
 
                 winrt::Microsoft::UI::Xaml::UIElement::RegisterAsScrollPort(param0);
@@ -18247,14 +18247,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"ReleasePointerCapture", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"ReleasePointerCapture", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::Pointer>(args, 0);
 
                 self->obj.ReleasePointerCapture(param0);
@@ -18279,14 +18279,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"ReleasePointerCaptures", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"ReleasePointerCaptures", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReleasePointerCaptures();
                 Py_RETURN_NONE;
             }
@@ -18309,14 +18309,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"RemoveHandler", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"RemoveHandler", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEvent>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -18342,14 +18342,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartAnimation", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimation(param0);
@@ -18374,14 +18374,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartBringIntoView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartBringIntoView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.StartBringIntoView();
                 Py_RETURN_NONE;
             }
@@ -18393,14 +18393,14 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartBringIntoView", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartBringIntoView", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::BringIntoViewOptions>(args, 0);
 
                 self->obj.StartBringIntoView(param0);
@@ -18425,14 +18425,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartDragAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartDragAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Input::PointerPoint>(args, 0);
 
                 return py::convert(self->obj.StartDragAsync(param0));
@@ -18456,14 +18456,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StopAnimation", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StopAnimation(param0);
@@ -18488,14 +18488,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"TransformToVisual", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"TransformToVisual", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
 
                 return py::convert(self->obj.TransformToVisual(param0));
@@ -18519,14 +18519,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"TryInvokeKeyboardAccelerator", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"TryInvokeKeyboardAccelerator", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>(args, 0);
 
                 self->obj.TryInvokeKeyboardAccelerator(param0);
@@ -18551,14 +18551,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"TryStartDirectManipulation", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"TryStartDirectManipulation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::Pointer>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::UIElement::TryStartDirectManipulation(param0));
@@ -18582,14 +18582,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"UpdateLayout", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"UpdateLayout", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.UpdateLayout();
                 Py_RETURN_NONE;
             }
@@ -18608,14 +18608,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_KeyboardAcceleratorPlacementMode(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyboardAcceleratorPlacementMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyboardAcceleratorPlacementMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyboardAcceleratorPlacementMode());
         }
         catch (...)
@@ -18627,12 +18627,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_KeyboardAcceleratorPlacementMode(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyboardAcceleratorPlacementMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18641,6 +18635,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyboardAcceleratorPlacementMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::KeyboardAcceleratorPlacementMode>(arg);
 
             self->obj.KeyboardAcceleratorPlacementMode(param0);
@@ -18655,14 +18655,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_RotationTransition(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RotationTransition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RotationTransition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotationTransition());
         }
         catch (...)
@@ -18674,12 +18674,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_RotationTransition(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RotationTransition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18688,6 +18682,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RotationTransition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::ScalarTransition>(arg);
 
             self->obj.RotationTransition(param0);
@@ -18702,14 +18702,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_KeyTipTarget(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyTipTarget());
         }
         catch (...)
@@ -18721,12 +18721,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_KeyTipTarget(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18735,6 +18729,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(arg);
 
             self->obj.KeyTipTarget(param0);
@@ -18749,14 +18749,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_KeyTipPlacementMode(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipPlacementMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipPlacementMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyTipPlacementMode());
         }
         catch (...)
@@ -18768,12 +18768,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_KeyTipPlacementMode(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipPlacementMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18782,6 +18776,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipPlacementMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::KeyTipPlacementMode>(arg);
 
             self->obj.KeyTipPlacementMode(param0);
@@ -18796,14 +18796,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_KeyTipHorizontalOffset(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipHorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipHorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyTipHorizontalOffset());
         }
         catch (...)
@@ -18815,12 +18815,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_KeyTipHorizontalOffset(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipHorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18829,6 +18823,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipHorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.KeyTipHorizontalOffset(param0);
@@ -18843,14 +18843,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_IsTapEnabled(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsTapEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsTapEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsTapEnabled());
         }
         catch (...)
@@ -18862,12 +18862,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_IsTapEnabled(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsTapEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18876,6 +18870,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsTapEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsTapEnabled(param0);
@@ -18890,14 +18890,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_IsTabStop(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsTabStop"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsTabStop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsTabStop());
         }
         catch (...)
@@ -18909,12 +18909,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_IsTabStop(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsTabStop"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18923,6 +18917,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsTabStop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsTabStop(param0);
@@ -18937,14 +18937,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_IsRightTapEnabled(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsRightTapEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsRightTapEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRightTapEnabled());
         }
         catch (...)
@@ -18956,12 +18956,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_IsRightTapEnabled(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsRightTapEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18970,6 +18964,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsRightTapEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsRightTapEnabled(param0);
@@ -18984,14 +18984,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_IsHoldingEnabled(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsHoldingEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsHoldingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsHoldingEnabled());
         }
         catch (...)
@@ -19003,12 +19003,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_IsHoldingEnabled(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsHoldingEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19017,6 +19011,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsHoldingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsHoldingEnabled(param0);
@@ -19031,14 +19031,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_IsHitTestVisible(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsHitTestVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsHitTestVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsHitTestVisible());
         }
         catch (...)
@@ -19050,12 +19050,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_IsHitTestVisible(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsHitTestVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19064,6 +19058,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsHitTestVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsHitTestVisible(param0);
@@ -19078,14 +19078,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_IsDoubleTapEnabled(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsDoubleTapEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsDoubleTapEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDoubleTapEnabled());
         }
         catch (...)
@@ -19097,12 +19097,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_IsDoubleTapEnabled(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsDoubleTapEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19111,6 +19105,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsDoubleTapEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsDoubleTapEnabled(param0);
@@ -19125,14 +19125,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_AccessKey(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccessKey());
         }
         catch (...)
@@ -19144,12 +19144,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_AccessKey(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19158,6 +19152,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.AccessKey(param0);
@@ -19172,14 +19172,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_HighContrastAdjustment(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"HighContrastAdjustment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"HighContrastAdjustment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HighContrastAdjustment());
         }
         catch (...)
@@ -19191,12 +19191,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_HighContrastAdjustment(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"HighContrastAdjustment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19205,6 +19199,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"HighContrastAdjustment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::ElementHighContrastAdjustment>(arg);
 
             self->obj.HighContrastAdjustment(param0);
@@ -19219,14 +19219,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_ManipulationMode(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ManipulationMode());
         }
         catch (...)
@@ -19238,12 +19238,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_ManipulationMode(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19252,6 +19246,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::ManipulationModes>(arg);
 
             self->obj.ManipulationMode(param0);
@@ -19266,14 +19266,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_ExitDisplayModeOnAccessKeyInvoked(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ExitDisplayModeOnAccessKeyInvoked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ExitDisplayModeOnAccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExitDisplayModeOnAccessKeyInvoked());
         }
         catch (...)
@@ -19285,12 +19285,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_ExitDisplayModeOnAccessKeyInvoked(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ExitDisplayModeOnAccessKeyInvoked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19299,6 +19293,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ExitDisplayModeOnAccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ExitDisplayModeOnAccessKeyInvoked(param0);
@@ -19313,14 +19313,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_OpacityTransition(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"OpacityTransition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"OpacityTransition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OpacityTransition());
         }
         catch (...)
@@ -19332,12 +19332,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_OpacityTransition(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"OpacityTransition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19346,6 +19340,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"OpacityTransition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::ScalarTransition>(arg);
 
             self->obj.OpacityTransition(param0);
@@ -19360,14 +19360,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_ContextFlyout(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ContextFlyout"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ContextFlyout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContextFlyout());
         }
         catch (...)
@@ -19379,12 +19379,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_ContextFlyout(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ContextFlyout"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19393,6 +19387,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ContextFlyout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase>(arg);
 
             self->obj.ContextFlyout(param0);
@@ -19407,14 +19407,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_CompositeMode(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CompositeMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CompositeMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CompositeMode());
         }
         catch (...)
@@ -19426,12 +19426,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_CompositeMode(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CompositeMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19440,6 +19434,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CompositeMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::ElementCompositeMode>(arg);
 
             self->obj.CompositeMode(param0);
@@ -19454,14 +19454,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_Clip(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Clip"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Clip"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Clip());
         }
         catch (...)
@@ -19473,12 +19473,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_Clip(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Clip"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19487,6 +19481,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Clip"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::RectangleGeometry>(arg);
 
             self->obj.Clip(param0);
@@ -19501,14 +19501,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_Translation(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Translation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Translation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Translation());
         }
         catch (...)
@@ -19520,12 +19520,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_Translation(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Translation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19534,6 +19528,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Translation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.Translation(param0);
@@ -19548,14 +19548,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_CanDrag(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CanDrag"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CanDrag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanDrag());
         }
         catch (...)
@@ -19567,12 +19567,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_CanDrag(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CanDrag"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19581,6 +19575,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CanDrag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.CanDrag(param0);
@@ -19595,14 +19595,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_CanBeScrollAnchor(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CanBeScrollAnchor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CanBeScrollAnchor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanBeScrollAnchor());
         }
         catch (...)
@@ -19614,12 +19614,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_CanBeScrollAnchor(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CanBeScrollAnchor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19628,6 +19622,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CanBeScrollAnchor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.CanBeScrollAnchor(param0);
@@ -19642,14 +19642,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_CacheMode(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CacheMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CacheMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CacheMode());
         }
         catch (...)
@@ -19661,12 +19661,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_CacheMode(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CacheMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19675,6 +19669,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CacheMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::CacheMode>(arg);
 
             self->obj.CacheMode(param0);
@@ -19689,14 +19689,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_AllowDrop(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"AllowDrop"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"AllowDrop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowDrop());
         }
         catch (...)
@@ -19708,12 +19708,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_AllowDrop(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"AllowDrop"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19722,6 +19716,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"AllowDrop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowDrop(param0);
@@ -19736,14 +19736,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_Opacity(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Opacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Opacity());
         }
         catch (...)
@@ -19755,12 +19755,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_Opacity(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Opacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19769,6 +19763,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Opacity(param0);
@@ -19783,14 +19783,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_KeyboardAcceleratorPlacementTarget(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyboardAcceleratorPlacementTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyboardAcceleratorPlacementTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyboardAcceleratorPlacementTarget());
         }
         catch (...)
@@ -19802,12 +19802,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_KeyboardAcceleratorPlacementTarget(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyboardAcceleratorPlacementTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19816,6 +19810,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyboardAcceleratorPlacementTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(arg);
 
             self->obj.KeyboardAcceleratorPlacementTarget(param0);
@@ -19830,14 +19830,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_AccessKeyScopeOwner(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKeyScopeOwner"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKeyScopeOwner"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccessKeyScopeOwner());
         }
         catch (...)
@@ -19849,12 +19849,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_AccessKeyScopeOwner(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKeyScopeOwner"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19863,6 +19857,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKeyScopeOwner"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(arg);
 
             self->obj.AccessKeyScopeOwner(param0);
@@ -19877,14 +19877,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_IsAccessKeyScope(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsAccessKeyScope"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsAccessKeyScope"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAccessKeyScope());
         }
         catch (...)
@@ -19896,12 +19896,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_IsAccessKeyScope(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsAccessKeyScope"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19910,6 +19904,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsAccessKeyScope"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsAccessKeyScope(param0);
@@ -19924,14 +19924,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_KeyTipVerticalOffset(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipVerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipVerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyTipVerticalOffset());
         }
         catch (...)
@@ -19943,12 +19943,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_KeyTipVerticalOffset(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipVerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19957,6 +19951,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipVerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.KeyTipVerticalOffset(param0);
@@ -19971,14 +19971,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_XamlRoot(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XamlRoot"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XamlRoot"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XamlRoot());
         }
         catch (...)
@@ -19990,12 +19990,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_XamlRoot(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XamlRoot"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20004,6 +19998,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XamlRoot"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::XamlRoot>(arg);
 
             self->obj.XamlRoot(param0);
@@ -20018,14 +20018,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_XYFocusUpNavigationStrategy(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusUpNavigationStrategy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusUpNavigationStrategy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XYFocusUpNavigationStrategy());
         }
         catch (...)
@@ -20037,12 +20037,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_XYFocusUpNavigationStrategy(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusUpNavigationStrategy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20051,6 +20045,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusUpNavigationStrategy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::XYFocusNavigationStrategy>(arg);
 
             self->obj.XYFocusUpNavigationStrategy(param0);
@@ -20065,14 +20065,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_XYFocusUp(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusUp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusUp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XYFocusUp());
         }
         catch (...)
@@ -20084,12 +20084,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_XYFocusUp(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusUp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20098,6 +20092,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusUp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(arg);
 
             self->obj.XYFocusUp(param0);
@@ -20112,14 +20112,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_XYFocusRightNavigationStrategy(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusRightNavigationStrategy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusRightNavigationStrategy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XYFocusRightNavigationStrategy());
         }
         catch (...)
@@ -20131,12 +20131,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_XYFocusRightNavigationStrategy(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusRightNavigationStrategy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20145,6 +20139,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusRightNavigationStrategy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::XYFocusNavigationStrategy>(arg);
 
             self->obj.XYFocusRightNavigationStrategy(param0);
@@ -20159,14 +20159,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_XYFocusRight(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusRight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusRight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XYFocusRight());
         }
         catch (...)
@@ -20178,12 +20178,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_XYFocusRight(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusRight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20192,6 +20186,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusRight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(arg);
 
             self->obj.XYFocusRight(param0);
@@ -20206,14 +20206,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_XYFocusLeftNavigationStrategy(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusLeftNavigationStrategy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusLeftNavigationStrategy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XYFocusLeftNavigationStrategy());
         }
         catch (...)
@@ -20225,12 +20225,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_XYFocusLeftNavigationStrategy(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusLeftNavigationStrategy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20239,6 +20233,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusLeftNavigationStrategy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::XYFocusNavigationStrategy>(arg);
 
             self->obj.XYFocusLeftNavigationStrategy(param0);
@@ -20253,14 +20253,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_CenterPoint(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CenterPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CenterPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CenterPoint());
         }
         catch (...)
@@ -20272,12 +20272,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_CenterPoint(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CenterPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20286,6 +20280,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CenterPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.CenterPoint(param0);
@@ -20300,14 +20300,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_XYFocusKeyboardNavigation(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusKeyboardNavigation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusKeyboardNavigation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XYFocusKeyboardNavigation());
         }
         catch (...)
@@ -20319,12 +20319,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_XYFocusKeyboardNavigation(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusKeyboardNavigation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20333,6 +20327,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusKeyboardNavigation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::XYFocusKeyboardNavigationMode>(arg);
 
             self->obj.XYFocusKeyboardNavigation(param0);
@@ -20347,14 +20347,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_XYFocusDownNavigationStrategy(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusDownNavigationStrategy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusDownNavigationStrategy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XYFocusDownNavigationStrategy());
         }
         catch (...)
@@ -20366,12 +20366,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_XYFocusDownNavigationStrategy(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusDownNavigationStrategy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20380,6 +20374,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusDownNavigationStrategy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::XYFocusNavigationStrategy>(arg);
 
             self->obj.XYFocusDownNavigationStrategy(param0);
@@ -20394,14 +20394,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_XYFocusDown(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusDown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusDown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XYFocusDown());
         }
         catch (...)
@@ -20413,12 +20413,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_XYFocusDown(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusDown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20427,6 +20421,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusDown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(arg);
 
             self->obj.XYFocusDown(param0);
@@ -20441,14 +20441,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_Visibility(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Visibility"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Visibility"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Visibility());
         }
         catch (...)
@@ -20460,12 +20460,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_Visibility(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Visibility"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20474,6 +20468,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Visibility"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Visibility>(arg);
 
             self->obj.Visibility(param0);
@@ -20488,14 +20488,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_UseSystemFocusVisuals(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"UseSystemFocusVisuals"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"UseSystemFocusVisuals"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UseSystemFocusVisuals());
         }
         catch (...)
@@ -20507,12 +20507,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_UseSystemFocusVisuals(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"UseSystemFocusVisuals"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20521,6 +20515,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"UseSystemFocusVisuals"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.UseSystemFocusVisuals(param0);
@@ -20535,14 +20535,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_UseLayoutRounding(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"UseLayoutRounding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"UseLayoutRounding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UseLayoutRounding());
         }
         catch (...)
@@ -20554,12 +20554,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_UseLayoutRounding(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"UseLayoutRounding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20568,6 +20562,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"UseLayoutRounding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.UseLayoutRounding(param0);
@@ -20582,14 +20582,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_TranslationTransition(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TranslationTransition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TranslationTransition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TranslationTransition());
         }
         catch (...)
@@ -20601,12 +20601,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_TranslationTransition(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TranslationTransition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20615,6 +20609,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TranslationTransition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Vector3Transition>(arg);
 
             self->obj.TranslationTransition(param0);
@@ -20629,14 +20629,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_XYFocusLeft(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusLeft"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusLeft"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XYFocusLeft());
         }
         catch (...)
@@ -20648,12 +20648,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_XYFocusLeft(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusLeft"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20662,6 +20656,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusLeft"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(arg);
 
             self->obj.XYFocusLeft(param0);
@@ -20676,14 +20676,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_Transitions(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Transitions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Transitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Transitions());
         }
         catch (...)
@@ -20695,12 +20695,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_Transitions(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Transitions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20709,6 +20703,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Transitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Animation::TransitionCollection>(arg);
 
             self->obj.Transitions(param0);
@@ -20723,14 +20723,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_TransformMatrix(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TransformMatrix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TransformMatrix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TransformMatrix());
         }
         catch (...)
@@ -20742,12 +20742,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_TransformMatrix(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TransformMatrix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20756,6 +20750,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TransformMatrix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(arg);
 
             self->obj.TransformMatrix(param0);
@@ -20770,14 +20770,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_Rotation(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Rotation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Rotation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Rotation());
         }
         catch (...)
@@ -20789,12 +20789,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_Rotation(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Rotation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20803,6 +20797,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Rotation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.Rotation(param0);
@@ -20817,14 +20817,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_RenderTransformOrigin(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RenderTransformOrigin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RenderTransformOrigin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RenderTransformOrigin());
         }
         catch (...)
@@ -20836,12 +20836,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_RenderTransformOrigin(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RenderTransformOrigin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20850,6 +20844,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RenderTransformOrigin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             self->obj.RenderTransformOrigin(param0);
@@ -20864,14 +20864,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_RenderTransform(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RenderTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RenderTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RenderTransform());
         }
         catch (...)
@@ -20883,12 +20883,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_RenderTransform(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RenderTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20897,6 +20891,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RenderTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
 
             self->obj.RenderTransform(param0);
@@ -20911,14 +20911,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_TabFocusNavigation(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TabFocusNavigation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TabFocusNavigation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TabFocusNavigation());
         }
         catch (...)
@@ -20930,12 +20930,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_TabFocusNavigation(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TabFocusNavigation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20944,6 +20938,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TabFocusNavigation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::KeyboardNavigationMode>(arg);
 
             self->obj.TabFocusNavigation(param0);
@@ -20958,14 +20958,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_RasterizationScale(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RasterizationScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RasterizationScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RasterizationScale());
         }
         catch (...)
@@ -20977,12 +20977,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_RasterizationScale(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RasterizationScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20991,6 +20985,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RasterizationScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.RasterizationScale(param0);
@@ -21005,14 +21005,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_Projection(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Projection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Projection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Projection());
         }
         catch (...)
@@ -21024,12 +21024,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_Projection(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Projection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -21038,6 +21032,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Projection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Projection>(arg);
 
             self->obj.Projection(param0);
@@ -21052,14 +21052,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_Shadow(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Shadow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Shadow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Shadow());
         }
         catch (...)
@@ -21071,12 +21071,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_Shadow(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Shadow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -21085,6 +21079,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Shadow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Shadow>(arg);
 
             self->obj.Shadow(param0);
@@ -21099,14 +21099,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_ScaleTransition(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ScaleTransition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ScaleTransition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ScaleTransition());
         }
         catch (...)
@@ -21118,12 +21118,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_ScaleTransition(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ScaleTransition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -21132,6 +21126,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ScaleTransition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Vector3Transition>(arg);
 
             self->obj.ScaleTransition(param0);
@@ -21146,14 +21146,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_Scale(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Scale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Scale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Scale());
         }
         catch (...)
@@ -21165,12 +21165,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_Scale(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Scale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -21179,6 +21173,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Scale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.Scale(param0);
@@ -21193,14 +21193,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_TabIndex(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TabIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TabIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TabIndex());
         }
         catch (...)
@@ -21212,12 +21212,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_TabIndex(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TabIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -21226,6 +21220,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TabIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.TabIndex(param0);
@@ -21240,14 +21240,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_RotationAxis(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RotationAxis"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RotationAxis"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotationAxis());
         }
         catch (...)
@@ -21259,12 +21259,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_RotationAxis(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RotationAxis"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -21273,6 +21267,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RotationAxis"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.RotationAxis(param0);
@@ -21287,14 +21287,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_Transform3D(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Transform3D"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Transform3D"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Transform3D());
         }
         catch (...)
@@ -21306,12 +21306,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_Transform3D(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Transform3D"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -21320,6 +21314,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Transform3D"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Media3D::Transform3D>(arg);
 
             self->obj.Transform3D(param0);
@@ -21334,14 +21334,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_DesiredSize(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"DesiredSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"DesiredSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DesiredSize());
         }
         catch (...)
@@ -21353,14 +21353,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_FocusState(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"FocusState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"FocusState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FocusState());
         }
         catch (...)
@@ -21372,14 +21372,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_KeyboardAccelerators(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyboardAccelerators"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyboardAccelerators"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyboardAccelerators());
         }
         catch (...)
@@ -21391,14 +21391,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_Lights(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Lights"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Lights"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Lights());
         }
         catch (...)
@@ -21410,14 +21410,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_RenderSize(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RenderSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RenderSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RenderSize());
         }
         catch (...)
@@ -21429,14 +21429,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_PointerCaptures(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerCaptures"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerCaptures"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerCaptures());
         }
         catch (...)
@@ -21448,14 +21448,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_ActualOffset(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ActualOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ActualOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActualOffset());
         }
         catch (...)
@@ -21467,14 +21467,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_ActualSize(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ActualSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ActualSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActualSize());
         }
         catch (...)
@@ -21486,14 +21486,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_AccessKeyProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKeyProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKeyProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::AccessKeyProperty());
         }
         catch (...)
@@ -21505,14 +21505,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_AccessKeyScopeOwnerProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKeyScopeOwnerProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKeyScopeOwnerProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::AccessKeyScopeOwnerProperty());
         }
         catch (...)
@@ -21524,14 +21524,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_AllowDropProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"AllowDropProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"AllowDropProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::AllowDropProperty());
         }
         catch (...)
@@ -21543,14 +21543,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_BringIntoViewRequestedEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"BringIntoViewRequestedEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"BringIntoViewRequestedEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::BringIntoViewRequestedEvent());
         }
         catch (...)
@@ -21562,14 +21562,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_CacheModeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CacheModeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CacheModeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::CacheModeProperty());
         }
         catch (...)
@@ -21581,14 +21581,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_CanBeScrollAnchorProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CanBeScrollAnchorProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CanBeScrollAnchorProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::CanBeScrollAnchorProperty());
         }
         catch (...)
@@ -21600,14 +21600,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_CanDragProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CanDragProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CanDragProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::CanDragProperty());
         }
         catch (...)
@@ -21619,14 +21619,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_CharacterReceivedEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CharacterReceivedEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CharacterReceivedEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::CharacterReceivedEvent());
         }
         catch (...)
@@ -21638,14 +21638,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_ClipProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ClipProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ClipProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::ClipProperty());
         }
         catch (...)
@@ -21657,14 +21657,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_CompositeModeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CompositeModeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"CompositeModeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::CompositeModeProperty());
         }
         catch (...)
@@ -21676,14 +21676,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_ContextFlyoutProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ContextFlyoutProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ContextFlyoutProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::ContextFlyoutProperty());
         }
         catch (...)
@@ -21695,14 +21695,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_ContextRequestedEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ContextRequestedEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ContextRequestedEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::ContextRequestedEvent());
         }
         catch (...)
@@ -21714,14 +21714,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_DoubleTappedEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"DoubleTappedEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"DoubleTappedEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::DoubleTappedEvent());
         }
         catch (...)
@@ -21733,14 +21733,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_DragEnterEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"DragEnterEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"DragEnterEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::DragEnterEvent());
         }
         catch (...)
@@ -21752,14 +21752,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_DragLeaveEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"DragLeaveEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"DragLeaveEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::DragLeaveEvent());
         }
         catch (...)
@@ -21771,14 +21771,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_DragOverEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"DragOverEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"DragOverEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::DragOverEvent());
         }
         catch (...)
@@ -21790,14 +21790,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_DropEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"DropEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"DropEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::DropEvent());
         }
         catch (...)
@@ -21809,14 +21809,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_ExitDisplayModeOnAccessKeyInvokedProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ExitDisplayModeOnAccessKeyInvokedProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ExitDisplayModeOnAccessKeyInvokedProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::ExitDisplayModeOnAccessKeyInvokedProperty());
         }
         catch (...)
@@ -21828,14 +21828,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_FocusStateProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"FocusStateProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"FocusStateProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::FocusStateProperty());
         }
         catch (...)
@@ -21847,14 +21847,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_GettingFocusEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"GettingFocusEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"GettingFocusEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::GettingFocusEvent());
         }
         catch (...)
@@ -21866,14 +21866,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_HighContrastAdjustmentProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"HighContrastAdjustmentProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"HighContrastAdjustmentProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::HighContrastAdjustmentProperty());
         }
         catch (...)
@@ -21885,14 +21885,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_HoldingEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"HoldingEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"HoldingEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::HoldingEvent());
         }
         catch (...)
@@ -21904,14 +21904,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_IsAccessKeyScopeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsAccessKeyScopeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsAccessKeyScopeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::IsAccessKeyScopeProperty());
         }
         catch (...)
@@ -21923,14 +21923,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_IsDoubleTapEnabledProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsDoubleTapEnabledProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsDoubleTapEnabledProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::IsDoubleTapEnabledProperty());
         }
         catch (...)
@@ -21942,14 +21942,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_IsHitTestVisibleProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsHitTestVisibleProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsHitTestVisibleProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::IsHitTestVisibleProperty());
         }
         catch (...)
@@ -21961,14 +21961,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_IsHoldingEnabledProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsHoldingEnabledProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsHoldingEnabledProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::IsHoldingEnabledProperty());
         }
         catch (...)
@@ -21980,14 +21980,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_IsRightTapEnabledProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsRightTapEnabledProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsRightTapEnabledProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::IsRightTapEnabledProperty());
         }
         catch (...)
@@ -21999,14 +21999,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_IsTabStopProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsTabStopProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsTabStopProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::IsTabStopProperty());
         }
         catch (...)
@@ -22018,14 +22018,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_IsTapEnabledProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsTapEnabledProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"IsTapEnabledProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::IsTapEnabledProperty());
         }
         catch (...)
@@ -22037,14 +22037,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_KeyDownEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyDownEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyDownEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::KeyDownEvent());
         }
         catch (...)
@@ -22056,14 +22056,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_KeyTipHorizontalOffsetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipHorizontalOffsetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipHorizontalOffsetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::KeyTipHorizontalOffsetProperty());
         }
         catch (...)
@@ -22075,14 +22075,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_KeyTipPlacementModeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipPlacementModeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipPlacementModeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::KeyTipPlacementModeProperty());
         }
         catch (...)
@@ -22094,14 +22094,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_KeyTipTargetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipTargetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipTargetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::KeyTipTargetProperty());
         }
         catch (...)
@@ -22113,14 +22113,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_KeyTipVerticalOffsetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipVerticalOffsetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyTipVerticalOffsetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::KeyTipVerticalOffsetProperty());
         }
         catch (...)
@@ -22132,14 +22132,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_KeyUpEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyUpEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyUpEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::KeyUpEvent());
         }
         catch (...)
@@ -22151,14 +22151,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_KeyboardAcceleratorPlacementModeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyboardAcceleratorPlacementModeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyboardAcceleratorPlacementModeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::KeyboardAcceleratorPlacementModeProperty());
         }
         catch (...)
@@ -22170,14 +22170,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_KeyboardAcceleratorPlacementTargetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyboardAcceleratorPlacementTargetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyboardAcceleratorPlacementTargetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::KeyboardAcceleratorPlacementTargetProperty());
         }
         catch (...)
@@ -22189,14 +22189,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_LightsProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"LightsProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"LightsProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::LightsProperty());
         }
         catch (...)
@@ -22208,14 +22208,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_LosingFocusEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"LosingFocusEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"LosingFocusEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::LosingFocusEvent());
         }
         catch (...)
@@ -22227,14 +22227,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_ManipulationCompletedEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationCompletedEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationCompletedEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::ManipulationCompletedEvent());
         }
         catch (...)
@@ -22246,14 +22246,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_ManipulationDeltaEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationDeltaEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationDeltaEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::ManipulationDeltaEvent());
         }
         catch (...)
@@ -22265,14 +22265,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_ManipulationInertiaStartingEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationInertiaStartingEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationInertiaStartingEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::ManipulationInertiaStartingEvent());
         }
         catch (...)
@@ -22284,14 +22284,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_ManipulationModeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationModeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationModeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::ManipulationModeProperty());
         }
         catch (...)
@@ -22303,14 +22303,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_ManipulationStartedEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationStartedEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationStartedEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::ManipulationStartedEvent());
         }
         catch (...)
@@ -22322,14 +22322,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_ManipulationStartingEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationStartingEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationStartingEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::ManipulationStartingEvent());
         }
         catch (...)
@@ -22341,14 +22341,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_NoFocusCandidateFoundEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"NoFocusCandidateFoundEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"NoFocusCandidateFoundEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::NoFocusCandidateFoundEvent());
         }
         catch (...)
@@ -22360,14 +22360,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_OpacityProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"OpacityProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"OpacityProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::OpacityProperty());
         }
         catch (...)
@@ -22379,14 +22379,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_PointerCanceledEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerCanceledEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerCanceledEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::PointerCanceledEvent());
         }
         catch (...)
@@ -22398,14 +22398,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_PointerCaptureLostEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerCaptureLostEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerCaptureLostEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::PointerCaptureLostEvent());
         }
         catch (...)
@@ -22417,14 +22417,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_PointerCapturesProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerCapturesProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerCapturesProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::PointerCapturesProperty());
         }
         catch (...)
@@ -22436,14 +22436,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_PointerEnteredEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerEnteredEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerEnteredEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::PointerEnteredEvent());
         }
         catch (...)
@@ -22455,14 +22455,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_PointerExitedEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerExitedEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerExitedEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::PointerExitedEvent());
         }
         catch (...)
@@ -22474,14 +22474,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_PointerMovedEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerMovedEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerMovedEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::PointerMovedEvent());
         }
         catch (...)
@@ -22493,14 +22493,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_PointerPressedEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerPressedEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerPressedEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::PointerPressedEvent());
         }
         catch (...)
@@ -22512,14 +22512,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_PointerReleasedEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerReleasedEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerReleasedEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::PointerReleasedEvent());
         }
         catch (...)
@@ -22531,14 +22531,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_PointerWheelChangedEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerWheelChangedEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerWheelChangedEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::PointerWheelChangedEvent());
         }
         catch (...)
@@ -22550,14 +22550,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_PreviewKeyDownEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PreviewKeyDownEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PreviewKeyDownEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::PreviewKeyDownEvent());
         }
         catch (...)
@@ -22569,14 +22569,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_PreviewKeyUpEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PreviewKeyUpEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"PreviewKeyUpEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::PreviewKeyUpEvent());
         }
         catch (...)
@@ -22588,14 +22588,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_ProjectionProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ProjectionProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ProjectionProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::ProjectionProperty());
         }
         catch (...)
@@ -22607,14 +22607,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_RenderTransformOriginProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RenderTransformOriginProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RenderTransformOriginProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::RenderTransformOriginProperty());
         }
         catch (...)
@@ -22626,14 +22626,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_RenderTransformProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RenderTransformProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RenderTransformProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::RenderTransformProperty());
         }
         catch (...)
@@ -22645,14 +22645,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_RightTappedEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RightTappedEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"RightTappedEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::RightTappedEvent());
         }
         catch (...)
@@ -22664,14 +22664,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_ShadowProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ShadowProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ShadowProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::ShadowProperty());
         }
         catch (...)
@@ -22683,14 +22683,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_TabFocusNavigationProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TabFocusNavigationProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TabFocusNavigationProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::TabFocusNavigationProperty());
         }
         catch (...)
@@ -22702,14 +22702,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_TabIndexProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TabIndexProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TabIndexProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::TabIndexProperty());
         }
         catch (...)
@@ -22721,14 +22721,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_TappedEvent(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TappedEvent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TappedEvent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::TappedEvent());
         }
         catch (...)
@@ -22740,14 +22740,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_Transform3DProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Transform3DProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"Transform3DProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::Transform3DProperty());
         }
         catch (...)
@@ -22759,14 +22759,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_TransitionsProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TransitionsProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"TransitionsProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::TransitionsProperty());
         }
         catch (...)
@@ -22778,14 +22778,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_UseLayoutRoundingProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"UseLayoutRoundingProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"UseLayoutRoundingProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::UseLayoutRoundingProperty());
         }
         catch (...)
@@ -22797,14 +22797,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_UseSystemFocusVisualsProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"UseSystemFocusVisualsProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"UseSystemFocusVisualsProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::UseSystemFocusVisualsProperty());
         }
         catch (...)
@@ -22816,14 +22816,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_VisibilityProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"VisibilityProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"VisibilityProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::VisibilityProperty());
         }
         catch (...)
@@ -22835,14 +22835,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_XYFocusDownNavigationStrategyProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusDownNavigationStrategyProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusDownNavigationStrategyProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::XYFocusDownNavigationStrategyProperty());
         }
         catch (...)
@@ -22854,14 +22854,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_XYFocusDownProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusDownProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusDownProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::XYFocusDownProperty());
         }
         catch (...)
@@ -22873,14 +22873,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_XYFocusKeyboardNavigationProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusKeyboardNavigationProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusKeyboardNavigationProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::XYFocusKeyboardNavigationProperty());
         }
         catch (...)
@@ -22892,14 +22892,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_XYFocusLeftNavigationStrategyProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusLeftNavigationStrategyProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusLeftNavigationStrategyProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::XYFocusLeftNavigationStrategyProperty());
         }
         catch (...)
@@ -22911,14 +22911,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_XYFocusLeftProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusLeftProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusLeftProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::XYFocusLeftProperty());
         }
         catch (...)
@@ -22930,14 +22930,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_XYFocusRightNavigationStrategyProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusRightNavigationStrategyProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusRightNavigationStrategyProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::XYFocusRightNavigationStrategyProperty());
         }
         catch (...)
@@ -22949,14 +22949,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_XYFocusRightProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusRightProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusRightProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::XYFocusRightProperty());
         }
         catch (...)
@@ -22968,14 +22968,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_XYFocusUpNavigationStrategyProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusUpNavigationStrategyProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusUpNavigationStrategyProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::XYFocusUpNavigationStrategyProperty());
         }
         catch (...)
@@ -22987,14 +22987,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_get_XYFocusUpProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusUpProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"XYFocusUpProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::UIElement::XYFocusUpProperty());
         }
         catch (...)
@@ -23006,14 +23006,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_AccessKeyDisplayDismissed(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKeyDisplayDismissed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs>>(arg);
 
             return py::convert(self->obj.AccessKeyDisplayDismissed(param0));
@@ -23027,14 +23027,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_AccessKeyDisplayDismissed(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKeyDisplayDismissed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AccessKeyDisplayDismissed(param0);
@@ -23049,14 +23049,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_AccessKeyDisplayRequested(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKeyDisplayRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.AccessKeyDisplayRequested(param0));
@@ -23070,14 +23070,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_AccessKeyDisplayRequested(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKeyDisplayRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AccessKeyDisplayRequested(param0);
@@ -23092,14 +23092,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_AccessKeyInvoked(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKeyInvoked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::Input::AccessKeyInvokedEventArgs>>(arg);
 
             return py::convert(self->obj.AccessKeyInvoked(param0));
@@ -23113,14 +23113,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_AccessKeyInvoked(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKeyInvoked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AccessKeyInvoked(param0);
@@ -23135,14 +23135,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_BringIntoViewRequested(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"BringIntoViewRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"BringIntoViewRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::BringIntoViewRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.BringIntoViewRequested(param0));
@@ -23156,14 +23156,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_BringIntoViewRequested(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"BringIntoViewRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"BringIntoViewRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.BringIntoViewRequested(param0);
@@ -23178,14 +23178,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_CharacterReceived(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"CharacterReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"CharacterReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::Input::CharacterReceivedRoutedEventArgs>>(arg);
 
             return py::convert(self->obj.CharacterReceived(param0));
@@ -23199,14 +23199,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_CharacterReceived(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"CharacterReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"CharacterReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CharacterReceived(param0);
@@ -23221,14 +23221,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_ContextCanceled(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ContextCanceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ContextCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::RoutedEventArgs>>(arg);
 
             return py::convert(self->obj.ContextCanceled(param0));
@@ -23242,14 +23242,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_ContextCanceled(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ContextCanceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ContextCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ContextCanceled(param0);
@@ -23264,14 +23264,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_ContextRequested(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ContextRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ContextRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::Input::ContextRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.ContextRequested(param0));
@@ -23285,14 +23285,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_ContextRequested(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ContextRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ContextRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ContextRequested(param0);
@@ -23307,14 +23307,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_DoubleTapped(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DoubleTapped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DoubleTapped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::DoubleTappedEventHandler>(arg);
 
             return py::convert(self->obj.DoubleTapped(param0));
@@ -23328,14 +23328,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_DoubleTapped(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DoubleTapped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DoubleTapped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DoubleTapped(param0);
@@ -23350,14 +23350,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_DragEnter(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DragEnter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DragEnter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DragEventHandler>(arg);
 
             return py::convert(self->obj.DragEnter(param0));
@@ -23371,14 +23371,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_DragEnter(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DragEnter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DragEnter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DragEnter(param0);
@@ -23393,14 +23393,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_DragLeave(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DragLeave"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DragLeave"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DragEventHandler>(arg);
 
             return py::convert(self->obj.DragLeave(param0));
@@ -23414,14 +23414,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_DragLeave(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DragLeave"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DragLeave"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DragLeave(param0);
@@ -23436,14 +23436,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_DragOver(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DragOver"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DragOver"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DragEventHandler>(arg);
 
             return py::convert(self->obj.DragOver(param0));
@@ -23457,14 +23457,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_DragOver(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DragOver"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DragOver"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DragOver(param0);
@@ -23479,14 +23479,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_DragStarting(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DragStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DragStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DragStartingEventArgs>>(arg);
 
             return py::convert(self->obj.DragStarting(param0));
@@ -23500,14 +23500,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_DragStarting(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DragStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DragStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DragStarting(param0);
@@ -23522,14 +23522,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_Drop(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"Drop"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"Drop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DragEventHandler>(arg);
 
             return py::convert(self->obj.Drop(param0));
@@ -23543,14 +23543,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_Drop(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"Drop"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"Drop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Drop(param0);
@@ -23565,14 +23565,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_DropCompleted(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DropCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DropCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DropCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.DropCompleted(param0));
@@ -23586,14 +23586,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_DropCompleted(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DropCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"DropCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DropCompleted(param0);
@@ -23608,14 +23608,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_GettingFocus(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"GettingFocus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"GettingFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::Input::GettingFocusEventArgs>>(arg);
 
             return py::convert(self->obj.GettingFocus(param0));
@@ -23629,14 +23629,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_GettingFocus(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"GettingFocus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"GettingFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.GettingFocus(param0);
@@ -23651,14 +23651,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_GotFocus(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"GotFocus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"GotFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEventHandler>(arg);
 
             return py::convert(self->obj.GotFocus(param0));
@@ -23672,14 +23672,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_GotFocus(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"GotFocus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"GotFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.GotFocus(param0);
@@ -23694,14 +23694,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_Holding(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"Holding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"Holding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::HoldingEventHandler>(arg);
 
             return py::convert(self->obj.Holding(param0));
@@ -23715,14 +23715,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_Holding(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"Holding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"Holding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Holding(param0);
@@ -23737,14 +23737,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_KeyDown(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyDown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyDown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::KeyEventHandler>(arg);
 
             return py::convert(self->obj.KeyDown(param0));
@@ -23758,14 +23758,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_KeyDown(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyDown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyDown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.KeyDown(param0);
@@ -23780,14 +23780,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_KeyUp(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyUp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyUp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::KeyEventHandler>(arg);
 
             return py::convert(self->obj.KeyUp(param0));
@@ -23801,14 +23801,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_KeyUp(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyUp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"KeyUp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.KeyUp(param0);
@@ -23823,14 +23823,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_LosingFocus(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"LosingFocus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"LosingFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::Input::LosingFocusEventArgs>>(arg);
 
             return py::convert(self->obj.LosingFocus(param0));
@@ -23844,14 +23844,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_LosingFocus(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"LosingFocus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"LosingFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.LosingFocus(param0);
@@ -23866,14 +23866,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_LostFocus(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"LostFocus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"LostFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEventHandler>(arg);
 
             return py::convert(self->obj.LostFocus(param0));
@@ -23887,14 +23887,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_LostFocus(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"LostFocus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"LostFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.LostFocus(param0);
@@ -23909,14 +23909,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_ManipulationCompleted(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::ManipulationCompletedEventHandler>(arg);
 
             return py::convert(self->obj.ManipulationCompleted(param0));
@@ -23930,14 +23930,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_ManipulationCompleted(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ManipulationCompleted(param0);
@@ -23952,14 +23952,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_ManipulationDelta(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationDelta"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationDelta"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::ManipulationDeltaEventHandler>(arg);
 
             return py::convert(self->obj.ManipulationDelta(param0));
@@ -23973,14 +23973,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_ManipulationDelta(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationDelta"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationDelta"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ManipulationDelta(param0);
@@ -23995,14 +23995,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_ManipulationInertiaStarting(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationInertiaStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationInertiaStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::ManipulationInertiaStartingEventHandler>(arg);
 
             return py::convert(self->obj.ManipulationInertiaStarting(param0));
@@ -24016,14 +24016,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_ManipulationInertiaStarting(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationInertiaStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationInertiaStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ManipulationInertiaStarting(param0);
@@ -24038,14 +24038,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_ManipulationStarted(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::ManipulationStartedEventHandler>(arg);
 
             return py::convert(self->obj.ManipulationStarted(param0));
@@ -24059,14 +24059,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_ManipulationStarted(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ManipulationStarted(param0);
@@ -24081,14 +24081,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_ManipulationStarting(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::ManipulationStartingEventHandler>(arg);
 
             return py::convert(self->obj.ManipulationStarting(param0));
@@ -24102,14 +24102,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_ManipulationStarting(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationStarting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ManipulationStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ManipulationStarting(param0);
@@ -24124,14 +24124,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_NoFocusCandidateFound(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"NoFocusCandidateFound"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"NoFocusCandidateFound"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::Input::NoFocusCandidateFoundEventArgs>>(arg);
 
             return py::convert(self->obj.NoFocusCandidateFound(param0));
@@ -24145,14 +24145,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_NoFocusCandidateFound(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"NoFocusCandidateFound"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"NoFocusCandidateFound"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.NoFocusCandidateFound(param0);
@@ -24167,14 +24167,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_PointerCanceled(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerCanceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::PointerEventHandler>(arg);
 
             return py::convert(self->obj.PointerCanceled(param0));
@@ -24188,14 +24188,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_PointerCanceled(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerCanceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerCanceled(param0);
@@ -24210,14 +24210,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_PointerCaptureLost(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerCaptureLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerCaptureLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::PointerEventHandler>(arg);
 
             return py::convert(self->obj.PointerCaptureLost(param0));
@@ -24231,14 +24231,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_PointerCaptureLost(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerCaptureLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerCaptureLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerCaptureLost(param0);
@@ -24253,14 +24253,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_PointerEntered(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerEntered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerEntered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::PointerEventHandler>(arg);
 
             return py::convert(self->obj.PointerEntered(param0));
@@ -24274,14 +24274,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_PointerEntered(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerEntered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerEntered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerEntered(param0);
@@ -24296,14 +24296,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_PointerExited(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerExited"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerExited"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::PointerEventHandler>(arg);
 
             return py::convert(self->obj.PointerExited(param0));
@@ -24317,14 +24317,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_PointerExited(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerExited"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerExited"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerExited(param0);
@@ -24339,14 +24339,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_PointerMoved(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerMoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerMoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::PointerEventHandler>(arg);
 
             return py::convert(self->obj.PointerMoved(param0));
@@ -24360,14 +24360,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_PointerMoved(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerMoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerMoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerMoved(param0);
@@ -24382,14 +24382,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_PointerPressed(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::PointerEventHandler>(arg);
 
             return py::convert(self->obj.PointerPressed(param0));
@@ -24403,14 +24403,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_PointerPressed(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerPressed(param0);
@@ -24425,14 +24425,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_PointerReleased(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::PointerEventHandler>(arg);
 
             return py::convert(self->obj.PointerReleased(param0));
@@ -24446,14 +24446,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_PointerReleased(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerReleased(param0);
@@ -24468,14 +24468,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_PointerWheelChanged(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerWheelChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerWheelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::PointerEventHandler>(arg);
 
             return py::convert(self->obj.PointerWheelChanged(param0));
@@ -24489,14 +24489,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_PointerWheelChanged(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerWheelChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PointerWheelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerWheelChanged(param0);
@@ -24511,14 +24511,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_PreviewKeyDown(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PreviewKeyDown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PreviewKeyDown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::KeyEventHandler>(arg);
 
             return py::convert(self->obj.PreviewKeyDown(param0));
@@ -24532,14 +24532,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_PreviewKeyDown(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PreviewKeyDown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PreviewKeyDown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PreviewKeyDown(param0);
@@ -24554,14 +24554,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_PreviewKeyUp(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PreviewKeyUp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PreviewKeyUp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::KeyEventHandler>(arg);
 
             return py::convert(self->obj.PreviewKeyUp(param0));
@@ -24575,14 +24575,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_PreviewKeyUp(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PreviewKeyUp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"PreviewKeyUp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PreviewKeyUp(param0);
@@ -24597,14 +24597,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_ProcessKeyboardAccelerators(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ProcessKeyboardAccelerators"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ProcessKeyboardAccelerators"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>>(arg);
 
             return py::convert(self->obj.ProcessKeyboardAccelerators(param0));
@@ -24618,14 +24618,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_ProcessKeyboardAccelerators(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ProcessKeyboardAccelerators"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"ProcessKeyboardAccelerators"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ProcessKeyboardAccelerators(param0);
@@ -24640,14 +24640,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_RightTapped(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"RightTapped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"RightTapped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::RightTappedEventHandler>(arg);
 
             return py::convert(self->obj.RightTapped(param0));
@@ -24661,14 +24661,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_RightTapped(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"RightTapped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"RightTapped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.RightTapped(param0);
@@ -24683,14 +24683,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_add_Tapped(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"Tapped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"Tapped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::TappedEventHandler>(arg);
 
             return py::convert(self->obj.Tapped(param0));
@@ -24704,14 +24704,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElement_remove_Tapped(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"Tapped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.UIElement", L"Tapped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Tapped(param0);
@@ -25094,14 +25094,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
 
                 self->obj.Append(param0);
@@ -25126,14 +25126,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -25156,14 +25156,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -25185,14 +25185,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -25216,14 +25216,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::UIElement, true>>(args, 1);
 
@@ -25248,14 +25248,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -25277,14 +25277,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
                 uint32_t param1 {  };
 
@@ -25321,14 +25321,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 1);
 
@@ -25354,14 +25354,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -25386,14 +25386,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -25416,14 +25416,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::UIElement, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -25448,14 +25448,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 1);
 
@@ -25477,14 +25477,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UIElementWeakCollection_get_Size(py::wrapper::Microsoft::UI::Xaml::UIElementWeakCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElementWeakCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -25707,14 +25707,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UnhandledExceptionEventArgs_get_Handled(py::wrapper::Microsoft::UI::Xaml::UnhandledExceptionEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UnhandledExceptionEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UnhandledExceptionEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -25726,12 +25726,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UnhandledExceptionEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::UnhandledExceptionEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UnhandledExceptionEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -25740,6 +25734,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UnhandledExceptionEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -25754,14 +25754,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UnhandledExceptionEventArgs_get_Exception(py::wrapper::Microsoft::UI::Xaml::UnhandledExceptionEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UnhandledExceptionEventArgs", L"Exception"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UnhandledExceptionEventArgs", L"Exception"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Exception());
         }
         catch (...)
@@ -25773,14 +25773,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* UnhandledExceptionEventArgs_get_Message(py::wrapper::Microsoft::UI::Xaml::UnhandledExceptionEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UnhandledExceptionEventArgs", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UnhandledExceptionEventArgs", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Message());
         }
         catch (...)
@@ -25886,14 +25886,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Vector3Transition_get_Duration(py::wrapper::Microsoft::UI::Xaml::Vector3Transition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Vector3Transition", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Vector3Transition", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -25905,12 +25905,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Vector3Transition_put_Duration(py::wrapper::Microsoft::UI::Xaml::Vector3Transition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Vector3Transition", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -25919,6 +25913,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Vector3Transition", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.Duration(param0);
@@ -25933,14 +25933,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Vector3Transition_get_Components(py::wrapper::Microsoft::UI::Xaml::Vector3Transition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Vector3Transition", L"Components"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Vector3Transition", L"Components"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Components());
         }
         catch (...)
@@ -25952,12 +25952,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Vector3Transition_put_Components(py::wrapper::Microsoft::UI::Xaml::Vector3Transition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Vector3Transition", L"Components"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -25966,6 +25960,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Vector3Transition", L"Components"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Vector3TransitionComponents>(arg);
 
             self->obj.Components(param0);
@@ -26073,14 +26073,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* VisualState_get_Storyboard(py::wrapper::Microsoft::UI::Xaml::VisualState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualState", L"Storyboard"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualState", L"Storyboard"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Storyboard());
         }
         catch (...)
@@ -26092,12 +26092,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int VisualState_put_Storyboard(py::wrapper::Microsoft::UI::Xaml::VisualState* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualState", L"Storyboard"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -26106,6 +26100,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualState", L"Storyboard"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Animation::Storyboard>(arg);
 
             self->obj.Storyboard(param0);
@@ -26120,14 +26120,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* VisualState_get_Name(py::wrapper::Microsoft::UI::Xaml::VisualState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualState", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualState", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -26139,14 +26139,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* VisualState_get_Setters(py::wrapper::Microsoft::UI::Xaml::VisualState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualState", L"Setters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualState", L"Setters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Setters());
         }
         catch (...)
@@ -26158,14 +26158,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* VisualState_get_StateTriggers(py::wrapper::Microsoft::UI::Xaml::VisualState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualState", L"StateTriggers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualState", L"StateTriggers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StateTriggers());
         }
         catch (...)
@@ -26272,14 +26272,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* VisualStateChangedEventArgs_get_OldState(py::wrapper::Microsoft::UI::Xaml::VisualStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualStateChangedEventArgs", L"OldState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualStateChangedEventArgs", L"OldState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OldState());
         }
         catch (...)
@@ -26291,12 +26291,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int VisualStateChangedEventArgs_put_OldState(py::wrapper::Microsoft::UI::Xaml::VisualStateChangedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualStateChangedEventArgs", L"OldState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -26305,6 +26299,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualStateChangedEventArgs", L"OldState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::VisualState>(arg);
 
             self->obj.OldState(param0);
@@ -26319,14 +26319,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* VisualStateChangedEventArgs_get_NewState(py::wrapper::Microsoft::UI::Xaml::VisualStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualStateChangedEventArgs", L"NewState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualStateChangedEventArgs", L"NewState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NewState());
         }
         catch (...)
@@ -26338,12 +26338,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int VisualStateChangedEventArgs_put_NewState(py::wrapper::Microsoft::UI::Xaml::VisualStateChangedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualStateChangedEventArgs", L"NewState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -26352,6 +26346,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualStateChangedEventArgs", L"NewState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::VisualState>(arg);
 
             self->obj.NewState(param0);
@@ -26366,14 +26366,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* VisualStateChangedEventArgs_get_Control(py::wrapper::Microsoft::UI::Xaml::VisualStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualStateChangedEventArgs", L"Control"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualStateChangedEventArgs", L"Control"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Control());
         }
         catch (...)
@@ -26385,12 +26385,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int VisualStateChangedEventArgs_put_Control(py::wrapper::Microsoft::UI::Xaml::VisualStateChangedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualStateChangedEventArgs", L"Control"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -26399,6 +26393,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualStateChangedEventArgs", L"Control"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Control>(arg);
 
             self->obj.Control(param0);
@@ -26507,14 +26507,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* VisualStateGroup_get_CurrentState(py::wrapper::Microsoft::UI::Xaml::VisualStateGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualStateGroup", L"CurrentState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualStateGroup", L"CurrentState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentState());
         }
         catch (...)
@@ -26526,14 +26526,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* VisualStateGroup_get_Name(py::wrapper::Microsoft::UI::Xaml::VisualStateGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualStateGroup", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualStateGroup", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -26545,14 +26545,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* VisualStateGroup_get_States(py::wrapper::Microsoft::UI::Xaml::VisualStateGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualStateGroup", L"States"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualStateGroup", L"States"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.States());
         }
         catch (...)
@@ -26564,14 +26564,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* VisualStateGroup_get_Transitions(py::wrapper::Microsoft::UI::Xaml::VisualStateGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualStateGroup", L"Transitions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualStateGroup", L"Transitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Transitions());
         }
         catch (...)
@@ -26583,14 +26583,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* VisualStateGroup_add_CurrentStateChanged(py::wrapper::Microsoft::UI::Xaml::VisualStateGroup* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.VisualStateGroup", L"CurrentStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.VisualStateGroup", L"CurrentStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::VisualStateChangedEventHandler>(arg);
 
             return py::convert(self->obj.CurrentStateChanged(param0));
@@ -26604,14 +26604,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* VisualStateGroup_remove_CurrentStateChanged(py::wrapper::Microsoft::UI::Xaml::VisualStateGroup* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.VisualStateGroup", L"CurrentStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.VisualStateGroup", L"CurrentStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CurrentStateChanged(param0);
@@ -26626,14 +26626,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* VisualStateGroup_add_CurrentStateChanging(py::wrapper::Microsoft::UI::Xaml::VisualStateGroup* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.VisualStateGroup", L"CurrentStateChanging"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.VisualStateGroup", L"CurrentStateChanging"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::VisualStateChangedEventHandler>(arg);
 
             return py::convert(self->obj.CurrentStateChanging(param0));
@@ -26647,14 +26647,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* VisualStateGroup_remove_CurrentStateChanging(py::wrapper::Microsoft::UI::Xaml::VisualStateGroup* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.VisualStateGroup", L"CurrentStateChanging"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.VisualStateGroup", L"CurrentStateChanging"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CurrentStateChanging(param0);
@@ -26772,14 +26772,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.VisualStateManager", L"GetCustomVisualStateManager", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.VisualStateManager", L"GetCustomVisualStateManager", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FrameworkElement>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::VisualStateManager::GetCustomVisualStateManager(param0));
@@ -26803,14 +26803,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.VisualStateManager", L"GetVisualStateGroups", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.VisualStateManager", L"GetVisualStateGroups", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FrameworkElement>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::VisualStateManager::GetVisualStateGroups(param0));
@@ -26834,14 +26834,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.VisualStateManager", L"GoToState", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.VisualStateManager", L"GoToState", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Control>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -26867,14 +26867,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.VisualStateManager", L"SetCustomVisualStateManager", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.VisualStateManager", L"SetCustomVisualStateManager", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FrameworkElement>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::VisualStateManager>(args, 1);
 
@@ -26896,14 +26896,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* VisualStateManager_get_CustomVisualStateManagerProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualStateManager", L"CustomVisualStateManagerProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualStateManager", L"CustomVisualStateManagerProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::VisualStateManager::CustomVisualStateManagerProperty());
         }
         catch (...)
@@ -27036,14 +27036,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* VisualTransition_get_To(py::wrapper::Microsoft::UI::Xaml::VisualTransition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualTransition", L"To"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualTransition", L"To"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.To());
         }
         catch (...)
@@ -27055,12 +27055,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int VisualTransition_put_To(py::wrapper::Microsoft::UI::Xaml::VisualTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualTransition", L"To"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -27069,6 +27063,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualTransition", L"To"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.To(param0);
@@ -27083,14 +27083,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* VisualTransition_get_Storyboard(py::wrapper::Microsoft::UI::Xaml::VisualTransition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualTransition", L"Storyboard"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualTransition", L"Storyboard"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Storyboard());
         }
         catch (...)
@@ -27102,12 +27102,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int VisualTransition_put_Storyboard(py::wrapper::Microsoft::UI::Xaml::VisualTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualTransition", L"Storyboard"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -27116,6 +27110,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualTransition", L"Storyboard"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Animation::Storyboard>(arg);
 
             self->obj.Storyboard(param0);
@@ -27130,14 +27130,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* VisualTransition_get_GeneratedEasingFunction(py::wrapper::Microsoft::UI::Xaml::VisualTransition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualTransition", L"GeneratedEasingFunction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualTransition", L"GeneratedEasingFunction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GeneratedEasingFunction());
         }
         catch (...)
@@ -27149,12 +27149,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int VisualTransition_put_GeneratedEasingFunction(py::wrapper::Microsoft::UI::Xaml::VisualTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualTransition", L"GeneratedEasingFunction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -27163,6 +27157,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualTransition", L"GeneratedEasingFunction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Animation::EasingFunctionBase>(arg);
 
             self->obj.GeneratedEasingFunction(param0);
@@ -27177,14 +27177,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* VisualTransition_get_GeneratedDuration(py::wrapper::Microsoft::UI::Xaml::VisualTransition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualTransition", L"GeneratedDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualTransition", L"GeneratedDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GeneratedDuration());
         }
         catch (...)
@@ -27196,12 +27196,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int VisualTransition_put_GeneratedDuration(py::wrapper::Microsoft::UI::Xaml::VisualTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualTransition", L"GeneratedDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -27210,6 +27204,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualTransition", L"GeneratedDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Duration>(arg);
 
             self->obj.GeneratedDuration(param0);
@@ -27224,14 +27224,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* VisualTransition_get_From(py::wrapper::Microsoft::UI::Xaml::VisualTransition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualTransition", L"From"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualTransition", L"From"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.From());
         }
         catch (...)
@@ -27243,12 +27243,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int VisualTransition_put_From(py::wrapper::Microsoft::UI::Xaml::VisualTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualTransition", L"From"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -27257,6 +27251,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.VisualTransition", L"From"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.From(param0);
@@ -27371,14 +27371,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Window", L"Activate", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Window", L"Activate", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Activate();
                 Py_RETURN_NONE;
             }
@@ -27401,14 +27401,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Window", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Window", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -27431,14 +27431,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Window", L"SetTitleBar", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Window", L"SetTitleBar", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
 
                 self->obj.SetTitleBar(param0);
@@ -27459,14 +27459,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Window_get_Title(py::wrapper::Microsoft::UI::Xaml::Window* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -27478,12 +27478,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Window_put_Title(py::wrapper::Microsoft::UI::Xaml::Window* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -27492,6 +27486,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Title(param0);
@@ -27506,14 +27506,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Window_get_ExtendsContentIntoTitleBar(py::wrapper::Microsoft::UI::Xaml::Window* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"ExtendsContentIntoTitleBar"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"ExtendsContentIntoTitleBar"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendsContentIntoTitleBar());
         }
         catch (...)
@@ -27525,12 +27525,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Window_put_ExtendsContentIntoTitleBar(py::wrapper::Microsoft::UI::Xaml::Window* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"ExtendsContentIntoTitleBar"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -27539,6 +27533,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"ExtendsContentIntoTitleBar"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ExtendsContentIntoTitleBar(param0);
@@ -27553,14 +27553,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Window_get_Content(py::wrapper::Microsoft::UI::Xaml::Window* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"Content"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"Content"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Content());
         }
         catch (...)
@@ -27572,12 +27572,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Window_put_Content(py::wrapper::Microsoft::UI::Xaml::Window* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"Content"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -27586,6 +27580,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"Content"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(arg);
 
             self->obj.Content(param0);
@@ -27600,14 +27600,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Window_get_Bounds(py::wrapper::Microsoft::UI::Xaml::Window* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"Bounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"Bounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bounds());
         }
         catch (...)
@@ -27619,14 +27619,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Window_get_Compositor(py::wrapper::Microsoft::UI::Xaml::Window* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"Compositor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"Compositor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Compositor());
         }
         catch (...)
@@ -27638,14 +27638,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Window_get_CoreWindow(py::wrapper::Microsoft::UI::Xaml::Window* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"CoreWindow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"CoreWindow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CoreWindow());
         }
         catch (...)
@@ -27657,14 +27657,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Window_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Window* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"Dispatcher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Dispatcher());
         }
         catch (...)
@@ -27676,14 +27676,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Window_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Window* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"DispatcherQueue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DispatcherQueue());
         }
         catch (...)
@@ -27695,14 +27695,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Window_get_Visible(py::wrapper::Microsoft::UI::Xaml::Window* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"Visible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"Visible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Visible());
         }
         catch (...)
@@ -27714,14 +27714,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Window_get_SystemBackdrop(py::wrapper::Microsoft::UI::Xaml::Window* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"SystemBackdrop"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"SystemBackdrop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SystemBackdrop());
         }
         catch (...)
@@ -27733,12 +27733,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Window_put_SystemBackdrop(py::wrapper::Microsoft::UI::Xaml::Window* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"SystemBackdrop"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -27747,6 +27741,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"SystemBackdrop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::SystemBackdrop>(arg);
 
             self->obj.SystemBackdrop(param0);
@@ -27761,14 +27761,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Window_get_AppWindow(py::wrapper::Microsoft::UI::Xaml::Window* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"AppWindow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"AppWindow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppWindow());
         }
         catch (...)
@@ -27780,14 +27780,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Window_get_Current(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"Current"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Window", L"Current"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Xaml::Window::Current());
         }
         catch (...)
@@ -27799,14 +27799,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Window_add_Activated(py::wrapper::Microsoft::UI::Xaml::Window* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Window", L"Activated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Window", L"Activated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Microsoft::UI::Xaml::WindowActivatedEventArgs>>(arg);
 
             return py::convert(self->obj.Activated(param0));
@@ -27820,14 +27820,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Window_remove_Activated(py::wrapper::Microsoft::UI::Xaml::Window* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Window", L"Activated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Window", L"Activated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Activated(param0);
@@ -27842,14 +27842,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Window_add_Closed(py::wrapper::Microsoft::UI::Xaml::Window* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Window", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Window", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Microsoft::UI::Xaml::WindowEventArgs>>(arg);
 
             return py::convert(self->obj.Closed(param0));
@@ -27863,14 +27863,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Window_remove_Closed(py::wrapper::Microsoft::UI::Xaml::Window* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Window", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Window", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Closed(param0);
@@ -27885,14 +27885,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Window_add_SizeChanged(py::wrapper::Microsoft::UI::Xaml::Window* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Window", L"SizeChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Window", L"SizeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Microsoft::UI::Xaml::WindowSizeChangedEventArgs>>(arg);
 
             return py::convert(self->obj.SizeChanged(param0));
@@ -27906,14 +27906,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Window_remove_SizeChanged(py::wrapper::Microsoft::UI::Xaml::Window* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Window", L"SizeChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Window", L"SizeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SizeChanged(param0);
@@ -27928,14 +27928,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Window_add_VisibilityChanged(py::wrapper::Microsoft::UI::Xaml::Window* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Window", L"VisibilityChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Window", L"VisibilityChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Microsoft::UI::Xaml::WindowVisibilityChangedEventArgs>>(arg);
 
             return py::convert(self->obj.VisibilityChanged(param0));
@@ -27949,14 +27949,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* Window_remove_VisibilityChanged(py::wrapper::Microsoft::UI::Xaml::Window* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Window", L"VisibilityChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Window", L"VisibilityChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.VisibilityChanged(param0);
@@ -28088,14 +28088,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* WindowActivatedEventArgs_get_Handled(py::wrapper::Microsoft::UI::Xaml::WindowActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.WindowActivatedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.WindowActivatedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -28107,12 +28107,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int WindowActivatedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::WindowActivatedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.WindowActivatedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -28121,6 +28115,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.WindowActivatedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -28135,14 +28135,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* WindowActivatedEventArgs_get_WindowActivationState(py::wrapper::Microsoft::UI::Xaml::WindowActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.WindowActivatedEventArgs", L"WindowActivationState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.WindowActivatedEventArgs", L"WindowActivationState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WindowActivationState());
         }
         catch (...)
@@ -28225,14 +28225,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* WindowEventArgs_get_Handled(py::wrapper::Microsoft::UI::Xaml::WindowEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.WindowEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.WindowEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -28244,12 +28244,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int WindowEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::WindowEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.WindowEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -28258,6 +28252,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.WindowEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -28342,14 +28342,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* WindowSizeChangedEventArgs_get_Handled(py::wrapper::Microsoft::UI::Xaml::WindowSizeChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.WindowSizeChangedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.WindowSizeChangedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -28361,12 +28361,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int WindowSizeChangedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::WindowSizeChangedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.WindowSizeChangedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -28375,6 +28369,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.WindowSizeChangedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -28389,14 +28389,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* WindowSizeChangedEventArgs_get_Size(py::wrapper::Microsoft::UI::Xaml::WindowSizeChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.WindowSizeChangedEventArgs", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.WindowSizeChangedEventArgs", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -28479,14 +28479,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* WindowVisibilityChangedEventArgs_get_Handled(py::wrapper::Microsoft::UI::Xaml::WindowVisibilityChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -28498,12 +28498,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int WindowVisibilityChangedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::WindowVisibilityChangedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -28512,6 +28506,12 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -28526,14 +28526,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* WindowVisibilityChangedEventArgs_get_Visible(py::wrapper::Microsoft::UI::Xaml::WindowVisibilityChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs", L"Visible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs", L"Visible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Visible());
         }
         catch (...)
@@ -28616,14 +28616,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* XamlResourceReferenceFailedEventArgs_get_Message(py::wrapper::Microsoft::UI::Xaml::XamlResourceReferenceFailedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.XamlResourceReferenceFailedEventArgs", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.XamlResourceReferenceFailedEventArgs", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Message());
         }
         catch (...)
@@ -28705,14 +28705,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* XamlRoot_get_Content(py::wrapper::Microsoft::UI::Xaml::XamlRoot* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.XamlRoot", L"Content"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.XamlRoot", L"Content"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Content());
         }
         catch (...)
@@ -28724,14 +28724,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* XamlRoot_get_IsHostVisible(py::wrapper::Microsoft::UI::Xaml::XamlRoot* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.XamlRoot", L"IsHostVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.XamlRoot", L"IsHostVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsHostVisible());
         }
         catch (...)
@@ -28743,14 +28743,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* XamlRoot_get_RasterizationScale(py::wrapper::Microsoft::UI::Xaml::XamlRoot* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.XamlRoot", L"RasterizationScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.XamlRoot", L"RasterizationScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RasterizationScale());
         }
         catch (...)
@@ -28762,14 +28762,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* XamlRoot_get_Size(py::wrapper::Microsoft::UI::Xaml::XamlRoot* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.XamlRoot", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.XamlRoot", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -28781,14 +28781,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* XamlRoot_get_ContentIslandEnvironment(py::wrapper::Microsoft::UI::Xaml::XamlRoot* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.XamlRoot", L"ContentIslandEnvironment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.XamlRoot", L"ContentIslandEnvironment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentIslandEnvironment());
         }
         catch (...)
@@ -28800,14 +28800,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* XamlRoot_add_Changed(py::wrapper::Microsoft::UI::Xaml::XamlRoot* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.XamlRoot", L"Changed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.XamlRoot", L"Changed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::XamlRoot, winrt::Microsoft::UI::Xaml::XamlRootChangedEventArgs>>(arg);
 
             return py::convert(self->obj.Changed(param0));
@@ -28821,14 +28821,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* XamlRoot_remove_Changed(py::wrapper::Microsoft::UI::Xaml::XamlRoot* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.XamlRoot", L"Changed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.XamlRoot", L"Changed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Changed(param0);
@@ -28992,14 +28992,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.IDataTemplateExtension", L"ProcessBinding", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.IDataTemplateExtension", L"ProcessBinding", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.ProcessBinding(param0));
@@ -29023,14 +29023,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.IDataTemplateExtension", L"ProcessBindings", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.IDataTemplateExtension", L"ProcessBindings", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ContainerContentChangingEventArgs>(args, 0);
 
                 return py::convert(self->obj.ProcessBindings(param0));
@@ -29054,14 +29054,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.IDataTemplateExtension", L"ResetTemplate", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.IDataTemplateExtension", L"ResetTemplate", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ResetTemplate();
                 Py_RETURN_NONE;
             }
@@ -29156,14 +29156,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.IElementFactory", L"GetElement", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.IElementFactory", L"GetElement", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::ElementFactoryGetArgs>(args, 0);
 
                 return py::convert(self->obj.GetElement(param0));
@@ -29187,14 +29187,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.IElementFactory", L"RecycleElement", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.IElementFactory", L"RecycleElement", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::ElementFactoryRecycleArgs>(args, 0);
 
                 self->obj.RecycleElement(param0);
@@ -29290,14 +29290,14 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.IXamlServiceProvider", L"GetService", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.IXamlServiceProvider", L"GetService", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 0);
 
                 return py::convert(self->obj.GetService(param0));

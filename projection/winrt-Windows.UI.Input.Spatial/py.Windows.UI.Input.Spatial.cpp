@@ -52,14 +52,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"CancelPendingGestures", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"CancelPendingGestures", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.CancelPendingGestures();
                 Py_RETURN_NONE;
             }
@@ -82,14 +82,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"CaptureInteraction", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"CaptureInteraction", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Spatial::SpatialInteraction>(args, 0);
 
                 self->obj.CaptureInteraction(param0);
@@ -114,14 +114,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"TrySetGestureSettings", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"TrySetGestureSettings", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Spatial::SpatialGestureSettings>(args, 0);
 
                 return py::convert(self->obj.TrySetGestureSettings(param0));
@@ -141,14 +141,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_get_GestureSettings(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"GestureSettings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"GestureSettings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GestureSettings());
         }
         catch (...)
@@ -160,14 +160,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_add_HoldCanceled(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"HoldCanceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"HoldCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialHoldCanceledEventArgs>>(arg);
 
             return py::convert(self->obj.HoldCanceled(param0));
@@ -181,14 +181,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_remove_HoldCanceled(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"HoldCanceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"HoldCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.HoldCanceled(param0);
@@ -203,14 +203,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_add_HoldCompleted(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"HoldCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"HoldCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialHoldCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.HoldCompleted(param0));
@@ -224,14 +224,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_remove_HoldCompleted(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"HoldCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"HoldCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.HoldCompleted(param0);
@@ -246,14 +246,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_add_HoldStarted(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"HoldStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"HoldStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialHoldStartedEventArgs>>(arg);
 
             return py::convert(self->obj.HoldStarted(param0));
@@ -267,14 +267,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_remove_HoldStarted(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"HoldStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"HoldStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.HoldStarted(param0);
@@ -289,14 +289,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_add_ManipulationCanceled(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"ManipulationCanceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"ManipulationCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialManipulationCanceledEventArgs>>(arg);
 
             return py::convert(self->obj.ManipulationCanceled(param0));
@@ -310,14 +310,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_remove_ManipulationCanceled(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"ManipulationCanceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"ManipulationCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ManipulationCanceled(param0);
@@ -332,14 +332,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_add_ManipulationCompleted(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"ManipulationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"ManipulationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialManipulationCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.ManipulationCompleted(param0));
@@ -353,14 +353,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_remove_ManipulationCompleted(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"ManipulationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"ManipulationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ManipulationCompleted(param0);
@@ -375,14 +375,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_add_ManipulationStarted(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"ManipulationStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"ManipulationStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialManipulationStartedEventArgs>>(arg);
 
             return py::convert(self->obj.ManipulationStarted(param0));
@@ -396,14 +396,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_remove_ManipulationStarted(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"ManipulationStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"ManipulationStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ManipulationStarted(param0);
@@ -418,14 +418,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_add_ManipulationUpdated(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"ManipulationUpdated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"ManipulationUpdated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialManipulationUpdatedEventArgs>>(arg);
 
             return py::convert(self->obj.ManipulationUpdated(param0));
@@ -439,14 +439,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_remove_ManipulationUpdated(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"ManipulationUpdated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"ManipulationUpdated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ManipulationUpdated(param0);
@@ -461,14 +461,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_add_NavigationCanceled(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"NavigationCanceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"NavigationCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialNavigationCanceledEventArgs>>(arg);
 
             return py::convert(self->obj.NavigationCanceled(param0));
@@ -482,14 +482,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_remove_NavigationCanceled(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"NavigationCanceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"NavigationCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.NavigationCanceled(param0);
@@ -504,14 +504,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_add_NavigationCompleted(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"NavigationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"NavigationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialNavigationCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.NavigationCompleted(param0));
@@ -525,14 +525,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_remove_NavigationCompleted(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"NavigationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"NavigationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.NavigationCompleted(param0);
@@ -547,14 +547,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_add_NavigationStarted(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"NavigationStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"NavigationStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialNavigationStartedEventArgs>>(arg);
 
             return py::convert(self->obj.NavigationStarted(param0));
@@ -568,14 +568,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_remove_NavigationStarted(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"NavigationStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"NavigationStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.NavigationStarted(param0);
@@ -590,14 +590,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_add_NavigationUpdated(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"NavigationUpdated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"NavigationUpdated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialNavigationUpdatedEventArgs>>(arg);
 
             return py::convert(self->obj.NavigationUpdated(param0));
@@ -611,14 +611,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_remove_NavigationUpdated(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"NavigationUpdated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"NavigationUpdated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.NavigationUpdated(param0);
@@ -633,14 +633,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_add_RecognitionEnded(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"RecognitionEnded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"RecognitionEnded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialRecognitionEndedEventArgs>>(arg);
 
             return py::convert(self->obj.RecognitionEnded(param0));
@@ -654,14 +654,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_remove_RecognitionEnded(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"RecognitionEnded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"RecognitionEnded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.RecognitionEnded(param0);
@@ -676,14 +676,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_add_RecognitionStarted(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"RecognitionStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"RecognitionStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialRecognitionStartedEventArgs>>(arg);
 
             return py::convert(self->obj.RecognitionStarted(param0));
@@ -697,14 +697,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_remove_RecognitionStarted(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"RecognitionStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"RecognitionStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.RecognitionStarted(param0);
@@ -719,14 +719,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_add_Tapped(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"Tapped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"Tapped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialTappedEventArgs>>(arg);
 
             return py::convert(self->obj.Tapped(param0));
@@ -740,14 +740,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_remove_Tapped(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"Tapped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialGestureRecognizer", L"Tapped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Tapped(param0);
@@ -863,14 +863,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialHoldCanceledEventArgs_get_InteractionSourceKind(py::wrapper::Windows::UI::Input::Spatial::SpatialHoldCanceledEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialHoldCanceledEventArgs", L"InteractionSourceKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialHoldCanceledEventArgs", L"InteractionSourceKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InteractionSourceKind());
         }
         catch (...)
@@ -952,14 +952,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialHoldCompletedEventArgs_get_InteractionSourceKind(py::wrapper::Windows::UI::Input::Spatial::SpatialHoldCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialHoldCompletedEventArgs", L"InteractionSourceKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialHoldCompletedEventArgs", L"InteractionSourceKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InteractionSourceKind());
         }
         catch (...)
@@ -1045,14 +1045,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialHoldStartedEventArgs", L"TryGetPointerPose", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialHoldStartedEventArgs", L"TryGetPointerPose", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
                 return py::convert(self->obj.TryGetPointerPose(param0));
@@ -1072,14 +1072,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialHoldStartedEventArgs_get_InteractionSourceKind(py::wrapper::Windows::UI::Input::Spatial::SpatialHoldStartedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialHoldStartedEventArgs", L"InteractionSourceKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialHoldStartedEventArgs", L"InteractionSourceKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InteractionSourceKind());
         }
         catch (...)
@@ -1162,14 +1162,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteraction_get_SourceState(py::wrapper::Windows::UI::Input::Spatial::SpatialInteraction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteraction", L"SourceState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteraction", L"SourceState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceState());
         }
         catch (...)
@@ -1255,14 +1255,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionController", L"TryGetBatteryReport", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionController", L"TryGetBatteryReport", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryGetBatteryReport());
             }
             catch (...)
@@ -1284,14 +1284,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionController", L"TryGetRenderableModelAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionController", L"TryGetRenderableModelAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryGetRenderableModelAsync());
             }
             catch (...)
@@ -1309,14 +1309,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionController_get_HasThumbstick(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionController", L"HasThumbstick"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionController", L"HasThumbstick"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasThumbstick());
         }
         catch (...)
@@ -1328,14 +1328,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionController_get_HasTouchpad(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionController", L"HasTouchpad"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionController", L"HasTouchpad"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasTouchpad());
         }
         catch (...)
@@ -1347,14 +1347,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionController_get_ProductId(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionController", L"ProductId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionController", L"ProductId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProductId());
         }
         catch (...)
@@ -1366,14 +1366,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionController_get_SimpleHapticsController(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionController", L"SimpleHapticsController"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionController", L"SimpleHapticsController"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimpleHapticsController());
         }
         catch (...)
@@ -1385,14 +1385,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionController_get_VendorId(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionController", L"VendorId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionController", L"VendorId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VendorId());
         }
         catch (...)
@@ -1404,14 +1404,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionController_get_Version(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionController", L"Version"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionController", L"Version"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Version());
         }
         catch (...)
@@ -1500,14 +1500,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionControllerProperties_get_IsThumbstickPressed(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionControllerProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionControllerProperties", L"IsThumbstickPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionControllerProperties", L"IsThumbstickPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsThumbstickPressed());
         }
         catch (...)
@@ -1519,14 +1519,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionControllerProperties_get_IsTouchpadPressed(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionControllerProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionControllerProperties", L"IsTouchpadPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionControllerProperties", L"IsTouchpadPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsTouchpadPressed());
         }
         catch (...)
@@ -1538,14 +1538,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionControllerProperties_get_IsTouchpadTouched(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionControllerProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionControllerProperties", L"IsTouchpadTouched"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionControllerProperties", L"IsTouchpadTouched"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsTouchpadTouched());
         }
         catch (...)
@@ -1557,14 +1557,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionControllerProperties_get_ThumbstickX(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionControllerProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionControllerProperties", L"ThumbstickX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionControllerProperties", L"ThumbstickX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ThumbstickX());
         }
         catch (...)
@@ -1576,14 +1576,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionControllerProperties_get_ThumbstickY(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionControllerProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionControllerProperties", L"ThumbstickY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionControllerProperties", L"ThumbstickY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ThumbstickY());
         }
         catch (...)
@@ -1595,14 +1595,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionControllerProperties_get_TouchpadX(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionControllerProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionControllerProperties", L"TouchpadX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionControllerProperties", L"TouchpadX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TouchpadX());
         }
         catch (...)
@@ -1614,14 +1614,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionControllerProperties_get_TouchpadY(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionControllerProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionControllerProperties", L"TouchpadY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionControllerProperties", L"TouchpadY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TouchpadY());
         }
         catch (...)
@@ -1713,14 +1713,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs", L"TryGetPointerPose", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs", L"TryGetPointerPose", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
                 return py::convert(self->obj.TryGetPointerPose(param0));
@@ -1740,14 +1740,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionDetectedEventArgs_get_Interaction(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionDetectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs", L"Interaction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs", L"Interaction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Interaction());
         }
         catch (...)
@@ -1759,14 +1759,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionDetectedEventArgs_get_InteractionSourceKind(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionDetectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs", L"InteractionSourceKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs", L"InteractionSourceKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InteractionSourceKind());
         }
         catch (...)
@@ -1778,14 +1778,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionDetectedEventArgs_get_InteractionSource(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionDetectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs", L"InteractionSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs", L"InteractionSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InteractionSource());
         }
         catch (...)
@@ -1874,14 +1874,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"GetDetectedSourcesAtTimestamp", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"GetDetectedSourcesAtTimestamp", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::PerceptionTimestamp>(args, 0);
 
                 return py::convert(self->obj.GetDetectedSourcesAtTimestamp(param0));
@@ -1905,14 +1905,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::Input::Spatial::SpatialInteractionManager::GetForCurrentView());
             }
             catch (...)
@@ -1934,14 +1934,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"IsSourceKindSupported", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"IsSourceKindSupported", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceKind>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Input::Spatial::SpatialInteractionManager::IsSourceKindSupported(param0));
@@ -1961,14 +1961,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionManager_add_InteractionDetected(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"InteractionDetected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"InteractionDetected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialInteractionManager, winrt::Windows::UI::Input::Spatial::SpatialInteractionDetectedEventArgs>>(arg);
 
             return py::convert(self->obj.InteractionDetected(param0));
@@ -1982,14 +1982,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionManager_remove_InteractionDetected(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"InteractionDetected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"InteractionDetected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.InteractionDetected(param0);
@@ -2004,14 +2004,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionManager_add_SourceDetected(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"SourceDetected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"SourceDetected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialInteractionManager, winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs>>(arg);
 
             return py::convert(self->obj.SourceDetected(param0));
@@ -2025,14 +2025,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionManager_remove_SourceDetected(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"SourceDetected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"SourceDetected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SourceDetected(param0);
@@ -2047,14 +2047,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionManager_add_SourceLost(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"SourceLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"SourceLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialInteractionManager, winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs>>(arg);
 
             return py::convert(self->obj.SourceLost(param0));
@@ -2068,14 +2068,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionManager_remove_SourceLost(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"SourceLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"SourceLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SourceLost(param0);
@@ -2090,14 +2090,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionManager_add_SourcePressed(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"SourcePressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"SourcePressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialInteractionManager, winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs>>(arg);
 
             return py::convert(self->obj.SourcePressed(param0));
@@ -2111,14 +2111,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionManager_remove_SourcePressed(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"SourcePressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"SourcePressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SourcePressed(param0);
@@ -2133,14 +2133,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionManager_add_SourceReleased(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"SourceReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"SourceReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialInteractionManager, winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs>>(arg);
 
             return py::convert(self->obj.SourceReleased(param0));
@@ -2154,14 +2154,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionManager_remove_SourceReleased(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"SourceReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"SourceReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SourceReleased(param0);
@@ -2176,14 +2176,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionManager_add_SourceUpdated(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"SourceUpdated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"SourceUpdated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialInteractionManager, winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs>>(arg);
 
             return py::convert(self->obj.SourceUpdated(param0));
@@ -2197,14 +2197,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionManager_remove_SourceUpdated(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"SourceUpdated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Spatial.SpatialInteractionManager", L"SourceUpdated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SourceUpdated(param0);
@@ -2332,14 +2332,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSource", L"TryCreateHandMeshObserver", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSource", L"TryCreateHandMeshObserver", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryCreateHandMeshObserver());
             }
             catch (...)
@@ -2361,14 +2361,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSource", L"TryCreateHandMeshObserverAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSource", L"TryCreateHandMeshObserverAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryCreateHandMeshObserverAsync());
             }
             catch (...)
@@ -2390,14 +2390,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSource", L"TryGetStateAtTimestamp", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSource", L"TryGetStateAtTimestamp", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::PerceptionTimestamp>(args, 0);
 
                 return py::convert(self->obj.TryGetStateAtTimestamp(param0));
@@ -2417,14 +2417,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSource_get_Id(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSource", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSource", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -2436,14 +2436,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSource_get_Kind(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSource", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSource", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -2455,14 +2455,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSource_get_Controller(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSource", L"Controller"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSource", L"Controller"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Controller());
         }
         catch (...)
@@ -2474,14 +2474,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSource_get_IsGraspSupported(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSource", L"IsGraspSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSource", L"IsGraspSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsGraspSupported());
         }
         catch (...)
@@ -2493,14 +2493,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSource_get_IsMenuSupported(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSource", L"IsMenuSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSource", L"IsMenuSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsMenuSupported());
         }
         catch (...)
@@ -2512,14 +2512,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSource_get_IsPointingSupported(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSource", L"IsPointingSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSource", L"IsPointingSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPointingSupported());
         }
         catch (...)
@@ -2531,14 +2531,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSource_get_Handedness(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSource", L"Handedness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSource", L"Handedness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handedness());
         }
         catch (...)
@@ -2629,14 +2629,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSourceEventArgs_get_State(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceEventArgs", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceEventArgs", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -2648,14 +2648,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSourceEventArgs_get_PressKind(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceEventArgs", L"PressKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceEventArgs", L"PressKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PressKind());
         }
         catch (...)
@@ -2738,14 +2738,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSourceLocation_get_Position(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceLocation", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceLocation", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -2757,14 +2757,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSourceLocation_get_Velocity(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceLocation", L"Velocity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceLocation", L"Velocity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Velocity());
         }
         catch (...)
@@ -2776,14 +2776,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSourceLocation_get_Orientation(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceLocation", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceLocation", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Orientation());
         }
         catch (...)
@@ -2795,14 +2795,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSourceLocation_get_AngularVelocity(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceLocation", L"AngularVelocity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceLocation", L"AngularVelocity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AngularVelocity());
         }
         catch (...)
@@ -2814,14 +2814,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSourceLocation_get_PositionAccuracy(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceLocation", L"PositionAccuracy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceLocation", L"PositionAccuracy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PositionAccuracy());
         }
         catch (...)
@@ -2833,14 +2833,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSourceLocation_get_SourcePointerPose(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceLocation", L"SourcePointerPose"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceLocation", L"SourcePointerPose"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourcePointerPose());
         }
         catch (...)
@@ -2931,14 +2931,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceProperties", L"TryGetLocation", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceProperties", L"TryGetLocation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
                 return py::convert(self->obj.TryGetLocation(param0));
@@ -2962,14 +2962,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceProperties", L"TryGetSourceLossMitigationDirection", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceProperties", L"TryGetSourceLossMitigationDirection", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
                 return py::convert(self->obj.TryGetSourceLossMitigationDirection(param0));
@@ -2989,14 +2989,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSourceProperties_get_SourceLossRisk(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceProperties", L"SourceLossRisk"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceProperties", L"SourceLossRisk"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceLossRisk());
         }
         catch (...)
@@ -3084,14 +3084,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceState", L"TryGetHandPose", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceState", L"TryGetHandPose", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryGetHandPose());
             }
             catch (...)
@@ -3113,14 +3113,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceState", L"TryGetPointerPose", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceState", L"TryGetPointerPose", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
                 return py::convert(self->obj.TryGetPointerPose(param0));
@@ -3140,14 +3140,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSourceState_get_IsPressed(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceState", L"IsPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceState", L"IsPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPressed());
         }
         catch (...)
@@ -3159,14 +3159,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSourceState_get_Properties(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceState", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceState", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -3178,14 +3178,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSourceState_get_Source(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceState", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceState", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -3197,14 +3197,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSourceState_get_Timestamp(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceState", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceState", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -3216,14 +3216,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSourceState_get_ControllerProperties(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceState", L"ControllerProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceState", L"ControllerProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ControllerProperties());
         }
         catch (...)
@@ -3235,14 +3235,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSourceState_get_IsGrasped(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceState", L"IsGrasped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceState", L"IsGrasped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsGrasped());
         }
         catch (...)
@@ -3254,14 +3254,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSourceState_get_IsMenuPressed(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceState", L"IsMenuPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceState", L"IsMenuPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsMenuPressed());
         }
         catch (...)
@@ -3273,14 +3273,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSourceState_get_IsSelectPressed(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceState", L"IsSelectPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceState", L"IsSelectPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSelectPressed());
         }
         catch (...)
@@ -3292,14 +3292,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSourceState_get_SelectPressedValue(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceState", L"SelectPressedValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialInteractionSourceState", L"SelectPressedValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectPressedValue());
         }
         catch (...)
@@ -3391,14 +3391,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialManipulationCanceledEventArgs_get_InteractionSourceKind(py::wrapper::Windows::UI::Input::Spatial::SpatialManipulationCanceledEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialManipulationCanceledEventArgs", L"InteractionSourceKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialManipulationCanceledEventArgs", L"InteractionSourceKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InteractionSourceKind());
         }
         catch (...)
@@ -3484,14 +3484,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialManipulationCompletedEventArgs", L"TryGetCumulativeDelta", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialManipulationCompletedEventArgs", L"TryGetCumulativeDelta", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
                 return py::convert(self->obj.TryGetCumulativeDelta(param0));
@@ -3511,14 +3511,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialManipulationCompletedEventArgs_get_InteractionSourceKind(py::wrapper::Windows::UI::Input::Spatial::SpatialManipulationCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialManipulationCompletedEventArgs", L"InteractionSourceKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialManipulationCompletedEventArgs", L"InteractionSourceKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InteractionSourceKind());
         }
         catch (...)
@@ -3601,14 +3601,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialManipulationDelta_get_Translation(py::wrapper::Windows::UI::Input::Spatial::SpatialManipulationDelta* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialManipulationDelta", L"Translation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialManipulationDelta", L"Translation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Translation());
         }
         catch (...)
@@ -3694,14 +3694,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialManipulationStartedEventArgs", L"TryGetPointerPose", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialManipulationStartedEventArgs", L"TryGetPointerPose", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
                 return py::convert(self->obj.TryGetPointerPose(param0));
@@ -3721,14 +3721,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialManipulationStartedEventArgs_get_InteractionSourceKind(py::wrapper::Windows::UI::Input::Spatial::SpatialManipulationStartedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialManipulationStartedEventArgs", L"InteractionSourceKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialManipulationStartedEventArgs", L"InteractionSourceKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InteractionSourceKind());
         }
         catch (...)
@@ -3815,14 +3815,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialManipulationUpdatedEventArgs", L"TryGetCumulativeDelta", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialManipulationUpdatedEventArgs", L"TryGetCumulativeDelta", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
                 return py::convert(self->obj.TryGetCumulativeDelta(param0));
@@ -3842,14 +3842,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialManipulationUpdatedEventArgs_get_InteractionSourceKind(py::wrapper::Windows::UI::Input::Spatial::SpatialManipulationUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialManipulationUpdatedEventArgs", L"InteractionSourceKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialManipulationUpdatedEventArgs", L"InteractionSourceKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InteractionSourceKind());
         }
         catch (...)
@@ -3932,14 +3932,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialNavigationCanceledEventArgs_get_InteractionSourceKind(py::wrapper::Windows::UI::Input::Spatial::SpatialNavigationCanceledEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialNavigationCanceledEventArgs", L"InteractionSourceKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialNavigationCanceledEventArgs", L"InteractionSourceKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InteractionSourceKind());
         }
         catch (...)
@@ -4021,14 +4021,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialNavigationCompletedEventArgs_get_InteractionSourceKind(py::wrapper::Windows::UI::Input::Spatial::SpatialNavigationCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialNavigationCompletedEventArgs", L"InteractionSourceKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialNavigationCompletedEventArgs", L"InteractionSourceKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InteractionSourceKind());
         }
         catch (...)
@@ -4040,14 +4040,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialNavigationCompletedEventArgs_get_NormalizedOffset(py::wrapper::Windows::UI::Input::Spatial::SpatialNavigationCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialNavigationCompletedEventArgs", L"NormalizedOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialNavigationCompletedEventArgs", L"NormalizedOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NormalizedOffset());
         }
         catch (...)
@@ -4134,14 +4134,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs", L"TryGetPointerPose", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs", L"TryGetPointerPose", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
                 return py::convert(self->obj.TryGetPointerPose(param0));
@@ -4161,14 +4161,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialNavigationStartedEventArgs_get_InteractionSourceKind(py::wrapper::Windows::UI::Input::Spatial::SpatialNavigationStartedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs", L"InteractionSourceKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs", L"InteractionSourceKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InteractionSourceKind());
         }
         catch (...)
@@ -4180,14 +4180,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialNavigationStartedEventArgs_get_IsNavigatingX(py::wrapper::Windows::UI::Input::Spatial::SpatialNavigationStartedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs", L"IsNavigatingX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs", L"IsNavigatingX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsNavigatingX());
         }
         catch (...)
@@ -4199,14 +4199,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialNavigationStartedEventArgs_get_IsNavigatingY(py::wrapper::Windows::UI::Input::Spatial::SpatialNavigationStartedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs", L"IsNavigatingY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs", L"IsNavigatingY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsNavigatingY());
         }
         catch (...)
@@ -4218,14 +4218,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialNavigationStartedEventArgs_get_IsNavigatingZ(py::wrapper::Windows::UI::Input::Spatial::SpatialNavigationStartedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs", L"IsNavigatingZ"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs", L"IsNavigatingZ"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsNavigatingZ());
         }
         catch (...)
@@ -4311,14 +4311,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialNavigationUpdatedEventArgs_get_InteractionSourceKind(py::wrapper::Windows::UI::Input::Spatial::SpatialNavigationUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialNavigationUpdatedEventArgs", L"InteractionSourceKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialNavigationUpdatedEventArgs", L"InteractionSourceKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InteractionSourceKind());
         }
         catch (...)
@@ -4330,14 +4330,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialNavigationUpdatedEventArgs_get_NormalizedOffset(py::wrapper::Windows::UI::Input::Spatial::SpatialNavigationUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialNavigationUpdatedEventArgs", L"NormalizedOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialNavigationUpdatedEventArgs", L"NormalizedOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NormalizedOffset());
         }
         catch (...)
@@ -4420,14 +4420,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialPointerInteractionSourcePose_get_ForwardDirection(py::wrapper::Windows::UI::Input::Spatial::SpatialPointerInteractionSourcePose* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose", L"ForwardDirection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose", L"ForwardDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ForwardDirection());
         }
         catch (...)
@@ -4439,14 +4439,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialPointerInteractionSourcePose_get_Position(py::wrapper::Windows::UI::Input::Spatial::SpatialPointerInteractionSourcePose* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -4458,14 +4458,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialPointerInteractionSourcePose_get_UpDirection(py::wrapper::Windows::UI::Input::Spatial::SpatialPointerInteractionSourcePose* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose", L"UpDirection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose", L"UpDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UpDirection());
         }
         catch (...)
@@ -4477,14 +4477,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialPointerInteractionSourcePose_get_Orientation(py::wrapper::Windows::UI::Input::Spatial::SpatialPointerInteractionSourcePose* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Orientation());
         }
         catch (...)
@@ -4496,14 +4496,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialPointerInteractionSourcePose_get_PositionAccuracy(py::wrapper::Windows::UI::Input::Spatial::SpatialPointerInteractionSourcePose* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose", L"PositionAccuracy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose", L"PositionAccuracy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PositionAccuracy());
         }
         catch (...)
@@ -4593,14 +4593,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialPointerPose", L"TryGetAtTimestamp", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialPointerPose", L"TryGetAtTimestamp", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Perception::PerceptionTimestamp>(args, 1);
 
@@ -4625,14 +4625,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialPointerPose", L"TryGetInteractionSourcePose", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialPointerPose", L"TryGetInteractionSourcePose", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Spatial::SpatialInteractionSource>(args, 0);
 
                 return py::convert(self->obj.TryGetInteractionSourcePose(param0));
@@ -4652,14 +4652,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialPointerPose_get_Head(py::wrapper::Windows::UI::Input::Spatial::SpatialPointerPose* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialPointerPose", L"Head"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialPointerPose", L"Head"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Head());
         }
         catch (...)
@@ -4671,14 +4671,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialPointerPose_get_Timestamp(py::wrapper::Windows::UI::Input::Spatial::SpatialPointerPose* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialPointerPose", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialPointerPose", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -4690,14 +4690,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialPointerPose_get_Eyes(py::wrapper::Windows::UI::Input::Spatial::SpatialPointerPose* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialPointerPose", L"Eyes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialPointerPose", L"Eyes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Eyes());
         }
         catch (...)
@@ -4709,14 +4709,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialPointerPose_get_IsHeadCapturedBySystem(py::wrapper::Windows::UI::Input::Spatial::SpatialPointerPose* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialPointerPose", L"IsHeadCapturedBySystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialPointerPose", L"IsHeadCapturedBySystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsHeadCapturedBySystem());
         }
         catch (...)
@@ -4828,14 +4828,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialRecognitionEndedEventArgs_get_InteractionSourceKind(py::wrapper::Windows::UI::Input::Spatial::SpatialRecognitionEndedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialRecognitionEndedEventArgs", L"InteractionSourceKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialRecognitionEndedEventArgs", L"InteractionSourceKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InteractionSourceKind());
         }
         catch (...)
@@ -4921,14 +4921,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialRecognitionStartedEventArgs", L"IsGesturePossible", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialRecognitionStartedEventArgs", L"IsGesturePossible", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Spatial::SpatialGestureSettings>(args, 0);
 
                 return py::convert(self->obj.IsGesturePossible(param0));
@@ -4952,14 +4952,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialRecognitionStartedEventArgs", L"TryGetPointerPose", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialRecognitionStartedEventArgs", L"TryGetPointerPose", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
                 return py::convert(self->obj.TryGetPointerPose(param0));
@@ -4979,14 +4979,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialRecognitionStartedEventArgs_get_InteractionSourceKind(py::wrapper::Windows::UI::Input::Spatial::SpatialRecognitionStartedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialRecognitionStartedEventArgs", L"InteractionSourceKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialRecognitionStartedEventArgs", L"InteractionSourceKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InteractionSourceKind());
         }
         catch (...)
@@ -5074,14 +5074,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialTappedEventArgs", L"TryGetPointerPose", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Spatial.SpatialTappedEventArgs", L"TryGetPointerPose", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
                 return py::convert(self->obj.TryGetPointerPose(param0));
@@ -5101,14 +5101,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialTappedEventArgs_get_InteractionSourceKind(py::wrapper::Windows::UI::Input::Spatial::SpatialTappedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialTappedEventArgs", L"InteractionSourceKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialTappedEventArgs", L"InteractionSourceKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InteractionSourceKind());
         }
         catch (...)
@@ -5120,14 +5120,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialTappedEventArgs_get_TapCount(py::wrapper::Windows::UI::Input::Spatial::SpatialTappedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialTappedEventArgs", L"TapCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Spatial.SpatialTappedEventArgs", L"TapCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TapCount());
         }
         catch (...)

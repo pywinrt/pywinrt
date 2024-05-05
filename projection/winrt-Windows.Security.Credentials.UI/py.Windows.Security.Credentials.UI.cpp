@@ -20,14 +20,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Credentials.UI.CredentialPicker", L"PickAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Credentials.UI.CredentialPicker", L"PickAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::UI::CredentialPickerOptions>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Credentials::UI::CredentialPicker::PickAsync(param0));
@@ -40,14 +40,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Credentials.UI.CredentialPicker", L"PickAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Credentials.UI.CredentialPicker", L"PickAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -61,14 +61,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Credentials.UI.CredentialPicker", L"PickAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Credentials.UI.CredentialPicker", L"PickAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -180,14 +180,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyObject* CredentialPickerOptions_get_TargetName(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetName());
         }
         catch (...)
@@ -199,12 +199,6 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static int CredentialPickerOptions_put_TargetName(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -213,6 +207,12 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.TargetName(param0);
@@ -227,14 +227,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyObject* CredentialPickerOptions_get_PreviousCredential(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"PreviousCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"PreviousCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousCredential());
         }
         catch (...)
@@ -246,12 +246,6 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static int CredentialPickerOptions_put_PreviousCredential(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"PreviousCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -260,6 +254,12 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"PreviousCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             self->obj.PreviousCredential(param0);
@@ -274,14 +274,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyObject* CredentialPickerOptions_get_Message(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Message());
         }
         catch (...)
@@ -293,12 +293,6 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static int CredentialPickerOptions_put_Message(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -307,6 +301,12 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Message(param0);
@@ -321,14 +321,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyObject* CredentialPickerOptions_get_ErrorCode(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"ErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"ErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorCode());
         }
         catch (...)
@@ -340,12 +340,6 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static int CredentialPickerOptions_put_ErrorCode(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"ErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -354,6 +348,12 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"ErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ErrorCode(param0);
@@ -368,14 +368,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyObject* CredentialPickerOptions_get_CustomAuthenticationProtocol(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"CustomAuthenticationProtocol"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"CustomAuthenticationProtocol"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CustomAuthenticationProtocol());
         }
         catch (...)
@@ -387,12 +387,6 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static int CredentialPickerOptions_put_CustomAuthenticationProtocol(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"CustomAuthenticationProtocol"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -401,6 +395,12 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"CustomAuthenticationProtocol"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.CustomAuthenticationProtocol(param0);
@@ -415,14 +415,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyObject* CredentialPickerOptions_get_CredentialSaveOption(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"CredentialSaveOption"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"CredentialSaveOption"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CredentialSaveOption());
         }
         catch (...)
@@ -434,12 +434,6 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static int CredentialPickerOptions_put_CredentialSaveOption(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"CredentialSaveOption"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -448,6 +442,12 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"CredentialSaveOption"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::UI::CredentialSaveOption>(arg);
 
             self->obj.CredentialSaveOption(param0);
@@ -462,14 +462,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyObject* CredentialPickerOptions_get_Caption(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"Caption"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"Caption"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Caption());
         }
         catch (...)
@@ -481,12 +481,6 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static int CredentialPickerOptions_put_Caption(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"Caption"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -495,6 +489,12 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"Caption"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Caption(param0);
@@ -509,14 +509,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyObject* CredentialPickerOptions_get_CallerSavesCredential(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"CallerSavesCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"CallerSavesCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallerSavesCredential());
         }
         catch (...)
@@ -528,12 +528,6 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static int CredentialPickerOptions_put_CallerSavesCredential(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"CallerSavesCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -542,6 +536,12 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"CallerSavesCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.CallerSavesCredential(param0);
@@ -556,14 +556,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyObject* CredentialPickerOptions_get_AuthenticationProtocol(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"AuthenticationProtocol"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"AuthenticationProtocol"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AuthenticationProtocol());
         }
         catch (...)
@@ -575,12 +575,6 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static int CredentialPickerOptions_put_AuthenticationProtocol(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"AuthenticationProtocol"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -589,6 +583,12 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"AuthenticationProtocol"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::UI::AuthenticationProtocol>(arg);
 
             self->obj.AuthenticationProtocol(param0);
@@ -603,14 +603,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyObject* CredentialPickerOptions_get_AlwaysDisplayDialog(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"AlwaysDisplayDialog"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"AlwaysDisplayDialog"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlwaysDisplayDialog());
         }
         catch (...)
@@ -622,12 +622,6 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static int CredentialPickerOptions_put_AlwaysDisplayDialog(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"AlwaysDisplayDialog"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -636,6 +630,12 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerOptions", L"AlwaysDisplayDialog"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AlwaysDisplayDialog(param0);
@@ -729,14 +729,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyObject* CredentialPickerResults_get_Credential(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerResults* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerResults", L"Credential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerResults", L"Credential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Credential());
         }
         catch (...)
@@ -748,14 +748,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyObject* CredentialPickerResults_get_CredentialDomainName(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerResults* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerResults", L"CredentialDomainName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerResults", L"CredentialDomainName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CredentialDomainName());
         }
         catch (...)
@@ -767,14 +767,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyObject* CredentialPickerResults_get_CredentialPassword(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerResults* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerResults", L"CredentialPassword"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerResults", L"CredentialPassword"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CredentialPassword());
         }
         catch (...)
@@ -786,14 +786,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyObject* CredentialPickerResults_get_CredentialSaveOption(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerResults* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerResults", L"CredentialSaveOption"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerResults", L"CredentialSaveOption"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CredentialSaveOption());
         }
         catch (...)
@@ -805,14 +805,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyObject* CredentialPickerResults_get_CredentialSaved(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerResults* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerResults", L"CredentialSaved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerResults", L"CredentialSaved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CredentialSaved());
         }
         catch (...)
@@ -824,14 +824,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyObject* CredentialPickerResults_get_CredentialUserName(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerResults* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerResults", L"CredentialUserName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerResults", L"CredentialUserName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CredentialUserName());
         }
         catch (...)
@@ -843,14 +843,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyObject* CredentialPickerResults_get_ErrorCode(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerResults* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerResults", L"ErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Credentials.UI.CredentialPickerResults", L"ErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorCode());
         }
         catch (...)
@@ -934,14 +934,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Credentials.UI.UserConsentVerifier", L"CheckAvailabilityAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Credentials.UI.UserConsentVerifier", L"CheckAvailabilityAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Security::Credentials::UI::UserConsentVerifier::CheckAvailabilityAsync());
             }
             catch (...)
@@ -963,14 +963,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Credentials.UI.UserConsentVerifier", L"RequestVerificationAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Credentials.UI.UserConsentVerifier", L"RequestVerificationAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Credentials::UI::UserConsentVerifier::RequestVerificationAsync(param0));

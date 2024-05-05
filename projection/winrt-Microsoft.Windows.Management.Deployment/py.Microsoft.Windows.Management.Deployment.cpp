@@ -46,14 +46,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* AddPackageOptions_get_TargetVolume(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"TargetVolume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"TargetVolume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetVolume());
         }
         catch (...)
@@ -65,12 +65,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int AddPackageOptions_put_TargetVolume(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"TargetVolume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -79,6 +73,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"TargetVolume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageVolume>(arg);
 
             self->obj.TargetVolume(param0);
@@ -93,14 +93,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* AddPackageOptions_get_StubPackageOption(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"StubPackageOption"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"StubPackageOption"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StubPackageOption());
         }
         catch (...)
@@ -112,12 +112,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int AddPackageOptions_put_StubPackageOption(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"StubPackageOption"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -126,6 +120,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"StubPackageOption"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::StubPackageOption>(arg);
 
             self->obj.StubPackageOption(param0);
@@ -140,14 +140,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* AddPackageOptions_get_StageInPlace(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"StageInPlace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"StageInPlace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StageInPlace());
         }
         catch (...)
@@ -159,12 +159,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int AddPackageOptions_put_StageInPlace(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"StageInPlace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -173,6 +167,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"StageInPlace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.StageInPlace(param0);
@@ -187,14 +187,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* AddPackageOptions_get_RetainFilesOnFailure(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"RetainFilesOnFailure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"RetainFilesOnFailure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RetainFilesOnFailure());
         }
         catch (...)
@@ -206,12 +206,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int AddPackageOptions_put_RetainFilesOnFailure(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"RetainFilesOnFailure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -220,6 +214,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"RetainFilesOnFailure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.RetainFilesOnFailure(param0);
@@ -234,14 +234,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* AddPackageOptions_get_RequiredContentGroupOnly(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"RequiredContentGroupOnly"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"RequiredContentGroupOnly"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequiredContentGroupOnly());
         }
         catch (...)
@@ -253,12 +253,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int AddPackageOptions_put_RequiredContentGroupOnly(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"RequiredContentGroupOnly"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -267,6 +261,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"RequiredContentGroupOnly"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.RequiredContentGroupOnly(param0);
@@ -281,14 +281,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* AddPackageOptions_get_LimitToExistingPackages(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"LimitToExistingPackages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"LimitToExistingPackages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LimitToExistingPackages());
         }
         catch (...)
@@ -300,12 +300,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int AddPackageOptions_put_LimitToExistingPackages(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"LimitToExistingPackages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -314,6 +308,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"LimitToExistingPackages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.LimitToExistingPackages(param0);
@@ -328,14 +328,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* AddPackageOptions_get_InstallAllResources(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"InstallAllResources"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"InstallAllResources"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InstallAllResources());
         }
         catch (...)
@@ -347,12 +347,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int AddPackageOptions_put_InstallAllResources(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"InstallAllResources"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -361,6 +355,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"InstallAllResources"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.InstallAllResources(param0);
@@ -375,14 +375,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* AddPackageOptions_get_ForceUpdateFromAnyVersion(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"ForceUpdateFromAnyVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"ForceUpdateFromAnyVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ForceUpdateFromAnyVersion());
         }
         catch (...)
@@ -394,12 +394,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int AddPackageOptions_put_ForceUpdateFromAnyVersion(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"ForceUpdateFromAnyVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -408,6 +402,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"ForceUpdateFromAnyVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ForceUpdateFromAnyVersion(param0);
@@ -422,14 +422,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* AddPackageOptions_get_ForceTargetAppShutdown(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"ForceTargetAppShutdown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"ForceTargetAppShutdown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ForceTargetAppShutdown());
         }
         catch (...)
@@ -441,12 +441,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int AddPackageOptions_put_ForceTargetAppShutdown(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"ForceTargetAppShutdown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -455,6 +449,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"ForceTargetAppShutdown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ForceTargetAppShutdown(param0);
@@ -469,14 +469,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* AddPackageOptions_get_ForceAppShutdown(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"ForceAppShutdown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"ForceAppShutdown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ForceAppShutdown());
         }
         catch (...)
@@ -488,12 +488,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int AddPackageOptions_put_ForceAppShutdown(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"ForceAppShutdown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -502,6 +496,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"ForceAppShutdown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ForceAppShutdown(param0);
@@ -516,14 +516,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* AddPackageOptions_get_ExternalLocationUri(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"ExternalLocationUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"ExternalLocationUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExternalLocationUri());
         }
         catch (...)
@@ -535,12 +535,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int AddPackageOptions_put_ExternalLocationUri(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"ExternalLocationUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -549,6 +543,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"ExternalLocationUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.ExternalLocationUri(param0);
@@ -563,14 +563,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* AddPackageOptions_get_DeveloperMode(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"DeveloperMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"DeveloperMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeveloperMode());
         }
         catch (...)
@@ -582,12 +582,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int AddPackageOptions_put_DeveloperMode(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"DeveloperMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -596,6 +590,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"DeveloperMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.DeveloperMode(param0);
@@ -610,14 +610,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* AddPackageOptions_get_DeferRegistrationWhenPackagesAreInUse(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"DeferRegistrationWhenPackagesAreInUse"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"DeferRegistrationWhenPackagesAreInUse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeferRegistrationWhenPackagesAreInUse());
         }
         catch (...)
@@ -629,12 +629,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int AddPackageOptions_put_DeferRegistrationWhenPackagesAreInUse(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"DeferRegistrationWhenPackagesAreInUse"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -643,6 +637,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"DeferRegistrationWhenPackagesAreInUse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.DeferRegistrationWhenPackagesAreInUse(param0);
@@ -657,14 +657,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* AddPackageOptions_get_AllowUnsigned(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"AllowUnsigned"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"AllowUnsigned"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowUnsigned());
         }
         catch (...)
@@ -676,12 +676,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int AddPackageOptions_put_AllowUnsigned(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"AllowUnsigned"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -690,6 +684,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"AllowUnsigned"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowUnsigned(param0);
@@ -704,14 +704,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* AddPackageOptions_get_DependencyPackageUris(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"DependencyPackageUris"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"DependencyPackageUris"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DependencyPackageUris());
         }
         catch (...)
@@ -723,14 +723,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* AddPackageOptions_get_ExpectedDigests(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"ExpectedDigests"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"ExpectedDigests"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExpectedDigests());
         }
         catch (...)
@@ -742,14 +742,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* AddPackageOptions_get_IsExpectedDigestsSupported(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"IsExpectedDigestsSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"IsExpectedDigestsSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsExpectedDigestsSupported());
         }
         catch (...)
@@ -761,14 +761,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* AddPackageOptions_get_IsLimitToExistingPackagesSupported(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"IsLimitToExistingPackagesSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"IsLimitToExistingPackagesSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsLimitToExistingPackagesSupported());
         }
         catch (...)
@@ -780,14 +780,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* AddPackageOptions_get_OptionalPackageFamilyNames(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"OptionalPackageFamilyNames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"OptionalPackageFamilyNames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OptionalPackageFamilyNames());
         }
         catch (...)
@@ -799,14 +799,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* AddPackageOptions_get_OptionalPackageUris(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"OptionalPackageUris"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"OptionalPackageUris"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OptionalPackageUris());
         }
         catch (...)
@@ -818,14 +818,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* AddPackageOptions_get_RelatedPackageUris(py::wrapper::Microsoft::Windows::Management::Deployment::AddPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"RelatedPackageUris"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.AddPackageOptions", L"RelatedPackageUris"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RelatedPackageUris());
         }
         catch (...)
@@ -949,14 +949,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* EnsureReadyOptions_get_AddPackageOptions(py::wrapper::Microsoft::Windows::Management::Deployment::EnsureReadyOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.EnsureReadyOptions", L"AddPackageOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.EnsureReadyOptions", L"AddPackageOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AddPackageOptions());
         }
         catch (...)
@@ -1042,14 +1042,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"AddPackageAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"AddPackageAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::AddPackageOptions>(args, 1);
 
@@ -1074,14 +1074,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"AddPackageByUriAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"AddPackageByUriAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::AddPackageOptions>(args, 1);
 
@@ -1106,14 +1106,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"AddPackageSetAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"AddPackageSetAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::AddPackageOptions>(args, 1);
 
@@ -1138,14 +1138,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"DeprovisionPackageAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"DeprovisionPackageAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.DeprovisionPackageAsync(param0));
@@ -1169,14 +1169,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"DeprovisionPackageByUriAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"DeprovisionPackageByUriAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(self->obj.DeprovisionPackageByUriAsync(param0));
@@ -1200,14 +1200,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"DeprovisionPackageSetAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"DeprovisionPackageSetAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
 
                 return py::convert(self->obj.DeprovisionPackageSetAsync(param0));
@@ -1231,14 +1231,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"EnsurePackageReadyAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"EnsurePackageReadyAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::EnsureReadyOptions>(args, 1);
 
@@ -1263,14 +1263,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"EnsurePackageReadyByUriAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"EnsurePackageReadyByUriAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::EnsureReadyOptions>(args, 1);
 
@@ -1295,14 +1295,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"EnsurePackageSetReadyAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"EnsurePackageSetReadyAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::EnsureReadyOptions>(args, 1);
 
@@ -1327,14 +1327,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentManager::GetDefault());
             }
             catch (...)
@@ -1356,14 +1356,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"IsPackageReady", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"IsPackageReady", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.IsPackageReady(param0));
@@ -1387,14 +1387,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"IsPackageReadyByUri", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"IsPackageReadyByUri", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(self->obj.IsPackageReadyByUri(param0));
@@ -1418,14 +1418,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"IsPackageRegistrationPending", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"IsPackageRegistrationPending", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.IsPackageRegistrationPending(param0));
@@ -1449,14 +1449,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"IsPackageRegistrationPendingForUser", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"IsPackageRegistrationPendingForUser", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1481,14 +1481,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"IsPackageSetReady", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"IsPackageSetReady", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
 
                 return py::convert(self->obj.IsPackageSetReady(param0));
@@ -1512,14 +1512,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"ProvisionPackageAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"ProvisionPackageAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::ProvisionPackageOptions>(args, 1);
 
@@ -1544,14 +1544,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"ProvisionPackageByUriAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"ProvisionPackageByUriAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::ProvisionPackageOptions>(args, 1);
 
@@ -1576,14 +1576,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"ProvisionPackageSetAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"ProvisionPackageSetAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::ProvisionPackageOptions>(args, 1);
 
@@ -1608,14 +1608,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"RegisterPackageAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"RegisterPackageAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::RegisterPackageOptions>(args, 1);
 
@@ -1640,14 +1640,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"RegisterPackageByUriAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"RegisterPackageByUriAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::RegisterPackageOptions>(args, 1);
 
@@ -1672,14 +1672,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"RegisterPackageSetAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"RegisterPackageSetAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::RegisterPackageOptions>(args, 1);
 
@@ -1704,14 +1704,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"RemovePackageAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"RemovePackageAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::RemovePackageOptions>(args, 1);
 
@@ -1736,14 +1736,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"RemovePackageByFamilyNameAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"RemovePackageByFamilyNameAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::RemovePackageOptions>(args, 1);
 
@@ -1768,14 +1768,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"RemovePackageByFullNameAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"RemovePackageByFullNameAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::RemovePackageOptions>(args, 1);
 
@@ -1800,14 +1800,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"RemovePackageByUriAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"RemovePackageByUriAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::RemovePackageOptions>(args, 1);
 
@@ -1832,14 +1832,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"RemovePackageSetAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"RemovePackageSetAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::RemovePackageOptions>(args, 1);
 
@@ -1864,14 +1864,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"RepairPackageAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"RepairPackageAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.RepairPackageAsync(param0));
@@ -1895,14 +1895,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"RepairPackageByUriAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"RepairPackageByUriAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(self->obj.RepairPackageByUriAsync(param0));
@@ -1926,14 +1926,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"RepairPackageSetAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"RepairPackageSetAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
 
                 return py::convert(self->obj.RepairPackageSetAsync(param0));
@@ -1957,14 +1957,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"ResetPackageAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"ResetPackageAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ResetPackageAsync(param0));
@@ -1988,14 +1988,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"ResetPackageByUriAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"ResetPackageByUriAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(self->obj.ResetPackageByUriAsync(param0));
@@ -2019,14 +2019,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"ResetPackageSetAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"ResetPackageSetAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
 
                 return py::convert(self->obj.ResetPackageSetAsync(param0));
@@ -2050,14 +2050,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"StagePackageAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"StagePackageAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::StagePackageOptions>(args, 1);
 
@@ -2082,14 +2082,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"StagePackageByUriAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"StagePackageByUriAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::StagePackageOptions>(args, 1);
 
@@ -2114,14 +2114,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"StagePackageSetAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"StagePackageSetAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::StagePackageOptions>(args, 1);
 
@@ -2271,14 +2271,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageDeploymentResult_get_ActivityId(py::wrapper::Microsoft::Windows::Management::Deployment::PackageDeploymentResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentResult", L"ActivityId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentResult", L"ActivityId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivityId());
         }
         catch (...)
@@ -2290,14 +2290,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageDeploymentResult_get_Error(py::wrapper::Microsoft::Windows::Management::Deployment::PackageDeploymentResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentResult", L"Error"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentResult", L"Error"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Error());
         }
         catch (...)
@@ -2309,14 +2309,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageDeploymentResult_get_ErrorText(py::wrapper::Microsoft::Windows::Management::Deployment::PackageDeploymentResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentResult", L"ErrorText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentResult", L"ErrorText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorText());
         }
         catch (...)
@@ -2328,14 +2328,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageDeploymentResult_get_ExtendedError(py::wrapper::Microsoft::Windows::Management::Deployment::PackageDeploymentResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -2347,14 +2347,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageDeploymentResult_get_Status(py::wrapper::Microsoft::Windows::Management::Deployment::PackageDeploymentResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -2444,14 +2444,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageRuntimeManager", L"AddPackageSet", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageRuntimeManager", L"AddPackageSet", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
 
                 return py::convert(self->obj.AddPackageSet(param0));
@@ -2464,14 +2464,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageRuntimeManager", L"AddPackageSet", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageRuntimeManager", L"AddPackageSet", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::AddPackageDependencyOptions>(args, 2);
@@ -2497,14 +2497,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageRuntimeManager", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageRuntimeManager", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Microsoft::Windows::Management::Deployment::PackageRuntimeManager::GetDefault());
             }
             catch (...)
@@ -2526,14 +2526,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageRuntimeManager", L"RemovePackageSet", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageRuntimeManager", L"RemovePackageSet", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSetRuntimeDisposition>(args, 0);
 
                 self->obj.RemovePackageSet(param0);
@@ -2673,14 +2673,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageSet_get_PackageUri(py::wrapper::Microsoft::Windows::Management::Deployment::PackageSet* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSet", L"PackageUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSet", L"PackageUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PackageUri());
         }
         catch (...)
@@ -2692,12 +2692,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int PackageSet_put_PackageUri(py::wrapper::Microsoft::Windows::Management::Deployment::PackageSet* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSet", L"PackageUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2706,6 +2700,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSet", L"PackageUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.PackageUri(param0);
@@ -2720,14 +2720,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageSet_get_Id(py::wrapper::Microsoft::Windows::Management::Deployment::PackageSet* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSet", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSet", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -2739,12 +2739,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int PackageSet_put_Id(py::wrapper::Microsoft::Windows::Management::Deployment::PackageSet* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSet", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2753,6 +2747,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSet", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Id(param0);
@@ -2767,14 +2767,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageSet_get_Items(py::wrapper::Microsoft::Windows::Management::Deployment::PackageSet* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSet", L"Items"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSet", L"Items"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Items());
         }
         catch (...)
@@ -2880,14 +2880,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageSetItem_get_ProcessorArchitectureFilter(py::wrapper::Microsoft::Windows::Management::Deployment::PackageSetItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItem", L"ProcessorArchitectureFilter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItem", L"ProcessorArchitectureFilter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProcessorArchitectureFilter());
         }
         catch (...)
@@ -2899,12 +2899,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int PackageSetItem_put_ProcessorArchitectureFilter(py::wrapper::Microsoft::Windows::Management::Deployment::PackageSetItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItem", L"ProcessorArchitectureFilter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2913,6 +2907,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItem", L"ProcessorArchitectureFilter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyProcessorArchitectures>(arg);
 
             self->obj.ProcessorArchitectureFilter(param0);
@@ -2927,14 +2927,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageSetItem_get_PackageUri(py::wrapper::Microsoft::Windows::Management::Deployment::PackageSetItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItem", L"PackageUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItem", L"PackageUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PackageUri());
         }
         catch (...)
@@ -2946,12 +2946,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int PackageSetItem_put_PackageUri(py::wrapper::Microsoft::Windows::Management::Deployment::PackageSetItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItem", L"PackageUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2960,6 +2954,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItem", L"PackageUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.PackageUri(param0);
@@ -2974,14 +2974,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageSetItem_get_PackageFamilyName(py::wrapper::Microsoft::Windows::Management::Deployment::PackageSetItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItem", L"PackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItem", L"PackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PackageFamilyName());
         }
         catch (...)
@@ -2993,12 +2993,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int PackageSetItem_put_PackageFamilyName(py::wrapper::Microsoft::Windows::Management::Deployment::PackageSetItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItem", L"PackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3007,6 +3001,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItem", L"PackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.PackageFamilyName(param0);
@@ -3021,14 +3021,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageSetItem_get_MinVersion(py::wrapper::Microsoft::Windows::Management::Deployment::PackageSetItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItem", L"MinVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItem", L"MinVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinVersion());
         }
         catch (...)
@@ -3040,12 +3040,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int PackageSetItem_put_MinVersion(py::wrapper::Microsoft::Windows::Management::Deployment::PackageSetItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItem", L"MinVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3054,6 +3048,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItem", L"MinVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::PackageVersion>(arg);
 
             self->obj.MinVersion(param0);
@@ -3068,14 +3068,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageSetItem_get_Id(py::wrapper::Microsoft::Windows::Management::Deployment::PackageSetItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItem", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItem", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -3087,12 +3087,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int PackageSetItem_put_Id(py::wrapper::Microsoft::Windows::Management::Deployment::PackageSetItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItem", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3101,6 +3095,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItem", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Id(param0);
@@ -3211,14 +3211,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageSetItemRuntimeDisposition_get_PackageDependencyContextId(py::wrapper::Microsoft::Windows::Management::Deployment::PackageSetItemRuntimeDisposition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition", L"PackageDependencyContextId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition", L"PackageDependencyContextId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PackageDependencyContextId());
         }
         catch (...)
@@ -3230,14 +3230,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageSetItemRuntimeDisposition_get_PackageDependencyId(py::wrapper::Microsoft::Windows::Management::Deployment::PackageSetItemRuntimeDisposition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition", L"PackageDependencyId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition", L"PackageDependencyId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PackageDependencyId());
         }
         catch (...)
@@ -3249,14 +3249,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageSetItemRuntimeDisposition_get_PackageFullName(py::wrapper::Microsoft::Windows::Management::Deployment::PackageSetItemRuntimeDisposition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition", L"PackageFullName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition", L"PackageFullName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PackageFullName());
         }
         catch (...)
@@ -3268,14 +3268,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageSetItemRuntimeDisposition_get_PackageSetItemId(py::wrapper::Microsoft::Windows::Management::Deployment::PackageSetItemRuntimeDisposition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition", L"PackageSetItemId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition", L"PackageSetItemId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PackageSetItemId());
         }
         catch (...)
@@ -3382,14 +3382,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageSetRuntimeDisposition_get_PackageSetId(py::wrapper::Microsoft::Windows::Management::Deployment::PackageSetRuntimeDisposition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetRuntimeDisposition", L"PackageSetId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetRuntimeDisposition", L"PackageSetId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PackageSetId());
         }
         catch (...)
@@ -3401,12 +3401,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int PackageSetRuntimeDisposition_put_PackageSetId(py::wrapper::Microsoft::Windows::Management::Deployment::PackageSetRuntimeDisposition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetRuntimeDisposition", L"PackageSetId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3415,6 +3409,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetRuntimeDisposition", L"PackageSetId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.PackageSetId(param0);
@@ -3429,14 +3429,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageSetRuntimeDisposition_get_PackageSetItemRuntimeDispositions(py::wrapper::Microsoft::Windows::Management::Deployment::PackageSetRuntimeDisposition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetRuntimeDisposition", L"PackageSetItemRuntimeDispositions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageSetRuntimeDisposition", L"PackageSetItemRuntimeDispositions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PackageSetItemRuntimeDispositions());
         }
         catch (...)
@@ -3523,14 +3523,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"FindPackageVolumeByName", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"FindPackageVolumeByName", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Microsoft::Windows::Management::Deployment::PackageVolume::FindPackageVolumeByName(param0));
@@ -3554,14 +3554,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"FindPackageVolumeByPath", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"FindPackageVolumeByPath", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Microsoft::Windows::Management::Deployment::PackageVolume::FindPackageVolumeByPath(param0));
@@ -3585,14 +3585,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"FindPackageVolumes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"FindPackageVolumes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Microsoft::Windows::Management::Deployment::PackageVolume::FindPackageVolumes());
             }
             catch (...)
@@ -3614,14 +3614,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"IsRepairNeeded", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"IsRepairNeeded", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.IsRepairNeeded());
             }
             catch (...)
@@ -3643,14 +3643,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"Repair", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"Repair", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Repair();
                 Py_RETURN_NONE;
             }
@@ -3669,14 +3669,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageVolume_get_IsAppxInstallSupported(py::wrapper::Microsoft::Windows::Management::Deployment::PackageVolume* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"IsAppxInstallSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"IsAppxInstallSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAppxInstallSupported());
         }
         catch (...)
@@ -3688,14 +3688,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageVolume_get_IsFullTrustPackageSupported(py::wrapper::Microsoft::Windows::Management::Deployment::PackageVolume* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"IsFullTrustPackageSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"IsFullTrustPackageSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsFullTrustPackageSupported());
         }
         catch (...)
@@ -3707,14 +3707,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageVolume_get_IsSystemVolume(py::wrapper::Microsoft::Windows::Management::Deployment::PackageVolume* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"IsSystemVolume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"IsSystemVolume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSystemVolume());
         }
         catch (...)
@@ -3726,14 +3726,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageVolume_get_MountPoint(py::wrapper::Microsoft::Windows::Management::Deployment::PackageVolume* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"MountPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"MountPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MountPoint());
         }
         catch (...)
@@ -3745,14 +3745,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageVolume_get_Name(py::wrapper::Microsoft::Windows::Management::Deployment::PackageVolume* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -3764,14 +3764,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageVolume_get_PackageStorePath(py::wrapper::Microsoft::Windows::Management::Deployment::PackageVolume* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"PackageStorePath"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"PackageStorePath"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PackageStorePath());
         }
         catch (...)
@@ -3783,14 +3783,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* PackageVolume_get_SupportsHardLinks(py::wrapper::Microsoft::Windows::Management::Deployment::PackageVolume* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"SupportsHardLinks"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"SupportsHardLinks"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportsHardLinks());
         }
         catch (...)
@@ -3930,14 +3930,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* ProvisionPackageOptions_get_IsOptionalPackageFamilyNamesSupported(py::wrapper::Microsoft::Windows::Management::Deployment::ProvisionPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.ProvisionPackageOptions", L"IsOptionalPackageFamilyNamesSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.ProvisionPackageOptions", L"IsOptionalPackageFamilyNamesSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsOptionalPackageFamilyNamesSupported());
         }
         catch (...)
@@ -3949,14 +3949,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* ProvisionPackageOptions_get_IsProjectionOrderPackageFamilyNamesSupported(py::wrapper::Microsoft::Windows::Management::Deployment::ProvisionPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.ProvisionPackageOptions", L"IsProjectionOrderPackageFamilyNamesSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.ProvisionPackageOptions", L"IsProjectionOrderPackageFamilyNamesSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsProjectionOrderPackageFamilyNamesSupported());
         }
         catch (...)
@@ -3968,14 +3968,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* ProvisionPackageOptions_get_OptionalPackageFamilyNames(py::wrapper::Microsoft::Windows::Management::Deployment::ProvisionPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.ProvisionPackageOptions", L"OptionalPackageFamilyNames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.ProvisionPackageOptions", L"OptionalPackageFamilyNames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OptionalPackageFamilyNames());
         }
         catch (...)
@@ -3987,14 +3987,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* ProvisionPackageOptions_get_ProjectionOrderPackageFamilyNames(py::wrapper::Microsoft::Windows::Management::Deployment::ProvisionPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.ProvisionPackageOptions", L"ProjectionOrderPackageFamilyNames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.ProvisionPackageOptions", L"ProjectionOrderPackageFamilyNames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProjectionOrderPackageFamilyNames());
         }
         catch (...)
@@ -4101,14 +4101,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* RegisterPackageOptions_get_StageInPlace(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"StageInPlace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"StageInPlace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StageInPlace());
         }
         catch (...)
@@ -4120,12 +4120,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int RegisterPackageOptions_put_StageInPlace(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"StageInPlace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4134,6 +4128,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"StageInPlace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.StageInPlace(param0);
@@ -4148,14 +4148,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* RegisterPackageOptions_get_InstallAllResources(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"InstallAllResources"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"InstallAllResources"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InstallAllResources());
         }
         catch (...)
@@ -4167,12 +4167,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int RegisterPackageOptions_put_InstallAllResources(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"InstallAllResources"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4181,6 +4175,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"InstallAllResources"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.InstallAllResources(param0);
@@ -4195,14 +4195,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* RegisterPackageOptions_get_ForceUpdateFromAnyVersion(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"ForceUpdateFromAnyVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"ForceUpdateFromAnyVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ForceUpdateFromAnyVersion());
         }
         catch (...)
@@ -4214,12 +4214,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int RegisterPackageOptions_put_ForceUpdateFromAnyVersion(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"ForceUpdateFromAnyVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4228,6 +4222,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"ForceUpdateFromAnyVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ForceUpdateFromAnyVersion(param0);
@@ -4242,14 +4242,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* RegisterPackageOptions_get_ForceTargetAppShutdown(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"ForceTargetAppShutdown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"ForceTargetAppShutdown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ForceTargetAppShutdown());
         }
         catch (...)
@@ -4261,12 +4261,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int RegisterPackageOptions_put_ForceTargetAppShutdown(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"ForceTargetAppShutdown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4275,6 +4269,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"ForceTargetAppShutdown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ForceTargetAppShutdown(param0);
@@ -4289,14 +4289,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* RegisterPackageOptions_get_ForceAppShutdown(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"ForceAppShutdown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"ForceAppShutdown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ForceAppShutdown());
         }
         catch (...)
@@ -4308,12 +4308,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int RegisterPackageOptions_put_ForceAppShutdown(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"ForceAppShutdown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4322,6 +4316,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"ForceAppShutdown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ForceAppShutdown(param0);
@@ -4336,14 +4336,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* RegisterPackageOptions_get_ExternalLocationUri(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"ExternalLocationUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"ExternalLocationUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExternalLocationUri());
         }
         catch (...)
@@ -4355,12 +4355,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int RegisterPackageOptions_put_ExternalLocationUri(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"ExternalLocationUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4369,6 +4363,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"ExternalLocationUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.ExternalLocationUri(param0);
@@ -4383,14 +4383,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* RegisterPackageOptions_get_DeveloperMode(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"DeveloperMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"DeveloperMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeveloperMode());
         }
         catch (...)
@@ -4402,12 +4402,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int RegisterPackageOptions_put_DeveloperMode(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"DeveloperMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4416,6 +4410,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"DeveloperMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.DeveloperMode(param0);
@@ -4430,14 +4430,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* RegisterPackageOptions_get_DeferRegistrationWhenPackagesAreInUse(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"DeferRegistrationWhenPackagesAreInUse"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"DeferRegistrationWhenPackagesAreInUse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeferRegistrationWhenPackagesAreInUse());
         }
         catch (...)
@@ -4449,12 +4449,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int RegisterPackageOptions_put_DeferRegistrationWhenPackagesAreInUse(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"DeferRegistrationWhenPackagesAreInUse"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4463,6 +4457,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"DeferRegistrationWhenPackagesAreInUse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.DeferRegistrationWhenPackagesAreInUse(param0);
@@ -4477,14 +4477,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* RegisterPackageOptions_get_AppDataVolume(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"AppDataVolume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"AppDataVolume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppDataVolume());
         }
         catch (...)
@@ -4496,12 +4496,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int RegisterPackageOptions_put_AppDataVolume(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"AppDataVolume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4510,6 +4504,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"AppDataVolume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageVolume>(arg);
 
             self->obj.AppDataVolume(param0);
@@ -4524,14 +4524,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* RegisterPackageOptions_get_AllowUnsigned(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"AllowUnsigned"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"AllowUnsigned"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowUnsigned());
         }
         catch (...)
@@ -4543,12 +4543,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int RegisterPackageOptions_put_AllowUnsigned(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"AllowUnsigned"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4557,6 +4551,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"AllowUnsigned"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowUnsigned(param0);
@@ -4571,14 +4571,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* RegisterPackageOptions_get_DependencyPackageFamilyNames(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"DependencyPackageFamilyNames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"DependencyPackageFamilyNames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DependencyPackageFamilyNames());
         }
         catch (...)
@@ -4590,14 +4590,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* RegisterPackageOptions_get_DependencyPackageUris(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"DependencyPackageUris"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"DependencyPackageUris"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DependencyPackageUris());
         }
         catch (...)
@@ -4609,14 +4609,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* RegisterPackageOptions_get_ExpectedDigests(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"ExpectedDigests"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"ExpectedDigests"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExpectedDigests());
         }
         catch (...)
@@ -4628,14 +4628,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* RegisterPackageOptions_get_IsExpectedDigestsSupported(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"IsExpectedDigestsSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"IsExpectedDigestsSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsExpectedDigestsSupported());
         }
         catch (...)
@@ -4647,14 +4647,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* RegisterPackageOptions_get_OptionalPackageFamilyNames(py::wrapper::Microsoft::Windows::Management::Deployment::RegisterPackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"OptionalPackageFamilyNames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions", L"OptionalPackageFamilyNames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OptionalPackageFamilyNames());
         }
         catch (...)
@@ -4772,14 +4772,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* RemovePackageOptions_get_RemoveForAllUsers(py::wrapper::Microsoft::Windows::Management::Deployment::RemovePackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RemovePackageOptions", L"RemoveForAllUsers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RemovePackageOptions", L"RemoveForAllUsers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoveForAllUsers());
         }
         catch (...)
@@ -4791,12 +4791,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int RemovePackageOptions_put_RemoveForAllUsers(py::wrapper::Microsoft::Windows::Management::Deployment::RemovePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RemovePackageOptions", L"RemoveForAllUsers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4805,6 +4799,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RemovePackageOptions", L"RemoveForAllUsers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.RemoveForAllUsers(param0);
@@ -4819,14 +4819,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* RemovePackageOptions_get_PreserveRoamableApplicationData(py::wrapper::Microsoft::Windows::Management::Deployment::RemovePackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RemovePackageOptions", L"PreserveRoamableApplicationData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RemovePackageOptions", L"PreserveRoamableApplicationData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreserveRoamableApplicationData());
         }
         catch (...)
@@ -4838,12 +4838,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int RemovePackageOptions_put_PreserveRoamableApplicationData(py::wrapper::Microsoft::Windows::Management::Deployment::RemovePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RemovePackageOptions", L"PreserveRoamableApplicationData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4852,6 +4846,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RemovePackageOptions", L"PreserveRoamableApplicationData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.PreserveRoamableApplicationData(param0);
@@ -4866,14 +4866,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* RemovePackageOptions_get_PreserveApplicationData(py::wrapper::Microsoft::Windows::Management::Deployment::RemovePackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RemovePackageOptions", L"PreserveApplicationData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RemovePackageOptions", L"PreserveApplicationData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreserveApplicationData());
         }
         catch (...)
@@ -4885,12 +4885,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int RemovePackageOptions_put_PreserveApplicationData(py::wrapper::Microsoft::Windows::Management::Deployment::RemovePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RemovePackageOptions", L"PreserveApplicationData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4899,6 +4893,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RemovePackageOptions", L"PreserveApplicationData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.PreserveApplicationData(param0);
@@ -4913,14 +4913,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* RemovePackageOptions_get_FailIfNotFound(py::wrapper::Microsoft::Windows::Management::Deployment::RemovePackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RemovePackageOptions", L"FailIfNotFound"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RemovePackageOptions", L"FailIfNotFound"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FailIfNotFound());
         }
         catch (...)
@@ -4932,12 +4932,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int RemovePackageOptions_put_FailIfNotFound(py::wrapper::Microsoft::Windows::Management::Deployment::RemovePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RemovePackageOptions", L"FailIfNotFound"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4946,6 +4940,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.RemovePackageOptions", L"FailIfNotFound"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.FailIfNotFound(param0);
@@ -5055,14 +5055,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* StagePackageOptions_get_TargetVolume(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"TargetVolume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"TargetVolume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetVolume());
         }
         catch (...)
@@ -5074,12 +5074,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int StagePackageOptions_put_TargetVolume(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"TargetVolume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5088,6 +5082,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"TargetVolume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageVolume>(arg);
 
             self->obj.TargetVolume(param0);
@@ -5102,14 +5102,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* StagePackageOptions_get_StubPackageOption(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"StubPackageOption"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"StubPackageOption"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StubPackageOption());
         }
         catch (...)
@@ -5121,12 +5121,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int StagePackageOptions_put_StubPackageOption(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"StubPackageOption"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5135,6 +5129,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"StubPackageOption"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::StubPackageOption>(arg);
 
             self->obj.StubPackageOption(param0);
@@ -5149,14 +5149,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* StagePackageOptions_get_StageInPlace(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"StageInPlace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"StageInPlace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StageInPlace());
         }
         catch (...)
@@ -5168,12 +5168,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int StagePackageOptions_put_StageInPlace(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"StageInPlace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5182,6 +5176,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"StageInPlace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.StageInPlace(param0);
@@ -5196,14 +5196,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* StagePackageOptions_get_RequiredContentGroupOnly(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"RequiredContentGroupOnly"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"RequiredContentGroupOnly"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequiredContentGroupOnly());
         }
         catch (...)
@@ -5215,12 +5215,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int StagePackageOptions_put_RequiredContentGroupOnly(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"RequiredContentGroupOnly"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5229,6 +5223,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"RequiredContentGroupOnly"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.RequiredContentGroupOnly(param0);
@@ -5243,14 +5243,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* StagePackageOptions_get_InstallAllResources(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"InstallAllResources"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"InstallAllResources"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InstallAllResources());
         }
         catch (...)
@@ -5262,12 +5262,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int StagePackageOptions_put_InstallAllResources(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"InstallAllResources"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5276,6 +5270,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"InstallAllResources"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.InstallAllResources(param0);
@@ -5290,14 +5290,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* StagePackageOptions_get_ForceUpdateFromAnyVersion(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"ForceUpdateFromAnyVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"ForceUpdateFromAnyVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ForceUpdateFromAnyVersion());
         }
         catch (...)
@@ -5309,12 +5309,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int StagePackageOptions_put_ForceUpdateFromAnyVersion(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"ForceUpdateFromAnyVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5323,6 +5317,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"ForceUpdateFromAnyVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ForceUpdateFromAnyVersion(param0);
@@ -5337,14 +5337,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* StagePackageOptions_get_ExternalLocationUri(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"ExternalLocationUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"ExternalLocationUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExternalLocationUri());
         }
         catch (...)
@@ -5356,12 +5356,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int StagePackageOptions_put_ExternalLocationUri(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"ExternalLocationUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5370,6 +5364,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"ExternalLocationUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.ExternalLocationUri(param0);
@@ -5384,14 +5384,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* StagePackageOptions_get_DeveloperMode(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"DeveloperMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"DeveloperMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeveloperMode());
         }
         catch (...)
@@ -5403,12 +5403,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int StagePackageOptions_put_DeveloperMode(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"DeveloperMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5417,6 +5411,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"DeveloperMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.DeveloperMode(param0);
@@ -5431,14 +5431,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* StagePackageOptions_get_AllowUnsigned(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"AllowUnsigned"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"AllowUnsigned"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowUnsigned());
         }
         catch (...)
@@ -5450,12 +5450,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static int StagePackageOptions_put_AllowUnsigned(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"AllowUnsigned"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5464,6 +5458,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"AllowUnsigned"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowUnsigned(param0);
@@ -5478,14 +5478,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* StagePackageOptions_get_DependencyPackageUris(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"DependencyPackageUris"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"DependencyPackageUris"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DependencyPackageUris());
         }
         catch (...)
@@ -5497,14 +5497,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* StagePackageOptions_get_ExpectedDigests(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"ExpectedDigests"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"ExpectedDigests"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExpectedDigests());
         }
         catch (...)
@@ -5516,14 +5516,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* StagePackageOptions_get_IsExpectedDigestsSupported(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"IsExpectedDigestsSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"IsExpectedDigestsSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsExpectedDigestsSupported());
         }
         catch (...)
@@ -5535,14 +5535,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* StagePackageOptions_get_OptionalPackageFamilyNames(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"OptionalPackageFamilyNames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"OptionalPackageFamilyNames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OptionalPackageFamilyNames());
         }
         catch (...)
@@ -5554,14 +5554,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* StagePackageOptions_get_OptionalPackageUris(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"OptionalPackageUris"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"OptionalPackageUris"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OptionalPackageUris());
         }
         catch (...)
@@ -5573,14 +5573,14 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyObject* StagePackageOptions_get_RelatedPackageUris(py::wrapper::Microsoft::Windows::Management::Deployment::StagePackageOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"RelatedPackageUris"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.StagePackageOptions", L"RelatedPackageUris"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RelatedPackageUris());
         }
         catch (...)

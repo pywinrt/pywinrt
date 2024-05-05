@@ -20,14 +20,14 @@ namespace py::cpp::Windows::System::Profile
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Profile.AnalyticsInfo", L"GetSystemPropertiesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Profile.AnalyticsInfo", L"GetSystemPropertiesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(winrt::Windows::System::Profile::AnalyticsInfo::GetSystemPropertiesAsync(param0));
@@ -47,14 +47,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* AnalyticsInfo_get_DeviceForm(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.AnalyticsInfo", L"DeviceForm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.AnalyticsInfo", L"DeviceForm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::AnalyticsInfo::DeviceForm());
         }
         catch (...)
@@ -66,14 +66,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* AnalyticsInfo_get_VersionInfo(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.AnalyticsInfo", L"VersionInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.AnalyticsInfo", L"VersionInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::AnalyticsInfo::VersionInfo());
         }
         catch (...)
@@ -155,14 +155,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* AnalyticsVersionInfo_get_DeviceFamily(py::wrapper::Windows::System::Profile::AnalyticsVersionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.AnalyticsVersionInfo", L"DeviceFamily"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.AnalyticsVersionInfo", L"DeviceFamily"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceFamily());
         }
         catch (...)
@@ -174,14 +174,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* AnalyticsVersionInfo_get_DeviceFamilyVersion(py::wrapper::Windows::System::Profile::AnalyticsVersionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.AnalyticsVersionInfo", L"DeviceFamilyVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.AnalyticsVersionInfo", L"DeviceFamilyVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceFamilyVersion());
         }
         catch (...)
@@ -193,14 +193,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* AnalyticsVersionInfo_get_ProductName(py::wrapper::Windows::System::Profile::AnalyticsVersionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.AnalyticsVersionInfo", L"ProductName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.AnalyticsVersionInfo", L"ProductName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProductName());
         }
         catch (...)
@@ -280,14 +280,14 @@ namespace py::cpp::Windows::System::Profile
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Profile.AppApplicability", L"GetUnsupportedAppRequirements", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Profile.AppApplicability", L"GetUnsupportedAppRequirements", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(winrt::Windows::System::Profile::AppApplicability::GetUnsupportedAppRequirements(param0));
@@ -367,14 +367,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* EducationSettings_get_IsEducationEnvironment(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.EducationSettings", L"IsEducationEnvironment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.EducationSettings", L"IsEducationEnvironment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::EducationSettings::IsEducationEnvironment());
         }
         catch (...)
@@ -450,14 +450,14 @@ namespace py::cpp::Windows::System::Profile
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Profile.HardwareIdentification", L"GetPackageSpecificToken", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Profile.HardwareIdentification", L"GetPackageSpecificToken", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert(winrt::Windows::System::Profile::HardwareIdentification::GetPackageSpecificToken(param0));
@@ -545,14 +545,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* HardwareToken_get_Certificate(py::wrapper::Windows::System::Profile::HardwareToken* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.HardwareToken", L"Certificate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.HardwareToken", L"Certificate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Certificate());
         }
         catch (...)
@@ -564,14 +564,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* HardwareToken_get_Id(py::wrapper::Windows::System::Profile::HardwareToken* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.HardwareToken", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.HardwareToken", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -583,14 +583,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* HardwareToken_get_Signature(py::wrapper::Windows::System::Profile::HardwareToken* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.HardwareToken", L"Signature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.HardwareToken", L"Signature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Signature());
         }
         catch (...)
@@ -666,14 +666,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* KnownRetailInfoProperties_get_BatteryLifeDescription(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"BatteryLifeDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"BatteryLifeDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::KnownRetailInfoProperties::BatteryLifeDescription());
         }
         catch (...)
@@ -685,14 +685,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* KnownRetailInfoProperties_get_DisplayDescription(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"DisplayDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"DisplayDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::KnownRetailInfoProperties::DisplayDescription());
         }
         catch (...)
@@ -704,14 +704,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* KnownRetailInfoProperties_get_DisplayModelName(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"DisplayModelName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"DisplayModelName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::KnownRetailInfoProperties::DisplayModelName());
         }
         catch (...)
@@ -723,14 +723,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* KnownRetailInfoProperties_get_FormFactor(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"FormFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"FormFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::KnownRetailInfoProperties::FormFactor());
         }
         catch (...)
@@ -742,14 +742,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* KnownRetailInfoProperties_get_FrontCameraDescription(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"FrontCameraDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"FrontCameraDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::KnownRetailInfoProperties::FrontCameraDescription());
         }
         catch (...)
@@ -761,14 +761,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* KnownRetailInfoProperties_get_GraphicsDescription(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"GraphicsDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"GraphicsDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::KnownRetailInfoProperties::GraphicsDescription());
         }
         catch (...)
@@ -780,14 +780,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* KnownRetailInfoProperties_get_HasNfc(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"HasNfc"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"HasNfc"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::KnownRetailInfoProperties::HasNfc());
         }
         catch (...)
@@ -799,14 +799,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* KnownRetailInfoProperties_get_HasOpticalDrive(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"HasOpticalDrive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"HasOpticalDrive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::KnownRetailInfoProperties::HasOpticalDrive());
         }
         catch (...)
@@ -818,14 +818,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* KnownRetailInfoProperties_get_HasSdSlot(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"HasSdSlot"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"HasSdSlot"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::KnownRetailInfoProperties::HasSdSlot());
         }
         catch (...)
@@ -837,14 +837,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* KnownRetailInfoProperties_get_IsFeatured(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"IsFeatured"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"IsFeatured"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::KnownRetailInfoProperties::IsFeatured());
         }
         catch (...)
@@ -856,14 +856,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* KnownRetailInfoProperties_get_IsOfficeInstalled(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"IsOfficeInstalled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"IsOfficeInstalled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::KnownRetailInfoProperties::IsOfficeInstalled());
         }
         catch (...)
@@ -875,14 +875,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* KnownRetailInfoProperties_get_ManufacturerName(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"ManufacturerName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"ManufacturerName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::KnownRetailInfoProperties::ManufacturerName());
         }
         catch (...)
@@ -894,14 +894,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* KnownRetailInfoProperties_get_Memory(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"Memory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"Memory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::KnownRetailInfoProperties::Memory());
         }
         catch (...)
@@ -913,14 +913,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* KnownRetailInfoProperties_get_ModelName(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"ModelName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"ModelName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::KnownRetailInfoProperties::ModelName());
         }
         catch (...)
@@ -932,14 +932,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* KnownRetailInfoProperties_get_Price(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"Price"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"Price"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::KnownRetailInfoProperties::Price());
         }
         catch (...)
@@ -951,14 +951,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* KnownRetailInfoProperties_get_ProcessorDescription(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"ProcessorDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"ProcessorDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::KnownRetailInfoProperties::ProcessorDescription());
         }
         catch (...)
@@ -970,14 +970,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* KnownRetailInfoProperties_get_RearCameraDescription(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"RearCameraDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"RearCameraDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::KnownRetailInfoProperties::RearCameraDescription());
         }
         catch (...)
@@ -989,14 +989,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* KnownRetailInfoProperties_get_RetailAccessCode(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"RetailAccessCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"RetailAccessCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::KnownRetailInfoProperties::RetailAccessCode());
         }
         catch (...)
@@ -1008,14 +1008,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* KnownRetailInfoProperties_get_ScreenSize(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"ScreenSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"ScreenSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::KnownRetailInfoProperties::ScreenSize());
         }
         catch (...)
@@ -1027,14 +1027,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* KnownRetailInfoProperties_get_StorageDescription(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"StorageDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"StorageDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::KnownRetailInfoProperties::StorageDescription());
         }
         catch (...)
@@ -1046,14 +1046,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* KnownRetailInfoProperties_get_Weight(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"Weight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"Weight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::KnownRetailInfoProperties::Weight());
         }
         catch (...)
@@ -1065,14 +1065,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* KnownRetailInfoProperties_get_WindowsEdition(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"WindowsEdition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.KnownRetailInfoProperties", L"WindowsEdition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::KnownRetailInfoProperties::WindowsEdition());
         }
         catch (...)
@@ -1165,14 +1165,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* PlatformAutomaticAppSignInManager_get_Policy(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.PlatformAutomaticAppSignInManager", L"Policy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.PlatformAutomaticAppSignInManager", L"Policy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::PlatformAutomaticAppSignInManager::Policy());
         }
         catch (...)
@@ -1248,14 +1248,14 @@ namespace py::cpp::Windows::System::Profile
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Profile.PlatformDiagnosticsAndUsageDataSettings", L"CanCollectDiagnostics", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Profile.PlatformDiagnosticsAndUsageDataSettings", L"CanCollectDiagnostics", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::Profile::PlatformDataCollectionLevel>(args, 0);
 
                 return py::convert(winrt::Windows::System::Profile::PlatformDiagnosticsAndUsageDataSettings::CanCollectDiagnostics(param0));
@@ -1275,14 +1275,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* PlatformDiagnosticsAndUsageDataSettings_get_CollectionLevel(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.PlatformDiagnosticsAndUsageDataSettings", L"CollectionLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.PlatformDiagnosticsAndUsageDataSettings", L"CollectionLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::PlatformDiagnosticsAndUsageDataSettings::CollectionLevel());
         }
         catch (...)
@@ -1294,14 +1294,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* PlatformDiagnosticsAndUsageDataSettings_add_CollectionLevelChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Profile.PlatformDiagnosticsAndUsageDataSettings", L"CollectionLevelChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Profile.PlatformDiagnosticsAndUsageDataSettings", L"CollectionLevelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Windows::System::Profile::PlatformDiagnosticsAndUsageDataSettings::CollectionLevelChanged(param0));
@@ -1315,14 +1315,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* PlatformDiagnosticsAndUsageDataSettings_remove_CollectionLevelChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Profile.PlatformDiagnosticsAndUsageDataSettings", L"CollectionLevelChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Profile.PlatformDiagnosticsAndUsageDataSettings", L"CollectionLevelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::System::Profile::PlatformDiagnosticsAndUsageDataSettings::CollectionLevelChanged(param0);
@@ -1400,14 +1400,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* RetailInfo_get_IsDemoModeEnabled(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.RetailInfo", L"IsDemoModeEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.RetailInfo", L"IsDemoModeEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::RetailInfo::IsDemoModeEnabled());
         }
         catch (...)
@@ -1419,14 +1419,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* RetailInfo_get_Properties(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.RetailInfo", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.RetailInfo", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::RetailInfo::Properties());
         }
         catch (...)
@@ -1499,14 +1499,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* SharedModeSettings_get_IsEnabled(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SharedModeSettings", L"IsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SharedModeSettings", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::SharedModeSettings::IsEnabled());
         }
         catch (...)
@@ -1518,14 +1518,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* SharedModeSettings_get_ShouldAvoidLocalStorage(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SharedModeSettings", L"ShouldAvoidLocalStorage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SharedModeSettings", L"ShouldAvoidLocalStorage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::SharedModeSettings::ShouldAvoidLocalStorage());
         }
         catch (...)
@@ -1598,14 +1598,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* SmartAppControlPolicy_get_IsEnabled(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SmartAppControlPolicy", L"IsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SmartAppControlPolicy", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::SmartAppControlPolicy::IsEnabled());
         }
         catch (...)
@@ -1617,14 +1617,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* SmartAppControlPolicy_add_Changed(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Profile.SmartAppControlPolicy", L"Changed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Profile.SmartAppControlPolicy", L"Changed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Windows::System::Profile::SmartAppControlPolicy::Changed(param0));
@@ -1638,14 +1638,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* SmartAppControlPolicy_remove_Changed(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Profile.SmartAppControlPolicy", L"Changed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Profile.SmartAppControlPolicy", L"Changed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::System::Profile::SmartAppControlPolicy::Changed(param0);
@@ -1726,14 +1726,14 @@ namespace py::cpp::Windows::System::Profile
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Profile.SystemIdentification", L"GetSystemIdForPublisher", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Profile.SystemIdentification", L"GetSystemIdForPublisher", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::System::Profile::SystemIdentification::GetSystemIdForPublisher());
             }
             catch (...)
@@ -1755,14 +1755,14 @@ namespace py::cpp::Windows::System::Profile
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Profile.SystemIdentification", L"GetSystemIdForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Profile.SystemIdentification", L"GetSystemIdForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::System::Profile::SystemIdentification::GetSystemIdForUser(param0));
@@ -1851,14 +1851,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* SystemIdentificationInfo_get_Id(py::wrapper::Windows::System::Profile::SystemIdentificationInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemIdentificationInfo", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemIdentificationInfo", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1870,14 +1870,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* SystemIdentificationInfo_get_Source(py::wrapper::Windows::System::Profile::SystemIdentificationInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemIdentificationInfo", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemIdentificationInfo", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -1952,14 +1952,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* SystemSetupInfo_get_OutOfBoxExperienceState(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemSetupInfo", L"OutOfBoxExperienceState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.SystemSetupInfo", L"OutOfBoxExperienceState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::SystemSetupInfo::OutOfBoxExperienceState());
         }
         catch (...)
@@ -1971,14 +1971,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* SystemSetupInfo_add_OutOfBoxExperienceStateChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Profile.SystemSetupInfo", L"OutOfBoxExperienceStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Profile.SystemSetupInfo", L"OutOfBoxExperienceStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Windows::System::Profile::SystemSetupInfo::OutOfBoxExperienceStateChanged(param0));
@@ -1992,14 +1992,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* SystemSetupInfo_remove_OutOfBoxExperienceStateChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Profile.SystemSetupInfo", L"OutOfBoxExperienceStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Profile.SystemSetupInfo", L"OutOfBoxExperienceStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::System::Profile::SystemSetupInfo::OutOfBoxExperienceStateChanged(param0);
@@ -2084,14 +2084,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* UnsupportedAppRequirement_get_Reasons(py::wrapper::Windows::System::Profile::UnsupportedAppRequirement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.UnsupportedAppRequirement", L"Reasons"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.UnsupportedAppRequirement", L"Reasons"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reasons());
         }
         catch (...)
@@ -2103,14 +2103,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* UnsupportedAppRequirement_get_Requirement(py::wrapper::Windows::System::Profile::UnsupportedAppRequirement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.UnsupportedAppRequirement", L"Requirement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.UnsupportedAppRequirement", L"Requirement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Requirement());
         }
         catch (...)
@@ -2185,14 +2185,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* WindowsIntegrityPolicy_get_CanDisable(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.WindowsIntegrityPolicy", L"CanDisable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.WindowsIntegrityPolicy", L"CanDisable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::WindowsIntegrityPolicy::CanDisable());
         }
         catch (...)
@@ -2204,14 +2204,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* WindowsIntegrityPolicy_get_IsDisableSupported(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.WindowsIntegrityPolicy", L"IsDisableSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.WindowsIntegrityPolicy", L"IsDisableSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::WindowsIntegrityPolicy::IsDisableSupported());
         }
         catch (...)
@@ -2223,14 +2223,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* WindowsIntegrityPolicy_get_IsEnabled(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.WindowsIntegrityPolicy", L"IsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.WindowsIntegrityPolicy", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::WindowsIntegrityPolicy::IsEnabled());
         }
         catch (...)
@@ -2242,14 +2242,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* WindowsIntegrityPolicy_get_IsEnabledForTrial(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.WindowsIntegrityPolicy", L"IsEnabledForTrial"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Profile.WindowsIntegrityPolicy", L"IsEnabledForTrial"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Profile::WindowsIntegrityPolicy::IsEnabledForTrial());
         }
         catch (...)
@@ -2261,14 +2261,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* WindowsIntegrityPolicy_add_PolicyChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Profile.WindowsIntegrityPolicy", L"PolicyChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Profile.WindowsIntegrityPolicy", L"PolicyChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Windows::System::Profile::WindowsIntegrityPolicy::PolicyChanged(param0));
@@ -2282,14 +2282,14 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* WindowsIntegrityPolicy_remove_PolicyChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Profile.WindowsIntegrityPolicy", L"PolicyChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Profile.WindowsIntegrityPolicy", L"PolicyChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::System::Profile::WindowsIntegrityPolicy::PolicyChanged(param0);

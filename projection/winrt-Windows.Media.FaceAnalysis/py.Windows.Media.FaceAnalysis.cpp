@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyObject* DetectedFace_get_FaceBox(py::wrapper::Windows::Media::FaceAnalysis::DetectedFace* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.FaceAnalysis.DetectedFace", L"FaceBox"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.FaceAnalysis.DetectedFace", L"FaceBox"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FaceBox());
         }
         catch (...)
@@ -117,14 +117,14 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.FaceAnalysis.FaceDetector", L"CreateAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.FaceAnalysis.FaceDetector", L"CreateAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::FaceAnalysis::FaceDetector::CreateAsync());
             }
             catch (...)
@@ -146,14 +146,14 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.FaceAnalysis.FaceDetector", L"DetectFacesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.FaceAnalysis.FaceDetector", L"DetectFacesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
                 return py::convert(self->obj.DetectFacesAsync(param0));
@@ -166,14 +166,14 @@ namespace py::cpp::Windows::Media::FaceAnalysis
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.FaceAnalysis.FaceDetector", L"DetectFacesAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.FaceAnalysis.FaceDetector", L"DetectFacesAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapBounds>(args, 1);
 
@@ -198,14 +198,14 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.FaceAnalysis.FaceDetector", L"GetSupportedBitmapPixelFormats", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.FaceAnalysis.FaceDetector", L"GetSupportedBitmapPixelFormats", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::FaceAnalysis::FaceDetector::GetSupportedBitmapPixelFormats());
             }
             catch (...)
@@ -227,14 +227,14 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.FaceAnalysis.FaceDetector", L"IsBitmapPixelFormatSupported", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.FaceAnalysis.FaceDetector", L"IsBitmapPixelFormatSupported", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
 
                 return py::convert(winrt::Windows::Media::FaceAnalysis::FaceDetector::IsBitmapPixelFormatSupported(param0));
@@ -254,14 +254,14 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyObject* FaceDetector_get_MinDetectableFaceSize(py::wrapper::Windows::Media::FaceAnalysis::FaceDetector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.FaceAnalysis.FaceDetector", L"MinDetectableFaceSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.FaceAnalysis.FaceDetector", L"MinDetectableFaceSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinDetectableFaceSize());
         }
         catch (...)
@@ -273,12 +273,6 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static int FaceDetector_put_MinDetectableFaceSize(py::wrapper::Windows::Media::FaceAnalysis::FaceDetector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.FaceAnalysis.FaceDetector", L"MinDetectableFaceSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -287,6 +281,12 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.FaceAnalysis.FaceDetector", L"MinDetectableFaceSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapSize>(arg);
 
             self->obj.MinDetectableFaceSize(param0);
@@ -301,14 +301,14 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyObject* FaceDetector_get_MaxDetectableFaceSize(py::wrapper::Windows::Media::FaceAnalysis::FaceDetector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.FaceAnalysis.FaceDetector", L"MaxDetectableFaceSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.FaceAnalysis.FaceDetector", L"MaxDetectableFaceSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxDetectableFaceSize());
         }
         catch (...)
@@ -320,12 +320,6 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static int FaceDetector_put_MaxDetectableFaceSize(py::wrapper::Windows::Media::FaceAnalysis::FaceDetector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.FaceAnalysis.FaceDetector", L"MaxDetectableFaceSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -334,6 +328,12 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.FaceAnalysis.FaceDetector", L"MaxDetectableFaceSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapSize>(arg);
 
             self->obj.MaxDetectableFaceSize(param0);
@@ -348,14 +348,14 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyObject* FaceDetector_get_IsSupported(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.FaceAnalysis.FaceDetector", L"IsSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.FaceAnalysis.FaceDetector", L"IsSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::FaceAnalysis::FaceDetector::IsSupported());
         }
         catch (...)
@@ -472,14 +472,14 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.FaceAnalysis.FaceTracker", L"CreateAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.FaceAnalysis.FaceTracker", L"CreateAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::FaceAnalysis::FaceTracker::CreateAsync());
             }
             catch (...)
@@ -501,14 +501,14 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.FaceAnalysis.FaceTracker", L"GetSupportedBitmapPixelFormats", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.FaceAnalysis.FaceTracker", L"GetSupportedBitmapPixelFormats", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::FaceAnalysis::FaceTracker::GetSupportedBitmapPixelFormats());
             }
             catch (...)
@@ -530,14 +530,14 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.FaceAnalysis.FaceTracker", L"IsBitmapPixelFormatSupported", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.FaceAnalysis.FaceTracker", L"IsBitmapPixelFormatSupported", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
 
                 return py::convert(winrt::Windows::Media::FaceAnalysis::FaceTracker::IsBitmapPixelFormatSupported(param0));
@@ -561,14 +561,14 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.FaceAnalysis.FaceTracker", L"ProcessNextFrameAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.FaceAnalysis.FaceTracker", L"ProcessNextFrameAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::VideoFrame>(args, 0);
 
                 return py::convert(self->obj.ProcessNextFrameAsync(param0));
@@ -588,14 +588,14 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyObject* FaceTracker_get_MinDetectableFaceSize(py::wrapper::Windows::Media::FaceAnalysis::FaceTracker* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.FaceAnalysis.FaceTracker", L"MinDetectableFaceSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.FaceAnalysis.FaceTracker", L"MinDetectableFaceSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinDetectableFaceSize());
         }
         catch (...)
@@ -607,12 +607,6 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static int FaceTracker_put_MinDetectableFaceSize(py::wrapper::Windows::Media::FaceAnalysis::FaceTracker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.FaceAnalysis.FaceTracker", L"MinDetectableFaceSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -621,6 +615,12 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.FaceAnalysis.FaceTracker", L"MinDetectableFaceSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapSize>(arg);
 
             self->obj.MinDetectableFaceSize(param0);
@@ -635,14 +635,14 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyObject* FaceTracker_get_MaxDetectableFaceSize(py::wrapper::Windows::Media::FaceAnalysis::FaceTracker* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.FaceAnalysis.FaceTracker", L"MaxDetectableFaceSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.FaceAnalysis.FaceTracker", L"MaxDetectableFaceSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxDetectableFaceSize());
         }
         catch (...)
@@ -654,12 +654,6 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static int FaceTracker_put_MaxDetectableFaceSize(py::wrapper::Windows::Media::FaceAnalysis::FaceTracker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.FaceAnalysis.FaceTracker", L"MaxDetectableFaceSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -668,6 +662,12 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.FaceAnalysis.FaceTracker", L"MaxDetectableFaceSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapSize>(arg);
 
             self->obj.MaxDetectableFaceSize(param0);
@@ -682,14 +682,14 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyObject* FaceTracker_get_IsSupported(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.FaceAnalysis.FaceTracker", L"IsSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.FaceAnalysis.FaceTracker", L"IsSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::FaceAnalysis::FaceTracker::IsSupported());
         }
         catch (...)

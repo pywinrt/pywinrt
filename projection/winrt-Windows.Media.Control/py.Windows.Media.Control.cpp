@@ -97,14 +97,14 @@ namespace py::cpp::Windows::Media::Control
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"GetPlaybackInfo", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"GetPlaybackInfo", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetPlaybackInfo());
             }
             catch (...)
@@ -126,14 +126,14 @@ namespace py::cpp::Windows::Media::Control
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"GetTimelineProperties", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"GetTimelineProperties", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetTimelineProperties());
             }
             catch (...)
@@ -155,14 +155,14 @@ namespace py::cpp::Windows::Media::Control
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryChangeAutoRepeatModeAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryChangeAutoRepeatModeAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaPlaybackAutoRepeatMode>(args, 0);
 
                 return py::convert(self->obj.TryChangeAutoRepeatModeAsync(param0));
@@ -186,14 +186,14 @@ namespace py::cpp::Windows::Media::Control
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryChangeChannelDownAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryChangeChannelDownAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryChangeChannelDownAsync());
             }
             catch (...)
@@ -215,14 +215,14 @@ namespace py::cpp::Windows::Media::Control
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryChangeChannelUpAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryChangeChannelUpAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryChangeChannelUpAsync());
             }
             catch (...)
@@ -244,14 +244,14 @@ namespace py::cpp::Windows::Media::Control
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryChangePlaybackPositionAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryChangePlaybackPositionAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
                 return py::convert(self->obj.TryChangePlaybackPositionAsync(param0));
@@ -275,14 +275,14 @@ namespace py::cpp::Windows::Media::Control
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryChangePlaybackRateAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryChangePlaybackRateAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(self->obj.TryChangePlaybackRateAsync(param0));
@@ -306,14 +306,14 @@ namespace py::cpp::Windows::Media::Control
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryChangeShuffleActiveAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryChangeShuffleActiveAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(self->obj.TryChangeShuffleActiveAsync(param0));
@@ -337,14 +337,14 @@ namespace py::cpp::Windows::Media::Control
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryFastForwardAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryFastForwardAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryFastForwardAsync());
             }
             catch (...)
@@ -366,14 +366,14 @@ namespace py::cpp::Windows::Media::Control
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryGetMediaPropertiesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryGetMediaPropertiesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryGetMediaPropertiesAsync());
             }
             catch (...)
@@ -395,14 +395,14 @@ namespace py::cpp::Windows::Media::Control
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryPauseAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryPauseAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryPauseAsync());
             }
             catch (...)
@@ -424,14 +424,14 @@ namespace py::cpp::Windows::Media::Control
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryPlayAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryPlayAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryPlayAsync());
             }
             catch (...)
@@ -453,14 +453,14 @@ namespace py::cpp::Windows::Media::Control
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryRecordAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryRecordAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryRecordAsync());
             }
             catch (...)
@@ -482,14 +482,14 @@ namespace py::cpp::Windows::Media::Control
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryRewindAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryRewindAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryRewindAsync());
             }
             catch (...)
@@ -511,14 +511,14 @@ namespace py::cpp::Windows::Media::Control
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TrySkipNextAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TrySkipNextAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TrySkipNextAsync());
             }
             catch (...)
@@ -540,14 +540,14 @@ namespace py::cpp::Windows::Media::Control
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TrySkipPreviousAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TrySkipPreviousAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TrySkipPreviousAsync());
             }
             catch (...)
@@ -569,14 +569,14 @@ namespace py::cpp::Windows::Media::Control
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryStopAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryStopAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryStopAsync());
             }
             catch (...)
@@ -598,14 +598,14 @@ namespace py::cpp::Windows::Media::Control
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryTogglePlayPauseAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TryTogglePlayPauseAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryTogglePlayPauseAsync());
             }
             catch (...)
@@ -623,14 +623,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_get_SourceAppUserModelId(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"SourceAppUserModelId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"SourceAppUserModelId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceAppUserModelId());
         }
         catch (...)
@@ -642,14 +642,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_add_MediaPropertiesChanged(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"MediaPropertiesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"MediaPropertiesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSession, winrt::Windows::Media::Control::MediaPropertiesChangedEventArgs>>(arg);
 
             return py::convert(self->obj.MediaPropertiesChanged(param0));
@@ -663,14 +663,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_remove_MediaPropertiesChanged(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"MediaPropertiesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"MediaPropertiesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.MediaPropertiesChanged(param0);
@@ -685,14 +685,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_add_PlaybackInfoChanged(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"PlaybackInfoChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"PlaybackInfoChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSession, winrt::Windows::Media::Control::PlaybackInfoChangedEventArgs>>(arg);
 
             return py::convert(self->obj.PlaybackInfoChanged(param0));
@@ -706,14 +706,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_remove_PlaybackInfoChanged(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"PlaybackInfoChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"PlaybackInfoChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PlaybackInfoChanged(param0);
@@ -728,14 +728,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_add_TimelinePropertiesChanged(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TimelinePropertiesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TimelinePropertiesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSession, winrt::Windows::Media::Control::TimelinePropertiesChangedEventArgs>>(arg);
 
             return py::convert(self->obj.TimelinePropertiesChanged(param0));
@@ -749,14 +749,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_remove_TimelinePropertiesChanged(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TimelinePropertiesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSession", L"TimelinePropertiesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.TimelinePropertiesChanged(param0);
@@ -869,14 +869,14 @@ namespace py::cpp::Windows::Media::Control
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager", L"GetCurrentSession", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager", L"GetCurrentSession", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentSession());
             }
             catch (...)
@@ -898,14 +898,14 @@ namespace py::cpp::Windows::Media::Control
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager", L"GetSessions", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager", L"GetSessions", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetSessions());
             }
             catch (...)
@@ -927,14 +927,14 @@ namespace py::cpp::Windows::Media::Control
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager", L"RequestAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager", L"RequestAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager::RequestAsync());
             }
             catch (...)
@@ -952,14 +952,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionManager_add_CurrentSessionChanged(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager", L"CurrentSessionChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager", L"CurrentSessionChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager, winrt::Windows::Media::Control::CurrentSessionChangedEventArgs>>(arg);
 
             return py::convert(self->obj.CurrentSessionChanged(param0));
@@ -973,14 +973,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionManager_remove_CurrentSessionChanged(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager", L"CurrentSessionChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager", L"CurrentSessionChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CurrentSessionChanged(param0);
@@ -995,14 +995,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionManager_add_SessionsChanged(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager", L"SessionsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager", L"SessionsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager, winrt::Windows::Media::Control::SessionsChangedEventArgs>>(arg);
 
             return py::convert(self->obj.SessionsChanged(param0));
@@ -1016,14 +1016,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionManager_remove_SessionsChanged(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager", L"SessionsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager", L"SessionsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SessionsChanged(param0);
@@ -1139,14 +1139,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionMediaProperties_get_AlbumArtist(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionMediaProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties", L"AlbumArtist"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties", L"AlbumArtist"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlbumArtist());
         }
         catch (...)
@@ -1158,14 +1158,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionMediaProperties_get_AlbumTitle(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionMediaProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties", L"AlbumTitle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties", L"AlbumTitle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlbumTitle());
         }
         catch (...)
@@ -1177,14 +1177,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionMediaProperties_get_AlbumTrackCount(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionMediaProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties", L"AlbumTrackCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties", L"AlbumTrackCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlbumTrackCount());
         }
         catch (...)
@@ -1196,14 +1196,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionMediaProperties_get_Artist(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionMediaProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties", L"Artist"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties", L"Artist"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Artist());
         }
         catch (...)
@@ -1215,14 +1215,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionMediaProperties_get_Genres(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionMediaProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties", L"Genres"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties", L"Genres"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Genres());
         }
         catch (...)
@@ -1234,14 +1234,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionMediaProperties_get_PlaybackType(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionMediaProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties", L"PlaybackType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties", L"PlaybackType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PlaybackType());
         }
         catch (...)
@@ -1253,14 +1253,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionMediaProperties_get_Subtitle(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionMediaProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties", L"Subtitle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties", L"Subtitle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Subtitle());
         }
         catch (...)
@@ -1272,14 +1272,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionMediaProperties_get_Thumbnail(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionMediaProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties", L"Thumbnail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties", L"Thumbnail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Thumbnail());
         }
         catch (...)
@@ -1291,14 +1291,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionMediaProperties_get_Title(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionMediaProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -1310,14 +1310,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionMediaProperties_get_TrackNumber(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionMediaProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties", L"TrackNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties", L"TrackNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrackNumber());
         }
         catch (...)
@@ -1408,14 +1408,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionPlaybackControls_get_IsChannelDownEnabled(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsChannelDownEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsChannelDownEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsChannelDownEnabled());
         }
         catch (...)
@@ -1427,14 +1427,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionPlaybackControls_get_IsChannelUpEnabled(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsChannelUpEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsChannelUpEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsChannelUpEnabled());
         }
         catch (...)
@@ -1446,14 +1446,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionPlaybackControls_get_IsFastForwardEnabled(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsFastForwardEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsFastForwardEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsFastForwardEnabled());
         }
         catch (...)
@@ -1465,14 +1465,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionPlaybackControls_get_IsNextEnabled(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsNextEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsNextEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsNextEnabled());
         }
         catch (...)
@@ -1484,14 +1484,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionPlaybackControls_get_IsPauseEnabled(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsPauseEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsPauseEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPauseEnabled());
         }
         catch (...)
@@ -1503,14 +1503,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionPlaybackControls_get_IsPlayEnabled(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsPlayEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsPlayEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPlayEnabled());
         }
         catch (...)
@@ -1522,14 +1522,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionPlaybackControls_get_IsPlayPauseToggleEnabled(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsPlayPauseToggleEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsPlayPauseToggleEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPlayPauseToggleEnabled());
         }
         catch (...)
@@ -1541,14 +1541,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionPlaybackControls_get_IsPlaybackPositionEnabled(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsPlaybackPositionEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsPlaybackPositionEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPlaybackPositionEnabled());
         }
         catch (...)
@@ -1560,14 +1560,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionPlaybackControls_get_IsPlaybackRateEnabled(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsPlaybackRateEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsPlaybackRateEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPlaybackRateEnabled());
         }
         catch (...)
@@ -1579,14 +1579,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionPlaybackControls_get_IsPreviousEnabled(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsPreviousEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsPreviousEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPreviousEnabled());
         }
         catch (...)
@@ -1598,14 +1598,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionPlaybackControls_get_IsRecordEnabled(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsRecordEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsRecordEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRecordEnabled());
         }
         catch (...)
@@ -1617,14 +1617,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionPlaybackControls_get_IsRepeatEnabled(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsRepeatEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsRepeatEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRepeatEnabled());
         }
         catch (...)
@@ -1636,14 +1636,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionPlaybackControls_get_IsRewindEnabled(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsRewindEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsRewindEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRewindEnabled());
         }
         catch (...)
@@ -1655,14 +1655,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionPlaybackControls_get_IsShuffleEnabled(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsShuffleEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsShuffleEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsShuffleEnabled());
         }
         catch (...)
@@ -1674,14 +1674,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionPlaybackControls_get_IsStopEnabled(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsStopEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls", L"IsStopEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsStopEnabled());
         }
         catch (...)
@@ -1777,14 +1777,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionPlaybackInfo_get_AutoRepeatMode(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo", L"AutoRepeatMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo", L"AutoRepeatMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AutoRepeatMode());
         }
         catch (...)
@@ -1796,14 +1796,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionPlaybackInfo_get_Controls(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo", L"Controls"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo", L"Controls"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Controls());
         }
         catch (...)
@@ -1815,14 +1815,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionPlaybackInfo_get_IsShuffleActive(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo", L"IsShuffleActive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo", L"IsShuffleActive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsShuffleActive());
         }
         catch (...)
@@ -1834,14 +1834,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionPlaybackInfo_get_PlaybackRate(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo", L"PlaybackRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo", L"PlaybackRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PlaybackRate());
         }
         catch (...)
@@ -1853,14 +1853,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionPlaybackInfo_get_PlaybackStatus(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo", L"PlaybackStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo", L"PlaybackStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PlaybackStatus());
         }
         catch (...)
@@ -1872,14 +1872,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionPlaybackInfo_get_PlaybackType(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo", L"PlaybackType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo", L"PlaybackType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PlaybackType());
         }
         catch (...)
@@ -1966,14 +1966,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionTimelineProperties_get_EndTime(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionTimelineProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties", L"EndTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties", L"EndTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndTime());
         }
         catch (...)
@@ -1985,14 +1985,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionTimelineProperties_get_LastUpdatedTime(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionTimelineProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties", L"LastUpdatedTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties", L"LastUpdatedTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastUpdatedTime());
         }
         catch (...)
@@ -2004,14 +2004,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionTimelineProperties_get_MaxSeekTime(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionTimelineProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties", L"MaxSeekTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties", L"MaxSeekTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxSeekTime());
         }
         catch (...)
@@ -2023,14 +2023,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionTimelineProperties_get_MinSeekTime(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionTimelineProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties", L"MinSeekTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties", L"MinSeekTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinSeekTime());
         }
         catch (...)
@@ -2042,14 +2042,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionTimelineProperties_get_Position(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionTimelineProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -2061,14 +2061,14 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionTimelineProperties_get_StartTime(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionTimelineProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties", L"StartTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties", L"StartTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartTime());
         }
         catch (...)

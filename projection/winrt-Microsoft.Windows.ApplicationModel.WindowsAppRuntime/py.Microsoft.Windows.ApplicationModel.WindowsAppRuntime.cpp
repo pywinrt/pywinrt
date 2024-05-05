@@ -46,14 +46,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
 
     static PyObject* DeploymentInitializeOptions_get_ForceDeployment(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentInitializeOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions", L"ForceDeployment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions", L"ForceDeployment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ForceDeployment());
         }
         catch (...)
@@ -65,12 +65,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
 
     static int DeploymentInitializeOptions_put_ForceDeployment(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentInitializeOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions", L"ForceDeployment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -79,6 +73,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions", L"ForceDeployment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ForceDeployment(param0);
@@ -93,14 +93,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
 
     static PyObject* DeploymentInitializeOptions_get_OnErrorShowUI(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentInitializeOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions", L"OnErrorShowUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions", L"OnErrorShowUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OnErrorShowUI());
         }
         catch (...)
@@ -112,12 +112,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
 
     static int DeploymentInitializeOptions_put_OnErrorShowUI(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentInitializeOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions", L"OnErrorShowUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -126,6 +120,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions", L"OnErrorShowUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.OnErrorShowUI(param0);
@@ -207,14 +207,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentManager", L"GetStatus", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentManager", L"GetStatus", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentManager::GetStatus());
             }
             catch (...)
@@ -236,14 +236,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentManager", L"Initialize", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentManager", L"Initialize", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentManager::Initialize());
             }
             catch (...)
@@ -254,14 +254,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentManager", L"Initialize", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentManager", L"Initialize", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentInitializeOptions>(args, 0);
 
                 return py::convert(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentManager::Initialize(param0));
@@ -375,14 +375,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
 
     static PyObject* DeploymentResult_get_ExtendedError(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -394,14 +394,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
 
     static PyObject* DeploymentResult_get_Status(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)

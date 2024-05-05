@@ -61,14 +61,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputGamepadInfo_get_RightTrigger(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"RightTrigger"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"RightTrigger"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RightTrigger());
         }
         catch (...)
@@ -80,12 +80,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputGamepadInfo_put_RightTrigger(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"RightTrigger"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -94,6 +88,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"RightTrigger"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.RightTrigger(param0);
@@ -108,14 +108,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputGamepadInfo_get_RightThumbstickY(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"RightThumbstickY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"RightThumbstickY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RightThumbstickY());
         }
         catch (...)
@@ -127,12 +127,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputGamepadInfo_put_RightThumbstickY(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"RightThumbstickY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -141,6 +135,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"RightThumbstickY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.RightThumbstickY(param0);
@@ -155,14 +155,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputGamepadInfo_get_RightThumbstickX(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"RightThumbstickX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"RightThumbstickX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RightThumbstickX());
         }
         catch (...)
@@ -174,12 +174,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputGamepadInfo_put_RightThumbstickX(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"RightThumbstickX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -188,6 +182,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"RightThumbstickX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.RightThumbstickX(param0);
@@ -202,14 +202,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputGamepadInfo_get_LeftTrigger(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"LeftTrigger"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"LeftTrigger"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LeftTrigger());
         }
         catch (...)
@@ -221,12 +221,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputGamepadInfo_put_LeftTrigger(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"LeftTrigger"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -235,6 +229,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"LeftTrigger"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.LeftTrigger(param0);
@@ -249,14 +249,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputGamepadInfo_get_LeftThumbstickY(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"LeftThumbstickY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"LeftThumbstickY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LeftThumbstickY());
         }
         catch (...)
@@ -268,12 +268,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputGamepadInfo_put_LeftThumbstickY(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"LeftThumbstickY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -282,6 +276,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"LeftThumbstickY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.LeftThumbstickY(param0);
@@ -296,14 +296,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputGamepadInfo_get_LeftThumbstickX(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"LeftThumbstickX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"LeftThumbstickX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LeftThumbstickX());
         }
         catch (...)
@@ -315,12 +315,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputGamepadInfo_put_LeftThumbstickX(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"LeftThumbstickX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -329,6 +323,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"LeftThumbstickX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.LeftThumbstickX(param0);
@@ -343,14 +343,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputGamepadInfo_get_Buttons(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"Buttons"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"Buttons"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Buttons());
         }
         catch (...)
@@ -362,12 +362,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputGamepadInfo_put_Buttons(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"Buttons"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -376,6 +370,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo", L"Buttons"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Gaming::Input::GamepadButtons>(arg);
 
             self->obj.Buttons(param0);
@@ -488,14 +488,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputKeyboardInfo_get_VirtualKey(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo", L"VirtualKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo", L"VirtualKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VirtualKey());
         }
         catch (...)
@@ -507,12 +507,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputKeyboardInfo_put_VirtualKey(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo", L"VirtualKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -521,6 +515,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo", L"VirtualKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint16_t>(arg);
 
             self->obj.VirtualKey(param0);
@@ -535,14 +535,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputKeyboardInfo_get_ScanCode(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo", L"ScanCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo", L"ScanCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ScanCode());
         }
         catch (...)
@@ -554,12 +554,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputKeyboardInfo_put_ScanCode(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo", L"ScanCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -568,6 +562,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo", L"ScanCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint16_t>(arg);
 
             self->obj.ScanCode(param0);
@@ -582,14 +582,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputKeyboardInfo_get_KeyOptions(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo", L"KeyOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo", L"KeyOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyOptions());
         }
         catch (...)
@@ -601,12 +601,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputKeyboardInfo_put_KeyOptions(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo", L"KeyOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -615,6 +609,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo", L"KeyOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputKeyOptions>(arg);
 
             self->obj.KeyOptions(param0);
@@ -723,14 +723,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputMouseInfo_get_TimeOffsetInMilliseconds(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo", L"TimeOffsetInMilliseconds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo", L"TimeOffsetInMilliseconds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimeOffsetInMilliseconds());
         }
         catch (...)
@@ -742,12 +742,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputMouseInfo_put_TimeOffsetInMilliseconds(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo", L"TimeOffsetInMilliseconds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -756,6 +750,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo", L"TimeOffsetInMilliseconds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.TimeOffsetInMilliseconds(param0);
@@ -770,14 +770,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputMouseInfo_get_MouseOptions(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo", L"MouseOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo", L"MouseOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MouseOptions());
         }
         catch (...)
@@ -789,12 +789,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputMouseInfo_put_MouseOptions(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo", L"MouseOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -803,6 +797,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo", L"MouseOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputMouseOptions>(arg);
 
             self->obj.MouseOptions(param0);
@@ -817,14 +817,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputMouseInfo_get_MouseData(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo", L"MouseData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo", L"MouseData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MouseData());
         }
         catch (...)
@@ -836,12 +836,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputMouseInfo_put_MouseData(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo", L"MouseData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -850,6 +844,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo", L"MouseData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.MouseData(param0);
@@ -864,14 +864,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputMouseInfo_get_DeltaY(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo", L"DeltaY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo", L"DeltaY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeltaY());
         }
         catch (...)
@@ -883,12 +883,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputMouseInfo_put_DeltaY(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo", L"DeltaY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -897,6 +891,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo", L"DeltaY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.DeltaY(param0);
@@ -911,14 +911,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputMouseInfo_get_DeltaX(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo", L"DeltaX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo", L"DeltaX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeltaX());
         }
         catch (...)
@@ -930,12 +930,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputMouseInfo_put_DeltaX(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo", L"DeltaX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -944,6 +938,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo", L"DeltaX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.DeltaX(param0);
@@ -1054,14 +1054,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputPenInfo_get_TiltY(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"TiltY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"TiltY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TiltY());
         }
         catch (...)
@@ -1073,12 +1073,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputPenInfo_put_TiltY(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"TiltY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1087,6 +1081,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"TiltY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.TiltY(param0);
@@ -1101,14 +1101,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputPenInfo_get_TiltX(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"TiltX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"TiltX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TiltX());
         }
         catch (...)
@@ -1120,12 +1120,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputPenInfo_put_TiltX(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"TiltX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1134,6 +1128,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"TiltX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.TiltX(param0);
@@ -1148,14 +1148,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputPenInfo_get_Rotation(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"Rotation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"Rotation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Rotation());
         }
         catch (...)
@@ -1167,12 +1167,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputPenInfo_put_Rotation(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"Rotation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1181,6 +1175,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"Rotation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Rotation(param0);
@@ -1195,14 +1195,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputPenInfo_get_Pressure(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"Pressure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"Pressure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Pressure());
         }
         catch (...)
@@ -1214,12 +1214,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputPenInfo_put_Pressure(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"Pressure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1228,6 +1222,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"Pressure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Pressure(param0);
@@ -1242,14 +1242,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputPenInfo_get_PointerInfo(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"PointerInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"PointerInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerInfo());
         }
         catch (...)
@@ -1261,12 +1261,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputPenInfo_put_PointerInfo(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"PointerInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1275,6 +1269,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"PointerInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>(arg);
 
             self->obj.PointerInfo(param0);
@@ -1289,14 +1289,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputPenInfo_get_PenParameters(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"PenParameters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"PenParameters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PenParameters());
         }
         catch (...)
@@ -1308,12 +1308,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputPenInfo_put_PenParameters(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"PenParameters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1322,6 +1316,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"PenParameters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPenParameters>(arg);
 
             self->obj.PenParameters(param0);
@@ -1336,14 +1336,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputPenInfo_get_PenButtons(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"PenButtons"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"PenButtons"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PenButtons());
         }
         catch (...)
@@ -1355,12 +1355,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputPenInfo_put_PenButtons(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"PenButtons"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1369,6 +1363,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo", L"PenButtons"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPenButtons>(arg);
 
             self->obj.PenButtons(param0);
@@ -1481,14 +1481,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputTouchInfo_get_TouchParameters(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo", L"TouchParameters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo", L"TouchParameters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TouchParameters());
         }
         catch (...)
@@ -1500,12 +1500,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputTouchInfo_put_TouchParameters(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo", L"TouchParameters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1514,6 +1508,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo", L"TouchParameters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputTouchParameters>(arg);
 
             self->obj.TouchParameters(param0);
@@ -1528,14 +1528,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputTouchInfo_get_Pressure(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo", L"Pressure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo", L"Pressure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Pressure());
         }
         catch (...)
@@ -1547,12 +1547,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputTouchInfo_put_Pressure(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo", L"Pressure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1561,6 +1555,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo", L"Pressure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Pressure(param0);
@@ -1575,14 +1575,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputTouchInfo_get_PointerInfo(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo", L"PointerInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo", L"PointerInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerInfo());
         }
         catch (...)
@@ -1594,12 +1594,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputTouchInfo_put_PointerInfo(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo", L"PointerInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1608,6 +1602,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo", L"PointerInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>(arg);
 
             self->obj.PointerInfo(param0);
@@ -1622,14 +1622,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputTouchInfo_get_Orientation(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Orientation());
         }
         catch (...)
@@ -1641,12 +1641,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputTouchInfo_put_Orientation(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1655,6 +1649,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Orientation(param0);
@@ -1669,14 +1669,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InjectedInputTouchInfo_get_Contact(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -1688,12 +1688,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputTouchInfo_put_Contact(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1702,6 +1696,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle>(arg);
 
             self->obj.Contact(param0);
@@ -1794,14 +1794,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"InitializeGamepadInjection", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"InitializeGamepadInjection", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.InitializeGamepadInjection();
                 Py_RETURN_NONE;
             }
@@ -1824,14 +1824,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"InitializePenInjection", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"InitializePenInjection", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputVisualizationMode>(args, 0);
 
                 self->obj.InitializePenInjection(param0);
@@ -1856,14 +1856,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"InitializeTouchInjection", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"InitializeTouchInjection", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputVisualizationMode>(args, 0);
 
                 self->obj.InitializeTouchInjection(param0);
@@ -1888,14 +1888,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"InjectGamepadInput", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"InjectGamepadInput", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo>(args, 0);
 
                 self->obj.InjectGamepadInput(param0);
@@ -1920,14 +1920,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"InjectKeyboardInput", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"InjectKeyboardInput", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo>>(args, 0);
 
                 self->obj.InjectKeyboardInput(param0);
@@ -1952,14 +1952,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"InjectMouseInput", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"InjectMouseInput", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo>>(args, 0);
 
                 self->obj.InjectMouseInput(param0);
@@ -1984,14 +1984,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"InjectPenInput", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"InjectPenInput", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo>(args, 0);
 
                 self->obj.InjectPenInput(param0);
@@ -2016,14 +2016,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"InjectShortcut", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"InjectShortcut", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputShortcut>(args, 0);
 
                 self->obj.InjectShortcut(param0);
@@ -2048,14 +2048,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"InjectTouchInput", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"InjectTouchInput", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo>>(args, 0);
 
                 self->obj.InjectTouchInput(param0);
@@ -2080,14 +2080,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"TryCreate", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"TryCreate", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::Input::Preview::Injection::InputInjector::TryCreate());
             }
             catch (...)
@@ -2109,14 +2109,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"TryCreateForAppBroadcastOnly", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"TryCreateForAppBroadcastOnly", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::Input::Preview::Injection::InputInjector::TryCreateForAppBroadcastOnly());
             }
             catch (...)
@@ -2138,14 +2138,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"UninitializeGamepadInjection", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"UninitializeGamepadInjection", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.UninitializeGamepadInjection();
                 Py_RETURN_NONE;
             }
@@ -2168,14 +2168,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"UninitializePenInjection", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"UninitializePenInjection", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.UninitializePenInjection();
                 Py_RETURN_NONE;
             }
@@ -2198,14 +2198,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"UninitializeTouchInjection", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Preview.Injection.InputInjector", L"UninitializeTouchInjection", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.UninitializeTouchInjection();
                 Py_RETURN_NONE;
             }
